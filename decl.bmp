@@ -772,6 +772,7 @@ tactic.interactive.guard_proof_term
 tactic.interactive.rw_mod_cast
 set.nonempty.preimage
 Inf_image2_eq_Sup_Sup
+quarterround.qr1_zero
 tactic.open_n_pis_whnf
 finset.card_lt_iff_ne_univ
 nat.one_div_lt_one_div
@@ -1252,6 +1253,7 @@ set.not_mem_empty
 rbnode.balance1_node
 bool.to_bool_not
 list.count_permutations'_aux_self
+columnround_examples.output2
 option.pmap_some
 list.range_eq_range'
 rel_iso.simps.apply
@@ -2885,6 +2887,7 @@ monotone_lt
 conv.monad
 pnat.has_well_founded
 mul_add_one
+columnround_examples.input1
 finset.inter_assoc
 multiset.prod_map_pow
 nat.dvd_trans
@@ -8841,6 +8844,7 @@ frame.to_distrib_lattice
 finset.sum_range_add
 punit.unique
 neg_injective
+quarterround.qr2_zero
 sum.is_right
 multiset.filter_add
 ite_add
@@ -10310,7 +10314,6 @@ int.nat_abs_le_iff_mul_self_le
 list.inth_cons_zero
 is_unit.inv_mul_eq_iff_eq_mul
 add_units.add_right_apply
-columnround_examples.output
 zpow_lt_zpow_iff
 bool.bnot_band
 additive.add_semigroup
@@ -11715,7 +11718,6 @@ set.Ioc_subset_Ioc_right
 abs_lt_iff_mul_self_lt
 eq_of_zero_sub_eq_zero_sub
 ordered_comm_group.le_of_mul_le_mul_left
-columnround_examples.input
 function.injective_iff_pairwise_ne
 div_pos_iff
 finset.sum_congr_set
@@ -13487,6 +13489,7 @@ array.mem_rev_list
 level.of_nat
 finset.min_empty
 tactic.mk_conditional_instance
+columnround_examples.input2
 list.append_left_injective
 list.reverse_inj
 multiset.cons_subset_cons
@@ -16070,7 +16073,6 @@ applicative.to_has_seq_right
 applicative.mk
 and_congr_right
 finset.prod_range_one
-columnround_examples.input'
 int.add_left_cancel
 bitvec.ushr
 finset.sup'_induction
@@ -20614,6 +20616,7 @@ with_bot.lt_iff_exists_coe
 distrib_mul_action.comp_hom
 relation.trans_gen.head'
 finset.inf'_mul_le_mul_inf'_of_nonneg
+columnround_examples.output1
 list.inth_eq_iget_nth
 mul_hom.comp_assoc
 with_bot.has_zero
@@ -24597,6 +24600,7 @@ with_bot.add_lt_add_of_le_of_lt
 has_add.to_has_vadd
 equiv.Pi_congr_left'
 fintype.decidable_eq_monoid_hom_fintype
+quarterround.qr0_zero
 nat.div_self
 add_comm_group_with_one.to_add_comm_group
 multiset.dvd_prod
@@ -25638,6 +25642,7 @@ function.semiconj₂.iterate
 rel_embedding.sum_lift_rel_map_apply
 multiset.disjoint_iff_ne
 units.sq_eq_sq_iff_eq_or_eq_neg
+quarterround.qr3_zero
 function.injective.of_sigma_map
 nat.find_greatest_of_not
 function.injective.comm_monoid
@@ -27211,7 +27216,6 @@ prod
 prod.fst
 prod.snd
 prod.mk
-columnround_examples.output'
 int.to_nat_add_nat
 function.inv_fun_comp
 sub_eq_sub_add_sub
@@ -29792,6 +29796,7 @@ bdd_below.image2
 function.eq_update_iff
 finset.eventually_constant_prod
 multiset.mem_bind
+quarterround.quarterround_zero
 nat.mul_sub_div
 add_hom_class.to_fun_like
 list.any_cons
