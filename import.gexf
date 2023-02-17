@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <gexf version="1.2" xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd">
-  <meta lastmodifieddate="2023-02-15">
+  <meta lastmodifieddate="2023-02-17">
     <creator>NetworkX 2.5.1</creator>
   </meta>
   <graph defaultedgetype="directed" mode="static" name="">
@@ -2118,6 +2118,11 @@
           <attvalue for="0" value="3" />
         </attvalues>
       </node>
+      <node id="salsa20:examples.quarterround" label="salsa20:examples.quarterround">
+        <attvalues>
+          <attvalue for="0" value="4" />
+        </attvalues>
+      </node>
       <node id="mathlib:tactic.choose" label="mathlib:tactic.choose">
         <attvalues>
           <attvalue for="0" value="5" />
@@ -2146,6 +2151,11 @@
       <node id="core:init.data.subtype.instances" label="core:init.data.subtype.instances">
         <attvalues>
           <attvalue for="0" value="1" />
+        </attvalues>
+      </node>
+      <node id="salsa20:examples.operations" label="salsa20:examples.operations">
+        <attvalues>
+          <attvalue for="0" value="5" />
         </attvalues>
       </node>
       <node id="mathlib:tactic.simp_rw" label="mathlib:tactic.simp_rw">
@@ -2181,11 +2191,6 @@
       <node id="core:init.meta.async_tactic" label="core:init.meta.async_tactic">
         <attvalues>
           <attvalue for="0" value="3" />
-        </attvalues>
-      </node>
-      <node id="salsa20:examples.operations" label="salsa20:examples.operations">
-        <attvalues>
-          <attvalue for="0" value="0" />
         </attvalues>
       </node>
     </nodes>
@@ -3444,37 +3449,39 @@
       <edge id="1251" source="mathlib:tactic.obviously" target="mathlib:tactic.tidy" />
       <edge id="1252" source="mathlib:tactic.obviously" target="mathlib:tactic.replacer" />
       <edge id="1253" source="mathlib:tactic.obviously" target="core:init.default" />
-      <edge id="1254" source="mathlib:tactic.choose" target="mathlib:logic.function.basic" />
-      <edge id="1255" source="mathlib:tactic.choose" target="mathlib:tactic.core" />
-      <edge id="1256" source="mathlib:tactic.choose" target="core:init.default" />
-      <edge id="1257" source="mathlib:tactic.nth_rewrite.congr" target="mathlib:tactic.core" />
-      <edge id="1258" source="mathlib:tactic.nth_rewrite.congr" target="mathlib:tactic.nth_rewrite.basic" />
-      <edge id="1259" source="mathlib:tactic.nth_rewrite.congr" target="core:init.default" />
-      <edge id="1260" source="mathlib:tactic.simp_command" target="mathlib:tactic.core" />
-      <edge id="1261" source="mathlib:tactic.simp_command" target="core:init.default" />
-      <edge id="1262" source="mathlib:tactic.lint.simp" target="mathlib:tactic.lint.basic" />
-      <edge id="1263" source="mathlib:tactic.lint.simp" target="core:init.default" />
-      <edge id="1264" source="salsa20:examples.rowround" target="salsa20:rowround" />
-      <edge id="1265" source="salsa20:examples.rowround" target="core:init.default" />
-      <edge id="1266" source="core:init.data.subtype.instances" target="core:init.meta.mk_dec_eq_instance" />
-      <edge id="1267" source="core:init.data.subtype.instances" target="core:init.data.subtype.basic" />
-      <edge id="1268" source="mathlib:tactic.simp_rw" target="mathlib:tactic.core" />
-      <edge id="1269" source="mathlib:tactic.simp_rw" target="core:init.default" />
-      <edge id="1270" source="mathlib:tactic.dec_trivial" target="mathlib:tactic.interactive" />
-      <edge id="1271" source="mathlib:tactic.dec_trivial" target="core:init.default" />
-      <edge id="1272" source="mathlib:tactic.rename_var" target="mathlib:tactic.interactive" />
-      <edge id="1273" source="mathlib:tactic.rename_var" target="core:init.default" />
-      <edge id="1274" source="mathlib:tactic.pretty_cases" target="mathlib:tactic.core" />
-      <edge id="1275" source="mathlib:tactic.pretty_cases" target="core:init.default" />
-      <edge id="1276" source="core:init.meta.widget.replace_save_info" target="core:init.meta.widget.interactive_expr" />
-      <edge id="1277" source="mathlib:tactic.converter.apply_congr" target="mathlib:tactic.interactive" />
-      <edge id="1278" source="mathlib:tactic.converter.apply_congr" target="mathlib:tactic.converter.interactive" />
-      <edge id="1279" source="mathlib:tactic.converter.apply_congr" target="core:init.default" />
-      <edge id="1280" source="core:init.meta.async_tactic" target="core:init.meta.tactic" />
-      <edge id="1281" source="core:init.meta.async_tactic" target="core:init.meta.interactive" />
-      <edge id="1282" source="core:init.meta.async_tactic" target="core:init.meta.instance_cache" />
-      <edge id="1283" source="salsa20:examples.operations" target="salsa20:operations" />
-      <edge id="1284" source="salsa20:examples.operations" target="core:init.default" />
+      <edge id="1254" source="salsa20:examples.quarterround" target="salsa20:quarterround" />
+      <edge id="1255" source="salsa20:examples.quarterround" target="core:init.default" />
+      <edge id="1256" source="mathlib:tactic.choose" target="mathlib:logic.function.basic" />
+      <edge id="1257" source="mathlib:tactic.choose" target="mathlib:tactic.core" />
+      <edge id="1258" source="mathlib:tactic.choose" target="core:init.default" />
+      <edge id="1259" source="mathlib:tactic.nth_rewrite.congr" target="mathlib:tactic.core" />
+      <edge id="1260" source="mathlib:tactic.nth_rewrite.congr" target="mathlib:tactic.nth_rewrite.basic" />
+      <edge id="1261" source="mathlib:tactic.nth_rewrite.congr" target="core:init.default" />
+      <edge id="1262" source="mathlib:tactic.simp_command" target="mathlib:tactic.core" />
+      <edge id="1263" source="mathlib:tactic.simp_command" target="core:init.default" />
+      <edge id="1264" source="mathlib:tactic.lint.simp" target="mathlib:tactic.lint.basic" />
+      <edge id="1265" source="mathlib:tactic.lint.simp" target="core:init.default" />
+      <edge id="1266" source="salsa20:examples.rowround" target="salsa20:rowround" />
+      <edge id="1267" source="salsa20:examples.rowround" target="core:init.default" />
+      <edge id="1268" source="core:init.data.subtype.instances" target="core:init.meta.mk_dec_eq_instance" />
+      <edge id="1269" source="core:init.data.subtype.instances" target="core:init.data.subtype.basic" />
+      <edge id="1270" source="salsa20:examples.operations" target="salsa20:operations" />
+      <edge id="1271" source="salsa20:examples.operations" target="core:init.default" />
+      <edge id="1272" source="mathlib:tactic.simp_rw" target="mathlib:tactic.core" />
+      <edge id="1273" source="mathlib:tactic.simp_rw" target="core:init.default" />
+      <edge id="1274" source="mathlib:tactic.dec_trivial" target="mathlib:tactic.interactive" />
+      <edge id="1275" source="mathlib:tactic.dec_trivial" target="core:init.default" />
+      <edge id="1276" source="mathlib:tactic.rename_var" target="mathlib:tactic.interactive" />
+      <edge id="1277" source="mathlib:tactic.rename_var" target="core:init.default" />
+      <edge id="1278" source="mathlib:tactic.pretty_cases" target="mathlib:tactic.core" />
+      <edge id="1279" source="mathlib:tactic.pretty_cases" target="core:init.default" />
+      <edge id="1280" source="core:init.meta.widget.replace_save_info" target="core:init.meta.widget.interactive_expr" />
+      <edge id="1281" source="mathlib:tactic.converter.apply_congr" target="mathlib:tactic.interactive" />
+      <edge id="1282" source="mathlib:tactic.converter.apply_congr" target="mathlib:tactic.converter.interactive" />
+      <edge id="1283" source="mathlib:tactic.converter.apply_congr" target="core:init.default" />
+      <edge id="1284" source="core:init.meta.async_tactic" target="core:init.meta.tactic" />
+      <edge id="1285" source="core:init.meta.async_tactic" target="core:init.meta.interactive" />
+      <edge id="1286" source="core:init.meta.async_tactic" target="core:init.meta.instance_cache" />
     </edges>
   </graph>
 </gexf>

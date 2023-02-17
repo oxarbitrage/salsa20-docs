@@ -8,11 +8,11 @@
     <title>salsa20 / examples.operations - salsa20 docs</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Examples from the spec.: <link>" />
+    <meta name="description" content="Formalized examples from the spec: <link> Notes: Examples are formalized as `lemma`s instead of `example` so they show up in the documentation." />
     
     <meta property="og:title" content="salsa20 / examples.operations - salsa20 docs">
     <meta property="og:site_name" content="salsa20 for Lean - API documentation">
-    <meta property="og:description" content="Examples from the spec.: <link>">
+    <meta property="og:description" content="Formalized examples from the spec: <link> Notes: Examples are formalized as `lemma`s instead of `example` so they show up in the documentation.">
     <meta property="og:image" content="https://oxarbitrage.github.io/salsa20-docs/meta-og.png">
     <meta name="twitter:card" content="summary">
     <script src="https://oxarbitrage.github.io/salsa20-docs/color_scheme.js"></script>
@@ -56,6 +56,16 @@
 </div>
 
 
+    <div class="nav_link"><a class="break_within" href="#operations_examples.example_inverse_xor"><span class="name">operations_examples</span>.<span class="name">example_inverse_xor</span></a></div>
+
+    <div class="nav_link"><a class="break_within" href="#operations_examples.example_mod"><span class="name">operations_examples</span>.<span class="name">example_mod</span></a></div>
+
+    <div class="nav_link"><a class="break_within" href="#operations_examples.example_rotl"><span class="name">operations_examples</span>.<span class="name">example_rotl</span></a></div>
+
+    <div class="nav_link"><a class="break_within" href="#operations_examples.example_rotl_inv"><span class="name">operations_examples</span>.<span class="name">example_rotl_inv</span></a></div>
+
+    <div class="nav_link"><a class="break_within" href="#operations_examples.example_xor"><span class="name">operations_examples</span>.<span class="name">example_xor</span></a></div>
+
 </nav>
 
 <main>
@@ -64,10 +74,135 @@
 
     
         <div class="mod_doc">
-            <h1 id="examples-from-the-spec" class="markdown-heading">Examples from the spec. <a class="hover-link" href="#examples-from-the-spec">#</a></h1>
+            <h1 id="formalized-examples-from-the-spec" class="markdown-heading">Formalized examples from the spec <a class="hover-link" href="#formalized-examples-from-the-spec">#</a></h1>
 <p><a href="https://cr.yp.to/snuffle/spec.pdf">https://cr.yp.to/snuffle/spec.pdf</a></p>
+<p>Notes:</p>
+<ul>
+<li>Examples are formalized as <code>lemma</code>s instead of <code>example</code>
+so they show up in the documentation.</li>
+</ul>
 
         </div>
+    
+
+    
+        
+        
+<div class="decl" id="operations_examples.example_xor">
+<div class="theorem">
+
+<div class="gh_link"><a href="">source</a></div>
+
+
+
+<div class="decl_header">
+    
+
+
+<span class="decl_kind">theorem</span>
+<span class="decl_name"><a class="break_within" href="https://oxarbitrage.github.io/salsa20-docs/examples/operations.html#operations_examples.example_xor"><span class="name">operations_examples</span>.<span class="name">example_xor</span></a></span>
+&nbsp;<span class="decl_args">:</span>
+<div class="decl_type"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/data/bitvec/core.html#bitvec.of_nat">bitvec.of_nat</a> <a href="https://oxarbitrage.github.io/salsa20-docs/params.html#params.word_len">params.word_len</a></span> 3232266366)</span>.<a href="https://oxarbitrage.github.io/salsa20-docs/data/bitvec/core.html#bitvec.xor" title="bitvec.xor">xor</a></span> <span class="fn"><span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/data/bitvec/core.html#bitvec.of_nat">bitvec.of_nat</a> <a href="https://oxarbitrage.github.io/salsa20-docs/params.html#params.word_len">params.word_len</a></span> 2681280029)</span></span> <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#eq" title="eq">=</a> 1601793635</span></div>
+</div>
+
+
+
+
+
+<p>0xc0a8787e ⊕ 0x9fd1161d = 0x5f796e63</p>
+
+
+
+
+
+
+
+
+
+
+
+</div>
+</div>
+    
+
+    
+        
+        
+<div class="decl" id="operations_examples.example_mod">
+<div class="theorem">
+
+<div class="gh_link"><a href="">source</a></div>
+
+
+
+<div class="decl_header">
+    
+
+
+<span class="decl_kind">theorem</span>
+<span class="decl_name"><a class="break_within" href="https://oxarbitrage.github.io/salsa20-docs/examples/operations.html#operations_examples.example_mod"><span class="name">operations_examples</span>.<span class="name">example_mod</span></a></span>
+&nbsp;<span class="decl_args">:</span>
+<div class="decl_type"><span class="fn"><span class="fn">3232266366 <a href="https://oxarbitrage.github.io/salsa20-docs/operations.html#operations.mod" title="operations.mod">MOD</a> 2681280029</span> <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#eq" title="eq">=</a> 1618579099</span></div>
+</div>
+
+
+
+
+
+<p>0xc0a8787e + 0x9fd1161d = 0x60798e9b</p>
+
+
+
+
+
+
+
+
+
+
+
+</div>
+</div>
+    
+
+    
+        
+        
+<div class="decl" id="operations_examples.example_rotl">
+<div class="theorem">
+
+<div class="gh_link"><a href="">source</a></div>
+
+
+
+<div class="decl_header">
+    
+
+
+<span class="decl_kind">theorem</span>
+<span class="decl_name"><a class="break_within" href="https://oxarbitrage.github.io/salsa20-docs/examples/operations.html#operations_examples.example_rotl"><span class="name">operations_examples</span>.<span class="name">example_rotl</span></a></span>
+&nbsp;<span class="decl_args">:</span>
+<div class="decl_type"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/data/bitvec/core.html#bitvec.of_nat">bitvec.of_nat</a> <a href="https://oxarbitrage.github.io/salsa20-docs/params.html#params.word_len">params.word_len</a></span> 3232266366</span> <a href="https://oxarbitrage.github.io/salsa20-docs/operations.html#operations.rotl" title="operations.rotl">ROTL</a> 5</span> <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#eq" title="eq">=</a> 353308632</span></div>
+</div>
+
+
+
+
+
+<p>0xc0a8787e &lt;&lt;&lt; 5 = 0x150f0fd8</p>
+
+
+
+
+
+
+
+
+
+
+
+</div>
+</div>
     
 
     
@@ -75,6 +210,86 @@
             <h1 id="inverse-examples" class="markdown-heading">Inverse examples <a class="hover-link" href="#inverse-examples">#</a></h1>
 
         </div>
+    
+
+    
+        
+        
+<div class="decl" id="operations_examples.example_inverse_xor">
+<div class="theorem">
+
+<div class="gh_link"><a href="">source</a></div>
+
+
+
+<div class="decl_header">
+    
+
+
+<span class="decl_kind">theorem</span>
+<span class="decl_name"><a class="break_within" href="https://oxarbitrage.github.io/salsa20-docs/examples/operations.html#operations_examples.example_inverse_xor"><span class="name">operations_examples</span>.<span class="name">example_inverse_xor</span></a></span>
+&nbsp;<span class="decl_args">:</span>
+<div class="decl_type"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/data/bitvec/core.html#bitvec.of_nat">bitvec.of_nat</a> <a href="https://oxarbitrage.github.io/salsa20-docs/params.html#params.word_len">params.word_len</a></span> 1601793635)</span>.<a href="https://oxarbitrage.github.io/salsa20-docs/data/bitvec/core.html#bitvec.xor" title="bitvec.xor">xor</a></span> <span class="fn"><span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/data/bitvec/core.html#bitvec.of_nat">bitvec.of_nat</a> <a href="https://oxarbitrage.github.io/salsa20-docs/params.html#params.word_len">params.word_len</a></span> 2681280029)</span></span> <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#eq" title="eq">=</a> 3232266366</span></div>
+</div>
+
+
+
+
+
+<p>0x5f796e63 ⊕ 0x9fd1161d = 0xc0a8787e</p>
+
+
+
+
+
+
+
+
+
+
+
+</div>
+</div>
+    
+
+    
+        
+        
+<div class="decl" id="operations_examples.example_rotl_inv">
+<div class="theorem">
+
+<div class="gh_link"><a href="">source</a></div>
+
+
+
+<div class="decl_header">
+    
+
+
+<span class="decl_kind">theorem</span>
+<span class="decl_name"><a class="break_within" href="https://oxarbitrage.github.io/salsa20-docs/examples/operations.html#operations_examples.example_rotl_inv"><span class="name">operations_examples</span>.<span class="name">example_rotl_inv</span></a></span>
+&nbsp;<span class="decl_args">:</span>
+<div class="decl_type"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/data/bitvec/core.html#bitvec.of_nat">bitvec.of_nat</a> <a href="https://oxarbitrage.github.io/salsa20-docs/params.html#params.word_len">params.word_len</a></span> 353308632</span> <a href="https://oxarbitrage.github.io/salsa20-docs/operations.html#operations.rotl_inv" title="operations.rotl_inv">ROTL⁻¹</a> 5</span> <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#eq" title="eq">=</a> 3232266366</span></div>
+</div>
+
+
+
+
+
+<p>0x150f0fd8 &lt;&lt;&lt;⁻¹ 5 = 0xc0a8787e</p>
+
+
+
+
+
+
+
+
+
+
+
+</div>
+</div>
     
 
     
@@ -1735,6 +1950,9 @@
         </div>
         <div class="nav_link visible">
             <a href="https://oxarbitrage.github.io/salsa20-docs/examples/operations.html">operations</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/examples/quarterround.html">quarterround</a>
         </div>
         <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/examples/rowround.html">rowround</a>

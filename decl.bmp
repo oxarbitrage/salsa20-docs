@@ -7288,6 +7288,7 @@ add_equiv.coe_to_equiv
 nat.pow_le_iff_le_left
 smt_state.to_format
 one_mul
+quarterround_examples.example1_qr3
 relation.refl_trans_gen_eq_self
 self_le_mul_right
 fintype.card_empty
@@ -7560,6 +7561,7 @@ unique.encodable
 add_le_cancellable.lt_tsub_of_add_lt_right
 not_forall_not
 widget.with_attr
+quarterround_examples.example1_qr2
 reader_t.adapt
 sq_pos_iff
 order_iso.image_symm_image
@@ -12362,6 +12364,7 @@ list.map_accumr
 add_units.eq_neg_of_add_eq_zero_right
 sum.elim_mul_mul
 max_lt_iff
+operations_examples.example_xor
 coe_sort_coe_trans
 plift.unique
 nat.le_rec_on_self
@@ -14906,6 +14909,7 @@ div_lt_div_of_lt_left
 mul_hom.coprod
 le_sup_of_le_left
 semiconj_by.div_right
+operations_examples.example_mod
 nat.sqrt
 mul_one_class
 mul_one_class.one
@@ -16673,6 +16677,7 @@ sup_sdiff
 params.word_len
 subsingleton_info.inhabited
 and_forall_ne
+operations_examples.example_inverse_xor
 buffer.read'
 int.add_monoid
 multiset.rel.add
@@ -24346,6 +24351,7 @@ pure_id'_seq
 pnat.dvd_iff'
 multiset.exists_smul_of_dvd_count
 monotone_on.add_const
+quarterround_examples.example1_qr1
 monoid_with_zero.to_monoid
 measure_wf
 multiset.eq_zero_of_subset_zero
@@ -27319,6 +27325,7 @@ antitone.forall
 monotone_on.map_bdd_below
 list.bind_eq_nil
 rbmap.empty
+quarterround_examples.example1_qr0
 strict_mono.apply_eq_top_iff
 commutator_element
 finset.erase_none_none
@@ -27705,6 +27712,7 @@ sup_sup_sup_comm
 fin.mk_bit0
 nat.bit0_le_bit1_iff
 int.neg_add_lt_of_lt_add
+operations_examples.example_rotl
 lt_neg_add_of_add_lt
 nat.multichoose_succ_succ
 function.semiconj.maps_to_image
@@ -28623,6 +28631,7 @@ buffer.foldl
 bitvec.bits_to_nat_to_bool
 decidable.not_exists_not
 add_lt_of_lt_of_neg'
+operations_examples.example_rotl_inv
 neg_pow_two
 has_lt.lt.false
 is_glb.inter_Iic_of_mem
