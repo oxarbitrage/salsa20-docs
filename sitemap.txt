@@ -217,6 +217,7 @@ https://oxarbitrage.github.io/salsa20-docs/data/int/cast/defs.html
 https://oxarbitrage.github.io/salsa20-docs/logic/embedding.html
 https://oxarbitrage.github.io/salsa20-docs/order/max.html
 https://oxarbitrage.github.io/salsa20-docs/data/dlist.html
+https://oxarbitrage.github.io/salsa20-docs/examples/quarterround.html
 https://oxarbitrage.github.io/salsa20-docs/init/data/repr.html
 https://oxarbitrage.github.io/salsa20-docs/init/meta/interactive_base.html
 https://oxarbitrage.github.io/salsa20-docs/rowround.html
@@ -394,7 +395,6 @@ https://oxarbitrage.github.io/salsa20-docs/init/data/sum/basic.html
 https://oxarbitrage.github.io/salsa20-docs/tactic/obviously.html
 https://oxarbitrage.github.io/salsa20-docs/data/dlist/basic.html
 https://oxarbitrage.github.io/salsa20-docs/init/meta/has_reflect.html
-https://oxarbitrage.github.io/salsa20-docs/examples/quarterround.html
 https://oxarbitrage.github.io/salsa20-docs/tactic/choose.html
 https://oxarbitrage.github.io/salsa20-docs/tactic/apply.html
 https://oxarbitrage.github.io/salsa20-docs/tactic/nth_rewrite/default.html

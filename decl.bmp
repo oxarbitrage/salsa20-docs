@@ -705,6 +705,7 @@ le_add_of_nonneg_right
 well_founded_lt_dual_iff
 multiset.filter_zero
 list.foldr_ext
+quarterround_examples.example0_quarterround
 int.mod_add_cancel_left
 tactic.delta
 equiv.sum_congr_refl
@@ -980,6 +981,7 @@ lt_mul_left
 finset.strong_induction_eq
 inf_lt_left
 vector.to_list_nil
+quarterround_examples.example2_qr1
 array.to_list
 tactic.interactive.dsimp_result
 abs_mul_abs_self
@@ -2624,6 +2626,7 @@ left.neg_nonpos_iff
 equiv.perm.via_embedding_hom
 function.injective.inj_on
 additive.has_involutive_neg
+rowround.carry_diff_row3_value2
 equiv.of_preimage_equiv
 finset.sum_dite_of_false
 tactic.get_constructors_for
@@ -5985,6 +5988,7 @@ sub_le_of_abs_sub_le_left
 feature_search.predictor
 add_units.coe_eq_zero
 lt_of_add_lt_of_nonneg_right
+rowround.carry_diff_row1_value1
 strict_mono_on.add_monotone
 is_dec_refl
 name_map.inhabited
@@ -7263,6 +7267,7 @@ bot_lt_top
 nat.coprime_pow_left_iff
 occurrences_to_format
 rel_embedding.coe_fn_mk
+rowround.carry_diff_row4_value1
 equiv.cast_symm
 finset.sdiff_sdiff_left'
 finset.univ_filter_mem_range
@@ -7319,6 +7324,7 @@ set.bUnion_and'
 has_subset.subset.not_ssubset
 functor.comp.map_mk
 nat.pow_lt_iff_lt_right
+rowround.carry_diff_row3_value3
 upper_bounds_union
 core.doubleround_10_is_left_invariant
 int.neg_succ
@@ -9382,6 +9388,7 @@ galois_insertion.strict_mono_u
 finset.sum_dite
 fin.coe_add
 set.inj_on_insert
+quarterround_examples.example1_quarterround
 list.map_repeat
 tactic.simp_arg_type.has_to_string
 environment.inductive_num_indices
@@ -12200,6 +12207,7 @@ function.surjective.semigroup
 zero_ne_one_or_forall_eq_0
 pnat.nat_pred
 int.to_nat'
+rowround.carry_diff_row2_value1
 multiset.map_add_monoid_hom
 commute.inv_inv
 set.image_inter
@@ -13328,6 +13336,7 @@ nat.eq_zero_of_le_zero
 library_note.simp-normal form
 add_monoid_hom.ext_nat
 smul_assoc
+rowround.carry_diff_row2_value2
 set.sub_mem_Ioc_iff_left
 tactic.eqn_stub
 one_lt_mul''
@@ -14976,6 +14985,7 @@ sub_sub_sub_cancel_left
 prod.fst_swap
 to_bool_ff
 library_note.lower instance priority
+rowround.carry_diff_row1_value3
 not_iff_comm
 set.image_swap_eq_preimage_swap
 int.nat_abs_bit0
@@ -21271,6 +21281,7 @@ equiv.image_symm_image
 supr_lt_iff
 trans_rel_left
 list.has_union
+rowround.carry_diff_row4_value3
 list.sublist.count_le
 abs_dvd_self
 list.ret
@@ -23566,6 +23577,7 @@ with_top.untop'_top
 monoid_hom.coe_eq_to_one_hom
 coe_to_add_units
 semilattice_inf.to_partial_order
+rowround.carry_diff_row1_value4
 fun_like.ext_iff
 int.pred_nat_succ
 int.eq_of_mul_eq_mul_right
@@ -23751,6 +23763,7 @@ norm_num.prove_mul_nonneg_rat
 le_of_forall_pos_lt_add
 commute.div_left
 mul_equiv.to_equiv_symm
+rowround.carry_diff_row3_value4
 nat.min_zero
 list.subset_of_cons_subset
 fintype.subtype_eq'
@@ -24672,6 +24685,7 @@ fintype.card_le_of_embedding
 finset.card
 map_inv_lt_iff
 subrel.is_trans
+rowround.carry_diff_row2_value4
 equiv.naturality
 list.range'_sublist_right
 plift.down_injective
@@ -27753,6 +27767,7 @@ conv.interactive.to_lhs
 finset.filter_erase
 list.foldl_combinator_K
 Inf_pair
+rowround.carry_diff_row1_value2
 finset.order_bot
 fin.insert_nth_apply_below
 finset.map_univ_of_surjective
@@ -27820,6 +27835,7 @@ units.smul_comm_class'
 equiv.set_value
 set.Ioc_diff_Ioi
 multiset.card_cons
+rowround.carry_diff_row4_value4
 half_lt_self
 multiset.eq_of_mem_repeat
 order_top.to_has_top
@@ -29207,6 +29223,7 @@ nat.gcd_mul_right
 finset.subset.refl
 set.Inter_eq_empty_iff
 tactic.interactive.push_neg
+rowround.carry_diff_row4_value2
 ordered_comm_monoid
 ordered_comm_monoid.mul
 ordered_comm_monoid.mul_assoc
@@ -29570,6 +29587,7 @@ ball.imp_left
 finset.prod_list_count
 finset.strong_downward_induction
 nat.cast_pred
+rowround.carry_diff_row2_value3
 list.to_chunks_length_le
 order_bot.bdd_below
 int.comm_semigroup
@@ -30484,6 +30502,7 @@ unique.subtype_eq
 finset.sum_comp
 norm_num.le_one_bit1
 multiset.count_cons
+rowround.carry_diff_row3_value1
 list.dedup
 old_conv.interactive.itactic
 finset.card_eq_succ
