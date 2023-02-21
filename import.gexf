@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <gexf version="1.2" xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd">
-  <meta lastmodifieddate="2023-02-20">
+  <meta lastmodifieddate="2023-02-21">
     <creator>NetworkX 2.5.1</creator>
   </meta>
   <graph defaultedgetype="directed" mode="static" name="">
@@ -670,7 +670,7 @@
       </node>
       <node id="salsa20:utils" label="salsa20:utils">
         <attvalues>
-          <attvalue for="0" value="12" />
+          <attvalue for="0" value="14" />
         </attvalues>
       </node>
       <node id="mathlib:tactic.interactive_expr" label="mathlib:tactic.interactive_expr">
@@ -1785,7 +1785,7 @@
       </node>
       <node id="salsa20:rowround" label="salsa20:rowround">
         <attvalues>
-          <attvalue for="0" value="29" />
+          <attvalue for="0" value="17" />
         </attvalues>
       </node>
       <node id="salsa20:params" label="salsa20:params">
@@ -1878,6 +1878,11 @@
           <attvalue for="0" value="15" />
         </attvalues>
       </node>
+      <node id="salsa20:columnround" label="salsa20:columnround">
+        <attvalues>
+          <attvalue for="0" value="10" />
+        </attvalues>
+      </node>
       <node id="core:init.meta.rec_util" label="core:init.meta.rec_util">
         <attvalues>
           <attvalue for="0" value="7" />
@@ -1891,11 +1896,6 @@
       <node id="salsa20:examples.columnround" label="salsa20:examples.columnround">
         <attvalues>
           <attvalue for="0" value="4" />
-        </attvalues>
-      </node>
-      <node id="salsa20:columnround" label="salsa20:columnround">
-        <attvalues>
-          <attvalue for="0" value="7" />
         </attvalues>
       </node>
       <node id="mathlib:tactic.explode" label="mathlib:tactic.explode">
@@ -3335,15 +3335,15 @@
       <edge id="1137" source="mathlib:data.bitvec.basic" target="mathlib:data.fin.basic" />
       <edge id="1138" source="mathlib:data.bitvec.basic" target="mathlib:tactic.norm_num" />
       <edge id="1139" source="mathlib:data.bitvec.basic" target="core:init.default" />
-      <edge id="1140" source="core:init.meta.rec_util" target="core:init.meta.tactic" />
-      <edge id="1141" source="core:init.meta.rec_util" target="core:init.data.option.basic" />
-      <edge id="1142" source="mathlib:algebra.char_zero" target="mathlib:data.nat.cast_field" />
-      <edge id="1143" source="mathlib:algebra.char_zero" target="mathlib:data.fintype.basic" />
-      <edge id="1144" source="mathlib:algebra.char_zero" target="core:init.default" />
-      <edge id="1145" source="salsa20:examples.columnround" target="salsa20:columnround" />
-      <edge id="1146" source="salsa20:examples.columnround" target="core:init.default" />
-      <edge id="1147" source="salsa20:columnround" target="salsa20:rowround" />
-      <edge id="1148" source="salsa20:columnround" target="core:init.default" />
+      <edge id="1140" source="salsa20:columnround" target="salsa20:rowround" />
+      <edge id="1141" source="salsa20:columnround" target="core:init.default" />
+      <edge id="1142" source="core:init.meta.rec_util" target="core:init.meta.tactic" />
+      <edge id="1143" source="core:init.meta.rec_util" target="core:init.data.option.basic" />
+      <edge id="1144" source="mathlib:algebra.char_zero" target="mathlib:data.nat.cast_field" />
+      <edge id="1145" source="mathlib:algebra.char_zero" target="mathlib:data.fintype.basic" />
+      <edge id="1146" source="mathlib:algebra.char_zero" target="core:init.default" />
+      <edge id="1147" source="salsa20:examples.columnround" target="salsa20:columnround" />
+      <edge id="1148" source="salsa20:examples.columnround" target="core:init.default" />
       <edge id="1149" source="mathlib:tactic.explode" target="mathlib:meta.rb_map" />
       <edge id="1150" source="mathlib:tactic.explode" target="mathlib:tactic.core" />
       <edge id="1151" source="mathlib:tactic.explode" target="core:init.default" />
