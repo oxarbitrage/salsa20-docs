@@ -705,7 +705,6 @@ le_add_of_nonneg_right
 well_founded_lt_dual_iff
 multiset.filter_zero
 list.foldr_ext
-quarterround_examples.example0_quarterround
 int.mod_add_cancel_left
 tactic.delta
 equiv.sum_congr_refl
@@ -773,7 +772,6 @@ tactic.interactive.guard_proof_term
 tactic.interactive.rw_mod_cast
 set.nonempty.preimage
 Inf_image2_eq_Sup_Sup
-quarterround.qr1_zero
 tactic.open_n_pis_whnf
 finset.card_lt_iff_ne_univ
 nat.one_div_lt_one_div
@@ -981,7 +979,6 @@ lt_mul_left
 finset.strong_induction_eq
 inf_lt_left
 vector.to_list_nil
-quarterround_examples.example2_qr1
 array.to_list
 tactic.interactive.dsimp_result
 abs_mul_abs_self
@@ -1180,7 +1177,6 @@ decidable.eq_or_lt_of_le
 list.is_prefix.reverse
 functor.comp.applicative_id_comp
 multiset
-columnround.diff_carried_columnround
 div_lt_iff_of_neg
 order_dual.inhabited
 set.unbounded
@@ -1256,7 +1252,6 @@ set.not_mem_empty
 rbnode.balance1_node
 bool.to_bool_not
 list.count_permutations'_aux_self
-columnround_examples.output2
 option.pmap_some
 list.range_eq_range'
 rel_iso.simps.apply
@@ -1799,7 +1794,6 @@ tactic.explode.args
 mul_hom.prod_comp_prod_map
 vector.comp_traverse
 ring_hom.cancel_left
-rowround.n_succ_16
 list.pairwise_join
 tactic.interactive.filter_instances
 option_t.ext
@@ -2891,7 +2885,6 @@ monotone_lt
 conv.monad
 pnat.has_well_founded
 mul_add_one
-columnround_examples.input1
 finset.inter_assoc
 multiset.prod_map_pow
 nat.dvd_trans
@@ -6101,7 +6094,6 @@ prod.has_mul
 sub_le
 set.bUnion_self
 equiv.subsingleton_congr
-rowround.carry_diff_rowround_for_any_row_and_value
 add_right_cancel_semigroup.ext
 max_assoc
 vm_decl_kind.inhabited
@@ -6237,7 +6229,6 @@ functor.comp.comp_map
 set.sUnion
 with_top.has_sub
 equiv_like.apply_eq_iff_eq
-rowround.diff_carried_rowround
 option.filter
 multiset.map_comp_cons
 bitvec.to_fin
@@ -7294,7 +7285,6 @@ add_equiv.coe_to_equiv
 nat.pow_le_iff_le_left
 smt_state.to_format
 one_mul
-quarterround_examples.example1_qr3
 relation.refl_trans_gen_eq_self
 self_le_mul_right
 fintype.card_empty
@@ -7567,7 +7557,6 @@ unique.encodable
 add_le_cancellable.lt_tsub_of_add_lt_right
 not_forall_not
 widget.with_attr
-quarterround_examples.example1_qr2
 reader_t.adapt
 sq_pos_iff
 order_iso.image_symm_image
@@ -8852,7 +8841,6 @@ frame.to_distrib_lattice
 finset.sum_range_add
 punit.unique
 neg_injective
-quarterround.qr2_zero
 sum.is_right
 multiset.filter_add
 ite_add
@@ -9388,7 +9376,6 @@ galois_insertion.strict_mono_u
 finset.sum_dite
 fin.coe_add
 set.inj_on_insert
-quarterround_examples.example1_quarterround
 list.map_repeat
 tactic.simp_arg_type.has_to_string
 environment.inductive_num_indices
@@ -9835,7 +9822,6 @@ list.take_while_take_while
 vector.scanl_val
 int.cast_multiset_sum
 inf_sdiff_sup_right
-utils.list_to_matrix
 tactic.apply_assumption
 finset.inhabited_finset
 finset.pairwise_subtype_iff_pairwise_finset
@@ -10324,6 +10310,7 @@ int.nat_abs_le_iff_mul_self_le
 list.inth_cons_zero
 is_unit.inv_mul_eq_iff_eq_mul
 add_units.add_right_apply
+columnround_examples.output
 zpow_lt_zpow_iff
 bool.bnot_band
 additive.add_semigroup
@@ -11728,6 +11715,7 @@ set.Ioc_subset_Ioc_right
 abs_lt_iff_mul_self_lt
 eq_of_zero_sub_eq_zero_sub
 ordered_comm_group.le_of_mul_le_mul_left
+columnround_examples.input
 function.injective_iff_pairwise_ne
 div_pos_iff
 finset.sum_congr_set
@@ -12372,7 +12360,6 @@ list.map_accumr
 add_units.eq_neg_of_add_eq_zero_right
 sum.elim_mul_mul
 max_lt_iff
-operations_examples.example_xor
 coe_sort_coe_trans
 plift.unique
 nat.le_rec_on_self
@@ -12707,7 +12694,6 @@ lt_mul_of_lt_of_one_lt'
 tactic.rename_many
 zero_mul
 add_tsub_add_le_tsub_add_tsub
-rowround.diff_carried_prop_n
 set.preimage_coe_coe_diagonal
 function.injective.semiring
 preimage_equivalence
@@ -13501,7 +13487,6 @@ array.mem_rev_list
 level.of_nat
 finset.min_empty
 tactic.mk_conditional_instance
-columnround_examples.input2
 list.append_left_injective
 list.reverse_inj
 multiset.cons_subset_cons
@@ -14918,7 +14903,6 @@ div_lt_div_of_lt_left
 mul_hom.coprod
 le_sup_of_le_left
 semiconj_by.div_right
-operations_examples.example_mod
 nat.sqrt
 mul_one_class
 mul_one_class.one
@@ -14993,7 +14977,6 @@ finset.erase_bUnion
 multiset.filter_le_filter
 supr_split
 set.ite
-utils.matrix_to_list
 vm.stack_obj_info
 mul_right_cancel''
 not.imp_symm
@@ -16087,6 +16070,7 @@ applicative.to_has_seq_right
 applicative.mk
 and_congr_right
 finset.prod_range_one
+columnround_examples.input'
 int.add_left_cancel
 bitvec.ushr
 finset.sup'_induction
@@ -16687,7 +16671,6 @@ sup_sdiff
 params.word_len
 subsingleton_info.inhabited
 and_forall_ne
-operations_examples.example_inverse_xor
 buffer.read'
 int.add_monoid
 multiset.rel.add
@@ -18485,7 +18468,6 @@ norm_num.sle_bit1_bit0
 sub_neg_monoid.to_has_neg
 prod.swap_sub
 relation.iff_comp
-columnround.columnround_difference_is_carried
 tactic.unsafe.type_context.is_tmp_mvar
 finset.card_erase_le
 zsmul_lt_zsmul_iff
@@ -20632,7 +20614,6 @@ with_bot.lt_iff_exists_coe
 distrib_mul_action.comp_hom
 relation.trans_gen.head'
 finset.inf'_mul_le_mul_inf'_of_nonneg
-columnround_examples.output1
 list.inth_eq_iget_nth
 mul_hom.comp_assoc
 with_bot.has_zero
@@ -24362,7 +24343,6 @@ pure_id'_seq
 pnat.dvd_iff'
 multiset.exists_smul_of_dvd_count
 monotone_on.add_const
-quarterround_examples.example1_qr1
 monoid_with_zero.to_monoid
 measure_wf
 multiset.eq_zero_of_subset_zero
@@ -24617,7 +24597,6 @@ with_bot.add_lt_add_of_le_of_lt
 has_add.to_has_vadd
 equiv.Pi_congr_left'
 fintype.decidable_eq_monoid_hom_fintype
-quarterround.qr0_zero
 nat.div_self
 add_comm_group_with_one.to_add_comm_group
 multiset.dvd_prod
@@ -25659,7 +25638,6 @@ function.semiconj₂.iterate
 rel_embedding.sum_lift_rel_map_apply
 multiset.disjoint_iff_ne
 units.sq_eq_sq_iff_eq_or_eq_neg
-quarterround.qr3_zero
 function.injective.of_sigma_map
 nat.find_greatest_of_not
 function.injective.comm_monoid
@@ -27233,6 +27211,7 @@ prod
 prod.fst
 prod.snd
 prod.mk
+columnround_examples.output'
 int.to_nat_add_nat
 function.inv_fun_comp
 sub_eq_sub_add_sub
@@ -27336,7 +27315,6 @@ antitone.forall
 monotone_on.map_bdd_below
 list.bind_eq_nil
 rbmap.empty
-quarterround_examples.example1_qr0
 strict_mono.apply_eq_top_iff
 commutator_element
 finset.erase_none_none
@@ -27650,7 +27628,6 @@ monoid_hom.inv_comp
 add_right_cancel_monoid.to_add_right_cancel_semigroup
 ssubset_trans
 antitone_on.const_add
-columnround.carry_diff_columnround_for_any_row_and_value
 tactic.dependency_set_of_hyp
 option
 option.none
@@ -27724,7 +27701,6 @@ sup_sup_sup_comm
 fin.mk_bit0
 nat.bit0_le_bit1_iff
 int.neg_add_lt_of_lt_add
-operations_examples.example_rotl
 lt_neg_add_of_add_lt
 nat.multichoose_succ_succ
 function.semiconj.maps_to_image
@@ -28643,7 +28619,6 @@ buffer.foldl
 bitvec.bits_to_nat_to_bool
 decidable.not_exists_not
 add_lt_of_lt_of_neg'
-operations_examples.example_rotl_inv
 neg_pow_two
 has_lt.lt.false
 is_glb.inter_Iic_of_mem
@@ -29817,7 +29792,6 @@ bdd_below.image2
 function.eq_update_iff
 finset.eventually_constant_prod
 multiset.mem_bind
-quarterround.quarterround_zero
 nat.mul_sub_div
 add_hom_class.to_fun_like
 list.any_cons

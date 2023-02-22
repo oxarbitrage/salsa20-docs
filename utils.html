@@ -76,11 +76,7 @@
 
     <div class="nav_link"><a class="break_within" href="#utils.columnround_output_is_inv_of_input"><span class="name">utils</span>.<span class="name">columnround_output_is_inv_of_input</span></a></div>
 
-    <div class="nav_link"><a class="break_within" href="#utils.list_to_matrix"><span class="name">utils</span>.<span class="name">list_to_matrix</span></a></div>
-
     <div class="nav_link"><a class="break_within" href="#utils.matrix_distribute_two"><span class="name">utils</span>.<span class="name">matrix_distribute_two</span></a></div>
-
-    <div class="nav_link"><a class="break_within" href="#utils.matrix_to_list"><span class="name">utils</span>.<span class="name">matrix_to_list</span></a></div>
 
     <div class="nav_link"><a class="break_within" href="#utils.mod_matrix"><span class="name">utils</span>.<span class="name">mod_matrix</span></a></div>
 
@@ -714,108 +710,6 @@ Everything is reversible except for this addition.</p>
 <p>The MOD sum of two equal matrices X is 2 times X.</p>
 
 
-
-
-
-
-
-
-
-
-
-</div>
-</div>
-    
-
-    
-        
-        
-<div class="decl" id="utils.matrix_to_list">
-<div class="def">
-
-<div class="gh_link"><a href="">source</a></div>
-
-
-    <div class="attributes">@[simp]</div>
-
-
-<div class="decl_header">
-    
-
-
-<span class="decl_kind">def</span>
-<span class="decl_name"><a class="break_within" href="https://oxarbitrage.github.io/salsa20-docs/utils.html#utils.matrix_to_list"><span class="name">utils</span>.<span class="name">matrix_to_list</span></a></span>
-&nbsp;<span class="decl_args">:</span>
-<div class="decl_type"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod" title="prod">matrixType</a> → <span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#list">list</a> <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/data/bitvec/core.html#bitvec">bitvec</a> <a href="https://oxarbitrage.github.io/salsa20-docs/params.html#params.word_len">params.word_len</a>)</span></span></span></div>
-</div>
-
-
-
-
-
-<p>Convert a <code>matrixType</code> to a <code><a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#list">list</a></code> as lists are easy to work sometimes than prods.</p>
-
-
-
-    <details>
-        <summary>Equations</summary>
-        <ul class="equations">
-            
-                <li class="equation"><span class="fn"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/utils.html#utils.matrix_to_list">utils.matrix_to_list</a> m</span> <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#eq" title="eq">=</a> <span class="fn">[m.<a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod.fst" title="prod.fst">fst</a>.<a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod.fst" title="prod.fst">fst</a>, m.<a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod.fst" title="prod.fst">fst</a>.<a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod.snd" title="prod.snd">snd</a>.<a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod.fst" title="prod.fst">fst</a>, m.<a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod.fst" title="prod.fst">fst</a>.<a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod.snd" title="prod.snd">snd</a>.<a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod.snd" title="prod.snd">snd</a>.<a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod.fst" title="prod.fst">fst</a>, m.<a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod.fst" title="prod.fst">fst</a>.<a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod.snd" title="prod.snd">snd</a>.<a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod.snd" title="prod.snd">snd</a>.<a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod.snd" title="prod.snd">snd</a>, m.<a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod.snd" title="prod.snd">snd</a>.<a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod.fst" title="prod.fst">fst</a>.<a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod.fst" title="prod.fst">fst</a>, m.<a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod.snd" title="prod.snd">snd</a>.<a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod.fst" title="prod.fst">fst</a>.<a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod.snd" title="prod.snd">snd</a>.<a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod.fst" title="prod.fst">fst</a>, m.<a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod.snd" title="prod.snd">snd</a>.<a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod.fst" title="prod.fst">fst</a>.<a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod.snd" title="prod.snd">snd</a>.<a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod.snd" title="prod.snd">snd</a>.<a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod.fst" title="prod.fst">fst</a>, m.<a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod.snd" title="prod.snd">snd</a>.<a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod.fst" title="prod.fst">fst</a>.<a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod.snd" title="prod.snd">snd</a>.<a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod.snd" title="prod.snd">snd</a>.<a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod.snd" title="prod.snd">snd</a>, m.<a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod.snd" title="prod.snd">snd</a>.<a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod.snd" title="prod.snd">snd</a>.<a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod.fst" title="prod.fst">fst</a>.<a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod.fst" title="prod.fst">fst</a>, m.<a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod.snd" title="prod.snd">snd</a>.<a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod.snd" title="prod.snd">snd</a>.<a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod.fst" title="prod.fst">fst</a>.<a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod.snd" title="prod.snd">snd</a>.<a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod.fst" title="prod.fst">fst</a>, m.<a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod.snd" title="prod.snd">snd</a>.<a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod.snd" title="prod.snd">snd</a>.<a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod.fst" title="prod.fst">fst</a>.<a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod.snd" title="prod.snd">snd</a>.<a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod.snd" title="prod.snd">snd</a>.<a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod.fst" title="prod.fst">fst</a>, m.<a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod.snd" title="prod.snd">snd</a>.<a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod.snd" title="prod.snd">snd</a>.<a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod.fst" title="prod.fst">fst</a>.<a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod.snd" title="prod.snd">snd</a>.<a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod.snd" title="prod.snd">snd</a>.<a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod.snd" title="prod.snd">snd</a>, m.<a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod.snd" title="prod.snd">snd</a>.<a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod.snd" title="prod.snd">snd</a>.<a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod.snd" title="prod.snd">snd</a>.<a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod.fst" title="prod.fst">fst</a>, m.<a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod.snd" title="prod.snd">snd</a>.<a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod.snd" title="prod.snd">snd</a>.<a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod.snd" title="prod.snd">snd</a>.<a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod.snd" title="prod.snd">snd</a>.<a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod.fst" title="prod.fst">fst</a>, m.<a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod.snd" title="prod.snd">snd</a>.<a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod.snd" title="prod.snd">snd</a>.<a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod.snd" title="prod.snd">snd</a>.<a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod.snd" title="prod.snd">snd</a>.<a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod.snd" title="prod.snd">snd</a>.<a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod.fst" title="prod.fst">fst</a>, m.<a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod.snd" title="prod.snd">snd</a>.<a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod.snd" title="prod.snd">snd</a>.<a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod.snd" title="prod.snd">snd</a>.<a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod.snd" title="prod.snd">snd</a>.<a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod.snd" title="prod.snd">snd</a>.<a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod.snd" title="prod.snd">snd</a>]</span></span></li>
-            
-        </ul>
-    </details>
-
-
-
-
-
-
-
-
-
-</div>
-</div>
-    
-
-    
-        
-        
-<div class="decl" id="utils.list_to_matrix">
-<div class="def">
-
-<div class="gh_link"><a href="">source</a></div>
-
-
-    <div class="attributes">@[simp]</div>
-
-
-<div class="decl_header">
-    
-
-
-<span class="decl_kind">def</span>
-<span class="decl_name"><a class="break_within" href="https://oxarbitrage.github.io/salsa20-docs/utils.html#utils.list_to_matrix"><span class="name">utils</span>.<span class="name">list_to_matrix</span></a></span>
-&nbsp;<span class="decl_args">:</span>
-<div class="decl_type"><span class="fn"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#list">list</a> <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/data/bitvec/core.html#bitvec">bitvec</a> <a href="https://oxarbitrage.github.io/salsa20-docs/params.html#params.word_len">params.word_len</a>)</span></span> → <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod" title="prod">matrixType</a></span></div>
-</div>
-
-
-
-
-
-<p>Convert a list of bitvectors into a <code>matrixType</code>. Will panic if list size is &lt; 16</p>
-
-
-
-    <details>
-        <summary>Equations</summary>
-        <ul class="equations">
-            
-                <li class="equation"><span class="fn"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/utils.html#utils.list_to_matrix">utils.list_to_matrix</a> l</span> <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#eq" title="eq">=</a> <span class="fn"><span class="fn"><span class="fn"><span class="fn">(((l.<a href="https://oxarbitrage.github.io/salsa20-docs/init/data/list/basic.html#list.nth" title="list.nth">nth</a> 0)</span>.<a href="https://oxarbitrage.github.io/salsa20-docs/data/option/defs.html#option.iget" title="option.iget">iget</a></span>, <span class="fn"><span class="fn">(l.<a href="https://oxarbitrage.github.io/salsa20-docs/init/data/list/basic.html#list.nth" title="list.nth">nth</a> 1)</span>.<a href="https://oxarbitrage.github.io/salsa20-docs/data/option/defs.html#option.iget" title="option.iget">iget</a></span>, <span class="fn"><span class="fn">(l.<a href="https://oxarbitrage.github.io/salsa20-docs/init/data/list/basic.html#list.nth" title="list.nth">nth</a> 2)</span>.<a href="https://oxarbitrage.github.io/salsa20-docs/data/option/defs.html#option.iget" title="option.iget">iget</a></span>, <span class="fn"><span class="fn">(l.<a href="https://oxarbitrage.github.io/salsa20-docs/init/data/list/basic.html#list.nth" title="list.nth">nth</a> 3)</span>.<a href="https://oxarbitrage.github.io/salsa20-docs/data/option/defs.html#option.iget" title="option.iget">iget</a>)</span></span>, <span class="fn"><span class="fn"><span class="fn">((l.<a href="https://oxarbitrage.github.io/salsa20-docs/init/data/list/basic.html#list.nth" title="list.nth">nth</a> 4)</span>.<a href="https://oxarbitrage.github.io/salsa20-docs/data/option/defs.html#option.iget" title="option.iget">iget</a></span>, <span class="fn"><span class="fn">(l.<a href="https://oxarbitrage.github.io/salsa20-docs/init/data/list/basic.html#list.nth" title="list.nth">nth</a> 5)</span>.<a href="https://oxarbitrage.github.io/salsa20-docs/data/option/defs.html#option.iget" title="option.iget">iget</a></span>, <span class="fn"><span class="fn">(l.<a href="https://oxarbitrage.github.io/salsa20-docs/init/data/list/basic.html#list.nth" title="list.nth">nth</a> 6)</span>.<a href="https://oxarbitrage.github.io/salsa20-docs/data/option/defs.html#option.iget" title="option.iget">iget</a></span>, <span class="fn"><span class="fn">(l.<a href="https://oxarbitrage.github.io/salsa20-docs/init/data/list/basic.html#list.nth" title="list.nth">nth</a> 7)</span>.<a href="https://oxarbitrage.github.io/salsa20-docs/data/option/defs.html#option.iget" title="option.iget">iget</a>)</span></span>, <span class="fn"><span class="fn"><span class="fn">((l.<a href="https://oxarbitrage.github.io/salsa20-docs/init/data/list/basic.html#list.nth" title="list.nth">nth</a> 8)</span>.<a href="https://oxarbitrage.github.io/salsa20-docs/data/option/defs.html#option.iget" title="option.iget">iget</a></span>, <span class="fn"><span class="fn">(l.<a href="https://oxarbitrage.github.io/salsa20-docs/init/data/list/basic.html#list.nth" title="list.nth">nth</a> 9)</span>.<a href="https://oxarbitrage.github.io/salsa20-docs/data/option/defs.html#option.iget" title="option.iget">iget</a></span>, <span class="fn"><span class="fn">(l.<a href="https://oxarbitrage.github.io/salsa20-docs/init/data/list/basic.html#list.nth" title="list.nth">nth</a> 10)</span>.<a href="https://oxarbitrage.github.io/salsa20-docs/data/option/defs.html#option.iget" title="option.iget">iget</a></span>, <span class="fn"><span class="fn">(l.<a href="https://oxarbitrage.github.io/salsa20-docs/init/data/list/basic.html#list.nth" title="list.nth">nth</a> 11)</span>.<a href="https://oxarbitrage.github.io/salsa20-docs/data/option/defs.html#option.iget" title="option.iget">iget</a>)</span></span>, <span class="fn"><span class="fn">(l.<a href="https://oxarbitrage.github.io/salsa20-docs/init/data/list/basic.html#list.nth" title="list.nth">nth</a> 12)</span>.<a href="https://oxarbitrage.github.io/salsa20-docs/data/option/defs.html#option.iget" title="option.iget">iget</a></span>, <span class="fn"><span class="fn">(l.<a href="https://oxarbitrage.github.io/salsa20-docs/init/data/list/basic.html#list.nth" title="list.nth">nth</a> 13)</span>.<a href="https://oxarbitrage.github.io/salsa20-docs/data/option/defs.html#option.iget" title="option.iget">iget</a></span>, <span class="fn"><span class="fn">(l.<a href="https://oxarbitrage.github.io/salsa20-docs/init/data/list/basic.html#list.nth" title="list.nth">nth</a> 14)</span>.<a href="https://oxarbitrage.github.io/salsa20-docs/data/option/defs.html#option.iget" title="option.iget">iget</a></span>, <span class="fn"><span class="fn">(l.<a href="https://oxarbitrage.github.io/salsa20-docs/init/data/list/basic.html#list.nth" title="list.nth">nth</a> 15)</span>.<a href="https://oxarbitrage.github.io/salsa20-docs/data/option/defs.html#option.iget" title="option.iget">iget</a>)</span></span></span></li>
-            
-        </ul>
-    </details>
 
 
 
@@ -2473,12 +2367,6 @@ Everything is reversible except for this addition.</p>
         </div>
         <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/examples/doubleround.html">doubleround</a>
-        </div>
-        <div class="nav_link ">
-            <a href="https://oxarbitrage.github.io/salsa20-docs/examples/operations.html">operations</a>
-        </div>
-        <div class="nav_link ">
-            <a href="https://oxarbitrage.github.io/salsa20-docs/examples/quarterround.html">quarterround</a>
         </div>
         <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/examples/rowround.html">rowround</a>

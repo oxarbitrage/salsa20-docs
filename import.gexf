@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <gexf version="1.2" xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd">
-  <meta lastmodifieddate="2023-02-21">
+  <meta lastmodifieddate="2023-02-22">
     <creator>NetworkX 2.5.1</creator>
   </meta>
   <graph defaultedgetype="directed" mode="static" name="">
@@ -660,7 +660,7 @@
       </node>
       <node id="salsa20:quarterround" label="salsa20:quarterround">
         <attvalues>
-          <attvalue for="0" value="53" />
+          <attvalue for="0" value="48" />
         </attvalues>
       </node>
       <node id="salsa20:operations" label="salsa20:operations">
@@ -670,7 +670,7 @@
       </node>
       <node id="salsa20:utils" label="salsa20:utils">
         <attvalues>
-          <attvalue for="0" value="14" />
+          <attvalue for="0" value="12" />
         </attvalues>
       </node>
       <node id="mathlib:tactic.interactive_expr" label="mathlib:tactic.interactive_expr">
@@ -1773,11 +1773,6 @@
           <attvalue for="0" value="6" />
         </attvalues>
       </node>
-      <node id="salsa20:examples.quarterround" label="salsa20:examples.quarterround">
-        <attvalues>
-          <attvalue for="0" value="7" />
-        </attvalues>
-      </node>
       <node id="core:init.data.sum.basic" label="core:init.data.sum.basic">
         <attvalues>
           <attvalue for="0" value="2" />
@@ -1785,7 +1780,7 @@
       </node>
       <node id="salsa20:rowround" label="salsa20:rowround">
         <attvalues>
-          <attvalue for="0" value="17" />
+          <attvalue for="0" value="13" />
         </attvalues>
       </node>
       <node id="salsa20:params" label="salsa20:params">
@@ -1878,11 +1873,6 @@
           <attvalue for="0" value="15" />
         </attvalues>
       </node>
-      <node id="salsa20:columnround" label="salsa20:columnround">
-        <attvalues>
-          <attvalue for="0" value="10" />
-        </attvalues>
-      </node>
       <node id="core:init.meta.rec_util" label="core:init.meta.rec_util">
         <attvalues>
           <attvalue for="0" value="7" />
@@ -1891,11 +1881,6 @@
       <node id="mathlib:algebra.char_zero" label="mathlib:algebra.char_zero">
         <attvalues>
           <attvalue for="0" value="27" />
-        </attvalues>
-      </node>
-      <node id="salsa20:examples.columnround" label="salsa20:examples.columnround">
-        <attvalues>
-          <attvalue for="0" value="4" />
         </attvalues>
       </node>
       <node id="mathlib:tactic.explode" label="mathlib:tactic.explode">
@@ -1991,6 +1976,11 @@
       <node id="mathlib:data.rat.basic" label="mathlib:data.rat.basic">
         <attvalues>
           <attvalue for="0" value="2" />
+        </attvalues>
+      </node>
+      <node id="salsa20:columnround" label="salsa20:columnround">
+        <attvalues>
+          <attvalue for="0" value="7" />
         </attvalues>
       </node>
       <node id="core:init.control.applicative" label="core:init.control.applicative">
@@ -2143,6 +2133,11 @@
           <attvalue for="0" value="6" />
         </attvalues>
       </node>
+      <node id="salsa20:examples.columnround" label="salsa20:examples.columnround">
+        <attvalues>
+          <attvalue for="0" value="4" />
+        </attvalues>
+      </node>
       <node id="salsa20:examples.rowround" label="salsa20:examples.rowround">
         <attvalues>
           <attvalue for="0" value="4" />
@@ -2151,11 +2146,6 @@
       <node id="core:init.data.subtype.instances" label="core:init.data.subtype.instances">
         <attvalues>
           <attvalue for="0" value="1" />
-        </attvalues>
-      </node>
-      <node id="salsa20:examples.operations" label="salsa20:examples.operations">
-        <attvalues>
-          <attvalue for="0" value="5" />
         </attvalues>
       </node>
       <node id="mathlib:tactic.simp_rw" label="mathlib:tactic.simp_rw">
@@ -3285,203 +3275,199 @@
       <edge id="1087" source="mathlib:data.nat.cast.defs" target="core:init.default" />
       <edge id="1088" source="mathlib:data.prod.pprod" target="mathlib:logic.basic" />
       <edge id="1089" source="mathlib:data.prod.pprod" target="core:init.default" />
-      <edge id="1090" source="salsa20:examples.quarterround" target="salsa20:quarterround" />
-      <edge id="1091" source="salsa20:examples.quarterround" target="core:init.default" />
-      <edge id="1092" source="core:init.data.sum.basic" target="core:init.logic" />
-      <edge id="1093" source="salsa20:rowround" target="salsa20:params" />
-      <edge id="1094" source="salsa20:rowround" target="salsa20:quarterround" />
-      <edge id="1095" source="salsa20:rowround" target="salsa20:utils" />
-      <edge id="1096" source="salsa20:rowround" target="core:init.default" />
-      <edge id="1097" source="salsa20:params" target="mathlib:data.bitvec.basic" />
-      <edge id="1098" source="salsa20:params" target="core:init.default" />
-      <edge id="1099" source="core:init.meta.feature_search" target="core:init.meta.tactic" />
-      <edge id="1100" source="core:init.meta.feature_search" target="core:init.meta.derive" />
-      <edge id="1101" source="core:init.meta.feature_search" target="core:init.meta.mk_dec_eq_instance" />
-      <edge id="1102" source="core:init.meta.feature_search" target="core:init.meta.float" />
-      <edge id="1103" source="mathlib:data.list.lex" target="mathlib:order.rel_classes" />
-      <edge id="1104" source="mathlib:data.list.lex" target="core:init.default" />
-      <edge id="1105" source="mathlib:data.list.sublists" target="mathlib:data.list.basic" />
-      <edge id="1106" source="mathlib:data.list.sublists" target="mathlib:data.nat.choose.basic" />
-      <edge id="1107" source="mathlib:data.list.sublists" target="core:init.default" />
-      <edge id="1108" source="core:init.meta.ac_tactics" target="core:init.meta.tactic" />
-      <edge id="1109" source="mathlib:tactic.converter.old_conv" target="mathlib:control.basic" />
-      <edge id="1110" source="mathlib:tactic.converter.old_conv" target="core:init.default" />
-      <edge id="1111" source="mathlib:tactic.alias" target="mathlib:tactic.core" />
-      <edge id="1112" source="mathlib:tactic.alias" target="core:init.default" />
-      <edge id="1113" source="mathlib:tactic.simp_result" target="mathlib:tactic.core" />
-      <edge id="1114" source="mathlib:tactic.simp_result" target="core:init.default" />
-      <edge id="1115" source="mathlib:tactic.find" target="mathlib:tactic.core" />
-      <edge id="1116" source="mathlib:tactic.find" target="core:init.default" />
-      <edge id="1117" source="mathlib:control.equiv_functor" target="mathlib:logic.equiv.basic" />
-      <edge id="1118" source="mathlib:control.equiv_functor" target="core:init.default" />
-      <edge id="1119" source="core:init.data.nat.bitwise" target="core:init.data.nat.lemmas" />
-      <edge id="1120" source="core:init.data.nat.bitwise" target="core:init.meta.well_founded_tactics" />
-      <edge id="1121" source="mathlib:tactic.unify_equations" target="mathlib:tactic.core" />
-      <edge id="1122" source="mathlib:tactic.unify_equations" target="core:init.default" />
-      <edge id="1123" source="core:init.meta.hole_command" target="core:init.meta.tactic" />
-      <edge id="1124" source="mathlib:data.fin.tuple.basic" target="mathlib:data.fin.basic" />
-      <edge id="1125" source="mathlib:data.fin.tuple.basic" target="mathlib:data.pi.lex" />
-      <edge id="1126" source="mathlib:data.fin.tuple.basic" target="core:init.default" />
-      <edge id="1127" source="core:init.control.functor" target="core:init.core" />
-      <edge id="1128" source="core:init.control.functor" target="core:init.function" />
-      <edge id="1129" source="core:init.control.functor" target="core:init.meta.name" />
-      <edge id="1130" source="core:init.data.unsigned.ops" target="core:init.data.unsigned.basic" />
-      <edge id="1131" source="core:init.data.unsigned.ops" target="core:init.data.fin.ops" />
-      <edge id="1132" source="mathlib:tactic.lint.misc" target="mathlib:data.bool.basic" />
-      <edge id="1133" source="mathlib:tactic.lint.misc" target="mathlib:meta.rb_map" />
-      <edge id="1134" source="mathlib:tactic.lint.misc" target="mathlib:tactic.lint.basic" />
-      <edge id="1135" source="mathlib:tactic.lint.misc" target="core:init.default" />
-      <edge id="1136" source="mathlib:data.bitvec.basic" target="mathlib:data.bitvec.core" />
-      <edge id="1137" source="mathlib:data.bitvec.basic" target="mathlib:data.fin.basic" />
-      <edge id="1138" source="mathlib:data.bitvec.basic" target="mathlib:tactic.norm_num" />
-      <edge id="1139" source="mathlib:data.bitvec.basic" target="core:init.default" />
-      <edge id="1140" source="salsa20:columnround" target="salsa20:rowround" />
-      <edge id="1141" source="salsa20:columnround" target="core:init.default" />
-      <edge id="1142" source="core:init.meta.rec_util" target="core:init.meta.tactic" />
-      <edge id="1143" source="core:init.meta.rec_util" target="core:init.data.option.basic" />
-      <edge id="1144" source="mathlib:algebra.char_zero" target="mathlib:data.nat.cast_field" />
-      <edge id="1145" source="mathlib:algebra.char_zero" target="mathlib:data.fintype.basic" />
-      <edge id="1146" source="mathlib:algebra.char_zero" target="core:init.default" />
-      <edge id="1147" source="salsa20:examples.columnround" target="salsa20:columnround" />
-      <edge id="1148" source="salsa20:examples.columnround" target="core:init.default" />
-      <edge id="1149" source="mathlib:tactic.explode" target="mathlib:meta.rb_map" />
-      <edge id="1150" source="mathlib:tactic.explode" target="mathlib:tactic.core" />
-      <edge id="1151" source="mathlib:tactic.explode" target="core:init.default" />
-      <edge id="1152" source="mathlib:tactic.finish" target="mathlib:tactic.hint" />
-      <edge id="1153" source="mathlib:tactic.finish" target="core:init.default" />
-      <edge id="1154" source="mathlib:tactic.lint.frontend" target="mathlib:meta.rb_map" />
-      <edge id="1155" source="mathlib:tactic.lint.frontend" target="mathlib:tactic.lint.basic" />
-      <edge id="1156" source="mathlib:tactic.lint.frontend" target="core:init.default" />
-      <edge id="1157" source="mathlib:tactic.generalizes" target="mathlib:tactic.core" />
-      <edge id="1158" source="mathlib:tactic.generalizes" target="core:init.default" />
-      <edge id="1159" source="core:init.control.reader" target="core:init.control.lift" />
-      <edge id="1160" source="core:init.control.reader" target="core:init.control.id" />
-      <edge id="1161" source="core:init.control.reader" target="core:init.control.alternative" />
-      <edge id="1162" source="core:init.control.reader" target="core:init.control.except" />
-      <edge id="1163" source="core:init.meta.ref" target="core:init.meta.tactic" />
-      <edge id="1164" source="core:init.data.quot" target="core:init.data.sigma.basic" />
-      <edge id="1165" source="core:init.data.quot" target="core:init.logic" />
-      <edge id="1166" source="core:init.data.quot" target="core:init.propext" />
-      <edge id="1167" source="core:init.data.quot" target="core:init.data.setoid" />
-      <edge id="1168" source="core:init.data.sigma.basic" target="core:init.logic" />
-      <edge id="1169" source="core:init.data.sigma.basic" target="core:init.wf" />
-      <edge id="1170" source="core:init.data.setoid" target="core:init.logic" />
-      <edge id="1171" source="core:init.data.int.comp_lemmas" target="core:init.data.int.order" />
-      <edge id="1172" source="salsa20:core" target="salsa20:doubleround" />
-      <edge id="1173" source="salsa20:core" target="salsa20:littleendian" />
-      <edge id="1174" source="salsa20:core" target="core:init.default" />
-      <edge id="1175" source="salsa20:doubleround" target="salsa20:rowround" />
-      <edge id="1176" source="salsa20:doubleround" target="salsa20:columnround" />
-      <edge id="1177" source="salsa20:doubleround" target="core:init.default" />
-      <edge id="1178" source="salsa20:littleendian" target="core:init.default" />
-      <edge id="1179" source="mathlib:tactic.elide" target="mathlib:tactic.core" />
-      <edge id="1180" source="mathlib:tactic.elide" target="core:init.default" />
-      <edge id="1181" source="mathlib:tactic.protected" target="mathlib:tactic.core" />
-      <edge id="1182" source="mathlib:tactic.protected" target="core:init.default" />
-      <edge id="1183" source="core:init.data.option.instances" target="core:init.data.option.basic" />
-      <edge id="1184" source="core:init.data.option.instances" target="core:init.meta.tactic" />
-      <edge id="1185" source="core:init.data.option.instances" target="core:init.control.lawful" />
-      <edge id="1186" source="mathlib:tactic.lift" target="mathlib:tactic.rcases" />
-      <edge id="1187" source="mathlib:tactic.lift" target="core:init.default" />
-      <edge id="1188" source="mathlib:tactic.rewrite" target="core:data.dlist" />
-      <edge id="1189" source="mathlib:tactic.rewrite" target="mathlib:tactic.core" />
-      <edge id="1190" source="mathlib:tactic.rewrite" target="core:init.default" />
-      <edge id="1191" source="mathlib:data.rat.basic" target="mathlib:algebra.euclidean_domain" />
-      <edge id="1192" source="mathlib:data.rat.basic" target="mathlib:data.int.cast" />
-      <edge id="1193" source="mathlib:data.rat.basic" target="mathlib:data.nat.gcd" />
-      <edge id="1194" source="mathlib:data.rat.basic" target="mathlib:data.rat.defs" />
-      <edge id="1195" source="mathlib:data.rat.basic" target="mathlib:logic.encodable.basic" />
-      <edge id="1196" source="mathlib:data.rat.basic" target="core:init.default" />
-      <edge id="1197" source="core:init.control.applicative" target="core:init.control.functor" />
-      <edge id="1198" source="mathlib:tactic.push_neg" target="mathlib:logic.basic" />
-      <edge id="1199" source="mathlib:tactic.push_neg" target="core:init.default" />
-      <edge id="1200" source="core:init.version" target="core:init.data.nat.basic" />
-      <edge id="1201" source="core:init.version" target="core:init.data.string.basic" />
-      <edge id="1202" source="core:init.meta.congr_lemma" target="core:init.meta.tactic" />
-      <edge id="1203" source="core:init.meta.congr_lemma" target="core:init.meta.format" />
-      <edge id="1204" source="core:init.meta.congr_lemma" target="core:init.function" />
-      <edge id="1205" source="core:system.random" target="core:init.default" />
-      <edge id="1206" source="core:init.meta.backward" target="core:init.meta.tactic" />
-      <edge id="1207" source="core:init.meta.backward" target="core:init.meta.set_get_option_tactics" />
-      <edge id="1208" source="core:init.meta.task" target="core:init.logic" />
-      <edge id="1209" source="salsa20:examples.doubleround" target="salsa20:doubleround" />
-      <edge id="1210" source="salsa20:examples.doubleround" target="core:init.default" />
-      <edge id="1211" source="core:init.data.int.bitwise" target="core:init.data.int.basic" />
-      <edge id="1212" source="core:init.data.int.bitwise" target="core:init.data.nat.bitwise" />
-      <edge id="1213" source="salsa20:examples.core" target="salsa20:core" />
-      <edge id="1214" source="salsa20:examples.core" target="core:init.default" />
-      <edge id="1215" source="mathlib:tactic.trunc_cases" target="mathlib:tactic.chain" />
-      <edge id="1216" source="mathlib:tactic.trunc_cases" target="mathlib:data.quot" />
-      <edge id="1217" source="mathlib:tactic.trunc_cases" target="core:init.default" />
-      <edge id="1218" source="mathlib:tactic.mk_iff_of_inductive_prop" target="mathlib:tactic.core" />
-      <edge id="1219" source="mathlib:tactic.mk_iff_of_inductive_prop" target="mathlib:tactic.lint.default" />
-      <edge id="1220" source="mathlib:tactic.mk_iff_of_inductive_prop" target="core:init.default" />
-      <edge id="1221" source="core:init.meta.expr_address" target="core:init.meta.expr" />
-      <edge id="1222" source="core:init.meta.expr_address" target="core:init.data.list.basic" />
-      <edge id="1223" source="core:init.meta.expr_address" target="core:init.data.option.basic" />
-      <edge id="1224" source="core:init.meta.expr_address" target="core:init.util" />
-      <edge id="1225" source="mathlib:tactic.nth_rewrite.basic" target="mathlib:meta.expr_lens" />
-      <edge id="1226" source="mathlib:tactic.nth_rewrite.basic" target="core:init.default" />
-      <edge id="1227" source="mathlib:tactic.show_term" target="mathlib:tactic.core" />
-      <edge id="1228" source="mathlib:tactic.show_term" target="core:init.default" />
-      <edge id="1229" source="core:init.wf" target="core:init.data.nat.basic" />
-      <edge id="1230" source="core:init.wf" target="core:init.data.prod" />
-      <edge id="1231" source="mathlib:tactic.restate_axiom" target="mathlib:tactic.doc_commands" />
-      <edge id="1232" source="mathlib:tactic.restate_axiom" target="core:init.default" />
-      <edge id="1233" source="mathlib:data.int.cast_field" target="mathlib:data.int.cast" />
-      <edge id="1234" source="mathlib:data.int.cast_field" target="mathlib:data.nat.cast_field" />
-      <edge id="1235" source="mathlib:data.int.cast_field" target="core:init.default" />
-      <edge id="1236" source="core:init.meta.widget.html_cmd" target="core:init.meta.widget.basic" />
-      <edge id="1237" source="core:init.meta.widget.html_cmd" target="core:init.meta.lean.parser" />
-      <edge id="1238" source="core:init.meta.widget.html_cmd" target="core:init.meta.interactive_base" />
-      <edge id="1239" source="core:init.meta.widget.html_cmd" target="core:init.data.punit" />
-      <edge id="1240" source="mathlib:tactic.replacer" target="mathlib:tactic.core" />
-      <edge id="1241" source="mathlib:tactic.replacer" target="core:init.default" />
-      <edge id="1242" source="core:init.meta.comp_value_tactics" target="core:init.meta.tactic" />
-      <edge id="1243" source="core:init.meta.comp_value_tactics" target="core:init.data.option.basic" />
-      <edge id="1244" source="core:init.data.string.ops" target="core:init.data.bool.lemmas" />
-      <edge id="1245" source="core:init.data.string.ops" target="core:init.data.string.basic" />
-      <edge id="1246" source="core:init.data.string.ops" target="core:init.meta.well_founded_tactics" />
-      <edge id="1247" source="mathlib:tactic.delta_instance" target="mathlib:tactic.simp_result" />
-      <edge id="1248" source="mathlib:tactic.delta_instance" target="core:init.default" />
-      <edge id="1249" source="mathlib:tactic.generalize_proofs" target="mathlib:tactic.doc_commands" />
-      <edge id="1250" source="mathlib:tactic.generalize_proofs" target="core:init.default" />
-      <edge id="1251" source="core:init.data.char.classes" target="core:init.data.char.basic" />
-      <edge id="1252" source="core:init.data.char.classes" target="core:init.data.char.lemmas" />
-      <edge id="1253" source="mathlib:tactic.obviously" target="mathlib:tactic.tidy" />
-      <edge id="1254" source="mathlib:tactic.obviously" target="mathlib:tactic.replacer" />
-      <edge id="1255" source="mathlib:tactic.obviously" target="core:init.default" />
-      <edge id="1256" source="mathlib:tactic.choose" target="mathlib:logic.function.basic" />
-      <edge id="1257" source="mathlib:tactic.choose" target="mathlib:tactic.core" />
-      <edge id="1258" source="mathlib:tactic.choose" target="core:init.default" />
-      <edge id="1259" source="mathlib:tactic.nth_rewrite.congr" target="mathlib:tactic.core" />
-      <edge id="1260" source="mathlib:tactic.nth_rewrite.congr" target="mathlib:tactic.nth_rewrite.basic" />
-      <edge id="1261" source="mathlib:tactic.nth_rewrite.congr" target="core:init.default" />
-      <edge id="1262" source="mathlib:tactic.simp_command" target="mathlib:tactic.core" />
-      <edge id="1263" source="mathlib:tactic.simp_command" target="core:init.default" />
-      <edge id="1264" source="mathlib:tactic.lint.simp" target="mathlib:tactic.lint.basic" />
-      <edge id="1265" source="mathlib:tactic.lint.simp" target="core:init.default" />
-      <edge id="1266" source="salsa20:examples.rowround" target="salsa20:rowround" />
-      <edge id="1267" source="salsa20:examples.rowround" target="core:init.default" />
-      <edge id="1268" source="core:init.data.subtype.instances" target="core:init.meta.mk_dec_eq_instance" />
-      <edge id="1269" source="core:init.data.subtype.instances" target="core:init.data.subtype.basic" />
-      <edge id="1270" source="salsa20:examples.operations" target="salsa20:operations" />
-      <edge id="1271" source="salsa20:examples.operations" target="core:init.default" />
-      <edge id="1272" source="mathlib:tactic.simp_rw" target="mathlib:tactic.core" />
-      <edge id="1273" source="mathlib:tactic.simp_rw" target="core:init.default" />
-      <edge id="1274" source="mathlib:tactic.dec_trivial" target="mathlib:tactic.interactive" />
-      <edge id="1275" source="mathlib:tactic.dec_trivial" target="core:init.default" />
-      <edge id="1276" source="mathlib:tactic.rename_var" target="mathlib:tactic.interactive" />
-      <edge id="1277" source="mathlib:tactic.rename_var" target="core:init.default" />
-      <edge id="1278" source="mathlib:tactic.pretty_cases" target="mathlib:tactic.core" />
-      <edge id="1279" source="mathlib:tactic.pretty_cases" target="core:init.default" />
-      <edge id="1280" source="core:init.meta.widget.replace_save_info" target="core:init.meta.widget.interactive_expr" />
-      <edge id="1281" source="mathlib:tactic.converter.apply_congr" target="mathlib:tactic.interactive" />
-      <edge id="1282" source="mathlib:tactic.converter.apply_congr" target="mathlib:tactic.converter.interactive" />
-      <edge id="1283" source="mathlib:tactic.converter.apply_congr" target="core:init.default" />
-      <edge id="1284" source="core:init.meta.async_tactic" target="core:init.meta.tactic" />
-      <edge id="1285" source="core:init.meta.async_tactic" target="core:init.meta.interactive" />
-      <edge id="1286" source="core:init.meta.async_tactic" target="core:init.meta.instance_cache" />
+      <edge id="1090" source="core:init.data.sum.basic" target="core:init.logic" />
+      <edge id="1091" source="salsa20:rowround" target="salsa20:params" />
+      <edge id="1092" source="salsa20:rowround" target="salsa20:quarterround" />
+      <edge id="1093" source="salsa20:rowround" target="salsa20:utils" />
+      <edge id="1094" source="salsa20:rowround" target="core:init.default" />
+      <edge id="1095" source="salsa20:params" target="mathlib:data.bitvec.basic" />
+      <edge id="1096" source="salsa20:params" target="core:init.default" />
+      <edge id="1097" source="core:init.meta.feature_search" target="core:init.meta.tactic" />
+      <edge id="1098" source="core:init.meta.feature_search" target="core:init.meta.derive" />
+      <edge id="1099" source="core:init.meta.feature_search" target="core:init.meta.mk_dec_eq_instance" />
+      <edge id="1100" source="core:init.meta.feature_search" target="core:init.meta.float" />
+      <edge id="1101" source="mathlib:data.list.lex" target="mathlib:order.rel_classes" />
+      <edge id="1102" source="mathlib:data.list.lex" target="core:init.default" />
+      <edge id="1103" source="mathlib:data.list.sublists" target="mathlib:data.list.basic" />
+      <edge id="1104" source="mathlib:data.list.sublists" target="mathlib:data.nat.choose.basic" />
+      <edge id="1105" source="mathlib:data.list.sublists" target="core:init.default" />
+      <edge id="1106" source="core:init.meta.ac_tactics" target="core:init.meta.tactic" />
+      <edge id="1107" source="mathlib:tactic.converter.old_conv" target="mathlib:control.basic" />
+      <edge id="1108" source="mathlib:tactic.converter.old_conv" target="core:init.default" />
+      <edge id="1109" source="mathlib:tactic.alias" target="mathlib:tactic.core" />
+      <edge id="1110" source="mathlib:tactic.alias" target="core:init.default" />
+      <edge id="1111" source="mathlib:tactic.simp_result" target="mathlib:tactic.core" />
+      <edge id="1112" source="mathlib:tactic.simp_result" target="core:init.default" />
+      <edge id="1113" source="mathlib:tactic.find" target="mathlib:tactic.core" />
+      <edge id="1114" source="mathlib:tactic.find" target="core:init.default" />
+      <edge id="1115" source="mathlib:control.equiv_functor" target="mathlib:logic.equiv.basic" />
+      <edge id="1116" source="mathlib:control.equiv_functor" target="core:init.default" />
+      <edge id="1117" source="core:init.data.nat.bitwise" target="core:init.data.nat.lemmas" />
+      <edge id="1118" source="core:init.data.nat.bitwise" target="core:init.meta.well_founded_tactics" />
+      <edge id="1119" source="mathlib:tactic.unify_equations" target="mathlib:tactic.core" />
+      <edge id="1120" source="mathlib:tactic.unify_equations" target="core:init.default" />
+      <edge id="1121" source="core:init.meta.hole_command" target="core:init.meta.tactic" />
+      <edge id="1122" source="mathlib:data.fin.tuple.basic" target="mathlib:data.fin.basic" />
+      <edge id="1123" source="mathlib:data.fin.tuple.basic" target="mathlib:data.pi.lex" />
+      <edge id="1124" source="mathlib:data.fin.tuple.basic" target="core:init.default" />
+      <edge id="1125" source="core:init.control.functor" target="core:init.core" />
+      <edge id="1126" source="core:init.control.functor" target="core:init.function" />
+      <edge id="1127" source="core:init.control.functor" target="core:init.meta.name" />
+      <edge id="1128" source="core:init.data.unsigned.ops" target="core:init.data.unsigned.basic" />
+      <edge id="1129" source="core:init.data.unsigned.ops" target="core:init.data.fin.ops" />
+      <edge id="1130" source="mathlib:tactic.lint.misc" target="mathlib:data.bool.basic" />
+      <edge id="1131" source="mathlib:tactic.lint.misc" target="mathlib:meta.rb_map" />
+      <edge id="1132" source="mathlib:tactic.lint.misc" target="mathlib:tactic.lint.basic" />
+      <edge id="1133" source="mathlib:tactic.lint.misc" target="core:init.default" />
+      <edge id="1134" source="mathlib:data.bitvec.basic" target="mathlib:data.bitvec.core" />
+      <edge id="1135" source="mathlib:data.bitvec.basic" target="mathlib:data.fin.basic" />
+      <edge id="1136" source="mathlib:data.bitvec.basic" target="mathlib:tactic.norm_num" />
+      <edge id="1137" source="mathlib:data.bitvec.basic" target="core:init.default" />
+      <edge id="1138" source="core:init.meta.rec_util" target="core:init.meta.tactic" />
+      <edge id="1139" source="core:init.meta.rec_util" target="core:init.data.option.basic" />
+      <edge id="1140" source="mathlib:algebra.char_zero" target="mathlib:data.nat.cast_field" />
+      <edge id="1141" source="mathlib:algebra.char_zero" target="mathlib:data.fintype.basic" />
+      <edge id="1142" source="mathlib:algebra.char_zero" target="core:init.default" />
+      <edge id="1143" source="mathlib:tactic.explode" target="mathlib:meta.rb_map" />
+      <edge id="1144" source="mathlib:tactic.explode" target="mathlib:tactic.core" />
+      <edge id="1145" source="mathlib:tactic.explode" target="core:init.default" />
+      <edge id="1146" source="mathlib:tactic.finish" target="mathlib:tactic.hint" />
+      <edge id="1147" source="mathlib:tactic.finish" target="core:init.default" />
+      <edge id="1148" source="mathlib:tactic.lint.frontend" target="mathlib:meta.rb_map" />
+      <edge id="1149" source="mathlib:tactic.lint.frontend" target="mathlib:tactic.lint.basic" />
+      <edge id="1150" source="mathlib:tactic.lint.frontend" target="core:init.default" />
+      <edge id="1151" source="mathlib:tactic.generalizes" target="mathlib:tactic.core" />
+      <edge id="1152" source="mathlib:tactic.generalizes" target="core:init.default" />
+      <edge id="1153" source="core:init.control.reader" target="core:init.control.lift" />
+      <edge id="1154" source="core:init.control.reader" target="core:init.control.id" />
+      <edge id="1155" source="core:init.control.reader" target="core:init.control.alternative" />
+      <edge id="1156" source="core:init.control.reader" target="core:init.control.except" />
+      <edge id="1157" source="core:init.meta.ref" target="core:init.meta.tactic" />
+      <edge id="1158" source="core:init.data.quot" target="core:init.data.sigma.basic" />
+      <edge id="1159" source="core:init.data.quot" target="core:init.logic" />
+      <edge id="1160" source="core:init.data.quot" target="core:init.propext" />
+      <edge id="1161" source="core:init.data.quot" target="core:init.data.setoid" />
+      <edge id="1162" source="core:init.data.sigma.basic" target="core:init.logic" />
+      <edge id="1163" source="core:init.data.sigma.basic" target="core:init.wf" />
+      <edge id="1164" source="core:init.data.setoid" target="core:init.logic" />
+      <edge id="1165" source="core:init.data.int.comp_lemmas" target="core:init.data.int.order" />
+      <edge id="1166" source="salsa20:core" target="salsa20:doubleround" />
+      <edge id="1167" source="salsa20:core" target="salsa20:littleendian" />
+      <edge id="1168" source="salsa20:core" target="core:init.default" />
+      <edge id="1169" source="salsa20:doubleround" target="salsa20:rowround" />
+      <edge id="1170" source="salsa20:doubleround" target="salsa20:columnround" />
+      <edge id="1171" source="salsa20:doubleround" target="core:init.default" />
+      <edge id="1172" source="salsa20:littleendian" target="core:init.default" />
+      <edge id="1173" source="mathlib:tactic.elide" target="mathlib:tactic.core" />
+      <edge id="1174" source="mathlib:tactic.elide" target="core:init.default" />
+      <edge id="1175" source="mathlib:tactic.protected" target="mathlib:tactic.core" />
+      <edge id="1176" source="mathlib:tactic.protected" target="core:init.default" />
+      <edge id="1177" source="core:init.data.option.instances" target="core:init.data.option.basic" />
+      <edge id="1178" source="core:init.data.option.instances" target="core:init.meta.tactic" />
+      <edge id="1179" source="core:init.data.option.instances" target="core:init.control.lawful" />
+      <edge id="1180" source="mathlib:tactic.lift" target="mathlib:tactic.rcases" />
+      <edge id="1181" source="mathlib:tactic.lift" target="core:init.default" />
+      <edge id="1182" source="mathlib:tactic.rewrite" target="core:data.dlist" />
+      <edge id="1183" source="mathlib:tactic.rewrite" target="mathlib:tactic.core" />
+      <edge id="1184" source="mathlib:tactic.rewrite" target="core:init.default" />
+      <edge id="1185" source="mathlib:data.rat.basic" target="mathlib:algebra.euclidean_domain" />
+      <edge id="1186" source="mathlib:data.rat.basic" target="mathlib:data.int.cast" />
+      <edge id="1187" source="mathlib:data.rat.basic" target="mathlib:data.nat.gcd" />
+      <edge id="1188" source="mathlib:data.rat.basic" target="mathlib:data.rat.defs" />
+      <edge id="1189" source="mathlib:data.rat.basic" target="mathlib:logic.encodable.basic" />
+      <edge id="1190" source="mathlib:data.rat.basic" target="core:init.default" />
+      <edge id="1191" source="salsa20:columnround" target="salsa20:rowround" />
+      <edge id="1192" source="salsa20:columnround" target="core:init.default" />
+      <edge id="1193" source="core:init.control.applicative" target="core:init.control.functor" />
+      <edge id="1194" source="mathlib:tactic.push_neg" target="mathlib:logic.basic" />
+      <edge id="1195" source="mathlib:tactic.push_neg" target="core:init.default" />
+      <edge id="1196" source="core:init.version" target="core:init.data.nat.basic" />
+      <edge id="1197" source="core:init.version" target="core:init.data.string.basic" />
+      <edge id="1198" source="core:init.meta.congr_lemma" target="core:init.meta.tactic" />
+      <edge id="1199" source="core:init.meta.congr_lemma" target="core:init.meta.format" />
+      <edge id="1200" source="core:init.meta.congr_lemma" target="core:init.function" />
+      <edge id="1201" source="core:system.random" target="core:init.default" />
+      <edge id="1202" source="core:init.meta.backward" target="core:init.meta.tactic" />
+      <edge id="1203" source="core:init.meta.backward" target="core:init.meta.set_get_option_tactics" />
+      <edge id="1204" source="core:init.meta.task" target="core:init.logic" />
+      <edge id="1205" source="salsa20:examples.doubleround" target="salsa20:doubleround" />
+      <edge id="1206" source="salsa20:examples.doubleround" target="core:init.default" />
+      <edge id="1207" source="core:init.data.int.bitwise" target="core:init.data.int.basic" />
+      <edge id="1208" source="core:init.data.int.bitwise" target="core:init.data.nat.bitwise" />
+      <edge id="1209" source="salsa20:examples.core" target="salsa20:core" />
+      <edge id="1210" source="salsa20:examples.core" target="core:init.default" />
+      <edge id="1211" source="mathlib:tactic.trunc_cases" target="mathlib:tactic.chain" />
+      <edge id="1212" source="mathlib:tactic.trunc_cases" target="mathlib:data.quot" />
+      <edge id="1213" source="mathlib:tactic.trunc_cases" target="core:init.default" />
+      <edge id="1214" source="mathlib:tactic.mk_iff_of_inductive_prop" target="mathlib:tactic.core" />
+      <edge id="1215" source="mathlib:tactic.mk_iff_of_inductive_prop" target="mathlib:tactic.lint.default" />
+      <edge id="1216" source="mathlib:tactic.mk_iff_of_inductive_prop" target="core:init.default" />
+      <edge id="1217" source="core:init.meta.expr_address" target="core:init.meta.expr" />
+      <edge id="1218" source="core:init.meta.expr_address" target="core:init.data.list.basic" />
+      <edge id="1219" source="core:init.meta.expr_address" target="core:init.data.option.basic" />
+      <edge id="1220" source="core:init.meta.expr_address" target="core:init.util" />
+      <edge id="1221" source="mathlib:tactic.nth_rewrite.basic" target="mathlib:meta.expr_lens" />
+      <edge id="1222" source="mathlib:tactic.nth_rewrite.basic" target="core:init.default" />
+      <edge id="1223" source="mathlib:tactic.show_term" target="mathlib:tactic.core" />
+      <edge id="1224" source="mathlib:tactic.show_term" target="core:init.default" />
+      <edge id="1225" source="core:init.wf" target="core:init.data.nat.basic" />
+      <edge id="1226" source="core:init.wf" target="core:init.data.prod" />
+      <edge id="1227" source="mathlib:tactic.restate_axiom" target="mathlib:tactic.doc_commands" />
+      <edge id="1228" source="mathlib:tactic.restate_axiom" target="core:init.default" />
+      <edge id="1229" source="mathlib:data.int.cast_field" target="mathlib:data.int.cast" />
+      <edge id="1230" source="mathlib:data.int.cast_field" target="mathlib:data.nat.cast_field" />
+      <edge id="1231" source="mathlib:data.int.cast_field" target="core:init.default" />
+      <edge id="1232" source="core:init.meta.widget.html_cmd" target="core:init.meta.widget.basic" />
+      <edge id="1233" source="core:init.meta.widget.html_cmd" target="core:init.meta.lean.parser" />
+      <edge id="1234" source="core:init.meta.widget.html_cmd" target="core:init.meta.interactive_base" />
+      <edge id="1235" source="core:init.meta.widget.html_cmd" target="core:init.data.punit" />
+      <edge id="1236" source="mathlib:tactic.replacer" target="mathlib:tactic.core" />
+      <edge id="1237" source="mathlib:tactic.replacer" target="core:init.default" />
+      <edge id="1238" source="core:init.meta.comp_value_tactics" target="core:init.meta.tactic" />
+      <edge id="1239" source="core:init.meta.comp_value_tactics" target="core:init.data.option.basic" />
+      <edge id="1240" source="core:init.data.string.ops" target="core:init.data.bool.lemmas" />
+      <edge id="1241" source="core:init.data.string.ops" target="core:init.data.string.basic" />
+      <edge id="1242" source="core:init.data.string.ops" target="core:init.meta.well_founded_tactics" />
+      <edge id="1243" source="mathlib:tactic.delta_instance" target="mathlib:tactic.simp_result" />
+      <edge id="1244" source="mathlib:tactic.delta_instance" target="core:init.default" />
+      <edge id="1245" source="mathlib:tactic.generalize_proofs" target="mathlib:tactic.doc_commands" />
+      <edge id="1246" source="mathlib:tactic.generalize_proofs" target="core:init.default" />
+      <edge id="1247" source="core:init.data.char.classes" target="core:init.data.char.basic" />
+      <edge id="1248" source="core:init.data.char.classes" target="core:init.data.char.lemmas" />
+      <edge id="1249" source="mathlib:tactic.obviously" target="mathlib:tactic.tidy" />
+      <edge id="1250" source="mathlib:tactic.obviously" target="mathlib:tactic.replacer" />
+      <edge id="1251" source="mathlib:tactic.obviously" target="core:init.default" />
+      <edge id="1252" source="mathlib:tactic.choose" target="mathlib:logic.function.basic" />
+      <edge id="1253" source="mathlib:tactic.choose" target="mathlib:tactic.core" />
+      <edge id="1254" source="mathlib:tactic.choose" target="core:init.default" />
+      <edge id="1255" source="mathlib:tactic.nth_rewrite.congr" target="mathlib:tactic.core" />
+      <edge id="1256" source="mathlib:tactic.nth_rewrite.congr" target="mathlib:tactic.nth_rewrite.basic" />
+      <edge id="1257" source="mathlib:tactic.nth_rewrite.congr" target="core:init.default" />
+      <edge id="1258" source="mathlib:tactic.simp_command" target="mathlib:tactic.core" />
+      <edge id="1259" source="mathlib:tactic.simp_command" target="core:init.default" />
+      <edge id="1260" source="mathlib:tactic.lint.simp" target="mathlib:tactic.lint.basic" />
+      <edge id="1261" source="mathlib:tactic.lint.simp" target="core:init.default" />
+      <edge id="1262" source="salsa20:examples.columnround" target="salsa20:columnround" />
+      <edge id="1263" source="salsa20:examples.columnround" target="core:init.default" />
+      <edge id="1264" source="salsa20:examples.rowround" target="salsa20:rowround" />
+      <edge id="1265" source="salsa20:examples.rowround" target="core:init.default" />
+      <edge id="1266" source="core:init.data.subtype.instances" target="core:init.meta.mk_dec_eq_instance" />
+      <edge id="1267" source="core:init.data.subtype.instances" target="core:init.data.subtype.basic" />
+      <edge id="1268" source="mathlib:tactic.simp_rw" target="mathlib:tactic.core" />
+      <edge id="1269" source="mathlib:tactic.simp_rw" target="core:init.default" />
+      <edge id="1270" source="mathlib:tactic.dec_trivial" target="mathlib:tactic.interactive" />
+      <edge id="1271" source="mathlib:tactic.dec_trivial" target="core:init.default" />
+      <edge id="1272" source="mathlib:tactic.rename_var" target="mathlib:tactic.interactive" />
+      <edge id="1273" source="mathlib:tactic.rename_var" target="core:init.default" />
+      <edge id="1274" source="mathlib:tactic.pretty_cases" target="mathlib:tactic.core" />
+      <edge id="1275" source="mathlib:tactic.pretty_cases" target="core:init.default" />
+      <edge id="1276" source="core:init.meta.widget.replace_save_info" target="core:init.meta.widget.interactive_expr" />
+      <edge id="1277" source="mathlib:tactic.converter.apply_congr" target="mathlib:tactic.interactive" />
+      <edge id="1278" source="mathlib:tactic.converter.apply_congr" target="mathlib:tactic.converter.interactive" />
+      <edge id="1279" source="mathlib:tactic.converter.apply_congr" target="core:init.default" />
+      <edge id="1280" source="core:init.meta.async_tactic" target="core:init.meta.tactic" />
+      <edge id="1281" source="core:init.meta.async_tactic" target="core:init.meta.interactive" />
+      <edge id="1282" source="core:init.meta.async_tactic" target="core:init.meta.instance_cache" />
     </edges>
   </graph>
 </gexf>
