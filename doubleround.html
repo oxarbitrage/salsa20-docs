@@ -65,15 +65,25 @@
 </div>
 
 
+    <div class="nav_link"><a class="break_within" href="#doubleround.carry_diff_doubleround_for_any_row_and_value"><span class="name">doubleround</span>.<span class="name">carry_diff_doubleround_for_any_row_and_value</span></a></div>
+
     <div class="nav_link"><a class="break_within" href="#doubleround.doubleround"><span class="name">doubleround</span>.<span class="name">doubleround</span></a></div>
+
+    <div class="nav_link"><a class="break_within" href="#doubleround.doubleround'"><span class="name">doubleround</span>.<span class="name">doubleround&#x27;</span></a></div>
 
     <div class="nav_link"><a class="break_within" href="#doubleround.doubleround_inv"><span class="name">doubleround</span>.<span class="name">doubleround_inv</span></a></div>
 
+    <div class="nav_link"><a class="break_within" href="#doubleround.doubleround_inv'"><span class="name">doubleround</span>.<span class="name">doubleround_inv&#x27;</span></a></div>
+
     <div class="nav_link"><a class="break_within" href="#doubleround.doubleround_is_inv"><span class="name">doubleround</span>.<span class="name">doubleround_is_inv</span></a></div>
+
+    <div class="nav_link"><a class="break_within" href="#doubleround.doubleround_is_inv'"><span class="name">doubleround</span>.<span class="name">doubleround_is_inv&#x27;</span></a></div>
 
     <div class="nav_link"><a class="break_within" href="#doubleround.doubleround_is_left_invariant"><span class="name">doubleround</span>.<span class="name">doubleround_is_left_invariant</span></a></div>
 
     <div class="nav_link"><a class="break_within" href="#doubleround.input"><span class="name">doubleround</span>.<span class="name">input</span></a></div>
+
+    <div class="nav_link"><a class="break_within" href="#doubleround.rowround_after_columnround_difference_is_carried"><span class="name">doubleround</span>.<span class="name">rowround_after_columnround_difference_is_carried</span></a></div>
 
 </nav>
 
@@ -124,7 +134,60 @@
         <summary>Equations</summary>
         <ul class="equations">
             
-                <li class="equation"><span class="fn"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/doubleround.html#doubleround.doubleround">doubleround.doubleround</a> M</span> <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#eq" title="eq">=</a> <span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/rowround.html#rowround.rowround'">rowround.rowround'</a> <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/columnround.html#columnround.columnround'">columnround.columnround'</a> M)</span></span></span></li>
+                <li class="equation"><span class="fn"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/doubleround.html#doubleround.doubleround">doubleround.doubleround</a> M</span> <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#eq" title="eq">=</a> <span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/rowround.html#rowround.rowround">rowround.rowround</a> <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/columnround.html#columnround.columnround">columnround.columnround</a> M)</span></span></span></li>
+            
+        </ul>
+    </details>
+
+
+
+
+
+
+
+
+
+</div>
+</div>
+    
+
+    
+        
+        
+<div class="decl" id="doubleround.doubleround'">
+<div class="def">
+
+<div class="gh_link"><a href="">source</a></div>
+
+
+    <div class="attributes">@[simp]</div>
+
+
+<div class="decl_header">
+    
+
+
+<span class="decl_kind">def</span>
+<span class="decl_name"><a class="break_within" href="https://oxarbitrage.github.io/salsa20-docs/doubleround.html#doubleround.doubleround'"><span class="name">doubleround</span>.<span class="name">doubleround&#x27;</span></a></span>
+
+    <span class="decl_args"><span class="fn">(M : <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod" title="prod">matrixType</a>)</span></span>&nbsp;<span class="decl_args">:</span>
+<div class="decl_type"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod" title="prod">matrixType</a></span></div>
+</div>
+
+
+
+
+
+<p>A special case of <code>doubleround</code> where inputs and outputs are sorted according to the salsa20 spec:
+doubleround'(x) = rowround'(columnround'(x))</p>
+
+
+
+    <details>
+        <summary>Equations</summary>
+        <ul class="equations">
+            
+                <li class="equation"><span class="fn"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/doubleround.html#doubleround.doubleround'">doubleround.doubleround'</a> M</span> <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#eq" title="eq">=</a> <span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/rowround.html#rowround.rowround'">rowround.rowround'</a> <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/columnround.html#columnround.columnround'">columnround.columnround'</a> M)</span></span></span></li>
             
         </ul>
     </details>
@@ -176,7 +239,60 @@
         <summary>Equations</summary>
         <ul class="equations">
             
-                <li class="equation"><span class="fn"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/doubleround.html#doubleround.doubleround_inv">doubleround.doubleround_inv</a> M</span> <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#eq" title="eq">=</a> <span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/columnround.html#columnround.columnround_inv'">columnround.columnround_inv'</a> <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/rowround.html#rowround.rowround_inv'">rowround.rowround_inv'</a> M)</span></span></span></li>
+                <li class="equation"><span class="fn"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/doubleround.html#doubleround.doubleround_inv">doubleround.doubleround_inv</a> M</span> <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#eq" title="eq">=</a> <span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/columnround.html#columnround.columnround_inv">columnround.columnround_inv</a> <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/rowround.html#rowround.rowround_inv">rowround.rowround_inv</a> M)</span></span></span></li>
+            
+        </ul>
+    </details>
+
+
+
+
+
+
+
+
+
+</div>
+</div>
+    
+
+    
+        
+        
+<div class="decl" id="doubleround.doubleround_inv'">
+<div class="def">
+
+<div class="gh_link"><a href="">source</a></div>
+
+
+    <div class="attributes">@[simp]</div>
+
+
+<div class="decl_header">
+    
+
+
+<span class="decl_kind">def</span>
+<span class="decl_name"><a class="break_within" href="https://oxarbitrage.github.io/salsa20-docs/doubleround.html#doubleround.doubleround_inv'"><span class="name">doubleround</span>.<span class="name">doubleround_inv&#x27;</span></a></span>
+
+    <span class="decl_args"><span class="fn">(M : <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod" title="prod">matrixType</a>)</span></span>&nbsp;<span class="decl_args">:</span>
+<div class="decl_type"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod" title="prod">matrixType</a></span></div>
+</div>
+
+
+
+
+
+<p>A special case of <code>doubleround_inv</code> where inputs and outputs are sorted according to the salsa20 spec:
+doubleround_inv'(x) = columnround_inv'(rowround_inv'(x))</p>
+
+
+
+    <details>
+        <summary>Equations</summary>
+        <ul class="equations">
+            
+                <li class="equation"><span class="fn"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/doubleround.html#doubleround.doubleround_inv'">doubleround.doubleround_inv'</a> M</span> <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#eq" title="eq">=</a> <span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/columnround.html#columnround.columnround_inv'">columnround.columnround_inv'</a> <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/rowround.html#rowround.rowround_inv'">rowround.rowround_inv'</a> M)</span></span></span></li>
             
         </ul>
     </details>
@@ -221,6 +337,49 @@
 
 
 <p>For any <code>doubleround</code> output, we can get back to original values using the defined inverse.</p>
+
+
+
+
+
+
+
+
+
+
+
+</div>
+</div>
+    
+
+    
+        
+        
+<div class="decl" id="doubleround.doubleround_is_inv'">
+<div class="theorem">
+
+<div class="gh_link"><a href="">source</a></div>
+
+
+    <div class="attributes">@[simp]</div>
+
+
+<div class="decl_header">
+    
+
+
+<span class="decl_kind">theorem</span>
+<span class="decl_name"><a class="break_within" href="https://oxarbitrage.github.io/salsa20-docs/doubleround.html#doubleround.doubleround_is_inv'"><span class="name">doubleround</span>.<span class="name">doubleround_is_inv&#x27;</span></a></span>
+
+    <span class="decl_args"><span class="fn">(M : <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod" title="prod">matrixType</a>)</span></span>&nbsp;<span class="decl_args">:</span>
+<div class="decl_type"><span class="fn"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/doubleround.html#doubleround.doubleround_inv'">doubleround.doubleround_inv'</a> <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/doubleround.html#doubleround.doubleround'">doubleround.doubleround'</a> M)</span></span> <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#eq" title="eq">=</a> M</span></div>
+</div>
+
+
+
+
+
+<p>For any <code>doubleround&#x27;</code> output, we can get back to original values using the defined inverse.</p>
 
 
 
@@ -315,7 +474,7 @@
 <span class="decl_name"><a class="break_within" href="https://oxarbitrage.github.io/salsa20-docs/doubleround.html#doubleround.doubleround_is_left_invariant"><span class="name">doubleround</span>.<span class="name">doubleround_is_left_invariant</span></a></span>
 
     <span class="decl_args"><span class="fn">(a : <a href="https://oxarbitrage.github.io/salsa20-docs/data/bitvec/core.html#bitvec">bitvec</a> <a href="https://oxarbitrage.github.io/salsa20-docs/params.html#params.word_len">params.word_len</a>)</span></span>&nbsp;<span class="decl_args">:</span>
-<div class="decl_type"><span class="fn"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/doubleround.html#doubleround.doubleround">doubleround.doubleround</a> <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/doubleround.html#doubleround.input">doubleround.input</a> a)</span></span> <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#eq" title="eq">=</a> <span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/doubleround.html#doubleround.input">doubleround.input</a> a</span></span></div>
+<div class="decl_type"><span class="fn"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/doubleround.html#doubleround.doubleround'">doubleround.doubleround'</a> <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/doubleround.html#doubleround.input">doubleround.input</a> a)</span></span> <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#eq" title="eq">=</a> <span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/doubleround.html#doubleround.input">doubleround.input</a> a</span></span></div>
 </div>
 
 
@@ -323,6 +482,113 @@
 
 
 <p><code>doubleround</code> is left invariant.</p>
+
+
+
+
+
+
+
+
+
+
+
+</div>
+</div>
+    
+
+    
+        <div class="mod_doc">
+            <h2 id="known-variance" class="markdown-heading">Known variance <a class="hover-link" href="#known-variance">#</a></h2>
+<p>In this section we want to prove that a crafted input difference is carried when <code>doubleround</code>
+function is applied.</p>
+
+        </div>
+    
+
+    
+        <div class="mod_doc">
+            <h3 id="property" class="markdown-heading">Property <a class="hover-link" href="#property">#</a></h3>
+<p>Differences are carried iff the <code>msb</code> of each input is flipped when <code>doubleround</code>
+inputs are random and crafted. Also, the <code>rest</code> of the input must be equal for random and crafted inputs.</p>
+<p>We prove that given a random and a crafted matrix for <code>doubleround</code> as input, the output of each element has
+the property defined above.</p>
+
+        </div>
+    
+
+    
+        
+        
+<div class="decl" id="doubleround.rowround_after_columnround_difference_is_carried">
+<div class="theorem">
+
+<div class="gh_link"><a href="">source</a></div>
+
+
+
+<div class="decl_header">
+    
+
+
+<span class="decl_kind">theorem</span>
+<span class="decl_name"><a class="break_within" href="https://oxarbitrage.github.io/salsa20-docs/doubleround.html#doubleround.rowround_after_columnround_difference_is_carried"><span class="name">doubleround</span>.<span class="name">rowround_after_columnround_difference_is_carried</span></a></span>
+
+    <span class="decl_args"><span class="fn">(m₀ m₁ m₂ m₃ m₄ m₅ m₆ m₇ m₈ m₉ m₁₀ m₁₁ m₁₂ m₁₃ m₁₄ m₁₅ : <a href="https://oxarbitrage.github.io/salsa20-docs/data/bitvec/core.html#bitvec">bitvec</a> <a href="https://oxarbitrage.github.io/salsa20-docs/params.html#params.word_len">params.word_len</a>)</span></span>&nbsp;<span class="decl_args">:</span>
+<div class="decl_type"><span class="fn"><span class="fn"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.msb">quarterround.msb</a> <span class="fn"><span class="fn"><span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/rowround.html#rowround.rowround">rowround.rowround</a> <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/columnround.html#columnround.columnround">columnround.columnround</a> <span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/rowround.html#rowround.input_random">rowround.input_random</a> m₀</span> m₁</span> m₂</span> m₃</span> m₄</span> m₅</span> m₆</span> m₇</span> m₈</span> m₉</span> m₁₀</span> m₁₁</span> m₁₂</span> m₁₃</span> m₁₄</span> m₁₅)))</span></span></span>.<a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod.fst" title="prod.fst">fst</a></span>.<a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod.fst" title="prod.fst">fst</a></span></span> <a href="https://oxarbitrage.github.io/salsa20-docs/init/logic.html#ne" title="ne">≠</a> <span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.msb">quarterround.msb</a> <span class="fn"><span class="fn"><span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/rowround.html#rowround.rowround">rowround.rowround</a> <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/columnround.html#columnround.columnround">columnround.columnround</a> <span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/rowround.html#rowround.input_crafted">rowround.input_crafted</a> m₀</span> m₁</span> m₂</span> m₃</span> m₄</span> m₅</span> m₆</span> m₇</span> m₈</span> m₉</span> m₁₀</span> m₁₁</span> m₁₂</span> m₁₃</span> m₁₄</span> m₁₅)))</span></span></span>.<a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod.fst" title="prod.fst">fst</a></span>.<a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod.fst" title="prod.fst">fst</a></span></span></span> <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#and" title="and">∧</a> <span class="fn"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.rest">quarterround.rest</a> <span class="fn"><span class="fn"><span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/rowround.html#rowround.rowround">rowround.rowround</a> <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/columnround.html#columnround.columnround">columnround.columnround</a> <span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/rowround.html#rowround.input_random">rowround.input_random</a> m₀</span> m₁</span> m₂</span> m₃</span> m₄</span> m₅</span> m₆</span> m₇</span> m₈</span> m₉</span> m₁₀</span> m₁₁</span> m₁₂</span> m₁₃</span> m₁₄</span> m₁₅)))</span></span></span>.<a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod.fst" title="prod.fst">fst</a></span>.<a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod.fst" title="prod.fst">fst</a></span></span> <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#eq" title="eq">=</a> <span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.rest">quarterround.rest</a> <span class="fn"><span class="fn"><span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/rowround.html#rowround.rowround">rowround.rowround</a> <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/columnround.html#columnround.columnround">columnround.columnround</a> <span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/rowround.html#rowround.input_crafted">rowround.input_crafted</a> m₀</span> m₁</span> m₂</span> m₃</span> m₄</span> m₅</span> m₆</span> m₇</span> m₈</span> m₉</span> m₁₀</span> m₁₁</span> m₁₂</span> m₁₃</span> m₁₄</span> m₁₅)))</span></span></span>.<a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod.fst" title="prod.fst">fst</a></span>.<a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod.fst" title="prod.fst">fst</a></span></span></span></span></div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+</div>
+    
+
+    
+        
+        
+<div class="decl" id="doubleround.carry_diff_doubleround_for_any_row_and_value">
+<div class="theorem">
+
+<div class="gh_link"><a href="">source</a></div>
+
+
+
+<div class="decl_header">
+    
+
+
+<span class="decl_kind">theorem</span>
+<span class="decl_name"><a class="break_within" href="https://oxarbitrage.github.io/salsa20-docs/doubleround.html#doubleround.carry_diff_doubleround_for_any_row_and_value"><span class="name">doubleround</span>.<span class="name">carry_diff_doubleround_for_any_row_and_value</span></a></span>
+
+    <span class="decl_args"><span class="fn">(m₀ m₁ m₂ m₃ m₄ m₅ m₆ m₇ m₈ m₉ m₁₀ m₁₁ m₁₂ m₁₃ m₁₄ m₁₅ : <a href="https://oxarbitrage.github.io/salsa20-docs/data/bitvec/core.html#bitvec">bitvec</a> <a href="https://oxarbitrage.github.io/salsa20-docs/params.html#params.word_len">params.word_len</a>)</span></span>
+    <span class="decl_args"><span class="fn">(n : <a href="https://oxarbitrage.github.io/salsa20-docs/init/data/fin/basic.html#fin">fin</a> 16)</span></span>
+    <span class="decl_args"><span class="fn">(h : n <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#eq" title="eq">=</a> 0)</span></span>&nbsp;<span class="decl_args">:</span>
+<div class="decl_type"><span class="fn"><span class="fn"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/rowround.html#rowround.diff_carried_prop_n">rowround.diff_carried_prop_n</a> <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/utils.html#utils.matrix_to_list">utils.matrix_to_list</a> <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/doubleround.html#doubleround.doubleround">doubleround.doubleround</a> <span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/rowround.html#rowround.input_random">rowround.input_random</a> m₀</span> m₁</span> m₂</span> m₃</span> m₄</span> m₅</span> m₆</span> m₇</span> m₈</span> m₉</span> m₁₀</span> m₁₁</span> m₁₂</span> m₁₃</span> m₁₄</span> m₁₅)))</span></span></span></span> <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/utils.html#utils.matrix_to_list">utils.matrix_to_list</a> <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/doubleround.html#doubleround.doubleround">doubleround.doubleround</a> <span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/rowround.html#rowround.input_crafted">rowround.input_crafted</a> m₀</span> m₁</span> m₂</span> m₃</span> m₄</span> m₅</span> m₆</span> m₇</span> m₈</span> m₉</span> m₁₀</span> m₁₁</span> m₁₂</span> m₁₃</span> m₁₄</span> m₁₅)))</span></span></span></span> <a href="https://oxarbitrage.github.io/salsa20-docs/init/coe.html#coe" title="coe">↑</a>n</span></div>
+</div>
+
+
+
+
+
+<p>Proof that the difference is carried after <code>doubleround</code> for any row and any value of the input matrices.</p>
+<p>Note:</p>
+<ul>
+<li>This lemma just prove this for the first row and the first value but it can be generalized after <code>rowround_after_columnround_difference_is_carried</code>.</li>
+</ul>
 
 
 
@@ -1982,6 +2248,12 @@
         </div>
         <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/examples/doubleround.html">doubleround</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/examples/operations.html">operations</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/examples/quarterround.html">quarterround</a>
         </div>
         <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/examples/rowround.html">rowround</a>
