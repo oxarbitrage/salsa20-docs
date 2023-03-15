@@ -40,6 +40,8 @@
 
     <div class="nav_link"><a href="#bundled maps over different rings">bundled maps over different rings</a></div>
 
+    <div class="nav_link"><a href="#category_theory universes">category_theory universes</a></div>
+
     <div class="nav_link"><a href="#coercion into rings">coercion into rings</a></div>
 
     <div class="nav_link"><a href="#custom simps projection">custom simps projection</a></div>
@@ -47,6 +49,8 @@
     <div class="nav_link"><a href="#decidable arguments">decidable arguments</a></div>
 
     <div class="nav_link"><a href="#decidable namespace">decidable namespace</a></div>
+
+    <div class="nav_link"><a href="#dsimp, simp">dsimp, simp</a></div>
 
     <div class="nav_link"><a href="#fact non-instances">fact non-instances</a></div>
 
@@ -99,6 +103,48 @@ instance. If the caller only has <code><a href="https://oxarbitrage.github.io/sa
 <code>add_comm_monoid.nat_smul_comm_class</code> or <code>add_comm_monoid.nat_smul_comm_class&#x27;</code> will populate
 the typeclass, which is still sufficient to recover a <code>≃+</code> or <code>→+</code> structure.</p>
 <p>An example of where this is used is <code>linear_map.prod_equiv</code>.</p>
+
+
+        
+    </div>
+
+    <div class="note">
+        <h2 id="category_theory universes"><a href="#category_theory universes">category_theory universes</a></h2>
+        <p>The typeclass <code>category C</code> describes morphisms associated to objects of type <code>C : Type u</code>.</p>
+<p>The universe levels of the objects and morphisms are independent, and will often need to be
+specified explicitly, as <code>category.{v} C</code>.</p>
+<p>Typically any concrete example will either be a <code>small_category</code>, where <code>v = u</code>,
+which can be introduced as</p>
+<div class="codehilite"><pre><span></span><code><span class="kd">universes</span> <span class="n">u</span>
+<span class="kd">variables</span> <span class="o">{</span><span class="n">C</span> <span class="o">:</span> <span class="kt">Type</span> <span class="n">u</span><span class="o">}</span> <span class="o">[</span><span class="n">small_category</span> <span class="n">C</span><span class="o">]</span>
+</code></pre></div>
+
+<p>or a <code>large_category</code>, where <code>u = v+1</code>, which can be introduced as</p>
+<div class="codehilite"><pre><span></span><code><span class="kd">universes</span> <span class="n">u</span>
+<span class="kd">variables</span> <span class="o">{</span><span class="n">C</span> <span class="o">:</span> <span class="kt">Type</span> <span class="o">(</span><span class="n">u</span><span class="bp">+</span><span class="mi">1</span><span class="o">)}</span> <span class="o">[</span><span class="n">large_category</span> <span class="n">C</span><span class="o">]</span>
+</code></pre></div>
+
+<p>In order for the library to handle these cases uniformly,
+we generally work with the unconstrained <code>category.{v u}</code>,
+for which objects live in <code>Type u</code> and morphisms live in <code>Type v</code>.</p>
+<p>Because the universe parameter <code>u</code> for the objects can be inferred from <code>C</code>
+when we write <code>category C</code>, while the universe parameter <code>v</code> for the morphisms
+can not be automatically inferred, through the category theory library
+we introduce universe parameters with morphism levels listed first,
+as in</p>
+<div class="codehilite"><pre><span></span><code><span class="kd">universes</span> <span class="n">v</span> <span class="n">u</span>
+</code></pre></div>
+
+<p>or</p>
+<div class="codehilite"><pre><span></span><code><span class="kd">universes</span> <span class="n">v₁</span> <span class="n">v₂</span> <span class="n">u₁</span> <span class="n">u₂</span>
+</code></pre></div>
+
+<p>when multiple independent universes are needed.</p>
+<p>This has the effect that we can simply write <code>category.{v} C</code>
+(that is, only specifying a single parameter) while <code>u</code> will be inferred.</p>
+<p>Often, however, it's not even necessary to include the <code>.{v}</code>.
+(Although it was in earlier versions of Lean.)
+If it is omitted a &quot;free&quot; universe will be used.</p>
 
 
         
@@ -180,9 +226,9 @@ composite of multiple projections).</p>
         
         <a href="tactic/simps.html#noteref3" title="mathlib: tactic.simps">[15]</a>
         
-        <a href="tactic/simps.html#noteref4" title="mathlib: tactic.simps">[16]</a>
+        <a href="tactic/simps.html#noteref5" title="mathlib: tactic.simps">[16]</a>
         
-        <a href="tactic/simps.html#noteref5" title="mathlib: tactic.simps">[17]</a>
+        <a href="tactic/simps.html#noteref6" title="mathlib: tactic.simps">[17]</a>
         </small>
         
     </div>
@@ -210,6 +256,38 @@ attempt to avoid the axiom of choice, usually by adding decidability assumptions
 <code><a href="https://oxarbitrage.github.io/salsa20-docs/init/classical.html#classical.choice">classical.choice</a></code> appears in the list.</p>
 
 
+        
+    </div>
+
+    <div class="note">
+        <h2 id="dsimp, simp"><a href="#dsimp, simp">dsimp, simp</a></h2>
+        <p>Many proofs in the category theory library use the <code>dsimp, simp</code> pattern,
+which typically isn't necessary elsewhere.</p>
+<p>One would usually hope that the same effect could be achieved simply with <code>simp</code>.</p>
+<p>The essential issue is that composition of morphisms involves dependent types.
+When you have a chain of morphisms being composed, say <code>f : X ⟶ Y</code> and <code>g : Y ⟶ Z</code>,
+then <code>simp</code> can operate succesfully on the morphisms
+(e.g. if <code>f</code> is the identity it can strip that off).</p>
+<p>However if we have an equality of objects, say <code>Y = Y&#x27;</code>,
+then <code>simp</code> can't operate because it would break the typing of the composition operations.
+We rarely have interesting equalities of objects
+(because that would be &quot;evil&quot; --- anything interesting should be expressed as an isomorphism
+and tracked explicitly),
+except of course that we have plenty of definitional equalities of objects.</p>
+<p><code>dsimp</code> can apply these safely, even inside a composition.</p>
+<p>After <code>dsimp</code> has cleared up the object level, <code>simp</code> can resume work on the morphism level ---
+but without the <code>dsimp</code> step, because <code>simp</code> looks at expressions syntactically,
+the relevant lemmas might not fire.</p>
+<p>There's no bound on how many times you potentially could have to switch back and forth,
+if the <code>simp</code> introduced new objects we again need to <code>dsimp</code>.
+In practice this does occur, but only rarely, because <code>simp</code> tends to shorten chains of compositions
+(i.e. not introduce new objects at all).</p>
+
+
+        
+        referenced by: <small>
+        <a href="tactic/simps.html#noteref4" title="mathlib: tactic.simps">[1]</a>
+        </small>
         
     </div>
 
@@ -1290,6 +1368,101 @@ but you can use <code>`(<a href="https://oxarbitrage.github.io/salsa20-docs/init
             <a href="https://oxarbitrage.github.io/salsa20-docs/algebra/opposites.html">opposites</a>
         </div>
         </details>
+        <details class="nav_sect" data-path="category_theory" >
+            <summary>category_theory</summary>
+            
+        <details class="nav_sect" data-path="category_theory/adjunction" >
+            <summary>adjunction</summary>
+            
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/adjunction/basic.html">basic</a>
+        </div>
+        </details>
+        <details class="nav_sect" data-path="category_theory/category" >
+            <summary>category</summary>
+            
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/category/basic.html">basic</a>
+        </div>
+        </details>
+        <details class="nav_sect" data-path="category_theory/functor" >
+            <summary>functor</summary>
+            
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/functor/basic.html">basic</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/functor/category.html">category</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/functor/fully_faithful.html">fully_faithful</a>
+        </div>
+        </details>
+        <details class="nav_sect" data-path="category_theory/pi" >
+            <summary>pi</summary>
+            
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/pi/basic.html">basic</a>
+        </div>
+        </details>
+        <details class="nav_sect" data-path="category_theory/products" >
+            <summary>products</summary>
+            
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/products/basic.html">basic</a>
+        </div>
+        </details>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/core.html">core</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/epi_mono.html">epi_mono</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/eq_to_hom.html">eq_to_hom</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/equivalence.html">equivalence</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/essential_image.html">essential_image</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/full_subcategory.html">full_subcategory</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/groupoid.html">groupoid</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/isomorphism.html">isomorphism</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/natural_isomorphism.html">natural_isomorphism</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/natural_transformation.html">natural_transformation</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/opposites.html">opposites</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/types.html">types</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/whiskering.html">whiskering</a>
+        </div>
+        </details>
+        <details class="nav_sect" data-path="combinatorics" >
+            <summary>combinatorics</summary>
+            
+        <details class="nav_sect" data-path="combinatorics/quiver" >
+            <summary>quiver</summary>
+            
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/combinatorics/quiver/basic.html">basic</a>
+        </div>
+        </details>
+        </details>
         <details class="nav_sect" data-path="control" >
             <summary>control</summary>
             
@@ -1771,6 +1944,9 @@ but you can use <code>`(<a href="https://oxarbitrage.github.io/salsa20-docs/init
             <a href="https://oxarbitrage.github.io/salsa20-docs/data/mllist.html">mllist</a>
         </div>
         <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/data/opposite.html">opposite</a>
+        </div>
+        <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/data/quot.html">quot</a>
         </div>
         <div class="nav_link ">
@@ -2134,6 +2310,9 @@ but you can use <code>`(<a href="https://oxarbitrage.github.io/salsa20-docs/init
             <a href="https://oxarbitrage.github.io/salsa20-docs/tactic/rcases.html">rcases</a>
         </div>
         <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/tactic/reassoc_axiom.html">reassoc_axiom</a>
+        </div>
+        <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/tactic/rename_var.html">rename_var</a>
         </div>
         <div class="nav_link ">
@@ -2165,6 +2344,9 @@ but you can use <code>`(<a href="https://oxarbitrage.github.io/salsa20-docs/init
         </div>
         <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/tactic/simps.html">simps</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/tactic/slice.html">slice</a>
         </div>
         <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/tactic/solve_by_elim.html">solve_by_elim</a>

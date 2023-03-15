@@ -45,6 +45,12 @@
             <li><a href="https://oxarbitrage.github.io/salsa20-docs/init/default.html">
                 init.default</a></li>
         
+            <li><a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/category/basic.html">
+                category_theory.category.basic</a></li>
+        
+            <li><a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/core.html">
+                category_theory.core</a></li>
+        
             <li><a href="https://oxarbitrage.github.io/salsa20-docs/columnround.html">
                 columnround</a></li>
         
@@ -67,21 +73,39 @@
 
     <div class="nav_link"><a class="break_within" href="#doubleround.carry_diff_doubleround_for_any_row_and_value"><span class="name">doubleround</span>.<span class="name">carry_diff_doubleround_for_any_row_and_value</span></a></div>
 
+    <div class="nav_link"><a class="break_within" href="#doubleround.cat_doubleround"><span class="name">doubleround</span>.<span class="name">cat_doubleround</span></a></div>
+
+    <div class="nav_link"><a class="break_within" href="#doubleround.cat_doubleround_inv"><span class="name">doubleround</span>.<span class="name">cat_doubleround_inv</span></a></div>
+
     <div class="nav_link"><a class="break_within" href="#doubleround.doubleround"><span class="name">doubleround</span>.<span class="name">doubleround</span></a></div>
 
     <div class="nav_link"><a class="break_within" href="#doubleround.doubleround'"><span class="name">doubleround</span>.<span class="name">doubleround&#x27;</span></a></div>
+
+    <div class="nav_link"><a class="break_within" href="#doubleround.doubleroundType"><span class="name">doubleround</span>.<span class="name">doubleroundType</span></a></div>
 
     <div class="nav_link"><a class="break_within" href="#doubleround.doubleround_inv"><span class="name">doubleround</span>.<span class="name">doubleround_inv</span></a></div>
 
     <div class="nav_link"><a class="break_within" href="#doubleround.doubleround_inv'"><span class="name">doubleround</span>.<span class="name">doubleround_inv&#x27;</span></a></div>
 
+    <div class="nav_link"><a class="break_within" href="#doubleround.doubleround_inv_is_inverse_of_doubleround"><span class="name">doubleround</span>.<span class="name">doubleround_inv_is_inverse_of_doubleround</span></a></div>
+
     <div class="nav_link"><a class="break_within" href="#doubleround.doubleround_is_inv"><span class="name">doubleround</span>.<span class="name">doubleround_is_inv</span></a></div>
 
     <div class="nav_link"><a class="break_within" href="#doubleround.doubleround_is_inv'"><span class="name">doubleround</span>.<span class="name">doubleround_is_inv&#x27;</span></a></div>
 
+    <div class="nav_link"><a class="break_within" href="#doubleround.doubleround_is_isomorphic"><span class="name">doubleround</span>.<span class="name">doubleround_is_isomorphic</span></a></div>
+
     <div class="nav_link"><a class="break_within" href="#doubleround.doubleround_is_left_invariant"><span class="name">doubleround</span>.<span class="name">doubleround_is_left_invariant</span></a></div>
 
+    <div class="nav_link"><a class="break_within" href="#doubleround.id_doubleround"><span class="name">doubleround</span>.<span class="name">id_doubleround</span></a></div>
+
+    <div class="nav_link"><a class="break_within" href="#doubleround.id_doubleround_inv"><span class="name">doubleround</span>.<span class="name">id_doubleround_inv</span></a></div>
+
     <div class="nav_link"><a class="break_within" href="#doubleround.input"><span class="name">doubleround</span>.<span class="name">input</span></a></div>
+
+    <div class="nav_link"><a class="break_within" href="#doubleround.isomorphism_left"><span class="name">doubleround</span>.<span class="name">isomorphism_left</span></a></div>
+
+    <div class="nav_link"><a class="break_within" href="#doubleround.isomorphism_right"><span class="name">doubleround</span>.<span class="name">isomorphism_right</span></a></div>
 
     <div class="nav_link"><a class="break_within" href="#doubleround.rowround_after_columnround_difference_is_carried"><span class="name">doubleround</span>.<span class="name">rowround_after_columnround_difference_is_carried</span></a></div>
 
@@ -397,6 +421,483 @@ doubleround_inv'(x) = columnround_inv'(rowround_inv'(x))</p>
 
     
         <div class="mod_doc">
+            <h2 id="isomorphism" class="markdown-heading">Isomorphism <a class="hover-link" href="#isomorphism">#</a></h2>
+<p><a href="https://en.wikipedia.org/wiki/Isomorphism#Category_theoretic_view">https://en.wikipedia.org/wiki/Isomorphism#Category_theoretic_view</a></p>
+<blockquote>
+<p>In category theory, given a category C, an isomorphism is a morphism <code>f : a ⟶ b</code> that has an inverse
+morphism <code>g : b ⟶ a</code> , that is, <code>f ∘ g = 𝟙 b</code> and <code>g ∘ f = 𝟙 a</code>.</p>
+</blockquote>
+
+        </div>
+    
+
+    
+        
+        
+<div class="decl" id="doubleround.id_doubleround">
+<div class="def">
+
+<div class="gh_link"><a href="">source</a></div>
+
+
+    <div class="attributes">@[simp]</div>
+
+
+<div class="decl_header">
+    
+
+
+<span class="decl_kind">def</span>
+<span class="decl_name"><a class="break_within" href="https://oxarbitrage.github.io/salsa20-docs/doubleround.html#doubleround.id_doubleround"><span class="name">doubleround</span>.<span class="name">id_doubleround</span></a></span>
+
+    <span class="decl_args"><span class="fn">(seq : <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod" title="prod">matrixType</a>)</span></span>&nbsp;<span class="decl_args">:</span>
+<div class="decl_type"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod" title="prod">matrixType</a></span></div>
+</div>
+
+
+
+
+
+<p>The identity of a <code>doubleround</code> morphism given a sequence is the sequence.</p>
+
+
+
+    <details>
+        <summary>Equations</summary>
+        <ul class="equations">
+            
+                <li class="equation"><span class="fn"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/doubleround.html#doubleround.id_doubleround">doubleround.id_doubleround</a> seq</span> <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#eq" title="eq">=</a> seq</span></li>
+            
+        </ul>
+    </details>
+
+
+
+
+
+
+
+
+
+</div>
+</div>
+    
+
+    
+        
+        
+<div class="decl" id="doubleround.id_doubleround_inv">
+<div class="def">
+
+<div class="gh_link"><a href="">source</a></div>
+
+
+    <div class="attributes">@[simp]</div>
+
+
+<div class="decl_header">
+    
+
+
+<span class="decl_kind">def</span>
+<span class="decl_name"><a class="break_within" href="https://oxarbitrage.github.io/salsa20-docs/doubleround.html#doubleround.id_doubleround_inv"><span class="name">doubleround</span>.<span class="name">id_doubleround_inv</span></a></span>
+
+    <span class="decl_args"><span class="fn">(seq : <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod" title="prod">matrixType</a>)</span></span>&nbsp;<span class="decl_args">:</span>
+<div class="decl_type"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod" title="prod">matrixType</a></span></div>
+</div>
+
+
+
+
+
+<p>The identity of a <code>doubleround⁻¹</code> morphism given a sequence is the sequence.</p>
+
+
+
+    <details>
+        <summary>Equations</summary>
+        <ul class="equations">
+            
+                <li class="equation"><span class="fn"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/doubleround.html#doubleround.id_doubleround_inv">doubleround.id_doubleround_inv</a> seq</span> <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#eq" title="eq">=</a> seq</span></li>
+            
+        </ul>
+    </details>
+
+
+
+
+
+
+
+
+
+</div>
+</div>
+    
+
+    
+        
+        
+<div class="decl" id="doubleround.isomorphism_left">
+<div class="theorem">
+
+<div class="gh_link"><a href="">source</a></div>
+
+
+    <div class="attributes">@[simp]</div>
+
+
+<div class="decl_header">
+    
+
+
+<span class="decl_kind">theorem</span>
+<span class="decl_name"><a class="break_within" href="https://oxarbitrage.github.io/salsa20-docs/doubleround.html#doubleround.isomorphism_left"><span class="name">doubleround</span>.<span class="name">isomorphism_left</span></a></span>
+
+    <span class="decl_args"><span class="fn">(seq : <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod" title="prod">matrixType</a>)</span></span>&nbsp;<span class="decl_args">:</span>
+<div class="decl_type"><span class="fn"><span class="fn"><span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/doubleround.html#doubleround.doubleround_inv">doubleround.doubleround_inv</a> <a href="https://oxarbitrage.github.io/salsa20-docs/init/function.html#function.comp" title="function.comp">∘</a> <a href="https://oxarbitrage.github.io/salsa20-docs/doubleround.html#doubleround.doubleround">doubleround.doubleround</a>)</span> seq</span> <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#eq" title="eq">=</a> <span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/doubleround.html#doubleround.id_doubleround">doubleround.id_doubleround</a> seq</span></span></div>
+</div>
+
+
+
+
+
+<p>Isomorphism condition 1 : <code>doubleround ∘ doubleround⁻¹ = 𝟙 doubleround</code></p>
+
+
+
+
+
+
+
+
+
+
+
+</div>
+</div>
+    
+
+    
+        
+        
+<div class="decl" id="doubleround.isomorphism_right">
+<div class="theorem">
+
+<div class="gh_link"><a href="">source</a></div>
+
+
+    <div class="attributes">@[simp]</div>
+
+
+<div class="decl_header">
+    
+
+
+<span class="decl_kind">theorem</span>
+<span class="decl_name"><a class="break_within" href="https://oxarbitrage.github.io/salsa20-docs/doubleround.html#doubleround.isomorphism_right"><span class="name">doubleround</span>.<span class="name">isomorphism_right</span></a></span>
+
+    <span class="decl_args"><span class="fn">(seq : <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod" title="prod">matrixType</a>)</span></span>&nbsp;<span class="decl_args">:</span>
+<div class="decl_type"><span class="fn"><span class="fn"><span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/doubleround.html#doubleround.doubleround">doubleround.doubleround</a> <a href="https://oxarbitrage.github.io/salsa20-docs/init/function.html#function.comp" title="function.comp">∘</a> <a href="https://oxarbitrage.github.io/salsa20-docs/doubleround.html#doubleround.doubleround_inv">doubleround.doubleround_inv</a>)</span> seq</span> <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#eq" title="eq">=</a> <span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/doubleround.html#doubleround.id_doubleround_inv">doubleround.id_doubleround_inv</a> seq</span></span></div>
+</div>
+
+
+
+
+
+<p>Isomorphism condition 2 : <code>doubleround⁻¹ ∘ doubleround = 𝟙 doubleround⁻¹</code></p>
+
+
+
+
+
+
+
+
+
+
+
+</div>
+</div>
+    
+
+    
+        
+        
+<div class="decl" id="doubleround.doubleround_is_isomorphic">
+<div class="theorem">
+
+<div class="gh_link"><a href="">source</a></div>
+
+
+    <div class="attributes">@[simp]</div>
+
+
+<div class="decl_header">
+    
+
+
+<span class="decl_kind">theorem</span>
+<span class="decl_name"><a class="break_within" href="https://oxarbitrage.github.io/salsa20-docs/doubleround.html#doubleround.doubleround_is_isomorphic"><span class="name">doubleround</span>.<span class="name">doubleround_is_isomorphic</span></a></span>
+
+    <span class="decl_args"><span class="fn">(seq : <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod" title="prod">matrixType</a>)</span></span>&nbsp;<span class="decl_args">:</span>
+<div class="decl_type"><span class="fn"><span class="fn"><span class="fn"><span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/doubleround.html#doubleround.doubleround_inv">doubleround.doubleround_inv</a> <a href="https://oxarbitrage.github.io/salsa20-docs/init/function.html#function.comp" title="function.comp">∘</a> <a href="https://oxarbitrage.github.io/salsa20-docs/doubleround.html#doubleround.doubleround">doubleround.doubleround</a>)</span> seq</span> <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#eq" title="eq">=</a> <span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/doubleround.html#doubleround.id_doubleround">doubleround.id_doubleround</a> seq</span></span> <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#and" title="and">∧</a> <span class="fn"><span class="fn"><span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/doubleround.html#doubleround.doubleround">doubleround.doubleround</a> <a href="https://oxarbitrage.github.io/salsa20-docs/init/function.html#function.comp" title="function.comp">∘</a> <a href="https://oxarbitrage.github.io/salsa20-docs/doubleround.html#doubleround.doubleround_inv">doubleround.doubleround_inv</a>)</span> seq</span> <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#eq" title="eq">=</a> <span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/doubleround.html#doubleround.id_doubleround_inv">doubleround.id_doubleround_inv</a> seq</span></span></span></div>
+</div>
+
+
+
+
+
+<p>Two morphism <code>doubleround</code> and <code>doubleround⁻¹</code> are isomorphic if:</p>
+<ul>
+<li><code>doubleround ∘ doubleround⁻¹ = 𝟙 doubleround</code>, and</li>
+<li><code>doubleround⁻¹ ∘ doubleround = 𝟙 doubleround⁻¹</code>.</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+</div>
+</div>
+    
+
+    
+        <div class="mod_doc">
+            <h2 id="category-theory" class="markdown-heading">Category theory <a class="hover-link" href="#category-theory">#</a></h2>
+
+        </div>
+    
+
+    
+        
+        
+<div class="decl" id="doubleround.doubleroundType">
+<div class="structure">
+
+<div class="gh_link"><a href="">source</a></div>
+
+
+
+<div class="decl_header">
+    
+
+
+<span class="decl_kind">structure</span>
+<span class="decl_name"><a class="break_within" href="https://oxarbitrage.github.io/salsa20-docs/doubleround.html#doubleround.doubleroundType"><span class="name">doubleround</span>.<span class="name">doubleroundType</span></a></span>
+
+    <span class="decl_args"><span class="fn">(T : Type u_1)</span></span>
+    <span class="decl_args"><span class="fn">(c : <a href="https://oxarbitrage.github.io/salsa20-docs/columnround.html#columnround.columnroundType">columnround.columnroundType</a> T)</span></span>
+    <span class="decl_args"><span class="fn">(r : <a href="https://oxarbitrage.github.io/salsa20-docs/rowround.html#rowround.rowroundType">rowround.rowroundType</a> T)</span></span>
+    <span class="decl_args"><span class="fn">(q : <a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.quarterroundType">quarterround.quarterroundType</a> T)</span></span>&nbsp;<span class="decl_args">:</span>
+<div class="decl_type"><span class="fn">Type u_1</span></div>
+</div>
+
+
+    <ul class="structure_fields" id="doubleround.doubleroundType.mk">
+        
+            
+            <li class="structure_field" id="doubleround.doubleroundType.doubleround1">doubleround1 : <span class="fn">T <a href="https://oxarbitrage.github.io/salsa20-docs/combinatorics/quiver/basic.html#quiver.hom" title="quiver.hom">⟶</a> T</span></li>
+        
+            
+            <li class="structure_field" id="doubleround.doubleroundType.doubleround2">doubleround2 : <span class="fn">T <a href="https://oxarbitrage.github.io/salsa20-docs/combinatorics/quiver/basic.html#quiver.hom" title="quiver.hom">⟶</a> T</span></li>
+        
+            
+            <li class="structure_field" id="doubleround.doubleroundType.doubleround3">doubleround3 : <span class="fn">T <a href="https://oxarbitrage.github.io/salsa20-docs/combinatorics/quiver/basic.html#quiver.hom" title="quiver.hom">⟶</a> T</span></li>
+        
+            
+            <li class="structure_field" id="doubleround.doubleroundType.doubleround4">doubleround4 : <span class="fn">T <a href="https://oxarbitrage.github.io/salsa20-docs/combinatorics/quiver/basic.html#quiver.hom" title="quiver.hom">⟶</a> T</span></li>
+        
+    </ul>
+
+
+
+
+<p>A <code>doubleroundType</code> structure is four <code>columnroundType ≫ rowroundType</code>s.</p>
+
+
+
+
+
+
+
+    <details class="instances-for">
+        
+            <summary>Instances for <code><span class="name">doubleround</span>.<span class="name">doubleroundType</span></code></summary>
+        
+        <ul>
+            
+                <li>doubleround.doubleroundType.has_sizeof_inst</li>
+            
+        </ul>
+    </details>
+
+
+
+
+
+</div>
+</div>
+    
+
+    
+        
+        
+<div class="decl" id="doubleround.cat_doubleround">
+<div class="def">
+
+<div class="gh_link"><a href="">source</a></div>
+
+
+
+<div class="decl_header">
+    
+
+
+<span class="decl_kind">def</span>
+<span class="decl_name"><a class="break_within" href="https://oxarbitrage.github.io/salsa20-docs/doubleround.html#doubleround.cat_doubleround"><span class="name">doubleround</span>.<span class="name">cat_doubleround</span></a></span>
+
+    <span class="impl_arg"><span class="decl_args"><span class="fn">{C : Type u}</span></span></span>
+    <span class="decl_args"><span class="fn">(c : <a href="https://oxarbitrage.github.io/salsa20-docs/columnround.html#columnround.columnroundType">columnround.columnroundType</a> <span class="fn">(C <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod" title="prod">×</a> <span class="fn">C <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod" title="prod">×</a> <span class="fn">C <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod" title="prod">×</a> C)</span></span></span>)</span></span>
+    <span class="decl_args"><span class="fn">(r : <a href="https://oxarbitrage.github.io/salsa20-docs/rowround.html#rowround.rowroundType">rowround.rowroundType</a> <span class="fn">(C <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod" title="prod">×</a> <span class="fn">C <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod" title="prod">×</a> <span class="fn">C <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod" title="prod">×</a> C)</span></span></span>)</span></span>
+    <span class="decl_args"><span class="fn">(q : <a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.quarterroundType">quarterround.quarterroundType</a> <span class="fn">(C <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod" title="prod">×</a> <span class="fn">C <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod" title="prod">×</a> <span class="fn">C <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod" title="prod">×</a> C)</span></span></span>)</span></span>&nbsp;<span class="decl_args">:</span>
+<div class="decl_type"><span class="fn">Type u</span></div>
+</div>
+
+
+
+
+
+<p>rowround ≫ columnround</p>
+
+
+
+    <details>
+        <summary>Equations</summary>
+        <ul class="equations">
+            
+                <li class="equation"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/doubleround.html#doubleround.cat_doubleround">doubleround.cat_doubleround</a> <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#eq" title="eq">=</a> <span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/doubleround.html#doubleround.doubleroundType">doubleround.doubleroundType</a> <span class="fn">(C <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod" title="prod">×</a> <span class="fn">C <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod" title="prod">×</a> <span class="fn">C <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod" title="prod">×</a> C)</span></span></span></span></span></li>
+            
+        </ul>
+    </details>
+
+
+
+
+
+
+
+
+
+</div>
+</div>
+    
+
+    
+        
+        
+<div class="decl" id="doubleround.cat_doubleround_inv">
+<div class="def">
+
+<div class="gh_link"><a href="">source</a></div>
+
+
+
+<div class="decl_header">
+    
+
+
+<span class="decl_kind">def</span>
+<span class="decl_name"><a class="break_within" href="https://oxarbitrage.github.io/salsa20-docs/doubleround.html#doubleround.cat_doubleround_inv"><span class="name">doubleround</span>.<span class="name">cat_doubleround_inv</span></a></span>
+
+    <span class="impl_arg"><span class="decl_args"><span class="fn">{C : Type u}</span></span></span>
+    <span class="decl_args"><span class="fn">(c : <a href="https://oxarbitrage.github.io/salsa20-docs/columnround.html#columnround.columnroundType">columnround.columnroundType</a> <span class="fn">(C <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod" title="prod">×</a> <span class="fn">C <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod" title="prod">×</a> <span class="fn">C <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod" title="prod">×</a> C)</span></span></span>)</span></span>
+    <span class="decl_args"><span class="fn">(r : <a href="https://oxarbitrage.github.io/salsa20-docs/rowround.html#rowround.rowroundType">rowround.rowroundType</a> <span class="fn">(C <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod" title="prod">×</a> <span class="fn">C <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod" title="prod">×</a> <span class="fn">C <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod" title="prod">×</a> C)</span></span></span>)</span></span>
+    <span class="decl_args"><span class="fn">(q : <a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.quarterroundType">quarterround.quarterroundType</a> <span class="fn">(C <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod" title="prod">×</a> <span class="fn">C <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod" title="prod">×</a> <span class="fn">C <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod" title="prod">×</a> C)</span></span></span>)</span></span>&nbsp;<span class="decl_args">:</span>
+<div class="decl_type"><span class="fn">Type u</span></div>
+</div>
+
+
+
+
+
+<p>columnround⁻¹ ≫ rowround⁻¹</p>
+
+
+
+    <details>
+        <summary>Equations</summary>
+        <ul class="equations">
+            
+                <li class="equation"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/doubleround.html#doubleround.cat_doubleround_inv">doubleround.cat_doubleround_inv</a> <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#eq" title="eq">=</a> <span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/doubleround.html#doubleround.doubleroundType">doubleround.doubleroundType</a> <span class="fn">(C <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod" title="prod">×</a> <span class="fn">C <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod" title="prod">×</a> <span class="fn">C <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod" title="prod">×</a> C)</span></span></span></span></span></li>
+            
+        </ul>
+    </details>
+
+
+
+
+
+
+
+
+
+</div>
+</div>
+    
+
+    
+        
+        
+<div class="decl" id="doubleround.doubleround_inv_is_inverse_of_doubleround">
+<div class="theorem">
+
+<div class="gh_link"><a href="">source</a></div>
+
+
+
+<div class="decl_header">
+    
+
+
+<span class="decl_kind">theorem</span>
+<span class="decl_name"><a class="break_within" href="https://oxarbitrage.github.io/salsa20-docs/doubleround.html#doubleround.doubleround_inv_is_inverse_of_doubleround"><span class="name">doubleround</span>.<span class="name">doubleround_inv_is_inverse_of_doubleround</span></a></span>
+
+    <span class="impl_arg"><span class="decl_args"><span class="fn">{C : Type u}</span></span></span>
+    <span class="decl_args"><span class="fn">(columnround_instance : <a href="https://oxarbitrage.github.io/salsa20-docs/columnround.html#columnround.columnroundType">columnround.columnroundType</a> <span class="fn">(C <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod" title="prod">×</a> <span class="fn">C <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod" title="prod">×</a> <span class="fn">C <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod" title="prod">×</a> C)</span></span></span>)</span></span>
+    <span class="decl_args"><span class="fn">(rowround_instance : <a href="https://oxarbitrage.github.io/salsa20-docs/rowround.html#rowround.rowroundType">rowround.rowroundType</a> <span class="fn">(C <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod" title="prod">×</a> <span class="fn">C <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod" title="prod">×</a> <span class="fn">C <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod" title="prod">×</a> C)</span></span></span>)</span></span>
+    <span class="decl_args"><span class="fn">(I : <span class="fn"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/doubleround.html#doubleround.cat_doubleround">doubleround.cat_doubleround</a> columnround_instance</span> rowround_instance</span> <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/isomorphism.html#category_theory.iso" title="category_theory.iso">≅</a> <span class="fn"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/doubleround.html#doubleround.cat_doubleround_inv">doubleround.cat_doubleround_inv</a> columnround_instance</span> rowround_instance</span>)</span></span>&nbsp;<span class="decl_args">:</span>
+<div class="decl_type"><span class="fn"><span class="fn">I.<a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/isomorphism.html#category_theory.iso.hom" title="category_theory.iso.hom">hom</a> <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/category/basic.html#category_theory.category_struct.comp" title="category_theory.category_struct.comp">≫</a> I.<a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/isomorphism.html#category_theory.iso.inv" title="category_theory.iso.inv">inv</a></span> <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#eq" title="eq">=</a> <span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/category/basic.html#category_theory.category_struct.id" title="category_theory.category_struct.id">𝟙</a> <span class="fn"><span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/doubleround.html#doubleround.cat_doubleround">doubleround.cat_doubleround</a> columnround_instance</span> rowround_instance)</span></span></span></div>
+</div>
+
+
+
+
+
+<p>It is easy to see that <code>cat_doubleround⁻¹</code> after <code>cat_doubleround</code> produces the original object.</p>
+
+
+
+
+
+
+
+
+
+
+
+</div>
+</div>
+    
+
+    
+        <div class="mod_doc">
             <h2 id="invariance" class="markdown-heading">Invariance <a class="hover-link" href="#invariance">#</a></h2>
 <p>Left invariance of the doubleround function: <a href="https://www.iacr.org/archive/fse2008/50860470/50860470.pdf">https://www.iacr.org/archive/fse2008/50860470/50860470.pdf</a></p>
 <p>Theorem 4 of the paper.</p>
@@ -542,6 +1043,12 @@ the property defined above.</p>
 
 
 
+<p>Prove that the difference is carried for the first output from the first row of the matrix for random and
+crafted inputs when <code>rowround</code> is applied after <code>columnround</code>.</p>
+<p>Note:</p>
+<ul>
+<li>It can be repeated or generalized for all matrix positions.</li>
+</ul>
 
 
 
@@ -584,10 +1091,11 @@ the property defined above.</p>
 
 
 
-<p>Proof that the difference is carried after <code>doubleround</code> for any row and any value of the input matrices.</p>
-<p>Note:</p>
+<p>Proof that the difference is carried after <code>doubleround</code> for any row and any value of the input matrices.
+Note:</p>
 <ul>
-<li>This lemma just prove this for the first row and the first value but it can be generalized after <code>rowround_after_columnround_difference_is_carried</code>.</li>
+<li>This lemma just prove this for the first row and the first value but it can be generalized after
+<code>rowround_after_columnround_difference_is_carried</code>.</li>
 </ul>
 
 
@@ -1325,6 +1833,101 @@ the property defined above.</p>
             <a href="https://oxarbitrage.github.io/salsa20-docs/algebra/opposites.html">opposites</a>
         </div>
         </details>
+        <details class="nav_sect" data-path="category_theory" >
+            <summary>category_theory</summary>
+            
+        <details class="nav_sect" data-path="category_theory/adjunction" >
+            <summary>adjunction</summary>
+            
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/adjunction/basic.html">basic</a>
+        </div>
+        </details>
+        <details class="nav_sect" data-path="category_theory/category" >
+            <summary>category</summary>
+            
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/category/basic.html">basic</a>
+        </div>
+        </details>
+        <details class="nav_sect" data-path="category_theory/functor" >
+            <summary>functor</summary>
+            
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/functor/basic.html">basic</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/functor/category.html">category</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/functor/fully_faithful.html">fully_faithful</a>
+        </div>
+        </details>
+        <details class="nav_sect" data-path="category_theory/pi" >
+            <summary>pi</summary>
+            
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/pi/basic.html">basic</a>
+        </div>
+        </details>
+        <details class="nav_sect" data-path="category_theory/products" >
+            <summary>products</summary>
+            
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/products/basic.html">basic</a>
+        </div>
+        </details>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/core.html">core</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/epi_mono.html">epi_mono</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/eq_to_hom.html">eq_to_hom</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/equivalence.html">equivalence</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/essential_image.html">essential_image</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/full_subcategory.html">full_subcategory</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/groupoid.html">groupoid</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/isomorphism.html">isomorphism</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/natural_isomorphism.html">natural_isomorphism</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/natural_transformation.html">natural_transformation</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/opposites.html">opposites</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/types.html">types</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/whiskering.html">whiskering</a>
+        </div>
+        </details>
+        <details class="nav_sect" data-path="combinatorics" >
+            <summary>combinatorics</summary>
+            
+        <details class="nav_sect" data-path="combinatorics/quiver" >
+            <summary>quiver</summary>
+            
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/combinatorics/quiver/basic.html">basic</a>
+        </div>
+        </details>
+        </details>
         <details class="nav_sect" data-path="control" >
             <summary>control</summary>
             
@@ -1806,6 +2409,9 @@ the property defined above.</p>
             <a href="https://oxarbitrage.github.io/salsa20-docs/data/mllist.html">mllist</a>
         </div>
         <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/data/opposite.html">opposite</a>
+        </div>
+        <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/data/quot.html">quot</a>
         </div>
         <div class="nav_link ">
@@ -2169,6 +2775,9 @@ the property defined above.</p>
             <a href="https://oxarbitrage.github.io/salsa20-docs/tactic/rcases.html">rcases</a>
         </div>
         <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/tactic/reassoc_axiom.html">reassoc_axiom</a>
+        </div>
+        <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/tactic/rename_var.html">rename_var</a>
         </div>
         <div class="nav_link ">
@@ -2200,6 +2809,9 @@ the property defined above.</p>
         </div>
         <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/tactic/simps.html">simps</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/tactic/slice.html">slice</a>
         </div>
         <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/tactic/solve_by_elim.html">solve_by_elim</a>

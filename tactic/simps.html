@@ -1251,7 +1251,7 @@ with <code>@[to_additive]</code>. This is governed by the <code>add_additive</co
 </li>
 <li>if <code>simp_rhs</code> is <code>tt</code> then the right-hand-side of the generated lemmas will be put in
 simp-normal form. More precisely: <code>dsimp, simp</code> will be called on all these expressions.
-See note [dsimp, simp].</li>
+See <a id="noteref4" href="https://oxarbitrage.github.io/salsa20-docs/notes.html#dsimp, simp">note [dsimp, simp]</a>.</li>
 <li><code>type_md</code> specifies how aggressively definitions are unfolded in the type of expressions
 for the purposes of finding out whether the type is a function type.
 Default: <code>instances</code>. This will unfold coercion instances (so that a coercion to a function type
@@ -1791,7 +1791,7 @@ notation is used instead of the corresponding projection.</p>
 </li>
 <li>
 <p>You can specify custom projections, by giving a declaration with name
-<code>{structure_name}.simps.{projection_name}</code>. See <a id="noteref4" href="https://oxarbitrage.github.io/salsa20-docs/notes.html#custom simps projection">Note [custom simps projection]</a>.</p>
+<code>{structure_name}.simps.{projection_name}</code>. See <a id="noteref5" href="https://oxarbitrage.github.io/salsa20-docs/notes.html#custom simps projection">Note [custom simps projection]</a>.</p>
 <p>Example:</p>
 <div class="codehilite"><pre><span></span><code><span class="kd">def</span> <span class="n">equiv.simps.inv_fun</span> <span class="o">(</span><span class="n">e</span> <span class="o">:</span> <span class="n">α</span> <span class="bp">≃</span> <span class="n">β</span><span class="o">)</span> <span class="o">:</span> <span class="n">β</span> <span class="bp">→</span> <span class="n">α</span> <span class="o">:=</span> <span class="n">e.symm</span>
 <span class="kd">@[simps]</span> <span class="kd">def</span> <span class="n"><a href="https://oxarbitrage.github.io/salsa20-docs/logic/equiv/basic.html#equiv.trans">equiv.trans</a></span> <span class="o">(</span><span class="n">e₁</span> <span class="o">:</span> <span class="n">α</span> <span class="bp">≃</span> <span class="n">β</span><span class="o">)</span> <span class="o">(</span><span class="n">e₂</span> <span class="o">:</span> <span class="n">β</span> <span class="bp">≃</span> <span class="n">γ</span><span class="o">)</span> <span class="o">:</span> <span class="n">α</span> <span class="bp">≃</span> <span class="n">γ</span> <span class="o">:=</span>
@@ -1952,7 +1952,7 @@ notation is used instead of the corresponding projection.</p>
 </li>
 <li>
 <p>You can specify custom projections, by giving a declaration with name
-<code>{structure_name}.simps.{projection_name}</code>. See <a id="noteref5" href="https://oxarbitrage.github.io/salsa20-docs/notes.html#custom simps projection">Note [custom simps projection]</a>.</p>
+<code>{structure_name}.simps.{projection_name}</code>. See <a id="noteref6" href="https://oxarbitrage.github.io/salsa20-docs/notes.html#custom simps projection">Note [custom simps projection]</a>.</p>
 <p>Example:</p>
 <div class="codehilite"><pre><span></span><code><span class="kd">def</span> <span class="n">equiv.simps.inv_fun</span> <span class="o">(</span><span class="n">e</span> <span class="o">:</span> <span class="n">α</span> <span class="bp">≃</span> <span class="n">β</span><span class="o">)</span> <span class="o">:</span> <span class="n">β</span> <span class="bp">→</span> <span class="n">α</span> <span class="o">:=</span> <span class="n">e.symm</span>
 <span class="kd">@[simps]</span> <span class="kd">def</span> <span class="n"><a href="https://oxarbitrage.github.io/salsa20-docs/logic/equiv/basic.html#equiv.trans">equiv.trans</a></span> <span class="o">(</span><span class="n">e₁</span> <span class="o">:</span> <span class="n">α</span> <span class="bp">≃</span> <span class="n">β</span><span class="o">)</span> <span class="o">(</span><span class="n">e₂</span> <span class="o">:</span> <span class="n">β</span> <span class="bp">≃</span> <span class="n">γ</span><span class="o">)</span> <span class="o">:</span> <span class="n">α</span> <span class="bp">≃</span> <span class="n">γ</span> <span class="o">:=</span>
@@ -2782,6 +2782,101 @@ that <code>simps</code> comes after <code>to_additive</code>. This will also gen
             <a href="https://oxarbitrage.github.io/salsa20-docs/algebra/opposites.html">opposites</a>
         </div>
         </details>
+        <details class="nav_sect" data-path="category_theory" >
+            <summary>category_theory</summary>
+            
+        <details class="nav_sect" data-path="category_theory/adjunction" >
+            <summary>adjunction</summary>
+            
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/adjunction/basic.html">basic</a>
+        </div>
+        </details>
+        <details class="nav_sect" data-path="category_theory/category" >
+            <summary>category</summary>
+            
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/category/basic.html">basic</a>
+        </div>
+        </details>
+        <details class="nav_sect" data-path="category_theory/functor" >
+            <summary>functor</summary>
+            
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/functor/basic.html">basic</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/functor/category.html">category</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/functor/fully_faithful.html">fully_faithful</a>
+        </div>
+        </details>
+        <details class="nav_sect" data-path="category_theory/pi" >
+            <summary>pi</summary>
+            
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/pi/basic.html">basic</a>
+        </div>
+        </details>
+        <details class="nav_sect" data-path="category_theory/products" >
+            <summary>products</summary>
+            
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/products/basic.html">basic</a>
+        </div>
+        </details>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/core.html">core</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/epi_mono.html">epi_mono</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/eq_to_hom.html">eq_to_hom</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/equivalence.html">equivalence</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/essential_image.html">essential_image</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/full_subcategory.html">full_subcategory</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/groupoid.html">groupoid</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/isomorphism.html">isomorphism</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/natural_isomorphism.html">natural_isomorphism</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/natural_transformation.html">natural_transformation</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/opposites.html">opposites</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/types.html">types</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/whiskering.html">whiskering</a>
+        </div>
+        </details>
+        <details class="nav_sect" data-path="combinatorics" >
+            <summary>combinatorics</summary>
+            
+        <details class="nav_sect" data-path="combinatorics/quiver" >
+            <summary>quiver</summary>
+            
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/combinatorics/quiver/basic.html">basic</a>
+        </div>
+        </details>
+        </details>
         <details class="nav_sect" data-path="control" >
             <summary>control</summary>
             
@@ -3263,6 +3358,9 @@ that <code>simps</code> comes after <code>to_additive</code>. This will also gen
             <a href="https://oxarbitrage.github.io/salsa20-docs/data/mllist.html">mllist</a>
         </div>
         <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/data/opposite.html">opposite</a>
+        </div>
+        <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/data/quot.html">quot</a>
         </div>
         <div class="nav_link ">
@@ -3626,6 +3724,9 @@ that <code>simps</code> comes after <code>to_additive</code>. This will also gen
             <a href="https://oxarbitrage.github.io/salsa20-docs/tactic/rcases.html">rcases</a>
         </div>
         <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/tactic/reassoc_axiom.html">reassoc_axiom</a>
+        </div>
+        <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/tactic/rename_var.html">rename_var</a>
         </div>
         <div class="nav_link ">
@@ -3657,6 +3758,9 @@ that <code>simps</code> comes after <code>to_additive</code>. This will also gen
         </div>
         <div class="nav_link visible">
             <a href="https://oxarbitrage.github.io/salsa20-docs/tactic/simps.html">simps</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/tactic/slice.html">slice</a>
         </div>
         <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/tactic/solve_by_elim.html">solve_by_elim</a>

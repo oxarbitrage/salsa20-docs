@@ -46,6 +46,9 @@
         <label><input type="checkbox" class="tagfilter" name="arithmetic" value="arithmetic">arithmetic</label>
         <br>
     
+        <label><input type="checkbox" class="tagfilter" name="category-theory" value="category-theory">category theory</label>
+        <br>
+    
         <label><input type="checkbox" class="tagfilter" name="coercions" value="coercions">coercions</label>
         <br>
     
@@ -107,6 +110,8 @@
     <div class="taclink parsing environment structures"><a href="#protect_proj">protect_proj</a></div>
 
     <div class="taclink parsing environment"><a href="#protected">protected</a></div>
+
+    <div class="taclink category-theory"><a href="#reassoc">reassoc</a></div>
 
     <div class="taclink simplification"><a href="#simps">simps</a></div>
 
@@ -675,6 +680,44 @@ This provides a convenient way to protect many declarations at once.</p>
       
       <details class="imports"><summary>Import using</summary><ul><li>import tactic.protected</li>
 <li>import tactic.basic</li></ul></details>
+    
+</div>
+
+<div class="tactic category-theory">
+    <h2 id="reassoc"><a href="#reassoc">reassoc</a></h2>
+    <p>The <code>reassoc</code> attribute can be applied to a lemma</p>
+<div class="codehilite"><pre><span></span><code><span class="kd">@[reassoc]</span>
+<span class="kd">lemma</span> <span class="n">some_lemma</span> <span class="o">:</span> <span class="n">foo</span> <span class="bp">≫</span> <span class="n">bar</span> <span class="bp">=</span> <span class="n">baz</span> <span class="o">:=</span> <span class="bp">...</span>
+</code></pre></div>
+
+<p>to produce</p>
+<div class="codehilite"><pre><span></span><code><span class="kd">lemma</span> <span class="n">some_lemma_assoc</span> <span class="o">{</span><span class="n">Y</span> <span class="o">:</span> <span class="n">C</span><span class="o">}</span> <span class="o">(</span><span class="n">f</span> <span class="o">:</span> <span class="n">X</span> <span class="bp">⟶</span> <span class="n">Y</span><span class="o">)</span> <span class="o">:</span> <span class="n">foo</span> <span class="bp">≫</span> <span class="n">bar</span> <span class="bp">≫</span> <span class="n">f</span> <span class="bp">=</span> <span class="n">baz</span> <span class="bp">≫</span> <span class="n">f</span> <span class="o">:=</span> <span class="bp">...</span>
+</code></pre></div>
+
+<p>The name of the produced lemma can be specified with <code>@[reassoc other_lemma_name]</code>. If
+<code>simp</code> is added first, the generated lemma will also have the <code>simp</code> attribute.</p>
+
+    
+      <div class="tags">Tags:
+        <ul>
+            
+                <li>category theory</li> 
+            
+        </ul>
+      </div>
+    
+    
+      <details class="rel_decls"><summary>Related declarations</summary>
+        <ul>
+            
+                <li><a href="https://oxarbitrage.github.io/salsa20-docs/tactic/reassoc_axiom.html#tactic.reassoc_attr">tactic.reassoc_attr</a></li>
+            
+        </ul>
+      </details>
+
+      
+      <details class="imports"><summary>Import using</summary><ul><li>import tactic.reassoc_axiom</li>
+<li>import tactic</li></ul></details>
     
 </div>
 
@@ -1808,6 +1851,101 @@ that the new name differs from the original one.</p>
             <a href="https://oxarbitrage.github.io/salsa20-docs/algebra/opposites.html">opposites</a>
         </div>
         </details>
+        <details class="nav_sect" data-path="category_theory" >
+            <summary>category_theory</summary>
+            
+        <details class="nav_sect" data-path="category_theory/adjunction" >
+            <summary>adjunction</summary>
+            
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/adjunction/basic.html">basic</a>
+        </div>
+        </details>
+        <details class="nav_sect" data-path="category_theory/category" >
+            <summary>category</summary>
+            
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/category/basic.html">basic</a>
+        </div>
+        </details>
+        <details class="nav_sect" data-path="category_theory/functor" >
+            <summary>functor</summary>
+            
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/functor/basic.html">basic</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/functor/category.html">category</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/functor/fully_faithful.html">fully_faithful</a>
+        </div>
+        </details>
+        <details class="nav_sect" data-path="category_theory/pi" >
+            <summary>pi</summary>
+            
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/pi/basic.html">basic</a>
+        </div>
+        </details>
+        <details class="nav_sect" data-path="category_theory/products" >
+            <summary>products</summary>
+            
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/products/basic.html">basic</a>
+        </div>
+        </details>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/core.html">core</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/epi_mono.html">epi_mono</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/eq_to_hom.html">eq_to_hom</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/equivalence.html">equivalence</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/essential_image.html">essential_image</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/full_subcategory.html">full_subcategory</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/groupoid.html">groupoid</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/isomorphism.html">isomorphism</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/natural_isomorphism.html">natural_isomorphism</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/natural_transformation.html">natural_transformation</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/opposites.html">opposites</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/types.html">types</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/whiskering.html">whiskering</a>
+        </div>
+        </details>
+        <details class="nav_sect" data-path="combinatorics" >
+            <summary>combinatorics</summary>
+            
+        <details class="nav_sect" data-path="combinatorics/quiver" >
+            <summary>quiver</summary>
+            
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/combinatorics/quiver/basic.html">basic</a>
+        </div>
+        </details>
+        </details>
         <details class="nav_sect" data-path="control" >
             <summary>control</summary>
             
@@ -2289,6 +2427,9 @@ that the new name differs from the original one.</p>
             <a href="https://oxarbitrage.github.io/salsa20-docs/data/mllist.html">mllist</a>
         </div>
         <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/data/opposite.html">opposite</a>
+        </div>
+        <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/data/quot.html">quot</a>
         </div>
         <div class="nav_link ">
@@ -2652,6 +2793,9 @@ that the new name differs from the original one.</p>
             <a href="https://oxarbitrage.github.io/salsa20-docs/tactic/rcases.html">rcases</a>
         </div>
         <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/tactic/reassoc_axiom.html">reassoc_axiom</a>
+        </div>
+        <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/tactic/rename_var.html">rename_var</a>
         </div>
         <div class="nav_link ">
@@ -2683,6 +2827,9 @@ that the new name differs from the original one.</p>
         </div>
         <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/tactic/simps.html">simps</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/tactic/slice.html">slice</a>
         </div>
         <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/tactic/solve_by_elim.html">solve_by_elim</a>

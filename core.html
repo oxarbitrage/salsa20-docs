@@ -8,11 +8,11 @@
     <title>salsa20 / core - salsa20 docs</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Core: The `hash` and `core` functions, the non existing inverse and the `collision` theorems." />
+    <meta name="description" content="Core: The `doubleround10` function and its inverse. The `hash` and `core` functions, the non existing inverse. The `collision` theorems." />
     
     <meta property="og:title" content="salsa20 / core - salsa20 docs">
     <meta property="og:site_name" content="salsa20 for Lean - API documentation">
-    <meta property="og:description" content="Core: The `hash` and `core` functions, the non existing inverse and the `collision` theorems.">
+    <meta property="og:description" content="Core: The `doubleround10` function and its inverse. The `hash` and `core` functions, the non existing inverse. The `collision` theorems.">
     <meta property="og:image" content="https://oxarbitrage.github.io/salsa20-docs/meta-og.png">
     <meta name="twitter:card" content="summary">
     <script src="https://oxarbitrage.github.io/salsa20-docs/color_scheme.js"></script>
@@ -84,11 +84,29 @@
 
     <div class="nav_link"><a class="break_within" href="#core.doubleround_10"><span class="name">core</span>.<span class="name">doubleround_10</span></a></div>
 
+    <div class="nav_link"><a class="break_within" href="#core.doubleround_10_inv"><span class="name">core</span>.<span class="name">doubleround_10_inv</span></a></div>
+
+    <div class="nav_link"><a class="break_within" href="#core.doubleround_10_is_isomorphic"><span class="name">core</span>.<span class="name">doubleround_10_is_isomorphic</span></a></div>
+
     <div class="nav_link"><a class="break_within" href="#core.doubleround_10_is_left_invariant"><span class="name">core</span>.<span class="name">doubleround_10_is_left_invariant</span></a></div>
 
     <div class="nav_link"><a class="break_within" href="#core.hash"><span class="name">core</span>.<span class="name">hash</span></a></div>
 
+    <div class="nav_link"><a class="break_within" href="#core.id_core"><span class="name">core</span>.<span class="name">id_core</span></a></div>
+
+    <div class="nav_link"><a class="break_within" href="#core.id_core_inv"><span class="name">core</span>.<span class="name">id_core_inv</span></a></div>
+
+    <div class="nav_link"><a class="break_within" href="#core.id_doubleround_10"><span class="name">core</span>.<span class="name">id_doubleround_10</span></a></div>
+
+    <div class="nav_link"><a class="break_within" href="#core.id_doubleround_10_inv"><span class="name">core</span>.<span class="name">id_doubleround_10_inv</span></a></div>
+
+    <div class="nav_link"><a class="break_within" href="#core.isomorphism_left"><span class="name">core</span>.<span class="name">isomorphism_left</span></a></div>
+
+    <div class="nav_link"><a class="break_within" href="#core.isomorphism_right"><span class="name">core</span>.<span class="name">isomorphism_right</span></a></div>
+
     <div class="nav_link"><a class="break_within" href="#core.known_collissions"><span class="name">core</span>.<span class="name">known_collissions</span></a></div>
+
+    <div class="nav_link"><a class="break_within" href="#core.no_isomorphism_core"><span class="name">core</span>.<span class="name">no_isomorphism_core</span></a></div>
 
     <div class="nav_link"><a class="break_within" href="#core.output"><span class="name">core</span>.<span class="name">output</span></a></div>
 
@@ -103,7 +121,11 @@
     
         <div class="mod_doc">
             <h1 id="core" class="markdown-heading">Core <a class="hover-link" href="#core">#</a></h1>
-<p>The <code>hash</code> and <code>core</code> functions, the non existing inverse and the <code>collision</code> theorems.</p>
+<ul>
+<li>The <code>doubleround10</code> function and its inverse.</li>
+<li>The <code>hash</code> and <code>core</code> functions, the non existing inverse.</li>
+<li>The <code>collision</code> theorems.</li>
+</ul>
 
         </div>
     
@@ -116,6 +138,8 @@
 
 <div class="gh_link"><a href="">source</a></div>
 
+
+    <div class="attributes">@[simp]</div>
 
 
 <div class="decl_header">
@@ -161,11 +185,321 @@
     
         
         
+<div class="decl" id="core.doubleround_10_inv">
+<div class="def">
+
+<div class="gh_link"><a href="">source</a></div>
+
+
+    <div class="attributes">@[simp]</div>
+
+
+<div class="decl_header">
+    
+
+
+<span class="decl_kind">def</span>
+<span class="decl_name"><a class="break_within" href="https://oxarbitrage.github.io/salsa20-docs/core.html#core.doubleround_10_inv"><span class="name">core</span>.<span class="name">doubleround_10_inv</span></a></span>
+
+    <span class="decl_args"><span class="fn">(X : <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod" title="prod">matrixType</a>)</span></span>&nbsp;<span class="decl_args">:</span>
+<div class="decl_type"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod" title="prod">matrixType</a></span></div>
+</div>
+
+
+
+
+
+<p>Inverse of <code>doubleround_10</code>.</p>
+
+
+
+    <details>
+        <summary>Equations</summary>
+        <ul class="equations">
+            
+                <li class="equation"><span class="fn"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/core.html#core.doubleround_10_inv">core.doubleround_10_inv</a> X</span> <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#eq" title="eq">=</a> <span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/doubleround.html#doubleround.doubleround_inv'">doubleround.doubleround_inv'</a> <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/doubleround.html#doubleround.doubleround_inv'">doubleround.doubleround_inv'</a> <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/doubleround.html#doubleround.doubleround_inv'">doubleround.doubleround_inv'</a> <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/doubleround.html#doubleround.doubleround_inv'">doubleround.doubleround_inv'</a> <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/doubleround.html#doubleround.doubleround_inv'">doubleround.doubleround_inv'</a> <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/doubleround.html#doubleround.doubleround_inv'">doubleround.doubleround_inv'</a> <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/doubleround.html#doubleround.doubleround_inv'">doubleround.doubleround_inv'</a> <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/doubleround.html#doubleround.doubleround_inv'">doubleround.doubleround_inv'</a> <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/doubleround.html#doubleround.doubleround_inv'">doubleround.doubleround_inv'</a> <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/doubleround.html#doubleround.doubleround_inv'">doubleround.doubleround_inv'</a> X)))))))))</span></span></span></span></span></span></span></span></span></span></span></li>
+            
+        </ul>
+    </details>
+
+
+
+
+
+
+
+
+
+</div>
+</div>
+    
+
+    
+        <div class="mod_doc">
+            <h2 id="isomorphism-of-the-doubleround_10-function" class="markdown-heading">Isomorphism of the doubleround_10 function <a class="hover-link" href="#isomorphism-of-the-doubleround_10-function">#</a></h2>
+<p><a href="https://en.wikipedia.org/wiki/Isomorphism#Category_theoretic_view">https://en.wikipedia.org/wiki/Isomorphism#Category_theoretic_view</a></p>
+<blockquote>
+<p>In category theory, given a category C, an isomorphism is a morphism <code>f : a ⟶ b</code> that has an inverse
+morphism <code>g : b ⟶ a</code> , that is, <code>f ∘ g = 𝟙 b</code> and <code>g ∘ f = 𝟙 a</code>.</p>
+</blockquote>
+
+        </div>
+    
+
+    
+        
+        
+<div class="decl" id="core.id_doubleround_10">
+<div class="def">
+
+<div class="gh_link"><a href="">source</a></div>
+
+
+    <div class="attributes">@[simp]</div>
+
+
+<div class="decl_header">
+    
+
+
+<span class="decl_kind">def</span>
+<span class="decl_name"><a class="break_within" href="https://oxarbitrage.github.io/salsa20-docs/core.html#core.id_doubleround_10"><span class="name">core</span>.<span class="name">id_doubleround_10</span></a></span>
+
+    <span class="decl_args"><span class="fn">(seq : <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod" title="prod">matrixType</a>)</span></span>&nbsp;<span class="decl_args">:</span>
+<div class="decl_type"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod" title="prod">matrixType</a></span></div>
+</div>
+
+
+
+
+
+<p>The identity of a <code>doubleround_10</code> morphism given a sequence is the sequence.</p>
+
+
+
+    <details>
+        <summary>Equations</summary>
+        <ul class="equations">
+            
+                <li class="equation"><span class="fn"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/core.html#core.id_doubleround_10">core.id_doubleround_10</a> seq</span> <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#eq" title="eq">=</a> seq</span></li>
+            
+        </ul>
+    </details>
+
+
+
+
+
+
+
+
+
+</div>
+</div>
+    
+
+    
+        
+        
+<div class="decl" id="core.id_doubleround_10_inv">
+<div class="def">
+
+<div class="gh_link"><a href="">source</a></div>
+
+
+    <div class="attributes">@[simp]</div>
+
+
+<div class="decl_header">
+    
+
+
+<span class="decl_kind">def</span>
+<span class="decl_name"><a class="break_within" href="https://oxarbitrage.github.io/salsa20-docs/core.html#core.id_doubleround_10_inv"><span class="name">core</span>.<span class="name">id_doubleround_10_inv</span></a></span>
+
+    <span class="decl_args"><span class="fn">(seq : <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod" title="prod">matrixType</a>)</span></span>&nbsp;<span class="decl_args">:</span>
+<div class="decl_type"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod" title="prod">matrixType</a></span></div>
+</div>
+
+
+
+
+
+<p>The identity of a <code>doubleround⁻¹</code> morphism given a sequence is the sequence.</p>
+
+
+
+    <details>
+        <summary>Equations</summary>
+        <ul class="equations">
+            
+                <li class="equation"><span class="fn"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/core.html#core.id_doubleround_10_inv">core.id_doubleround_10_inv</a> seq</span> <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#eq" title="eq">=</a> seq</span></li>
+            
+        </ul>
+    </details>
+
+
+
+
+
+
+
+
+
+</div>
+</div>
+    
+
+    
+        
+        
+<div class="decl" id="core.isomorphism_left">
+<div class="theorem">
+
+<div class="gh_link"><a href="">source</a></div>
+
+
+    <div class="attributes">@[simp]</div>
+
+
+<div class="decl_header">
+    
+
+
+<span class="decl_kind">theorem</span>
+<span class="decl_name"><a class="break_within" href="https://oxarbitrage.github.io/salsa20-docs/core.html#core.isomorphism_left"><span class="name">core</span>.<span class="name">isomorphism_left</span></a></span>
+
+    <span class="decl_args"><span class="fn">(seq : <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod" title="prod">matrixType</a>)</span></span>&nbsp;<span class="decl_args">:</span>
+<div class="decl_type"><span class="fn"><span class="fn"><span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/core.html#core.doubleround_10_inv">core.doubleround_10_inv</a> <a href="https://oxarbitrage.github.io/salsa20-docs/init/function.html#function.comp" title="function.comp">∘</a> <a href="https://oxarbitrage.github.io/salsa20-docs/core.html#core.doubleround_10">core.doubleround_10</a>)</span> seq</span> <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#eq" title="eq">=</a> <span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/core.html#core.id_doubleround_10">core.id_doubleround_10</a> seq</span></span></div>
+</div>
+
+
+
+
+
+<p>Isomorphism condition 1 : <code>doubleround_10⁻¹ ∘ doubleround_10 = 𝟙 doubleround_10</code></p>
+
+
+
+
+
+
+
+
+
+
+
+</div>
+</div>
+    
+
+    
+        
+        
+<div class="decl" id="core.isomorphism_right">
+<div class="theorem">
+
+<div class="gh_link"><a href="">source</a></div>
+
+
+    <div class="attributes">@[simp]</div>
+
+
+<div class="decl_header">
+    
+
+
+<span class="decl_kind">theorem</span>
+<span class="decl_name"><a class="break_within" href="https://oxarbitrage.github.io/salsa20-docs/core.html#core.isomorphism_right"><span class="name">core</span>.<span class="name">isomorphism_right</span></a></span>
+
+    <span class="decl_args"><span class="fn">(seq : <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod" title="prod">matrixType</a>)</span></span>&nbsp;<span class="decl_args">:</span>
+<div class="decl_type"><span class="fn"><span class="fn"><span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/core.html#core.doubleround_10">core.doubleround_10</a> <a href="https://oxarbitrage.github.io/salsa20-docs/init/function.html#function.comp" title="function.comp">∘</a> <a href="https://oxarbitrage.github.io/salsa20-docs/core.html#core.doubleround_10_inv">core.doubleround_10_inv</a>)</span> seq</span> <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#eq" title="eq">=</a> <span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/core.html#core.id_doubleround_10_inv">core.id_doubleround_10_inv</a> seq</span></span></div>
+</div>
+
+
+
+
+
+<p>Isomorphism condition 2 : <code>doubleround_10 ∘ doubleround_10⁻¹ = 𝟙 doubleround_10⁻¹</code></p>
+
+
+
+
+
+
+
+
+
+
+
+</div>
+</div>
+    
+
+    
+        
+        
+<div class="decl" id="core.doubleround_10_is_isomorphic">
+<div class="theorem">
+
+<div class="gh_link"><a href="">source</a></div>
+
+
+    <div class="attributes">@[simp]</div>
+
+
+<div class="decl_header">
+    
+
+
+<span class="decl_kind">theorem</span>
+<span class="decl_name"><a class="break_within" href="https://oxarbitrage.github.io/salsa20-docs/core.html#core.doubleround_10_is_isomorphic"><span class="name">core</span>.<span class="name">doubleround_10_is_isomorphic</span></a></span>
+
+    <span class="decl_args"><span class="fn">(seq : <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod" title="prod">matrixType</a>)</span></span>&nbsp;<span class="decl_args">:</span>
+<div class="decl_type"><span class="fn"><span class="fn"><span class="fn"><span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/core.html#core.doubleround_10_inv">core.doubleround_10_inv</a> <a href="https://oxarbitrage.github.io/salsa20-docs/init/function.html#function.comp" title="function.comp">∘</a> <a href="https://oxarbitrage.github.io/salsa20-docs/core.html#core.doubleround_10">core.doubleround_10</a>)</span> seq</span> <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#eq" title="eq">=</a> <span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/core.html#core.id_doubleround_10">core.id_doubleround_10</a> seq</span></span> <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#and" title="and">∧</a> <span class="fn"><span class="fn"><span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/core.html#core.doubleround_10">core.doubleround_10</a> <a href="https://oxarbitrage.github.io/salsa20-docs/init/function.html#function.comp" title="function.comp">∘</a> <a href="https://oxarbitrage.github.io/salsa20-docs/core.html#core.doubleround_10_inv">core.doubleround_10_inv</a>)</span> seq</span> <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#eq" title="eq">=</a> <span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/core.html#core.id_doubleround_10_inv">core.id_doubleround_10_inv</a> seq</span></span></span></div>
+</div>
+
+
+
+
+
+<p>Two morphism <code>doubleround_10</code> and <code>doubleround_10⁻¹</code> are isomorphic if:</p>
+<ul>
+<li><code>doubleround_10 ∘ doubleround_10⁻¹ = 𝟙 doubleround_10</code>, and</li>
+<li><code>doubleround_10⁻¹ ∘ doubleround_10 = 𝟙 doubleround_10⁻¹</code>.</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+</div>
+</div>
+    
+
+    
+        <div class="mod_doc">
+            <h2 id="core-and-hash-definitions" class="markdown-heading">Core and hash definitions <a class="hover-link" href="#core-and-hash-definitions">#</a></h2>
+
+        </div>
+    
+
+    
+        
+        
 <div class="decl" id="core.core">
 <div class="def">
 
 <div class="gh_link"><a href="">source</a></div>
 
+
+    <div class="attributes">@[simp]</div>
 
 
 <div class="decl_header">
@@ -260,22 +594,165 @@
 
     
         <div class="mod_doc">
-            <h2 id="hash-does-not-have-an-inverse" class="markdown-heading">Hash does not have an inverse. <a class="hover-link" href="#hash-does-not-have-an-inverse">#</a></h2>
+            <h2 id="isomorphism-of-the-core-function-do-not-exists" class="markdown-heading">Isomorphism of the core function do not exists <a class="hover-link" href="#isomorphism-of-the-core-function-do-not-exists">#</a></h2>
 <h3 id="todo" class="markdown-heading">TODO: <a class="hover-link" href="#todo">#</a></h3>
-<p>It should be easy to prove or assume the MOD operation is not reversible.
-Then <code>mod_as_matrix</code> is irreversible and <code>hash</code> is irreverisble.</p>
-<p>Another approach will be to treat <code>hash</code> and <code>hash_inv</code> as a generic function, assume or prove they are not
-bijective and then assume or prove functions that are not bijective do not have an inverse.</p>
-<p>Hash as a generic function that returns the same type as its input.
-variable hash' : matrix64Type → matrix64Type</p>
-<p>A potential generic inverse of the hash that returns the same type as its input.
-variable hash_inv : matrix64Type → matrix64Type</p>
-<p>-- Hash function is not bijective then inverse does not exist.
--- TODO: prove or assume hash is not bijective.
--- TODO: prove or assume a non bijective function does not have an inverse.
-lemma hash_has_no_inverse (A : matrix64Type) : ¬ hash'.bijective → ¬hash_inv (hash' A) = A</p>
+<p>We know <code>mod_matrix⁻¹</code> is not a function (proved in <code>inv_of_mod_matrix_is_not_a_function</code>) but
+i was not able to use that for formalization of <code>core⁻¹</code> yet.</p>
 
         </div>
+    
+
+    
+        
+        
+<div class="decl" id="core.id_core">
+<div class="def">
+
+<div class="gh_link"><a href="">source</a></div>
+
+
+    <div class="attributes">@[simp]</div>
+
+
+<div class="decl_header">
+    
+
+
+<span class="decl_kind">def</span>
+<span class="decl_name"><a class="break_within" href="https://oxarbitrage.github.io/salsa20-docs/core.html#core.id_core"><span class="name">core</span>.<span class="name">id_core</span></a></span>
+
+    <span class="decl_args"><span class="fn">(seq : <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod" title="prod">matrixType</a>)</span></span>&nbsp;<span class="decl_args">:</span>
+<div class="decl_type"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod" title="prod">matrixType</a></span></div>
+</div>
+
+
+
+
+
+<p>The identity of a <code>core</code> morphism given a sequence is the sequence.</p>
+
+
+
+    <details>
+        <summary>Equations</summary>
+        <ul class="equations">
+            
+                <li class="equation"><span class="fn"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/core.html#core.id_core">core.id_core</a> seq</span> <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#eq" title="eq">=</a> seq</span></li>
+            
+        </ul>
+    </details>
+
+
+
+
+
+
+
+
+
+</div>
+</div>
+    
+
+    
+        
+        
+<div class="decl" id="core.id_core_inv">
+<div class="def">
+
+<div class="gh_link"><a href="">source</a></div>
+
+
+    <div class="attributes">@[simp]</div>
+
+
+<div class="decl_header">
+    
+
+
+<span class="decl_kind">def</span>
+<span class="decl_name"><a class="break_within" href="https://oxarbitrage.github.io/salsa20-docs/core.html#core.id_core_inv"><span class="name">core</span>.<span class="name">id_core_inv</span></a></span>
+
+    <span class="decl_args"><span class="fn">(seq : <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod" title="prod">matrixType</a>)</span></span>&nbsp;<span class="decl_args">:</span>
+<div class="decl_type"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod" title="prod">matrixType</a></span></div>
+</div>
+
+
+
+
+
+<p>The identity of a <code>core⁻¹</code> morphism given a sequence is the sequence.</p>
+
+
+
+    <details>
+        <summary>Equations</summary>
+        <ul class="equations">
+            
+                <li class="equation"><span class="fn"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/core.html#core.id_core_inv">core.id_core_inv</a> seq</span> <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#eq" title="eq">=</a> seq</span></li>
+            
+        </ul>
+    </details>
+
+
+
+
+
+
+
+
+
+</div>
+</div>
+    
+
+    
+        
+        
+<div class="decl" id="core.no_isomorphism_core">
+<div class="theorem sorried">
+
+<div class="gh_link"><a href="">source</a></div>
+
+
+    <div class="attributes">@[simp]</div>
+
+
+<div class="decl_header">
+    
+
+
+<span class="decl_kind">theorem</span>
+<span class="decl_name"><a class="break_within" href="https://oxarbitrage.github.io/salsa20-docs/core.html#core.no_isomorphism_core"><span class="name">core</span>.<span class="name">no_isomorphism_core</span></a></span>
+
+    <span class="decl_args"><span class="fn">(seq : <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod" title="prod">matrixType</a>)</span></span>&nbsp;<span class="decl_args">:</span>
+<div class="decl_type"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#not" title="not">¬</a><span class="fn">∃ (core_inv1 core_inv2 : <span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod" title="prod">matrixType</a> → <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod" title="prod">matrixType</a>)</span>, <span class="fn"><span class="fn"><span class="fn"><span class="fn">(core_inv1 <a href="https://oxarbitrage.github.io/salsa20-docs/init/function.html#function.comp" title="function.comp">∘</a> <a href="https://oxarbitrage.github.io/salsa20-docs/core.html#core.core">core.core</a>)</span> seq</span> <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#eq" title="eq">=</a> <span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/core.html#core.id_core">core.id_core</a> seq</span></span> <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#and" title="and">∧</a> <span class="fn"><span class="fn"><span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/core.html#core.core">core.core</a> <a href="https://oxarbitrage.github.io/salsa20-docs/init/function.html#function.comp" title="function.comp">∘</a> core_inv2)</span> seq</span> <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#eq" title="eq">=</a> <span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/core.html#core.id_core">core.id_core</a> seq</span></span></span></span></span></div>
+</div>
+
+
+
+
+
+<p>No isomrphism exists as none of the conditions apply :</p>
+<ul>
+<li><code>core⁻¹ ∘ core = 𝟙 core</code> = false</li>
+<li><code>core ∘ core⁻¹ = 𝟙 core</code> = false</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+    <p class="sorry_msg"><strong>Note:</strong> this declaration is incomplete and uses <code>sorry</code>.</p>
+
+</div>
+</div>
     
 
     
@@ -1649,6 +2126,101 @@ in the form of salsa20(x) = salsa20 (x + Δ), where Δ = (0x80000000, ...).</p>
             <a href="https://oxarbitrage.github.io/salsa20-docs/algebra/opposites.html">opposites</a>
         </div>
         </details>
+        <details class="nav_sect" data-path="category_theory" >
+            <summary>category_theory</summary>
+            
+        <details class="nav_sect" data-path="category_theory/adjunction" >
+            <summary>adjunction</summary>
+            
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/adjunction/basic.html">basic</a>
+        </div>
+        </details>
+        <details class="nav_sect" data-path="category_theory/category" >
+            <summary>category</summary>
+            
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/category/basic.html">basic</a>
+        </div>
+        </details>
+        <details class="nav_sect" data-path="category_theory/functor" >
+            <summary>functor</summary>
+            
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/functor/basic.html">basic</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/functor/category.html">category</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/functor/fully_faithful.html">fully_faithful</a>
+        </div>
+        </details>
+        <details class="nav_sect" data-path="category_theory/pi" >
+            <summary>pi</summary>
+            
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/pi/basic.html">basic</a>
+        </div>
+        </details>
+        <details class="nav_sect" data-path="category_theory/products" >
+            <summary>products</summary>
+            
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/products/basic.html">basic</a>
+        </div>
+        </details>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/core.html">core</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/epi_mono.html">epi_mono</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/eq_to_hom.html">eq_to_hom</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/equivalence.html">equivalence</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/essential_image.html">essential_image</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/full_subcategory.html">full_subcategory</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/groupoid.html">groupoid</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/isomorphism.html">isomorphism</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/natural_isomorphism.html">natural_isomorphism</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/natural_transformation.html">natural_transformation</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/opposites.html">opposites</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/types.html">types</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/whiskering.html">whiskering</a>
+        </div>
+        </details>
+        <details class="nav_sect" data-path="combinatorics" >
+            <summary>combinatorics</summary>
+            
+        <details class="nav_sect" data-path="combinatorics/quiver" >
+            <summary>quiver</summary>
+            
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/combinatorics/quiver/basic.html">basic</a>
+        </div>
+        </details>
+        </details>
         <details class="nav_sect" data-path="control" >
             <summary>control</summary>
             
@@ -2130,6 +2702,9 @@ in the form of salsa20(x) = salsa20 (x + Δ), where Δ = (0x80000000, ...).</p>
             <a href="https://oxarbitrage.github.io/salsa20-docs/data/mllist.html">mllist</a>
         </div>
         <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/data/opposite.html">opposite</a>
+        </div>
+        <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/data/quot.html">quot</a>
         </div>
         <div class="nav_link ">
@@ -2493,6 +3068,9 @@ in the form of salsa20(x) = salsa20 (x + Δ), where Δ = (0x80000000, ...).</p>
             <a href="https://oxarbitrage.github.io/salsa20-docs/tactic/rcases.html">rcases</a>
         </div>
         <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/tactic/reassoc_axiom.html">reassoc_axiom</a>
+        </div>
+        <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/tactic/rename_var.html">rename_var</a>
         </div>
         <div class="nav_link ">
@@ -2524,6 +3102,9 @@ in the form of salsa20(x) = salsa20 (x + Δ), where Δ = (0x80000000, ...).</p>
         </div>
         <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/tactic/simps.html">simps</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/tactic/slice.html">slice</a>
         </div>
         <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/tactic/solve_by_elim.html">solve_by_elim</a>

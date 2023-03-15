@@ -46,6 +46,9 @@
         <label><input type="checkbox" class="tagfilter" name="arithmetic" value="arithmetic">arithmetic</label>
         <br>
     
+        <label><input type="checkbox" class="tagfilter" name="category-theory" value="category-theory">category theory</label>
+        <br>
+    
         <label><input type="checkbox" class="tagfilter" name="core" value="core">core</label>
         <br>
     
@@ -127,6 +130,8 @@
     <div class="taclink logic environment"><a href="#mk_iff_of_inductive_prop">mk_iff_of_inductive_prop</a></div>
 
     <div class="taclink simplification"><a href="#mk_simp_attribute">mk_simp_attribute</a></div>
+
+    <div class="taclink category-theory"><a href="#reassoc_axiom">reassoc_axiom</a></div>
 
     <div class="taclink renaming environment"><a href="#restate_axiom">restate_axiom</a></div>
 
@@ -1177,6 +1182,52 @@ not available, you should use</p>
     
 </div>
 
+<div class="tactic category-theory">
+    <h2 id="reassoc_axiom"><a href="#reassoc_axiom">reassoc_axiom</a></h2>
+    <p>When declaring a class of categories, the axioms can be reformulated to be more amenable
+to manipulation in right associated expressions:</p>
+<div class="codehilite"><pre><span></span><code><span class="kd">class</span> <span class="n">some_class</span> <span class="o">(</span><span class="n">C</span> <span class="o">:</span> <span class="kt">Type</span><span class="o">)</span> <span class="o">[</span><span class="n">category</span> <span class="n">C</span><span class="o">]</span> <span class="o">:=</span>
+<span class="o">(</span><span class="n">foo</span> <span class="o">:</span> <span class="bp">Π</span> <span class="n">X</span> <span class="o">:</span> <span class="n">C</span><span class="o">,</span> <span class="n">X</span> <span class="bp">⟶</span> <span class="n">X</span><span class="o">)</span>
+<span class="o">(</span><span class="n">bar</span> <span class="o">:</span> <span class="bp">∀</span> <span class="o">{</span><span class="n">X</span> <span class="n">Y</span> <span class="o">:</span> <span class="n">C</span><span class="o">}</span> <span class="o">(</span><span class="n">f</span> <span class="o">:</span> <span class="n">X</span> <span class="bp">⟶</span> <span class="n">Y</span><span class="o">),</span> <span class="n">foo</span> <span class="n">X</span> <span class="bp">≫</span> <span class="n">f</span> <span class="bp">=</span> <span class="n">f</span> <span class="bp">≫</span> <span class="n">foo</span> <span class="n">Y</span><span class="o">)</span>
+
+<span class="n">reassoc_axiom</span> <span class="n">some_class.bar</span>
+</code></pre></div>
+
+<p>The above will produce:</p>
+<div class="codehilite"><pre><span></span><code><span class="kd">lemma</span> <span class="n">some_class.bar_assoc</span> <span class="o">{</span><span class="n">Z</span> <span class="o">:</span> <span class="n">C</span><span class="o">}</span> <span class="o">(</span><span class="n">g</span> <span class="o">:</span> <span class="n">Y</span> <span class="bp">⟶</span> <span class="n">Z</span><span class="o">)</span> <span class="o">:</span>
+  <span class="n">foo</span> <span class="n">X</span> <span class="bp">≫</span> <span class="n">f</span> <span class="bp">≫</span> <span class="n">g</span> <span class="bp">=</span> <span class="n">f</span> <span class="bp">≫</span> <span class="n">foo</span> <span class="n">Y</span> <span class="bp">≫</span> <span class="n">g</span> <span class="o">:=</span> <span class="bp">...</span>
+</code></pre></div>
+
+<p>Here too, the <code>reassoc</code> attribute can be used instead. It works well when combined with
+<code>simp</code>:</p>
+<div class="codehilite"><pre><span></span><code><span class="kn">attribute</span> <span class="o">[</span><span class="n">simp</span><span class="o">,</span> <span class="n">reassoc</span><span class="o">]</span> <span class="n">some_class.bar</span>
+</code></pre></div>
+
+
+    
+      <div class="tags">Tags:
+        <ul>
+            
+                <li>category theory</li> 
+            
+        </ul>
+      </div>
+    
+    
+      <details class="rel_decls"><summary>Related declarations</summary>
+        <ul>
+            
+                <li><a href="https://oxarbitrage.github.io/salsa20-docs/tactic/reassoc_axiom.html#tactic.reassoc_cmd">tactic.reassoc_cmd</a></li>
+            
+        </ul>
+      </details>
+
+      
+      <details class="imports"><summary>Import using</summary><ul><li>import tactic.reassoc_axiom</li>
+<li>import tactic</li></ul></details>
+    
+</div>
+
 <div class="tactic renaming environment">
     <h2 id="restate_axiom"><a href="#restate_axiom">restate_axiom</a></h2>
     <p><code><a href="https://oxarbitrage.github.io/salsa20-docs/tactic/restate_axiom.html#restate_axiom">restate_axiom</a></code> makes a new copy of a structure field, first definitionally simplifying the type.
@@ -2011,6 +2062,101 @@ It does <em>not</em> use the <code>namespace</code> command, so it will typicall
             <a href="https://oxarbitrage.github.io/salsa20-docs/algebra/opposites.html">opposites</a>
         </div>
         </details>
+        <details class="nav_sect" data-path="category_theory" >
+            <summary>category_theory</summary>
+            
+        <details class="nav_sect" data-path="category_theory/adjunction" >
+            <summary>adjunction</summary>
+            
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/adjunction/basic.html">basic</a>
+        </div>
+        </details>
+        <details class="nav_sect" data-path="category_theory/category" >
+            <summary>category</summary>
+            
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/category/basic.html">basic</a>
+        </div>
+        </details>
+        <details class="nav_sect" data-path="category_theory/functor" >
+            <summary>functor</summary>
+            
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/functor/basic.html">basic</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/functor/category.html">category</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/functor/fully_faithful.html">fully_faithful</a>
+        </div>
+        </details>
+        <details class="nav_sect" data-path="category_theory/pi" >
+            <summary>pi</summary>
+            
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/pi/basic.html">basic</a>
+        </div>
+        </details>
+        <details class="nav_sect" data-path="category_theory/products" >
+            <summary>products</summary>
+            
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/products/basic.html">basic</a>
+        </div>
+        </details>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/core.html">core</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/epi_mono.html">epi_mono</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/eq_to_hom.html">eq_to_hom</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/equivalence.html">equivalence</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/essential_image.html">essential_image</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/full_subcategory.html">full_subcategory</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/groupoid.html">groupoid</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/isomorphism.html">isomorphism</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/natural_isomorphism.html">natural_isomorphism</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/natural_transformation.html">natural_transformation</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/opposites.html">opposites</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/types.html">types</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/whiskering.html">whiskering</a>
+        </div>
+        </details>
+        <details class="nav_sect" data-path="combinatorics" >
+            <summary>combinatorics</summary>
+            
+        <details class="nav_sect" data-path="combinatorics/quiver" >
+            <summary>quiver</summary>
+            
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/combinatorics/quiver/basic.html">basic</a>
+        </div>
+        </details>
+        </details>
         <details class="nav_sect" data-path="control" >
             <summary>control</summary>
             
@@ -2492,6 +2638,9 @@ It does <em>not</em> use the <code>namespace</code> command, so it will typicall
             <a href="https://oxarbitrage.github.io/salsa20-docs/data/mllist.html">mllist</a>
         </div>
         <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/data/opposite.html">opposite</a>
+        </div>
+        <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/data/quot.html">quot</a>
         </div>
         <div class="nav_link ">
@@ -2855,6 +3004,9 @@ It does <em>not</em> use the <code>namespace</code> command, so it will typicall
             <a href="https://oxarbitrage.github.io/salsa20-docs/tactic/rcases.html">rcases</a>
         </div>
         <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/tactic/reassoc_axiom.html">reassoc_axiom</a>
+        </div>
+        <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/tactic/rename_var.html">rename_var</a>
         </div>
         <div class="nav_link ">
@@ -2886,6 +3038,9 @@ It does <em>not</em> use the <code>namespace</code> command, so it will typicall
         </div>
         <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/tactic/simps.html">simps</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/tactic/slice.html">slice</a>
         </div>
         <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/tactic/solve_by_elim.html">solve_by_elim</a>

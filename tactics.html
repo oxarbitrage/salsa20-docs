@@ -55,6 +55,9 @@
         <label><input type="checkbox" class="tagfilter" name="case-bashing" value="case-bashing">case bashing</label>
         <br>
     
+        <label><input type="checkbox" class="tagfilter" name="category-theory" value="category-theory">category theory</label>
+        <br>
+    
         <label><input type="checkbox" class="tagfilter" name="classical-logic" value="classical-logic">classical logic</label>
         <br>
     
@@ -185,6 +188,8 @@
     <div class="taclink core induction context-management"><a href="#cases_matching / casesm">cases_matching / casesm</a></div>
 
     <div class="taclink core induction context-management"><a href="#cases_type">cases_type</a></div>
+
+    <div class="taclink category-theory"><a href="#category_theory.reassoc_of">category_theory.reassoc_of</a></div>
 
     <div class="taclink core finishing"><a href="#cc (congruence closure)">cc (congruence closure)</a></div>
 
@@ -407,6 +412,8 @@
     <div class="taclink simplification"><a href="#simpa">simpa</a></div>
 
     <div class="taclink core combinator"><a href="#skip">skip</a></div>
+
+    <div class="taclink category-theory"><a href="#slice">slice</a></div>
 
     <div class="taclink core combinator goal-management"><a href="#solve1">solve1</a></div>
 
@@ -1618,6 +1625,52 @@ It is more efficient because the pattern is compiled once.</p>
 
       
       <details class="imports"><summary>Import using</summary><ul><li>imported by default</li></ul></details>
+    
+</div>
+
+<div class="tactic category-theory">
+    <h2 id="category_theory.reassoc_of"><a href="#category_theory.reassoc_of">category_theory.reassoc_of</a></h2>
+    <p><code>reassoc_of h</code> takes local assumption <code>h</code> and add a <code>≫ f</code> term on the right of
+both sides of the equality. Instead of creating a new assumption from the result, <code>reassoc_of h</code>
+stands for the proof of that reassociated statement. This keeps complicated assumptions that are
+used only once or twice from polluting the local context.</p>
+<p>In the following, assumption <code>h</code> is needed in a reassociated form. Instead of proving it as a new
+goal and adding it as an assumption, we use <code>reassoc_of h</code> as a rewrite rule which works just as
+well.</p>
+<div class="codehilite"><pre><span></span><code><span class="kd">example</span> <span class="o">(</span><span class="n">X</span> <span class="n">Y</span> <span class="n">Z</span> <span class="n">W</span> <span class="o">:</span> <span class="n">C</span><span class="o">)</span> <span class="o">(</span><span class="n">x</span> <span class="o">:</span> <span class="n">X</span> <span class="bp">⟶</span> <span class="n">Y</span><span class="o">)</span> <span class="o">(</span><span class="n">y</span> <span class="o">:</span> <span class="n">Y</span> <span class="bp">⟶</span> <span class="n">Z</span><span class="o">)</span> <span class="o">(</span><span class="n">z</span> <span class="n">z&#39;</span> <span class="o">:</span> <span class="n">Z</span> <span class="bp">⟶</span> <span class="n">W</span><span class="o">)</span> <span class="o">(</span><span class="n">w</span> <span class="o">:</span> <span class="n">X</span> <span class="bp">⟶</span> <span class="n">Z</span><span class="o">)</span>
+  <span class="o">(</span><span class="n">h</span> <span class="o">:</span> <span class="n">x</span> <span class="bp">≫</span> <span class="n">y</span> <span class="bp">=</span> <span class="n">w</span><span class="o">)</span>
+  <span class="o">(</span><span class="n">h&#39;</span> <span class="o">:</span> <span class="n">y</span> <span class="bp">≫</span> <span class="n">z</span> <span class="bp">=</span> <span class="n">y</span> <span class="bp">≫</span> <span class="n">z&#39;</span><span class="o">)</span> <span class="o">:</span>
+  <span class="n">x</span> <span class="bp">≫</span> <span class="n">y</span> <span class="bp">≫</span> <span class="n">z</span> <span class="bp">=</span> <span class="n">w</span> <span class="bp">≫</span> <span class="n">z&#39;</span> <span class="o">:=</span>
+<span class="kd">begin</span>
+  <span class="c1">-- reassoc_of h : ∀ {X&#39; : C} (f : W ⟶ X&#39;), x ≫ y ≫ f = w ≫ f</span>
+  <span class="n">rw</span> <span class="o">[</span><span class="n">h&#39;</span><span class="o">,</span><span class="n">reassoc_of</span> <span class="n">h</span><span class="o">],</span>
+<span class="kd">end</span>
+</code></pre></div>
+
+<p>Although <code>reassoc_of</code> is not a tactic or a meta program, its type is generated
+through meta-programming to make it usable inside normal expressions.</p>
+
+    
+      <div class="tags">Tags:
+        <ul>
+            
+                <li>category theory</li> 
+            
+        </ul>
+      </div>
+    
+    
+      <details class="rel_decls"><summary>Related declarations</summary>
+        <ul>
+            
+                <li><a href="https://oxarbitrage.github.io/salsa20-docs/tactic/reassoc_axiom.html#category_theory.reassoc_of">category_theory.reassoc_of</a></li>
+            
+        </ul>
+      </details>
+
+      
+      <details class="imports"><summary>Import using</summary><ul><li>import tactic.reassoc_axiom</li>
+<li>import tactic</li></ul></details>
     
 </div>
 
@@ -5965,6 +6018,39 @@ the <code>assumption</code> tactic.</p>
     
 </div>
 
+<div class="tactic category-theory">
+    <h2 id="slice"><a href="#slice">slice</a></h2>
+    <p><code>slice_lhs a b { tac }</code> zooms to the left hand side, uses associativity for categorical
+composition as needed, zooms in on the <code>a</code>-th through <code>b</code>-th morphisms, and invokes <code>tac</code>.</p>
+<p><code>slice_rhs a b { tac }</code> zooms to the right hand side, uses associativity for categorical
+composition as needed, zooms in on the <code>a</code>-th through <code>b</code>-th morphisms, and invokes <code>tac</code>.</p>
+
+    
+      <div class="tags">Tags:
+        <ul>
+            
+                <li>category theory</li> 
+            
+        </ul>
+      </div>
+    
+    
+      <details class="rel_decls"><summary>Related declarations</summary>
+        <ul>
+            
+                <li><a href="https://oxarbitrage.github.io/salsa20-docs/tactic/slice.html#tactic.interactive.slice_lhs">tactic.interactive.slice_lhs</a></li>
+            
+                <li><a href="https://oxarbitrage.github.io/salsa20-docs/tactic/slice.html#tactic.interactive.slice_rhs">tactic.interactive.slice_rhs</a></li>
+            
+        </ul>
+      </details>
+
+      
+      <details class="imports"><summary>Import using</summary><ul><li>import tactic.slice</li>
+<li>import tactic</li></ul></details>
+    
+</div>
+
 <div class="tactic core combinator goal-management">
     <h2 id="solve1"><a href="#solve1">solve1</a></h2>
     <p><code>solve1 { t }</code> applies the tactic <code>t</code> to the main goal and fails if it is not solved.</p>
@@ -8089,6 +8175,101 @@ expression <code>R x y</code>.</p>
             <a href="https://oxarbitrage.github.io/salsa20-docs/algebra/opposites.html">opposites</a>
         </div>
         </details>
+        <details class="nav_sect" data-path="category_theory" >
+            <summary>category_theory</summary>
+            
+        <details class="nav_sect" data-path="category_theory/adjunction" >
+            <summary>adjunction</summary>
+            
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/adjunction/basic.html">basic</a>
+        </div>
+        </details>
+        <details class="nav_sect" data-path="category_theory/category" >
+            <summary>category</summary>
+            
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/category/basic.html">basic</a>
+        </div>
+        </details>
+        <details class="nav_sect" data-path="category_theory/functor" >
+            <summary>functor</summary>
+            
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/functor/basic.html">basic</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/functor/category.html">category</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/functor/fully_faithful.html">fully_faithful</a>
+        </div>
+        </details>
+        <details class="nav_sect" data-path="category_theory/pi" >
+            <summary>pi</summary>
+            
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/pi/basic.html">basic</a>
+        </div>
+        </details>
+        <details class="nav_sect" data-path="category_theory/products" >
+            <summary>products</summary>
+            
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/products/basic.html">basic</a>
+        </div>
+        </details>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/core.html">core</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/epi_mono.html">epi_mono</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/eq_to_hom.html">eq_to_hom</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/equivalence.html">equivalence</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/essential_image.html">essential_image</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/full_subcategory.html">full_subcategory</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/groupoid.html">groupoid</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/isomorphism.html">isomorphism</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/natural_isomorphism.html">natural_isomorphism</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/natural_transformation.html">natural_transformation</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/opposites.html">opposites</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/types.html">types</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/whiskering.html">whiskering</a>
+        </div>
+        </details>
+        <details class="nav_sect" data-path="combinatorics" >
+            <summary>combinatorics</summary>
+            
+        <details class="nav_sect" data-path="combinatorics/quiver" >
+            <summary>quiver</summary>
+            
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/combinatorics/quiver/basic.html">basic</a>
+        </div>
+        </details>
+        </details>
         <details class="nav_sect" data-path="control" >
             <summary>control</summary>
             
@@ -8570,6 +8751,9 @@ expression <code>R x y</code>.</p>
             <a href="https://oxarbitrage.github.io/salsa20-docs/data/mllist.html">mllist</a>
         </div>
         <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/data/opposite.html">opposite</a>
+        </div>
+        <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/data/quot.html">quot</a>
         </div>
         <div class="nav_link ">
@@ -8933,6 +9117,9 @@ expression <code>R x y</code>.</p>
             <a href="https://oxarbitrage.github.io/salsa20-docs/tactic/rcases.html">rcases</a>
         </div>
         <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/tactic/reassoc_axiom.html">reassoc_axiom</a>
+        </div>
+        <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/tactic/rename_var.html">rename_var</a>
         </div>
         <div class="nav_link ">
@@ -8964,6 +9151,9 @@ expression <code>R x y</code>.</p>
         </div>
         <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/tactic/simps.html">simps</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/tactic/slice.html">slice</a>
         </div>
         <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/tactic/solve_by_elim.html">solve_by_elim</a>
