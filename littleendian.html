@@ -44,6 +44,12 @@
         <ul>
             <li><a href="https://oxarbitrage.github.io/salsa20-docs/init/default.html">
                 init.default</a></li>
+        
+            <li><a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/category/basic.html">
+                category_theory.category.basic</a></li>
+        
+            <li><a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/core.html">
+                category_theory.core</a></li>
         </ul>
     </details>
     <details>
@@ -62,8 +68,6 @@
     <div class="nav_link"><a class="break_within" href="#littleendian.littleendian"><span class="name">littleendian</span>.<span class="name">littleendian</span></a></div>
 
     <div class="nav_link"><a class="break_within" href="#littleendian.littleendian_inv"><span class="name">littleendian</span>.<span class="name">littleendian_inv</span></a></div>
-
-    <div class="nav_link"><a class="break_within" href="#littleendian.littleendian_is_inv"><span class="name">littleendian</span>.<span class="name">littleendian_is_inv</span></a></div>
 
 </nav>
 
@@ -96,6 +100,7 @@
 <span class="decl_kind">def</span>
 <span class="decl_name"><a class="break_within" href="https://oxarbitrage.github.io/salsa20-docs/littleendian.html#littleendian.littleendian"><span class="name">littleendian</span>.<span class="name">littleendian</span></a></span>
 
+    <span class="impl_arg"><span class="decl_args"><span class="fn">[<a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/category/basic.html#category_theory.category">category_theory.category</a> <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/data/bitvec/core.html#bitvec">bitvec</a> <a href="https://oxarbitrage.github.io/salsa20-docs/params.html#params.word_len">params.word_len</a>)</span>]</span></span></span>
     <span class="decl_args"><span class="fn">(b : <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod" title="prod">vecType</a>)</span></span>&nbsp;<span class="decl_args">:</span>
 <div class="decl_type"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/data/bitvec/core.html#bitvec">bitvec</a> <a href="https://oxarbitrage.github.io/salsa20-docs/params.html#params.word_len">params.word_len</a></span></div>
 </div>
@@ -147,6 +152,7 @@ littleendian(b) = b₀ + (2^8)*b₁ + (2^16)*b₂ + (2^24)*b₃</p>
 <span class="decl_kind">def</span>
 <span class="decl_name"><a class="break_within" href="https://oxarbitrage.github.io/salsa20-docs/littleendian.html#littleendian.littleendian_inv"><span class="name">littleendian</span>.<span class="name">littleendian_inv</span></a></span>
 
+    <span class="impl_arg"><span class="decl_args"><span class="fn">[<a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/category/basic.html#category_theory.category">category_theory.category</a> <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/data/bitvec/core.html#bitvec">bitvec</a> <a href="https://oxarbitrage.github.io/salsa20-docs/params.html#params.word_len">params.word_len</a>)</span>]</span></span></span>
     <span class="decl_args"><span class="fn">(w : <a href="https://oxarbitrage.github.io/salsa20-docs/data/bitvec/core.html#bitvec">bitvec</a> <a href="https://oxarbitrage.github.io/salsa20-docs/params.html#params.word_len">params.word_len</a>)</span></span>&nbsp;<span class="decl_args">:</span>
 <div class="decl_type"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod" title="prod">vecType</a></span></div>
 </div>
@@ -171,51 +177,6 @@ So it maps 𝑤 to w &amp; 0xff, (w &gt;&gt; 8) &amp; 0xff, (w &gt;&gt; 16) &amp
             
         </ul>
     </details>
-
-
-
-
-
-
-
-
-
-</div>
-</div>
-    
-
-    
-        
-        
-<div class="decl" id="littleendian.littleendian_is_inv">
-<div class="axiom">
-
-<div class="gh_link"><a href="">source</a></div>
-
-
-
-<div class="decl_header">
-    
-
-
-<span class="decl_kind">axiom</span>
-<span class="decl_name"><a class="break_within" href="https://oxarbitrage.github.io/salsa20-docs/littleendian.html#littleendian.littleendian_is_inv"><span class="name">littleendian</span>.<span class="name">littleendian_is_inv</span></a></span>
-
-    <span class="decl_args"><span class="fn">(b : <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod" title="prod">vecType</a>)</span></span>&nbsp;<span class="decl_args">:</span>
-<div class="decl_type"><span class="fn"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/littleendian.html#littleendian.littleendian_inv">littleendian.littleendian_inv</a> <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/littleendian.html#littleendian.littleendian">littleendian.littleendian</a> b)</span></span> <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#eq" title="eq">=</a> b</span></div>
-</div>
-
-
-
-
-
-<p>The <code>littleendian</code> function is invertible and its inverse is <code>littleendian_inv</code>.</p>
-<h2 id="todo" class="markdown-heading">TODO: <a class="hover-link" href="#todo">#</a></h2>
-<ul>
-<li>prove.</li>
-</ul>
-
-
 
 
 

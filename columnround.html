@@ -8,11 +8,11 @@
     <title>salsa20 / columnround - salsa20 docs</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="ColumnRound: The `columnround` function, its inverse and the invariance theorem." />
+    <meta name="description" content="Columnround: The `columnround` function and the relation with its inverse." />
     
     <meta property="og:title" content="salsa20 / columnround - salsa20 docs">
     <meta property="og:site_name" content="salsa20 for Lean - API documentation">
-    <meta property="og:description" content="ColumnRound: The `columnround` function, its inverse and the invariance theorem.">
+    <meta property="og:description" content="Columnround: The `columnround` function and the relation with its inverse.">
     <meta property="og:image" content="https://oxarbitrage.github.io/salsa20-docs/meta-og.png">
     <meta name="twitter:card" content="summary">
     <script src="https://oxarbitrage.github.io/salsa20-docs/color_scheme.js"></script>
@@ -45,6 +45,12 @@
             <li><a href="https://oxarbitrage.github.io/salsa20-docs/init/default.html">
                 init.default</a></li>
         
+            <li><a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/category/basic.html">
+                category_theory.category.basic</a></li>
+        
+            <li><a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/core.html">
+                category_theory.core</a></li>
+        
             <li><a href="https://oxarbitrage.github.io/salsa20-docs/rowround.html">
                 rowround</a></li>
         </ul>
@@ -62,45 +68,17 @@
 </div>
 
 
-    <div class="nav_link"><a class="break_within" href="#columnround.carry_diff_columnround_for_any_row_and_value"><span class="name">columnround</span>.<span class="name">carry_diff_columnround_for_any_row_and_value</span></a></div>
-
-    <div class="nav_link"><a class="break_within" href="#columnround.carry_diff_columnround_for_any_row_and_value'"><span class="name">columnround</span>.<span class="name">carry_diff_columnround_for_any_row_and_value&#x27;</span></a></div>
-
-    <div class="nav_link"><a class="break_within" href="#columnround.cat_columnround"><span class="name">columnround</span>.<span class="name">cat_columnround</span></a></div>
-
-    <div class="nav_link"><a class="break_within" href="#columnround.cat_columnround_inv"><span class="name">columnround</span>.<span class="name">cat_columnround_inv</span></a></div>
-
     <div class="nav_link"><a class="break_within" href="#columnround.columnround"><span class="name">columnround</span>.<span class="name">columnround</span></a></div>
-
-    <div class="nav_link"><a class="break_within" href="#columnround.columnround'"><span class="name">columnround</span>.<span class="name">columnround&#x27;</span></a></div>
-
-    <div class="nav_link"><a class="break_within" href="#columnround.columnroundType"><span class="name">columnround</span>.<span class="name">columnroundType</span></a></div>
-
-    <div class="nav_link"><a class="break_within" href="#columnround.columnround_difference_is_carried"><span class="name">columnround</span>.<span class="name">columnround_difference_is_carried</span></a></div>
 
     <div class="nav_link"><a class="break_within" href="#columnround.columnround_inv"><span class="name">columnround</span>.<span class="name">columnround_inv</span></a></div>
 
-    <div class="nav_link"><a class="break_within" href="#columnround.columnround_inv'"><span class="name">columnround</span>.<span class="name">columnround_inv&#x27;</span></a></div>
-
-    <div class="nav_link"><a class="break_within" href="#columnround.columnround_inv_is_inverse_of_rowround"><span class="name">columnround</span>.<span class="name">columnround_inv_is_inverse_of_rowround</span></a></div>
-
     <div class="nav_link"><a class="break_within" href="#columnround.columnround_is_inv"><span class="name">columnround</span>.<span class="name">columnround_is_inv</span></a></div>
 
-    <div class="nav_link"><a class="break_within" href="#columnround.columnround_is_isomorphic"><span class="name">columnround</span>.<span class="name">columnround_is_isomorphic</span></a></div>
+    <div class="nav_link"><a class="break_within" href="#columnround.columnround_salsa20"><span class="name">columnround</span>.<span class="name">columnround_salsa20</span></a></div>
 
-    <div class="nav_link"><a class="break_within" href="#columnround.columnround_is_left_invariant"><span class="name">columnround</span>.<span class="name">columnround_is_left_invariant</span></a></div>
+    <div class="nav_link"><a class="break_within" href="#columnround.columnround_salsa20_inv"><span class="name">columnround</span>.<span class="name">columnround_salsa20_inv</span></a></div>
 
-    <div class="nav_link"><a class="break_within" href="#columnround.diff_carried_columnround"><span class="name">columnround</span>.<span class="name">diff_carried_columnround</span></a></div>
-
-    <div class="nav_link"><a class="break_within" href="#columnround.id_columnround"><span class="name">columnround</span>.<span class="name">id_columnround</span></a></div>
-
-    <div class="nav_link"><a class="break_within" href="#columnround.id_columnround_inv"><span class="name">columnround</span>.<span class="name">id_columnround_inv</span></a></div>
-
-    <div class="nav_link"><a class="break_within" href="#columnround.input"><span class="name">columnround</span>.<span class="name">input</span></a></div>
-
-    <div class="nav_link"><a class="break_within" href="#columnround.isomorphism_left"><span class="name">columnround</span>.<span class="name">isomorphism_left</span></a></div>
-
-    <div class="nav_link"><a class="break_within" href="#columnround.isomorphism_right"><span class="name">columnround</span>.<span class="name">isomorphism_right</span></a></div>
+    <div class="nav_link"><a class="break_within" href="#columnround.columnround_salsa20_is_inv"><span class="name">columnround</span>.<span class="name">columnround_salsa20_is_inv</span></a></div>
 
 </nav>
 
@@ -110,8 +88,8 @@
 
     
         <div class="mod_doc">
-            <h1 id="columnround" class="markdown-heading">ColumnRound <a class="hover-link" href="#columnround">#</a></h1>
-<p>The <code>columnround</code> function, its inverse and the invariance theorem.</p>
+            <h1 id="columnround" class="markdown-heading">Columnround <a class="hover-link" href="#columnround">#</a></h1>
+<p>The <code>columnround</code> function and the relation with its inverse.</p>
 
         </div>
     
@@ -142,6 +120,7 @@
 <span class="decl_kind">def</span>
 <span class="decl_name"><a class="break_within" href="https://oxarbitrage.github.io/salsa20-docs/columnround.html#columnround.columnround"><span class="name">columnround</span>.<span class="name">columnround</span></a></span>
 
+    <span class="impl_arg"><span class="decl_args"><span class="fn">[<a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/category/basic.html#category_theory.category">category_theory.category</a> <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/data/bitvec/core.html#bitvec">bitvec</a> <a href="https://oxarbitrage.github.io/salsa20-docs/params.html#params.word_len">params.word_len</a>)</span>]</span></span></span>
     <span class="decl_args"><span class="fn">(M : <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod" title="prod">matrixType</a>)</span></span>&nbsp;<span class="decl_args">:</span>
 <div class="decl_type"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod" title="prod">matrixType</a></span></div>
 </div>
@@ -178,59 +157,6 @@
     
         
         
-<div class="decl" id="columnround.columnround'">
-<div class="def">
-
-<div class="gh_link"><a href="">source</a></div>
-
-
-    <div class="attributes">@[simp]</div>
-
-
-<div class="decl_header">
-    
-
-
-<span class="decl_kind">def</span>
-<span class="decl_name"><a class="break_within" href="https://oxarbitrage.github.io/salsa20-docs/columnround.html#columnround.columnround'"><span class="name">columnround</span>.<span class="name">columnround&#x27;</span></a></span>
-
-    <span class="decl_args"><span class="fn">(M : <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod" title="prod">matrixType</a>)</span></span>&nbsp;<span class="decl_args">:</span>
-<div class="decl_type"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod" title="prod">matrixType</a></span></div>
-</div>
-
-
-
-
-
-<p>This columnround call will sort all the elements of the input and the output to match salsa20.
--- It should be used in <code>doubleround</code>.</p>
-
-
-
-    <details>
-        <summary>Equations</summary>
-        <ul class="equations">
-            
-                <li class="equation"><span class="fn"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/columnround.html#columnround.columnround'">columnround.columnround'</a> M</span> <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#eq" title="eq">=</a> <span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/utils.html#utils.columnround_output">utils.columnround_output</a> <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/columnround.html#columnround.columnround">columnround.columnround</a> <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/utils.html#utils.columnround_input">utils.columnround_input</a> M))</span></span></span></span></li>
-            
-        </ul>
-    </details>
-
-
-
-
-
-
-
-
-
-</div>
-</div>
-    
-
-    
-        
-        
 <div class="decl" id="columnround.columnround_inv">
 <div class="def">
 
@@ -247,6 +173,7 @@
 <span class="decl_kind">def</span>
 <span class="decl_name"><a class="break_within" href="https://oxarbitrage.github.io/salsa20-docs/columnround.html#columnround.columnround_inv"><span class="name">columnround</span>.<span class="name">columnround_inv</span></a></span>
 
+    <span class="impl_arg"><span class="decl_args"><span class="fn">[<a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/category/basic.html#category_theory.category">category_theory.category</a> <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/data/bitvec/core.html#bitvec">bitvec</a> <a href="https://oxarbitrage.github.io/salsa20-docs/params.html#params.word_len">params.word_len</a>)</span>]</span></span></span>
     <span class="decl_args"><span class="fn">(M : <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod" title="prod">matrixType</a>)</span></span>&nbsp;<span class="decl_args">:</span>
 <div class="decl_type"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod" title="prod">matrixType</a></span></div>
 </div>
@@ -289,8 +216,6 @@
 <div class="gh_link"><a href="">source</a></div>
 
 
-    <div class="attributes">@[simp]</div>
-
 
 <div class="decl_header">
     
@@ -299,15 +224,16 @@
 <span class="decl_kind">theorem</span>
 <span class="decl_name"><a class="break_within" href="https://oxarbitrage.github.io/salsa20-docs/columnround.html#columnround.columnround_is_inv"><span class="name">columnround</span>.<span class="name">columnround_is_inv</span></a></span>
 
-    <span class="decl_args"><span class="fn">(M : <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod" title="prod">matrixType</a>)</span></span>&nbsp;<span class="decl_args">:</span>
-<div class="decl_type"><span class="fn"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/columnround.html#columnround.columnround_inv">columnround.columnround_inv</a> <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/columnround.html#columnround.columnround">columnround.columnround</a> M)</span></span> <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#eq" title="eq">=</a> M</span></div>
+    <span class="impl_arg"><span class="decl_args"><span class="fn">[<a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/category/basic.html#category_theory.category">category_theory.category</a> <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/data/bitvec/core.html#bitvec">bitvec</a> <a href="https://oxarbitrage.github.io/salsa20-docs/params.html#params.word_len">params.word_len</a>)</span>]</span></span></span>
+    <span class="decl_args"><span class="fn">(I : <a href="https://oxarbitrage.github.io/salsa20-docs/columnround.html#columnround.columnround">columnround.columnround</a> <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/isomorphism.html#category_theory.iso" title="category_theory.iso">≅</a> <a href="https://oxarbitrage.github.io/salsa20-docs/columnround.html#columnround.columnround_inv">columnround.columnround_inv</a>)</span></span>&nbsp;<span class="decl_args">:</span>
+<div class="decl_type"><span class="fn"><span class="fn">I.<a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/isomorphism.html#category_theory.iso.hom" title="category_theory.iso.hom">hom</a> <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/category/basic.html#category_theory.category_struct.comp" title="category_theory.category_struct.comp">≫</a> I.<a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/isomorphism.html#category_theory.iso.inv" title="category_theory.iso.inv">inv</a></span> <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#eq" title="eq">=</a> <span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/category/basic.html#category_theory.category_struct.id" title="category_theory.category_struct.id">𝟙</a> <a href="https://oxarbitrage.github.io/salsa20-docs/columnround.html#columnround.columnround">columnround.columnround</a></span></span></div>
 </div>
 
 
 
 
 
-<p>For any <code>columnround</code> output, we can get back to original values using the defined inverse.</p>
+<p>The <code>columnround</code> function is invertible.</p>
 
 
 
@@ -326,7 +252,7 @@
     
         
         
-<div class="decl" id="columnround.columnround_inv'">
+<div class="decl" id="columnround.columnround_salsa20">
 <div class="def">
 
 <div class="gh_link"><a href="">source</a></div>
@@ -340,8 +266,63 @@
 
 
 <span class="decl_kind">def</span>
-<span class="decl_name"><a class="break_within" href="https://oxarbitrage.github.io/salsa20-docs/columnround.html#columnround.columnround_inv'"><span class="name">columnround</span>.<span class="name">columnround_inv&#x27;</span></a></span>
+<span class="decl_name"><a class="break_within" href="https://oxarbitrage.github.io/salsa20-docs/columnround.html#columnround.columnround_salsa20"><span class="name">columnround</span>.<span class="name">columnround_salsa20</span></a></span>
 
+    <span class="impl_arg"><span class="decl_args"><span class="fn">[<a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/category/basic.html#category_theory.category">category_theory.category</a> <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/data/bitvec/core.html#bitvec">bitvec</a> <a href="https://oxarbitrage.github.io/salsa20-docs/params.html#params.word_len">params.word_len</a>)</span>]</span></span></span>
+    <span class="decl_args"><span class="fn">(M : <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod" title="prod">matrixType</a>)</span></span>&nbsp;<span class="decl_args">:</span>
+<div class="decl_type"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod" title="prod">matrixType</a></span></div>
+</div>
+
+
+
+
+
+<p>This columnround call will sort all the elements of the input and the output to match salsa20.
+-- It should be used in <code>doubleround</code>.</p>
+
+
+
+    <details>
+        <summary>Equations</summary>
+        <ul class="equations">
+            
+                <li class="equation"><span class="fn"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/columnround.html#columnround.columnround_salsa20">columnround.columnround_salsa20</a> M</span> <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#eq" title="eq">=</a> <span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/utils.html#utils.columnround_output">utils.columnround_output</a> <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/columnround.html#columnround.columnround">columnround.columnround</a> <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/utils.html#utils.columnround_input">utils.columnround_input</a> M))</span></span></span></span></li>
+            
+        </ul>
+    </details>
+
+
+
+
+
+
+
+
+
+</div>
+</div>
+    
+
+    
+        
+        
+<div class="decl" id="columnround.columnround_salsa20_inv">
+<div class="def">
+
+<div class="gh_link"><a href="">source</a></div>
+
+
+    <div class="attributes">@[simp]</div>
+
+
+<div class="decl_header">
+    
+
+
+<span class="decl_kind">def</span>
+<span class="decl_name"><a class="break_within" href="https://oxarbitrage.github.io/salsa20-docs/columnround.html#columnround.columnround_salsa20_inv"><span class="name">columnround</span>.<span class="name">columnround_salsa20_inv</span></a></span>
+
+    <span class="impl_arg"><span class="decl_args"><span class="fn">[<a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/category/basic.html#category_theory.category">category_theory.category</a> <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/data/bitvec/core.html#bitvec">bitvec</a> <a href="https://oxarbitrage.github.io/salsa20-docs/params.html#params.word_len">params.word_len</a>)</span>]</span></span></span>
     <span class="decl_args"><span class="fn">(M : <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod" title="prod">matrixType</a>)</span></span>&nbsp;<span class="decl_args">:</span>
 <div class="decl_type"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod" title="prod">matrixType</a></span></div>
 </div>
@@ -359,66 +340,7 @@ It should be used in <code>doubleround</code>.</p>
         <summary>Equations</summary>
         <ul class="equations">
             
-                <li class="equation"><span class="fn"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/columnround.html#columnround.columnround_inv'">columnround.columnround_inv'</a> M</span> <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#eq" title="eq">=</a> <span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/utils.html#utils.columnround_output">utils.columnround_output</a> <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/columnround.html#columnround.columnround_inv">columnround.columnround_inv</a> <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/utils.html#utils.columnround_input">utils.columnround_input</a> M))</span></span></span></span></li>
-            
-        </ul>
-    </details>
-
-
-
-
-
-
-
-
-
-</div>
-</div>
-    
-
-    
-        <div class="mod_doc">
-            <h2 id="isomorphism" class="markdown-heading">Isomorphism <a class="hover-link" href="#isomorphism">#</a></h2>
-
-        </div>
-    
-
-    
-        
-        
-<div class="decl" id="columnround.id_columnround">
-<div class="def">
-
-<div class="gh_link"><a href="">source</a></div>
-
-
-    <div class="attributes">@[simp]</div>
-
-
-<div class="decl_header">
-    
-
-
-<span class="decl_kind">def</span>
-<span class="decl_name"><a class="break_within" href="https://oxarbitrage.github.io/salsa20-docs/columnround.html#columnround.id_columnround"><span class="name">columnround</span>.<span class="name">id_columnround</span></a></span>
-
-    <span class="decl_args"><span class="fn">(seq : <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod" title="prod">matrixType</a>)</span></span>&nbsp;<span class="decl_args">:</span>
-<div class="decl_type"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod" title="prod">matrixType</a></span></div>
-</div>
-
-
-
-
-
-<p>The identity of a <code>columnround</code> function given a sequence is the sequence.</p>
-
-
-
-    <details>
-        <summary>Equations</summary>
-        <ul class="equations">
-            
-                <li class="equation"><span class="fn"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/columnround.html#columnround.id_columnround">columnround.id_columnround</a> seq</span> <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#eq" title="eq">=</a> seq</span></li>
+                <li class="equation"><span class="fn"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/columnround.html#columnround.columnround_salsa20_inv">columnround.columnround_salsa20_inv</a> M</span> <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#eq" title="eq">=</a> <span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/utils.html#utils.columnround_output">utils.columnround_output</a> <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/columnround.html#columnround.columnround_inv">columnround.columnround_inv</a> <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/utils.html#utils.columnround_input">utils.columnround_input</a> M))</span></span></span></span></li>
             
         </ul>
     </details>
@@ -438,361 +360,7 @@ It should be used in <code>doubleround</code>.</p>
     
         
         
-<div class="decl" id="columnround.id_columnround_inv">
-<div class="def">
-
-<div class="gh_link"><a href="">source</a></div>
-
-
-    <div class="attributes">@[simp]</div>
-
-
-<div class="decl_header">
-    
-
-
-<span class="decl_kind">def</span>
-<span class="decl_name"><a class="break_within" href="https://oxarbitrage.github.io/salsa20-docs/columnround.html#columnround.id_columnround_inv"><span class="name">columnround</span>.<span class="name">id_columnround_inv</span></a></span>
-
-    <span class="decl_args"><span class="fn">(seq : <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod" title="prod">matrixType</a>)</span></span>&nbsp;<span class="decl_args">:</span>
-<div class="decl_type"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod" title="prod">matrixType</a></span></div>
-</div>
-
-
-
-
-
-<p>The identity of a <code>columnround_inv</code> function given a sequence is the sequence.</p>
-
-
-
-    <details>
-        <summary>Equations</summary>
-        <ul class="equations">
-            
-                <li class="equation"><span class="fn"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/columnround.html#columnround.id_columnround_inv">columnround.id_columnround_inv</a> seq</span> <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#eq" title="eq">=</a> seq</span></li>
-            
-        </ul>
-    </details>
-
-
-
-
-
-
-
-
-
-</div>
-</div>
-    
-
-    
-        
-        
-<div class="decl" id="columnround.isomorphism_left">
-<div class="theorem">
-
-<div class="gh_link"><a href="">source</a></div>
-
-
-    <div class="attributes">@[simp]</div>
-
-
-<div class="decl_header">
-    
-
-
-<span class="decl_kind">theorem</span>
-<span class="decl_name"><a class="break_within" href="https://oxarbitrage.github.io/salsa20-docs/columnround.html#columnround.isomorphism_left"><span class="name">columnround</span>.<span class="name">isomorphism_left</span></a></span>
-
-    <span class="decl_args"><span class="fn">(seq : <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod" title="prod">matrixType</a>)</span></span>&nbsp;<span class="decl_args">:</span>
-<div class="decl_type"><span class="fn"><span class="fn"><span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/columnround.html#columnround.columnround_inv">columnround.columnround_inv</a> <a href="https://oxarbitrage.github.io/salsa20-docs/init/function.html#function.comp" title="function.comp">∘</a> <a href="https://oxarbitrage.github.io/salsa20-docs/columnround.html#columnround.columnround">columnround.columnround</a>)</span> seq</span> <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#eq" title="eq">=</a> <span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/columnround.html#columnround.id_columnround">columnround.id_columnround</a> seq</span></span></div>
-</div>
-
-
-
-
-
-<p>Isomorphism condition 1 : <code>f ∘ g = id_f</code></p>
-
-
-
-
-
-
-
-
-
-
-
-</div>
-</div>
-    
-
-    
-        
-        
-<div class="decl" id="columnround.isomorphism_right">
-<div class="theorem">
-
-<div class="gh_link"><a href="">source</a></div>
-
-
-    <div class="attributes">@[simp]</div>
-
-
-<div class="decl_header">
-    
-
-
-<span class="decl_kind">theorem</span>
-<span class="decl_name"><a class="break_within" href="https://oxarbitrage.github.io/salsa20-docs/columnround.html#columnround.isomorphism_right"><span class="name">columnround</span>.<span class="name">isomorphism_right</span></a></span>
-
-    <span class="decl_args"><span class="fn">(seq : <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod" title="prod">matrixType</a>)</span></span>&nbsp;<span class="decl_args">:</span>
-<div class="decl_type"><span class="fn"><span class="fn"><span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/columnround.html#columnround.columnround">columnround.columnround</a> <a href="https://oxarbitrage.github.io/salsa20-docs/init/function.html#function.comp" title="function.comp">∘</a> <a href="https://oxarbitrage.github.io/salsa20-docs/columnround.html#columnround.columnround_inv">columnround.columnround_inv</a>)</span> seq</span> <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#eq" title="eq">=</a> <span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/columnround.html#columnround.id_columnround_inv">columnround.id_columnround_inv</a> seq</span></span></div>
-</div>
-
-
-
-
-
-<p>Isomorphism condition 2 : <code>g ∘ f = id_g</code></p>
-
-
-
-
-
-
-
-
-
-
-
-</div>
-</div>
-    
-
-    
-        
-        
-<div class="decl" id="columnround.columnround_is_isomorphic">
-<div class="theorem">
-
-<div class="gh_link"><a href="">source</a></div>
-
-
-    <div class="attributes">@[simp]</div>
-
-
-<div class="decl_header">
-    
-
-
-<span class="decl_kind">theorem</span>
-<span class="decl_name"><a class="break_within" href="https://oxarbitrage.github.io/salsa20-docs/columnround.html#columnround.columnround_is_isomorphic"><span class="name">columnround</span>.<span class="name">columnround_is_isomorphic</span></a></span>
-
-    <span class="decl_args"><span class="fn">(seq : <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod" title="prod">matrixType</a>)</span></span>&nbsp;<span class="decl_args">:</span>
-<div class="decl_type"><span class="fn"><span class="fn"><span class="fn"><span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/columnround.html#columnround.columnround_inv">columnround.columnround_inv</a> <a href="https://oxarbitrage.github.io/salsa20-docs/init/function.html#function.comp" title="function.comp">∘</a> <a href="https://oxarbitrage.github.io/salsa20-docs/columnround.html#columnround.columnround">columnround.columnround</a>)</span> seq</span> <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#eq" title="eq">=</a> <span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/columnround.html#columnround.id_columnround">columnround.id_columnround</a> seq</span></span> <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#and" title="and">∧</a> <span class="fn"><span class="fn"><span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/columnround.html#columnround.columnround">columnround.columnround</a> <a href="https://oxarbitrage.github.io/salsa20-docs/init/function.html#function.comp" title="function.comp">∘</a> <a href="https://oxarbitrage.github.io/salsa20-docs/columnround.html#columnround.columnround_inv">columnround.columnround_inv</a>)</span> seq</span> <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#eq" title="eq">=</a> <span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/columnround.html#columnround.id_columnround_inv">columnround.id_columnround_inv</a> seq</span></span></span></div>
-</div>
-
-
-
-
-
-<p>Two categories are isomrphic if <code>f ∘ g = id_f</code> and <code>g ∘ f = id_g</code>.</p>
-
-
-
-
-
-
-
-
-
-
-
-</div>
-</div>
-    
-
-    
-        <div class="mod_doc">
-            <h2 id="category-theory" class="markdown-heading">Category theory <a class="hover-link" href="#category-theory">#</a></h2>
-
-        </div>
-    
-
-    
-        
-        
-<div class="decl" id="columnround.columnroundType">
-<div class="structure">
-
-<div class="gh_link"><a href="">source</a></div>
-
-
-
-<div class="decl_header">
-    
-
-
-<span class="decl_kind">structure</span>
-<span class="decl_name"><a class="break_within" href="https://oxarbitrage.github.io/salsa20-docs/columnround.html#columnround.columnroundType"><span class="name">columnround</span>.<span class="name">columnroundType</span></a></span>
-
-    <span class="decl_args"><span class="fn">(T : Type u_1)</span></span>&nbsp;<span class="decl_args">:</span>
-<div class="decl_type"><span class="fn">Type u_1</span></div>
-</div>
-
-
-    <ul class="structure_fields" id="columnround.columnroundType.mk">
-        
-            
-            <li class="structure_field" id="columnround.columnroundType.columnround1">columnround1 : <span class="fn"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.quarterroundType">quarterround.quarterroundType</a> T</span> <a href="https://oxarbitrage.github.io/salsa20-docs/combinatorics/quiver/basic.html#quiver.hom" title="quiver.hom">⟶</a> <span class="fn">T <a href="https://oxarbitrage.github.io/salsa20-docs/combinatorics/quiver/basic.html#quiver.hom" title="quiver.hom">⟶</a> T</span></span></li>
-        
-            
-            <li class="structure_field" id="columnround.columnroundType.columnround2">columnround2 : <span class="fn"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.quarterroundType">quarterround.quarterroundType</a> T</span> <a href="https://oxarbitrage.github.io/salsa20-docs/combinatorics/quiver/basic.html#quiver.hom" title="quiver.hom">⟶</a> <span class="fn">T <a href="https://oxarbitrage.github.io/salsa20-docs/combinatorics/quiver/basic.html#quiver.hom" title="quiver.hom">⟶</a> T</span></span></li>
-        
-            
-            <li class="structure_field" id="columnround.columnroundType.columnround3">columnround3 : <span class="fn"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.quarterroundType">quarterround.quarterroundType</a> T</span> <a href="https://oxarbitrage.github.io/salsa20-docs/combinatorics/quiver/basic.html#quiver.hom" title="quiver.hom">⟶</a> <span class="fn">T <a href="https://oxarbitrage.github.io/salsa20-docs/combinatorics/quiver/basic.html#quiver.hom" title="quiver.hom">⟶</a> T</span></span></li>
-        
-            
-            <li class="structure_field" id="columnround.columnroundType.columnround4">columnround4 : <span class="fn"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.quarterroundType">quarterround.quarterroundType</a> T</span> <a href="https://oxarbitrage.github.io/salsa20-docs/combinatorics/quiver/basic.html#quiver.hom" title="quiver.hom">⟶</a> <span class="fn">T <a href="https://oxarbitrage.github.io/salsa20-docs/combinatorics/quiver/basic.html#quiver.hom" title="quiver.hom">⟶</a> T</span></span></li>
-        
-    </ul>
-
-
-
-
-<p>A columnround structure is four <code>quarterroundType</code>s.</p>
-
-
-
-
-
-
-
-    <details class="instances-for">
-        
-            <summary>Instances for <code><span class="name">columnround</span>.<span class="name">columnroundType</span></code></summary>
-        
-        <ul>
-            
-                <li>columnround.columnroundType.has_sizeof_inst</li>
-            
-        </ul>
-    </details>
-
-
-
-
-
-</div>
-</div>
-    
-
-    
-        
-        
-<div class="decl" id="columnround.cat_columnround">
-<div class="def">
-
-<div class="gh_link"><a href="">source</a></div>
-
-
-
-<div class="decl_header">
-    
-
-
-<span class="decl_kind">def</span>
-<span class="decl_name"><a class="break_within" href="https://oxarbitrage.github.io/salsa20-docs/columnround.html#columnround.cat_columnround"><span class="name">columnround</span>.<span class="name">cat_columnround</span></a></span>
-
-    <span class="decl_args"><span class="fn">(T : Type u_1)</span></span>&nbsp;<span class="decl_args">:</span>
-<div class="decl_type"><span class="fn">Type u_1</span></div>
-</div>
-
-
-
-
-
-
-
-
-    <details>
-        <summary>Equations</summary>
-        <ul class="equations">
-            
-                <li class="equation"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/columnround.html#columnround.cat_columnround">columnround.cat_columnround</a> <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#eq" title="eq">=</a> <a href="https://oxarbitrage.github.io/salsa20-docs/rowround.html#rowround.rowroundType">rowround.rowroundType</a></span></li>
-            
-        </ul>
-    </details>
-
-
-
-
-
-
-
-
-
-</div>
-</div>
-    
-
-    
-        
-        
-<div class="decl" id="columnround.cat_columnround_inv">
-<div class="def">
-
-<div class="gh_link"><a href="">source</a></div>
-
-
-
-<div class="decl_header">
-    
-
-
-<span class="decl_kind">def</span>
-<span class="decl_name"><a class="break_within" href="https://oxarbitrage.github.io/salsa20-docs/columnround.html#columnround.cat_columnround_inv"><span class="name">columnround</span>.<span class="name">cat_columnround_inv</span></a></span>
-
-    <span class="decl_args"><span class="fn">(T : Type u_1)</span></span>&nbsp;<span class="decl_args">:</span>
-<div class="decl_type"><span class="fn">Type u_1</span></div>
-</div>
-
-
-
-
-
-
-
-
-    <details>
-        <summary>Equations</summary>
-        <ul class="equations">
-            
-                <li class="equation"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/columnround.html#columnround.cat_columnround_inv">columnround.cat_columnround_inv</a> <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#eq" title="eq">=</a> <a href="https://oxarbitrage.github.io/salsa20-docs/rowround.html#rowround.rowroundType">rowround.rowroundType</a></span></li>
-            
-        </ul>
-    </details>
-
-
-
-
-
-
-
-
-
-</div>
-</div>
-    
-
-    
-        
-        
-<div class="decl" id="columnround.columnround_inv_is_inverse_of_rowround">
+<div class="decl" id="columnround.columnround_salsa20_is_inv">
 <div class="theorem">
 
 <div class="gh_link"><a href="">source</a></div>
@@ -804,317 +372,18 @@ It should be used in <code>doubleround</code>.</p>
 
 
 <span class="decl_kind">theorem</span>
-<span class="decl_name"><a class="break_within" href="https://oxarbitrage.github.io/salsa20-docs/columnround.html#columnround.columnround_inv_is_inverse_of_rowround"><span class="name">columnround</span>.<span class="name">columnround_inv_is_inverse_of_rowround</span></a></span>
+<span class="decl_name"><a class="break_within" href="https://oxarbitrage.github.io/salsa20-docs/columnround.html#columnround.columnround_salsa20_is_inv"><span class="name">columnround</span>.<span class="name">columnround_salsa20_is_inv</span></a></span>
 
-    <span class="impl_arg"><span class="decl_args"><span class="fn">{C : Type u}</span></span></span>
-    <span class="decl_args"><span class="fn">(I : <span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/columnround.html#columnround.cat_columnround">columnround.cat_columnround</a> <span class="fn">(C <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod" title="prod">×</a> <span class="fn">C <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod" title="prod">×</a> <span class="fn">C <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod" title="prod">×</a> C)</span></span></span></span> <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/isomorphism.html#category_theory.iso" title="category_theory.iso">≅</a> <span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/columnround.html#columnround.cat_columnround_inv">columnround.cat_columnround_inv</a> <span class="fn">(C <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod" title="prod">×</a> <span class="fn">C <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod" title="prod">×</a> <span class="fn">C <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod" title="prod">×</a> C)</span></span></span></span>)</span></span>&nbsp;<span class="decl_args">:</span>
-<div class="decl_type"><span class="fn"><span class="fn">I.<a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/isomorphism.html#category_theory.iso.hom" title="category_theory.iso.hom">hom</a> <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/category/basic.html#category_theory.category_struct.comp" title="category_theory.category_struct.comp">≫</a> I.<a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/isomorphism.html#category_theory.iso.inv" title="category_theory.iso.inv">inv</a></span> <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#eq" title="eq">=</a> <span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/category/basic.html#category_theory.category_struct.id" title="category_theory.category_struct.id">𝟙</a> <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/columnround.html#columnround.cat_columnround">columnround.cat_columnround</a> <span class="fn">(C <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod" title="prod">×</a> <span class="fn">C <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod" title="prod">×</a> <span class="fn">C <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod" title="prod">×</a> C))</span></span></span></span></span></span></div>
+    <span class="impl_arg"><span class="decl_args"><span class="fn">[<a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/category/basic.html#category_theory.category">category_theory.category</a> <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/data/bitvec/core.html#bitvec">bitvec</a> <a href="https://oxarbitrage.github.io/salsa20-docs/params.html#params.word_len">params.word_len</a>)</span>]</span></span></span>
+    <span class="decl_args"><span class="fn">(I : <a href="https://oxarbitrage.github.io/salsa20-docs/columnround.html#columnround.columnround_salsa20">columnround.columnround_salsa20</a> <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/isomorphism.html#category_theory.iso" title="category_theory.iso">≅</a> <a href="https://oxarbitrage.github.io/salsa20-docs/columnround.html#columnround.columnround_salsa20_inv">columnround.columnround_salsa20_inv</a>)</span></span>&nbsp;<span class="decl_args">:</span>
+<div class="decl_type"><span class="fn"><span class="fn">I.<a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/isomorphism.html#category_theory.iso.hom" title="category_theory.iso.hom">hom</a> <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/category/basic.html#category_theory.category_struct.comp" title="category_theory.category_struct.comp">≫</a> I.<a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/isomorphism.html#category_theory.iso.inv" title="category_theory.iso.inv">inv</a></span> <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#eq" title="eq">=</a> <span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/category/basic.html#category_theory.category_struct.id" title="category_theory.category_struct.id">𝟙</a> <a href="https://oxarbitrage.github.io/salsa20-docs/columnround.html#columnround.columnround_salsa20">columnround.columnround_salsa20</a></span></span></div>
 </div>
 
 
 
 
 
-<p>It is easy to see that <code>cat_columnround⁻¹</code> after <code>cat_columnround</code> produces the original object.</p>
-
-
-
-
-
-
-
-
-
-
-
-</div>
-</div>
-    
-
-    
-        <div class="mod_doc">
-            <h2 id="invariance" class="markdown-heading">Invariance <a class="hover-link" href="#invariance">#</a></h2>
-<p>Left invariance of the columnround function: <a href="https://www.iacr.org/archive/fse2008/50860470/50860470.pdf">https://www.iacr.org/archive/fse2008/50860470/50860470.pdf</a></p>
-<p>Theorem 3 of the paper.</p>
-
-        </div>
-    
-
-    
-        
-        
-<div class="decl" id="columnround.input">
-<div class="def">
-
-<div class="gh_link"><a href="">source</a></div>
-
-
-
-<div class="decl_header">
-    
-
-
-<span class="decl_kind">def</span>
-<span class="decl_name"><a class="break_within" href="https://oxarbitrage.github.io/salsa20-docs/columnround.html#columnround.input"><span class="name">columnround</span>.<span class="name">input</span></a></span>
-
-    <span class="decl_args"><span class="fn">(a b c d : <a href="https://oxarbitrage.github.io/salsa20-docs/data/bitvec/core.html#bitvec">bitvec</a> <a href="https://oxarbitrage.github.io/salsa20-docs/params.html#params.word_len">params.word_len</a>)</span></span>&nbsp;<span class="decl_args">:</span>
-<div class="decl_type"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod" title="prod">matrixType</a></span></div>
-</div>
-
-
-
-
-
-<p>An input of this form should be invariant.</p>
-
-
-
-    <details>
-        <summary>Equations</summary>
-        <ul class="equations">
-            
-                <li class="equation"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/columnround.html#columnround.input">columnround.input</a> a</span> b</span> c</span> d</span> <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#eq" title="eq">=</a> <span class="fn"><span class="fn">((a, <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#has_neg.neg" title="has_neg.neg">-</a>b, c, <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#has_neg.neg" title="has_neg.neg">-</a>d)</span>, <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#has_neg.neg" title="has_neg.neg">-</a>a, b, <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#has_neg.neg" title="has_neg.neg">-</a>c, d)</span>, <span class="fn">(a, <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#has_neg.neg" title="has_neg.neg">-</a>b, c, <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#has_neg.neg" title="has_neg.neg">-</a>d)</span>, <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#has_neg.neg" title="has_neg.neg">-</a>a, b, <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#has_neg.neg" title="has_neg.neg">-</a>c, d)</span></span></li>
-            
-        </ul>
-    </details>
-
-
-
-
-
-
-
-
-
-</div>
-</div>
-    
-
-    
-        
-        
-<div class="decl" id="columnround.columnround_is_left_invariant">
-<div class="theorem">
-
-<div class="gh_link"><a href="">source</a></div>
-
-
-    <div class="attributes">@[simp]</div>
-
-
-<div class="decl_header">
-    
-
-
-<span class="decl_kind">theorem</span>
-<span class="decl_name"><a class="break_within" href="https://oxarbitrage.github.io/salsa20-docs/columnround.html#columnround.columnround_is_left_invariant"><span class="name">columnround</span>.<span class="name">columnround_is_left_invariant</span></a></span>
-
-    <span class="decl_args"><span class="fn">(a b c d : <a href="https://oxarbitrage.github.io/salsa20-docs/data/bitvec/core.html#bitvec">bitvec</a> <a href="https://oxarbitrage.github.io/salsa20-docs/params.html#params.word_len">params.word_len</a>)</span></span>&nbsp;<span class="decl_args">:</span>
-<div class="decl_type"><span class="fn"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/utils.html#utils.columnround_output">utils.columnround_output</a> <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/columnround.html#columnround.columnround">columnround.columnround</a> <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/utils.html#utils.columnround_input">utils.columnround_input</a> <span class="fn"><span class="fn"><span class="fn"><span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/columnround.html#columnround.input">columnround.input</a> a</span> b</span> c</span> d)))</span></span></span></span> <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#eq" title="eq">=</a> <span class="fn"><span class="fn"><span class="fn"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/columnround.html#columnround.input">columnround.input</a> a</span> b</span> c</span> d</span></span></div>
-</div>
-
-
-
-
-
-<p><code>columnround</code> is left invariant.</p>
-
-
-
-
-
-
-
-
-
-
-
-</div>
-</div>
-    
-
-    
-        <div class="mod_doc">
-            <h2 id="known-variance" class="markdown-heading">Known variance <a class="hover-link" href="#known-variance">#</a></h2>
-<p>In this section we want to prove that a crafted input difference is carried when <code>columnround</code>
-function is applied.</p>
-
-        </div>
-    
-
-    
-        <div class="mod_doc">
-            <h3 id="property" class="markdown-heading">Property <a class="hover-link" href="#property">#</a></h3>
-<p>Differences are carried iff the <code>msb</code> of each input is flipped when <code>columnround</code>
-inputs are random and crafted. Also, the <code>rest</code> of the input must be equal for random and crafted inputs.</p>
-<p>We prove that given a random and a crafted matrix for <code>columnround</code> as input, the output of each element has
-the property defined above.</p>
-<p>Given that <code>rowround</code> = <code>columnround</code> by definition proofs are trivial using <code>rowround</code> lemmas.</p>
-
-        </div>
-    
-
-    
-        
-        
-<div class="decl" id="columnround.carry_diff_columnround_for_any_row_and_value">
-<div class="theorem">
-
-<div class="gh_link"><a href="">source</a></div>
-
-
-
-<div class="decl_header">
-    
-
-
-<span class="decl_kind">theorem</span>
-<span class="decl_name"><a class="break_within" href="https://oxarbitrage.github.io/salsa20-docs/columnround.html#columnround.carry_diff_columnround_for_any_row_and_value"><span class="name">columnround</span>.<span class="name">carry_diff_columnround_for_any_row_and_value</span></a></span>
-
-    <span class="decl_args"><span class="fn">(m₀ m₁ m₂ m₃ m₄ m₅ m₆ m₇ m₈ m₉ m₁₀ m₁₁ m₁₂ m₁₃ m₁₄ m₁₅ : <a href="https://oxarbitrage.github.io/salsa20-docs/data/bitvec/core.html#bitvec">bitvec</a> <a href="https://oxarbitrage.github.io/salsa20-docs/params.html#params.word_len">params.word_len</a>)</span></span>
-    <span class="decl_args"><span class="fn">(n : <a href="https://oxarbitrage.github.io/salsa20-docs/init/data/fin/basic.html#fin">fin</a> 16)</span></span>&nbsp;<span class="decl_args">:</span>
-<div class="decl_type"><span class="fn"><span class="fn"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/rowround.html#rowround.diff_carried_prop_n">rowround.diff_carried_prop_n</a> <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/utils.html#utils.matrix_to_list">utils.matrix_to_list</a> <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/columnround.html#columnround.columnround">columnround.columnround</a> <span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/rowround.html#rowround.input_random">rowround.input_random</a> m₀</span> m₁</span> m₂</span> m₃</span> m₄</span> m₅</span> m₆</span> m₇</span> m₈</span> m₉</span> m₁₀</span> m₁₁</span> m₁₂</span> m₁₃</span> m₁₄</span> m₁₅)))</span></span></span></span> <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/utils.html#utils.matrix_to_list">utils.matrix_to_list</a> <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/columnround.html#columnround.columnround">columnround.columnround</a> <span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/rowround.html#rowround.input_crafted">rowround.input_crafted</a> m₀</span> m₁</span> m₂</span> m₃</span> m₄</span> m₅</span> m₆</span> m₇</span> m₈</span> m₉</span> m₁₀</span> m₁₁</span> m₁₂</span> m₁₃</span> m₁₄</span> m₁₅)))</span></span></span></span> <a href="https://oxarbitrage.github.io/salsa20-docs/init/coe.html#coe" title="coe">↑</a>n</span></div>
-</div>
-
-
-
-
-
-<p>Proof that the difference is carried for any row and any value of the input matrices.</p>
-
-
-
-
-
-
-
-
-
-
-
-</div>
-</div>
-    
-
-    
-        
-        
-<div class="decl" id="columnround.carry_diff_columnround_for_any_row_and_value'">
-<div class="theorem">
-
-<div class="gh_link"><a href="">source</a></div>
-
-
-
-<div class="decl_header">
-    
-
-
-<span class="decl_kind">theorem</span>
-<span class="decl_name"><a class="break_within" href="https://oxarbitrage.github.io/salsa20-docs/columnround.html#columnround.carry_diff_columnround_for_any_row_and_value'"><span class="name">columnround</span>.<span class="name">carry_diff_columnround_for_any_row_and_value&#x27;</span></a></span>
-
-    <span class="decl_args"><span class="fn">(m₀ m₁ m₂ m₃ m₄ m₅ m₆ m₇ m₈ m₉ m₁₀ m₁₁ m₁₂ m₁₃ m₁₄ m₁₅ : <a href="https://oxarbitrage.github.io/salsa20-docs/data/bitvec/core.html#bitvec">bitvec</a> <a href="https://oxarbitrage.github.io/salsa20-docs/params.html#params.word_len">params.word_len</a>)</span></span>
-    <span class="decl_args"><span class="fn">(n : <a href="https://oxarbitrage.github.io/salsa20-docs/init/data/fin/basic.html#fin">fin</a> 16)</span></span>&nbsp;<span class="decl_args">:</span>
-<div class="decl_type"><span class="fn"><span class="fn"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/rowround.html#rowround.diff_carried_prop_n">rowround.diff_carried_prop_n</a> <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/utils.html#utils.matrix_to_list">utils.matrix_to_list</a> <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/columnround.html#columnround.columnround'">columnround.columnround'</a> <span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/rowround.html#rowround.input_random">rowround.input_random</a> m₀</span> m₁</span> m₂</span> m₃</span> m₄</span> m₅</span> m₆</span> m₇</span> m₈</span> m₉</span> m₁₀</span> m₁₁</span> m₁₂</span> m₁₃</span> m₁₄</span> m₁₅)))</span></span></span></span> <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/utils.html#utils.matrix_to_list">utils.matrix_to_list</a> <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/columnround.html#columnround.columnround'">columnround.columnround'</a> <span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/rowround.html#rowround.input_crafted">rowround.input_crafted</a> m₀</span> m₁</span> m₂</span> m₃</span> m₄</span> m₅</span> m₆</span> m₇</span> m₈</span> m₉</span> m₁₀</span> m₁₁</span> m₁₂</span> m₁₃</span> m₁₄</span> m₁₅)))</span></span></span></span> <a href="https://oxarbitrage.github.io/salsa20-docs/init/coe.html#coe" title="coe">↑</a>n</span></div>
-</div>
-
-
-
-
-
-<p>This is the same lemma as <code>carry_diff_columnround_for_any_row_and_value</code> but using the sorted salsa20 matrix
-from the <code>columnround&#x27;</code> function.</p>
-
-
-
-
-
-
-
-
-
-
-
-</div>
-</div>
-    
-
-    
-        
-        
-<div class="decl" id="columnround.diff_carried_columnround">
-<div class="def">
-
-<div class="gh_link"><a href="">source</a></div>
-
-
-
-<div class="decl_header">
-    
-
-
-<span class="decl_kind">def</span>
-<span class="decl_name"><a class="break_within" href="https://oxarbitrage.github.io/salsa20-docs/columnround.html#columnround.diff_carried_columnround"><span class="name">columnround</span>.<span class="name">diff_carried_columnround</span></a></span>
-&nbsp;<span class="decl_args">:</span>
-<div class="decl_type"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod" title="prod">matrixType</a> → <span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod" title="prod">matrixType</a> → <span class="fn"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/init/data/fin/basic.html#fin">fin</a> 16</span> → Prop</span></span></span></div>
-</div>
-
-
-
-
-
-<p>Get the difference property of <code>columnround</code> given a position <code>n</code> for a random and crafted inputs.</p>
-
-
-
-    <details>
-        <summary>Equations</summary>
-        <ul class="equations">
-            
-                <li class="equation"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/columnround.html#columnround.diff_carried_columnround">columnround.diff_carried_columnround</a> r</span> c</span> n</span> <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#eq" title="eq">=</a> <span class="fn"><span class="fn"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/rowround.html#rowround.diff_carried_prop_n">rowround.diff_carried_prop_n</a> <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/utils.html#utils.matrix_to_list">utils.matrix_to_list</a> <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/columnround.html#columnround.columnround">columnround.columnround</a> r))</span></span></span> <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/utils.html#utils.matrix_to_list">utils.matrix_to_list</a> <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/columnround.html#columnround.columnround">columnround.columnround</a> c))</span></span></span> <a href="https://oxarbitrage.github.io/salsa20-docs/init/coe.html#coe" title="coe">↑</a>n</span></span></li>
-            
-        </ul>
-    </details>
-
-
-
-
-
-
-
-
-
-</div>
-</div>
-    
-
-    
-        
-        
-<div class="decl" id="columnround.columnround_difference_is_carried">
-<div class="theorem">
-
-<div class="gh_link"><a href="">source</a></div>
-
-
-
-<div class="decl_header">
-    
-
-
-<span class="decl_kind">theorem</span>
-<span class="decl_name"><a class="break_within" href="https://oxarbitrage.github.io/salsa20-docs/columnround.html#columnround.columnround_difference_is_carried"><span class="name">columnround</span>.<span class="name">columnround_difference_is_carried</span></a></span>
-
-    <span class="decl_args"><span class="fn">(m₀ m₁ m₂ m₃ m₄ m₅ m₆ m₇ m₈ m₉ m₁₀ m₁₁ m₁₂ m₁₃ m₁₄ m₁₅ : <a href="https://oxarbitrage.github.io/salsa20-docs/data/bitvec/core.html#bitvec">bitvec</a> <a href="https://oxarbitrage.github.io/salsa20-docs/params.html#params.word_len">params.word_len</a>)</span></span>&nbsp;<span class="decl_args">:</span>
-<div class="decl_type"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/columnround.html#columnround.diff_carried_columnround">columnround.diff_carried_columnround</a> <span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/rowround.html#rowround.input_random">rowround.input_random</a> m₀</span> m₁</span> m₂</span> m₃</span> m₄</span> m₅</span> m₆</span> m₇</span> m₈</span> m₉</span> m₁₀</span> m₁₁</span> m₁₂</span> m₁₃</span> m₁₄</span> m₁₅)</span></span> <span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/rowround.html#rowround.input_crafted">rowround.input_crafted</a> m₀</span> m₁</span> m₂</span> m₃</span> m₄</span> m₅</span> m₆</span> m₇</span> m₈</span> m₉</span> m₁₀</span> m₁₁</span> m₁₂</span> m₁₃</span> m₁₄</span> m₁₅)</span></span> 0</span> <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#and" title="and">∧</a> <span class="fn"><span class="fn"><span class="fn"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/columnround.html#columnround.diff_carried_columnround">columnround.diff_carried_columnround</a> <span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/rowround.html#rowround.input_random">rowround.input_random</a> m₀</span> m₁</span> m₂</span> m₃</span> m₄</span> m₅</span> m₆</span> m₇</span> m₈</span> m₉</span> m₁₀</span> m₁₁</span> m₁₂</span> m₁₃</span> m₁₄</span> m₁₅)</span></span> <span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/rowround.html#rowround.input_crafted">rowround.input_crafted</a> m₀</span> m₁</span> m₂</span> m₃</span> m₄</span> m₅</span> m₆</span> m₇</span> m₈</span> m₉</span> m₁₀</span> m₁₁</span> m₁₂</span> m₁₃</span> m₁₄</span> m₁₅)</span></span> 1</span> <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#and" title="and">∧</a> <span class="fn"><span class="fn"><span class="fn"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/columnround.html#columnround.diff_carried_columnround">columnround.diff_carried_columnround</a> <span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/rowround.html#rowround.input_random">rowround.input_random</a> m₀</span> m₁</span> m₂</span> m₃</span> m₄</span> m₅</span> m₆</span> m₇</span> m₈</span> m₉</span> m₁₀</span> m₁₁</span> m₁₂</span> m₁₃</span> m₁₄</span> m₁₅)</span></span> <span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/rowround.html#rowround.input_crafted">rowround.input_crafted</a> m₀</span> m₁</span> m₂</span> m₃</span> m₄</span> m₅</span> m₆</span> m₇</span> m₈</span> m₉</span> m₁₀</span> m₁₁</span> m₁₂</span> m₁₃</span> m₁₄</span> m₁₅)</span></span> 2</span> <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#and" title="and">∧</a> <span class="fn"><span class="fn"><span class="fn"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/columnround.html#columnround.diff_carried_columnround">columnround.diff_carried_columnround</a> <span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/rowround.html#rowround.input_random">rowround.input_random</a> m₀</span> m₁</span> m₂</span> m₃</span> m₄</span> m₅</span> m₆</span> m₇</span> m₈</span> m₉</span> m₁₀</span> m₁₁</span> m₁₂</span> m₁₃</span> m₁₄</span> m₁₅)</span></span> <span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/rowround.html#rowround.input_crafted">rowround.input_crafted</a> m₀</span> m₁</span> m₂</span> m₃</span> m₄</span> m₅</span> m₆</span> m₇</span> m₈</span> m₉</span> m₁₀</span> m₁₁</span> m₁₂</span> m₁₃</span> m₁₄</span> m₁₅)</span></span> 3</span> <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#and" title="and">∧</a> <span class="fn"><span class="fn"><span class="fn"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/columnround.html#columnround.diff_carried_columnround">columnround.diff_carried_columnround</a> <span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/rowround.html#rowround.input_random">rowround.input_random</a> m₀</span> m₁</span> m₂</span> m₃</span> m₄</span> m₅</span> m₆</span> m₇</span> m₈</span> m₉</span> m₁₀</span> m₁₁</span> m₁₂</span> m₁₃</span> m₁₄</span> m₁₅)</span></span> <span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/rowround.html#rowround.input_crafted">rowround.input_crafted</a> m₀</span> m₁</span> m₂</span> m₃</span> m₄</span> m₅</span> m₆</span> m₇</span> m₈</span> m₉</span> m₁₀</span> m₁₁</span> m₁₂</span> m₁₃</span> m₁₄</span> m₁₅)</span></span> 4</span> <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#and" title="and">∧</a> <span class="fn"><span class="fn"><span class="fn"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/columnround.html#columnround.diff_carried_columnround">columnround.diff_carried_columnround</a> <span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/rowround.html#rowround.input_random">rowround.input_random</a> m₀</span> m₁</span> m₂</span> m₃</span> m₄</span> m₅</span> m₆</span> m₇</span> m₈</span> m₉</span> m₁₀</span> m₁₁</span> m₁₂</span> m₁₃</span> m₁₄</span> m₁₅)</span></span> <span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/rowround.html#rowround.input_crafted">rowround.input_crafted</a> m₀</span> m₁</span> m₂</span> m₃</span> m₄</span> m₅</span> m₆</span> m₇</span> m₈</span> m₉</span> m₁₀</span> m₁₁</span> m₁₂</span> m₁₃</span> m₁₄</span> m₁₅)</span></span> 5</span> <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#and" title="and">∧</a> <span class="fn"><span class="fn"><span class="fn"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/columnround.html#columnround.diff_carried_columnround">columnround.diff_carried_columnround</a> <span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/rowround.html#rowround.input_random">rowround.input_random</a> m₀</span> m₁</span> m₂</span> m₃</span> m₄</span> m₅</span> m₆</span> m₇</span> m₈</span> m₉</span> m₁₀</span> m₁₁</span> m₁₂</span> m₁₃</span> m₁₄</span> m₁₅)</span></span> <span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/rowround.html#rowround.input_crafted">rowround.input_crafted</a> m₀</span> m₁</span> m₂</span> m₃</span> m₄</span> m₅</span> m₆</span> m₇</span> m₈</span> m₉</span> m₁₀</span> m₁₁</span> m₁₂</span> m₁₃</span> m₁₄</span> m₁₅)</span></span> 6</span> <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#and" title="and">∧</a> <span class="fn"><span class="fn"><span class="fn"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/columnround.html#columnround.diff_carried_columnround">columnround.diff_carried_columnround</a> <span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/rowround.html#rowround.input_random">rowround.input_random</a> m₀</span> m₁</span> m₂</span> m₃</span> m₄</span> m₅</span> m₆</span> m₇</span> m₈</span> m₉</span> m₁₀</span> m₁₁</span> m₁₂</span> m₁₃</span> m₁₄</span> m₁₅)</span></span> <span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/rowround.html#rowround.input_crafted">rowround.input_crafted</a> m₀</span> m₁</span> m₂</span> m₃</span> m₄</span> m₅</span> m₆</span> m₇</span> m₈</span> m₉</span> m₁₀</span> m₁₁</span> m₁₂</span> m₁₃</span> m₁₄</span> m₁₅)</span></span> 7</span> <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#and" title="and">∧</a> <span class="fn"><span class="fn"><span class="fn"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/columnround.html#columnround.diff_carried_columnround">columnround.diff_carried_columnround</a> <span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/rowround.html#rowround.input_random">rowround.input_random</a> m₀</span> m₁</span> m₂</span> m₃</span> m₄</span> m₅</span> m₆</span> m₇</span> m₈</span> m₉</span> m₁₀</span> m₁₁</span> m₁₂</span> m₁₃</span> m₁₄</span> m₁₅)</span></span> <span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/rowround.html#rowround.input_crafted">rowround.input_crafted</a> m₀</span> m₁</span> m₂</span> m₃</span> m₄</span> m₅</span> m₆</span> m₇</span> m₈</span> m₉</span> m₁₀</span> m₁₁</span> m₁₂</span> m₁₃</span> m₁₄</span> m₁₅)</span></span> 8</span> <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#and" title="and">∧</a> <span class="fn"><span class="fn"><span class="fn"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/columnround.html#columnround.diff_carried_columnround">columnround.diff_carried_columnround</a> <span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/rowround.html#rowround.input_random">rowround.input_random</a> m₀</span> m₁</span> m₂</span> m₃</span> m₄</span> m₅</span> m₆</span> m₇</span> m₈</span> m₉</span> m₁₀</span> m₁₁</span> m₁₂</span> m₁₃</span> m₁₄</span> m₁₅)</span></span> <span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/rowround.html#rowround.input_crafted">rowround.input_crafted</a> m₀</span> m₁</span> m₂</span> m₃</span> m₄</span> m₅</span> m₆</span> m₇</span> m₈</span> m₉</span> m₁₀</span> m₁₁</span> m₁₂</span> m₁₃</span> m₁₄</span> m₁₅)</span></span> 9</span> <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#and" title="and">∧</a> <span class="fn"><span class="fn"><span class="fn"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/columnround.html#columnround.diff_carried_columnround">columnround.diff_carried_columnround</a> <span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/rowround.html#rowround.input_random">rowround.input_random</a> m₀</span> m₁</span> m₂</span> m₃</span> m₄</span> m₅</span> m₆</span> m₇</span> m₈</span> m₉</span> m₁₀</span> m₁₁</span> m₁₂</span> m₁₃</span> m₁₄</span> m₁₅)</span></span> <span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/rowround.html#rowround.input_crafted">rowround.input_crafted</a> m₀</span> m₁</span> m₂</span> m₃</span> m₄</span> m₅</span> m₆</span> m₇</span> m₈</span> m₉</span> m₁₀</span> m₁₁</span> m₁₂</span> m₁₃</span> m₁₄</span> m₁₅)</span></span> 10</span> <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#and" title="and">∧</a> <span class="fn"><span class="fn"><span class="fn"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/columnround.html#columnround.diff_carried_columnround">columnround.diff_carried_columnround</a> <span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/rowround.html#rowround.input_random">rowround.input_random</a> m₀</span> m₁</span> m₂</span> m₃</span> m₄</span> m₅</span> m₆</span> m₇</span> m₈</span> m₉</span> m₁₀</span> m₁₁</span> m₁₂</span> m₁₃</span> m₁₄</span> m₁₅)</span></span> <span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/rowround.html#rowround.input_crafted">rowround.input_crafted</a> m₀</span> m₁</span> m₂</span> m₃</span> m₄</span> m₅</span> m₆</span> m₇</span> m₈</span> m₉</span> m₁₀</span> m₁₁</span> m₁₂</span> m₁₃</span> m₁₄</span> m₁₅)</span></span> 11</span> <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#and" title="and">∧</a> <span class="fn"><span class="fn"><span class="fn"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/columnround.html#columnround.diff_carried_columnround">columnround.diff_carried_columnround</a> <span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/rowround.html#rowround.input_random">rowround.input_random</a> m₀</span> m₁</span> m₂</span> m₃</span> m₄</span> m₅</span> m₆</span> m₇</span> m₈</span> m₉</span> m₁₀</span> m₁₁</span> m₁₂</span> m₁₃</span> m₁₄</span> m₁₅)</span></span> <span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/rowround.html#rowround.input_crafted">rowround.input_crafted</a> m₀</span> m₁</span> m₂</span> m₃</span> m₄</span> m₅</span> m₆</span> m₇</span> m₈</span> m₉</span> m₁₀</span> m₁₁</span> m₁₂</span> m₁₃</span> m₁₄</span> m₁₅)</span></span> 12</span> <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#and" title="and">∧</a> <span class="fn"><span class="fn"><span class="fn"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/columnround.html#columnround.diff_carried_columnround">columnround.diff_carried_columnround</a> <span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/rowround.html#rowround.input_random">rowround.input_random</a> m₀</span> m₁</span> m₂</span> m₃</span> m₄</span> m₅</span> m₆</span> m₇</span> m₈</span> m₉</span> m₁₀</span> m₁₁</span> m₁₂</span> m₁₃</span> m₁₄</span> m₁₅)</span></span> <span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/rowround.html#rowround.input_crafted">rowround.input_crafted</a> m₀</span> m₁</span> m₂</span> m₃</span> m₄</span> m₅</span> m₆</span> m₇</span> m₈</span> m₉</span> m₁₀</span> m₁₁</span> m₁₂</span> m₁₃</span> m₁₄</span> m₁₅)</span></span> 13</span> <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#and" title="and">∧</a> <span class="fn"><span class="fn"><span class="fn"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/columnround.html#columnround.diff_carried_columnround">columnround.diff_carried_columnround</a> <span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/rowround.html#rowround.input_random">rowround.input_random</a> m₀</span> m₁</span> m₂</span> m₃</span> m₄</span> m₅</span> m₆</span> m₇</span> m₈</span> m₉</span> m₁₀</span> m₁₁</span> m₁₂</span> m₁₃</span> m₁₄</span> m₁₅)</span></span> <span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/rowround.html#rowround.input_crafted">rowround.input_crafted</a> m₀</span> m₁</span> m₂</span> m₃</span> m₄</span> m₅</span> m₆</span> m₇</span> m₈</span> m₉</span> m₁₀</span> m₁₁</span> m₁₂</span> m₁₃</span> m₁₄</span> m₁₅)</span></span> 14</span> <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#and" title="and">∧</a> <span class="fn"><span class="fn"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/columnround.html#columnround.diff_carried_columnround">columnround.diff_carried_columnround</a> <span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/rowround.html#rowround.input_random">rowround.input_random</a> m₀</span> m₁</span> m₂</span> m₃</span> m₄</span> m₅</span> m₆</span> m₇</span> m₈</span> m₉</span> m₁₀</span> m₁₁</span> m₁₂</span> m₁₃</span> m₁₄</span> m₁₅)</span></span> <span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/rowround.html#rowround.input_crafted">rowround.input_crafted</a> m₀</span> m₁</span> m₂</span> m₃</span> m₄</span> m₅</span> m₆</span> m₇</span> m₈</span> m₉</span> m₁₀</span> m₁₁</span> m₁₂</span> m₁₃</span> m₁₄</span> m₁₅)</span></span> 15</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></div>
-</div>
-
-
-
-
-
-<p>Put together all the properties needed to prove that <code>columnround</code> carries the differfence for random and
-crafted inputs.</p>
+<p>The <code>columnround</code> function is invertible.</p>
 
 
 

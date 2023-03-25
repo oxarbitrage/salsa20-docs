@@ -8,11 +8,11 @@
     <title>salsa20 / quarterround - salsa20 docs</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Quarterround: The `quarterround` function and its properties." />
+    <meta name="description" content="Quarterround: The `quarterround` function, its pieces and the relation with the inverses." />
     
     <meta property="og:title" content="salsa20 / quarterround - salsa20 docs">
     <meta property="og:site_name" content="salsa20 for Lean - API documentation">
-    <meta property="og:description" content="Quarterround: The `quarterround` function and its properties.">
+    <meta property="og:description" content="Quarterround: The `quarterround` function, its pieces and the relation with the inverses.">
     <meta property="og:image" content="https://oxarbitrage.github.io/salsa20-docs/meta-og.png">
     <meta name="twitter:card" content="summary">
     <script src="https://oxarbitrage.github.io/salsa20-docs/color_scheme.js"></script>
@@ -53,9 +53,6 @@
         
             <li><a href="https://oxarbitrage.github.io/salsa20-docs/operations.html">
                 operations</a></li>
-        
-            <li><a href="https://oxarbitrage.github.io/salsa20-docs/utils.html">
-                utils</a></li>
         </ul>
     </details>
     <details>
@@ -71,33 +68,7 @@
 </div>
 
 
-    <div class="nav_link"><a class="break_within" href="#quarterround.cat_quarterround"><span class="name">quarterround</span>.<span class="name">cat_quarterround</span></a></div>
-
-    <div class="nav_link"><a class="break_within" href="#quarterround.cat_quarterround_inv"><span class="name">quarterround</span>.<span class="name">cat_quarterround_inv</span></a></div>
-
-    <div class="nav_link"><a class="break_within" href="#quarterround.craft"><span class="name">quarterround</span>.<span class="name">craft</span></a></div>
-
-    <div class="nav_link"><a class="break_within" href="#quarterround.craft_distrib"><span class="name">quarterround</span>.<span class="name">craft_distrib</span></a></div>
-
-    <div class="nav_link"><a class="break_within" href="#quarterround.h_msb"><span class="name">quarterround</span>.<span class="name">h_msb</span></a></div>
-
-    <div class="nav_link"><a class="break_within" href="#quarterround.id_quarterround"><span class="name">quarterround</span>.<span class="name">id_quarterround</span></a></div>
-
-    <div class="nav_link"><a class="break_within" href="#quarterround.id_quarterround_inv"><span class="name">quarterround</span>.<span class="name">id_quarterround_inv</span></a></div>
-
-    <div class="nav_link"><a class="break_within" href="#quarterround.inverse_exists"><span class="name">quarterround</span>.<span class="name">inverse_exists</span></a></div>
-
-    <div class="nav_link"><a class="break_within" href="#quarterround.isomorphism_left"><span class="name">quarterround</span>.<span class="name">isomorphism_left</span></a></div>
-
-    <div class="nav_link"><a class="break_within" href="#quarterround.isomorphism_right"><span class="name">quarterround</span>.<span class="name">isomorphism_right</span></a></div>
-
-    <div class="nav_link"><a class="break_within" href="#quarterround.msb"><span class="name">quarterround</span>.<span class="name">msb</span></a></div>
-
-    <div class="nav_link"><a class="break_within" href="#quarterround.msb_of_one_append"><span class="name">quarterround</span>.<span class="name">msb_of_one_append</span></a></div>
-
     <div class="nav_link"><a class="break_within" href="#quarterround.qr0"><span class="name">quarterround</span>.<span class="name">qr0</span></a></div>
-
-    <div class="nav_link"><a class="break_within" href="#quarterround.qr0_difference_is_carried"><span class="name">quarterround</span>.<span class="name">qr0_difference_is_carried</span></a></div>
 
     <div class="nav_link"><a class="break_within" href="#quarterround.qr0_inv"><span class="name">quarterround</span>.<span class="name">qr0_inv</span></a></div>
 
@@ -105,15 +76,9 @@
 
     <div class="nav_link"><a class="break_within" href="#quarterround.qr0_is_inv"><span class="name">quarterround</span>.<span class="name">qr0_is_inv</span></a></div>
 
-    <div class="nav_link"><a class="break_within" href="#quarterround.qr0_is_left_invariant"><span class="name">quarterround</span>.<span class="name">qr0_is_left_invariant</span></a></div>
-
-    <div class="nav_link"><a class="break_within" href="#quarterround.qr0_is_left_invariant'"><span class="name">quarterround</span>.<span class="name">qr0_is_left_invariant&#x27;</span></a></div>
-
     <div class="nav_link"><a class="break_within" href="#quarterround.qr0_zero"><span class="name">quarterround</span>.<span class="name">qr0_zero</span></a></div>
 
     <div class="nav_link"><a class="break_within" href="#quarterround.qr1"><span class="name">quarterround</span>.<span class="name">qr1</span></a></div>
-
-    <div class="nav_link"><a class="break_within" href="#quarterround.qr1_difference_is_carried"><span class="name">quarterround</span>.<span class="name">qr1_difference_is_carried</span></a></div>
 
     <div class="nav_link"><a class="break_within" href="#quarterround.qr1_inv"><span class="name">quarterround</span>.<span class="name">qr1_inv</span></a></div>
 
@@ -121,15 +86,9 @@
 
     <div class="nav_link"><a class="break_within" href="#quarterround.qr1_is_inv"><span class="name">quarterround</span>.<span class="name">qr1_is_inv</span></a></div>
 
-    <div class="nav_link"><a class="break_within" href="#quarterround.qr1_is_left_invariant"><span class="name">quarterround</span>.<span class="name">qr1_is_left_invariant</span></a></div>
-
-    <div class="nav_link"><a class="break_within" href="#quarterround.qr1_is_left_invariant'"><span class="name">quarterround</span>.<span class="name">qr1_is_left_invariant&#x27;</span></a></div>
-
     <div class="nav_link"><a class="break_within" href="#quarterround.qr1_zero"><span class="name">quarterround</span>.<span class="name">qr1_zero</span></a></div>
 
     <div class="nav_link"><a class="break_within" href="#quarterround.qr2"><span class="name">quarterround</span>.<span class="name">qr2</span></a></div>
-
-    <div class="nav_link"><a class="break_within" href="#quarterround.qr2_difference_is_carried"><span class="name">quarterround</span>.<span class="name">qr2_difference_is_carried</span></a></div>
 
     <div class="nav_link"><a class="break_within" href="#quarterround.qr2_inv"><span class="name">quarterround</span>.<span class="name">qr2_inv</span></a></div>
 
@@ -137,15 +96,9 @@
 
     <div class="nav_link"><a class="break_within" href="#quarterround.qr2_is_inv"><span class="name">quarterround</span>.<span class="name">qr2_is_inv</span></a></div>
 
-    <div class="nav_link"><a class="break_within" href="#quarterround.qr2_is_left_invariant"><span class="name">quarterround</span>.<span class="name">qr2_is_left_invariant</span></a></div>
-
-    <div class="nav_link"><a class="break_within" href="#quarterround.qr2_is_left_invariant'"><span class="name">quarterround</span>.<span class="name">qr2_is_left_invariant&#x27;</span></a></div>
-
     <div class="nav_link"><a class="break_within" href="#quarterround.qr2_zero"><span class="name">quarterround</span>.<span class="name">qr2_zero</span></a></div>
 
     <div class="nav_link"><a class="break_within" href="#quarterround.qr3"><span class="name">quarterround</span>.<span class="name">qr3</span></a></div>
-
-    <div class="nav_link"><a class="break_within" href="#quarterround.qr3_difference_is_carried"><span class="name">quarterround</span>.<span class="name">qr3_difference_is_carried</span></a></div>
 
     <div class="nav_link"><a class="break_within" href="#quarterround.qr3_inv"><span class="name">quarterround</span>.<span class="name">qr3_inv</span></a></div>
 
@@ -153,41 +106,17 @@
 
     <div class="nav_link"><a class="break_within" href="#quarterround.qr3_is_inv"><span class="name">quarterround</span>.<span class="name">qr3_is_inv</span></a></div>
 
-    <div class="nav_link"><a class="break_within" href="#quarterround.qr3_is_left_invariant"><span class="name">quarterround</span>.<span class="name">qr3_is_left_invariant</span></a></div>
-
-    <div class="nav_link"><a class="break_within" href="#quarterround.qr3_is_left_invariant'"><span class="name">quarterround</span>.<span class="name">qr3_is_left_invariant&#x27;</span></a></div>
-
     <div class="nav_link"><a class="break_within" href="#quarterround.qr3_zero"><span class="name">quarterround</span>.<span class="name">qr3_zero</span></a></div>
 
-    <div class="nav_link"><a class="break_within" href="#quarterround.qrX_after_quarterround_difference_is_carried"><span class="name">quarterround</span>.<span class="name">qrX_after_quarterround_difference_is_carried</span></a></div>
-
-    <div class="nav_link"><a class="break_within" href="#quarterround.qrX_crafted"><span class="name">quarterround</span>.<span class="name">qrX_crafted</span></a></div>
-
-    <div class="nav_link"><a class="break_within" href="#quarterround.qrX_difference_is_carried"><span class="name">quarterround</span>.<span class="name">qrX_difference_is_carried</span></a></div>
-
-    <div class="nav_link"><a class="break_within" href="#quarterround.qr_inv_is_inverse_of_qr"><span class="name">quarterround</span>.<span class="name">qr_inv_is_inverse_of_qr</span></a></div>
+    <div class="nav_link"><a class="break_within" href="#quarterround.qr_pieces_are_all_invertible"><span class="name">quarterround</span>.<span class="name">qr_pieces_are_all_invertible</span></a></div>
 
     <div class="nav_link"><a class="break_within" href="#quarterround.quarterround"><span class="name">quarterround</span>.<span class="name">quarterround</span></a></div>
 
-    <div class="nav_link"><a class="break_within" href="#quarterround.quarterroundType"><span class="name">quarterround</span>.<span class="name">quarterroundType</span></a></div>
-
-    <div class="nav_link"><a class="break_within" href="#quarterround.quarterround_difference_is_carried"><span class="name">quarterround</span>.<span class="name">quarterround_difference_is_carried</span></a></div>
-
     <div class="nav_link"><a class="break_within" href="#quarterround.quarterround_inv"><span class="name">quarterround</span>.<span class="name">quarterround_inv</span></a></div>
 
-    <div class="nav_link"><a class="break_within" href="#quarterround.quarterround_is_invertible"><span class="name">quarterround</span>.<span class="name">quarterround_is_invertible</span></a></div>
-
-    <div class="nav_link"><a class="break_within" href="#quarterround.quarterround_is_isomorphic"><span class="name">quarterround</span>.<span class="name">quarterround_is_isomorphic</span></a></div>
-
-    <div class="nav_link"><a class="break_within" href="#quarterround.quarterround_is_left_invariant"><span class="name">quarterround</span>.<span class="name">quarterround_is_left_invariant</span></a></div>
-
-    <div class="nav_link"><a class="break_within" href="#quarterround.quarterround_is_left_invariant'"><span class="name">quarterround</span>.<span class="name">quarterround_is_left_invariant&#x27;</span></a></div>
+    <div class="nav_link"><a class="break_within" href="#quarterround.quarterround_is_inv"><span class="name">quarterround</span>.<span class="name">quarterround_is_inv</span></a></div>
 
     <div class="nav_link"><a class="break_within" href="#quarterround.quarterround_zero"><span class="name">quarterround</span>.<span class="name">quarterround_zero</span></a></div>
-
-    <div class="nav_link"><a class="break_within" href="#quarterround.rest"><span class="name">quarterround</span>.<span class="name">rest</span></a></div>
-
-    <div class="nav_link"><a class="break_within" href="#quarterround.rest_of_one_append"><span class="name">quarterround</span>.<span class="name">rest_of_one_append</span></a></div>
 
 </nav>
 
@@ -198,7 +127,7 @@
     
         <div class="mod_doc">
             <h1 id="quarterround" class="markdown-heading">Quarterround <a class="hover-link" href="#quarterround">#</a></h1>
-<p>The <code>quarterround</code> function and its properties.</p>
+<p>The <code>quarterround</code> function, its pieces and the relation with the inverses.</p>
 
         </div>
     
@@ -227,6 +156,7 @@
 <span class="decl_kind">def</span>
 <span class="decl_name"><a class="break_within" href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.qr1"><span class="name">quarterround</span>.<span class="name">qr1</span></a></span>
 
+    <span class="impl_arg"><span class="decl_args"><span class="fn">[<a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/category/basic.html#category_theory.category">category_theory.category</a> <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/data/bitvec/core.html#bitvec">bitvec</a> <a href="https://oxarbitrage.github.io/salsa20-docs/params.html#params.word_len">params.word_len</a>)</span>]</span></span></span>
     <span class="decl_args"><span class="fn">(a b c d : <a href="https://oxarbitrage.github.io/salsa20-docs/data/bitvec/core.html#bitvec">bitvec</a> <a href="https://oxarbitrage.github.io/salsa20-docs/params.html#params.word_len">params.word_len</a>)</span></span>&nbsp;<span class="decl_args">:</span>
 <div class="decl_type"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/data/bitvec/core.html#bitvec">bitvec</a> <a href="https://oxarbitrage.github.io/salsa20-docs/params.html#params.word_len">params.word_len</a></span></div>
 </div>
@@ -277,6 +207,7 @@
 <span class="decl_kind">def</span>
 <span class="decl_name"><a class="break_within" href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.qr2"><span class="name">quarterround</span>.<span class="name">qr2</span></a></span>
 
+    <span class="impl_arg"><span class="decl_args"><span class="fn">[<a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/category/basic.html#category_theory.category">category_theory.category</a> <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/data/bitvec/core.html#bitvec">bitvec</a> <a href="https://oxarbitrage.github.io/salsa20-docs/params.html#params.word_len">params.word_len</a>)</span>]</span></span></span>
     <span class="decl_args"><span class="fn">(a b c d : <a href="https://oxarbitrage.github.io/salsa20-docs/data/bitvec/core.html#bitvec">bitvec</a> <a href="https://oxarbitrage.github.io/salsa20-docs/params.html#params.word_len">params.word_len</a>)</span></span>&nbsp;<span class="decl_args">:</span>
 <div class="decl_type"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/data/bitvec/core.html#bitvec">bitvec</a> <a href="https://oxarbitrage.github.io/salsa20-docs/params.html#params.word_len">params.word_len</a></span></div>
 </div>
@@ -327,6 +258,7 @@
 <span class="decl_kind">def</span>
 <span class="decl_name"><a class="break_within" href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.qr3"><span class="name">quarterround</span>.<span class="name">qr3</span></a></span>
 
+    <span class="impl_arg"><span class="decl_args"><span class="fn">[<a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/category/basic.html#category_theory.category">category_theory.category</a> <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/data/bitvec/core.html#bitvec">bitvec</a> <a href="https://oxarbitrage.github.io/salsa20-docs/params.html#params.word_len">params.word_len</a>)</span>]</span></span></span>
     <span class="decl_args"><span class="fn">(a b c d : <a href="https://oxarbitrage.github.io/salsa20-docs/data/bitvec/core.html#bitvec">bitvec</a> <a href="https://oxarbitrage.github.io/salsa20-docs/params.html#params.word_len">params.word_len</a>)</span></span>&nbsp;<span class="decl_args">:</span>
 <div class="decl_type"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/data/bitvec/core.html#bitvec">bitvec</a> <a href="https://oxarbitrage.github.io/salsa20-docs/params.html#params.word_len">params.word_len</a></span></div>
 </div>
@@ -377,6 +309,7 @@
 <span class="decl_kind">def</span>
 <span class="decl_name"><a class="break_within" href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.qr0"><span class="name">quarterround</span>.<span class="name">qr0</span></a></span>
 
+    <span class="impl_arg"><span class="decl_args"><span class="fn">[<a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/category/basic.html#category_theory.category">category_theory.category</a> <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/data/bitvec/core.html#bitvec">bitvec</a> <a href="https://oxarbitrage.github.io/salsa20-docs/params.html#params.word_len">params.word_len</a>)</span>]</span></span></span>
     <span class="decl_args"><span class="fn">(a b c d : <a href="https://oxarbitrage.github.io/salsa20-docs/data/bitvec/core.html#bitvec">bitvec</a> <a href="https://oxarbitrage.github.io/salsa20-docs/params.html#params.word_len">params.word_len</a>)</span></span>&nbsp;<span class="decl_args">:</span>
 <div class="decl_type"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/data/bitvec/core.html#bitvec">bitvec</a> <a href="https://oxarbitrage.github.io/salsa20-docs/params.html#params.word_len">params.word_len</a></span></div>
 </div>
@@ -429,6 +362,7 @@
 <span class="decl_kind">def</span>
 <span class="decl_name"><a class="break_within" href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.quarterround"><span class="name">quarterround</span>.<span class="name">quarterround</span></a></span>
 
+    <span class="impl_arg"><span class="decl_args"><span class="fn">[<a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/category/basic.html#category_theory.category">category_theory.category</a> <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/data/bitvec/core.html#bitvec">bitvec</a> <a href="https://oxarbitrage.github.io/salsa20-docs/params.html#params.word_len">params.word_len</a>)</span>]</span></span></span>
     <span class="decl_args"><span class="fn">(seq : <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod" title="prod">vecType</a>)</span></span>&nbsp;<span class="decl_args">:</span>
 <div class="decl_type"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod" title="prod">vecType</a></span></div>
 </div>
@@ -437,8 +371,8 @@
 
 
 
-<p>Given a sequence of 4 numbers <code>seq</code>, use the four equations above to get the quarterround
-output, which is a 4 numbers sequence too.</p>
+<p>Given a sequence of 4 numbers <code>seq</code>, use the four equations (<code>qr0</code>, <code>qr1</code>, <code>qr2</code> and <code>qr3</code>) to get the
+full quarterround output, which is a transformed 4 numbers sequence too.</p>
 
 
 
@@ -488,7 +422,8 @@ output, which is a 4 numbers sequence too.</p>
 
 <span class="decl_kind">theorem</span>
 <span class="decl_name"><a class="break_within" href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.qr0_zero"><span class="name">quarterround</span>.<span class="name">qr0_zero</span></a></span>
-&nbsp;<span class="decl_args">:</span>
+
+    <span class="impl_arg"><span class="decl_args"><span class="fn">[<a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/category/basic.html#category_theory.category">category_theory.category</a> <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/data/bitvec/core.html#bitvec">bitvec</a> <a href="https://oxarbitrage.github.io/salsa20-docs/params.html#params.word_len">params.word_len</a>)</span>]</span></span></span>&nbsp;<span class="decl_args">:</span>
 <div class="decl_type"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.qr0">quarterround.qr0</a> 0</span> 0</span> 0</span> 0</span> <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#eq" title="eq">=</a> 0</span></div>
 </div>
 
@@ -530,7 +465,8 @@ output, which is a 4 numbers sequence too.</p>
 
 <span class="decl_kind">theorem</span>
 <span class="decl_name"><a class="break_within" href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.qr1_zero"><span class="name">quarterround</span>.<span class="name">qr1_zero</span></a></span>
-&nbsp;<span class="decl_args">:</span>
+
+    <span class="impl_arg"><span class="decl_args"><span class="fn">[<a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/category/basic.html#category_theory.category">category_theory.category</a> <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/data/bitvec/core.html#bitvec">bitvec</a> <a href="https://oxarbitrage.github.io/salsa20-docs/params.html#params.word_len">params.word_len</a>)</span>]</span></span></span>&nbsp;<span class="decl_args">:</span>
 <div class="decl_type"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.qr1">quarterround.qr1</a> 0</span> 0</span> 0</span> 0</span> <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#eq" title="eq">=</a> 0</span></div>
 </div>
 
@@ -572,7 +508,8 @@ output, which is a 4 numbers sequence too.</p>
 
 <span class="decl_kind">theorem</span>
 <span class="decl_name"><a class="break_within" href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.qr2_zero"><span class="name">quarterround</span>.<span class="name">qr2_zero</span></a></span>
-&nbsp;<span class="decl_args">:</span>
+
+    <span class="impl_arg"><span class="decl_args"><span class="fn">[<a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/category/basic.html#category_theory.category">category_theory.category</a> <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/data/bitvec/core.html#bitvec">bitvec</a> <a href="https://oxarbitrage.github.io/salsa20-docs/params.html#params.word_len">params.word_len</a>)</span>]</span></span></span>&nbsp;<span class="decl_args">:</span>
 <div class="decl_type"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.qr2">quarterround.qr2</a> 0</span> 0</span> 0</span> 0</span> <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#eq" title="eq">=</a> 0</span></div>
 </div>
 
@@ -614,7 +551,8 @@ output, which is a 4 numbers sequence too.</p>
 
 <span class="decl_kind">theorem</span>
 <span class="decl_name"><a class="break_within" href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.qr3_zero"><span class="name">quarterround</span>.<span class="name">qr3_zero</span></a></span>
-&nbsp;<span class="decl_args">:</span>
+
+    <span class="impl_arg"><span class="decl_args"><span class="fn">[<a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/category/basic.html#category_theory.category">category_theory.category</a> <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/data/bitvec/core.html#bitvec">bitvec</a> <a href="https://oxarbitrage.github.io/salsa20-docs/params.html#params.word_len">params.word_len</a>)</span>]</span></span></span>&nbsp;<span class="decl_args">:</span>
 <div class="decl_type"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.qr3">quarterround.qr3</a> 0</span> 0</span> 0</span> 0</span> <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#eq" title="eq">=</a> 0</span></div>
 </div>
 
@@ -656,7 +594,8 @@ output, which is a 4 numbers sequence too.</p>
 
 <span class="decl_kind">theorem</span>
 <span class="decl_name"><a class="break_within" href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.quarterround_zero"><span class="name">quarterround</span>.<span class="name">quarterround_zero</span></a></span>
-&nbsp;<span class="decl_args">:</span>
+
+    <span class="impl_arg"><span class="decl_args"><span class="fn">[<a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/category/basic.html#category_theory.category">category_theory.category</a> <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/data/bitvec/core.html#bitvec">bitvec</a> <a href="https://oxarbitrage.github.io/salsa20-docs/params.html#params.word_len">params.word_len</a>)</span>]</span></span></span>&nbsp;<span class="decl_args">:</span>
 <div class="decl_type"><span class="fn"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.quarterround">quarterround.quarterround</a> <span class="fn">(0, 0, 0, 0)</span></span> <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#eq" title="eq">=</a> <span class="fn">(0, 0, 0, 0)</span></span></div>
 </div>
 
@@ -704,6 +643,7 @@ output, which is a 4 numbers sequence too.</p>
 <span class="decl_kind">def</span>
 <span class="decl_name"><a class="break_within" href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.qr0_inv"><span class="name">quarterround</span>.<span class="name">qr0_inv</span></a></span>
 
+    <span class="impl_arg"><span class="decl_args"><span class="fn">[<a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/category/basic.html#category_theory.category">category_theory.category</a> <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/data/bitvec/core.html#bitvec">bitvec</a> <a href="https://oxarbitrage.github.io/salsa20-docs/params.html#params.word_len">params.word_len</a>)</span>]</span></span></span>
     <span class="decl_args"><span class="fn">(a' b' c' d' : <a href="https://oxarbitrage.github.io/salsa20-docs/data/bitvec/core.html#bitvec">bitvec</a> <a href="https://oxarbitrage.github.io/salsa20-docs/params.html#params.word_len">params.word_len</a>)</span></span>&nbsp;<span class="decl_args">:</span>
 <div class="decl_type"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/data/bitvec/core.html#bitvec">bitvec</a> <a href="https://oxarbitrage.github.io/salsa20-docs/params.html#params.word_len">params.word_len</a></span></div>
 </div>
@@ -754,6 +694,7 @@ output, which is a 4 numbers sequence too.</p>
 <span class="decl_kind">def</span>
 <span class="decl_name"><a class="break_within" href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.qr3_inv"><span class="name">quarterround</span>.<span class="name">qr3_inv</span></a></span>
 
+    <span class="impl_arg"><span class="decl_args"><span class="fn">[<a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/category/basic.html#category_theory.category">category_theory.category</a> <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/data/bitvec/core.html#bitvec">bitvec</a> <a href="https://oxarbitrage.github.io/salsa20-docs/params.html#params.word_len">params.word_len</a>)</span>]</span></span></span>
     <span class="decl_args"><span class="fn">(a' b' c' d' : <a href="https://oxarbitrage.github.io/salsa20-docs/data/bitvec/core.html#bitvec">bitvec</a> <a href="https://oxarbitrage.github.io/salsa20-docs/params.html#params.word_len">params.word_len</a>)</span></span>&nbsp;<span class="decl_args">:</span>
 <div class="decl_type"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/data/bitvec/core.html#bitvec">bitvec</a> <a href="https://oxarbitrage.github.io/salsa20-docs/params.html#params.word_len">params.word_len</a></span></div>
 </div>
@@ -804,6 +745,7 @@ output, which is a 4 numbers sequence too.</p>
 <span class="decl_kind">def</span>
 <span class="decl_name"><a class="break_within" href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.qr2_inv"><span class="name">quarterround</span>.<span class="name">qr2_inv</span></a></span>
 
+    <span class="impl_arg"><span class="decl_args"><span class="fn">[<a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/category/basic.html#category_theory.category">category_theory.category</a> <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/data/bitvec/core.html#bitvec">bitvec</a> <a href="https://oxarbitrage.github.io/salsa20-docs/params.html#params.word_len">params.word_len</a>)</span>]</span></span></span>
     <span class="decl_args"><span class="fn">(a' b' c' d' : <a href="https://oxarbitrage.github.io/salsa20-docs/data/bitvec/core.html#bitvec">bitvec</a> <a href="https://oxarbitrage.github.io/salsa20-docs/params.html#params.word_len">params.word_len</a>)</span></span>&nbsp;<span class="decl_args">:</span>
 <div class="decl_type"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/data/bitvec/core.html#bitvec">bitvec</a> <a href="https://oxarbitrage.github.io/salsa20-docs/params.html#params.word_len">params.word_len</a></span></div>
 </div>
@@ -854,6 +796,7 @@ output, which is a 4 numbers sequence too.</p>
 <span class="decl_kind">def</span>
 <span class="decl_name"><a class="break_within" href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.qr1_inv"><span class="name">quarterround</span>.<span class="name">qr1_inv</span></a></span>
 
+    <span class="impl_arg"><span class="decl_args"><span class="fn">[<a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/category/basic.html#category_theory.category">category_theory.category</a> <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/data/bitvec/core.html#bitvec">bitvec</a> <a href="https://oxarbitrage.github.io/salsa20-docs/params.html#params.word_len">params.word_len</a>)</span>]</span></span></span>
     <span class="decl_args"><span class="fn">(a' b' c' d' : <a href="https://oxarbitrage.github.io/salsa20-docs/data/bitvec/core.html#bitvec">bitvec</a> <a href="https://oxarbitrage.github.io/salsa20-docs/params.html#params.word_len">params.word_len</a>)</span></span>&nbsp;<span class="decl_args">:</span>
 <div class="decl_type"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/data/bitvec/core.html#bitvec">bitvec</a> <a href="https://oxarbitrage.github.io/salsa20-docs/params.html#params.word_len">params.word_len</a></span></div>
 </div>
@@ -906,6 +849,7 @@ output, which is a 4 numbers sequence too.</p>
 <span class="decl_kind">def</span>
 <span class="decl_name"><a class="break_within" href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.quarterround_inv"><span class="name">quarterround</span>.<span class="name">quarterround_inv</span></a></span>
 
+    <span class="impl_arg"><span class="decl_args"><span class="fn">[<a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/category/basic.html#category_theory.category">category_theory.category</a> <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/data/bitvec/core.html#bitvec">bitvec</a> <a href="https://oxarbitrage.github.io/salsa20-docs/params.html#params.word_len">params.word_len</a>)</span>]</span></span></span>
     <span class="decl_args"><span class="fn">(seq : <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod" title="prod">vecType</a>)</span></span>&nbsp;<span class="decl_args">:</span>
 <div class="decl_type"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod" title="prod">vecType</a></span></div>
 </div>
@@ -914,7 +858,7 @@ output, which is a 4 numbers sequence too.</p>
 
 
 
-<p>Puts the 4 elements that forms a quarterround inverse all together.</p>
+<p>Put the 4 elements that forms a quarterround inverse all together.</p>
 
 
 
@@ -949,13 +893,11 @@ output, which is a 4 numbers sequence too.</p>
     
         
         
-<div class="decl" id="quarterround.quarterround_is_invertible">
+<div class="decl" id="quarterround.quarterround_is_inv">
 <div class="theorem">
 
 <div class="gh_link"><a href="">source</a></div>
 
-
-    <div class="attributes">@[simp]</div>
 
 
 <div class="decl_header">
@@ -963,60 +905,18 @@ output, which is a 4 numbers sequence too.</p>
 
 
 <span class="decl_kind">theorem</span>
-<span class="decl_name"><a class="break_within" href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.quarterround_is_invertible"><span class="name">quarterround</span>.<span class="name">quarterround_is_invertible</span></a></span>
+<span class="decl_name"><a class="break_within" href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.quarterround_is_inv"><span class="name">quarterround</span>.<span class="name">quarterround_is_inv</span></a></span>
 
-    <span class="decl_args"><span class="fn">(a b c d : <a href="https://oxarbitrage.github.io/salsa20-docs/data/bitvec/core.html#bitvec">bitvec</a> <a href="https://oxarbitrage.github.io/salsa20-docs/params.html#params.word_len">params.word_len</a>)</span></span>&nbsp;<span class="decl_args">:</span>
-<div class="decl_type"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.qr0_inv">quarterround.qr0_inv</a> <span class="fn"><span class="fn"><span class="fn"><span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.qr0">quarterround.qr0</a> a</span> b</span> c</span> d)</span></span> <span class="fn"><span class="fn"><span class="fn"><span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.qr1">quarterround.qr1</a> a</span> b</span> c</span> d)</span></span> <span class="fn"><span class="fn"><span class="fn"><span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.qr2">quarterround.qr2</a> a</span> b</span> c</span> d)</span></span> <span class="fn"><span class="fn"><span class="fn"><span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.qr3">quarterround.qr3</a> a</span> b</span> c</span> d)</span></span> <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#eq" title="eq">=</a> a</span> <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#and" title="and">∧</a> <span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.qr3_inv">quarterround.qr3_inv</a> <span class="fn"><span class="fn"><span class="fn"><span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.qr0">quarterround.qr0</a> a</span> b</span> c</span> d)</span></span> <span class="fn"><span class="fn"><span class="fn"><span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.qr1">quarterround.qr1</a> a</span> b</span> c</span> d)</span></span> <span class="fn"><span class="fn"><span class="fn"><span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.qr2">quarterround.qr2</a> a</span> b</span> c</span> d)</span></span> <span class="fn"><span class="fn"><span class="fn"><span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.qr3">quarterround.qr3</a> a</span> b</span> c</span> d)</span></span> <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#eq" title="eq">=</a> d</span> <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#and" title="and">∧</a> <span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.qr2_inv">quarterround.qr2_inv</a> <span class="fn"><span class="fn"><span class="fn"><span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.qr0">quarterround.qr0</a> a</span> b</span> c</span> d)</span></span> <span class="fn"><span class="fn"><span class="fn"><span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.qr1">quarterround.qr1</a> a</span> b</span> c</span> d)</span></span> <span class="fn"><span class="fn"><span class="fn"><span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.qr2">quarterround.qr2</a> a</span> b</span> c</span> d)</span></span> <span class="fn"><span class="fn"><span class="fn"><span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.qr3">quarterround.qr3</a> a</span> b</span> c</span> d)</span></span> <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#eq" title="eq">=</a> c</span> <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#and" title="and">∧</a> <span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.qr1_inv">quarterround.qr1_inv</a> <span class="fn"><span class="fn"><span class="fn"><span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.qr0">quarterround.qr0</a> a</span> b</span> c</span> d)</span></span> <span class="fn"><span class="fn"><span class="fn"><span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.qr1">quarterround.qr1</a> a</span> b</span> c</span> d)</span></span> <span class="fn"><span class="fn"><span class="fn"><span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.qr2">quarterround.qr2</a> a</span> b</span> c</span> d)</span></span> <span class="fn"><span class="fn"><span class="fn"><span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.qr3">quarterround.qr3</a> a</span> b</span> c</span> d)</span></span> <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#eq" title="eq">=</a> b</span></span></span></span></div>
+    <span class="impl_arg"><span class="decl_args"><span class="fn">[<a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/category/basic.html#category_theory.category">category_theory.category</a> <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/data/bitvec/core.html#bitvec">bitvec</a> <a href="https://oxarbitrage.github.io/salsa20-docs/params.html#params.word_len">params.word_len</a>)</span>]</span></span></span>
+    <span class="decl_args"><span class="fn">(I : <a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.quarterround">quarterround.quarterround</a> <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/isomorphism.html#category_theory.iso" title="category_theory.iso">≅</a> <a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.quarterround_inv">quarterround.quarterround_inv</a>)</span></span>&nbsp;<span class="decl_args">:</span>
+<div class="decl_type"><span class="fn"><span class="fn">I.<a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/isomorphism.html#category_theory.iso.hom" title="category_theory.iso.hom">hom</a> <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/category/basic.html#category_theory.category_struct.comp" title="category_theory.category_struct.comp">≫</a> I.<a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/isomorphism.html#category_theory.iso.inv" title="category_theory.iso.inv">inv</a></span> <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#eq" title="eq">=</a> <span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/category/basic.html#category_theory.category_struct.id" title="category_theory.category_struct.id">𝟙</a> <a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.quarterround">quarterround.quarterround</a></span></span></div>
 </div>
 
 
 
 
 
-<p>The quarterround operation is fully invertible.</p>
-
-
-
-
-
-
-
-
-
-
-
-</div>
-</div>
-    
-
-    
-        
-        
-<div class="decl" id="quarterround.inverse_exists">
-<div class="theorem">
-
-<div class="gh_link"><a href="">source</a></div>
-
-
-    <div class="attributes">@[simp]</div>
-
-
-<div class="decl_header">
-    
-
-
-<span class="decl_kind">theorem</span>
-<span class="decl_name"><a class="break_within" href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.inverse_exists"><span class="name">quarterround</span>.<span class="name">inverse_exists</span></a></span>
-
-    <span class="decl_args"><span class="fn">(a b c d : <a href="https://oxarbitrage.github.io/salsa20-docs/data/bitvec/core.html#bitvec">bitvec</a> <a href="https://oxarbitrage.github.io/salsa20-docs/params.html#params.word_len">params.word_len</a>)</span></span>&nbsp;<span class="decl_args">:</span>
-<div class="decl_type"><span class="fn">∃ (a' b' c' d' : <span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/data/bitvec/core.html#bitvec">bitvec</a> <a href="https://oxarbitrage.github.io/salsa20-docs/params.html#params.word_len">params.word_len</a>)</span>, <span class="fn"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.quarterround_inv">quarterround.quarterround_inv</a> <span class="fn">(a', b', c', d')</span></span> <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#eq" title="eq">=</a> <span class="fn">(a, b, c, d)</span></span></span></div>
-</div>
-
-
-
-
-
-<p>Inverse of quarterround exists.</p>
+<p>The <code>quarterround</code> operation is fully invertible.</p>
 
 
 
@@ -1048,8 +948,6 @@ output, which is a 4 numbers sequence too.</p>
 <div class="gh_link"><a href="">source</a></div>
 
 
-    <div class="attributes">@[simp]</div>
-
 
 <div class="decl_header">
     
@@ -1058,15 +956,16 @@ output, which is a 4 numbers sequence too.</p>
 <span class="decl_kind">theorem</span>
 <span class="decl_name"><a class="break_within" href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.qr0_is_inv"><span class="name">quarterround</span>.<span class="name">qr0_is_inv</span></a></span>
 
-    <span class="decl_args"><span class="fn">(a b c d : <a href="https://oxarbitrage.github.io/salsa20-docs/data/bitvec/core.html#bitvec">bitvec</a> <a href="https://oxarbitrage.github.io/salsa20-docs/params.html#params.word_len">params.word_len</a>)</span></span>&nbsp;<span class="decl_args">:</span>
-<div class="decl_type"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.qr0_inv">quarterround.qr0_inv</a> <span class="fn"><span class="fn"><span class="fn"><span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.qr0">quarterround.qr0</a> a</span> b</span> c</span> d)</span></span> <span class="fn"><span class="fn"><span class="fn"><span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.qr1">quarterround.qr1</a> a</span> b</span> c</span> d)</span></span> <span class="fn"><span class="fn"><span class="fn"><span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.qr2">quarterround.qr2</a> a</span> b</span> c</span> d)</span></span> <span class="fn"><span class="fn"><span class="fn"><span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.qr3">quarterround.qr3</a> a</span> b</span> c</span> d)</span></span> <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#eq" title="eq">=</a> a</span></div>
+    <span class="impl_arg"><span class="decl_args"><span class="fn">[<a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/category/basic.html#category_theory.category">category_theory.category</a> <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/data/bitvec/core.html#bitvec">bitvec</a> <a href="https://oxarbitrage.github.io/salsa20-docs/params.html#params.word_len">params.word_len</a>)</span>]</span></span></span>
+    <span class="decl_args"><span class="fn">(I : <a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.qr0">quarterround.qr0</a> <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/isomorphism.html#category_theory.iso" title="category_theory.iso">≅</a> <a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.qr0_inv">quarterround.qr0_inv</a>)</span></span>&nbsp;<span class="decl_args">:</span>
+<div class="decl_type"><span class="fn"><span class="fn">I.<a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/isomorphism.html#category_theory.iso.hom" title="category_theory.iso.hom">hom</a> <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/category/basic.html#category_theory.category_struct.comp" title="category_theory.category_struct.comp">≫</a> I.<a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/isomorphism.html#category_theory.iso.inv" title="category_theory.iso.inv">inv</a></span> <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#eq" title="eq">=</a> <span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/category/basic.html#category_theory.category_struct.id" title="category_theory.category_struct.id">𝟙</a> <a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.qr0">quarterround.qr0</a></span></span></div>
 </div>
 
 
 
 
 
-<p>Inverse of <code>qr0</code> given the sequence <code>a, b, c, d</code> is <code>a</code>.</p>
+<p><code>qr0⁻¹</code> after <code>qr0</code> is <code>𝟙 qr0</code>.</p>
 
 
 
@@ -1091,8 +990,6 @@ output, which is a 4 numbers sequence too.</p>
 <div class="gh_link"><a href="">source</a></div>
 
 
-    <div class="attributes">@[simp]</div>
-
 
 <div class="decl_header">
     
@@ -1101,15 +998,16 @@ output, which is a 4 numbers sequence too.</p>
 <span class="decl_kind">theorem</span>
 <span class="decl_name"><a class="break_within" href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.qr1_is_inv"><span class="name">quarterround</span>.<span class="name">qr1_is_inv</span></a></span>
 
-    <span class="decl_args"><span class="fn">(a b c d : <a href="https://oxarbitrage.github.io/salsa20-docs/data/bitvec/core.html#bitvec">bitvec</a> <a href="https://oxarbitrage.github.io/salsa20-docs/params.html#params.word_len">params.word_len</a>)</span></span>&nbsp;<span class="decl_args">:</span>
-<div class="decl_type"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.qr1_inv">quarterround.qr1_inv</a> <span class="fn"><span class="fn"><span class="fn"><span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.qr0">quarterround.qr0</a> a</span> b</span> c</span> d)</span></span> <span class="fn"><span class="fn"><span class="fn"><span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.qr1">quarterround.qr1</a> a</span> b</span> c</span> d)</span></span> <span class="fn"><span class="fn"><span class="fn"><span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.qr2">quarterround.qr2</a> a</span> b</span> c</span> d)</span></span> <span class="fn"><span class="fn"><span class="fn"><span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.qr3">quarterround.qr3</a> a</span> b</span> c</span> d)</span></span> <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#eq" title="eq">=</a> b</span></div>
+    <span class="impl_arg"><span class="decl_args"><span class="fn">[<a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/category/basic.html#category_theory.category">category_theory.category</a> <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/data/bitvec/core.html#bitvec">bitvec</a> <a href="https://oxarbitrage.github.io/salsa20-docs/params.html#params.word_len">params.word_len</a>)</span>]</span></span></span>
+    <span class="decl_args"><span class="fn">(I : <a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.qr1">quarterround.qr1</a> <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/isomorphism.html#category_theory.iso" title="category_theory.iso">≅</a> <a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.qr1_inv">quarterround.qr1_inv</a>)</span></span>&nbsp;<span class="decl_args">:</span>
+<div class="decl_type"><span class="fn"><span class="fn">I.<a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/isomorphism.html#category_theory.iso.hom" title="category_theory.iso.hom">hom</a> <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/category/basic.html#category_theory.category_struct.comp" title="category_theory.category_struct.comp">≫</a> I.<a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/isomorphism.html#category_theory.iso.inv" title="category_theory.iso.inv">inv</a></span> <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#eq" title="eq">=</a> <span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/category/basic.html#category_theory.category_struct.id" title="category_theory.category_struct.id">𝟙</a> <a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.qr1">quarterround.qr1</a></span></span></div>
 </div>
 
 
 
 
 
-<p>Inverse of <code>qr1</code> given the sequence <code>a, b, c, d</code> is <code>b</code>.</p>
+<p><code>qr1⁻¹</code> after <code>qr1</code> is <code>𝟙 qr1</code>.</p>
 
 
 
@@ -1134,8 +1032,6 @@ output, which is a 4 numbers sequence too.</p>
 <div class="gh_link"><a href="">source</a></div>
 
 
-    <div class="attributes">@[simp]</div>
-
 
 <div class="decl_header">
     
@@ -1144,15 +1040,16 @@ output, which is a 4 numbers sequence too.</p>
 <span class="decl_kind">theorem</span>
 <span class="decl_name"><a class="break_within" href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.qr2_is_inv"><span class="name">quarterround</span>.<span class="name">qr2_is_inv</span></a></span>
 
-    <span class="decl_args"><span class="fn">(a b c d : <a href="https://oxarbitrage.github.io/salsa20-docs/data/bitvec/core.html#bitvec">bitvec</a> <a href="https://oxarbitrage.github.io/salsa20-docs/params.html#params.word_len">params.word_len</a>)</span></span>&nbsp;<span class="decl_args">:</span>
-<div class="decl_type"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.qr2_inv">quarterround.qr2_inv</a> <span class="fn"><span class="fn"><span class="fn"><span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.qr0">quarterround.qr0</a> a</span> b</span> c</span> d)</span></span> <span class="fn"><span class="fn"><span class="fn"><span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.qr1">quarterround.qr1</a> a</span> b</span> c</span> d)</span></span> <span class="fn"><span class="fn"><span class="fn"><span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.qr2">quarterround.qr2</a> a</span> b</span> c</span> d)</span></span> <span class="fn"><span class="fn"><span class="fn"><span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.qr3">quarterround.qr3</a> a</span> b</span> c</span> d)</span></span> <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#eq" title="eq">=</a> c</span></div>
+    <span class="impl_arg"><span class="decl_args"><span class="fn">[<a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/category/basic.html#category_theory.category">category_theory.category</a> <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/data/bitvec/core.html#bitvec">bitvec</a> <a href="https://oxarbitrage.github.io/salsa20-docs/params.html#params.word_len">params.word_len</a>)</span>]</span></span></span>
+    <span class="decl_args"><span class="fn">(I : <a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.qr2">quarterround.qr2</a> <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/isomorphism.html#category_theory.iso" title="category_theory.iso">≅</a> <a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.qr2_inv">quarterround.qr2_inv</a>)</span></span>&nbsp;<span class="decl_args">:</span>
+<div class="decl_type"><span class="fn"><span class="fn">I.<a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/isomorphism.html#category_theory.iso.hom" title="category_theory.iso.hom">hom</a> <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/category/basic.html#category_theory.category_struct.comp" title="category_theory.category_struct.comp">≫</a> I.<a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/isomorphism.html#category_theory.iso.inv" title="category_theory.iso.inv">inv</a></span> <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#eq" title="eq">=</a> <span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/category/basic.html#category_theory.category_struct.id" title="category_theory.category_struct.id">𝟙</a> <a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.qr2">quarterround.qr2</a></span></span></div>
 </div>
 
 
 
 
 
-<p>Inverse of <code>qr2</code> given the sequence <code>a, b, c, d</code> is <code>c</code>.</p>
+<p><code>qr2⁻¹</code> after <code>qr2</code> is <code>𝟙 qr2</code>.</p>
 
 
 
@@ -1177,8 +1074,6 @@ output, which is a 4 numbers sequence too.</p>
 <div class="gh_link"><a href="">source</a></div>
 
 
-    <div class="attributes">@[simp]</div>
-
 
 <div class="decl_header">
     
@@ -1187,15 +1082,16 @@ output, which is a 4 numbers sequence too.</p>
 <span class="decl_kind">theorem</span>
 <span class="decl_name"><a class="break_within" href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.qr3_is_inv"><span class="name">quarterround</span>.<span class="name">qr3_is_inv</span></a></span>
 
-    <span class="decl_args"><span class="fn">(a b c d : <a href="https://oxarbitrage.github.io/salsa20-docs/data/bitvec/core.html#bitvec">bitvec</a> <a href="https://oxarbitrage.github.io/salsa20-docs/params.html#params.word_len">params.word_len</a>)</span></span>&nbsp;<span class="decl_args">:</span>
-<div class="decl_type"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.qr3_inv">quarterround.qr3_inv</a> <span class="fn"><span class="fn"><span class="fn"><span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.qr0">quarterround.qr0</a> a</span> b</span> c</span> d)</span></span> <span class="fn"><span class="fn"><span class="fn"><span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.qr1">quarterround.qr1</a> a</span> b</span> c</span> d)</span></span> <span class="fn"><span class="fn"><span class="fn"><span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.qr2">quarterround.qr2</a> a</span> b</span> c</span> d)</span></span> <span class="fn"><span class="fn"><span class="fn"><span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.qr3">quarterround.qr3</a> a</span> b</span> c</span> d)</span></span> <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#eq" title="eq">=</a> d</span></div>
+    <span class="impl_arg"><span class="decl_args"><span class="fn">[<a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/category/basic.html#category_theory.category">category_theory.category</a> <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/data/bitvec/core.html#bitvec">bitvec</a> <a href="https://oxarbitrage.github.io/salsa20-docs/params.html#params.word_len">params.word_len</a>)</span>]</span></span></span>
+    <span class="decl_args"><span class="fn">(I : <a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.qr3">quarterround.qr3</a> <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/isomorphism.html#category_theory.iso" title="category_theory.iso">≅</a> <a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.qr3_inv">quarterround.qr3_inv</a>)</span></span>&nbsp;<span class="decl_args">:</span>
+<div class="decl_type"><span class="fn"><span class="fn">I.<a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/isomorphism.html#category_theory.iso.hom" title="category_theory.iso.hom">hom</a> <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/category/basic.html#category_theory.category_struct.comp" title="category_theory.category_struct.comp">≫</a> I.<a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/isomorphism.html#category_theory.iso.inv" title="category_theory.iso.inv">inv</a></span> <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#eq" title="eq">=</a> <span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/category/basic.html#category_theory.category_struct.id" title="category_theory.category_struct.id">𝟙</a> <a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.qr3">quarterround.qr3</a></span></span></div>
 </div>
 
 
 
 
 
-<p>Inverse of <code>qr3</code> given the sequence <code>a, b, c, d</code> is <code>d</code>.</p>
+<p><code>qr3⁻¹</code> after <code>qr3</code> is <code>𝟙 qr3</code>.</p>
 
 
 
@@ -1220,8 +1116,6 @@ output, which is a 4 numbers sequence too.</p>
 <div class="gh_link"><a href="">source</a></div>
 
 
-    <div class="attributes">@[simp]</div>
-
 
 <div class="decl_header">
     
@@ -1230,15 +1124,16 @@ output, which is a 4 numbers sequence too.</p>
 <span class="decl_kind">theorem</span>
 <span class="decl_name"><a class="break_within" href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.qr0_inv_is_inv"><span class="name">quarterround</span>.<span class="name">qr0_inv_is_inv</span></a></span>
 
-    <span class="decl_args"><span class="fn">(a b c d : <a href="https://oxarbitrage.github.io/salsa20-docs/data/bitvec/core.html#bitvec">bitvec</a> <a href="https://oxarbitrage.github.io/salsa20-docs/params.html#params.word_len">params.word_len</a>)</span></span>&nbsp;<span class="decl_args">:</span>
-<div class="decl_type"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.qr0">quarterround.qr0</a> <span class="fn"><span class="fn"><span class="fn"><span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.qr0_inv">quarterround.qr0_inv</a> a</span> b</span> c</span> d)</span></span> <span class="fn"><span class="fn"><span class="fn"><span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.qr1_inv">quarterround.qr1_inv</a> a</span> b</span> c</span> d)</span></span> <span class="fn"><span class="fn"><span class="fn"><span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.qr2_inv">quarterround.qr2_inv</a> a</span> b</span> c</span> d)</span></span> <span class="fn"><span class="fn"><span class="fn"><span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.qr3_inv">quarterround.qr3_inv</a> a</span> b</span> c</span> d)</span></span> <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#eq" title="eq">=</a> a</span></div>
+    <span class="impl_arg"><span class="decl_args"><span class="fn">[<a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/category/basic.html#category_theory.category">category_theory.category</a> <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/data/bitvec/core.html#bitvec">bitvec</a> <a href="https://oxarbitrage.github.io/salsa20-docs/params.html#params.word_len">params.word_len</a>)</span>]</span></span></span>
+    <span class="decl_args"><span class="fn">(I : <a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.qr0">quarterround.qr0</a> <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/isomorphism.html#category_theory.iso" title="category_theory.iso">≅</a> <a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.qr0_inv">quarterround.qr0_inv</a>)</span></span>&nbsp;<span class="decl_args">:</span>
+<div class="decl_type"><span class="fn"><span class="fn">I.<a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/isomorphism.html#category_theory.iso.inv" title="category_theory.iso.inv">inv</a> <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/category/basic.html#category_theory.category_struct.comp" title="category_theory.category_struct.comp">≫</a> I.<a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/isomorphism.html#category_theory.iso.hom" title="category_theory.iso.hom">hom</a></span> <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#eq" title="eq">=</a> <span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/category/basic.html#category_theory.category_struct.id" title="category_theory.category_struct.id">𝟙</a> <a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.qr0_inv">quarterround.qr0_inv</a></span></span></div>
 </div>
 
 
 
 
 
-<p>Inverse of <code>qr0_inv</code> given the sequence <code>a, b, c, d</code> is <code>a</code>.</p>
+<p><code>qr0</code> after <code>qr0⁻¹</code> is <code>𝟙 qr0⁻¹</code>.</p>
 
 
 
@@ -1263,8 +1158,6 @@ output, which is a 4 numbers sequence too.</p>
 <div class="gh_link"><a href="">source</a></div>
 
 
-    <div class="attributes">@[simp]</div>
-
 
 <div class="decl_header">
     
@@ -1273,15 +1166,16 @@ output, which is a 4 numbers sequence too.</p>
 <span class="decl_kind">theorem</span>
 <span class="decl_name"><a class="break_within" href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.qr1_inv_is_inv"><span class="name">quarterround</span>.<span class="name">qr1_inv_is_inv</span></a></span>
 
-    <span class="decl_args"><span class="fn">(a b c d : <a href="https://oxarbitrage.github.io/salsa20-docs/data/bitvec/core.html#bitvec">bitvec</a> <a href="https://oxarbitrage.github.io/salsa20-docs/params.html#params.word_len">params.word_len</a>)</span></span>&nbsp;<span class="decl_args">:</span>
-<div class="decl_type"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.qr1">quarterround.qr1</a> <span class="fn"><span class="fn"><span class="fn"><span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.qr0_inv">quarterround.qr0_inv</a> a</span> b</span> c</span> d)</span></span> <span class="fn"><span class="fn"><span class="fn"><span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.qr1_inv">quarterround.qr1_inv</a> a</span> b</span> c</span> d)</span></span> <span class="fn"><span class="fn"><span class="fn"><span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.qr2_inv">quarterround.qr2_inv</a> a</span> b</span> c</span> d)</span></span> <span class="fn"><span class="fn"><span class="fn"><span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.qr3_inv">quarterround.qr3_inv</a> a</span> b</span> c</span> d)</span></span> <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#eq" title="eq">=</a> b</span></div>
+    <span class="impl_arg"><span class="decl_args"><span class="fn">[<a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/category/basic.html#category_theory.category">category_theory.category</a> <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/data/bitvec/core.html#bitvec">bitvec</a> <a href="https://oxarbitrage.github.io/salsa20-docs/params.html#params.word_len">params.word_len</a>)</span>]</span></span></span>
+    <span class="decl_args"><span class="fn">(I : <a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.qr1">quarterround.qr1</a> <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/isomorphism.html#category_theory.iso" title="category_theory.iso">≅</a> <a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.qr1_inv">quarterround.qr1_inv</a>)</span></span>&nbsp;<span class="decl_args">:</span>
+<div class="decl_type"><span class="fn"><span class="fn">I.<a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/isomorphism.html#category_theory.iso.inv" title="category_theory.iso.inv">inv</a> <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/category/basic.html#category_theory.category_struct.comp" title="category_theory.category_struct.comp">≫</a> I.<a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/isomorphism.html#category_theory.iso.hom" title="category_theory.iso.hom">hom</a></span> <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#eq" title="eq">=</a> <span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/category/basic.html#category_theory.category_struct.id" title="category_theory.category_struct.id">𝟙</a> <a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.qr1_inv">quarterround.qr1_inv</a></span></span></div>
 </div>
 
 
 
 
 
-<p>Inverse of <code>qr1_inv</code> given the sequence <code>a, b, c, d</code> is <code>b</code>.</p>
+<p><code>qr1</code> after <code>qr1⁻¹</code> is <code>𝟙 qr1⁻¹</code>.</p>
 
 
 
@@ -1306,8 +1200,6 @@ output, which is a 4 numbers sequence too.</p>
 <div class="gh_link"><a href="">source</a></div>
 
 
-    <div class="attributes">@[simp]</div>
-
 
 <div class="decl_header">
     
@@ -1316,15 +1208,16 @@ output, which is a 4 numbers sequence too.</p>
 <span class="decl_kind">theorem</span>
 <span class="decl_name"><a class="break_within" href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.qr2_inv_is_inv"><span class="name">quarterround</span>.<span class="name">qr2_inv_is_inv</span></a></span>
 
-    <span class="decl_args"><span class="fn">(a b c d : <a href="https://oxarbitrage.github.io/salsa20-docs/data/bitvec/core.html#bitvec">bitvec</a> <a href="https://oxarbitrage.github.io/salsa20-docs/params.html#params.word_len">params.word_len</a>)</span></span>&nbsp;<span class="decl_args">:</span>
-<div class="decl_type"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.qr2">quarterround.qr2</a> <span class="fn"><span class="fn"><span class="fn"><span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.qr0_inv">quarterround.qr0_inv</a> a</span> b</span> c</span> d)</span></span> <span class="fn"><span class="fn"><span class="fn"><span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.qr1_inv">quarterround.qr1_inv</a> a</span> b</span> c</span> d)</span></span> <span class="fn"><span class="fn"><span class="fn"><span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.qr2_inv">quarterround.qr2_inv</a> a</span> b</span> c</span> d)</span></span> <span class="fn"><span class="fn"><span class="fn"><span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.qr3_inv">quarterround.qr3_inv</a> a</span> b</span> c</span> d)</span></span> <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#eq" title="eq">=</a> c</span></div>
+    <span class="impl_arg"><span class="decl_args"><span class="fn">[<a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/category/basic.html#category_theory.category">category_theory.category</a> <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/data/bitvec/core.html#bitvec">bitvec</a> <a href="https://oxarbitrage.github.io/salsa20-docs/params.html#params.word_len">params.word_len</a>)</span>]</span></span></span>
+    <span class="decl_args"><span class="fn">(I : <a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.qr2">quarterround.qr2</a> <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/isomorphism.html#category_theory.iso" title="category_theory.iso">≅</a> <a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.qr2_inv">quarterround.qr2_inv</a>)</span></span>&nbsp;<span class="decl_args">:</span>
+<div class="decl_type"><span class="fn"><span class="fn">I.<a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/isomorphism.html#category_theory.iso.inv" title="category_theory.iso.inv">inv</a> <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/category/basic.html#category_theory.category_struct.comp" title="category_theory.category_struct.comp">≫</a> I.<a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/isomorphism.html#category_theory.iso.hom" title="category_theory.iso.hom">hom</a></span> <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#eq" title="eq">=</a> <span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/category/basic.html#category_theory.category_struct.id" title="category_theory.category_struct.id">𝟙</a> <a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.qr2_inv">quarterround.qr2_inv</a></span></span></div>
 </div>
 
 
 
 
 
-<p>Inverse of <code>qr2_inv</code> given the sequence <code>a, b, c, d</code> is <code>c</code>.</p>
+<p><code>qr2</code> after <code>qr2⁻¹</code> is <code>𝟙 qr2⁻¹</code>.</p>
 
 
 
@@ -1349,8 +1242,6 @@ output, which is a 4 numbers sequence too.</p>
 <div class="gh_link"><a href="">source</a></div>
 
 
-    <div class="attributes">@[simp]</div>
-
 
 <div class="decl_header">
     
@@ -1359,169 +1250,16 @@ output, which is a 4 numbers sequence too.</p>
 <span class="decl_kind">theorem</span>
 <span class="decl_name"><a class="break_within" href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.qr3_inv_is_inv"><span class="name">quarterround</span>.<span class="name">qr3_inv_is_inv</span></a></span>
 
-    <span class="decl_args"><span class="fn">(a b c d : <a href="https://oxarbitrage.github.io/salsa20-docs/data/bitvec/core.html#bitvec">bitvec</a> <a href="https://oxarbitrage.github.io/salsa20-docs/params.html#params.word_len">params.word_len</a>)</span></span>&nbsp;<span class="decl_args">:</span>
-<div class="decl_type"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.qr3">quarterround.qr3</a> <span class="fn"><span class="fn"><span class="fn"><span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.qr0_inv">quarterround.qr0_inv</a> a</span> b</span> c</span> d)</span></span> <span class="fn"><span class="fn"><span class="fn"><span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.qr1_inv">quarterround.qr1_inv</a> a</span> b</span> c</span> d)</span></span> <span class="fn"><span class="fn"><span class="fn"><span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.qr2_inv">quarterround.qr2_inv</a> a</span> b</span> c</span> d)</span></span> <span class="fn"><span class="fn"><span class="fn"><span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.qr3_inv">quarterround.qr3_inv</a> a</span> b</span> c</span> d)</span></span> <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#eq" title="eq">=</a> d</span></div>
+    <span class="impl_arg"><span class="decl_args"><span class="fn">[<a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/category/basic.html#category_theory.category">category_theory.category</a> <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/data/bitvec/core.html#bitvec">bitvec</a> <a href="https://oxarbitrage.github.io/salsa20-docs/params.html#params.word_len">params.word_len</a>)</span>]</span></span></span>
+    <span class="decl_args"><span class="fn">(I : <a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.qr3">quarterround.qr3</a> <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/isomorphism.html#category_theory.iso" title="category_theory.iso">≅</a> <a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.qr3_inv">quarterround.qr3_inv</a>)</span></span>&nbsp;<span class="decl_args">:</span>
+<div class="decl_type"><span class="fn"><span class="fn">I.<a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/isomorphism.html#category_theory.iso.inv" title="category_theory.iso.inv">inv</a> <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/category/basic.html#category_theory.category_struct.comp" title="category_theory.category_struct.comp">≫</a> I.<a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/isomorphism.html#category_theory.iso.hom" title="category_theory.iso.hom">hom</a></span> <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#eq" title="eq">=</a> <span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/category/basic.html#category_theory.category_struct.id" title="category_theory.category_struct.id">𝟙</a> <a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.qr3_inv">quarterround.qr3_inv</a></span></span></div>
 </div>
 
 
 
 
 
-<p>Inverse of <code>qr3_inv</code> given the sequence <code>a, b, c, d</code> is <code>d</code>.</p>
-
-
-
-
-
-
-
-
-
-
-
-</div>
-</div>
-    
-
-    
-        <div class="mod_doc">
-            <h2 id="isomorphism" class="markdown-heading">Isomorphism <a class="hover-link" href="#isomorphism">#</a></h2>
-
-        </div>
-    
-
-    
-        
-        
-<div class="decl" id="quarterround.id_quarterround">
-<div class="def">
-
-<div class="gh_link"><a href="">source</a></div>
-
-
-    <div class="attributes">@[simp]</div>
-
-
-<div class="decl_header">
-    
-
-
-<span class="decl_kind">def</span>
-<span class="decl_name"><a class="break_within" href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.id_quarterround"><span class="name">quarterround</span>.<span class="name">id_quarterround</span></a></span>
-
-    <span class="decl_args"><span class="fn">(seq : <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod" title="prod">vecType</a>)</span></span>&nbsp;<span class="decl_args">:</span>
-<div class="decl_type"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod" title="prod">vecType</a></span></div>
-</div>
-
-
-
-
-
-<p>The identity of a <code>quarterround</code> function given a sequence is the sequence.</p>
-
-
-
-    <details>
-        <summary>Equations</summary>
-        <ul class="equations">
-            
-                <li class="equation"><span class="fn"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.id_quarterround">quarterround.id_quarterround</a> seq</span> <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#eq" title="eq">=</a> seq</span></li>
-            
-        </ul>
-    </details>
-
-
-
-
-
-
-
-
-
-</div>
-</div>
-    
-
-    
-        
-        
-<div class="decl" id="quarterround.id_quarterround_inv">
-<div class="def">
-
-<div class="gh_link"><a href="">source</a></div>
-
-
-    <div class="attributes">@[simp]</div>
-
-
-<div class="decl_header">
-    
-
-
-<span class="decl_kind">def</span>
-<span class="decl_name"><a class="break_within" href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.id_quarterround_inv"><span class="name">quarterround</span>.<span class="name">id_quarterround_inv</span></a></span>
-
-    <span class="decl_args"><span class="fn">(seq : <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod" title="prod">vecType</a>)</span></span>&nbsp;<span class="decl_args">:</span>
-<div class="decl_type"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod" title="prod">vecType</a></span></div>
-</div>
-
-
-
-
-
-<p>The identity of a <code>quarterround_inv</code> function given a sequence is the sequence.</p>
-
-
-
-    <details>
-        <summary>Equations</summary>
-        <ul class="equations">
-            
-                <li class="equation"><span class="fn"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.id_quarterround_inv">quarterround.id_quarterround_inv</a> seq</span> <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#eq" title="eq">=</a> seq</span></li>
-            
-        </ul>
-    </details>
-
-
-
-
-
-
-
-
-
-</div>
-</div>
-    
-
-    
-        
-        
-<div class="decl" id="quarterround.isomorphism_left">
-<div class="theorem">
-
-<div class="gh_link"><a href="">source</a></div>
-
-
-    <div class="attributes">@[simp]</div>
-
-
-<div class="decl_header">
-    
-
-
-<span class="decl_kind">theorem</span>
-<span class="decl_name"><a class="break_within" href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.isomorphism_left"><span class="name">quarterround</span>.<span class="name">isomorphism_left</span></a></span>
-
-    <span class="decl_args"><span class="fn">(seq : <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod" title="prod">vecType</a>)</span></span>&nbsp;<span class="decl_args">:</span>
-<div class="decl_type"><span class="fn"><span class="fn"><span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.quarterround_inv">quarterround.quarterround_inv</a> <a href="https://oxarbitrage.github.io/salsa20-docs/init/function.html#function.comp" title="function.comp">∘</a> <a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.quarterround">quarterround.quarterround</a>)</span> seq</span> <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#eq" title="eq">=</a> <span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.id_quarterround">quarterround.id_quarterround</a> seq</span></span></div>
-</div>
-
-
-
-
-
-<p>Isomorphism condition 1 : <code>f ∘ g = id_f</code></p>
+<p><code>qr3</code> after <code>qr3⁻¹</code> is <code>𝟙 qr3⁻¹</code>.</p>
 
 
 
@@ -1540,269 +1278,7 @@ output, which is a 4 numbers sequence too.</p>
     
         
         
-<div class="decl" id="quarterround.isomorphism_right">
-<div class="theorem">
-
-<div class="gh_link"><a href="">source</a></div>
-
-
-    <div class="attributes">@[simp]</div>
-
-
-<div class="decl_header">
-    
-
-
-<span class="decl_kind">theorem</span>
-<span class="decl_name"><a class="break_within" href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.isomorphism_right"><span class="name">quarterround</span>.<span class="name">isomorphism_right</span></a></span>
-
-    <span class="decl_args"><span class="fn">(seq : <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod" title="prod">vecType</a>)</span></span>&nbsp;<span class="decl_args">:</span>
-<div class="decl_type"><span class="fn"><span class="fn"><span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.quarterround">quarterround.quarterround</a> <a href="https://oxarbitrage.github.io/salsa20-docs/init/function.html#function.comp" title="function.comp">∘</a> <a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.quarterround_inv">quarterround.quarterround_inv</a>)</span> seq</span> <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#eq" title="eq">=</a> <span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.id_quarterround_inv">quarterround.id_quarterround_inv</a> seq</span></span></div>
-</div>
-
-
-
-
-
-<p>Isomorphism condition 2 : <code>g ∘ f = id_g</code></p>
-
-
-
-
-
-
-
-
-
-
-
-</div>
-</div>
-    
-
-    
-        
-        
-<div class="decl" id="quarterround.quarterround_is_isomorphic">
-<div class="theorem">
-
-<div class="gh_link"><a href="">source</a></div>
-
-
-    <div class="attributes">@[simp]</div>
-
-
-<div class="decl_header">
-    
-
-
-<span class="decl_kind">theorem</span>
-<span class="decl_name"><a class="break_within" href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.quarterround_is_isomorphic"><span class="name">quarterround</span>.<span class="name">quarterround_is_isomorphic</span></a></span>
-
-    <span class="decl_args"><span class="fn">(seq : <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod" title="prod">vecType</a>)</span></span>&nbsp;<span class="decl_args">:</span>
-<div class="decl_type"><span class="fn"><span class="fn"><span class="fn"><span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.quarterround_inv">quarterround.quarterround_inv</a> <a href="https://oxarbitrage.github.io/salsa20-docs/init/function.html#function.comp" title="function.comp">∘</a> <a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.quarterround">quarterround.quarterround</a>)</span> seq</span> <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#eq" title="eq">=</a> <span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.id_quarterround">quarterround.id_quarterround</a> seq</span></span> <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#and" title="and">∧</a> <span class="fn"><span class="fn"><span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.quarterround">quarterround.quarterround</a> <a href="https://oxarbitrage.github.io/salsa20-docs/init/function.html#function.comp" title="function.comp">∘</a> <a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.quarterround_inv">quarterround.quarterround_inv</a>)</span> seq</span> <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#eq" title="eq">=</a> <span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.id_quarterround_inv">quarterround.id_quarterround_inv</a> seq</span></span></span></div>
-</div>
-
-
-
-
-
-<p>Two categories are isomrphic if <code>f ∘ g = id_f</code> and <code>g ∘ f = id_g</code>.</p>
-
-
-
-
-
-
-
-
-
-
-
-</div>
-</div>
-    
-
-    
-        <div class="mod_doc">
-            <h2 id="category-theory" class="markdown-heading">Category theory <a class="hover-link" href="#category-theory">#</a></h2>
-
-        </div>
-    
-
-    
-        
-        
-<div class="decl" id="quarterround.quarterroundType">
-<div class="structure">
-
-<div class="gh_link"><a href="">source</a></div>
-
-
-
-<div class="decl_header">
-    
-
-
-<span class="decl_kind">structure</span>
-<span class="decl_name"><a class="break_within" href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.quarterroundType"><span class="name">quarterround</span>.<span class="name">quarterroundType</span></a></span>
-
-    <span class="decl_args"><span class="fn">(T : Type u_1)</span></span>&nbsp;<span class="decl_args">:</span>
-<div class="decl_type"><span class="fn">Type u_1</span></div>
-</div>
-
-
-    <ul class="structure_fields" id="quarterround.quarterroundType.mk">
-        
-            
-            <li class="structure_field" id="quarterround.quarterroundType.qr1">qr1 : <span class="fn"><span class="fn">T → <span class="fn">T → T</span></span> <a href="https://oxarbitrage.github.io/salsa20-docs/combinatorics/quiver/basic.html#quiver.hom" title="quiver.hom">⟶</a> T</span></li>
-        
-            
-            <li class="structure_field" id="quarterround.quarterroundType.qr2">qr2 : <span class="fn"><span class="fn">T → <span class="fn">T → T</span></span> <a href="https://oxarbitrage.github.io/salsa20-docs/combinatorics/quiver/basic.html#quiver.hom" title="quiver.hom">⟶</a> T</span></li>
-        
-            
-            <li class="structure_field" id="quarterround.quarterroundType.qr3">qr3 : <span class="fn"><span class="fn">T → <span class="fn">T → T</span></span> <a href="https://oxarbitrage.github.io/salsa20-docs/combinatorics/quiver/basic.html#quiver.hom" title="quiver.hom">⟶</a> T</span></li>
-        
-            
-            <li class="structure_field" id="quarterround.quarterroundType.qr0">qr0 : <span class="fn"><span class="fn">T → <span class="fn">T → T</span></span> <a href="https://oxarbitrage.github.io/salsa20-docs/combinatorics/quiver/basic.html#quiver.hom" title="quiver.hom">⟶</a> T</span></li>
-        
-    </ul>
-
-
-
-
-<p>Represents a <code>quarterround</code> or <code>quarterround_inv</code> where building block operations are
-fields of the structure.</p>
-
-
-
-
-
-
-
-    <details class="instances-for">
-        
-            <summary>Instances for <code><span class="name">quarterround</span>.<span class="name">quarterroundType</span></code></summary>
-        
-        <ul>
-            
-                <li>quarterround.quarterroundType.has_sizeof_inst</li>
-            
-        </ul>
-    </details>
-
-
-
-
-
-</div>
-</div>
-    
-
-    
-        
-        
-<div class="decl" id="quarterround.cat_quarterround">
-<div class="def">
-
-<div class="gh_link"><a href="">source</a></div>
-
-
-
-<div class="decl_header">
-    
-
-
-<span class="decl_kind">def</span>
-<span class="decl_name"><a class="break_within" href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.cat_quarterround"><span class="name">quarterround</span>.<span class="name">cat_quarterround</span></a></span>
-
-    <span class="decl_args"><span class="fn">(T : Type u_1)</span></span>&nbsp;<span class="decl_args">:</span>
-<div class="decl_type"><span class="fn">Type u_1</span></div>
-</div>
-
-
-
-
-
-<p><code>cat_quarterround</code> is an instance of <code>quarterroundType</code></p>
-
-
-
-    <details>
-        <summary>Equations</summary>
-        <ul class="equations">
-            
-                <li class="equation"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.cat_quarterround">quarterround.cat_quarterround</a> <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#eq" title="eq">=</a> <a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.quarterroundType">quarterround.quarterroundType</a></span></li>
-            
-        </ul>
-    </details>
-
-
-
-
-
-
-
-
-
-</div>
-</div>
-    
-
-    
-        
-        
-<div class="decl" id="quarterround.cat_quarterround_inv">
-<div class="def">
-
-<div class="gh_link"><a href="">source</a></div>
-
-
-
-<div class="decl_header">
-    
-
-
-<span class="decl_kind">def</span>
-<span class="decl_name"><a class="break_within" href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.cat_quarterround_inv"><span class="name">quarterround</span>.<span class="name">cat_quarterround_inv</span></a></span>
-
-    <span class="decl_args"><span class="fn">(T : Type u_1)</span></span>&nbsp;<span class="decl_args">:</span>
-<div class="decl_type"><span class="fn">Type u_1</span></div>
-</div>
-
-
-
-
-
-<p><code>cat_quarterround_inv</code> is an instance of <code>quarterroundType</code></p>
-
-
-
-    <details>
-        <summary>Equations</summary>
-        <ul class="equations">
-            
-                <li class="equation"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.cat_quarterround_inv">quarterround.cat_quarterround_inv</a> <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#eq" title="eq">=</a> <a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.quarterroundType">quarterround.quarterroundType</a></span></li>
-            
-        </ul>
-    </details>
-
-
-
-
-
-
-
-
-
-</div>
-</div>
-    
-
-    
-        
-        
-<div class="decl" id="quarterround.qr_inv_is_inverse_of_qr">
+<div class="decl" id="quarterround.qr_pieces_are_all_invertible">
 <div class="theorem">
 
 <div class="gh_link"><a href="">source</a></div>
@@ -1814,1141 +1290,21 @@ fields of the structure.</p>
 
 
 <span class="decl_kind">theorem</span>
-<span class="decl_name"><a class="break_within" href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.qr_inv_is_inverse_of_qr"><span class="name">quarterround</span>.<span class="name">qr_inv_is_inverse_of_qr</span></a></span>
+<span class="decl_name"><a class="break_within" href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.qr_pieces_are_all_invertible"><span class="name">quarterround</span>.<span class="name">qr_pieces_are_all_invertible</span></a></span>
 
-    <span class="impl_arg"><span class="decl_args"><span class="fn">{C : Type u}</span></span></span>
-    <span class="decl_args"><span class="fn">(I : <span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.cat_quarterround">quarterround.cat_quarterround</a> C</span> <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/isomorphism.html#category_theory.iso" title="category_theory.iso">≅</a> <span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.cat_quarterround_inv">quarterround.cat_quarterround_inv</a> C</span>)</span></span>&nbsp;<span class="decl_args">:</span>
-<div class="decl_type"><span class="fn"><span class="fn">I.<a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/isomorphism.html#category_theory.iso.hom" title="category_theory.iso.hom">hom</a> <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/category/basic.html#category_theory.category_struct.comp" title="category_theory.category_struct.comp">≫</a> I.<a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/isomorphism.html#category_theory.iso.inv" title="category_theory.iso.inv">inv</a></span> <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#eq" title="eq">=</a> <span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/category/basic.html#category_theory.category_struct.id" title="category_theory.category_struct.id">𝟙</a> <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.quarterroundType">quarterround.quarterroundType</a> C)</span></span></span></div>
+    <span class="impl_arg"><span class="decl_args"><span class="fn">[<a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/category/basic.html#category_theory.category">category_theory.category</a> <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/data/bitvec/core.html#bitvec">bitvec</a> <a href="https://oxarbitrage.github.io/salsa20-docs/params.html#params.word_len">params.word_len</a>)</span>]</span></span></span>
+    <span class="decl_args"><span class="fn">(I0 : <a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.qr0">quarterround.qr0</a> <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/isomorphism.html#category_theory.iso" title="category_theory.iso">≅</a> <a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.qr0_inv">quarterround.qr0_inv</a>)</span></span>
+    <span class="decl_args"><span class="fn">(I1 : <a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.qr1">quarterround.qr1</a> <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/isomorphism.html#category_theory.iso" title="category_theory.iso">≅</a> <a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.qr1_inv">quarterround.qr1_inv</a>)</span></span>
+    <span class="decl_args"><span class="fn">(I2 : <a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.qr2">quarterround.qr2</a> <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/isomorphism.html#category_theory.iso" title="category_theory.iso">≅</a> <a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.qr2_inv">quarterround.qr2_inv</a>)</span></span>
+    <span class="decl_args"><span class="fn">(I3 : <a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.qr3">quarterround.qr3</a> <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/isomorphism.html#category_theory.iso" title="category_theory.iso">≅</a> <a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.qr3_inv">quarterround.qr3_inv</a>)</span></span>&nbsp;<span class="decl_args">:</span>
+<div class="decl_type"><span class="fn"><span class="fn"><span class="fn">I0.<a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/isomorphism.html#category_theory.iso.hom" title="category_theory.iso.hom">hom</a> <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/category/basic.html#category_theory.category_struct.comp" title="category_theory.category_struct.comp">≫</a> I0.<a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/isomorphism.html#category_theory.iso.inv" title="category_theory.iso.inv">inv</a></span> <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#eq" title="eq">=</a> <span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/category/basic.html#category_theory.category_struct.id" title="category_theory.category_struct.id">𝟙</a> <a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.qr0">quarterround.qr0</a></span></span> <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#and" title="and">∧</a> <span class="fn"><span class="fn"><span class="fn">I1.<a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/isomorphism.html#category_theory.iso.hom" title="category_theory.iso.hom">hom</a> <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/category/basic.html#category_theory.category_struct.comp" title="category_theory.category_struct.comp">≫</a> I1.<a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/isomorphism.html#category_theory.iso.inv" title="category_theory.iso.inv">inv</a></span> <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#eq" title="eq">=</a> <span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/category/basic.html#category_theory.category_struct.id" title="category_theory.category_struct.id">𝟙</a> <a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.qr1">quarterround.qr1</a></span></span> <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#and" title="and">∧</a> <span class="fn"><span class="fn"><span class="fn">I2.<a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/isomorphism.html#category_theory.iso.hom" title="category_theory.iso.hom">hom</a> <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/category/basic.html#category_theory.category_struct.comp" title="category_theory.category_struct.comp">≫</a> I2.<a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/isomorphism.html#category_theory.iso.inv" title="category_theory.iso.inv">inv</a></span> <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#eq" title="eq">=</a> <span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/category/basic.html#category_theory.category_struct.id" title="category_theory.category_struct.id">𝟙</a> <a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.qr2">quarterround.qr2</a></span></span> <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#and" title="and">∧</a> <span class="fn"><span class="fn">I3.<a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/isomorphism.html#category_theory.iso.hom" title="category_theory.iso.hom">hom</a> <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/category/basic.html#category_theory.category_struct.comp" title="category_theory.category_struct.comp">≫</a> I3.<a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/isomorphism.html#category_theory.iso.inv" title="category_theory.iso.inv">inv</a></span> <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#eq" title="eq">=</a> <span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/category/basic.html#category_theory.category_struct.id" title="category_theory.category_struct.id">𝟙</a> <a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.qr3">quarterround.qr3</a></span></span></span></span></span></div>
 </div>
 
 
 
 
 
-<p>It is easy to see that <code>cat_quarterround⁻¹</code> after <code>cat_quarterround</code> produces the original object.</p>
-
-
-
-
-
-
-
-
-
-
-
-</div>
-</div>
-    
-
-    
-        <div class="mod_doc">
-            <h2 id="invariance" class="markdown-heading">Invariance <a class="hover-link" href="#invariance">#</a></h2>
-<p>We prove each single <code>qr{0..3}</code> is invariant to the left
-when fed with a crafted sequence and by this derive that the
-full quarterround function is left invariant.</p>
-<p>Theorem 1 of the paper:</p>
-<blockquote>
-<p>For any 32-bit value A, an input of the form (A −A A −A) is left invariant by the
-quarterround function, where −A represents the only 32-bit integer satisfying A + (−A) = 0 (mod 32).</p>
-</blockquote>
-<p><a href="https://www.iacr.org/archive/fse2008/50860470/50860470.pdf">https://www.iacr.org/archive/fse2008/50860470/50860470.pdf</a></p>
-
-        </div>
-    
-
-    
-        
-        
-<div class="decl" id="quarterround.qr1_is_left_invariant">
-<div class="theorem">
-
-<div class="gh_link"><a href="">source</a></div>
-
-
-    <div class="attributes">@[simp]</div>
-
-
-<div class="decl_header">
-    
-
-
-<span class="decl_kind">theorem</span>
-<span class="decl_name"><a class="break_within" href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.qr1_is_left_invariant"><span class="name">quarterround</span>.<span class="name">qr1_is_left_invariant</span></a></span>
-
-    <span class="decl_args"><span class="fn">(a : <a href="https://oxarbitrage.github.io/salsa20-docs/data/bitvec/core.html#bitvec">bitvec</a> <a href="https://oxarbitrage.github.io/salsa20-docs/params.html#params.word_len">params.word_len</a>)</span></span>&nbsp;<span class="decl_args">:</span>
-<div class="decl_type"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.qr1">quarterround.qr1</a> a</span> (<a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#has_neg.neg" title="has_neg.neg">-</a>a)</span> a</span> (<a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#has_neg.neg" title="has_neg.neg">-</a>a)</span> <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#eq" title="eq">=</a> <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#has_neg.neg" title="has_neg.neg">-</a>a</span></div>
-</div>
-
-
-
-
-
-<p><code>qr1</code> of <code>a, -a, a, -a</code> is <code>-a</code>.</p>
-
-
-
-
-
-
-
-
-
-
-
-</div>
-</div>
-    
-
-    
-        
-        
-<div class="decl" id="quarterround.qr1_is_left_invariant'">
-<div class="theorem">
-
-<div class="gh_link"><a href="">source</a></div>
-
-
-    <div class="attributes">@[simp]</div>
-
-
-<div class="decl_header">
-    
-
-
-<span class="decl_kind">theorem</span>
-<span class="decl_name"><a class="break_within" href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.qr1_is_left_invariant'"><span class="name">quarterround</span>.<span class="name">qr1_is_left_invariant&#x27;</span></a></span>
-
-    <span class="decl_args"><span class="fn">(a : <a href="https://oxarbitrage.github.io/salsa20-docs/data/bitvec/core.html#bitvec">bitvec</a> <a href="https://oxarbitrage.github.io/salsa20-docs/params.html#params.word_len">params.word_len</a>)</span></span>&nbsp;<span class="decl_args">:</span>
-<div class="decl_type"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.qr1">quarterround.qr1</a> (<a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#has_neg.neg" title="has_neg.neg">-</a>a)</span> a</span> (<a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#has_neg.neg" title="has_neg.neg">-</a>a)</span> a</span> <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#eq" title="eq">=</a> a</span></div>
-</div>
-
-
-
-
-
-<p><code>qr1</code> of <code>-a, a, -a, a</code> is <code>a</code>.</p>
-
-
-
-
-
-
-
-
-
-
-
-</div>
-</div>
-    
-
-    
-        
-        
-<div class="decl" id="quarterround.qr2_is_left_invariant">
-<div class="theorem">
-
-<div class="gh_link"><a href="">source</a></div>
-
-
-    <div class="attributes">@[simp]</div>
-
-
-<div class="decl_header">
-    
-
-
-<span class="decl_kind">theorem</span>
-<span class="decl_name"><a class="break_within" href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.qr2_is_left_invariant"><span class="name">quarterround</span>.<span class="name">qr2_is_left_invariant</span></a></span>
-
-    <span class="decl_args"><span class="fn">(a : <a href="https://oxarbitrage.github.io/salsa20-docs/data/bitvec/core.html#bitvec">bitvec</a> <a href="https://oxarbitrage.github.io/salsa20-docs/params.html#params.word_len">params.word_len</a>)</span></span>&nbsp;<span class="decl_args">:</span>
-<div class="decl_type"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.qr2">quarterround.qr2</a> a</span> (<a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#has_neg.neg" title="has_neg.neg">-</a>a)</span> a</span> (<a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#has_neg.neg" title="has_neg.neg">-</a>a)</span> <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#eq" title="eq">=</a> a</span></div>
-</div>
-
-
-
-
-
-<p><code>qr2</code> of <code>a, -a, a, -a</code> is <code>a</code>.</p>
-
-
-
-
-
-
-
-
-
-
-
-</div>
-</div>
-    
-
-    
-        
-        
-<div class="decl" id="quarterround.qr2_is_left_invariant'">
-<div class="theorem">
-
-<div class="gh_link"><a href="">source</a></div>
-
-
-    <div class="attributes">@[simp]</div>
-
-
-<div class="decl_header">
-    
-
-
-<span class="decl_kind">theorem</span>
-<span class="decl_name"><a class="break_within" href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.qr2_is_left_invariant'"><span class="name">quarterround</span>.<span class="name">qr2_is_left_invariant&#x27;</span></a></span>
-
-    <span class="decl_args"><span class="fn">(a : <a href="https://oxarbitrage.github.io/salsa20-docs/data/bitvec/core.html#bitvec">bitvec</a> <a href="https://oxarbitrage.github.io/salsa20-docs/params.html#params.word_len">params.word_len</a>)</span></span>&nbsp;<span class="decl_args">:</span>
-<div class="decl_type"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.qr2">quarterround.qr2</a> (<a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#has_neg.neg" title="has_neg.neg">-</a>a)</span> a</span> (<a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#has_neg.neg" title="has_neg.neg">-</a>a)</span> a</span> <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#eq" title="eq">=</a> <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#has_neg.neg" title="has_neg.neg">-</a>a</span></div>
-</div>
-
-
-
-
-
-<p><code>qr2</code> of <code>-a, a, -a, a</code> is <code>-a</code>.</p>
-
-
-
-
-
-
-
-
-
-
-
-</div>
-</div>
-    
-
-    
-        
-        
-<div class="decl" id="quarterround.qr3_is_left_invariant">
-<div class="theorem">
-
-<div class="gh_link"><a href="">source</a></div>
-
-
-    <div class="attributes">@[simp]</div>
-
-
-<div class="decl_header">
-    
-
-
-<span class="decl_kind">theorem</span>
-<span class="decl_name"><a class="break_within" href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.qr3_is_left_invariant"><span class="name">quarterround</span>.<span class="name">qr3_is_left_invariant</span></a></span>
-
-    <span class="decl_args"><span class="fn">(a : <a href="https://oxarbitrage.github.io/salsa20-docs/data/bitvec/core.html#bitvec">bitvec</a> <a href="https://oxarbitrage.github.io/salsa20-docs/params.html#params.word_len">params.word_len</a>)</span></span>&nbsp;<span class="decl_args">:</span>
-<div class="decl_type"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.qr3">quarterround.qr3</a> a</span> (<a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#has_neg.neg" title="has_neg.neg">-</a>a)</span> a</span> (<a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#has_neg.neg" title="has_neg.neg">-</a>a)</span> <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#eq" title="eq">=</a> <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#has_neg.neg" title="has_neg.neg">-</a>a</span></div>
-</div>
-
-
-
-
-
-<p><code>qr3</code> of <code>a, -a, a, -a</code> is <code>-a</code>.</p>
-
-
-
-
-
-
-
-
-
-
-
-</div>
-</div>
-    
-
-    
-        
-        
-<div class="decl" id="quarterround.qr3_is_left_invariant'">
-<div class="theorem">
-
-<div class="gh_link"><a href="">source</a></div>
-
-
-    <div class="attributes">@[simp]</div>
-
-
-<div class="decl_header">
-    
-
-
-<span class="decl_kind">theorem</span>
-<span class="decl_name"><a class="break_within" href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.qr3_is_left_invariant'"><span class="name">quarterround</span>.<span class="name">qr3_is_left_invariant&#x27;</span></a></span>
-
-    <span class="decl_args"><span class="fn">(a : <a href="https://oxarbitrage.github.io/salsa20-docs/data/bitvec/core.html#bitvec">bitvec</a> <a href="https://oxarbitrage.github.io/salsa20-docs/params.html#params.word_len">params.word_len</a>)</span></span>&nbsp;<span class="decl_args">:</span>
-<div class="decl_type"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.qr3">quarterround.qr3</a> (<a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#has_neg.neg" title="has_neg.neg">-</a>a)</span> a</span> (<a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#has_neg.neg" title="has_neg.neg">-</a>a)</span> a</span> <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#eq" title="eq">=</a> a</span></div>
-</div>
-
-
-
-
-
-<p><code>qr3</code> of <code>-a, a, -a, a</code> is <code>a</code>.</p>
-
-
-
-
-
-
-
-
-
-
-
-</div>
-</div>
-    
-
-    
-        
-        
-<div class="decl" id="quarterround.qr0_is_left_invariant">
-<div class="theorem">
-
-<div class="gh_link"><a href="">source</a></div>
-
-
-    <div class="attributes">@[simp]</div>
-
-
-<div class="decl_header">
-    
-
-
-<span class="decl_kind">theorem</span>
-<span class="decl_name"><a class="break_within" href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.qr0_is_left_invariant"><span class="name">quarterround</span>.<span class="name">qr0_is_left_invariant</span></a></span>
-
-    <span class="decl_args"><span class="fn">(a : <a href="https://oxarbitrage.github.io/salsa20-docs/data/bitvec/core.html#bitvec">bitvec</a> <a href="https://oxarbitrage.github.io/salsa20-docs/params.html#params.word_len">params.word_len</a>)</span></span>&nbsp;<span class="decl_args">:</span>
-<div class="decl_type"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.qr0">quarterround.qr0</a> a</span> (<a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#has_neg.neg" title="has_neg.neg">-</a>a)</span> a</span> (<a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#has_neg.neg" title="has_neg.neg">-</a>a)</span> <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#eq" title="eq">=</a> a</span></div>
-</div>
-
-
-
-
-
-<p><code>qr0</code> of <code>a, -a, a, -a</code> is <code>a</code>.</p>
-
-
-
-
-
-
-
-
-
-
-
-</div>
-</div>
-    
-
-    
-        
-        
-<div class="decl" id="quarterround.qr0_is_left_invariant'">
-<div class="theorem">
-
-<div class="gh_link"><a href="">source</a></div>
-
-
-    <div class="attributes">@[simp]</div>
-
-
-<div class="decl_header">
-    
-
-
-<span class="decl_kind">theorem</span>
-<span class="decl_name"><a class="break_within" href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.qr0_is_left_invariant'"><span class="name">quarterround</span>.<span class="name">qr0_is_left_invariant&#x27;</span></a></span>
-
-    <span class="decl_args"><span class="fn">(a : <a href="https://oxarbitrage.github.io/salsa20-docs/data/bitvec/core.html#bitvec">bitvec</a> <a href="https://oxarbitrage.github.io/salsa20-docs/params.html#params.word_len">params.word_len</a>)</span></span>&nbsp;<span class="decl_args">:</span>
-<div class="decl_type"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.qr0">quarterround.qr0</a> (<a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#has_neg.neg" title="has_neg.neg">-</a>a)</span> a</span> (<a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#has_neg.neg" title="has_neg.neg">-</a>a)</span> a</span> <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#eq" title="eq">=</a> <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#has_neg.neg" title="has_neg.neg">-</a>a</span></div>
-</div>
-
-
-
-
-
-<p><code>qr0</code> of <code>-a, a, -a, a</code> is <code>-a</code>.</p>
-
-
-
-
-
-
-
-
-
-
-
-</div>
-</div>
-    
-
-    
-        
-        
-<div class="decl" id="quarterround.quarterround_is_left_invariant">
-<div class="theorem">
-
-<div class="gh_link"><a href="">source</a></div>
-
-
-    <div class="attributes">@[simp]</div>
-
-
-<div class="decl_header">
-    
-
-
-<span class="decl_kind">theorem</span>
-<span class="decl_name"><a class="break_within" href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.quarterround_is_left_invariant"><span class="name">quarterround</span>.<span class="name">quarterround_is_left_invariant</span></a></span>
-
-    <span class="decl_args"><span class="fn">(a : <a href="https://oxarbitrage.github.io/salsa20-docs/data/bitvec/core.html#bitvec">bitvec</a> <a href="https://oxarbitrage.github.io/salsa20-docs/params.html#params.word_len">params.word_len</a>)</span></span>&nbsp;<span class="decl_args">:</span>
-<div class="decl_type"><span class="fn"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.quarterround">quarterround.quarterround</a> <span class="fn">(a, <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#has_neg.neg" title="has_neg.neg">-</a>a, a, <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#has_neg.neg" title="has_neg.neg">-</a>a)</span></span> <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#eq" title="eq">=</a> <span class="fn">(a, <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#has_neg.neg" title="has_neg.neg">-</a>a, a, <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#has_neg.neg" title="has_neg.neg">-</a>a)</span></span></div>
-</div>
-
-
-
-
-
-<p>The full <code>quarterround</code> function produces <code>a, -a, a, -a</code> when fed with <code>a, -a, a, -a</code></p>
-
-
-
-
-
-
-
-
-
-
-
-</div>
-</div>
-    
-
-    
-        
-        
-<div class="decl" id="quarterround.quarterround_is_left_invariant'">
-<div class="theorem">
-
-<div class="gh_link"><a href="">source</a></div>
-
-
-    <div class="attributes">@[simp]</div>
-
-
-<div class="decl_header">
-    
-
-
-<span class="decl_kind">theorem</span>
-<span class="decl_name"><a class="break_within" href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.quarterround_is_left_invariant'"><span class="name">quarterround</span>.<span class="name">quarterround_is_left_invariant&#x27;</span></a></span>
-
-    <span class="decl_args"><span class="fn">(a : <a href="https://oxarbitrage.github.io/salsa20-docs/data/bitvec/core.html#bitvec">bitvec</a> <a href="https://oxarbitrage.github.io/salsa20-docs/params.html#params.word_len">params.word_len</a>)</span></span>&nbsp;<span class="decl_args">:</span>
-<div class="decl_type"><span class="fn"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.quarterround">quarterround.quarterround</a> <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#has_neg.neg" title="has_neg.neg">-</a>a, a, <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#has_neg.neg" title="has_neg.neg">-</a>a, a)</span></span> <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#eq" title="eq">=</a> <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#has_neg.neg" title="has_neg.neg">-</a>a, a, <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#has_neg.neg" title="has_neg.neg">-</a>a, a)</span></span></div>
-</div>
-
-
-
-
-
-<p>The full <code>quarterround</code> function produces <code>-a, a, -a, a</code> when fed with <code>-a, a, -a, a</code></p>
-
-
-
-
-
-
-
-
-
-
-
-</div>
-</div>
-    
-
-    
-        <div class="mod_doc">
-            <h2 id="known-variance-of-codequarterroundcode-if-diff-of-each-input-is-2³¹" class="markdown-heading">Known variance of <code>quarterround</code> if diff of each input is 2³¹ <a class="hover-link" href="#known-variance-of-codequarterroundcode-if-diff-of-each-input-is-2³¹">#</a></h2>
-<p><code>quarterround</code> function will only flip the most significant bit when two set of elements is
-provided where the difference (or xor) between each element is 2³¹.</p>
-
-        </div>
-    
-
-    
-        
-        
-<div class="decl" id="quarterround.craft">
-<div class="def">
-
-<div class="gh_link"><a href="">source</a></div>
-
-
-
-<div class="decl_header">
-    
-
-
-<span class="decl_kind">def</span>
-<span class="decl_name"><a class="break_within" href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.craft"><span class="name">quarterround</span>.<span class="name">craft</span></a></span>
-
-    <span class="decl_args"><span class="fn">(m : <a href="https://oxarbitrage.github.io/salsa20-docs/data/bitvec/core.html#bitvec">bitvec</a> <a href="https://oxarbitrage.github.io/salsa20-docs/params.html#params.word_len">params.word_len</a>)</span></span>&nbsp;<span class="decl_args">:</span>
-<div class="decl_type"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/data/bitvec/core.html#bitvec">bitvec</a> <a href="https://oxarbitrage.github.io/salsa20-docs/params.html#params.word_len">params.word_len</a></span></div>
-</div>
-
-
-
-
-
-<p>Define that x xor 2³¹ = flip msb bit only, leave the rest as is.</p>
-<h3 id="todo" class="markdown-heading">TODO: <a class="hover-link" href="#todo">#</a></h3>
-<p>This could be proved.</p>
-
-
-
-    <details>
-        <summary>Equations</summary>
-        <ul class="equations">
-            
-                <li class="equation"><span class="fn"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.craft">quarterround.craft</a> m</span> <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#eq" title="eq">=</a> <span class="fn"><span class="fn"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/init/logic.html#ite">ite</a> <span class="fn"><span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/data/vector.html#vector.head">vector.head</a> m</span> <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#eq" title="eq">=</a> <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#bool.ff">bool.ff</a>)</span></span> <span class="fn"><span class="fn"><span class="fn">((<a href="https://oxarbitrage.github.io/salsa20-docs/data/bitvec/core.html#bitvec.one">bitvec.one</a> 1)</span>.<a href="https://oxarbitrage.github.io/salsa20-docs/data/bitvec/core.html#bitvec.append" title="bitvec.append">append</a></span> <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/data/vector.html#vector.tail">vector.tail</a> m))</span></span></span> <span class="fn"><span class="fn"><span class="fn">((<a href="https://oxarbitrage.github.io/salsa20-docs/data/bitvec/core.html#bitvec.zero">bitvec.zero</a> 1)</span>.<a href="https://oxarbitrage.github.io/salsa20-docs/data/bitvec/core.html#bitvec.append" title="bitvec.append">append</a></span> <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/data/vector.html#vector.tail">vector.tail</a> m))</span></span></span></span></li>
-            
-        </ul>
-    </details>
-
-
-
-
-
-
-
-
-
-</div>
-</div>
-    
-
-    
-        
-        
-<div class="decl" id="quarterround.msb">
-<div class="def">
-
-<div class="gh_link"><a href="">source</a></div>
-
-
-
-<div class="decl_header">
-    
-
-
-<span class="decl_kind">def</span>
-<span class="decl_name"><a class="break_within" href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.msb"><span class="name">quarterround</span>.<span class="name">msb</span></a></span>
-
-    <span class="decl_args"><span class="fn">(m : <a href="https://oxarbitrage.github.io/salsa20-docs/data/bitvec/core.html#bitvec">bitvec</a> <a href="https://oxarbitrage.github.io/salsa20-docs/params.html#params.word_len">params.word_len</a>)</span></span>&nbsp;<span class="decl_args">:</span>
-<div class="decl_type"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#bool">bool</a></span></div>
-</div>
-
-
-
-
-
-<p>a shortcut to a vector head.</p>
-
-
-
-    <details>
-        <summary>Equations</summary>
-        <ul class="equations">
-            
-                <li class="equation"><span class="fn"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.msb">quarterround.msb</a> m</span> <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#eq" title="eq">=</a> <span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/data/vector.html#vector.head">vector.head</a> m</span></span></li>
-            
-        </ul>
-    </details>
-
-
-
-
-
-
-
-
-
-</div>
-</div>
-    
-
-    
-        
-        
-<div class="decl" id="quarterround.rest">
-<div class="def">
-
-<div class="gh_link"><a href="">source</a></div>
-
-
-
-<div class="decl_header">
-    
-
-
-<span class="decl_kind">def</span>
-<span class="decl_name"><a class="break_within" href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.rest"><span class="name">quarterround</span>.<span class="name">rest</span></a></span>
-
-    <span class="decl_args"><span class="fn">(m : <a href="https://oxarbitrage.github.io/salsa20-docs/data/bitvec/core.html#bitvec">bitvec</a> <a href="https://oxarbitrage.github.io/salsa20-docs/params.html#params.word_len">params.word_len</a>)</span></span>&nbsp;<span class="decl_args">:</span>
-<div class="decl_type"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/data/bitvec/core.html#bitvec">bitvec</a> <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/params.html#params.word_len">params.word_len</a> <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#has_sub.sub" title="has_sub.sub">-</a> 1)</span></span></div>
-</div>
-
-
-
-
-
-<p>a shortcut for a vector tail.</p>
-
-
-
-    <details>
-        <summary>Equations</summary>
-        <ul class="equations">
-            
-                <li class="equation"><span class="fn"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.rest">quarterround.rest</a> m</span> <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#eq" title="eq">=</a> <span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/data/vector.html#vector.tail">vector.tail</a> m</span></span></li>
-            
-        </ul>
-    </details>
-
-
-
-
-
-
-
-
-
-</div>
-</div>
-    
-
-    
-        
-        
-<div class="decl" id="quarterround.h_msb">
-<div class="constant">
-
-<div class="gh_link"><a href="">source</a></div>
-
-
-
-<div class="decl_header">
-    
-
-
-<span class="decl_kind">constant</span>
-<span class="decl_name"><a class="break_within" href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.h_msb"><span class="name">quarterround</span>.<span class="name">h_msb</span></a></span>
-
-    <span class="decl_args"><span class="fn">(m : <a href="https://oxarbitrage.github.io/salsa20-docs/data/bitvec/core.html#bitvec">bitvec</a> 32)</span></span>&nbsp;<span class="decl_args">:</span>
-<div class="decl_type"><span class="fn"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/data/vector.html#vector.head">vector.head</a> m</span> <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#eq" title="eq">=</a> <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#bool.ff">bool.ff</a></span></div>
-</div>
-
-
-
-
-
-<p>Lets suppose the msb of any uncrafted bitvec that we will send to quarterround is always <code>ff</code>.</p>
-<h3 id="todo" class="markdown-heading">TODO: <a class="hover-link" href="#todo">#</a></h3>
-<p>This does not need to be the case, everything should work in a very similar way if the head is 1
-as it will gets flipped to 0 but we do this for simplicity by now.
-Basically by restricting the msb to be 0 we are saying that the number is smaller than 2^31.</p>
-
-
-
-
-
-
-
-
-
-
-
-</div>
-</div>
-    
-
-    
-        
-        
-<div class="decl" id="quarterround.qrX_crafted">
-<div class="constant">
-
-<div class="gh_link"><a href="">source</a></div>
-
-
-
-<div class="decl_header">
-    
-
-
-<span class="decl_kind">constant</span>
-<span class="decl_name"><a class="break_within" href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.qrX_crafted"><span class="name">quarterround</span>.<span class="name">qrX_crafted</span></a></span>
-
-    <span class="decl_args"><span class="fn">(m n o p : <a href="https://oxarbitrage.github.io/salsa20-docs/data/bitvec/core.html#bitvec">bitvec</a> 32)</span></span>
-    <span class="decl_args"><span class="fn">(f : <span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/data/bitvec/core.html#bitvec">bitvec</a> <a href="https://oxarbitrage.github.io/salsa20-docs/params.html#params.word_len">params.word_len</a></span> → <span class="fn"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/data/bitvec/core.html#bitvec">bitvec</a> <a href="https://oxarbitrage.github.io/salsa20-docs/params.html#params.word_len">params.word_len</a></span> → <span class="fn"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/data/bitvec/core.html#bitvec">bitvec</a> <a href="https://oxarbitrage.github.io/salsa20-docs/params.html#params.word_len">params.word_len</a></span> → <span class="fn"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/data/bitvec/core.html#bitvec">bitvec</a> <a href="https://oxarbitrage.github.io/salsa20-docs/params.html#params.word_len">params.word_len</a></span> → <span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/data/bitvec/core.html#bitvec">bitvec</a> <a href="https://oxarbitrage.github.io/salsa20-docs/params.html#params.word_len">params.word_len</a></span></span></span></span>)</span></span>&nbsp;<span class="decl_args">:</span>
-<div class="decl_type"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn">f <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.craft">quarterround.craft</a> m)</span></span> <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.craft">quarterround.craft</a> n)</span></span> <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.craft">quarterround.craft</a> o)</span></span> <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.craft">quarterround.craft</a> p)</span></span> <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#eq" title="eq">=</a> <span class="fn"><span class="fn"><span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/data/bitvec/core.html#bitvec.one">bitvec.one</a> 1)</span>.<a href="https://oxarbitrage.github.io/salsa20-docs/data/bitvec/core.html#bitvec.append" title="bitvec.append">append</a></span> <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/data/vector.html#vector.tail">vector.tail</a> <span class="fn"><span class="fn"><span class="fn"><span class="fn">(f m</span> n</span> o</span> p))</span></span></span></span></div>
-</div>
-
-
-
-
-
-<p>Assumes that any qrX function that is feeded with crafted numbers will result in a head of 1
-and the rest or tail equal to the tail of the uncrafted number.</p>
-<h3 id="todo" class="markdown-heading">TODO: <a class="hover-link" href="#todo">#</a></h3>
-<p>This needs to be proved.</p>
-
-
-
-
-
-
-
-
-
-
-
-</div>
-</div>
-    
-
-    
-        
-        
-<div class="decl" id="quarterround.msb_of_one_append">
-<div class="constant">
-
-<div class="gh_link"><a href="">source</a></div>
-
-
-
-<div class="decl_header">
-    
-
-
-<span class="decl_kind">constant</span>
-<span class="decl_name"><a class="break_within" href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.msb_of_one_append"><span class="name">quarterround</span>.<span class="name">msb_of_one_append</span></a></span>
-
-    <span class="decl_args"><span class="fn">(tail_placeholder : <a href="https://oxarbitrage.github.io/salsa20-docs/data/bitvec/core.html#bitvec">bitvec</a> (<a href="https://oxarbitrage.github.io/salsa20-docs/params.html#params.word_len">params.word_len</a> <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#has_sub.sub" title="has_sub.sub">-</a> 1))</span></span>&nbsp;<span class="decl_args">:</span>
-<div class="decl_type"><span class="fn"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/data/vector.html#vector.head">vector.head</a> <span class="fn"><span class="fn"><span class="fn">((<a href="https://oxarbitrage.github.io/salsa20-docs/data/bitvec/core.html#bitvec.one">bitvec.one</a> 1)</span>.<a href="https://oxarbitrage.github.io/salsa20-docs/data/bitvec/core.html#bitvec.append" title="bitvec.append">append</a></span> tail_placeholder)</span></span> <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#eq" title="eq">=</a> <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#bool.tt">bool.tt</a></span></div>
-</div>
-
-
-
-
-
-<p>The head (msb) of anything that starts with a 1 and then stuff is appended should be always 1.</p>
-<h3 id="todo" class="markdown-heading">TODO: <a class="hover-link" href="#todo">#</a></h3>
-<p>Should be easy to prove ?</p>
-
-
-
-
-
-
-
-
-
-
-
-</div>
-</div>
-    
-
-    
-        
-        
-<div class="decl" id="quarterround.rest_of_one_append">
-<div class="constant">
-
-<div class="gh_link"><a href="">source</a></div>
-
-
-
-<div class="decl_header">
-    
-
-
-<span class="decl_kind">constant</span>
-<span class="decl_name"><a class="break_within" href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.rest_of_one_append"><span class="name">quarterround</span>.<span class="name">rest_of_one_append</span></a></span>
-
-    <span class="decl_args"><span class="fn">(m : <a href="https://oxarbitrage.github.io/salsa20-docs/data/bitvec/core.html#bitvec">bitvec</a> 32)</span></span>&nbsp;<span class="decl_args">:</span>
-<div class="decl_type"><span class="fn"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/data/vector.html#vector.tail">vector.tail</a> m</span> <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#eq" title="eq">=</a> <span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/data/vector.html#vector.tail">vector.tail</a> <span class="fn"><span class="fn"><span class="fn">((<a href="https://oxarbitrage.github.io/salsa20-docs/data/bitvec/core.html#bitvec.one">bitvec.one</a> 1)</span>.<a href="https://oxarbitrage.github.io/salsa20-docs/data/bitvec/core.html#bitvec.append" title="bitvec.append">append</a></span> <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/data/vector.html#vector.tail">vector.tail</a> m))</span></span></span></span></div>
-</div>
-
-
-
-
-
-<p>The rest of the bitvector where 1 gets appended with the tail of the bitvector is the tail of the bitvector.</p>
-<h3 id="todo" class="markdown-heading">TODO: <a class="hover-link" href="#todo">#</a></h3>
-<p>should be easy to prove ?</p>
-
-
-
-
-
-
-
-
-
-
-
-</div>
-</div>
-    
-
-    
-        
-        
-<div class="decl" id="quarterround.qrX_difference_is_carried">
-<div class="theorem">
-
-<div class="gh_link"><a href="">source</a></div>
-
-
-
-<div class="decl_header">
-    
-
-
-<span class="decl_kind">theorem</span>
-<span class="decl_name"><a class="break_within" href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.qrX_difference_is_carried"><span class="name">quarterround</span>.<span class="name">qrX_difference_is_carried</span></a></span>
-
-    <span class="decl_args"><span class="fn">(m n o p : <a href="https://oxarbitrage.github.io/salsa20-docs/data/bitvec/core.html#bitvec">bitvec</a> 32)</span></span>
-    <span class="decl_args"><span class="fn">(f : <span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/data/bitvec/core.html#bitvec">bitvec</a> <a href="https://oxarbitrage.github.io/salsa20-docs/params.html#params.word_len">params.word_len</a></span> → <span class="fn"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/data/bitvec/core.html#bitvec">bitvec</a> <a href="https://oxarbitrage.github.io/salsa20-docs/params.html#params.word_len">params.word_len</a></span> → <span class="fn"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/data/bitvec/core.html#bitvec">bitvec</a> <a href="https://oxarbitrage.github.io/salsa20-docs/params.html#params.word_len">params.word_len</a></span> → <span class="fn"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/data/bitvec/core.html#bitvec">bitvec</a> <a href="https://oxarbitrage.github.io/salsa20-docs/params.html#params.word_len">params.word_len</a></span> → <span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/data/bitvec/core.html#bitvec">bitvec</a> <a href="https://oxarbitrage.github.io/salsa20-docs/params.html#params.word_len">params.word_len</a></span></span></span></span>)</span></span>&nbsp;<span class="decl_args">:</span>
-<div class="decl_type"><span class="fn"><span class="fn"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.msb">quarterround.msb</a> <span class="fn"><span class="fn"><span class="fn"><span class="fn">(f m</span> n</span> o</span> p)</span></span> <a href="https://oxarbitrage.github.io/salsa20-docs/init/logic.html#ne" title="ne">≠</a> <span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.msb">quarterround.msb</a> <span class="fn"><span class="fn"><span class="fn"><span class="fn">(f <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.craft">quarterround.craft</a> m)</span></span> <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.craft">quarterround.craft</a> n)</span></span> <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.craft">quarterround.craft</a> o)</span></span> <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.craft">quarterround.craft</a> p))</span></span></span></span> <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#and" title="and">∧</a> <span class="fn"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.rest">quarterround.rest</a> <span class="fn"><span class="fn"><span class="fn"><span class="fn">(f m</span> n</span> o</span> p)</span></span> <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#eq" title="eq">=</a> <span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.rest">quarterround.rest</a> <span class="fn"><span class="fn"><span class="fn"><span class="fn">(f <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.craft">quarterround.craft</a> m)</span></span> <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.craft">quarterround.craft</a> n)</span></span> <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.craft">quarterround.craft</a> o)</span></span> <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.craft">quarterround.craft</a> p))</span></span></span></span></span></div>
-</div>
-
-
-
-
-
-<p>For any individual qrX function, when feeded with crafted data the difference is carried.</p>
-
-
-
-
-
-
-
-
-
-
-
-</div>
-</div>
-    
-
-    
-        
-        
-<div class="decl" id="quarterround.qr1_difference_is_carried">
-<div class="theorem">
-
-<div class="gh_link"><a href="">source</a></div>
-
-
-
-<div class="decl_header">
-    
-
-
-<span class="decl_kind">theorem</span>
-<span class="decl_name"><a class="break_within" href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.qr1_difference_is_carried"><span class="name">quarterround</span>.<span class="name">qr1_difference_is_carried</span></a></span>
-
-    <span class="decl_args"><span class="fn">(m n o p : <a href="https://oxarbitrage.github.io/salsa20-docs/data/bitvec/core.html#bitvec">bitvec</a> 32)</span></span>&nbsp;<span class="decl_args">:</span>
-<div class="decl_type"><span class="fn"><span class="fn"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.msb">quarterround.msb</a> <span class="fn"><span class="fn"><span class="fn"><span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.qr1">quarterround.qr1</a> m</span> n</span> o</span> p)</span></span> <a href="https://oxarbitrage.github.io/salsa20-docs/init/logic.html#ne" title="ne">≠</a> <span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.msb">quarterround.msb</a> <span class="fn"><span class="fn"><span class="fn"><span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.qr1">quarterround.qr1</a> <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.craft">quarterround.craft</a> m)</span></span> <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.craft">quarterround.craft</a> n)</span></span> <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.craft">quarterround.craft</a> o)</span></span> <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.craft">quarterround.craft</a> p))</span></span></span></span> <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#and" title="and">∧</a> <span class="fn"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.rest">quarterround.rest</a> <span class="fn"><span class="fn"><span class="fn"><span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.qr1">quarterround.qr1</a> m</span> n</span> o</span> p)</span></span> <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#eq" title="eq">=</a> <span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.rest">quarterround.rest</a> <span class="fn"><span class="fn"><span class="fn"><span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.qr1">quarterround.qr1</a> <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.craft">quarterround.craft</a> m)</span></span> <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.craft">quarterround.craft</a> n)</span></span> <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.craft">quarterround.craft</a> o)</span></span> <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.craft">quarterround.craft</a> p))</span></span></span></span></span></div>
-</div>
-
-
-
-
-
-<p><code>qr1</code> difference is carried when fed with crafted data.</p>
-
-
-
-
-
-
-
-
-
-
-
-</div>
-</div>
-    
-
-    
-        
-        
-<div class="decl" id="quarterround.qr2_difference_is_carried">
-<div class="theorem">
-
-<div class="gh_link"><a href="">source</a></div>
-
-
-
-<div class="decl_header">
-    
-
-
-<span class="decl_kind">theorem</span>
-<span class="decl_name"><a class="break_within" href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.qr2_difference_is_carried"><span class="name">quarterround</span>.<span class="name">qr2_difference_is_carried</span></a></span>
-
-    <span class="decl_args"><span class="fn">(m n o p : <a href="https://oxarbitrage.github.io/salsa20-docs/data/bitvec/core.html#bitvec">bitvec</a> 32)</span></span>&nbsp;<span class="decl_args">:</span>
-<div class="decl_type"><span class="fn"><span class="fn"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.msb">quarterround.msb</a> <span class="fn"><span class="fn"><span class="fn"><span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.qr2">quarterround.qr2</a> m</span> n</span> o</span> p)</span></span> <a href="https://oxarbitrage.github.io/salsa20-docs/init/logic.html#ne" title="ne">≠</a> <span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.msb">quarterround.msb</a> <span class="fn"><span class="fn"><span class="fn"><span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.qr2">quarterround.qr2</a> <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.craft">quarterround.craft</a> m)</span></span> <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.craft">quarterround.craft</a> n)</span></span> <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.craft">quarterround.craft</a> o)</span></span> <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.craft">quarterround.craft</a> p))</span></span></span></span> <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#and" title="and">∧</a> <span class="fn"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.rest">quarterround.rest</a> <span class="fn"><span class="fn"><span class="fn"><span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.qr2">quarterround.qr2</a> m</span> n</span> o</span> p)</span></span> <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#eq" title="eq">=</a> <span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.rest">quarterround.rest</a> <span class="fn"><span class="fn"><span class="fn"><span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.qr2">quarterround.qr2</a> <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.craft">quarterround.craft</a> m)</span></span> <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.craft">quarterround.craft</a> n)</span></span> <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.craft">quarterround.craft</a> o)</span></span> <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.craft">quarterround.craft</a> p))</span></span></span></span></span></div>
-</div>
-
-
-
-
-
-<p><code>qr2</code> difference is carried when fed with crafted data.</p>
-
-
-
-
-
-
-
-
-
-
-
-</div>
-</div>
-    
-
-    
-        
-        
-<div class="decl" id="quarterround.qr3_difference_is_carried">
-<div class="theorem">
-
-<div class="gh_link"><a href="">source</a></div>
-
-
-
-<div class="decl_header">
-    
-
-
-<span class="decl_kind">theorem</span>
-<span class="decl_name"><a class="break_within" href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.qr3_difference_is_carried"><span class="name">quarterround</span>.<span class="name">qr3_difference_is_carried</span></a></span>
-
-    <span class="decl_args"><span class="fn">(m n o p : <a href="https://oxarbitrage.github.io/salsa20-docs/data/bitvec/core.html#bitvec">bitvec</a> 32)</span></span>&nbsp;<span class="decl_args">:</span>
-<div class="decl_type"><span class="fn"><span class="fn"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.msb">quarterround.msb</a> <span class="fn"><span class="fn"><span class="fn"><span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.qr3">quarterround.qr3</a> m</span> n</span> o</span> p)</span></span> <a href="https://oxarbitrage.github.io/salsa20-docs/init/logic.html#ne" title="ne">≠</a> <span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.msb">quarterround.msb</a> <span class="fn"><span class="fn"><span class="fn"><span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.qr3">quarterround.qr3</a> <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.craft">quarterround.craft</a> m)</span></span> <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.craft">quarterround.craft</a> n)</span></span> <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.craft">quarterround.craft</a> o)</span></span> <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.craft">quarterround.craft</a> p))</span></span></span></span> <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#and" title="and">∧</a> <span class="fn"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.rest">quarterround.rest</a> <span class="fn"><span class="fn"><span class="fn"><span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.qr3">quarterround.qr3</a> m</span> n</span> o</span> p)</span></span> <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#eq" title="eq">=</a> <span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.rest">quarterround.rest</a> <span class="fn"><span class="fn"><span class="fn"><span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.qr3">quarterround.qr3</a> <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.craft">quarterround.craft</a> m)</span></span> <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.craft">quarterround.craft</a> n)</span></span> <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.craft">quarterround.craft</a> o)</span></span> <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.craft">quarterround.craft</a> p))</span></span></span></span></span></div>
-</div>
-
-
-
-
-
-<p><code>qr3</code> difference is carried when fed with crafted data.</p>
-
-
-
-
-
-
-
-
-
-
-
-</div>
-</div>
-    
-
-    
-        
-        
-<div class="decl" id="quarterround.qr0_difference_is_carried">
-<div class="theorem">
-
-<div class="gh_link"><a href="">source</a></div>
-
-
-
-<div class="decl_header">
-    
-
-
-<span class="decl_kind">theorem</span>
-<span class="decl_name"><a class="break_within" href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.qr0_difference_is_carried"><span class="name">quarterround</span>.<span class="name">qr0_difference_is_carried</span></a></span>
-
-    <span class="decl_args"><span class="fn">(m n o p : <a href="https://oxarbitrage.github.io/salsa20-docs/data/bitvec/core.html#bitvec">bitvec</a> 32)</span></span>&nbsp;<span class="decl_args">:</span>
-<div class="decl_type"><span class="fn"><span class="fn"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.msb">quarterround.msb</a> <span class="fn"><span class="fn"><span class="fn"><span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.qr0">quarterround.qr0</a> m</span> n</span> o</span> p)</span></span> <a href="https://oxarbitrage.github.io/salsa20-docs/init/logic.html#ne" title="ne">≠</a> <span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.msb">quarterround.msb</a> <span class="fn"><span class="fn"><span class="fn"><span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.qr0">quarterround.qr0</a> <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.craft">quarterround.craft</a> m)</span></span> <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.craft">quarterround.craft</a> n)</span></span> <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.craft">quarterround.craft</a> o)</span></span> <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.craft">quarterround.craft</a> p))</span></span></span></span> <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#and" title="and">∧</a> <span class="fn"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.rest">quarterround.rest</a> <span class="fn"><span class="fn"><span class="fn"><span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.qr0">quarterround.qr0</a> m</span> n</span> o</span> p)</span></span> <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#eq" title="eq">=</a> <span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.rest">quarterround.rest</a> <span class="fn"><span class="fn"><span class="fn"><span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.qr0">quarterround.qr0</a> <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.craft">quarterround.craft</a> m)</span></span> <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.craft">quarterround.craft</a> n)</span></span> <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.craft">quarterround.craft</a> o)</span></span> <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.craft">quarterround.craft</a> p))</span></span></span></span></span></div>
-</div>
-
-
-
-
-
-<p><code>qr0</code> difference is carried when fed with crafted data.</p>
-
-
-
-
-
-
-
-
-
-
-
-</div>
-</div>
-    
-
-    
-        
-        
-<div class="decl" id="quarterround.qrX_after_quarterround_difference_is_carried">
-<div class="theorem">
-
-<div class="gh_link"><a href="">source</a></div>
-
-
-
-<div class="decl_header">
-    
-
-
-<span class="decl_kind">theorem</span>
-<span class="decl_name"><a class="break_within" href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.qrX_after_quarterround_difference_is_carried"><span class="name">quarterround</span>.<span class="name">qrX_after_quarterround_difference_is_carried</span></a></span>
-
-    <span class="decl_args"><span class="fn">(m n o p : <a href="https://oxarbitrage.github.io/salsa20-docs/data/bitvec/core.html#bitvec">bitvec</a> 32)</span></span>
-    <span class="decl_args"><span class="fn">(m' n' o' p' : <a href="https://oxarbitrage.github.io/salsa20-docs/data/bitvec/core.html#bitvec">bitvec</a> <a href="https://oxarbitrage.github.io/salsa20-docs/params.html#params.word_len">params.word_len</a>)</span></span>
-    <span class="decl_args"><span class="fn">(f : <span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/data/bitvec/core.html#bitvec">bitvec</a> <a href="https://oxarbitrage.github.io/salsa20-docs/params.html#params.word_len">params.word_len</a></span> → <span class="fn"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/data/bitvec/core.html#bitvec">bitvec</a> <a href="https://oxarbitrage.github.io/salsa20-docs/params.html#params.word_len">params.word_len</a></span> → <span class="fn"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/data/bitvec/core.html#bitvec">bitvec</a> <a href="https://oxarbitrage.github.io/salsa20-docs/params.html#params.word_len">params.word_len</a></span> → <span class="fn"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/data/bitvec/core.html#bitvec">bitvec</a> <a href="https://oxarbitrage.github.io/salsa20-docs/params.html#params.word_len">params.word_len</a></span> → <span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/data/bitvec/core.html#bitvec">bitvec</a> <a href="https://oxarbitrage.github.io/salsa20-docs/params.html#params.word_len">params.word_len</a></span></span></span></span>)</span></span>
-    <span class="decl_args"><span class="fn">(h1 : m' <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#eq" title="eq">=</a> <span class="fn"><span class="fn"><span class="fn"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.qr0">quarterround.qr0</a> m</span> n</span> o</span> p</span>)</span></span>
-    <span class="decl_args"><span class="fn">(h2 : n' <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#eq" title="eq">=</a> <span class="fn"><span class="fn"><span class="fn"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.qr1">quarterround.qr1</a> m</span> n</span> o</span> p</span>)</span></span>
-    <span class="decl_args"><span class="fn">(h3 : o' <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#eq" title="eq">=</a> <span class="fn"><span class="fn"><span class="fn"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.qr2">quarterround.qr2</a> m</span> n</span> o</span> p</span>)</span></span>
-    <span class="decl_args"><span class="fn">(h4 : p' <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#eq" title="eq">=</a> <span class="fn"><span class="fn"><span class="fn"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.qr3">quarterround.qr3</a> m</span> n</span> o</span> p</span>)</span></span>
-    <span class="decl_args"><span class="fn">(h5 : <span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.craft">quarterround.craft</a> m'</span> <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#eq" title="eq">=</a> <span class="fn"><span class="fn"><span class="fn"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.qr0">quarterround.qr0</a> <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.craft">quarterround.craft</a> m)</span></span> <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.craft">quarterround.craft</a> n)</span></span> <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.craft">quarterround.craft</a> o)</span></span> <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.craft">quarterround.craft</a> p)</span></span>)</span></span>
-    <span class="decl_args"><span class="fn">(h6 : <span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.craft">quarterround.craft</a> n'</span> <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#eq" title="eq">=</a> <span class="fn"><span class="fn"><span class="fn"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.qr1">quarterround.qr1</a> <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.craft">quarterround.craft</a> m)</span></span> <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.craft">quarterround.craft</a> n)</span></span> <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.craft">quarterround.craft</a> o)</span></span> <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.craft">quarterround.craft</a> p)</span></span>)</span></span>
-    <span class="decl_args"><span class="fn">(h7 : <span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.craft">quarterround.craft</a> o'</span> <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#eq" title="eq">=</a> <span class="fn"><span class="fn"><span class="fn"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.qr2">quarterround.qr2</a> <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.craft">quarterround.craft</a> m)</span></span> <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.craft">quarterround.craft</a> n)</span></span> <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.craft">quarterround.craft</a> o)</span></span> <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.craft">quarterround.craft</a> p)</span></span>)</span></span>
-    <span class="decl_args"><span class="fn">(h8 : <span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.craft">quarterround.craft</a> p'</span> <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#eq" title="eq">=</a> <span class="fn"><span class="fn"><span class="fn"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.qr3">quarterround.qr3</a> <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.craft">quarterround.craft</a> m)</span></span> <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.craft">quarterround.craft</a> n)</span></span> <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.craft">quarterround.craft</a> o)</span></span> <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.craft">quarterround.craft</a> p)</span></span>)</span></span>&nbsp;<span class="decl_args">:</span>
-<div class="decl_type"><span class="fn"><span class="fn"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.msb">quarterround.msb</a> <span class="fn"><span class="fn"><span class="fn"><span class="fn">(f <span class="fn"><span class="fn"><span class="fn"><span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.qr0">quarterround.qr0</a> m</span> n</span> o</span> p)</span></span> <span class="fn"><span class="fn"><span class="fn"><span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.qr1">quarterround.qr1</a> m</span> n</span> o</span> p)</span></span> <span class="fn"><span class="fn"><span class="fn"><span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.qr2">quarterround.qr2</a> m</span> n</span> o</span> p)</span></span> <span class="fn"><span class="fn"><span class="fn"><span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.qr3">quarterround.qr3</a> m</span> n</span> o</span> p))</span></span></span> <a href="https://oxarbitrage.github.io/salsa20-docs/init/logic.html#ne" title="ne">≠</a> <span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.msb">quarterround.msb</a> <span class="fn"><span class="fn"><span class="fn"><span class="fn">(f <span class="fn"><span class="fn"><span class="fn"><span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.qr0">quarterround.qr0</a> <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.craft">quarterround.craft</a> m)</span></span> <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.craft">quarterround.craft</a> n)</span></span> <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.craft">quarterround.craft</a> o)</span></span> <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.craft">quarterround.craft</a> p))</span></span></span> <span class="fn"><span class="fn"><span class="fn"><span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.qr1">quarterround.qr1</a> <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.craft">quarterround.craft</a> m)</span></span> <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.craft">quarterround.craft</a> n)</span></span> <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.craft">quarterround.craft</a> o)</span></span> <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.craft">quarterround.craft</a> p))</span></span></span> <span class="fn"><span class="fn"><span class="fn"><span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.qr2">quarterround.qr2</a> <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.craft">quarterround.craft</a> m)</span></span> <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.craft">quarterround.craft</a> n)</span></span> <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.craft">quarterround.craft</a> o)</span></span> <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.craft">quarterround.craft</a> p))</span></span></span> <span class="fn"><span class="fn"><span class="fn"><span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.qr3">quarterround.qr3</a> <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.craft">quarterround.craft</a> m)</span></span> <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.craft">quarterround.craft</a> n)</span></span> <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.craft">quarterround.craft</a> o)</span></span> <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.craft">quarterround.craft</a> p)))</span></span></span></span></span> <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#and" title="and">∧</a> <span class="fn"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.rest">quarterround.rest</a> <span class="fn"><span class="fn"><span class="fn"><span class="fn">(f <span class="fn"><span class="fn"><span class="fn"><span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.qr0">quarterround.qr0</a> m</span> n</span> o</span> p)</span></span> <span class="fn"><span class="fn"><span class="fn"><span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.qr1">quarterround.qr1</a> m</span> n</span> o</span> p)</span></span> <span class="fn"><span class="fn"><span class="fn"><span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.qr2">quarterround.qr2</a> m</span> n</span> o</span> p)</span></span> <span class="fn"><span class="fn"><span class="fn"><span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.qr3">quarterround.qr3</a> m</span> n</span> o</span> p))</span></span></span> <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#eq" title="eq">=</a> <span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.rest">quarterround.rest</a> <span class="fn"><span class="fn"><span class="fn"><span class="fn">(f <span class="fn"><span class="fn"><span class="fn"><span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.qr0">quarterround.qr0</a> <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.craft">quarterround.craft</a> m)</span></span> <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.craft">quarterround.craft</a> n)</span></span> <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.craft">quarterround.craft</a> o)</span></span> <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.craft">quarterround.craft</a> p))</span></span></span> <span class="fn"><span class="fn"><span class="fn"><span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.qr1">quarterround.qr1</a> <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.craft">quarterround.craft</a> m)</span></span> <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.craft">quarterround.craft</a> n)</span></span> <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.craft">quarterround.craft</a> o)</span></span> <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.craft">quarterround.craft</a> p))</span></span></span> <span class="fn"><span class="fn"><span class="fn"><span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.qr2">quarterround.qr2</a> <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.craft">quarterround.craft</a> m)</span></span> <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.craft">quarterround.craft</a> n)</span></span> <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.craft">quarterround.craft</a> o)</span></span> <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.craft">quarterround.craft</a> p))</span></span></span> <span class="fn"><span class="fn"><span class="fn"><span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.qr3">quarterround.qr3</a> <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.craft">quarterround.craft</a> m)</span></span> <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.craft">quarterround.craft</a> n)</span></span> <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.craft">quarterround.craft</a> o)</span></span> <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.craft">quarterround.craft</a> p)))</span></span></span></span></span></span></div>
-</div>
-
-
-
-
-
-<p>Proves that any <code>qrX</code> applied after <code>quarterrround</code> carries the difference.</p>
-
-
-
-
-
-
-
-
-
-
-
-</div>
-</div>
-    
-
-    
-        
-        
-<div class="decl" id="quarterround.craft_distrib">
-<div class="axiom">
-
-<div class="gh_link"><a href="">source</a></div>
-
-
-
-<div class="decl_header">
-    
-
-
-<span class="decl_kind">axiom</span>
-<span class="decl_name"><a class="break_within" href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.craft_distrib"><span class="name">quarterround</span>.<span class="name">craft_distrib</span></a></span>
-
-    <span class="decl_args"><span class="fn">(m n o p : <a href="https://oxarbitrage.github.io/salsa20-docs/data/bitvec/core.html#bitvec">bitvec</a> 32)</span></span>
-    <span class="decl_args"><span class="fn">(f : <span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/data/bitvec/core.html#bitvec">bitvec</a> <a href="https://oxarbitrage.github.io/salsa20-docs/params.html#params.word_len">params.word_len</a></span> → <span class="fn"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/data/bitvec/core.html#bitvec">bitvec</a> <a href="https://oxarbitrage.github.io/salsa20-docs/params.html#params.word_len">params.word_len</a></span> → <span class="fn"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/data/bitvec/core.html#bitvec">bitvec</a> <a href="https://oxarbitrage.github.io/salsa20-docs/params.html#params.word_len">params.word_len</a></span> → <span class="fn"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/data/bitvec/core.html#bitvec">bitvec</a> <a href="https://oxarbitrage.github.io/salsa20-docs/params.html#params.word_len">params.word_len</a></span> → <span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/data/bitvec/core.html#bitvec">bitvec</a> <a href="https://oxarbitrage.github.io/salsa20-docs/params.html#params.word_len">params.word_len</a></span></span></span></span>)</span></span>&nbsp;<span class="decl_args">:</span>
-<div class="decl_type"><span class="fn"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.craft">quarterround.craft</a> <span class="fn"><span class="fn"><span class="fn"><span class="fn">(f m</span> n</span> o</span> p)</span></span> <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#eq" title="eq">=</a> <span class="fn"><span class="fn"><span class="fn"><span class="fn">f <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.craft">quarterround.craft</a> m)</span></span> <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.craft">quarterround.craft</a> n)</span></span> <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.craft">quarterround.craft</a> o)</span></span> <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.craft">quarterround.craft</a> p)</span></span></span></div>
-</div>
-
-
-
-
-
-<p>Distributive property of <code>craft</code></p>
-
-
-
-
-
-
-
-
-
-
-
-</div>
-</div>
-    
-
-    
-        
-        
-<div class="decl" id="quarterround.quarterround_difference_is_carried">
-<div class="theorem">
-
-<div class="gh_link"><a href="">source</a></div>
-
-
-
-<div class="decl_header">
-    
-
-
-<span class="decl_kind">theorem</span>
-<span class="decl_name"><a class="break_within" href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.quarterround_difference_is_carried"><span class="name">quarterround</span>.<span class="name">quarterround_difference_is_carried</span></a></span>
-
-    <span class="decl_args"><span class="fn">(m n o p : <a href="https://oxarbitrage.github.io/salsa20-docs/data/bitvec/core.html#bitvec">bitvec</a> 32)</span></span>&nbsp;<span class="decl_args">:</span>
-<div class="decl_type"><span class="fn"><span class="fn"><span class="fn"><span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.msb">quarterround.msb</a> <span class="fn"><span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.quarterround">quarterround.quarterround</a> <span class="fn">(m, n, o, p))</span></span>.<a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod.fst" title="prod.fst">fst</a></span></span> <a href="https://oxarbitrage.github.io/salsa20-docs/init/logic.html#ne" title="ne">≠</a> <span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.msb">quarterround.msb</a> <span class="fn"><span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.quarterround">quarterround.quarterround</a> <span class="fn"><span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.craft">quarterround.craft</a> m</span>, <span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.craft">quarterround.craft</a> n</span>, <span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.craft">quarterround.craft</a> o</span>, <span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.craft">quarterround.craft</a> p))</span></span></span>.<a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod.fst" title="prod.fst">fst</a></span></span></span> <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#and" title="and">∧</a> <span class="fn"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.rest">quarterround.rest</a> <span class="fn"><span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.quarterround">quarterround.quarterround</a> <span class="fn">(m, n, o, p))</span></span>.<a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod.fst" title="prod.fst">fst</a></span></span> <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#eq" title="eq">=</a> <span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.rest">quarterround.rest</a> <span class="fn"><span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.quarterround">quarterround.quarterround</a> <span class="fn"><span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.craft">quarterround.craft</a> m</span>, <span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.craft">quarterround.craft</a> n</span>, <span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.craft">quarterround.craft</a> o</span>, <span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.craft">quarterround.craft</a> p))</span></span></span>.<a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod.fst" title="prod.fst">fst</a>)</span></span></span></span> <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#and" title="and">∧</a> <span class="fn"><span class="fn"><span class="fn"><span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.msb">quarterround.msb</a> <span class="fn"><span class="fn"><span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.quarterround">quarterround.quarterround</a> <span class="fn">(m, n, o, p))</span></span>.<a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod.snd" title="prod.snd">snd</a></span>.<a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod.fst" title="prod.fst">fst</a></span></span> <a href="https://oxarbitrage.github.io/salsa20-docs/init/logic.html#ne" title="ne">≠</a> <span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.msb">quarterround.msb</a> <span class="fn"><span class="fn"><span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.quarterround">quarterround.quarterround</a> <span class="fn"><span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.craft">quarterround.craft</a> m</span>, <span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.craft">quarterround.craft</a> n</span>, <span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.craft">quarterround.craft</a> o</span>, <span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.craft">quarterround.craft</a> p))</span></span></span>.<a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod.snd" title="prod.snd">snd</a></span>.<a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod.fst" title="prod.fst">fst</a></span></span></span> <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#and" title="and">∧</a> <span class="fn"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.rest">quarterround.rest</a> <span class="fn"><span class="fn"><span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.quarterround">quarterround.quarterround</a> <span class="fn">(m, n, o, p))</span></span>.<a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod.snd" title="prod.snd">snd</a></span>.<a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod.fst" title="prod.fst">fst</a></span></span> <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#eq" title="eq">=</a> <span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.rest">quarterround.rest</a> <span class="fn"><span class="fn"><span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.quarterround">quarterround.quarterround</a> <span class="fn"><span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.craft">quarterround.craft</a> m</span>, <span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.craft">quarterround.craft</a> n</span>, <span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.craft">quarterround.craft</a> o</span>, <span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.craft">quarterround.craft</a> p))</span></span></span>.<a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod.snd" title="prod.snd">snd</a></span>.<a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod.fst" title="prod.fst">fst</a>)</span></span></span></span> <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#and" title="and">∧</a> <span class="fn"><span class="fn"><span class="fn"><span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.msb">quarterround.msb</a> <span class="fn"><span class="fn"><span class="fn"><span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.quarterround">quarterround.quarterround</a> <span class="fn">(m, n, o, p))</span></span>.<a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod.snd" title="prod.snd">snd</a></span>.<a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod.snd" title="prod.snd">snd</a></span>.<a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod.fst" title="prod.fst">fst</a></span></span> <a href="https://oxarbitrage.github.io/salsa20-docs/init/logic.html#ne" title="ne">≠</a> <span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.msb">quarterround.msb</a> <span class="fn"><span class="fn"><span class="fn"><span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.quarterround">quarterround.quarterround</a> <span class="fn"><span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.craft">quarterround.craft</a> m</span>, <span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.craft">quarterround.craft</a> n</span>, <span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.craft">quarterround.craft</a> o</span>, <span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.craft">quarterround.craft</a> p))</span></span></span>.<a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod.snd" title="prod.snd">snd</a></span>.<a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod.snd" title="prod.snd">snd</a></span>.<a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod.fst" title="prod.fst">fst</a></span></span></span> <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#and" title="and">∧</a> <span class="fn"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.rest">quarterround.rest</a> <span class="fn"><span class="fn"><span class="fn"><span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.quarterround">quarterround.quarterround</a> <span class="fn">(m, n, o, p))</span></span>.<a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod.snd" title="prod.snd">snd</a></span>.<a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod.snd" title="prod.snd">snd</a></span>.<a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod.fst" title="prod.fst">fst</a></span></span> <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#eq" title="eq">=</a> <span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.rest">quarterround.rest</a> <span class="fn"><span class="fn"><span class="fn"><span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.quarterround">quarterround.quarterround</a> <span class="fn"><span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.craft">quarterround.craft</a> m</span>, <span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.craft">quarterround.craft</a> n</span>, <span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.craft">quarterround.craft</a> o</span>, <span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.craft">quarterround.craft</a> p))</span></span></span>.<a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod.snd" title="prod.snd">snd</a></span>.<a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod.snd" title="prod.snd">snd</a></span>.<a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod.fst" title="prod.fst">fst</a>)</span></span></span></span> <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#and" title="and">∧</a> <span class="fn"><span class="fn"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.msb">quarterround.msb</a> <span class="fn"><span class="fn"><span class="fn"><span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.quarterround">quarterround.quarterround</a> <span class="fn">(m, n, o, p))</span></span>.<a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod.snd" title="prod.snd">snd</a></span>.<a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod.snd" title="prod.snd">snd</a></span>.<a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod.snd" title="prod.snd">snd</a></span></span> <a href="https://oxarbitrage.github.io/salsa20-docs/init/logic.html#ne" title="ne">≠</a> <span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.msb">quarterround.msb</a> <span class="fn"><span class="fn"><span class="fn"><span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.quarterround">quarterround.quarterround</a> <span class="fn"><span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.craft">quarterround.craft</a> m</span>, <span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.craft">quarterround.craft</a> n</span>, <span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.craft">quarterround.craft</a> o</span>, <span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.craft">quarterround.craft</a> p))</span></span></span>.<a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod.snd" title="prod.snd">snd</a></span>.<a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod.snd" title="prod.snd">snd</a></span>.<a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod.snd" title="prod.snd">snd</a></span></span></span> <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#and" title="and">∧</a> <span class="fn"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.rest">quarterround.rest</a> <span class="fn"><span class="fn"><span class="fn"><span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.quarterround">quarterround.quarterround</a> <span class="fn">(m, n, o, p))</span></span>.<a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod.snd" title="prod.snd">snd</a></span>.<a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod.snd" title="prod.snd">snd</a></span>.<a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod.snd" title="prod.snd">snd</a></span></span> <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#eq" title="eq">=</a> <span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.rest">quarterround.rest</a> <span class="fn"><span class="fn"><span class="fn"><span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.quarterround">quarterround.quarterround</a> <span class="fn"><span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.craft">quarterround.craft</a> m</span>, <span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.craft">quarterround.craft</a> n</span>, <span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.craft">quarterround.craft</a> o</span>, <span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.craft">quarterround.craft</a> p))</span></span></span>.<a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod.snd" title="prod.snd">snd</a></span>.<a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod.snd" title="prod.snd">snd</a></span>.<a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod.snd" title="prod.snd">snd</a></span></span></span></span></span></span></span></div>
-</div>
-
-
-
-
-
-<p>Full <code>quarterround</code> carries the difference when fed with crafted data.</p>
+<p>The inidivudal pieces of the <code>quarterround</code> function are all invertible.</p>
 
 
 

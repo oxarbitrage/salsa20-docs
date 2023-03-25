@@ -8,11 +8,11 @@
     <title>salsa20 / examples.rowround - salsa20 docs</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="" />
+    <meta name="description" content="Example 1 :: “rowround(0x00000001, 0x00000000, 0x00000000, 0x00000000, 0x00000001, 0x00000000, 0x00000000, 0x00000000, 0x00000001, 0x00000000, 0x00000000, 0x00000000, 0x00000001, 0x00000000,…" />
     
     <meta property="og:title" content="salsa20 / examples.rowround - salsa20 docs">
     <meta property="og:site_name" content="salsa20 for Lean - API documentation">
-    <meta property="og:description" content="">
+    <meta property="og:description" content="Example 1 :: “rowround(0x00000001, 0x00000000, 0x00000000, 0x00000000, 0x00000001, 0x00000000, 0x00000000, 0x00000000, 0x00000001, 0x00000000, 0x00000000, 0x00000000, 0x00000001, 0x00000000,…">
     <meta property="og:image" content="https://oxarbitrage.github.io/salsa20-docs/meta-og.png">
     <meta name="twitter:card" content="summary">
     <script src="https://oxarbitrage.github.io/salsa20-docs/color_scheme.js"></script>
@@ -45,6 +45,9 @@
             <li><a href="https://oxarbitrage.github.io/salsa20-docs/init/default.html">
                 init.default</a></li>
         
+            <li><a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/category/basic.html">
+                category_theory.category.basic</a></li>
+        
             <li><a href="https://oxarbitrage.github.io/salsa20-docs/rowround.html">
                 rowround</a></li>
         </ul>
@@ -56,11 +59,15 @@
 </div>
 
 
-    <div class="nav_link"><a class="break_within" href="#rowround_examples.input"><span class="name">rowround_examples</span>.<span class="name">input</span></a></div>
+    <div class="nav_link"><a class="break_within" href="#rowround_examples.example1_input"><span class="name">rowround_examples</span>.<span class="name">example1_input</span></a></div>
+
+    <div class="nav_link"><a class="break_within" href="#rowround_examples.example1_output"><span class="name">rowround_examples</span>.<span class="name">example1_output</span></a></div>
+
+    <div class="nav_link"><a class="break_within" href="#rowround_examples.example1_rowround_single_0"><span class="name">rowround_examples</span>.<span class="name">example1_rowround_single_0</span></a></div>
+
+    <div class="nav_link"><a class="break_within" href="#rowround_examples.example1_rowround_single_1"><span class="name">rowround_examples</span>.<span class="name">example1_rowround_single_1</span></a></div>
 
     <div class="nav_link"><a class="break_within" href="#rowround_examples.input'"><span class="name">rowround_examples</span>.<span class="name">input&#x27;</span></a></div>
-
-    <div class="nav_link"><a class="break_within" href="#rowround_examples.output"><span class="name">rowround_examples</span>.<span class="name">output</span></a></div>
 
     <div class="nav_link"><a class="break_within" href="#rowround_examples.output'"><span class="name">rowround_examples</span>.<span class="name">output&#x27;</span></a></div>
 
@@ -71,9 +78,26 @@
     
 
     
+        <div class="mod_doc">
+            <h2 id="example-1-" class="markdown-heading">Example 1 : <a class="hover-link" href="#example-1-">#</a></h2>
+<blockquote>
+<p>rowround(0x00000001, 0x00000000, 0x00000000, 0x00000000,
+0x00000001, 0x00000000, 0x00000000, 0x00000000,
+0x00000001, 0x00000000, 0x00000000, 0x00000000,
+0x00000001, 0x00000000, 0x00000000, 0x00000000)
+= (0x08008145, 0x00000080, 0x00010200, 0x20500000,
+0x20100001, 0x00048044, 0x00000080, 0x00010000,
+0x00000001, 0x00002000, 0x80040000, 0x00000000,
+0x00000001, 0x00000200, 0x00402000, 0x88000100)</p>
+</blockquote>
+
+        </div>
+    
+
+    
         
         
-<div class="decl" id="rowround_examples.input">
+<div class="decl" id="rowround_examples.example1_input">
 <div class="def">
 
 <div class="gh_link"><a href="">source</a></div>
@@ -85,8 +109,9 @@
 
 
 <span class="decl_kind">def</span>
-<span class="decl_name"><a class="break_within" href="https://oxarbitrage.github.io/salsa20-docs/examples/rowround.html#rowround_examples.input"><span class="name">rowround_examples</span>.<span class="name">input</span></a></span>
-&nbsp;<span class="decl_args">:</span>
+<span class="decl_name"><a class="break_within" href="https://oxarbitrage.github.io/salsa20-docs/examples/rowround.html#rowround_examples.example1_input"><span class="name">rowround_examples</span>.<span class="name">example1_input</span></a></span>
+
+    <span class="impl_arg"><span class="decl_args"><span class="fn">[<a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/category/basic.html#category_theory.category">category_theory.category</a> <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/data/bitvec/core.html#bitvec">bitvec</a> <a href="https://oxarbitrage.github.io/salsa20-docs/params.html#params.word_len">params.word_len</a>)</span>]</span></span></span>&nbsp;<span class="decl_args">:</span>
 <div class="decl_type"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod" title="prod">matrixType</a></span></div>
 </div>
 
@@ -101,7 +126,7 @@
         <summary>Equations</summary>
         <ul class="equations">
             
-                <li class="equation"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/examples/rowround.html#rowround_examples.input">rowround_examples.input</a> <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#eq" title="eq">=</a> <span class="fn"><span class="fn">((1, 0, 0, 0)</span>, <span class="fn">(1, 0, 0, 0)</span>, <span class="fn">(1, 0, 0, 0)</span>, 1, 0, 0, 0)</span></span></li>
+                <li class="equation"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/examples/rowround.html#rowround_examples.example1_input">rowround_examples.example1_input</a> <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#eq" title="eq">=</a> <span class="fn"><span class="fn">((1, 0, 0, 0)</span>, <span class="fn">(1, 0, 0, 0)</span>, <span class="fn">(1, 0, 0, 0)</span>, 1, 0, 0, 0)</span></span></li>
             
         </ul>
     </details>
@@ -121,7 +146,7 @@
     
         
         
-<div class="decl" id="rowround_examples.output">
+<div class="decl" id="rowround_examples.example1_output">
 <div class="def">
 
 <div class="gh_link"><a href="">source</a></div>
@@ -133,8 +158,9 @@
 
 
 <span class="decl_kind">def</span>
-<span class="decl_name"><a class="break_within" href="https://oxarbitrage.github.io/salsa20-docs/examples/rowround.html#rowround_examples.output"><span class="name">rowround_examples</span>.<span class="name">output</span></a></span>
-&nbsp;<span class="decl_args">:</span>
+<span class="decl_name"><a class="break_within" href="https://oxarbitrage.github.io/salsa20-docs/examples/rowround.html#rowround_examples.example1_output"><span class="name">rowround_examples</span>.<span class="name">example1_output</span></a></span>
+
+    <span class="impl_arg"><span class="decl_args"><span class="fn">[<a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/category/basic.html#category_theory.category">category_theory.category</a> <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/data/bitvec/core.html#bitvec">bitvec</a> <a href="https://oxarbitrage.github.io/salsa20-docs/params.html#params.word_len">params.word_len</a>)</span>]</span></span></span>&nbsp;<span class="decl_args">:</span>
 <div class="decl_type"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod" title="prod">matrixType</a></span></div>
 </div>
 
@@ -149,10 +175,92 @@
         <summary>Equations</summary>
         <ul class="equations">
             
-                <li class="equation"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/examples/rowround.html#rowround_examples.output">rowround_examples.output</a> <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#eq" title="eq">=</a> <span class="fn"><span class="fn">((134250821, 128, 66048, 542113792)</span>, <span class="fn">(537919489, 294980, 128, 65536)</span>, <span class="fn">(1, 8192, 2147745792, 0)</span>, 1, 512, 4202496, 2281701632)</span></span></li>
+                <li class="equation"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/examples/rowround.html#rowround_examples.example1_output">rowround_examples.example1_output</a> <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#eq" title="eq">=</a> <span class="fn"><span class="fn">((134250821, 128, 66048, 542113792)</span>, <span class="fn">(537919489, 294980, 128, 65536)</span>, <span class="fn">(1, 8192, 2147745792, 0)</span>, 1, 512, 4202496, 2281701632)</span></span></li>
             
         </ul>
     </details>
+
+
+
+
+
+
+
+
+
+</div>
+</div>
+    
+
+    
+        
+        
+<div class="decl" id="rowround_examples.example1_rowround_single_0">
+<div class="theorem">
+
+<div class="gh_link"><a href="">source</a></div>
+
+
+
+<div class="decl_header">
+    
+
+
+<span class="decl_kind">theorem</span>
+<span class="decl_name"><a class="break_within" href="https://oxarbitrage.github.io/salsa20-docs/examples/rowround.html#rowround_examples.example1_rowround_single_0"><span class="name">rowround_examples</span>.<span class="name">example1_rowround_single_0</span></a></span>
+
+    <span class="impl_arg"><span class="decl_args"><span class="fn">[<a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/category/basic.html#category_theory.category">category_theory.category</a> <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/data/bitvec/core.html#bitvec">bitvec</a> <a href="https://oxarbitrage.github.io/salsa20-docs/params.html#params.word_len">params.word_len</a>)</span>]</span></span></span>&nbsp;<span class="decl_args">:</span>
+<div class="decl_type"><span class="fn"><span class="fn"><span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/rowround.html#rowround.rowround_single">rowround.rowround_single</a> <a href="https://oxarbitrage.github.io/salsa20-docs/examples/rowround.html#rowround_examples.example1_input">rowround_examples.example1_input</a>.<a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod.fst" title="prod.fst">fst</a>)</span>.<a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod.fst" title="prod.fst">fst</a></span> <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#eq" title="eq">=</a> <a href="https://oxarbitrage.github.io/salsa20-docs/examples/rowround.html#rowround_examples.example1_output">rowround_examples.example1_output</a>.<a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod.fst" title="prod.fst">fst</a>.<a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod.fst" title="prod.fst">fst</a></span></div>
+</div>
+
+
+
+
+
+<p><code>rowround_single (1, 0, 0, 0) = 134250821</code></p>
+
+
+
+
+
+
+
+
+
+
+
+</div>
+</div>
+    
+
+    
+        
+        
+<div class="decl" id="rowround_examples.example1_rowround_single_1">
+<div class="theorem">
+
+<div class="gh_link"><a href="">source</a></div>
+
+
+
+<div class="decl_header">
+    
+
+
+<span class="decl_kind">theorem</span>
+<span class="decl_name"><a class="break_within" href="https://oxarbitrage.github.io/salsa20-docs/examples/rowround.html#rowround_examples.example1_rowround_single_1"><span class="name">rowround_examples</span>.<span class="name">example1_rowround_single_1</span></a></span>
+
+    <span class="impl_arg"><span class="decl_args"><span class="fn">[<a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/category/basic.html#category_theory.category">category_theory.category</a> <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/data/bitvec/core.html#bitvec">bitvec</a> <a href="https://oxarbitrage.github.io/salsa20-docs/params.html#params.word_len">params.word_len</a>)</span>]</span></span></span>&nbsp;<span class="decl_args">:</span>
+<div class="decl_type"><span class="fn"><span class="fn"><span class="fn"><span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/rowround.html#rowround.rowround_single">rowround.rowround_single</a> <a href="https://oxarbitrage.github.io/salsa20-docs/examples/rowround.html#rowround_examples.example1_input">rowround_examples.example1_input</a>.<a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod.fst" title="prod.fst">fst</a>)</span>.<a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod.snd" title="prod.snd">snd</a></span>.<a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod.fst" title="prod.fst">fst</a></span> <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#eq" title="eq">=</a> <a href="https://oxarbitrage.github.io/salsa20-docs/examples/rowround.html#rowround_examples.example1_output">rowround_examples.example1_output</a>.<a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod.fst" title="prod.fst">fst</a>.<a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod.snd" title="prod.snd">snd</a>.<a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod.fst" title="prod.fst">fst</a></span></div>
+</div>
+
+
+
+
+
+<p><code>rowround_single (1, 0, 0, 0) = 128</code></p>
+
+
 
 
 
@@ -182,7 +290,8 @@
 
 <span class="decl_kind">def</span>
 <span class="decl_name"><a class="break_within" href="https://oxarbitrage.github.io/salsa20-docs/examples/rowround.html#rowround_examples.input'"><span class="name">rowround_examples</span>.<span class="name">input&#x27;</span></a></span>
-&nbsp;<span class="decl_args">:</span>
+
+    <span class="impl_arg"><span class="decl_args"><span class="fn">[<a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/category/basic.html#category_theory.category">category_theory.category</a> <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/data/bitvec/core.html#bitvec">bitvec</a> <a href="https://oxarbitrage.github.io/salsa20-docs/params.html#params.word_len">params.word_len</a>)</span>]</span></span></span>&nbsp;<span class="decl_args">:</span>
 <div class="decl_type"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod" title="prod">matrixType</a></span></div>
 </div>
 
@@ -230,7 +339,8 @@
 
 <span class="decl_kind">def</span>
 <span class="decl_name"><a class="break_within" href="https://oxarbitrage.github.io/salsa20-docs/examples/rowround.html#rowround_examples.output'"><span class="name">rowround_examples</span>.<span class="name">output&#x27;</span></a></span>
-&nbsp;<span class="decl_args">:</span>
+
+    <span class="impl_arg"><span class="decl_args"><span class="fn">[<a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/category/basic.html#category_theory.category">category_theory.category</a> <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/data/bitvec/core.html#bitvec">bitvec</a> <a href="https://oxarbitrage.github.io/salsa20-docs/params.html#params.word_len">params.word_len</a>)</span>]</span></span></span>&nbsp;<span class="decl_args">:</span>
 <div class="decl_type"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod" title="prod">matrixType</a></span></div>
 </div>
 
