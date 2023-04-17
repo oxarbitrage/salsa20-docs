@@ -63,8 +63,32 @@
     <details>
         <summary>Imported by</summary>
         <ul>
+            <li><a href="https://oxarbitrage.github.io/salsa20-docs/algebra/hom/group_action.html">
+                algebra.hom.group_action</a></li>
+        
+            <li><a href="https://oxarbitrage.github.io/salsa20-docs/algebra/punit_instances.html">
+                algebra.punit_instances</a></li>
+        
+            <li><a href="https://oxarbitrage.github.io/salsa20-docs/group_theory/group_action/basic.html">
+                group_theory.group_action.basic</a></li>
+        
+            <li><a href="https://oxarbitrage.github.io/salsa20-docs/group_theory/group_action/big_operators.html">
+                group_theory.group_action.big_operators</a></li>
+        
+            <li><a href="https://oxarbitrage.github.io/salsa20-docs/group_theory/group_action/opposite.html">
+                group_theory.group_action.opposite</a></li>
+        
+            <li><a href="https://oxarbitrage.github.io/salsa20-docs/group_theory/group_action/pi.html">
+                group_theory.group_action.pi</a></li>
+        
+            <li><a href="https://oxarbitrage.github.io/salsa20-docs/group_theory/group_action/prod.html">
+                group_theory.group_action.prod</a></li>
+        
             <li><a href="https://oxarbitrage.github.io/salsa20-docs/group_theory/group_action/units.html">
                 group_theory.group_action.units</a></li>
+        
+            <li><a href="https://oxarbitrage.github.io/salsa20-docs/group_theory/submonoid/operations.html">
+                group_theory.submonoid.operations</a></li>
         </ul>
     </details>
 </div>
@@ -360,7 +384,7 @@ actions of multiplicative and additive monoids and groups; they extend notation 
 <li><code><a href="https://oxarbitrage.github.io/salsa20-docs/group_theory/group_action/defs.html#distrib_mul_action">distrib_mul_action</a> M A</code> is a typeclass for an action of a multiplicative monoid on
 an additive monoid such that <code>a • (b + c) = a • b + a • c</code> and <code>a • 0 = 0</code>.</li>
 </ul>
-<p>The hierarchy is extended further by <code>module</code>, defined elsewhere.</p>
+<p>The hierarchy is extended further by <code><a href="https://oxarbitrage.github.io/salsa20-docs/algebra/module/basic.html#module">module</a></code>, defined elsewhere.</p>
 <p>Also provided are typeclasses for faithful and transitive actions, and typeclasses regarding the
 interaction of different group actions,</p>
 <ul>
@@ -437,6 +461,16 @@ More sophisticated lemmas belong in <code>group_theory.group_action</code>.</p>
             
                 <li><a href="https://oxarbitrage.github.io/salsa20-docs/group_theory/group_action/units.html#add_units.has_faithful_vadd">add_units.has_faithful_vadd</a></li>
             
+                <li><a href="https://oxarbitrage.github.io/salsa20-docs/group_theory/group_action/opposite.html#add_left_cancel_monoid.to_has_faithful_opposite_scalar">add_left_cancel_monoid.to_has_faithful_opposite_scalar</a></li>
+            
+                <li><a href="https://oxarbitrage.github.io/salsa20-docs/group_theory/group_action/prod.html#prod.has_faithful_vadd_left">prod.has_faithful_vadd_left</a></li>
+            
+                <li><a href="https://oxarbitrage.github.io/salsa20-docs/group_theory/group_action/prod.html#prod.has_faithful_vadd_right">prod.has_faithful_vadd_right</a></li>
+            
+                <li><a href="https://oxarbitrage.github.io/salsa20-docs/group_theory/group_action/group.html#add_right_cancel_monoid.to_has_faithful_vadd">add_right_cancel_monoid.to_has_faithful_vadd</a></li>
+            
+                <li><a href="https://oxarbitrage.github.io/salsa20-docs/group_theory/group_action/pi.html#pi.has_faithful_vadd">pi.has_faithful_vadd</a></li>
+            
         </ul>
     </details>
 
@@ -501,6 +535,44 @@ More sophisticated lemmas belong in <code>group_theory.group_action</code>.</p>
                 <li><a href="https://oxarbitrage.github.io/salsa20-docs/group_theory/group_action/defs.html#add_monoid.End.apply_has_faithful_smul">add_monoid.End.apply_has_faithful_smul</a></li>
             
                 <li><a href="https://oxarbitrage.github.io/salsa20-docs/group_theory/group_action/units.html#units.has_faithful_smul">units.has_faithful_smul</a></li>
+            
+                <li><a href="https://oxarbitrage.github.io/salsa20-docs/group_theory/group_action/opposite.html#left_cancel_monoid.to_has_faithful_opposite_scalar">left_cancel_monoid.to_has_faithful_opposite_scalar</a></li>
+            
+                <li><a href="https://oxarbitrage.github.io/salsa20-docs/group_theory/group_action/opposite.html#cancel_monoid_with_zero.to_has_faithful_opposite_scalar">cancel_monoid_with_zero.to_has_faithful_opposite_scalar</a></li>
+            
+                <li><a href="https://oxarbitrage.github.io/salsa20-docs/group_theory/group_action/prod.html#prod.has_faithful_smul_left">prod.has_faithful_smul_left</a></li>
+            
+                <li><a href="https://oxarbitrage.github.io/salsa20-docs/group_theory/group_action/prod.html#prod.has_faithful_smul_right">prod.has_faithful_smul_right</a></li>
+            
+                <li><a href="https://oxarbitrage.github.io/salsa20-docs/algebra/hom/aut.html#mul_aut.apply_has_faithful_smul">mul_aut.apply_has_faithful_smul</a></li>
+            
+                <li><a href="https://oxarbitrage.github.io/salsa20-docs/algebra/hom/aut.html#add_aut.apply_has_faithful_smul">add_aut.apply_has_faithful_smul</a></li>
+            
+                <li><a href="https://oxarbitrage.github.io/salsa20-docs/group_theory/group_action/group.html#right_cancel_monoid.to_has_faithful_smul">right_cancel_monoid.to_has_faithful_smul</a></li>
+            
+                <li><a href="https://oxarbitrage.github.io/salsa20-docs/group_theory/group_action/group.html#equiv.perm.apply_has_faithful_smul">equiv.perm.apply_has_faithful_smul</a></li>
+            
+                <li><a href="https://oxarbitrage.github.io/salsa20-docs/group_theory/group_action/group.html#cancel_monoid_with_zero.to_has_faithful_smul">cancel_monoid_with_zero.to_has_faithful_smul</a></li>
+            
+                <li><a href="https://oxarbitrage.github.io/salsa20-docs/algebra/module/basic.html#ring_hom.apply_has_faithful_smul">ring_hom.apply_has_faithful_smul</a></li>
+            
+                <li><a href="https://oxarbitrage.github.io/salsa20-docs/group_theory/submonoid/operations.html#submonoid.has_faithful_smul">submonoid.has_faithful_smul</a></li>
+            
+                <li><a href="https://oxarbitrage.github.io/salsa20-docs/group_theory/subgroup/basic.html#subgroup.has_faithful_smul">subgroup.has_faithful_smul</a></li>
+            
+                <li><a href="https://oxarbitrage.github.io/salsa20-docs/ring_theory/subsemiring/basic.html#subsemiring.has_faithful_smul">subsemiring.has_faithful_smul</a></li>
+            
+                <li><a href="https://oxarbitrage.github.io/salsa20-docs/ring_theory/subring/basic.html#subring.has_faithful_smul">subring.has_faithful_smul</a></li>
+            
+                <li><a href="https://oxarbitrage.github.io/salsa20-docs/group_theory/group_action/pi.html#pi.has_faithful_smul">pi.has_faithful_smul</a></li>
+            
+                <li><a href="https://oxarbitrage.github.io/salsa20-docs/algebra/module/linear_map.html#linear_map.apply_has_faithful_smul">linear_map.apply_has_faithful_smul</a></li>
+            
+                <li><a href="https://oxarbitrage.github.io/salsa20-docs/algebra/module/equiv.html#linear_equiv.apply_has_faithful_smul">linear_equiv.apply_has_faithful_smul</a></li>
+            
+                <li><a href="https://oxarbitrage.github.io/salsa20-docs/data/finsupp/basic.html#finsupp.has_faithful_smul">finsupp.has_faithful_smul</a></li>
+            
+                <li><a href="https://oxarbitrage.github.io/salsa20-docs/algebra/algebra/basic.html#alg_equiv.apply_has_faithful_smul">alg_equiv.apply_has_faithful_smul</a></li>
             
         </ul>
     </details>
@@ -629,7 +701,7 @@ More sophisticated lemmas belong in <code>group_theory.group_action</code>.</p>
 
 
 
-<p>See also <code><a href="https://oxarbitrage.github.io/salsa20-docs/group_theory/group_action/defs.html#monoid.to_mul_action">monoid.to_mul_action</a></code> and <code>mul_zero_class.to_smul_with_zero</code>.</p>
+<p>See also <code><a href="https://oxarbitrage.github.io/salsa20-docs/group_theory/group_action/defs.html#monoid.to_mul_action">monoid.to_mul_action</a></code> and <code><a href="https://oxarbitrage.github.io/salsa20-docs/algebra/smul_with_zero.html#mul_zero_class.to_smul_with_zero">mul_zero_class.to_smul_with_zero</a></code>.</p>
 
 
 
@@ -898,6 +970,26 @@ More sophisticated lemmas belong in <code>group_theory.group_action</code>.</p>
             
                 <li><a href="https://oxarbitrage.github.io/salsa20-docs/group_theory/group_action/units.html#add_units.add_action">add_units.add_action</a></li>
             
+                <li><a href="https://oxarbitrage.github.io/salsa20-docs/group_theory/group_action/opposite.html#add_opposite.add_action">add_opposite.add_action</a></li>
+            
+                <li><a href="https://oxarbitrage.github.io/salsa20-docs/group_theory/group_action/opposite.html#add_monoid.to_opposite_add_action">add_monoid.to_opposite_add_action</a></li>
+            
+                <li><a href="https://oxarbitrage.github.io/salsa20-docs/group_theory/group_action/prod.html#prod.add_action">prod.add_action</a></li>
+            
+                <li><a href="https://oxarbitrage.github.io/salsa20-docs/group_theory/submonoid/operations.html#add_submonoid.add_action">add_submonoid.add_action</a></li>
+            
+                <li><a href="https://oxarbitrage.github.io/salsa20-docs/group_theory/subgroup/basic.html#add_subgroup.add_action">add_subgroup.add_action</a></li>
+            
+                <li><a href="https://oxarbitrage.github.io/salsa20-docs/group_theory/group_action/pi.html#pi.add_action">pi.add_action</a></li>
+            
+                <li><a href="https://oxarbitrage.github.io/salsa20-docs/group_theory/group_action/pi.html#pi.add_action'">pi.add_action'</a></li>
+            
+                <li><a href="https://oxarbitrage.github.io/salsa20-docs/algebra/module/ulift.html#ulift.add_action">ulift.add_action</a></li>
+            
+                <li><a href="https://oxarbitrage.github.io/salsa20-docs/algebra/module/ulift.html#ulift.add_action'">ulift.add_action'</a></li>
+            
+                <li><a href="https://oxarbitrage.github.io/salsa20-docs/group_theory/group_action/basic.html#add_action.orbit.add_action">add_action.orbit.add_action</a></li>
+            
         </ul>
     </details>
 
@@ -1065,6 +1157,8 @@ More sophisticated lemmas belong in <code>group_theory.group_action</code>.</p>
             
                 <li><a href="https://oxarbitrage.github.io/salsa20-docs/group_theory/group_action/defs.html#mul_distrib_mul_action.to_mul_action">mul_distrib_mul_action.to_mul_action</a></li>
             
+                <li><a href="https://oxarbitrage.github.io/salsa20-docs/algebra/smul_with_zero.html#mul_action_with_zero.to_mul_action">mul_action_with_zero.to_mul_action</a></li>
+            
                 <li><a href="https://oxarbitrage.github.io/salsa20-docs/group_theory/group_action/defs.html#monoid.to_mul_action">monoid.to_mul_action</a></li>
             
                 <li><a href="https://oxarbitrage.github.io/salsa20-docs/group_theory/group_action/defs.html#multiplicative.mul_action">multiplicative.mul_action</a></li>
@@ -1074,6 +1168,42 @@ More sophisticated lemmas belong in <code>group_theory.group_action</code>.</p>
                 <li><a href="https://oxarbitrage.github.io/salsa20-docs/group_theory/group_action/units.html#units.mul_action">units.mul_action</a></li>
             
                 <li><a href="https://oxarbitrage.github.io/salsa20-docs/group_theory/group_action/units.html#units.mul_action'">units.mul_action'</a></li>
+            
+                <li><a href="https://oxarbitrage.github.io/salsa20-docs/group_theory/group_action/opposite.html#mul_opposite.mul_action">mul_opposite.mul_action</a></li>
+            
+                <li><a href="https://oxarbitrage.github.io/salsa20-docs/group_theory/group_action/opposite.html#monoid.to_opposite_mul_action">monoid.to_opposite_mul_action</a></li>
+            
+                <li><a href="https://oxarbitrage.github.io/salsa20-docs/group_theory/group_action/prod.html#prod.mul_action">prod.mul_action</a></li>
+            
+                <li><a href="https://oxarbitrage.github.io/salsa20-docs/group_theory/group_action/group.html#equiv.perm.apply_mul_action">equiv.perm.apply_mul_action</a></li>
+            
+                <li><a href="https://oxarbitrage.github.io/salsa20-docs/group_theory/submonoid/operations.html#submonoid.mul_action">submonoid.mul_action</a></li>
+            
+                <li><a href="https://oxarbitrage.github.io/salsa20-docs/group_theory/subgroup/basic.html#subgroup.mul_action">subgroup.mul_action</a></li>
+            
+                <li><a href="https://oxarbitrage.github.io/salsa20-docs/ring_theory/subsemiring/basic.html#subsemiring.mul_action">subsemiring.mul_action</a></li>
+            
+                <li><a href="https://oxarbitrage.github.io/salsa20-docs/ring_theory/subring/basic.html#subring.mul_action">subring.mul_action</a></li>
+            
+                <li><a href="https://oxarbitrage.github.io/salsa20-docs/group_theory/group_action/pi.html#pi.mul_action">pi.mul_action</a></li>
+            
+                <li><a href="https://oxarbitrage.github.io/salsa20-docs/group_theory/group_action/pi.html#pi.mul_action'">pi.mul_action'</a></li>
+            
+                <li><a href="https://oxarbitrage.github.io/salsa20-docs/algebra/module/ulift.html#ulift.mul_action">ulift.mul_action</a></li>
+            
+                <li><a href="https://oxarbitrage.github.io/salsa20-docs/algebra/module/ulift.html#ulift.mul_action'">ulift.mul_action'</a></li>
+            
+                <li><a href="https://oxarbitrage.github.io/salsa20-docs/group_theory/group_action/basic.html#mul_action.orbit.mul_action">mul_action.orbit.mul_action</a></li>
+            
+                <li><a href="https://oxarbitrage.github.io/salsa20-docs/group_theory/group_action/sub_mul_action.html#sub_mul_action.mul_action'">sub_mul_action.mul_action'</a></li>
+            
+                <li><a href="https://oxarbitrage.github.io/salsa20-docs/group_theory/group_action/sub_mul_action.html#sub_mul_action.mul_action">sub_mul_action.mul_action</a></li>
+            
+                <li><a href="https://oxarbitrage.github.io/salsa20-docs/algebra/punit_instances.html#punit.mul_action">punit.mul_action</a></li>
+            
+                <li><a href="https://oxarbitrage.github.io/salsa20-docs/algebra/star/self_adjoint.html#self_adjoint.mul_action">self_adjoint.mul_action</a></li>
+            
+                <li><a href="https://oxarbitrage.github.io/salsa20-docs/data/matrix/basic.html#matrix.mul_action">matrix.mul_action</a></li>
             
         </ul>
     </details>
@@ -1407,6 +1537,10 @@ A transitive action should furthermore have <code>α</code> nonempty.</p>
             
                 <li><a href="https://oxarbitrage.github.io/salsa20-docs/group_theory/group_action/defs.html#add_action.regular.is_pretransitive">add_action.regular.is_pretransitive</a></li>
             
+                <li><a href="https://oxarbitrage.github.io/salsa20-docs/group_theory/group_action/opposite.html#add_action.opposite_regular.is_pretransitive">add_action.opposite_regular.is_pretransitive</a></li>
+            
+                <li><a href="https://oxarbitrage.github.io/salsa20-docs/group_theory/group_action/basic.html#add_action.orbit.is_pretransitive">add_action.orbit.is_pretransitive</a></li>
+            
         </ul>
     </details>
 
@@ -1468,6 +1602,10 @@ A transitive action should furthermore have <code>α</code> nonempty.</p>
         <ul>
             
                 <li><a href="https://oxarbitrage.github.io/salsa20-docs/group_theory/group_action/defs.html#mul_action.regular.is_pretransitive">mul_action.regular.is_pretransitive</a></li>
+            
+                <li><a href="https://oxarbitrage.github.io/salsa20-docs/group_theory/group_action/opposite.html#mul_action.opposite_regular.is_pretransitive">mul_action.opposite_regular.is_pretransitive</a></li>
+            
+                <li><a href="https://oxarbitrage.github.io/salsa20-docs/group_theory/group_action/basic.html#mul_action.orbit.is_pretransitive">mul_action.orbit.is_pretransitive</a></li>
             
         </ul>
     </details>
@@ -1802,6 +1940,40 @@ A transitive action should furthermore have <code>α</code> nonempty.</p>
             
                 <li><a href="https://oxarbitrage.github.io/salsa20-docs/group_theory/group_action/defs.html#vadd_comm_class_self">vadd_comm_class_self</a></li>
             
+                <li><a href="https://oxarbitrage.github.io/salsa20-docs/group_theory/group_action/opposite.html#add_opposite.vadd_comm_class">add_opposite.vadd_comm_class</a></li>
+            
+                <li><a href="https://oxarbitrage.github.io/salsa20-docs/group_theory/group_action/opposite.html#add_semigroup.opposite_vadd_comm_class">add_semigroup.opposite_vadd_comm_class</a></li>
+            
+                <li><a href="https://oxarbitrage.github.io/salsa20-docs/group_theory/group_action/opposite.html#add_semigroup.opposite_vadd_comm_class'">add_semigroup.opposite_vadd_comm_class'</a></li>
+            
+                <li><a href="https://oxarbitrage.github.io/salsa20-docs/group_theory/group_action/prod.html#prod.vadd_comm_class">prod.vadd_comm_class</a></li>
+            
+                <li><a href="https://oxarbitrage.github.io/salsa20-docs/group_theory/group_action/prod.html#prod.vadd_comm_class_both">prod.vadd_comm_class_both</a></li>
+            
+                <li><a href="https://oxarbitrage.github.io/salsa20-docs/data/set/pointwise.html#set.vadd_comm_class_set">set.vadd_comm_class_set</a></li>
+            
+                <li><a href="https://oxarbitrage.github.io/salsa20-docs/data/set/pointwise.html#set.vadd_comm_class_set'">set.vadd_comm_class_set'</a></li>
+            
+                <li><a href="https://oxarbitrage.github.io/salsa20-docs/data/set/pointwise.html#set.vadd_comm_class_set''">set.vadd_comm_class_set''</a></li>
+            
+                <li><a href="https://oxarbitrage.github.io/salsa20-docs/data/set/pointwise.html#set.vadd_comm_class">set.vadd_comm_class</a></li>
+            
+                <li><a href="https://oxarbitrage.github.io/salsa20-docs/group_theory/submonoid/operations.html#add_submonoid.vadd_comm_class_left">add_submonoid.vadd_comm_class_left</a></li>
+            
+                <li><a href="https://oxarbitrage.github.io/salsa20-docs/group_theory/submonoid/operations.html#add_submonoid.vadd_comm_class_right">add_submonoid.vadd_comm_class_right</a></li>
+            
+                <li><a href="https://oxarbitrage.github.io/salsa20-docs/group_theory/subgroup/basic.html#add_subgroup.vadd_comm_class_left">add_subgroup.vadd_comm_class_left</a></li>
+            
+                <li><a href="https://oxarbitrage.github.io/salsa20-docs/group_theory/subgroup/basic.html#add_subgroup.vadd_comm_class_right">add_subgroup.vadd_comm_class_right</a></li>
+            
+                <li><a href="https://oxarbitrage.github.io/salsa20-docs/group_theory/group_action/pi.html#pi.vadd_comm_class">pi.vadd_comm_class</a></li>
+            
+                <li><a href="https://oxarbitrage.github.io/salsa20-docs/group_theory/group_action/pi.html#pi.vadd_comm_class'">pi.vadd_comm_class'</a></li>
+            
+                <li><a href="https://oxarbitrage.github.io/salsa20-docs/group_theory/group_action/pi.html#pi.vadd_comm_class''">pi.vadd_comm_class''</a></li>
+            
+                <li><a href="https://oxarbitrage.github.io/salsa20-docs/group_theory/group_action/pi.html#function.vadd_comm_class">function.vadd_comm_class</a></li>
+            
         </ul>
     </details>
 
@@ -1867,6 +2039,10 @@ A transitive action should furthermore have <code>α</code> nonempty.</p>
             
                 <li><a href="https://oxarbitrage.github.io/salsa20-docs/group_theory/group_action/defs.html#smul_comm_class.op_right">smul_comm_class.op_right</a></li>
             
+                <li><a href="https://oxarbitrage.github.io/salsa20-docs/algebra/algebra/basic.html#is_scalar_tower.to_smul_comm_class">is_scalar_tower.to_smul_comm_class</a></li>
+            
+                <li><a href="https://oxarbitrage.github.io/salsa20-docs/algebra/algebra/basic.html#is_scalar_tower.to_smul_comm_class'">is_scalar_tower.to_smul_comm_class'</a></li>
+            
                 <li><a href="https://oxarbitrage.github.io/salsa20-docs/group_theory/group_action/defs.html#smul_comm_class_self">smul_comm_class_self</a></li>
             
                 <li><a href="https://oxarbitrage.github.io/salsa20-docs/group_theory/group_action/defs.html#add_monoid.nat_smul_comm_class">add_monoid.nat_smul_comm_class</a></li>
@@ -1886,6 +2062,100 @@ A transitive action should furthermore have <code>α</code> nonempty.</p>
                 <li><a href="https://oxarbitrage.github.io/salsa20-docs/algebra/group_power/lemmas.html#non_unital_non_assoc_semiring.nat_smul_comm_class">non_unital_non_assoc_semiring.nat_smul_comm_class</a></li>
             
                 <li><a href="https://oxarbitrage.github.io/salsa20-docs/algebra/group_power/lemmas.html#non_unital_non_assoc_ring.int_smul_comm_class">non_unital_non_assoc_ring.int_smul_comm_class</a></li>
+            
+                <li><a href="https://oxarbitrage.github.io/salsa20-docs/group_theory/group_action/opposite.html#mul_opposite.smul_comm_class">mul_opposite.smul_comm_class</a></li>
+            
+                <li><a href="https://oxarbitrage.github.io/salsa20-docs/group_theory/group_action/opposite.html#semigroup.opposite_smul_comm_class">semigroup.opposite_smul_comm_class</a></li>
+            
+                <li><a href="https://oxarbitrage.github.io/salsa20-docs/group_theory/group_action/opposite.html#semigroup.opposite_smul_comm_class'">semigroup.opposite_smul_comm_class'</a></li>
+            
+                <li><a href="https://oxarbitrage.github.io/salsa20-docs/group_theory/group_action/opposite.html#smul_comm_class.opposite_mid">smul_comm_class.opposite_mid</a></li>
+            
+                <li><a href="https://oxarbitrage.github.io/salsa20-docs/group_theory/group_action/prod.html#prod.smul_comm_class">prod.smul_comm_class</a></li>
+            
+                <li><a href="https://oxarbitrage.github.io/salsa20-docs/group_theory/group_action/prod.html#prod.smul_comm_class_both">prod.smul_comm_class_both</a></li>
+            
+                <li><a href="https://oxarbitrage.github.io/salsa20-docs/algebra/module/basic.html#smul_comm_class.rat">smul_comm_class.rat</a></li>
+            
+                <li><a href="https://oxarbitrage.github.io/salsa20-docs/algebra/module/basic.html#smul_comm_class.rat'">smul_comm_class.rat'</a></li>
+            
+                <li><a href="https://oxarbitrage.github.io/salsa20-docs/data/set/pointwise.html#set.smul_comm_class_set">set.smul_comm_class_set</a></li>
+            
+                <li><a href="https://oxarbitrage.github.io/salsa20-docs/data/set/pointwise.html#set.smul_comm_class_set'">set.smul_comm_class_set'</a></li>
+            
+                <li><a href="https://oxarbitrage.github.io/salsa20-docs/data/set/pointwise.html#set.smul_comm_class_set''">set.smul_comm_class_set''</a></li>
+            
+                <li><a href="https://oxarbitrage.github.io/salsa20-docs/data/set/pointwise.html#set.smul_comm_class">set.smul_comm_class</a></li>
+            
+                <li><a href="https://oxarbitrage.github.io/salsa20-docs/group_theory/submonoid/operations.html#submonoid.smul_comm_class_left">submonoid.smul_comm_class_left</a></li>
+            
+                <li><a href="https://oxarbitrage.github.io/salsa20-docs/group_theory/submonoid/operations.html#submonoid.smul_comm_class_right">submonoid.smul_comm_class_right</a></li>
+            
+                <li><a href="https://oxarbitrage.github.io/salsa20-docs/group_theory/submonoid/center.html#submonoid.center.smul_comm_class_left">submonoid.center.smul_comm_class_left</a></li>
+            
+                <li><a href="https://oxarbitrage.github.io/salsa20-docs/group_theory/submonoid/center.html#submonoid.center.smul_comm_class_right">submonoid.center.smul_comm_class_right</a></li>
+            
+                <li><a href="https://oxarbitrage.github.io/salsa20-docs/group_theory/subgroup/basic.html#subgroup.smul_comm_class_left">subgroup.smul_comm_class_left</a></li>
+            
+                <li><a href="https://oxarbitrage.github.io/salsa20-docs/group_theory/subgroup/basic.html#subgroup.smul_comm_class_right">subgroup.smul_comm_class_right</a></li>
+            
+                <li><a href="https://oxarbitrage.github.io/salsa20-docs/group_theory/subgroup/basic.html#subgroup.center.smul_comm_class_left">subgroup.center.smul_comm_class_left</a></li>
+            
+                <li><a href="https://oxarbitrage.github.io/salsa20-docs/group_theory/subgroup/basic.html#subgroup.center.smul_comm_class_right">subgroup.center.smul_comm_class_right</a></li>
+            
+                <li><a href="https://oxarbitrage.github.io/salsa20-docs/ring_theory/subsemiring/basic.html#subsemiring.smul_comm_class_left">subsemiring.smul_comm_class_left</a></li>
+            
+                <li><a href="https://oxarbitrage.github.io/salsa20-docs/ring_theory/subsemiring/basic.html#subsemiring.smul_comm_class_right">subsemiring.smul_comm_class_right</a></li>
+            
+                <li><a href="https://oxarbitrage.github.io/salsa20-docs/ring_theory/subsemiring/basic.html#subsemiring.center.smul_comm_class_left">subsemiring.center.smul_comm_class_left</a></li>
+            
+                <li><a href="https://oxarbitrage.github.io/salsa20-docs/ring_theory/subsemiring/basic.html#subsemiring.center.smul_comm_class_right">subsemiring.center.smul_comm_class_right</a></li>
+            
+                <li><a href="https://oxarbitrage.github.io/salsa20-docs/ring_theory/subring/basic.html#subring.smul_comm_class_left">subring.smul_comm_class_left</a></li>
+            
+                <li><a href="https://oxarbitrage.github.io/salsa20-docs/ring_theory/subring/basic.html#subring.smul_comm_class_right">subring.smul_comm_class_right</a></li>
+            
+                <li><a href="https://oxarbitrage.github.io/salsa20-docs/ring_theory/subring/basic.html#subring.center.smul_comm_class_left">subring.center.smul_comm_class_left</a></li>
+            
+                <li><a href="https://oxarbitrage.github.io/salsa20-docs/ring_theory/subring/basic.html#subring.center.smul_comm_class_right">subring.center.smul_comm_class_right</a></li>
+            
+                <li><a href="https://oxarbitrage.github.io/salsa20-docs/group_theory/group_action/pi.html#pi.smul_comm_class">pi.smul_comm_class</a></li>
+            
+                <li><a href="https://oxarbitrage.github.io/salsa20-docs/group_theory/group_action/pi.html#pi.smul_comm_class'">pi.smul_comm_class'</a></li>
+            
+                <li><a href="https://oxarbitrage.github.io/salsa20-docs/group_theory/group_action/pi.html#pi.smul_comm_class''">pi.smul_comm_class''</a></li>
+            
+                <li><a href="https://oxarbitrage.github.io/salsa20-docs/group_theory/group_action/pi.html#function.smul_comm_class">function.smul_comm_class</a></li>
+            
+                <li><a href="https://oxarbitrage.github.io/salsa20-docs/algebra/module/linear_map.html#linear_map.smul_comm_class">linear_map.smul_comm_class</a></li>
+            
+                <li><a href="https://oxarbitrage.github.io/salsa20-docs/algebra/module/linear_map.html#module.End.smul_comm_class">module.End.smul_comm_class</a></li>
+            
+                <li><a href="https://oxarbitrage.github.io/salsa20-docs/algebra/module/linear_map.html#module.End.smul_comm_class'">module.End.smul_comm_class'</a></li>
+            
+                <li><a href="https://oxarbitrage.github.io/salsa20-docs/algebra/module/linear_map.html#linear_map.apply_smul_comm_class">linear_map.apply_smul_comm_class</a></li>
+            
+                <li><a href="https://oxarbitrage.github.io/salsa20-docs/algebra/module/linear_map.html#linear_map.apply_smul_comm_class'">linear_map.apply_smul_comm_class'</a></li>
+            
+                <li><a href="https://oxarbitrage.github.io/salsa20-docs/algebra/module/equiv.html#linear_equiv.apply_smul_comm_class">linear_equiv.apply_smul_comm_class</a></li>
+            
+                <li><a href="https://oxarbitrage.github.io/salsa20-docs/algebra/module/equiv.html#linear_equiv.apply_smul_comm_class'">linear_equiv.apply_smul_comm_class'</a></li>
+            
+                <li><a href="https://oxarbitrage.github.io/salsa20-docs/algebra/module/hom.html#add_monoid_hom.smul_comm_class">add_monoid_hom.smul_comm_class</a></li>
+            
+                <li><a href="https://oxarbitrage.github.io/salsa20-docs/algebra/punit_instances.html#punit.smul_comm_class">punit.smul_comm_class</a></li>
+            
+                <li><a href="https://oxarbitrage.github.io/salsa20-docs/data/dfinsupp/basic.html#dfinsupp.smul_comm_class">dfinsupp.smul_comm_class</a></li>
+            
+                <li><a href="https://oxarbitrage.github.io/salsa20-docs/data/finsupp/basic.html#finsupp.smul_comm_class">finsupp.smul_comm_class</a></li>
+            
+                <li><a href="https://oxarbitrage.github.io/salsa20-docs/algebra/algebra/basic.html#alg_equiv.apply_smul_comm_class">alg_equiv.apply_smul_comm_class</a></li>
+            
+                <li><a href="https://oxarbitrage.github.io/salsa20-docs/algebra/algebra/basic.html#alg_equiv.apply_smul_comm_class'">alg_equiv.apply_smul_comm_class'</a></li>
+            
+                <li><a href="https://oxarbitrage.github.io/salsa20-docs/data/matrix/basic.html#matrix.smul_comm_class">matrix.smul_comm_class</a></li>
+            
+                <li><a href="https://oxarbitrage.github.io/salsa20-docs/data/matrix/basic.html#matrix.semiring.smul_comm_class">matrix.semiring.smul_comm_class</a></li>
             
         </ul>
     </details>
@@ -1935,7 +2205,7 @@ the caller has <code><a href="https://oxarbitrage.github.io/salsa20-docs/algebra
 instance. If the caller only has <code><a href="https://oxarbitrage.github.io/salsa20-docs/algebra/ring/basic.html#semiring">semiring</a> R</code> they can still set either <code>R = ℕ</code> or <code>S = ℕ</code>, and
 <code>add_comm_monoid.nat_smul_comm_class</code> or <code>add_comm_monoid.nat_smul_comm_class&#x27;</code> will populate
 the typeclass, which is still sufficient to recover a <code>≃+</code> or <code>→+</code> structure.</p>
-<p>An example of where this is used is <code>linear_map.prod_equiv</code>.</p>
+<p>An example of where this is used is <code><a href="https://oxarbitrage.github.io/salsa20-docs/linear_algebra/prod.html#linear_map.prod_equiv">linear_map.prod_equiv</a></code>.</p>
 
 
 
@@ -2204,6 +2474,72 @@ and <code>N</code> on <code>α</code>.</p>
             
                 <li><a href="https://oxarbitrage.github.io/salsa20-docs/algebra/group_power/lemmas.html#non_unital_non_assoc_ring.int_is_scalar_tower">non_unital_non_assoc_ring.int_is_scalar_tower</a></li>
             
+                <li><a href="https://oxarbitrage.github.io/salsa20-docs/group_theory/group_action/opposite.html#mul_opposite.is_scalar_tower">mul_opposite.is_scalar_tower</a></li>
+            
+                <li><a href="https://oxarbitrage.github.io/salsa20-docs/group_theory/group_action/opposite.html#is_scalar_tower.opposite_mid">is_scalar_tower.opposite_mid</a></li>
+            
+                <li><a href="https://oxarbitrage.github.io/salsa20-docs/group_theory/group_action/prod.html#prod.is_scalar_tower">prod.is_scalar_tower</a></li>
+            
+                <li><a href="https://oxarbitrage.github.io/salsa20-docs/group_theory/group_action/prod.html#prod.is_scalar_tower_both">prod.is_scalar_tower_both</a></li>
+            
+                <li><a href="https://oxarbitrage.github.io/salsa20-docs/algebra/module/basic.html#add_comm_monoid.nat_is_scalar_tower">add_comm_monoid.nat_is_scalar_tower</a></li>
+            
+                <li><a href="https://oxarbitrage.github.io/salsa20-docs/algebra/module/basic.html#add_comm_group.int_is_scalar_tower">add_comm_group.int_is_scalar_tower</a></li>
+            
+                <li><a href="https://oxarbitrage.github.io/salsa20-docs/algebra/module/basic.html#is_scalar_tower.rat">is_scalar_tower.rat</a></li>
+            
+                <li><a href="https://oxarbitrage.github.io/salsa20-docs/data/set/pointwise.html#set.is_scalar_tower">set.is_scalar_tower</a></li>
+            
+                <li><a href="https://oxarbitrage.github.io/salsa20-docs/data/set/pointwise.html#set.is_scalar_tower'">set.is_scalar_tower'</a></li>
+            
+                <li><a href="https://oxarbitrage.github.io/salsa20-docs/data/set/pointwise.html#set.is_scalar_tower''">set.is_scalar_tower''</a></li>
+            
+                <li><a href="https://oxarbitrage.github.io/salsa20-docs/group_theory/submonoid/operations.html#submonoid.is_scalar_tower">submonoid.is_scalar_tower</a></li>
+            
+                <li><a href="https://oxarbitrage.github.io/salsa20-docs/group_theory/subgroup/basic.html#subgroup.is_scalar_tower">subgroup.is_scalar_tower</a></li>
+            
+                <li><a href="https://oxarbitrage.github.io/salsa20-docs/ring_theory/subsemiring/basic.html#subsemiring.is_scalar_tower">subsemiring.is_scalar_tower</a></li>
+            
+                <li><a href="https://oxarbitrage.github.io/salsa20-docs/ring_theory/subring/basic.html#subring.is_scalar_tower">subring.is_scalar_tower</a></li>
+            
+                <li><a href="https://oxarbitrage.github.io/salsa20-docs/group_theory/group_action/pi.html#pi.is_scalar_tower">pi.is_scalar_tower</a></li>
+            
+                <li><a href="https://oxarbitrage.github.io/salsa20-docs/group_theory/group_action/pi.html#pi.is_scalar_tower'">pi.is_scalar_tower'</a></li>
+            
+                <li><a href="https://oxarbitrage.github.io/salsa20-docs/group_theory/group_action/pi.html#pi.is_scalar_tower''">pi.is_scalar_tower''</a></li>
+            
+                <li><a href="https://oxarbitrage.github.io/salsa20-docs/algebra/module/linear_map.html#linear_map.is_scalar_tower">linear_map.is_scalar_tower</a></li>
+            
+                <li><a href="https://oxarbitrage.github.io/salsa20-docs/algebra/module/linear_map.html#module.End.is_scalar_tower">module.End.is_scalar_tower</a></li>
+            
+                <li><a href="https://oxarbitrage.github.io/salsa20-docs/algebra/module/linear_map.html#linear_map.apply_is_scalar_tower">linear_map.apply_is_scalar_tower</a></li>
+            
+                <li><a href="https://oxarbitrage.github.io/salsa20-docs/algebra/module/ulift.html#ulift.is_scalar_tower">ulift.is_scalar_tower</a></li>
+            
+                <li><a href="https://oxarbitrage.github.io/salsa20-docs/algebra/module/ulift.html#ulift.is_scalar_tower'">ulift.is_scalar_tower'</a></li>
+            
+                <li><a href="https://oxarbitrage.github.io/salsa20-docs/algebra/module/ulift.html#ulift.is_scalar_tower''">ulift.is_scalar_tower''</a></li>
+            
+                <li><a href="https://oxarbitrage.github.io/salsa20-docs/algebra/module/hom.html#add_monoid_hom.is_scalar_tower">add_monoid_hom.is_scalar_tower</a></li>
+            
+                <li><a href="https://oxarbitrage.github.io/salsa20-docs/group_theory/group_action/sub_mul_action.html#sub_mul_action.is_scalar_tower">sub_mul_action.is_scalar_tower</a></li>
+            
+                <li><a href="https://oxarbitrage.github.io/salsa20-docs/algebra/module/submodule/basic.html#submodule.is_scalar_tower">submodule.is_scalar_tower</a></li>
+            
+                <li><a href="https://oxarbitrage.github.io/salsa20-docs/algebra/module/submodule/basic.html#submodule.restrict_scalars.is_scalar_tower">submodule.restrict_scalars.is_scalar_tower</a></li>
+            
+                <li><a href="https://oxarbitrage.github.io/salsa20-docs/algebra/punit_instances.html#punit.is_scalar_tower">punit.is_scalar_tower</a></li>
+            
+                <li><a href="https://oxarbitrage.github.io/salsa20-docs/data/dfinsupp/basic.html#dfinsupp.is_scalar_tower">dfinsupp.is_scalar_tower</a></li>
+            
+                <li><a href="https://oxarbitrage.github.io/salsa20-docs/data/finsupp/basic.html#finsupp.is_scalar_tower">finsupp.is_scalar_tower</a></li>
+            
+                <li><a href="https://oxarbitrage.github.io/salsa20-docs/algebra/algebra/basic.html#is_scalar_tower.right">is_scalar_tower.right</a></li>
+            
+                <li><a href="https://oxarbitrage.github.io/salsa20-docs/data/matrix/basic.html#matrix.is_scalar_tower">matrix.is_scalar_tower</a></li>
+            
+                <li><a href="https://oxarbitrage.github.io/salsa20-docs/data/matrix/basic.html#matrix.semiring.is_scalar_tower">matrix.semiring.is_scalar_tower</a></li>
+            
         </ul>
     </details>
 
@@ -2355,6 +2691,45 @@ for <code>•</code>.</p>
 
 
 
+
+    <details class="instances">
+        <summary>Instances of this typeclass</summary>
+        <ul>
+            
+                <li><a href="https://oxarbitrage.github.io/salsa20-docs/group_theory/group_action/opposite.html#mul_opposite.is_central_scalar">mul_opposite.is_central_scalar</a></li>
+            
+                <li><a href="https://oxarbitrage.github.io/salsa20-docs/group_theory/group_action/opposite.html#comm_semigroup.is_central_scalar">comm_semigroup.is_central_scalar</a></li>
+            
+                <li><a href="https://oxarbitrage.github.io/salsa20-docs/group_theory/group_action/prod.html#prod.is_central_scalar">prod.is_central_scalar</a></li>
+            
+                <li><a href="https://oxarbitrage.github.io/salsa20-docs/data/set/pointwise.html#set.is_central_scalar">set.is_central_scalar</a></li>
+            
+                <li><a href="https://oxarbitrage.github.io/salsa20-docs/group_theory/submonoid/pointwise.html#submonoid.pointwise_central_scalar">submonoid.pointwise_central_scalar</a></li>
+            
+                <li><a href="https://oxarbitrage.github.io/salsa20-docs/group_theory/submonoid/pointwise.html#add_submonoid.pointwise_central_scalar">add_submonoid.pointwise_central_scalar</a></li>
+            
+                <li><a href="https://oxarbitrage.github.io/salsa20-docs/group_theory/group_action/pi.html#pi.is_central_scalar">pi.is_central_scalar</a></li>
+            
+                <li><a href="https://oxarbitrage.github.io/salsa20-docs/algebra/module/linear_map.html#linear_map.is_central_scalar">linear_map.is_central_scalar</a></li>
+            
+                <li><a href="https://oxarbitrage.github.io/salsa20-docs/algebra/module/ulift.html#ulift.is_central_scalar">ulift.is_central_scalar</a></li>
+            
+                <li><a href="https://oxarbitrage.github.io/salsa20-docs/algebra/module/hom.html#add_monoid_hom.is_central_scalar">add_monoid_hom.is_central_scalar</a></li>
+            
+                <li><a href="https://oxarbitrage.github.io/salsa20-docs/group_theory/group_action/sub_mul_action.html#sub_mul_action.is_central_scalar">sub_mul_action.is_central_scalar</a></li>
+            
+                <li><a href="https://oxarbitrage.github.io/salsa20-docs/algebra/module/submodule/basic.html#submodule.is_central_scalar">submodule.is_central_scalar</a></li>
+            
+                <li><a href="https://oxarbitrage.github.io/salsa20-docs/algebra/punit_instances.html#punit.is_central_scalar">punit.is_central_scalar</a></li>
+            
+                <li><a href="https://oxarbitrage.github.io/salsa20-docs/data/dfinsupp/basic.html#dfinsupp.is_central_scalar">dfinsupp.is_central_scalar</a></li>
+            
+                <li><a href="https://oxarbitrage.github.io/salsa20-docs/data/finsupp/basic.html#finsupp.is_central_scalar">finsupp.is_central_scalar</a></li>
+            
+                <li><a href="https://oxarbitrage.github.io/salsa20-docs/data/matrix/basic.html#matrix.is_central_scalar">matrix.is_central_scalar</a></li>
+            
+        </ul>
+    </details>
 
 
 
@@ -2646,7 +3021,7 @@ for <code>•</code>.</p>
 
 
 <p>Auxiliary definition for <code><a href="https://oxarbitrage.github.io/salsa20-docs/group_theory/group_action/defs.html#has_smul.comp">has_smul.comp</a></code>, <code><a href="https://oxarbitrage.github.io/salsa20-docs/group_theory/group_action/defs.html#mul_action.comp_hom">mul_action.comp_hom</a></code>,
-<code><a href="https://oxarbitrage.github.io/salsa20-docs/group_theory/group_action/defs.html#distrib_mul_action.comp_hom">distrib_mul_action.comp_hom</a></code>, <code>module.comp_hom</code>, etc.</p>
+<code><a href="https://oxarbitrage.github.io/salsa20-docs/group_theory/group_action/defs.html#distrib_mul_action.comp_hom">distrib_mul_action.comp_hom</a></code>, <code><a href="https://oxarbitrage.github.io/salsa20-docs/algebra/module/basic.html#module.comp_hom">module.comp_hom</a></code>, etc.</p>
 
 
 
@@ -3072,7 +3447,7 @@ are still metavariables.</p>
 
 
 
-<p>Note that the <code><a href="https://oxarbitrage.github.io/salsa20-docs/group_theory/group_action/defs.html#smul_comm_class">smul_comm_class</a> α β β</code> typeclass argument is usually satisfied by <code>algebra α β</code>.</p>
+<p>Note that the <code><a href="https://oxarbitrage.github.io/salsa20-docs/group_theory/group_action/defs.html#smul_comm_class">smul_comm_class</a> α β β</code> typeclass argument is usually satisfied by <code><a href="https://oxarbitrage.github.io/salsa20-docs/algebra/algebra/basic.html#algebra">algebra</a> α β</code>.</p>
 
 
 
@@ -3119,7 +3494,7 @@ are still metavariables.</p>
 
 
 
-<p>Note that the <code><a href="https://oxarbitrage.github.io/salsa20-docs/group_theory/group_action/defs.html#is_scalar_tower">is_scalar_tower</a> α β β</code> typeclass argument is usually satisfied by <code>algebra α β</code>.</p>
+<p>Note that the <code><a href="https://oxarbitrage.github.io/salsa20-docs/group_theory/group_action/defs.html#is_scalar_tower">is_scalar_tower</a> α β β</code> typeclass argument is usually satisfied by <code><a href="https://oxarbitrage.github.io/salsa20-docs/algebra/algebra/basic.html#algebra">algebra</a> α β</code>.</p>
 
 
 
@@ -4107,7 +4482,7 @@ See note [reducible non-instances].</p>
 
 
 <p>Push forward the action of <code>R</code> on <code>M</code> along a compatible surjective map <code>f : R →* S</code>.</p>
-<p>See also <code><a href="https://oxarbitrage.github.io/salsa20-docs/group_theory/group_action/defs.html#function.surjective.distrib_mul_action_left">function.surjective.distrib_mul_action_left</a></code> and <code>function.surjective.module_left</code>.</p>
+<p>See also <code><a href="https://oxarbitrage.github.io/salsa20-docs/group_theory/group_action/defs.html#function.surjective.distrib_mul_action_left">function.surjective.distrib_mul_action_left</a></code> and <code><a href="https://oxarbitrage.github.io/salsa20-docs/algebra/module/basic.html#function.surjective.module_left">function.surjective.module_left</a></code>.</p>
 
 
 
@@ -4223,7 +4598,7 @@ surjective map <code>f : R →+ S</code>.</p>
 
 
 <p>The regular action of a monoid on itself by left multiplication.</p>
-<p>This is promoted to a module by <code>semiring.to_module</code>.</p>
+<p>This is promoted to a module by <code><a href="https://oxarbitrage.github.io/salsa20-docs/algebra/module/basic.html#semiring.to_module">semiring.to_module</a></code>.</p>
 
 
 
@@ -4381,7 +4756,7 @@ surjective map <code>f : R →+ S</code>.</p>
 
 
 <p>Note that the <code><a href="https://oxarbitrage.github.io/salsa20-docs/group_theory/group_action/defs.html#is_scalar_tower">is_scalar_tower</a> M α α</code> and <code><a href="https://oxarbitrage.github.io/salsa20-docs/group_theory/group_action/defs.html#smul_comm_class">smul_comm_class</a> M α α</code> typeclass arguments are
-usually satisfied by <code>algebra M α</code>.</p>
+usually satisfied by <code><a href="https://oxarbitrage.github.io/salsa20-docs/algebra/algebra/basic.html#algebra">algebra</a> M α</code>.</p>
 
 
 
@@ -5142,9 +5517,57 @@ an additive action of <code>N</code> on <code>α</code>.</p>
         <summary>Instances of this typeclass</summary>
         <ul>
             
+                <li><a href="https://oxarbitrage.github.io/salsa20-docs/algebra/module/basic.html#module.to_distrib_mul_action">module.to_distrib_mul_action</a></li>
+            
+                <li><a href="https://oxarbitrage.github.io/salsa20-docs/algebra/group_ring_action.html#mul_semiring_action.to_distrib_mul_action">mul_semiring_action.to_distrib_mul_action</a></li>
+            
                 <li><a href="https://oxarbitrage.github.io/salsa20-docs/group_theory/group_action/defs.html#add_monoid.End.apply_distrib_mul_action">add_monoid.End.apply_distrib_mul_action</a></li>
             
                 <li><a href="https://oxarbitrage.github.io/salsa20-docs/group_theory/group_action/units.html#units.distrib_mul_action">units.distrib_mul_action</a></li>
+            
+                <li><a href="https://oxarbitrage.github.io/salsa20-docs/group_theory/group_action/opposite.html#mul_opposite.distrib_mul_action">mul_opposite.distrib_mul_action</a></li>
+            
+                <li><a href="https://oxarbitrage.github.io/salsa20-docs/group_theory/group_action/prod.html#prod.distrib_mul_action">prod.distrib_mul_action</a></li>
+            
+                <li><a href="https://oxarbitrage.github.io/salsa20-docs/algebra/hom/aut.html#add_aut.apply_distrib_mul_action">add_aut.apply_distrib_mul_action</a></li>
+            
+                <li><a href="https://oxarbitrage.github.io/salsa20-docs/algebra/module/basic.html#ring_hom.apply_distrib_mul_action">ring_hom.apply_distrib_mul_action</a></li>
+            
+                <li><a href="https://oxarbitrage.github.io/salsa20-docs/group_theory/submonoid/operations.html#submonoid.distrib_mul_action">submonoid.distrib_mul_action</a></li>
+            
+                <li><a href="https://oxarbitrage.github.io/salsa20-docs/group_theory/subgroup/basic.html#subgroup.distrib_mul_action">subgroup.distrib_mul_action</a></li>
+            
+                <li><a href="https://oxarbitrage.github.io/salsa20-docs/ring_theory/subsemiring/basic.html#subsemiring.distrib_mul_action">subsemiring.distrib_mul_action</a></li>
+            
+                <li><a href="https://oxarbitrage.github.io/salsa20-docs/ring_theory/subring/basic.html#subring.distrib_mul_action">subring.distrib_mul_action</a></li>
+            
+                <li><a href="https://oxarbitrage.github.io/salsa20-docs/group_theory/group_action/pi.html#pi.distrib_mul_action">pi.distrib_mul_action</a></li>
+            
+                <li><a href="https://oxarbitrage.github.io/salsa20-docs/group_theory/group_action/pi.html#pi.distrib_mul_action'">pi.distrib_mul_action'</a></li>
+            
+                <li><a href="https://oxarbitrage.github.io/salsa20-docs/algebra/module/linear_map.html#linear_map.distrib_mul_action">linear_map.distrib_mul_action</a></li>
+            
+                <li><a href="https://oxarbitrage.github.io/salsa20-docs/algebra/module/equiv.html#linear_equiv.apply_distrib_mul_action">linear_equiv.apply_distrib_mul_action</a></li>
+            
+                <li><a href="https://oxarbitrage.github.io/salsa20-docs/algebra/module/ulift.html#ulift.distrib_mul_action">ulift.distrib_mul_action</a></li>
+            
+                <li><a href="https://oxarbitrage.github.io/salsa20-docs/algebra/module/ulift.html#ulift.distrib_mul_action'">ulift.distrib_mul_action'</a></li>
+            
+                <li><a href="https://oxarbitrage.github.io/salsa20-docs/algebra/module/hom.html#add_monoid_hom.distrib_mul_action">add_monoid_hom.distrib_mul_action</a></li>
+            
+                <li><a href="https://oxarbitrage.github.io/salsa20-docs/algebra/punit_instances.html#punit.distrib_mul_action">punit.distrib_mul_action</a></li>
+            
+                <li><a href="https://oxarbitrage.github.io/salsa20-docs/data/dfinsupp/basic.html#dfinsupp.distrib_mul_action">dfinsupp.distrib_mul_action</a></li>
+            
+                <li><a href="https://oxarbitrage.github.io/salsa20-docs/data/dfinsupp/basic.html#dfinsupp.distrib_mul_action₂">dfinsupp.distrib_mul_action₂</a></li>
+            
+                <li><a href="https://oxarbitrage.github.io/salsa20-docs/data/finsupp/basic.html#finsupp.distrib_mul_action">finsupp.distrib_mul_action</a></li>
+            
+                <li><a href="https://oxarbitrage.github.io/salsa20-docs/algebra/star/self_adjoint.html#self_adjoint.distrib_mul_action">self_adjoint.distrib_mul_action</a></li>
+            
+                <li><a href="https://oxarbitrage.github.io/salsa20-docs/algebra/star/self_adjoint.html#skew_adjoint.distrib_mul_action">skew_adjoint.distrib_mul_action</a></li>
+            
+                <li><a href="https://oxarbitrage.github.io/salsa20-docs/data/matrix/basic.html#matrix.distrib_mul_action">matrix.distrib_mul_action</a></li>
             
         </ul>
     </details>
@@ -5222,6 +5645,8 @@ an additive action of <code>N</code> on <code>α</code>.</p>
 
 <div class="gh_link"><a href="https://github.com/leanprover-community/mathlib/blob/master/src/group_theory/group_action/defs.lean#L502">source</a></div>
 
+
+    <div class="attributes">@[simp]</div>
 
 
 <div class="decl_header">
@@ -5473,7 +5898,7 @@ See note [reducible non-instances].</p>
 
 
 <p>Push forward the action of <code>R</code> on <code>M</code> along a compatible surjective map <code>f : R →* S</code>.</p>
-<p>See also <code><a href="https://oxarbitrage.github.io/salsa20-docs/group_theory/group_action/defs.html#function.surjective.mul_action_left">function.surjective.mul_action_left</a></code> and <code>function.surjective.module_left</code>.</p>
+<p>See also <code><a href="https://oxarbitrage.github.io/salsa20-docs/group_theory/group_action/defs.html#function.surjective.mul_action_left">function.surjective.mul_action_left</a></code> and <code><a href="https://oxarbitrage.github.io/salsa20-docs/algebra/module/basic.html#function.surjective.module_left">function.surjective.module_left</a></code>.</p>
 
 
 
@@ -6183,9 +6608,35 @@ conjugation actions.</p>
         <summary>Instances of this typeclass</summary>
         <ul>
             
+                <li><a href="https://oxarbitrage.github.io/salsa20-docs/algebra/group_ring_action.html#mul_semiring_action.to_mul_distrib_mul_action">mul_semiring_action.to_mul_distrib_mul_action</a></li>
+            
                 <li><a href="https://oxarbitrage.github.io/salsa20-docs/group_theory/group_action/units.html#units.mul_distrib_mul_action">units.mul_distrib_mul_action</a></li>
             
                 <li><a href="https://oxarbitrage.github.io/salsa20-docs/group_theory/group_action/units.html#units.mul_distrib_mul_action'">units.mul_distrib_mul_action'</a></li>
+            
+                <li><a href="https://oxarbitrage.github.io/salsa20-docs/group_theory/group_action/opposite.html#mul_opposite.mul_distrib_mul_action">mul_opposite.mul_distrib_mul_action</a></li>
+            
+                <li><a href="https://oxarbitrage.github.io/salsa20-docs/group_theory/group_action/prod.html#prod.mul_distrib_mul_action">prod.mul_distrib_mul_action</a></li>
+            
+                <li><a href="https://oxarbitrage.github.io/salsa20-docs/algebra/hom/aut.html#mul_aut.apply_mul_distrib_mul_action">mul_aut.apply_mul_distrib_mul_action</a></li>
+            
+                <li><a href="https://oxarbitrage.github.io/salsa20-docs/group_theory/submonoid/operations.html#submonoid.mul_distrib_mul_action">submonoid.mul_distrib_mul_action</a></li>
+            
+                <li><a href="https://oxarbitrage.github.io/salsa20-docs/group_theory/subgroup/basic.html#subgroup.mul_distrib_mul_action">subgroup.mul_distrib_mul_action</a></li>
+            
+                <li><a href="https://oxarbitrage.github.io/salsa20-docs/ring_theory/subsemiring/basic.html#subsemiring.mul_distrib_mul_action">subsemiring.mul_distrib_mul_action</a></li>
+            
+                <li><a href="https://oxarbitrage.github.io/salsa20-docs/ring_theory/subring/basic.html#subring.mul_distrib_mul_action">subring.mul_distrib_mul_action</a></li>
+            
+                <li><a href="https://oxarbitrage.github.io/salsa20-docs/group_theory/group_action/pi.html#pi.mul_distrib_mul_action">pi.mul_distrib_mul_action</a></li>
+            
+                <li><a href="https://oxarbitrage.github.io/salsa20-docs/group_theory/group_action/pi.html#pi.mul_distrib_mul_action'">pi.mul_distrib_mul_action'</a></li>
+            
+                <li><a href="https://oxarbitrage.github.io/salsa20-docs/algebra/module/ulift.html#ulift.mul_distrib_mul_action">ulift.mul_distrib_mul_action</a></li>
+            
+                <li><a href="https://oxarbitrage.github.io/salsa20-docs/algebra/module/ulift.html#ulift.mul_distrib_mul_action'">ulift.mul_distrib_mul_action'</a></li>
+            
+                <li><a href="https://oxarbitrage.github.io/salsa20-docs/algebra/punit_instances.html#punit.mul_distrib_mul_action">punit.mul_distrib_mul_action</a></li>
             
         </ul>
     </details>
@@ -6219,6 +6670,8 @@ conjugation actions.</p>
 
 <div class="gh_link"><a href="https://github.com/leanprover-community/mathlib/blob/master/src/group_theory/group_action/defs.lean#L613">source</a></div>
 
+
+    <div class="attributes">@[simp]</div>
 
 
 <div class="decl_header">
@@ -6945,15 +7398,15 @@ See note [reducible non-instances].</p>
 <p>The tautological action by <code><a href="https://oxarbitrage.github.io/salsa20-docs/group_theory/group_action/defs.html#function.End">function.End</a> α</code> on <code>α</code>.</p>
 <p>This is generalized to bundled endomorphisms by:</p>
 <ul>
-<li><code>equiv.perm.apply_mul_action</code></li>
+<li><code><a href="https://oxarbitrage.github.io/salsa20-docs/group_theory/group_action/group.html#equiv.perm.apply_mul_action">equiv.perm.apply_mul_action</a></code></li>
 <li><code><a href="https://oxarbitrage.github.io/salsa20-docs/group_theory/group_action/defs.html#add_monoid.End.apply_distrib_mul_action">add_monoid.End.apply_distrib_mul_action</a></code></li>
-<li><code>add_aut.apply_distrib_mul_action</code></li>
-<li><code>mul_aut.apply_mul_distrib_mul_action</code></li>
-<li><code>ring_hom.apply_distrib_mul_action</code></li>
-<li><code>linear_equiv.apply_distrib_mul_action</code></li>
-<li><code>linear_map.apply_module</code></li>
+<li><code><a href="https://oxarbitrage.github.io/salsa20-docs/algebra/hom/aut.html#add_aut.apply_distrib_mul_action">add_aut.apply_distrib_mul_action</a></code></li>
+<li><code><a href="https://oxarbitrage.github.io/salsa20-docs/algebra/hom/aut.html#mul_aut.apply_mul_distrib_mul_action">mul_aut.apply_mul_distrib_mul_action</a></code></li>
+<li><code><a href="https://oxarbitrage.github.io/salsa20-docs/algebra/module/basic.html#ring_hom.apply_distrib_mul_action">ring_hom.apply_distrib_mul_action</a></code></li>
+<li><code><a href="https://oxarbitrage.github.io/salsa20-docs/algebra/module/equiv.html#linear_equiv.apply_distrib_mul_action">linear_equiv.apply_distrib_mul_action</a></code></li>
+<li><code><a href="https://oxarbitrage.github.io/salsa20-docs/algebra/module/linear_map.html#linear_map.apply_module">linear_map.apply_module</a></code></li>
 <li><code>ring_hom.apply_mul_semiring_action</code></li>
-<li><code>alg_equiv.apply_mul_semiring_action</code></li>
+<li><code><a href="https://oxarbitrage.github.io/salsa20-docs/algebra/algebra/basic.html#alg_equiv.apply_mul_semiring_action">alg_equiv.apply_mul_semiring_action</a></code></li>
 </ul>
 
 
@@ -7238,7 +7691,7 @@ See note [reducible non-instances].</p>
 
 
 <p>The monoid hom representing a monoid action.</p>
-<p>When <code>M</code> is a group, see <code>mul_action.to_perm_hom</code>.</p>
+<p>When <code>M</code> is a group, see <code><a href="https://oxarbitrage.github.io/salsa20-docs/group_theory/group_action/group.html#mul_action.to_perm_hom">mul_action.to_perm_hom</a></code>.</p>
 
 
 
@@ -7400,7 +7853,7 @@ See note [reducible non-instances].</p>
 
 
 <p>The additive monoid hom representing an additive monoid action.</p>
-<p>When <code>M</code> is a group, see <code>add_action.to_perm_hom</code>.</p>
+<p>When <code>M</code> is a group, see <code><a href="https://oxarbitrage.github.io/salsa20-docs/group_theory/group_action/group.html#add_action.to_perm_hom">add_action.to_perm_hom</a></code>.</p>
 
 
 
@@ -8026,6 +8479,13 @@ See note [reducible non-instances].</p>
         <details class="nav_sect" data-path="algebra" >
             <summary>algebra</summary>
             
+        <details class="nav_sect" data-path="algebra/algebra" >
+            <summary>algebra</summary>
+            
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/algebra/algebra/basic.html">basic</a>
+        </div>
+        </details>
         <details class="nav_sect" data-path="algebra/big_operators" >
             <summary>big_operators</summary>
             
@@ -8033,7 +8493,19 @@ See note [reducible non-instances].</p>
             <a href="https://oxarbitrage.github.io/salsa20-docs/algebra/big_operators/basic.html">basic</a>
         </div>
         <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/algebra/big_operators/fin.html">fin</a>
+        </div>
+        <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/algebra/big_operators/multiset.html">multiset</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/algebra/big_operators/option.html">option</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/algebra/big_operators/pi.html">pi</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/algebra/big_operators/ring.html">ring</a>
         </div>
         </details>
         <details class="nav_sect" data-path="algebra/char_zero" >
@@ -8053,6 +8525,13 @@ See note [reducible non-instances].</p>
             <a href="https://oxarbitrage.github.io/salsa20-docs/algebra/field/opposite.html">opposite</a>
         </div>
         </details>
+        <details class="nav_sect" data-path="algebra/gcd_monoid" >
+            <summary>gcd_monoid</summary>
+            
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/algebra/gcd_monoid/basic.html">basic</a>
+        </div>
+        </details>
         <details class="nav_sect" data-path="algebra/group" >
             <summary>group</summary>
             
@@ -8061,6 +8540,9 @@ See note [reducible non-instances].</p>
         </div>
         <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/algebra/group/commute.html">commute</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/algebra/group/conj.html">conj</a>
         </div>
         <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/algebra/group/defs.html">defs</a>
@@ -8085,6 +8567,9 @@ See note [reducible non-instances].</p>
         </div>
         <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/algebra/group/type_tags.html">type_tags</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/algebra/group/ulift.html">ulift</a>
         </div>
         <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/algebra/group/units.html">units</a>
@@ -8126,10 +8611,16 @@ See note [reducible non-instances].</p>
             <summary>hom</summary>
             
         <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/algebra/hom/aut.html">aut</a>
+        </div>
+        <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/algebra/hom/equiv.html">equiv</a>
         </div>
         <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/algebra/hom/group.html">group</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/algebra/hom/group_action.html">group_action</a>
         </div>
         <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/algebra/hom/group_instances.html">group_instances</a>
@@ -8139,6 +8630,41 @@ See note [reducible non-instances].</p>
         </div>
         <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/algebra/hom/units.html">units</a>
+        </div>
+        </details>
+        <details class="nav_sect" data-path="algebra/module" >
+            <summary>module</summary>
+            
+        <details class="nav_sect" data-path="algebra/module/submodule" >
+            <summary>submodule</summary>
+            
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/algebra/module/submodule/basic.html">basic</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/algebra/module/submodule/lattice.html">lattice</a>
+        </div>
+        </details>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/algebra/module/basic.html">basic</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/algebra/module/equiv.html">equiv</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/algebra/module/hom.html">hom</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/algebra/module/linear_map.html">linear_map</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/algebra/module/pi.html">pi</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/algebra/module/prod.html">prod</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/algebra/module/ulift.html">ulift</a>
         </div>
         </details>
         <details class="nav_sect" data-path="algebra/order" >
@@ -8169,19 +8695,59 @@ See note [reducible non-instances].</p>
         <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/algebra/regular/basic.html">basic</a>
         </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/algebra/regular/smul.html">smul</a>
+        </div>
         </details>
         <details class="nav_sect" data-path="algebra/ring" >
             <summary>ring</summary>
             
         <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/algebra/ring/aut.html">aut</a>
+        </div>
+        <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/algebra/ring/basic.html">basic</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/algebra/ring/comp_typeclasses.html">comp_typeclasses</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/algebra/ring/equiv.html">equiv</a>
         </div>
         <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/algebra/ring/opposite.html">opposite</a>
         </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/algebra/ring/pi.html">pi</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/algebra/ring/prod.html">prod</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/algebra/ring/ulift.html">ulift</a>
+        </div>
+        </details>
+        <details class="nav_sect" data-path="algebra/star" >
+            <summary>star</summary>
+            
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/algebra/star/basic.html">basic</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/algebra/star/module.html">module</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/algebra/star/pi.html">pi</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/algebra/star/self_adjoint.html">self_adjoint</a>
+        </div>
         </details>
         <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/algebra/abs.html">abs</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/algebra/associated.html">associated</a>
         </div>
         <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/algebra/char_zero.html">char_zero</a>
@@ -8196,10 +8762,34 @@ See note [reducible non-instances].</p>
             <a href="https://oxarbitrage.github.io/salsa20-docs/algebra/euclidean_domain.html">euclidean_domain</a>
         </div>
         <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/algebra/field_power.html">field_power</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/algebra/free_monoid.html">free_monoid</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/algebra/group_ring_action.html">group_ring_action</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/algebra/indicator_function.html">indicator_function</a>
+        </div>
+        <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/algebra/invertible.html">invertible</a>
         </div>
         <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/algebra/opposites.html">opposites</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/algebra/parity.html">parity</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/algebra/punit_instances.html">punit_instances</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/algebra/smul_with_zero.html">smul_with_zero</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/algebra/support.html">support</a>
         </div>
         </details>
         <details class="nav_sect" data-path="category_theory" >
@@ -8300,6 +8890,13 @@ See note [reducible non-instances].</p>
         <details class="nav_sect" data-path="control" >
             <summary>control</summary>
             
+        <details class="nav_sect" data-path="control/monad" >
+            <summary>monad</summary>
+            
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/control/monad/basic.html">basic</a>
+        </div>
+        </details>
         <details class="nav_sect" data-path="control/traversable" >
             <summary>traversable</summary>
             
@@ -8369,6 +8966,13 @@ See note [reducible non-instances].</p>
             <a href="https://oxarbitrage.github.io/salsa20-docs/data/countable/defs.html">defs</a>
         </div>
         </details>
+        <details class="nav_sect" data-path="data/dfinsupp" >
+            <summary>dfinsupp</summary>
+            
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/data/dfinsupp/basic.html">basic</a>
+        </div>
+        </details>
         <details class="nav_sect" data-path="data/dlist" >
             <summary>dlist</summary>
             
@@ -8389,12 +8993,24 @@ See note [reducible non-instances].</p>
         <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/data/fin/basic.html">basic</a>
         </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/data/fin/interval.html">interval</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/data/fin/vec_notation.html">vec_notation</a>
+        </div>
         </details>
         <details class="nav_sect" data-path="data/finite" >
             <summary>finite</summary>
             
         <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/data/finite/basic.html">basic</a>
+        </div>
+        <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/data/finite/defs.html">defs</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/data/finite/set.html">set</a>
         </div>
         </details>
         <details class="nav_sect" data-path="data/finset" >
@@ -8416,7 +9032,19 @@ See note [reducible non-instances].</p>
             <a href="https://oxarbitrage.github.io/salsa20-docs/data/finset/lattice.html">lattice</a>
         </div>
         <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/data/finset/locally_finite.html">locally_finite</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/data/finset/noncomm_prod.html">noncomm_prod</a>
+        </div>
+        <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/data/finset/option.html">option</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/data/finset/order.html">order</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/data/finset/pairwise.html">pairwise</a>
         </div>
         <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/data/finset/pi.html">pi</a>
@@ -8425,10 +9053,23 @@ See note [reducible non-instances].</p>
             <a href="https://oxarbitrage.github.io/salsa20-docs/data/finset/powerset.html">powerset</a>
         </div>
         <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/data/finset/preimage.html">preimage</a>
+        </div>
+        <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/data/finset/prod.html">prod</a>
         </div>
         <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/data/finset/sigma.html">sigma</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/data/finset/sort.html">sort</a>
+        </div>
+        </details>
+        <details class="nav_sect" data-path="data/finsupp" >
+            <summary>finsupp</summary>
+            
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/data/finsupp/basic.html">basic</a>
         </div>
         </details>
         <details class="nav_sect" data-path="data/fintype" >
@@ -8436,6 +9077,12 @@ See note [reducible non-instances].</p>
             
         <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/data/fintype/basic.html">basic</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/data/fintype/card.html">card</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/data/fintype/fin.html">fin</a>
         </div>
         </details>
         <details class="nav_sect" data-path="data/fun_like" >
@@ -8473,10 +9120,28 @@ See note [reducible non-instances].</p>
         <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/data/int/char_zero.html">char_zero</a>
         </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/data/int/gcd.html">gcd</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/data/int/interval.html">interval</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/data/int/least_greatest.html">least_greatest</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/data/int/modeq.html">modeq</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/data/int/order.html">order</a>
+        </div>
         </details>
         <details class="nav_sect" data-path="data/list" >
             <summary>list</summary>
             
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/data/list/alist.html">alist</a>
+        </div>
         <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/data/list/basic.html">basic</a>
         </div>
@@ -8500,6 +9165,9 @@ See note [reducible non-instances].</p>
         </div>
         <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/data/list/forall2.html">forall2</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/data/list/indexes.html">indexes</a>
         </div>
         <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/data/list/infix.html">infix</a>
@@ -8529,13 +9197,25 @@ See note [reducible non-instances].</p>
             <a href="https://oxarbitrage.github.io/salsa20-docs/data/list/pairwise.html">pairwise</a>
         </div>
         <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/data/list/palindrome.html">palindrome</a>
+        </div>
+        <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/data/list/perm.html">perm</a>
         </div>
         <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/data/list/permutation.html">permutation</a>
         </div>
         <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/data/list/prime.html">prime</a>
+        </div>
+        <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/data/list/range.html">range</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/data/list/rotate.html">rotate</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/data/list/sigma.html">sigma</a>
         </div>
         <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/data/list/sort.html">sort</a>
@@ -8544,7 +9224,20 @@ See note [reducible non-instances].</p>
             <a href="https://oxarbitrage.github.io/salsa20-docs/data/list/sublists.html">sublists</a>
         </div>
         <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/data/list/tfae.html">tfae</a>
+        </div>
+        <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/data/list/zip.html">zip</a>
+        </div>
+        </details>
+        <details class="nav_sect" data-path="data/matrix" >
+            <summary>matrix</summary>
+            
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/data/matrix/basic.html">basic</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/data/matrix/notation.html">notation</a>
         </div>
         </details>
         <details class="nav_sect" data-path="data/multiset" >
@@ -8580,6 +9273,9 @@ See note [reducible non-instances].</p>
         <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/data/multiset/range.html">range</a>
         </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/data/multiset/sort.html">sort</a>
+        </div>
         </details>
         <details class="nav_sect" data-path="data/nat" >
             <summary>nat</summary>
@@ -8609,22 +9305,56 @@ See note [reducible non-instances].</p>
             <a href="https://oxarbitrage.github.io/salsa20-docs/data/nat/basic.html">basic</a>
         </div>
         <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/data/nat/bits.html">bits</a>
+        </div>
+        <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/data/nat/cast.html">cast</a>
         </div>
         <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/data/nat/cast_field.html">cast_field</a>
         </div>
         <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/data/nat/digits.html">digits</a>
+        </div>
+        <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/data/nat/gcd.html">gcd</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/data/nat/interval.html">interval</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/data/nat/lattice.html">lattice</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/data/nat/log.html">log</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/data/nat/modeq.html">modeq</a>
         </div>
         <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/data/nat/pairing.html">pairing</a>
         </div>
         <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/data/nat/parity.html">parity</a>
+        </div>
+        <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/data/nat/pow.html">pow</a>
         </div>
         <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/data/nat/prime.html">prime</a>
+        </div>
+        <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/data/nat/sqrt.html">sqrt</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/data/nat/sqrt_norm_num.html">sqrt_norm_num</a>
+        </div>
+        </details>
+        <details class="nav_sect" data-path="data/num" >
+            <summary>num</summary>
+            
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/data/num/basic.html">basic</a>
         </div>
         </details>
         <details class="nav_sect" data-path="data/option" >
@@ -8653,12 +9383,18 @@ See note [reducible non-instances].</p>
         <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/data/pnat/basic.html">basic</a>
         </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/data/pnat/interval.html">interval</a>
+        </div>
         </details>
         <details class="nav_sect" data-path="data/prod" >
             <summary>prod</summary>
             
         <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/data/prod/basic.html">basic</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/data/prod/lex.html">lex</a>
         </div>
         <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/data/prod/pprod.html">pprod</a>
@@ -8709,12 +9445,27 @@ See note [reducible non-instances].</p>
         <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/data/set/intervals/basic.html">basic</a>
         </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/data/set/intervals/image_preimage.html">image_preimage</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/data/set/intervals/ord_connected.html">ord_connected</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/data/set/intervals/unordered_interval.html">unordered_interval</a>
+        </div>
         </details>
         <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/data/set/basic.html">basic</a>
         </div>
         <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/data/set/finite.html">finite</a>
+        </div>
+        <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/data/set/function.html">function</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/data/set/functor.html">functor</a>
         </div>
         <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/data/set/lattice.html">lattice</a>
@@ -8723,10 +9474,20 @@ See note [reducible non-instances].</p>
             <a href="https://oxarbitrage.github.io/salsa20-docs/data/set/pairwise.html">pairwise</a>
         </div>
         <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/data/set/pointwise.html">pointwise</a>
+        </div>
+        <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/data/set/prod.html">prod</a>
         </div>
         <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/data/set/sigma.html">sigma</a>
+        </div>
+        </details>
+        <details class="nav_sect" data-path="data/set_like" >
+            <summary>set_like</summary>
+            
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/data/set_like/basic.html">basic</a>
         </div>
         </details>
         <details class="nav_sect" data-path="data/setoid" >
@@ -8746,6 +9507,9 @@ See note [reducible non-instances].</p>
         <details class="nav_sect" data-path="data/string" >
             <summary>string</summary>
             
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/data/string/basic.html">basic</a>
+        </div>
         <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/data/string/defs.html">defs</a>
         </div>
@@ -8775,16 +9539,25 @@ See note [reducible non-instances].</p>
             <a href="https://oxarbitrage.github.io/salsa20-docs/data/bracket.html">bracket</a>
         </div>
         <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/data/char.html">char</a>
+        </div>
+        <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/data/mllist.html">mllist</a>
         </div>
         <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/data/opposite.html">opposite</a>
         </div>
         <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/data/part.html">part</a>
+        </div>
+        <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/data/quot.html">quot</a>
         </div>
         <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/data/subtype.html">subtype</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/data/tree.html">tree</a>
         </div>
         <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/data/ulift.html">ulift</a>
@@ -8796,8 +9569,29 @@ See note [reducible non-instances].</p>
         <details class="nav_sect" data-path="group_theory/group_action" open>
             <summary>group_action</summary>
             
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/group_theory/group_action/basic.html">basic</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/group_theory/group_action/big_operators.html">big_operators</a>
+        </div>
         <div class="nav_link visible">
             <a href="https://oxarbitrage.github.io/salsa20-docs/group_theory/group_action/defs.html">defs</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/group_theory/group_action/group.html">group</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/group_theory/group_action/opposite.html">opposite</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/group_theory/group_action/pi.html">pi</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/group_theory/group_action/prod.html">prod</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/group_theory/group_action/sub_mul_action.html">sub_mul_action</a>
         </div>
         <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/group_theory/group_action/units.html">units</a>
@@ -8810,6 +9604,64 @@ See note [reducible non-instances].</p>
             <a href="https://oxarbitrage.github.io/salsa20-docs/group_theory/perm/basic.html">basic</a>
         </div>
         </details>
+        <details class="nav_sect" data-path="group_theory/subgroup" >
+            <summary>subgroup</summary>
+            
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/group_theory/subgroup/basic.html">basic</a>
+        </div>
+        </details>
+        <details class="nav_sect" data-path="group_theory/submonoid" >
+            <summary>submonoid</summary>
+            
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/group_theory/submonoid/basic.html">basic</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/group_theory/submonoid/center.html">center</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/group_theory/submonoid/centralizer.html">centralizer</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/group_theory/submonoid/membership.html">membership</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/group_theory/submonoid/operations.html">operations</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/group_theory/submonoid/pointwise.html">pointwise</a>
+        </div>
+        </details>
+        <details class="nav_sect" data-path="group_theory/subsemigroup" >
+            <summary>subsemigroup</summary>
+            
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/group_theory/subsemigroup/basic.html">basic</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/group_theory/subsemigroup/center.html">center</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/group_theory/subsemigroup/centralizer.html">centralizer</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/group_theory/subsemigroup/operations.html">operations</a>
+        </div>
+        </details>
+        </details>
+        <details class="nav_sect" data-path="linear_algebra" >
+            <summary>linear_algebra</summary>
+            
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/linear_algebra/basic.html">basic</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/linear_algebra/prod.html">prod</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/linear_algebra/span.html">span</a>
+        </div>
         </details>
         <details class="nav_sect" data-path="logic" >
             <summary>logic</summary>
@@ -8826,6 +9678,9 @@ See note [reducible non-instances].</p>
             
         <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/logic/equiv/basic.html">basic</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/logic/equiv/fin.html">fin</a>
         </div>
         <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/logic/equiv/nat.html">nat</a>
@@ -8852,6 +9707,9 @@ See note [reducible non-instances].</p>
         </details>
         <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/logic/basic.html">basic</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/logic/denumerable.html">denumerable</a>
         </div>
         <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/logic/embedding.html">embedding</a>
@@ -8900,7 +9758,13 @@ See note [reducible non-instances].</p>
         <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/order/hom/basic.html">basic</a>
         </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/order/hom/order.html">order</a>
+        </div>
         </details>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/order/atoms.html">atoms</a>
+        </div>
         <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/order/basic.html">basic</a>
         </div>
@@ -8914,6 +9778,12 @@ See note [reducible non-instances].</p>
             <a href="https://oxarbitrage.github.io/salsa20-docs/order/bounds.html">bounds</a>
         </div>
         <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/order/chain.html">chain</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/order/compactly_generated.html">compactly_generated</a>
+        </div>
+        <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/order/compare.html">compare</a>
         </div>
         <div class="nav_link ">
@@ -8921,6 +9791,12 @@ See note [reducible non-instances].</p>
         </div>
         <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/order/complete_lattice.html">complete_lattice</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/order/conditionally_complete_lattice.html">conditionally_complete_lattice</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/order/cover.html">cover</a>
         </div>
         <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/order/directed.html">directed</a>
@@ -8932,13 +9808,31 @@ See note [reducible non-instances].</p>
             <a href="https://oxarbitrage.github.io/salsa20-docs/order/lattice.html">lattice</a>
         </div>
         <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/order/lattice_intervals.html">lattice_intervals</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/order/locally_finite.html">locally_finite</a>
+        </div>
+        <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/order/max.html">max</a>
         </div>
         <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/order/min_max.html">min_max</a>
         </div>
         <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/order/modular_lattice.html">modular_lattice</a>
+        </div>
+        <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/order/monotone.html">monotone</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/order/omega_complete_partial_order.html">omega_complete_partial_order</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/order/order_iso_nat.html">order_iso_nat</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/order/partial_sups.html">partial_sups</a>
         </div>
         <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/order/rel_classes.html">rel_classes</a>
@@ -8947,11 +9841,35 @@ See note [reducible non-instances].</p>
             <a href="https://oxarbitrage.github.io/salsa20-docs/order/rel_iso.html">rel_iso</a>
         </div>
         <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/order/sup_indep.html">sup_indep</a>
+        </div>
+        <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/order/synonym.html">synonym</a>
         </div>
         <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/order/well_founded.html">well_founded</a>
         </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/order/zorn.html">zorn</a>
+        </div>
+        </details>
+        <details class="nav_sect" data-path="ring_theory" >
+            <summary>ring_theory</summary>
+            
+        <details class="nav_sect" data-path="ring_theory/subring" >
+            <summary>subring</summary>
+            
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/ring_theory/subring/basic.html">basic</a>
+        </div>
+        </details>
+        <details class="nav_sect" data-path="ring_theory/subsemiring" >
+            <summary>subsemiring</summary>
+            
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/ring_theory/subsemiring/basic.html">basic</a>
+        </div>
+        </details>
         </details>
         <details class="nav_sect" data-path="tactic" >
             <summary>tactic</summary>
@@ -8967,6 +9885,31 @@ See note [reducible non-instances].</p>
         </div>
         <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/tactic/converter/old_conv.html">old_conv</a>
+        </div>
+        </details>
+        <details class="nav_sect" data-path="tactic/linarith" >
+            <summary>linarith</summary>
+            
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/tactic/linarith/datatypes.html">datatypes</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/tactic/linarith/elimination.html">elimination</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/tactic/linarith/frontend.html">frontend</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/tactic/linarith/lemmas.html">lemmas</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/tactic/linarith/parsing.html">parsing</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/tactic/linarith/preprocessing.html">preprocessing</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/tactic/linarith/verification.html">verification</a>
         </div>
         </details>
         <details class="nav_sect" data-path="tactic/lint" >
@@ -9018,6 +9961,9 @@ See note [reducible non-instances].</p>
         </div>
         </details>
         <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/tactic/abel.html">abel</a>
+        </div>
+        <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/tactic/algebra.html">algebra</a>
         </div>
         <div class="nav_link ">
@@ -9042,6 +9988,9 @@ See note [reducible non-instances].</p>
             <a href="https://oxarbitrage.github.io/salsa20-docs/tactic/cache.html">cache</a>
         </div>
         <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/tactic/cancel_denoms.html">cancel_denoms</a>
+        </div>
+        <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/tactic/chain.html">chain</a>
         </div>
         <div class="nav_link ">
@@ -9052,6 +10001,9 @@ See note [reducible non-instances].</p>
         </div>
         <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/tactic/congr.html">congr</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/tactic/congrm.html">congrm</a>
         </div>
         <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/tactic/core.html">core</a>
@@ -9081,6 +10033,9 @@ See note [reducible non-instances].</p>
             <a href="https://oxarbitrage.github.io/salsa20-docs/tactic/ext.html">ext</a>
         </div>
         <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/tactic/fin_cases.html">fin_cases</a>
+        </div>
+        <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/tactic/find.html">find</a>
         </div>
         <div class="nav_link ">
@@ -9100,6 +10055,9 @@ See note [reducible non-instances].</p>
         </div>
         <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/tactic/interactive_expr.html">interactive_expr</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/tactic/interval_cases.html">interval_cases</a>
         </div>
         <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/tactic/itauto.html">itauto</a>
@@ -9162,6 +10120,12 @@ See note [reducible non-instances].</p>
             <a href="https://oxarbitrage.github.io/salsa20-docs/tactic/rewrite.html">rewrite</a>
         </div>
         <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/tactic/ring.html">ring</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/tactic/scc.html">scc</a>
+        </div>
+        <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/tactic/show_term.html">show_term</a>
         </div>
         <div class="nav_link ">
@@ -9198,6 +10162,9 @@ See note [reducible non-instances].</p>
             <a href="https://oxarbitrage.github.io/salsa20-docs/tactic/tauto.html">tauto</a>
         </div>
         <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/tactic/tfae.html">tfae</a>
+        </div>
+        <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/tactic/tidy.html">tidy</a>
         </div>
         <div class="nav_link ">
@@ -9215,31 +10182,12 @@ See note [reducible non-instances].</p>
         <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/tactic/wlog.html">wlog</a>
         </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/tactic/zify.html">zify</a>
+        </div>
         </details>
         <h4>salsa20</h4>
         
-        <details class="nav_sect" data-path="examples" >
-            <summary>examples</summary>
-            
-        <div class="nav_link ">
-            <a href="https://oxarbitrage.github.io/salsa20-docs/examples/columnround.html">columnround</a>
-        </div>
-        <div class="nav_link ">
-            <a href="https://oxarbitrage.github.io/salsa20-docs/examples/core.html">core</a>
-        </div>
-        <div class="nav_link ">
-            <a href="https://oxarbitrage.github.io/salsa20-docs/examples/doubleround.html">doubleround</a>
-        </div>
-        <div class="nav_link ">
-            <a href="https://oxarbitrage.github.io/salsa20-docs/examples/operations.html">operations</a>
-        </div>
-        <div class="nav_link ">
-            <a href="https://oxarbitrage.github.io/salsa20-docs/examples/quarterround.html">quarterround</a>
-        </div>
-        <div class="nav_link ">
-            <a href="https://oxarbitrage.github.io/salsa20-docs/examples/rowround.html">rowround</a>
-        </div>
-        </details>
         <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/columnround.html">columnround</a>
         </div>
@@ -9263,9 +10211,6 @@ See note [reducible non-instances].</p>
         </div>
         <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/rowround.html">rowround</a>
-        </div>
-        <div class="nav_link ">
-            <a href="https://oxarbitrage.github.io/salsa20-docs/utils.html">utils</a>
         </div>
 
 <div id="settings">

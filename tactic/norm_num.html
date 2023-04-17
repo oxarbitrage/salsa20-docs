@@ -59,6 +59,27 @@
         <ul>
             <li><a href="https://oxarbitrage.github.io/salsa20-docs/data/bitvec/basic.html">
                 data.bitvec.basic</a></li>
+        
+            <li><a href="https://oxarbitrage.github.io/salsa20-docs/data/nat/bits.html">
+                data.nat.bits</a></li>
+        
+            <li><a href="https://oxarbitrage.github.io/salsa20-docs/data/nat/sqrt_norm_num.html">
+                data.nat.sqrt_norm_num</a></li>
+        
+            <li><a href="https://oxarbitrage.github.io/salsa20-docs/tactic/abel.html">
+                tactic.abel</a></li>
+        
+            <li><a href="https://oxarbitrage.github.io/salsa20-docs/tactic/cancel_denoms.html">
+                tactic.cancel_denoms</a></li>
+        
+            <li><a href="https://oxarbitrage.github.io/salsa20-docs/tactic/fin_cases.html">
+                tactic.fin_cases</a></li>
+        
+            <li><a href="https://oxarbitrage.github.io/salsa20-docs/tactic/linarith/lemmas.html">
+                tactic.linarith.lemmas</a></li>
+        
+            <li><a href="https://oxarbitrage.github.io/salsa20-docs/tactic/ring.html">
+                tactic.ring</a></li>
         </ul>
     </details>
 </div>
@@ -8330,7 +8351,7 @@ It also has a relatively simple primality prover.</p>
 numerical types such as <code>ℕ</code>, <code>ℤ</code>, <code>ℚ</code>, <code>ℝ</code>, <code>ℂ</code>, and can prove goals of the form <code>A = B</code>, <code>A ≠ B</code>,
 <code>A &lt; B</code> and <code>A ≤ B</code>, where <code>A</code> and <code>B</code> are numerical expressions.</p>
 <p>Add-on tactics marked as <code>@[norm_num]</code> can extend the behavior of <code>norm_num</code> to include other
-functions. This is used to support several other functions on <code><a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#nat">nat</a></code> like <code>prime</code>, <code>min_fac</code> and
+functions. This is used to support several other functions on <code><a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#nat">nat</a></code> like <code><a href="https://oxarbitrage.github.io/salsa20-docs/algebra/associated.html#prime">prime</a></code>, <code>min_fac</code> and
 <code>factors</code>.</p>
 <div class="codehilite"><pre><span></span><code><span class="kn">import</span> <span class="n">data.real.basic</span>
 
@@ -8340,8 +8361,8 @@ functions. This is used to support several other functions on <code><a href="htt
 <span class="kd">example</span> <span class="o">:</span> <span class="mi">123456789</span> <span class="bp">+</span> <span class="mi">987654321</span> <span class="bp">=</span> <span class="mi">1111111110</span> <span class="o">:=</span> <span class="kd">by</span> <span class="n">norm_num</span>
 <span class="kd">example</span> <span class="o">(</span><span class="n">R</span> <span class="o">:</span> <span class="kt">Type</span><span class="bp">*</span><span class="o">)</span> <span class="o">[</span><span class="n"><a href="https://oxarbitrage.github.io/salsa20-docs/algebra/ring/basic.html#ring">ring</a></span> <span class="n">R</span><span class="o">]</span> <span class="o">:</span> <span class="o">(</span><span class="mi">2</span> <span class="o">:</span> <span class="n">R</span><span class="o">)</span> <span class="bp">+</span> <span class="mi">2</span> <span class="bp">=</span> <span class="mi">4</span> <span class="o">:=</span> <span class="kd">by</span> <span class="n">norm_num</span>
 <span class="kd">example</span> <span class="o">(</span><span class="n">F</span> <span class="o">:</span> <span class="kt">Type</span><span class="bp">*</span><span class="o">)</span> <span class="o">[</span><span class="n"><a href="https://oxarbitrage.github.io/salsa20-docs/algebra/order/field.html#linear_ordered_field">linear_ordered_field</a></span> <span class="n">F</span><span class="o">]</span> <span class="o">:</span> <span class="o">(</span><span class="mi">2</span> <span class="o">:</span> <span class="n">F</span><span class="o">)</span> <span class="bp">+</span> <span class="mi">2</span> <span class="bp">&lt;</span> <span class="mi">5</span> <span class="o">:=</span> <span class="kd">by</span> <span class="n">norm_num</span>
-<span class="kd">example</span> <span class="o">:</span> <span class="n">nat.prime</span> <span class="o">(</span><span class="mi">2</span><span class="bp">^</span><span class="mi">13</span> <span class="bp">-</span> <span class="mi">1</span><span class="o">)</span> <span class="o">:=</span> <span class="kd">by</span> <span class="n">norm_num</span>
-<span class="kd">example</span> <span class="o">:</span> <span class="bp">¬</span> <span class="n">nat.prime</span> <span class="o">(</span><span class="mi">2</span><span class="bp">^</span><span class="mi">11</span> <span class="bp">-</span> <span class="mi">1</span><span class="o">)</span> <span class="o">:=</span> <span class="kd">by</span> <span class="n">norm_num</span>
+<span class="kd">example</span> <span class="o">:</span> <span class="n"><a href="https://oxarbitrage.github.io/salsa20-docs/data/nat/prime.html#nat.prime">nat.prime</a></span> <span class="o">(</span><span class="mi">2</span><span class="bp">^</span><span class="mi">13</span> <span class="bp">-</span> <span class="mi">1</span><span class="o">)</span> <span class="o">:=</span> <span class="kd">by</span> <span class="n">norm_num</span>
+<span class="kd">example</span> <span class="o">:</span> <span class="bp">¬</span> <span class="n"><a href="https://oxarbitrage.github.io/salsa20-docs/data/nat/prime.html#nat.prime">nat.prime</a></span> <span class="o">(</span><span class="mi">2</span><span class="bp">^</span><span class="mi">11</span> <span class="bp">-</span> <span class="mi">1</span><span class="o">)</span> <span class="o">:=</span> <span class="kd">by</span> <span class="n">norm_num</span>
 <span class="kd">example</span> <span class="o">(</span><span class="n">x</span> <span class="o">:</span> <span class="n">ℝ</span><span class="o">)</span> <span class="o">(</span><span class="n">h</span> <span class="o">:</span> <span class="n">x</span> <span class="bp">=</span> <span class="mi">123</span> <span class="bp">+</span> <span class="mi">456</span><span class="o">)</span> <span class="o">:</span> <span class="n">x</span> <span class="bp">=</span> <span class="mi">579</span> <span class="o">:=</span> <span class="kd">by</span> <span class="n">norm_num</span> <span class="n">at</span> <span class="n">h</span><span class="bp">;</span> <span class="n">assumption</span>
 </code></pre></div>
 
@@ -9121,6 +9142,13 @@ introduce parameters.</p>
         <details class="nav_sect" data-path="algebra" >
             <summary>algebra</summary>
             
+        <details class="nav_sect" data-path="algebra/algebra" >
+            <summary>algebra</summary>
+            
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/algebra/algebra/basic.html">basic</a>
+        </div>
+        </details>
         <details class="nav_sect" data-path="algebra/big_operators" >
             <summary>big_operators</summary>
             
@@ -9128,7 +9156,19 @@ introduce parameters.</p>
             <a href="https://oxarbitrage.github.io/salsa20-docs/algebra/big_operators/basic.html">basic</a>
         </div>
         <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/algebra/big_operators/fin.html">fin</a>
+        </div>
+        <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/algebra/big_operators/multiset.html">multiset</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/algebra/big_operators/option.html">option</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/algebra/big_operators/pi.html">pi</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/algebra/big_operators/ring.html">ring</a>
         </div>
         </details>
         <details class="nav_sect" data-path="algebra/char_zero" >
@@ -9148,6 +9188,13 @@ introduce parameters.</p>
             <a href="https://oxarbitrage.github.io/salsa20-docs/algebra/field/opposite.html">opposite</a>
         </div>
         </details>
+        <details class="nav_sect" data-path="algebra/gcd_monoid" >
+            <summary>gcd_monoid</summary>
+            
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/algebra/gcd_monoid/basic.html">basic</a>
+        </div>
+        </details>
         <details class="nav_sect" data-path="algebra/group" >
             <summary>group</summary>
             
@@ -9156,6 +9203,9 @@ introduce parameters.</p>
         </div>
         <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/algebra/group/commute.html">commute</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/algebra/group/conj.html">conj</a>
         </div>
         <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/algebra/group/defs.html">defs</a>
@@ -9180,6 +9230,9 @@ introduce parameters.</p>
         </div>
         <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/algebra/group/type_tags.html">type_tags</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/algebra/group/ulift.html">ulift</a>
         </div>
         <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/algebra/group/units.html">units</a>
@@ -9221,10 +9274,16 @@ introduce parameters.</p>
             <summary>hom</summary>
             
         <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/algebra/hom/aut.html">aut</a>
+        </div>
+        <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/algebra/hom/equiv.html">equiv</a>
         </div>
         <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/algebra/hom/group.html">group</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/algebra/hom/group_action.html">group_action</a>
         </div>
         <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/algebra/hom/group_instances.html">group_instances</a>
@@ -9234,6 +9293,41 @@ introduce parameters.</p>
         </div>
         <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/algebra/hom/units.html">units</a>
+        </div>
+        </details>
+        <details class="nav_sect" data-path="algebra/module" >
+            <summary>module</summary>
+            
+        <details class="nav_sect" data-path="algebra/module/submodule" >
+            <summary>submodule</summary>
+            
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/algebra/module/submodule/basic.html">basic</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/algebra/module/submodule/lattice.html">lattice</a>
+        </div>
+        </details>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/algebra/module/basic.html">basic</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/algebra/module/equiv.html">equiv</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/algebra/module/hom.html">hom</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/algebra/module/linear_map.html">linear_map</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/algebra/module/pi.html">pi</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/algebra/module/prod.html">prod</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/algebra/module/ulift.html">ulift</a>
         </div>
         </details>
         <details class="nav_sect" data-path="algebra/order" >
@@ -9264,19 +9358,59 @@ introduce parameters.</p>
         <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/algebra/regular/basic.html">basic</a>
         </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/algebra/regular/smul.html">smul</a>
+        </div>
         </details>
         <details class="nav_sect" data-path="algebra/ring" >
             <summary>ring</summary>
             
         <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/algebra/ring/aut.html">aut</a>
+        </div>
+        <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/algebra/ring/basic.html">basic</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/algebra/ring/comp_typeclasses.html">comp_typeclasses</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/algebra/ring/equiv.html">equiv</a>
         </div>
         <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/algebra/ring/opposite.html">opposite</a>
         </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/algebra/ring/pi.html">pi</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/algebra/ring/prod.html">prod</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/algebra/ring/ulift.html">ulift</a>
+        </div>
+        </details>
+        <details class="nav_sect" data-path="algebra/star" >
+            <summary>star</summary>
+            
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/algebra/star/basic.html">basic</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/algebra/star/module.html">module</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/algebra/star/pi.html">pi</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/algebra/star/self_adjoint.html">self_adjoint</a>
+        </div>
         </details>
         <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/algebra/abs.html">abs</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/algebra/associated.html">associated</a>
         </div>
         <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/algebra/char_zero.html">char_zero</a>
@@ -9291,10 +9425,34 @@ introduce parameters.</p>
             <a href="https://oxarbitrage.github.io/salsa20-docs/algebra/euclidean_domain.html">euclidean_domain</a>
         </div>
         <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/algebra/field_power.html">field_power</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/algebra/free_monoid.html">free_monoid</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/algebra/group_ring_action.html">group_ring_action</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/algebra/indicator_function.html">indicator_function</a>
+        </div>
+        <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/algebra/invertible.html">invertible</a>
         </div>
         <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/algebra/opposites.html">opposites</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/algebra/parity.html">parity</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/algebra/punit_instances.html">punit_instances</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/algebra/smul_with_zero.html">smul_with_zero</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/algebra/support.html">support</a>
         </div>
         </details>
         <details class="nav_sect" data-path="category_theory" >
@@ -9395,6 +9553,13 @@ introduce parameters.</p>
         <details class="nav_sect" data-path="control" >
             <summary>control</summary>
             
+        <details class="nav_sect" data-path="control/monad" >
+            <summary>monad</summary>
+            
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/control/monad/basic.html">basic</a>
+        </div>
+        </details>
         <details class="nav_sect" data-path="control/traversable" >
             <summary>traversable</summary>
             
@@ -9464,6 +9629,13 @@ introduce parameters.</p>
             <a href="https://oxarbitrage.github.io/salsa20-docs/data/countable/defs.html">defs</a>
         </div>
         </details>
+        <details class="nav_sect" data-path="data/dfinsupp" >
+            <summary>dfinsupp</summary>
+            
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/data/dfinsupp/basic.html">basic</a>
+        </div>
+        </details>
         <details class="nav_sect" data-path="data/dlist" >
             <summary>dlist</summary>
             
@@ -9484,12 +9656,24 @@ introduce parameters.</p>
         <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/data/fin/basic.html">basic</a>
         </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/data/fin/interval.html">interval</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/data/fin/vec_notation.html">vec_notation</a>
+        </div>
         </details>
         <details class="nav_sect" data-path="data/finite" >
             <summary>finite</summary>
             
         <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/data/finite/basic.html">basic</a>
+        </div>
+        <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/data/finite/defs.html">defs</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/data/finite/set.html">set</a>
         </div>
         </details>
         <details class="nav_sect" data-path="data/finset" >
@@ -9511,7 +9695,19 @@ introduce parameters.</p>
             <a href="https://oxarbitrage.github.io/salsa20-docs/data/finset/lattice.html">lattice</a>
         </div>
         <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/data/finset/locally_finite.html">locally_finite</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/data/finset/noncomm_prod.html">noncomm_prod</a>
+        </div>
+        <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/data/finset/option.html">option</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/data/finset/order.html">order</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/data/finset/pairwise.html">pairwise</a>
         </div>
         <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/data/finset/pi.html">pi</a>
@@ -9520,10 +9716,23 @@ introduce parameters.</p>
             <a href="https://oxarbitrage.github.io/salsa20-docs/data/finset/powerset.html">powerset</a>
         </div>
         <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/data/finset/preimage.html">preimage</a>
+        </div>
+        <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/data/finset/prod.html">prod</a>
         </div>
         <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/data/finset/sigma.html">sigma</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/data/finset/sort.html">sort</a>
+        </div>
+        </details>
+        <details class="nav_sect" data-path="data/finsupp" >
+            <summary>finsupp</summary>
+            
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/data/finsupp/basic.html">basic</a>
         </div>
         </details>
         <details class="nav_sect" data-path="data/fintype" >
@@ -9531,6 +9740,12 @@ introduce parameters.</p>
             
         <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/data/fintype/basic.html">basic</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/data/fintype/card.html">card</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/data/fintype/fin.html">fin</a>
         </div>
         </details>
         <details class="nav_sect" data-path="data/fun_like" >
@@ -9568,10 +9783,28 @@ introduce parameters.</p>
         <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/data/int/char_zero.html">char_zero</a>
         </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/data/int/gcd.html">gcd</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/data/int/interval.html">interval</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/data/int/least_greatest.html">least_greatest</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/data/int/modeq.html">modeq</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/data/int/order.html">order</a>
+        </div>
         </details>
         <details class="nav_sect" data-path="data/list" >
             <summary>list</summary>
             
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/data/list/alist.html">alist</a>
+        </div>
         <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/data/list/basic.html">basic</a>
         </div>
@@ -9595,6 +9828,9 @@ introduce parameters.</p>
         </div>
         <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/data/list/forall2.html">forall2</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/data/list/indexes.html">indexes</a>
         </div>
         <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/data/list/infix.html">infix</a>
@@ -9624,13 +9860,25 @@ introduce parameters.</p>
             <a href="https://oxarbitrage.github.io/salsa20-docs/data/list/pairwise.html">pairwise</a>
         </div>
         <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/data/list/palindrome.html">palindrome</a>
+        </div>
+        <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/data/list/perm.html">perm</a>
         </div>
         <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/data/list/permutation.html">permutation</a>
         </div>
         <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/data/list/prime.html">prime</a>
+        </div>
+        <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/data/list/range.html">range</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/data/list/rotate.html">rotate</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/data/list/sigma.html">sigma</a>
         </div>
         <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/data/list/sort.html">sort</a>
@@ -9639,7 +9887,20 @@ introduce parameters.</p>
             <a href="https://oxarbitrage.github.io/salsa20-docs/data/list/sublists.html">sublists</a>
         </div>
         <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/data/list/tfae.html">tfae</a>
+        </div>
+        <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/data/list/zip.html">zip</a>
+        </div>
+        </details>
+        <details class="nav_sect" data-path="data/matrix" >
+            <summary>matrix</summary>
+            
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/data/matrix/basic.html">basic</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/data/matrix/notation.html">notation</a>
         </div>
         </details>
         <details class="nav_sect" data-path="data/multiset" >
@@ -9675,6 +9936,9 @@ introduce parameters.</p>
         <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/data/multiset/range.html">range</a>
         </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/data/multiset/sort.html">sort</a>
+        </div>
         </details>
         <details class="nav_sect" data-path="data/nat" >
             <summary>nat</summary>
@@ -9704,22 +9968,56 @@ introduce parameters.</p>
             <a href="https://oxarbitrage.github.io/salsa20-docs/data/nat/basic.html">basic</a>
         </div>
         <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/data/nat/bits.html">bits</a>
+        </div>
+        <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/data/nat/cast.html">cast</a>
         </div>
         <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/data/nat/cast_field.html">cast_field</a>
         </div>
         <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/data/nat/digits.html">digits</a>
+        </div>
+        <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/data/nat/gcd.html">gcd</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/data/nat/interval.html">interval</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/data/nat/lattice.html">lattice</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/data/nat/log.html">log</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/data/nat/modeq.html">modeq</a>
         </div>
         <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/data/nat/pairing.html">pairing</a>
         </div>
         <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/data/nat/parity.html">parity</a>
+        </div>
+        <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/data/nat/pow.html">pow</a>
         </div>
         <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/data/nat/prime.html">prime</a>
+        </div>
+        <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/data/nat/sqrt.html">sqrt</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/data/nat/sqrt_norm_num.html">sqrt_norm_num</a>
+        </div>
+        </details>
+        <details class="nav_sect" data-path="data/num" >
+            <summary>num</summary>
+            
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/data/num/basic.html">basic</a>
         </div>
         </details>
         <details class="nav_sect" data-path="data/option" >
@@ -9748,12 +10046,18 @@ introduce parameters.</p>
         <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/data/pnat/basic.html">basic</a>
         </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/data/pnat/interval.html">interval</a>
+        </div>
         </details>
         <details class="nav_sect" data-path="data/prod" >
             <summary>prod</summary>
             
         <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/data/prod/basic.html">basic</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/data/prod/lex.html">lex</a>
         </div>
         <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/data/prod/pprod.html">pprod</a>
@@ -9804,12 +10108,27 @@ introduce parameters.</p>
         <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/data/set/intervals/basic.html">basic</a>
         </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/data/set/intervals/image_preimage.html">image_preimage</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/data/set/intervals/ord_connected.html">ord_connected</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/data/set/intervals/unordered_interval.html">unordered_interval</a>
+        </div>
         </details>
         <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/data/set/basic.html">basic</a>
         </div>
         <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/data/set/finite.html">finite</a>
+        </div>
+        <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/data/set/function.html">function</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/data/set/functor.html">functor</a>
         </div>
         <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/data/set/lattice.html">lattice</a>
@@ -9818,10 +10137,20 @@ introduce parameters.</p>
             <a href="https://oxarbitrage.github.io/salsa20-docs/data/set/pairwise.html">pairwise</a>
         </div>
         <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/data/set/pointwise.html">pointwise</a>
+        </div>
+        <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/data/set/prod.html">prod</a>
         </div>
         <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/data/set/sigma.html">sigma</a>
+        </div>
+        </details>
+        <details class="nav_sect" data-path="data/set_like" >
+            <summary>set_like</summary>
+            
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/data/set_like/basic.html">basic</a>
         </div>
         </details>
         <details class="nav_sect" data-path="data/setoid" >
@@ -9841,6 +10170,9 @@ introduce parameters.</p>
         <details class="nav_sect" data-path="data/string" >
             <summary>string</summary>
             
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/data/string/basic.html">basic</a>
+        </div>
         <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/data/string/defs.html">defs</a>
         </div>
@@ -9870,16 +10202,25 @@ introduce parameters.</p>
             <a href="https://oxarbitrage.github.io/salsa20-docs/data/bracket.html">bracket</a>
         </div>
         <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/data/char.html">char</a>
+        </div>
+        <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/data/mllist.html">mllist</a>
         </div>
         <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/data/opposite.html">opposite</a>
         </div>
         <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/data/part.html">part</a>
+        </div>
+        <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/data/quot.html">quot</a>
         </div>
         <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/data/subtype.html">subtype</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/data/tree.html">tree</a>
         </div>
         <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/data/ulift.html">ulift</a>
@@ -9892,7 +10233,28 @@ introduce parameters.</p>
             <summary>group_action</summary>
             
         <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/group_theory/group_action/basic.html">basic</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/group_theory/group_action/big_operators.html">big_operators</a>
+        </div>
+        <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/group_theory/group_action/defs.html">defs</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/group_theory/group_action/group.html">group</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/group_theory/group_action/opposite.html">opposite</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/group_theory/group_action/pi.html">pi</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/group_theory/group_action/prod.html">prod</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/group_theory/group_action/sub_mul_action.html">sub_mul_action</a>
         </div>
         <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/group_theory/group_action/units.html">units</a>
@@ -9905,6 +10267,64 @@ introduce parameters.</p>
             <a href="https://oxarbitrage.github.io/salsa20-docs/group_theory/perm/basic.html">basic</a>
         </div>
         </details>
+        <details class="nav_sect" data-path="group_theory/subgroup" >
+            <summary>subgroup</summary>
+            
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/group_theory/subgroup/basic.html">basic</a>
+        </div>
+        </details>
+        <details class="nav_sect" data-path="group_theory/submonoid" >
+            <summary>submonoid</summary>
+            
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/group_theory/submonoid/basic.html">basic</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/group_theory/submonoid/center.html">center</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/group_theory/submonoid/centralizer.html">centralizer</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/group_theory/submonoid/membership.html">membership</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/group_theory/submonoid/operations.html">operations</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/group_theory/submonoid/pointwise.html">pointwise</a>
+        </div>
+        </details>
+        <details class="nav_sect" data-path="group_theory/subsemigroup" >
+            <summary>subsemigroup</summary>
+            
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/group_theory/subsemigroup/basic.html">basic</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/group_theory/subsemigroup/center.html">center</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/group_theory/subsemigroup/centralizer.html">centralizer</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/group_theory/subsemigroup/operations.html">operations</a>
+        </div>
+        </details>
+        </details>
+        <details class="nav_sect" data-path="linear_algebra" >
+            <summary>linear_algebra</summary>
+            
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/linear_algebra/basic.html">basic</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/linear_algebra/prod.html">prod</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/linear_algebra/span.html">span</a>
+        </div>
         </details>
         <details class="nav_sect" data-path="logic" >
             <summary>logic</summary>
@@ -9921,6 +10341,9 @@ introduce parameters.</p>
             
         <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/logic/equiv/basic.html">basic</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/logic/equiv/fin.html">fin</a>
         </div>
         <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/logic/equiv/nat.html">nat</a>
@@ -9947,6 +10370,9 @@ introduce parameters.</p>
         </details>
         <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/logic/basic.html">basic</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/logic/denumerable.html">denumerable</a>
         </div>
         <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/logic/embedding.html">embedding</a>
@@ -9995,7 +10421,13 @@ introduce parameters.</p>
         <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/order/hom/basic.html">basic</a>
         </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/order/hom/order.html">order</a>
+        </div>
         </details>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/order/atoms.html">atoms</a>
+        </div>
         <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/order/basic.html">basic</a>
         </div>
@@ -10009,6 +10441,12 @@ introduce parameters.</p>
             <a href="https://oxarbitrage.github.io/salsa20-docs/order/bounds.html">bounds</a>
         </div>
         <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/order/chain.html">chain</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/order/compactly_generated.html">compactly_generated</a>
+        </div>
+        <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/order/compare.html">compare</a>
         </div>
         <div class="nav_link ">
@@ -10016,6 +10454,12 @@ introduce parameters.</p>
         </div>
         <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/order/complete_lattice.html">complete_lattice</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/order/conditionally_complete_lattice.html">conditionally_complete_lattice</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/order/cover.html">cover</a>
         </div>
         <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/order/directed.html">directed</a>
@@ -10027,13 +10471,31 @@ introduce parameters.</p>
             <a href="https://oxarbitrage.github.io/salsa20-docs/order/lattice.html">lattice</a>
         </div>
         <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/order/lattice_intervals.html">lattice_intervals</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/order/locally_finite.html">locally_finite</a>
+        </div>
+        <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/order/max.html">max</a>
         </div>
         <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/order/min_max.html">min_max</a>
         </div>
         <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/order/modular_lattice.html">modular_lattice</a>
+        </div>
+        <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/order/monotone.html">monotone</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/order/omega_complete_partial_order.html">omega_complete_partial_order</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/order/order_iso_nat.html">order_iso_nat</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/order/partial_sups.html">partial_sups</a>
         </div>
         <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/order/rel_classes.html">rel_classes</a>
@@ -10042,11 +10504,35 @@ introduce parameters.</p>
             <a href="https://oxarbitrage.github.io/salsa20-docs/order/rel_iso.html">rel_iso</a>
         </div>
         <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/order/sup_indep.html">sup_indep</a>
+        </div>
+        <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/order/synonym.html">synonym</a>
         </div>
         <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/order/well_founded.html">well_founded</a>
         </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/order/zorn.html">zorn</a>
+        </div>
+        </details>
+        <details class="nav_sect" data-path="ring_theory" >
+            <summary>ring_theory</summary>
+            
+        <details class="nav_sect" data-path="ring_theory/subring" >
+            <summary>subring</summary>
+            
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/ring_theory/subring/basic.html">basic</a>
+        </div>
+        </details>
+        <details class="nav_sect" data-path="ring_theory/subsemiring" >
+            <summary>subsemiring</summary>
+            
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/ring_theory/subsemiring/basic.html">basic</a>
+        </div>
+        </details>
         </details>
         <details class="nav_sect" data-path="tactic" open>
             <summary>tactic</summary>
@@ -10062,6 +10548,31 @@ introduce parameters.</p>
         </div>
         <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/tactic/converter/old_conv.html">old_conv</a>
+        </div>
+        </details>
+        <details class="nav_sect" data-path="tactic/linarith" >
+            <summary>linarith</summary>
+            
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/tactic/linarith/datatypes.html">datatypes</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/tactic/linarith/elimination.html">elimination</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/tactic/linarith/frontend.html">frontend</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/tactic/linarith/lemmas.html">lemmas</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/tactic/linarith/parsing.html">parsing</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/tactic/linarith/preprocessing.html">preprocessing</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/tactic/linarith/verification.html">verification</a>
         </div>
         </details>
         <details class="nav_sect" data-path="tactic/lint" >
@@ -10113,6 +10624,9 @@ introduce parameters.</p>
         </div>
         </details>
         <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/tactic/abel.html">abel</a>
+        </div>
+        <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/tactic/algebra.html">algebra</a>
         </div>
         <div class="nav_link ">
@@ -10137,6 +10651,9 @@ introduce parameters.</p>
             <a href="https://oxarbitrage.github.io/salsa20-docs/tactic/cache.html">cache</a>
         </div>
         <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/tactic/cancel_denoms.html">cancel_denoms</a>
+        </div>
+        <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/tactic/chain.html">chain</a>
         </div>
         <div class="nav_link ">
@@ -10147,6 +10664,9 @@ introduce parameters.</p>
         </div>
         <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/tactic/congr.html">congr</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/tactic/congrm.html">congrm</a>
         </div>
         <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/tactic/core.html">core</a>
@@ -10176,6 +10696,9 @@ introduce parameters.</p>
             <a href="https://oxarbitrage.github.io/salsa20-docs/tactic/ext.html">ext</a>
         </div>
         <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/tactic/fin_cases.html">fin_cases</a>
+        </div>
+        <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/tactic/find.html">find</a>
         </div>
         <div class="nav_link ">
@@ -10195,6 +10718,9 @@ introduce parameters.</p>
         </div>
         <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/tactic/interactive_expr.html">interactive_expr</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/tactic/interval_cases.html">interval_cases</a>
         </div>
         <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/tactic/itauto.html">itauto</a>
@@ -10257,6 +10783,12 @@ introduce parameters.</p>
             <a href="https://oxarbitrage.github.io/salsa20-docs/tactic/rewrite.html">rewrite</a>
         </div>
         <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/tactic/ring.html">ring</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/tactic/scc.html">scc</a>
+        </div>
+        <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/tactic/show_term.html">show_term</a>
         </div>
         <div class="nav_link ">
@@ -10293,6 +10825,9 @@ introduce parameters.</p>
             <a href="https://oxarbitrage.github.io/salsa20-docs/tactic/tauto.html">tauto</a>
         </div>
         <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/tactic/tfae.html">tfae</a>
+        </div>
+        <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/tactic/tidy.html">tidy</a>
         </div>
         <div class="nav_link ">
@@ -10310,31 +10845,12 @@ introduce parameters.</p>
         <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/tactic/wlog.html">wlog</a>
         </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/tactic/zify.html">zify</a>
+        </div>
         </details>
         <h4>salsa20</h4>
         
-        <details class="nav_sect" data-path="examples" >
-            <summary>examples</summary>
-            
-        <div class="nav_link ">
-            <a href="https://oxarbitrage.github.io/salsa20-docs/examples/columnround.html">columnround</a>
-        </div>
-        <div class="nav_link ">
-            <a href="https://oxarbitrage.github.io/salsa20-docs/examples/core.html">core</a>
-        </div>
-        <div class="nav_link ">
-            <a href="https://oxarbitrage.github.io/salsa20-docs/examples/doubleround.html">doubleround</a>
-        </div>
-        <div class="nav_link ">
-            <a href="https://oxarbitrage.github.io/salsa20-docs/examples/operations.html">operations</a>
-        </div>
-        <div class="nav_link ">
-            <a href="https://oxarbitrage.github.io/salsa20-docs/examples/quarterround.html">quarterround</a>
-        </div>
-        <div class="nav_link ">
-            <a href="https://oxarbitrage.github.io/salsa20-docs/examples/rowround.html">rowround</a>
-        </div>
-        </details>
         <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/columnround.html">columnround</a>
         </div>
@@ -10358,9 +10874,6 @@ introduce parameters.</p>
         </div>
         <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/rowround.html">rowround</a>
-        </div>
-        <div class="nav_link ">
-            <a href="https://oxarbitrage.github.io/salsa20-docs/utils.html">utils</a>
         </div>
 
 <div id="settings">

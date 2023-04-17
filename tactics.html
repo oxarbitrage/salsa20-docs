@@ -130,12 +130,17 @@
         <label><input type="checkbox" class="tagfilter" name="testing" value="testing">testing</label>
         <br>
     
+        <label><input type="checkbox" class="tagfilter" name="transport" value="transport">transport</label>
+        <br>
+    
         <label><input type="checkbox" class="tagfilter" name="type-class" value="type-class">type class</label>
         <br>
     
 </details>
 
     <div class="taclink type-class context-management"><a href="#Instance cache tactics">Instance cache tactics</a></div>
+
+    <div class="taclink arithmetic decision-procedure"><a href="#abel">abel</a></div>
 
     <div class="taclink core proof-extraction"><a href="#abstract">abstract</a></div>
 
@@ -181,6 +186,8 @@
 
     <div class="taclink logic"><a href="#by_contra'">by_contra'</a></div>
 
+    <div class="taclink simplification"><a href="#cancel_denoms">cancel_denoms</a></div>
+
     <div class="taclink core goal-management"><a href="#case">case</a></div>
 
     <div class="taclink core basic induction"><a href="#cases">cases</a></div>
@@ -218,6 +225,8 @@
     <div class="taclink core congruence"><a href="#congr">congr</a></div>
 
     <div class="taclink congruence"><a href="#congr'">congr'</a></div>
+
+    <div class="taclink congruence"><a href="#congrm">congrm</a></div>
 
     <div class="taclink core logic"><a href="#constructor">constructor</a></div>
 
@@ -283,6 +292,8 @@
 
     <div class="taclink logic goal-management"><a href="#fconstructor">fconstructor</a></div>
 
+    <div class="taclink case-bashing"><a href="#fin_cases">fin_cases</a></div>
+
     <div class="taclink logic finishing"><a href="#finish / clarify / safe">finish / clarify / safe</a></div>
 
     <div class="taclink core goal-management combinator"><a href="#focus">focus</a></div>
@@ -325,6 +336,8 @@
 
     <div class="taclink context-management"><a href="#injections_and_clear">injections_and_clear</a></div>
 
+    <div class="taclink case-bashing"><a href="#interval_cases">interval_cases</a></div>
+
     <div class="taclink core basic logic"><a href="#intro / intros">intro / intros</a></div>
 
     <div class="taclink core logic"><a href="#introv">introv</a></div>
@@ -341,11 +354,15 @@
 
     <div class="taclink coercions"><a href="#lift">lift</a></div>
 
+    <div class="taclink arithmetic decision-procedure finishing"><a href="#linarith">linarith</a></div>
+
     <div class="taclink core lemma-application"><a href="#mapply">mapply</a></div>
 
     <div class="taclink core testing goal-management"><a href="#match_target">match_target</a></div>
 
     <div class="taclink monotonicity"><a href="#mono">mono</a></div>
+
+    <div class="taclink arithmetic decision-procedure finishing"><a href="#nlinarith">nlinarith</a></div>
 
     <div class="taclink logic type-class"><a href="#nontriviality">nontriviality</a></div>
 
@@ -387,6 +404,8 @@
 
     <div class="taclink context-management goal-management"><a href="#revert_target_deps">revert_target_deps</a></div>
 
+    <div class="taclink arithmetic simplification decision-procedure"><a href="#ring">ring</a></div>
+
     <div class="taclink induction"><a href="#rintro">rintro</a></div>
 
     <div class="taclink goal-management"><a href="#rotate">rotate</a></div>
@@ -394,6 +413,8 @@
     <div class="taclink core basic rewriting"><a href="#rw / rewrite">rw / rewrite</a></div>
 
     <div class="taclink core rewriting"><a href="#rwa">rwa</a></div>
+
+    <div class="taclink logic"><a href="#scc">scc</a></div>
 
     <div class="taclink context-management"><a href="#set">set</a></div>
 
@@ -449,6 +470,8 @@
 
     <div class="taclink logic decision-procedure"><a href="#tautology">tautology</a></div>
 
+    <div class="taclink logic"><a href="#tfae">tfae</a></div>
+
     <div class="taclink search Try-this finishing"><a href="#tidy">tidy</a></div>
 
     <div class="taclink core debugging testing"><a href="#trace">trace</a></div>
@@ -486,6 +509,8 @@
     <div class="taclink core combinator"><a href="#with_cases">with_cases</a></div>
 
     <div class="taclink logic"><a href="#wlog">wlog</a></div>
+
+    <div class="taclink coercions transport"><a href="#zify">zify</a></div>
 
 </nav>
 
@@ -592,6 +617,49 @@ variables in the context for typeclass inference.</p>
 
       
       <details class="imports"><summary>Import using</summary><ul><li>imported by default</li></ul></details>
+    
+</div>
+
+<div class="tactic arithmetic decision-procedure">
+    <h2 id="abel"><a href="#abel">abel</a></h2>
+    <p>Evaluate expressions in the language of <em>additive</em>, commutative monoids and groups.
+It attempts to prove the goal outright if there is no <code>at</code>
+specifier and the target is an equality, but if this
+fails, it falls back to rewriting all monoid expressions into a normal form.
+If there is an <code>at</code> specifier, it rewrites the given target into a normal form.</p>
+<p><code>abel!</code> will use a more aggressive reducibility setting to identify atoms.
+This can prove goals that <code>abel</code> cannot, but is more expensive.</p>
+<div class="codehilite"><pre><span></span><code><span class="kd">example</span> <span class="o">{</span><span class="n">α</span> <span class="o">:</span> <span class="kt">Type</span><span class="bp">*</span><span class="o">}</span> <span class="o">{</span><span class="n">a</span> <span class="n">b</span> <span class="o">:</span> <span class="n">α</span><span class="o">}</span> <span class="o">[</span><span class="n"><a href="https://oxarbitrage.github.io/salsa20-docs/algebra/group/defs.html#add_comm_monoid">add_comm_monoid</a></span> <span class="n">α</span><span class="o">]</span> <span class="o">:</span> <span class="n">a</span> <span class="bp">+</span> <span class="o">(</span><span class="n">b</span> <span class="bp">+</span> <span class="n">a</span><span class="o">)</span> <span class="bp">=</span> <span class="n">a</span> <span class="bp">+</span> <span class="n">a</span> <span class="bp">+</span> <span class="n">b</span> <span class="o">:=</span> <span class="kd">by</span> <span class="n">abel</span>
+<span class="kd">example</span> <span class="o">{</span><span class="n">α</span> <span class="o">:</span> <span class="kt">Type</span><span class="bp">*</span><span class="o">}</span> <span class="o">{</span><span class="n">a</span> <span class="n">b</span> <span class="o">:</span> <span class="n">α</span><span class="o">}</span> <span class="o">[</span><span class="n"><a href="https://oxarbitrage.github.io/salsa20-docs/algebra/group/defs.html#add_comm_group">add_comm_group</a></span> <span class="n">α</span><span class="o">]</span> <span class="o">:</span> <span class="o">(</span><span class="n">a</span> <span class="bp">+</span> <span class="n">b</span><span class="o">)</span> <span class="bp">-</span> <span class="o">((</span><span class="n">b</span> <span class="bp">+</span> <span class="n">a</span><span class="o">)</span> <span class="bp">+</span> <span class="n">a</span><span class="o">)</span> <span class="bp">=</span> <span class="bp">-</span><span class="n">a</span> <span class="o">:=</span> <span class="kd">by</span> <span class="n">abel</span>
+<span class="kd">example</span> <span class="o">{</span><span class="n">α</span> <span class="o">:</span> <span class="kt">Type</span><span class="bp">*</span><span class="o">}</span> <span class="o">{</span><span class="n">a</span> <span class="n">b</span> <span class="o">:</span> <span class="n">α</span><span class="o">}</span> <span class="o">[</span><span class="n"><a href="https://oxarbitrage.github.io/salsa20-docs/algebra/group/defs.html#add_comm_group">add_comm_group</a></span> <span class="n">α</span><span class="o">]</span> <span class="o">(</span><span class="n">hyp</span> <span class="o">:</span> <span class="n">a</span> <span class="bp">+</span> <span class="n">a</span> <span class="bp">-</span> <span class="n">a</span> <span class="bp">=</span> <span class="n">b</span> <span class="bp">-</span> <span class="n">b</span><span class="o">)</span> <span class="o">:</span> <span class="n">a</span> <span class="bp">=</span> <span class="mi">0</span> <span class="o">:=</span>
+<span class="kd">by</span> <span class="o">{</span> <span class="n">abel</span> <span class="n">at</span> <span class="n">hyp</span><span class="o">,</span> <span class="n">exact</span> <span class="n">hyp</span> <span class="o">}</span>
+<span class="kd">example</span> <span class="o">{</span><span class="n">α</span> <span class="o">:</span> <span class="kt">Type</span><span class="bp">*</span><span class="o">}</span> <span class="o">{</span><span class="n">a</span> <span class="n">b</span> <span class="o">:</span> <span class="n">α</span><span class="o">}</span> <span class="o">[</span><span class="n"><a href="https://oxarbitrage.github.io/salsa20-docs/algebra/group/defs.html#add_comm_group">add_comm_group</a></span> <span class="n">α</span><span class="o">]</span> <span class="o">:</span> <span class="o">(</span><span class="n">a</span> <span class="bp">+</span> <span class="n">b</span><span class="o">)</span> <span class="bp">-</span> <span class="o">(</span><span class="n"><a href="https://oxarbitrage.github.io/salsa20-docs/init/logic.html#id">id</a></span> <span class="n">a</span> <span class="bp">+</span> <span class="n">b</span><span class="o">)</span> <span class="bp">=</span> <span class="mi">0</span> <span class="o">:=</span> <span class="kd">by</span> <span class="n">abel</span><span class="bp">!</span>
+</code></pre></div>
+
+
+    
+      <div class="tags">Tags:
+        <ul>
+            
+                <li>arithmetic</li> 
+            
+                <li>decision procedure</li> 
+            
+        </ul>
+      </div>
+    
+    
+      <details class="rel_decls"><summary>Related declarations</summary>
+        <ul>
+            
+                <li><a href="https://oxarbitrage.github.io/salsa20-docs/tactic/abel.html#tactic.interactive.abel">tactic.interactive.abel</a></li>
+            
+        </ul>
+      </details>
+
+      
+      <details class="imports"><summary>Import using</summary><ul><li>import tactic.abel</li>
+<li>import tactic</li></ul></details>
     
 </div>
 
@@ -1441,6 +1509,51 @@ It is a variant on the tactic <code><a href="https://oxarbitrage.github.io/salsa
     
 </div>
 
+<div class="tactic simplification">
+    <h2 id="cancel_denoms"><a href="#cancel_denoms">cancel_denoms</a></h2>
+    <p><code>cancel_denoms</code> attempts to remove numerals from the denominators of fractions.
+It works on propositions that are field-valued inequalities.</p>
+<div class="codehilite"><pre><span></span><code><span class="kd">variables</span> <span class="o">{</span><span class="n">α</span> <span class="o">:</span> <span class="kt">Type</span><span class="o">}</span> <span class="o">[</span><span class="n"><a href="https://oxarbitrage.github.io/salsa20-docs/algebra/order/field.html#linear_ordered_field">linear_ordered_field</a></span> <span class="n">α</span><span class="o">]</span> <span class="o">(</span><span class="n">a</span> <span class="n">b</span> <span class="n">c</span> <span class="o">:</span> <span class="n">α</span><span class="o">)</span>
+
+<span class="kd">example</span> <span class="o">(</span><span class="n">h</span> <span class="o">:</span> <span class="n">a</span> <span class="bp">/</span> <span class="mi">5</span> <span class="bp">+</span> <span class="n">b</span> <span class="bp">/</span> <span class="mi">4</span> <span class="bp">&lt;</span> <span class="n">c</span><span class="o">)</span> <span class="o">:</span> <span class="mi">4</span><span class="bp">*</span><span class="n">a</span> <span class="bp">+</span> <span class="mi">5</span><span class="bp">*</span><span class="n">b</span> <span class="bp">&lt;</span> <span class="mi">20</span><span class="bp">*</span><span class="n">c</span> <span class="o">:=</span>
+<span class="kd">begin</span>
+  <span class="n">cancel_denoms</span> <span class="n">at</span> <span class="n">h</span><span class="o">,</span>
+  <span class="n">exact</span> <span class="n">h</span>
+<span class="kd">end</span>
+
+<span class="kd">example</span> <span class="o">(</span><span class="n">h</span> <span class="o">:</span> <span class="n">a</span> <span class="bp">&gt;</span> <span class="mi">0</span><span class="o">)</span> <span class="o">:</span> <span class="n">a</span> <span class="bp">/</span> <span class="mi">5</span> <span class="bp">&gt;</span> <span class="mi">0</span> <span class="o">:=</span>
+<span class="kd">begin</span>
+  <span class="n">cancel_denoms</span><span class="o">,</span>
+  <span class="n">exact</span> <span class="n">h</span>
+<span class="kd">end</span>
+<span class="bp">```</span>
+</code></pre></div>
+
+
+    
+      <div class="tags">Tags:
+        <ul>
+            
+                <li>simplification</li> 
+            
+        </ul>
+      </div>
+    
+    
+      <details class="rel_decls"><summary>Related declarations</summary>
+        <ul>
+            
+                <li><a href="https://oxarbitrage.github.io/salsa20-docs/tactic/cancel_denoms.html#tactic.interactive.cancel_denoms">tactic.interactive.cancel_denoms</a></li>
+            
+        </ul>
+      </details>
+
+      
+      <details class="imports"><summary>Import using</summary><ul><li>import tactic.cancel_denoms</li>
+<li>import tactic</li></ul></details>
+    
+</div>
+
 <div class="tactic core goal-management">
     <h2 id="case"><a href="#case">case</a></h2>
     <p>Focuses on a goal ('case') generated by <code>induction</code>, <code>cases</code> or <code>with_cases</code>.</p>
@@ -2211,6 +2324,65 @@ For example, if the goal is <code>⊢ f &#x27;&#x27; s = g &#x27;&#x27; s</code>
     
 </div>
 
+<div class="tactic congruence">
+    <h2 id="congrm"><a href="#congrm">congrm</a></h2>
+    <p>Assume that the goal is of the form <code>lhs = rhs</code> or <code>lhs ↔ rhs</code>.
+<code>congrm e</code> takes an expression <code>e</code> containing placeholders <code>_</code> and scans <code>e, lhs, rhs</code> in parallel.</p>
+<p>It matches both <code>lhs</code> and <code>rhs</code> to the pattern <code>e</code>, and produces one goal for each placeholder,
+stating that the corresponding subexpressions in <code>lhs</code> and <code>rhs</code> are equal.</p>
+<p>Examples:</p>
+<div class="codehilite"><pre><span></span><code><span class="kd">example</span> <span class="o">{</span><span class="n">a</span> <span class="n">b</span> <span class="n">c</span> <span class="n">d</span> <span class="o">:</span> <span class="n">ℕ</span><span class="o">}</span> <span class="o">:</span>
+  <span class="n"><a href="https://oxarbitrage.github.io/salsa20-docs/init/data/nat/basic.html#nat.pred">nat.pred</a></span> <span class="n">a.succ</span> <span class="bp">*</span> <span class="o">(</span><span class="n">d</span> <span class="bp">+</span> <span class="o">(</span><span class="n">c</span> <span class="bp">+</span> <span class="n">a.pred</span><span class="o">))</span> <span class="bp">=</span> <span class="n"><a href="https://oxarbitrage.github.io/salsa20-docs/init/data/nat/basic.html#nat.pred">nat.pred</a></span> <span class="n">b.succ</span> <span class="bp">*</span> <span class="o">(</span><span class="n">b</span> <span class="bp">+</span> <span class="o">(</span><span class="n">c</span> <span class="bp">+</span> <span class="n">d.pred</span><span class="o">))</span> <span class="o">:=</span>
+<span class="kd">begin</span>
+  <span class="n">congrm</span> <span class="n"><a href="https://oxarbitrage.github.io/salsa20-docs/init/data/nat/basic.html#nat.pred">nat.pred</a></span> <span class="o">(</span><span class="n"><a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#nat.succ">nat.succ</a></span> <span class="n">_</span><span class="o">)</span> <span class="bp">*</span> <span class="o">(</span><span class="n">_</span> <span class="bp">+</span> <span class="n">_</span><span class="o">),</span>
+<span class="c">/-</span><span class="cm">  Goals left:</span>
+<span class="cm">⊢ a = b</span>
+<span class="cm">⊢ d = b</span>
+<span class="cm">⊢ c + a.pred = c + d.pred</span>
+<span class="cm">-/</span>
+  <span class="gr">sorry</span><span class="o">,</span>
+  <span class="gr">sorry</span><span class="o">,</span>
+  <span class="gr">sorry</span><span class="o">,</span>
+<span class="kd">end</span>
+
+<span class="kd">example</span> <span class="o">{</span><span class="n">a</span> <span class="n">b</span> <span class="o">:</span> <span class="n">ℕ</span><span class="o">}</span> <span class="o">(</span><span class="n">h</span> <span class="o">:</span> <span class="n">a</span> <span class="bp">=</span> <span class="n">b</span><span class="o">)</span> <span class="o">:</span> <span class="o">(</span><span class="bp">λ</span> <span class="n">y</span> <span class="o">:</span> <span class="n">ℕ</span><span class="o">,</span> <span class="bp">∀</span> <span class="n">z</span><span class="o">,</span> <span class="n">a</span> <span class="bp">+</span> <span class="n">a</span> <span class="bp">=</span> <span class="n">z</span><span class="o">)</span> <span class="bp">=</span> <span class="o">(</span><span class="bp">λ</span> <span class="n">x</span><span class="o">,</span> <span class="bp">∀</span> <span class="n">z</span><span class="o">,</span> <span class="n">b</span> <span class="bp">+</span> <span class="n">a</span> <span class="bp">=</span> <span class="n">z</span><span class="o">)</span> <span class="o">:=</span>
+<span class="kd">begin</span>
+  <span class="n">congrm</span> <span class="bp">λ</span> <span class="n">x</span><span class="o">,</span> <span class="bp">∀</span> <span class="n">w</span><span class="o">,</span> <span class="n">_</span> <span class="bp">+</span> <span class="n">a</span> <span class="bp">=</span> <span class="n">w</span><span class="o">,</span>
+  <span class="c1">-- produces one goal for the underscore: ⊢ a = b</span>
+  <span class="n">exact</span> <span class="n">h</span><span class="o">,</span>
+<span class="kd">end</span>
+</code></pre></div>
+
+<p>The tactic also allows for &quot;function underscores&quot;, denoted by <code>_₁, ..., _₄</code>.  The index denotes
+the number of explicit arguments of the function to be matched.
+If <code>e</code> has a &quot;function underscore&quot; in a location, then the tactic reads off the function <code>f</code> that
+appears in <code>lhs</code> at the current location, replacing the <em>explicit</em> arguments of <code>f</code> by the user
+inputs to the &quot;function underscore&quot;.  After that, <code>congrm</code> continues with its matching.</p>
+
+    
+      <div class="tags">Tags:
+        <ul>
+            
+                <li>congruence</li> 
+            
+        </ul>
+      </div>
+    
+    
+      <details class="rel_decls"><summary>Related declarations</summary>
+        <ul>
+            
+                <li><a href="https://oxarbitrage.github.io/salsa20-docs/tactic/congrm.html#tactic.interactive.congrm">tactic.interactive.congrm</a></li>
+            
+        </ul>
+      </details>
+
+      
+      <details class="imports"><summary>Import using</summary><ul><li>import tactic.congrm</li>
+<li>import tactic</li></ul></details>
+    
+</div>
+
 <div class="tactic core logic">
     <h2 id="constructor"><a href="#constructor">constructor</a></h2>
     <p>This tactic applies to a goal such that its conclusion is an inductive type (say <code>I</code>). It tries to apply each constructor of <code>I</code> until it succeeds.</p>
@@ -2587,8 +2759,8 @@ but the type of <code>e</code> is not required to exactly match the
 goal. Instead, new goals are created for differences between the type
 of <code>e</code> and the goal. For example, in the proof state</p>
 <div class="codehilite"><pre><span></span><code><span class="n">n</span> <span class="o">:</span> <span class="n">ℕ</span><span class="o">,</span>
-<span class="n">e</span> <span class="o">:</span> <span class="n">prime</span> <span class="o">(</span><span class="mi">2</span> <span class="bp">*</span> <span class="n">n</span> <span class="bp">+</span> <span class="mi">1</span><span class="o">)</span>
-<span class="bp">⊢</span> <span class="n">prime</span> <span class="o">(</span><span class="n">n</span> <span class="bp">+</span> <span class="n">n</span> <span class="bp">+</span> <span class="mi">1</span><span class="o">)</span>
+<span class="n">e</span> <span class="o">:</span> <span class="n"><a href="https://oxarbitrage.github.io/salsa20-docs/algebra/associated.html#prime">prime</a></span> <span class="o">(</span><span class="mi">2</span> <span class="bp">*</span> <span class="n">n</span> <span class="bp">+</span> <span class="mi">1</span><span class="o">)</span>
+<span class="bp">⊢</span> <span class="n"><a href="https://oxarbitrage.github.io/salsa20-docs/algebra/associated.html#prime">prime</a></span> <span class="o">(</span><span class="n">n</span> <span class="bp">+</span> <span class="n">n</span> <span class="bp">+</span> <span class="mi">1</span><span class="o">)</span>
 </code></pre></div>
 
 <p>the tactic <code>convert e</code> will change the goal to</p>
@@ -3391,6 +3563,71 @@ called <code>my_decl</code></li>
     
 </div>
 
+<div class="tactic case-bashing">
+    <h2 id="fin_cases"><a href="#fin_cases">fin_cases</a></h2>
+    <p><code>fin_cases h</code> performs case analysis on a hypothesis of the form
+<code>h : A</code>, where <code>[<a href="https://oxarbitrage.github.io/salsa20-docs/data/fintype/basic.html#fintype">fintype</a> A]</code> is available, or
+<code>h : a ∈ A</code>, where <code>A : <a href="https://oxarbitrage.github.io/salsa20-docs/data/finset/basic.html#finset">finset</a> X</code>, <code>A : <a href="https://oxarbitrage.github.io/salsa20-docs/data/multiset/basic.html#multiset">multiset</a> X</code> or <code>A : <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#list">list</a> X</code>.</p>
+<p><code>fin_cases *</code> performs case analysis on all suitable hypotheses.</p>
+<p>As an example, in</p>
+<div class="codehilite"><pre><span></span><code><span class="kd">example</span> <span class="o">(</span><span class="n">f</span> <span class="o">:</span> <span class="n">ℕ</span> <span class="bp">→</span> <span class="kt">Prop</span><span class="o">)</span> <span class="o">(</span><span class="n">p</span> <span class="o">:</span> <span class="n"><a href="https://oxarbitrage.github.io/salsa20-docs/init/data/fin/basic.html#fin">fin</a></span> <span class="mi">3</span><span class="o">)</span> <span class="o">(</span><span class="n">h0</span> <span class="o">:</span> <span class="n">f</span> <span class="mi">0</span><span class="o">)</span> <span class="o">(</span><span class="n">h1</span> <span class="o">:</span> <span class="n">f</span> <span class="mi">1</span><span class="o">)</span> <span class="o">(</span><span class="n">h2</span> <span class="o">:</span> <span class="n">f</span> <span class="mi">2</span><span class="o">)</span> <span class="o">:</span> <span class="n">f</span> <span class="n">p.val</span> <span class="o">:=</span>
+<span class="kd">begin</span>
+  <span class="n">fin_cases</span> <span class="bp">*;</span> <span class="n">simp</span><span class="o">,</span>
+  <span class="n">all_goals</span> <span class="o">{</span> <span class="n">assumption</span> <span class="o">}</span>
+<span class="kd">end</span>
+</code></pre></div>
+
+<p>after <code>fin_cases p; simp</code>, there are three goals, <code>f 0</code>, <code>f 1</code>, and <code>f 2</code>.</p>
+<p><code>fin_cases h with l</code> takes a list of descriptions for the cases of <code>h</code>.
+These should be definitionally equal to and in the same order as the
+default enumeration of the cases.</p>
+<p>For example,</p>
+<div class="codehilite"><pre><span></span><code><span class="kd">example</span> <span class="o">(</span><span class="n">x</span> <span class="n">y</span> <span class="o">:</span> <span class="n">ℕ</span><span class="o">)</span> <span class="o">(</span><span class="n">h</span> <span class="o">:</span> <span class="n">x</span> <span class="bp">∈</span> <span class="o">[</span><span class="mi">1</span><span class="o">,</span> <span class="mi">2</span><span class="o">])</span> <span class="o">:</span> <span class="n">x</span> <span class="bp">=</span> <span class="n">y</span> <span class="o">:=</span>
+<span class="kd">begin</span>
+  <span class="n">fin_cases</span> <span class="n">h</span> <span class="k">with</span> <span class="o">[</span><span class="mi">1</span><span class="o">,</span> <span class="mi">1</span><span class="bp">+</span><span class="mi">1</span><span class="o">],</span>
+<span class="kd">end</span>
+</code></pre></div>
+
+<p>produces two cases: <code>1 = y</code> and <code>1 + 1 = y</code>.</p>
+<p>When using <code>fin_cases a</code> on data <code>a</code> defined with <code>let</code>,
+the tactic will not be able to clear the variable <code>a</code>,
+and will instead produce hypotheses <code>this : a = ...</code>.
+These hypotheses can be given a name using <code>fin_cases a using ha</code>.</p>
+<p>For example,</p>
+<div class="codehilite"><pre><span></span><code><span class="kd">example</span> <span class="o">(</span><span class="n">f</span> <span class="o">:</span> <span class="n">ℕ</span> <span class="bp">→</span> <span class="n"><a href="https://oxarbitrage.github.io/salsa20-docs/init/data/fin/basic.html#fin">fin</a></span> <span class="mi">3</span><span class="o">)</span> <span class="o">:</span> <span class="n"><a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#true">true</a></span> <span class="o">:=</span>
+<span class="kd">begin</span>
+  <span class="k">let</span> <span class="n">a</span> <span class="o">:=</span> <span class="n">f</span> <span class="mi">3</span><span class="o">,</span>
+  <span class="n">fin_cases</span> <span class="n">a</span> <span class="n">using</span> <span class="n">ha</span><span class="o">,</span>
+<span class="kd">end</span>
+</code></pre></div>
+
+<p>produces three goals with hypotheses
+<code>ha : a = 0</code>, <code>ha : a = 1</code>, and <code>ha : a = 2</code>.</p>
+
+    
+      <div class="tags">Tags:
+        <ul>
+            
+                <li>case bashing</li> 
+            
+        </ul>
+      </div>
+    
+    
+      <details class="rel_decls"><summary>Related declarations</summary>
+        <ul>
+            
+                <li><a href="https://oxarbitrage.github.io/salsa20-docs/tactic/fin_cases.html#tactic.interactive.fin_cases">tactic.interactive.fin_cases</a></li>
+            
+        </ul>
+      </details>
+
+      
+      <details class="imports"><summary>Import using</summary><ul><li>import tactic.fin_cases</li>
+<li>import tactic</li></ul></details>
+    
+</div>
+
 <div class="tactic logic finishing">
     <h2 id="finish / clarify / safe"><a href="#finish / clarify / safe">finish / clarify / safe</a></h2>
     <p>These tactics do straightforward things: they call the simplifier, split conjunctive assumptions,
@@ -4146,6 +4383,69 @@ succeeds, clears the old hypothesis.</p>
     
 </div>
 
+<div class="tactic case-bashing">
+    <h2 id="interval_cases"><a href="#interval_cases">interval_cases</a></h2>
+    <p><code>interval_cases n</code> searches for upper and lower bounds on a variable <code>n</code>,
+and if bounds are found,
+splits into separate cases for each possible value of <code>n</code>.</p>
+<p>As an example, in</p>
+<div class="codehilite"><pre><span></span><code><span class="kd">example</span> <span class="o">(</span><span class="n">n</span> <span class="o">:</span> <span class="n">ℕ</span><span class="o">)</span> <span class="o">(</span><span class="n">w₁</span> <span class="o">:</span> <span class="n">n</span> <span class="bp">≥</span> <span class="mi">3</span><span class="o">)</span> <span class="o">(</span><span class="n">w₂</span> <span class="o">:</span> <span class="n">n</span> <span class="bp">&lt;</span> <span class="mi">5</span><span class="o">)</span> <span class="o">:</span> <span class="n">n</span> <span class="bp">=</span> <span class="mi">3</span> <span class="bp">∨</span> <span class="n">n</span> <span class="bp">=</span> <span class="mi">4</span> <span class="o">:=</span>
+<span class="kd">begin</span>
+  <span class="n">interval_cases</span> <span class="n">n</span><span class="o">,</span>
+  <span class="n">all_goals</span> <span class="o">{</span><span class="n">simp</span><span class="o">}</span>
+<span class="kd">end</span>
+</code></pre></div>
+
+<p>after <code>interval_cases n</code>, the goals are <code>3 = 3 ∨ 3 = 4</code> and <code>4 = 3 ∨ 4 = 4</code>.</p>
+<p>You can also explicitly specify a lower and upper bound to use,
+as <code>interval_cases using hl hu</code>.
+The hypotheses should be in the form <code>hl : a ≤ n</code> and <code>hu : n &lt; b</code>,
+in which case <code>interval_cases</code> calls <code>fin_cases</code> on the resulting fact <code>n ∈ <a href="https://oxarbitrage.github.io/salsa20-docs/data/set/intervals/basic.html#set.Ico">set.Ico</a> a b</code>.</p>
+<p>You can also explicitly specify a name to use for the hypothesis added,
+as <code>interval_cases n with hn</code> or <code>interval_cases n using hl hu with hn</code>.</p>
+<p>In particular, <code>interval_cases n</code></p>
+<ol>
+<li>inspects hypotheses looking for lower and upper bounds of the form <code>a ≤ n</code> and <code>n &lt; b</code>
+(although in <code>ℕ</code>, <code>ℤ</code>, and <code>ℕ+</code> bounds of the form <code>a &lt; n</code> and <code>n ≤ b</code> are also allowed),
+and also makes use of lower and upper bounds found via <code><a href="https://oxarbitrage.github.io/salsa20-docs/order/bounded_order.html#le_top">le_top</a></code> and <code><a href="https://oxarbitrage.github.io/salsa20-docs/order/bounded_order.html#bot_le">bot_le</a></code>
+(so for example if <code>n : ℕ</code>, then the bound <code>0 ≤ n</code> is found automatically), then</li>
+<li>calls <code>fin_cases</code> on the synthesised hypothesis <code>n ∈ <a href="https://oxarbitrage.github.io/salsa20-docs/data/set/intervals/basic.html#set.Ico">set.Ico</a> a b</code>,
+assuming an appropriate <code><a href="https://oxarbitrage.github.io/salsa20-docs/data/fintype/basic.html#fintype">fintype</a></code> instance can be found for the type of <code>n</code>.</li>
+</ol>
+<p>The variable <code>n</code> can belong to any type <code>α</code>, with the following restrictions:</p>
+<ul>
+<li>only bounds on which <code><a href="https://oxarbitrage.github.io/salsa20-docs/data/rat/meta_defs.html#expr.to_rat">expr.to_rat</a></code> succeeds will be considered &quot;explicit&quot; (TODO: generalise this?)</li>
+<li>an instance of <code><a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#decidable_eq">decidable_eq</a> α</code> is available,</li>
+<li>an explicit lower bound can be found amongst the hypotheses, or from <code><a href="https://oxarbitrage.github.io/salsa20-docs/order/bounded_order.html#bot_le">bot_le</a> n</code>,</li>
+<li>an explicit upper bound can be found amongst the hypotheses, or from <code><a href="https://oxarbitrage.github.io/salsa20-docs/order/bounded_order.html#le_top">le_top</a> n</code>,</li>
+<li>if multiple bounds are located, an instance of <code><a href="https://oxarbitrage.github.io/salsa20-docs/init/algebra/order.html#linear_order">linear_order</a> α</code> is available, and</li>
+<li>an instance of <code><a href="https://oxarbitrage.github.io/salsa20-docs/data/fintype/basic.html#fintype">fintype</a> <a href="https://oxarbitrage.github.io/salsa20-docs/data/set/intervals/basic.html#set.Ico">set.Ico</a> l u</code> is available for the relevant bounds.</li>
+</ul>
+
+    
+      <div class="tags">Tags:
+        <ul>
+            
+                <li>case bashing</li> 
+            
+        </ul>
+      </div>
+    
+    
+      <details class="rel_decls"><summary>Related declarations</summary>
+        <ul>
+            
+                <li><a href="https://oxarbitrage.github.io/salsa20-docs/tactic/interval_cases.html#tactic.interactive.interval_cases">tactic.interactive.interval_cases</a></li>
+            
+        </ul>
+      </details>
+
+      
+      <details class="imports"><summary>Import using</summary><ul><li>import tactic.interval_cases</li>
+<li>import tactic</li></ul></details>
+    
+</div>
+
 <div class="tactic core basic logic">
     <h2 id="intro / intros"><a href="#intro / intros">intro / intros</a></h2>
     <p>If the current goal is a Pi/forall <code>∀ x : t, u</code> (resp. <code>let x := t in u</code>) then <code>intro</code> puts
@@ -4525,6 +4825,79 @@ subtype) to propositions about <code>ℤ</code> (the supertype), without changin
     
 </div>
 
+<div class="tactic arithmetic decision-procedure finishing">
+    <h2 id="linarith"><a href="#linarith">linarith</a></h2>
+    <p><code>linarith</code> attempts to find a contradiction between hypotheses that are linear (in)equalities.
+Equivalently, it can prove a linear inequality by assuming its negation and proving <code><a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#false">false</a></code>.</p>
+<p>In theory, <code>linarith</code> should prove any goal that is true in the theory of linear arithmetic over
+the rationals. While there is some special handling for non-dense orders like <code><a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#nat">nat</a></code> and <code><a href="https://oxarbitrage.github.io/salsa20-docs/init/data/int/basic.html#int">int</a></code>,
+this tactic is not complete for these theories and will not prove every true goal. It will solve
+goals over arbitrary types that instantiate <code><a href="https://oxarbitrage.github.io/salsa20-docs/algebra/order/ring.html#linear_ordered_comm_ring">linear_ordered_comm_ring</a></code>.</p>
+<p>An example:</p>
+<div class="codehilite"><pre><span></span><code><span class="kd">example</span> <span class="o">(</span><span class="n">x</span> <span class="n">y</span> <span class="n">z</span> <span class="o">:</span> <span class="n">ℚ</span><span class="o">)</span> <span class="o">(</span><span class="n">h1</span> <span class="o">:</span> <span class="mi">2</span><span class="bp">*</span><span class="n">x</span>  <span class="bp">&lt;</span> <span class="mi">3</span><span class="bp">*</span><span class="n">y</span><span class="o">)</span> <span class="o">(</span><span class="n">h2</span> <span class="o">:</span> <span class="bp">-</span><span class="mi">4</span><span class="bp">*</span><span class="n">x</span> <span class="bp">+</span> <span class="mi">2</span><span class="bp">*</span><span class="n">z</span> <span class="bp">&lt;</span> <span class="mi">0</span><span class="o">)</span>
+        <span class="o">(</span><span class="n">h3</span> <span class="o">:</span> <span class="mi">12</span><span class="bp">*</span><span class="n">y</span> <span class="bp">-</span> <span class="mi">4</span><span class="bp">*</span> <span class="n">z</span> <span class="bp">&lt;</span> <span class="mi">0</span><span class="o">)</span>  <span class="o">:</span> <span class="n"><a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#false">false</a></span> <span class="o">:=</span>
+<span class="kd">by</span> <span class="n">linarith</span>
+</code></pre></div>
+
+<p><code>linarith</code> will use all appropriate hypotheses and the negation of the goal, if applicable.</p>
+<p><code>linarith [t1, t2, t3]</code> will additionally use proof terms <code>t1, t2, t3</code>.</p>
+<p><code>linarith only [h1, h2, h3, t1, t2, t3]</code> will use only the goal (if relevant), local hypotheses
+<code>h1</code>, <code>h2</code>, <code>h3</code>, and proofs <code>t1</code>, <code>t2</code>, <code>t3</code>. It will ignore the rest of the local context.</p>
+<p><code>linarith!</code> will use a stronger reducibility setting to try to identify atoms. For example,</p>
+<div class="codehilite"><pre><span></span><code><span class="kd">example</span> <span class="o">(</span><span class="n">x</span> <span class="o">:</span> <span class="n">ℚ</span><span class="o">)</span> <span class="o">:</span> <span class="n"><a href="https://oxarbitrage.github.io/salsa20-docs/init/logic.html#id">id</a></span> <span class="n">x</span> <span class="bp">≥</span> <span class="n">x</span> <span class="o">:=</span>
+<span class="kd">by</span> <span class="n">linarith</span>
+</code></pre></div>
+
+<p>will fail, because <code>linarith</code> will not identify <code>x</code> and <code><a href="https://oxarbitrage.github.io/salsa20-docs/init/logic.html#id">id</a> x</code>. <code>linarith!</code> will.
+This can sometimes be expensive.</p>
+<p><code>linarith {discharger := tac, restrict_type := tp, exfalso := ff}</code> takes a config object with five
+optional arguments:</p>
+<ul>
+<li><code>discharger</code> specifies a tactic to be used for reducing an algebraic equation in the
+proof stage. The default is <code><a href="https://oxarbitrage.github.io/salsa20-docs/algebra/ring/basic.html#ring">ring</a></code>. Other options currently include <code><a href="https://oxarbitrage.github.io/salsa20-docs/algebra/ring/basic.html#ring">ring</a> SOP</code> or <code>simp</code> for basic
+problems.</li>
+<li><code>restrict_type</code> will only use hypotheses that are inequalities over <code>tp</code>. This is useful
+if you have e.g. both integer and rational valued inequalities in the local context, which can
+sometimes confuse the tactic.</li>
+<li><code>transparency</code> controls how hard <code>linarith</code> will try to match atoms to each other. By default
+it will only unfold <code>reducible</code> definitions.</li>
+<li>If <code>split_hypotheses</code> is true, <code>linarith</code> will split conjunctions in the context into separate
+hypotheses.</li>
+<li>If <code>exfalso</code> is false, <code>linarith</code> will fail when the goal is neither an inequality nor <code><a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#false">false</a></code>.
+(True by default.)</li>
+</ul>
+<p>A variant, <code>nlinarith</code>, does some basic preprocessing to handle some nonlinear goals.</p>
+<p>The option <code>set_option trace.linarith <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#true">true</a></code> will trace certain intermediate stages of the <code>linarith</code>
+routine.</p>
+
+    
+      <div class="tags">Tags:
+        <ul>
+            
+                <li>arithmetic</li> 
+            
+                <li>decision procedure</li> 
+            
+                <li>finishing</li> 
+            
+        </ul>
+      </div>
+    
+    
+      <details class="rel_decls"><summary>Related declarations</summary>
+        <ul>
+            
+                <li><a href="https://oxarbitrage.github.io/salsa20-docs/tactic/linarith/frontend.html#tactic.interactive.linarith">tactic.interactive.linarith</a></li>
+            
+        </ul>
+      </details>
+
+      
+      <details class="imports"><summary>Import using</summary><ul><li>import tactic.linarith.frontend</li>
+<li>import tactic</li></ul></details>
+    
+</div>
+
 <div class="tactic core lemma-application">
     <h2 id="mapply"><a href="#mapply">mapply</a></h2>
     <p>Similar to the <code>apply</code> tactic, but uses matching instead of unification.
@@ -4650,6 +5023,48 @@ for <code>x + y &lt; w + z</code> could be broken down into either
 
       
       <details class="imports"><summary>Import using</summary><ul><li>import tactic.monotonicity.interactive</li>
+<li>import tactic</li></ul></details>
+    
+</div>
+
+<div class="tactic arithmetic decision-procedure finishing">
+    <h2 id="nlinarith"><a href="#nlinarith">nlinarith</a></h2>
+    <p>An extension of <code>linarith</code> with some preprocessing to allow it to solve some nonlinear arithmetic
+problems. (Based on Coq's <code>nra</code> tactic.) See <code>linarith</code> for the available syntax of options,
+which are inherited by <code>nlinarith</code>; that is, <code>nlinarith!</code> and <code>nlinarith only [h1, h2]</code> all work as
+in <code>linarith</code>. The preprocessing is as follows:</p>
+<ul>
+<li>For every subterm <code>a ^ 2</code> or <code>a * a</code> in a hypothesis or the goal,
+the assumption <code>0 ≤ a ^ 2</code> or <code>0 ≤ a * a</code> is added to the context.</li>
+<li>For every pair of hypotheses <code>a1 R1 b1</code>, <code>a2 R2 b2</code> in the context, <code>R1, R2 ∈ {&lt;, ≤, =}</code>,
+the assumption <code>0 R&#x27; (b1 - a1) * (b2 - a2)</code> is added to the context (non-recursively),
+where <code>R ∈ {&lt;, ≤, =}</code> is the appropriate comparison derived from <code>R1, R2</code>.</li>
+</ul>
+
+    
+      <div class="tags">Tags:
+        <ul>
+            
+                <li>arithmetic</li> 
+            
+                <li>decision procedure</li> 
+            
+                <li>finishing</li> 
+            
+        </ul>
+      </div>
+    
+    
+      <details class="rel_decls"><summary>Related declarations</summary>
+        <ul>
+            
+                <li><a href="https://oxarbitrage.github.io/salsa20-docs/tactic/linarith/frontend.html#tactic.interactive.nlinarith">tactic.interactive.nlinarith</a></li>
+            
+        </ul>
+      </details>
+
+      
+      <details class="imports"><summary>Import using</summary><ul><li>import tactic.linarith.frontend</li>
 <li>import tactic</li></ul></details>
     
 </div>
@@ -4809,7 +5224,7 @@ and with extra simp lemmas with <code>push_cast [<a href="https://oxarbitrage.gi
 numerical types such as <code>ℕ</code>, <code>ℤ</code>, <code>ℚ</code>, <code>ℝ</code>, <code>ℂ</code>, and can prove goals of the form <code>A = B</code>, <code>A ≠ B</code>,
 <code>A &lt; B</code> and <code>A ≤ B</code>, where <code>A</code> and <code>B</code> are numerical expressions.</p>
 <p>Add-on tactics marked as <code>@[norm_num]</code> can extend the behavior of <code>norm_num</code> to include other
-functions. This is used to support several other functions on <code><a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#nat">nat</a></code> like <code>prime</code>, <code>min_fac</code> and
+functions. This is used to support several other functions on <code><a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#nat">nat</a></code> like <code><a href="https://oxarbitrage.github.io/salsa20-docs/algebra/associated.html#prime">prime</a></code>, <code>min_fac</code> and
 <code>factors</code>.</p>
 <div class="codehilite"><pre><span></span><code><span class="kn">import</span> <span class="n">data.real.basic</span>
 
@@ -4819,8 +5234,8 @@ functions. This is used to support several other functions on <code><a href="htt
 <span class="kd">example</span> <span class="o">:</span> <span class="mi">123456789</span> <span class="bp">+</span> <span class="mi">987654321</span> <span class="bp">=</span> <span class="mi">1111111110</span> <span class="o">:=</span> <span class="kd">by</span> <span class="n">norm_num</span>
 <span class="kd">example</span> <span class="o">(</span><span class="n">R</span> <span class="o">:</span> <span class="kt">Type</span><span class="bp">*</span><span class="o">)</span> <span class="o">[</span><span class="n"><a href="https://oxarbitrage.github.io/salsa20-docs/algebra/ring/basic.html#ring">ring</a></span> <span class="n">R</span><span class="o">]</span> <span class="o">:</span> <span class="o">(</span><span class="mi">2</span> <span class="o">:</span> <span class="n">R</span><span class="o">)</span> <span class="bp">+</span> <span class="mi">2</span> <span class="bp">=</span> <span class="mi">4</span> <span class="o">:=</span> <span class="kd">by</span> <span class="n">norm_num</span>
 <span class="kd">example</span> <span class="o">(</span><span class="n">F</span> <span class="o">:</span> <span class="kt">Type</span><span class="bp">*</span><span class="o">)</span> <span class="o">[</span><span class="n"><a href="https://oxarbitrage.github.io/salsa20-docs/algebra/order/field.html#linear_ordered_field">linear_ordered_field</a></span> <span class="n">F</span><span class="o">]</span> <span class="o">:</span> <span class="o">(</span><span class="mi">2</span> <span class="o">:</span> <span class="n">F</span><span class="o">)</span> <span class="bp">+</span> <span class="mi">2</span> <span class="bp">&lt;</span> <span class="mi">5</span> <span class="o">:=</span> <span class="kd">by</span> <span class="n">norm_num</span>
-<span class="kd">example</span> <span class="o">:</span> <span class="n">nat.prime</span> <span class="o">(</span><span class="mi">2</span><span class="bp">^</span><span class="mi">13</span> <span class="bp">-</span> <span class="mi">1</span><span class="o">)</span> <span class="o">:=</span> <span class="kd">by</span> <span class="n">norm_num</span>
-<span class="kd">example</span> <span class="o">:</span> <span class="bp">¬</span> <span class="n">nat.prime</span> <span class="o">(</span><span class="mi">2</span><span class="bp">^</span><span class="mi">11</span> <span class="bp">-</span> <span class="mi">1</span><span class="o">)</span> <span class="o">:=</span> <span class="kd">by</span> <span class="n">norm_num</span>
+<span class="kd">example</span> <span class="o">:</span> <span class="n"><a href="https://oxarbitrage.github.io/salsa20-docs/data/nat/prime.html#nat.prime">nat.prime</a></span> <span class="o">(</span><span class="mi">2</span><span class="bp">^</span><span class="mi">13</span> <span class="bp">-</span> <span class="mi">1</span><span class="o">)</span> <span class="o">:=</span> <span class="kd">by</span> <span class="n">norm_num</span>
+<span class="kd">example</span> <span class="o">:</span> <span class="bp">¬</span> <span class="n"><a href="https://oxarbitrage.github.io/salsa20-docs/data/nat/prime.html#nat.prime">nat.prime</a></span> <span class="o">(</span><span class="mi">2</span><span class="bp">^</span><span class="mi">11</span> <span class="bp">-</span> <span class="mi">1</span><span class="o">)</span> <span class="o">:=</span> <span class="kd">by</span> <span class="n">norm_num</span>
 <span class="kd">example</span> <span class="o">(</span><span class="n">x</span> <span class="o">:</span> <span class="n">ℝ</span><span class="o">)</span> <span class="o">(</span><span class="n">h</span> <span class="o">:</span> <span class="n">x</span> <span class="bp">=</span> <span class="mi">123</span> <span class="bp">+</span> <span class="mi">456</span><span class="o">)</span> <span class="o">:</span> <span class="n">x</span> <span class="bp">=</span> <span class="mi">579</span> <span class="o">:=</span> <span class="kd">by</span> <span class="n">norm_num</span> <span class="n">at</span> <span class="n">h</span><span class="bp">;</span> <span class="n">assumption</span>
 </code></pre></div>
 
@@ -5536,6 +5951,49 @@ It does not revert <code>n₁, n₂, ...</code> themselves (unless they depend o
     
 </div>
 
+<div class="tactic arithmetic simplification decision-procedure">
+    <h2 id="ring"><a href="#ring">ring</a></h2>
+    <p>Tactic for solving equations in the language of <em>commutative</em> (semi)rings.
+<code>ring!</code> will use a more aggressive reducibility setting to identify atoms.</p>
+<p>If the goal is not solvable, it falls back to rewriting all ring expressions
+into a normal form, with a suggestion to use <code>ring_nf</code> instead, if this is the intent.
+See also <code>ring1</code>, which is the same as <code><a href="https://oxarbitrage.github.io/salsa20-docs/algebra/ring/basic.html#ring">ring</a></code> but without the fallback behavior.</p>
+<p>Based on <a href="http://www.cs.ru.nl/%7Efreek/courses/tt-2014/read/10.1.1.61.3041.pdf">Proving Equalities in a Commutative Ring Done Right
+in Coq</a> by Benjamin Grégoire
+and Assia Mahboubi.</p>
+
+    
+      <div class="tags">Tags:
+        <ul>
+            
+                <li>arithmetic</li> 
+            
+                <li>simplification</li> 
+            
+                <li>decision procedure</li> 
+            
+        </ul>
+      </div>
+    
+    
+      <details class="rel_decls"><summary>Related declarations</summary>
+        <ul>
+            
+                <li><a href="https://oxarbitrage.github.io/salsa20-docs/tactic/ring.html#tactic.interactive.ring">tactic.interactive.ring</a></li>
+            
+                <li><a href="https://oxarbitrage.github.io/salsa20-docs/tactic/ring.html#tactic.interactive.ring_nf">tactic.interactive.ring_nf</a></li>
+            
+                <li><a href="https://oxarbitrage.github.io/salsa20-docs/tactic/ring.html#tactic.interactive.ring1">tactic.interactive.ring1</a></li>
+            
+        </ul>
+      </details>
+
+      
+      <details class="imports"><summary>Import using</summary><ul><li>import tactic.ring</li>
+<li>import tactic</li></ul></details>
+    
+</div>
+
 <div class="tactic induction">
     <h2 id="rintro"><a href="#rintro">rintro</a></h2>
     <p>The <code>rintro</code> tactic is a combination of the <code>intros</code> tactic with <code>rcases</code> to
@@ -5673,6 +6131,43 @@ the target of the goal.</p>
 
       
       <details class="imports"><summary>Import using</summary><ul><li>imported by default</li></ul></details>
+    
+</div>
+
+<div class="tactic logic">
+    <h2 id="scc"><a href="#scc">scc</a></h2>
+    <p><code>scc</code> uses the available equivalences and implications to prove
+a goal of the form <code>p ↔ q</code>.</p>
+<div class="codehilite"><pre><span></span><code><span class="kd">example</span> <span class="o">(</span><span class="n">p</span> <span class="n">q</span> <span class="n">r</span> <span class="o">:</span> <span class="kt">Prop</span><span class="o">)</span> <span class="o">(</span><span class="n">hpq</span> <span class="o">:</span> <span class="n">p</span> <span class="bp">→</span> <span class="n">q</span><span class="o">)</span> <span class="o">(</span><span class="n">hqr</span> <span class="o">:</span> <span class="n">q</span> <span class="bp">↔</span> <span class="n">r</span><span class="o">)</span> <span class="o">(</span><span class="n">hrp</span> <span class="o">:</span> <span class="n">r</span> <span class="bp">→</span> <span class="n">p</span><span class="o">)</span> <span class="o">:</span> <span class="n">p</span> <span class="bp">↔</span> <span class="n">r</span> <span class="o">:=</span>
+<span class="kd">by</span> <span class="n">scc</span>
+</code></pre></div>
+
+<p>The variant <code>scc&#x27;</code> populates the local context with all equivalences that <code>scc</code> is able to prove.
+This is mostly useful for testing purposes.</p>
+
+    
+      <div class="tags">Tags:
+        <ul>
+            
+                <li>logic</li> 
+            
+        </ul>
+      </div>
+    
+    
+      <details class="rel_decls"><summary>Related declarations</summary>
+        <ul>
+            
+                <li><a href="https://oxarbitrage.github.io/salsa20-docs/tactic/scc.html#tactic.interactive.scc">tactic.interactive.scc</a></li>
+            
+                <li><a href="https://oxarbitrage.github.io/salsa20-docs/tactic/scc.html#tactic.interactive.scc'">tactic.interactive.scc'</a></li>
+            
+        </ul>
+      </details>
+
+      
+      <details class="imports"><summary>Import using</summary><ul><li>import tactic.scc</li>
+<li>import tactic</li></ul></details>
     
 </div>
 
@@ -6549,13 +7044,13 @@ a local definition. It is trickier to fix this in core, since <code><a href="htt
     <p><code>suggest</code> lists possible usages of the <code>refine</code> tactic and leaves the tactic state unchanged.
 It is intended as a complement of the search function in your editor, the <code>#find</code> tactic, and
 <code>library_search</code>.</p>
-<p><code>suggest</code> takes an optional natural number <code>num</code> as input and returns the first <code>num</code> (or less, if
+<p><code>suggest</code> takes an optional natural number <code><a href="https://oxarbitrage.github.io/salsa20-docs/data/num/basic.html#num">num</a></code> as input and returns the first <code><a href="https://oxarbitrage.github.io/salsa20-docs/data/num/basic.html#num">num</a></code> (or less, if
 all possibilities are exhausted) possibilities ordered by length of lemma names.
-The default for <code>num</code> is <code>50</code>.</p>
+The default for <code><a href="https://oxarbitrage.github.io/salsa20-docs/data/num/basic.html#num">num</a></code> is <code>50</code>.</p>
 <p><code>suggest using h₁ h₂</code> will only show solutions that make use of the local hypotheses <code>h₁</code> and <code>h₂</code>.</p>
 <p>For performance reasons <code>suggest</code> uses monadic lazy lists (<code>mllist</code>). This means that <code>suggest</code>
-might miss some results if <code>num</code> is not large enough. However, because <code>suggest</code> uses monadic
-lazy lists, smaller values of <code>num</code> run faster than larger values.</p>
+might miss some results if <code><a href="https://oxarbitrage.github.io/salsa20-docs/data/num/basic.html#num">num</a></code> is not large enough. However, because <code>suggest</code> uses monadic
+lazy lists, smaller values of <code><a href="https://oxarbitrage.github.io/salsa20-docs/data/num/basic.html#num">num</a></code> run faster than larger values.</p>
 <p>An example of <code>suggest</code> in action,</p>
 <div class="codehilite"><pre><span></span><code><span class="kd">example</span> <span class="o">(</span><span class="n">n</span> <span class="o">:</span> <span class="n"><a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#nat">nat</a></span><span class="o">)</span> <span class="o">:</span> <span class="n">n</span> <span class="bp">&lt;</span> <span class="n">n</span> <span class="bp">+</span> <span class="mi">1</span> <span class="o">:=</span>
 <span class="kd">begin</span> <span class="n">suggest</span><span class="o">,</span> <span class="gr">sorry</span> <span class="kd">end</span>
@@ -6701,6 +7196,78 @@ that it is unable to solve before failing.</p>
       
       <details class="imports"><summary>Import using</summary><ul><li>import tactic.tauto</li>
 <li>import tactic.basic</li></ul></details>
+    
+</div>
+
+<div class="tactic logic">
+    <h2 id="tfae"><a href="#tfae">tfae</a></h2>
+    <p>The <code>tfae</code> tactic suite is a set of tactics that help with proving that certain
+propositions are equivalent.
+In <code>data/list/basic.lean</code> there is a section devoted to propositions of the
+form</p>
+<div class="codehilite"><pre><span></span><code><span class="n">tfae</span> <span class="o">[</span><span class="n">p1</span><span class="o">,</span> <span class="n">p2</span><span class="o">,</span> <span class="bp">...</span><span class="o">,</span> <span class="n">pn</span><span class="o">]</span>
+</code></pre></div>
+
+<p>where <code>p1</code>, <code>p2</code>, through, <code>pn</code> are terms of type <code>Prop</code>.
+This proposition asserts that all the <code>pi</code> are pairwise equivalent.
+There are results that allow to extract the equivalence
+of two propositions <code>pi</code> and <code>pj</code>.</p>
+<p>To prove a goal of the form <code>tfae [p1, p2, ..., pn]</code>, there are two
+tactics.  The first tactic is <code>tfae_have</code>.  As an argument it takes an
+expression of the form <code>i arrow j</code>, where <code>i</code> and <code>j</code> are two positive
+natural numbers, and <code>arrow</code> is an arrow such as <code>→</code>, <code>-&gt;</code>, <code>←</code>, <code>&lt;-</code>,
+<code>↔</code>, or <code>&lt;-&gt;</code>.  The tactic <code>tfae_have : i arrow j</code> sets up a subgoal in
+which the user has to prove the equivalence (or implication) of <code>pi</code> and <code>pj</code>.</p>
+<p>The remaining tactic, <code>tfae_finish</code>, is a finishing tactic. It
+collects all implications and equivalences from the local context and
+computes their transitive closure to close the
+main goal.</p>
+<p><code>tfae_have</code> and <code>tfae_finish</code> can be used together in a proof as
+follows:</p>
+<div class="codehilite"><pre><span></span><code><span class="kd">example</span> <span class="o">(</span><span class="n">a</span> <span class="n">b</span> <span class="n">c</span> <span class="n">d</span> <span class="o">:</span> <span class="kt">Prop</span><span class="o">)</span> <span class="o">:</span> <span class="n">tfae</span> <span class="o">[</span><span class="n">a</span><span class="o">,</span><span class="n">b</span><span class="o">,</span><span class="n">c</span><span class="o">,</span><span class="n">d</span><span class="o">]</span> <span class="o">:=</span>
+<span class="kd">begin</span>
+  <span class="n">tfae_have</span> <span class="o">:</span> <span class="mi">3</span> <span class="bp">→</span> <span class="mi">1</span><span class="o">,</span>
+  <span class="o">{</span> <span class="c">/-</span><span class="cm"> prove c → a -/</span> <span class="o">},</span>
+  <span class="n">tfae_have</span> <span class="o">:</span> <span class="mi">2</span> <span class="bp">→</span> <span class="mi">3</span><span class="o">,</span>
+  <span class="o">{</span> <span class="c">/-</span><span class="cm"> prove b → c -/</span> <span class="o">},</span>
+  <span class="n">tfae_have</span> <span class="o">:</span> <span class="mi">2</span> <span class="bp">←</span> <span class="mi">1</span><span class="o">,</span>
+  <span class="o">{</span> <span class="c">/-</span><span class="cm"> prove a → b -/</span> <span class="o">},</span>
+  <span class="n">tfae_have</span> <span class="o">:</span> <span class="mi">4</span> <span class="bp">↔</span> <span class="mi">2</span><span class="o">,</span>
+  <span class="o">{</span> <span class="c">/-</span><span class="cm"> prove d ↔ b -/</span> <span class="o">},</span>
+    <span class="c1">-- a b c d : Prop,</span>
+    <span class="c1">-- tfae_3_to_1 : c → a,</span>
+    <span class="c1">-- tfae_2_to_3 : b → c,</span>
+    <span class="c1">-- tfae_1_to_2 : a → b,</span>
+    <span class="c1">-- tfae_4_iff_2 : d ↔ b</span>
+    <span class="c1">-- ⊢ tfae [a, b, c, d]</span>
+  <span class="n">tfae_finish</span><span class="o">,</span>
+<span class="kd">end</span>
+</code></pre></div>
+
+
+    
+      <div class="tags">Tags:
+        <ul>
+            
+                <li>logic</li> 
+            
+        </ul>
+      </div>
+    
+    
+      <details class="rel_decls"><summary>Related declarations</summary>
+        <ul>
+            
+                <li><a href="https://oxarbitrage.github.io/salsa20-docs/tactic/tfae.html#tactic.interactive.tfae_have">tactic.interactive.tfae_have</a></li>
+            
+                <li><a href="https://oxarbitrage.github.io/salsa20-docs/tactic/tfae.html#tactic.interactive.tfae_finish">tactic.interactive.tfae_finish</a></li>
+            
+        </ul>
+      </details>
+
+      
+      <details class="imports"><summary>Import using</summary><ul><li>import tactic.tfae</li>
+<li>import tactic</li></ul></details>
     
 </div>
 
@@ -7452,6 +8019,63 @@ expression <code>R x y</code>.</p>
     
 </div>
 
+<div class="tactic coercions transport">
+    <h2 id="zify"><a href="#zify">zify</a></h2>
+    <p>The <code>zify</code> tactic is used to shift propositions from <code>ℕ</code> to <code>ℤ</code>.
+This is often useful since <code>ℤ</code> has well-behaved subtraction.</p>
+<div class="codehilite"><pre><span></span><code><span class="kd">example</span> <span class="o">(</span><span class="n">a</span> <span class="n">b</span> <span class="n">c</span> <span class="n">x</span> <span class="n">y</span> <span class="n">z</span> <span class="o">:</span> <span class="n">ℕ</span><span class="o">)</span> <span class="o">(</span><span class="n">h</span> <span class="o">:</span> <span class="bp">¬</span> <span class="n">x</span><span class="bp">*</span><span class="n">y</span><span class="bp">*</span><span class="n">z</span> <span class="bp">&lt;</span> <span class="mi">0</span><span class="o">)</span> <span class="o">:</span> <span class="n">c</span> <span class="bp">&lt;</span> <span class="n">a</span> <span class="bp">+</span> <span class="mi">3</span><span class="bp">*</span><span class="n">b</span> <span class="o">:=</span>
+<span class="kd">begin</span>
+  <span class="n">zify</span><span class="o">,</span>
+  <span class="n">zify</span> <span class="n">at</span> <span class="n">h</span><span class="o">,</span>
+  <span class="c">/-</span><span class="cm"></span>
+<span class="cm">  h : ¬↑x * ↑y * ↑z &lt; 0</span>
+<span class="cm">  ⊢ ↑c &lt; ↑a + 3 * ↑b</span>
+<span class="cm">  -/</span>
+<span class="kd">end</span>
+</code></pre></div>
+
+<p><code>zify</code> can be given extra lemmas to use in simplification. This is especially useful in the
+presence of nat subtraction: passing <code>≤</code> arguments will allow <code>push_cast</code> to do more work.</p>
+<div class="codehilite"><pre><span></span><code><span class="kd">example</span> <span class="o">(</span><span class="n">a</span> <span class="n">b</span> <span class="n">c</span> <span class="o">:</span> <span class="n">ℕ</span><span class="o">)</span> <span class="o">(</span><span class="n">h</span> <span class="o">:</span> <span class="n">a</span> <span class="bp">-</span> <span class="n">b</span> <span class="bp">&lt;</span> <span class="n">c</span><span class="o">)</span> <span class="o">(</span><span class="n">hab</span> <span class="o">:</span> <span class="n">b</span> <span class="bp">≤</span> <span class="n">a</span><span class="o">)</span> <span class="o">:</span> <span class="n"><a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#false">false</a></span> <span class="o">:=</span>
+<span class="kd">begin</span>
+  <span class="n">zify</span> <span class="o">[</span><span class="n">hab</span><span class="o">]</span> <span class="n">at</span> <span class="n">h</span><span class="o">,</span>
+  <span class="c">/-</span><span class="cm"> h : ↑a - ↑b &lt; ↑c -/</span>
+<span class="kd">end</span>
+</code></pre></div>
+
+<p><code>zify</code> makes use of the <code>@[zify]</code> attribute to move propositions,
+and the <code>push_cast</code> tactic to simplify the <code>ℤ</code>-valued expressions.</p>
+<p><code>zify</code> is in some sense dual to the <code><a href="https://oxarbitrage.github.io/salsa20-docs/init/coe.html#lift">lift</a></code> tactic. <code><a href="https://oxarbitrage.github.io/salsa20-docs/init/coe.html#lift">lift</a> (z : ℤ) to ℕ</code> will change the type of an
+integer <code>z</code> (in the supertype) to <code>ℕ</code> (the subtype), given a proof that <code>z ≥ 0</code>;
+propositions concerning <code>z</code> will still be over <code>ℤ</code>. <code>zify</code> changes propositions about <code>ℕ</code> (the
+subtype) to propositions about <code>ℤ</code> (the supertype), without changing the type of any variable.</p>
+
+    
+      <div class="tags">Tags:
+        <ul>
+            
+                <li>coercions</li> 
+            
+                <li>transport</li> 
+            
+        </ul>
+      </div>
+    
+    
+      <details class="rel_decls"><summary>Related declarations</summary>
+        <ul>
+            
+                <li><a href="https://oxarbitrage.github.io/salsa20-docs/tactic/zify.html#tactic.interactive.zify">tactic.interactive.zify</a></li>
+            
+        </ul>
+      </details>
+
+      
+      <details class="imports"><summary>Import using</summary><ul><li>import tactic.zify</li>
+<li>import tactic</li></ul></details>
+    
+</div>
+
 
 </div>
 
@@ -7999,6 +8623,13 @@ expression <code>R x y</code>.</p>
         <details class="nav_sect" data-path="algebra" >
             <summary>algebra</summary>
             
+        <details class="nav_sect" data-path="algebra/algebra" >
+            <summary>algebra</summary>
+            
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/algebra/algebra/basic.html">basic</a>
+        </div>
+        </details>
         <details class="nav_sect" data-path="algebra/big_operators" >
             <summary>big_operators</summary>
             
@@ -8006,7 +8637,19 @@ expression <code>R x y</code>.</p>
             <a href="https://oxarbitrage.github.io/salsa20-docs/algebra/big_operators/basic.html">basic</a>
         </div>
         <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/algebra/big_operators/fin.html">fin</a>
+        </div>
+        <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/algebra/big_operators/multiset.html">multiset</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/algebra/big_operators/option.html">option</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/algebra/big_operators/pi.html">pi</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/algebra/big_operators/ring.html">ring</a>
         </div>
         </details>
         <details class="nav_sect" data-path="algebra/char_zero" >
@@ -8026,6 +8669,13 @@ expression <code>R x y</code>.</p>
             <a href="https://oxarbitrage.github.io/salsa20-docs/algebra/field/opposite.html">opposite</a>
         </div>
         </details>
+        <details class="nav_sect" data-path="algebra/gcd_monoid" >
+            <summary>gcd_monoid</summary>
+            
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/algebra/gcd_monoid/basic.html">basic</a>
+        </div>
+        </details>
         <details class="nav_sect" data-path="algebra/group" >
             <summary>group</summary>
             
@@ -8034,6 +8684,9 @@ expression <code>R x y</code>.</p>
         </div>
         <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/algebra/group/commute.html">commute</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/algebra/group/conj.html">conj</a>
         </div>
         <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/algebra/group/defs.html">defs</a>
@@ -8058,6 +8711,9 @@ expression <code>R x y</code>.</p>
         </div>
         <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/algebra/group/type_tags.html">type_tags</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/algebra/group/ulift.html">ulift</a>
         </div>
         <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/algebra/group/units.html">units</a>
@@ -8099,10 +8755,16 @@ expression <code>R x y</code>.</p>
             <summary>hom</summary>
             
         <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/algebra/hom/aut.html">aut</a>
+        </div>
+        <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/algebra/hom/equiv.html">equiv</a>
         </div>
         <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/algebra/hom/group.html">group</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/algebra/hom/group_action.html">group_action</a>
         </div>
         <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/algebra/hom/group_instances.html">group_instances</a>
@@ -8112,6 +8774,41 @@ expression <code>R x y</code>.</p>
         </div>
         <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/algebra/hom/units.html">units</a>
+        </div>
+        </details>
+        <details class="nav_sect" data-path="algebra/module" >
+            <summary>module</summary>
+            
+        <details class="nav_sect" data-path="algebra/module/submodule" >
+            <summary>submodule</summary>
+            
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/algebra/module/submodule/basic.html">basic</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/algebra/module/submodule/lattice.html">lattice</a>
+        </div>
+        </details>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/algebra/module/basic.html">basic</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/algebra/module/equiv.html">equiv</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/algebra/module/hom.html">hom</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/algebra/module/linear_map.html">linear_map</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/algebra/module/pi.html">pi</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/algebra/module/prod.html">prod</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/algebra/module/ulift.html">ulift</a>
         </div>
         </details>
         <details class="nav_sect" data-path="algebra/order" >
@@ -8142,19 +8839,59 @@ expression <code>R x y</code>.</p>
         <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/algebra/regular/basic.html">basic</a>
         </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/algebra/regular/smul.html">smul</a>
+        </div>
         </details>
         <details class="nav_sect" data-path="algebra/ring" >
             <summary>ring</summary>
             
         <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/algebra/ring/aut.html">aut</a>
+        </div>
+        <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/algebra/ring/basic.html">basic</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/algebra/ring/comp_typeclasses.html">comp_typeclasses</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/algebra/ring/equiv.html">equiv</a>
         </div>
         <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/algebra/ring/opposite.html">opposite</a>
         </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/algebra/ring/pi.html">pi</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/algebra/ring/prod.html">prod</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/algebra/ring/ulift.html">ulift</a>
+        </div>
+        </details>
+        <details class="nav_sect" data-path="algebra/star" >
+            <summary>star</summary>
+            
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/algebra/star/basic.html">basic</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/algebra/star/module.html">module</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/algebra/star/pi.html">pi</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/algebra/star/self_adjoint.html">self_adjoint</a>
+        </div>
         </details>
         <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/algebra/abs.html">abs</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/algebra/associated.html">associated</a>
         </div>
         <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/algebra/char_zero.html">char_zero</a>
@@ -8169,10 +8906,34 @@ expression <code>R x y</code>.</p>
             <a href="https://oxarbitrage.github.io/salsa20-docs/algebra/euclidean_domain.html">euclidean_domain</a>
         </div>
         <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/algebra/field_power.html">field_power</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/algebra/free_monoid.html">free_monoid</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/algebra/group_ring_action.html">group_ring_action</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/algebra/indicator_function.html">indicator_function</a>
+        </div>
+        <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/algebra/invertible.html">invertible</a>
         </div>
         <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/algebra/opposites.html">opposites</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/algebra/parity.html">parity</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/algebra/punit_instances.html">punit_instances</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/algebra/smul_with_zero.html">smul_with_zero</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/algebra/support.html">support</a>
         </div>
         </details>
         <details class="nav_sect" data-path="category_theory" >
@@ -8273,6 +9034,13 @@ expression <code>R x y</code>.</p>
         <details class="nav_sect" data-path="control" >
             <summary>control</summary>
             
+        <details class="nav_sect" data-path="control/monad" >
+            <summary>monad</summary>
+            
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/control/monad/basic.html">basic</a>
+        </div>
+        </details>
         <details class="nav_sect" data-path="control/traversable" >
             <summary>traversable</summary>
             
@@ -8342,6 +9110,13 @@ expression <code>R x y</code>.</p>
             <a href="https://oxarbitrage.github.io/salsa20-docs/data/countable/defs.html">defs</a>
         </div>
         </details>
+        <details class="nav_sect" data-path="data/dfinsupp" >
+            <summary>dfinsupp</summary>
+            
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/data/dfinsupp/basic.html">basic</a>
+        </div>
+        </details>
         <details class="nav_sect" data-path="data/dlist" >
             <summary>dlist</summary>
             
@@ -8362,12 +9137,24 @@ expression <code>R x y</code>.</p>
         <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/data/fin/basic.html">basic</a>
         </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/data/fin/interval.html">interval</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/data/fin/vec_notation.html">vec_notation</a>
+        </div>
         </details>
         <details class="nav_sect" data-path="data/finite" >
             <summary>finite</summary>
             
         <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/data/finite/basic.html">basic</a>
+        </div>
+        <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/data/finite/defs.html">defs</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/data/finite/set.html">set</a>
         </div>
         </details>
         <details class="nav_sect" data-path="data/finset" >
@@ -8389,7 +9176,19 @@ expression <code>R x y</code>.</p>
             <a href="https://oxarbitrage.github.io/salsa20-docs/data/finset/lattice.html">lattice</a>
         </div>
         <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/data/finset/locally_finite.html">locally_finite</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/data/finset/noncomm_prod.html">noncomm_prod</a>
+        </div>
+        <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/data/finset/option.html">option</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/data/finset/order.html">order</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/data/finset/pairwise.html">pairwise</a>
         </div>
         <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/data/finset/pi.html">pi</a>
@@ -8398,10 +9197,23 @@ expression <code>R x y</code>.</p>
             <a href="https://oxarbitrage.github.io/salsa20-docs/data/finset/powerset.html">powerset</a>
         </div>
         <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/data/finset/preimage.html">preimage</a>
+        </div>
+        <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/data/finset/prod.html">prod</a>
         </div>
         <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/data/finset/sigma.html">sigma</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/data/finset/sort.html">sort</a>
+        </div>
+        </details>
+        <details class="nav_sect" data-path="data/finsupp" >
+            <summary>finsupp</summary>
+            
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/data/finsupp/basic.html">basic</a>
         </div>
         </details>
         <details class="nav_sect" data-path="data/fintype" >
@@ -8409,6 +9221,12 @@ expression <code>R x y</code>.</p>
             
         <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/data/fintype/basic.html">basic</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/data/fintype/card.html">card</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/data/fintype/fin.html">fin</a>
         </div>
         </details>
         <details class="nav_sect" data-path="data/fun_like" >
@@ -8446,10 +9264,28 @@ expression <code>R x y</code>.</p>
         <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/data/int/char_zero.html">char_zero</a>
         </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/data/int/gcd.html">gcd</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/data/int/interval.html">interval</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/data/int/least_greatest.html">least_greatest</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/data/int/modeq.html">modeq</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/data/int/order.html">order</a>
+        </div>
         </details>
         <details class="nav_sect" data-path="data/list" >
             <summary>list</summary>
             
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/data/list/alist.html">alist</a>
+        </div>
         <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/data/list/basic.html">basic</a>
         </div>
@@ -8473,6 +9309,9 @@ expression <code>R x y</code>.</p>
         </div>
         <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/data/list/forall2.html">forall2</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/data/list/indexes.html">indexes</a>
         </div>
         <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/data/list/infix.html">infix</a>
@@ -8502,13 +9341,25 @@ expression <code>R x y</code>.</p>
             <a href="https://oxarbitrage.github.io/salsa20-docs/data/list/pairwise.html">pairwise</a>
         </div>
         <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/data/list/palindrome.html">palindrome</a>
+        </div>
+        <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/data/list/perm.html">perm</a>
         </div>
         <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/data/list/permutation.html">permutation</a>
         </div>
         <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/data/list/prime.html">prime</a>
+        </div>
+        <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/data/list/range.html">range</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/data/list/rotate.html">rotate</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/data/list/sigma.html">sigma</a>
         </div>
         <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/data/list/sort.html">sort</a>
@@ -8517,7 +9368,20 @@ expression <code>R x y</code>.</p>
             <a href="https://oxarbitrage.github.io/salsa20-docs/data/list/sublists.html">sublists</a>
         </div>
         <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/data/list/tfae.html">tfae</a>
+        </div>
+        <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/data/list/zip.html">zip</a>
+        </div>
+        </details>
+        <details class="nav_sect" data-path="data/matrix" >
+            <summary>matrix</summary>
+            
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/data/matrix/basic.html">basic</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/data/matrix/notation.html">notation</a>
         </div>
         </details>
         <details class="nav_sect" data-path="data/multiset" >
@@ -8553,6 +9417,9 @@ expression <code>R x y</code>.</p>
         <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/data/multiset/range.html">range</a>
         </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/data/multiset/sort.html">sort</a>
+        </div>
         </details>
         <details class="nav_sect" data-path="data/nat" >
             <summary>nat</summary>
@@ -8582,22 +9449,56 @@ expression <code>R x y</code>.</p>
             <a href="https://oxarbitrage.github.io/salsa20-docs/data/nat/basic.html">basic</a>
         </div>
         <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/data/nat/bits.html">bits</a>
+        </div>
+        <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/data/nat/cast.html">cast</a>
         </div>
         <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/data/nat/cast_field.html">cast_field</a>
         </div>
         <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/data/nat/digits.html">digits</a>
+        </div>
+        <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/data/nat/gcd.html">gcd</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/data/nat/interval.html">interval</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/data/nat/lattice.html">lattice</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/data/nat/log.html">log</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/data/nat/modeq.html">modeq</a>
         </div>
         <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/data/nat/pairing.html">pairing</a>
         </div>
         <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/data/nat/parity.html">parity</a>
+        </div>
+        <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/data/nat/pow.html">pow</a>
         </div>
         <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/data/nat/prime.html">prime</a>
+        </div>
+        <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/data/nat/sqrt.html">sqrt</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/data/nat/sqrt_norm_num.html">sqrt_norm_num</a>
+        </div>
+        </details>
+        <details class="nav_sect" data-path="data/num" >
+            <summary>num</summary>
+            
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/data/num/basic.html">basic</a>
         </div>
         </details>
         <details class="nav_sect" data-path="data/option" >
@@ -8626,12 +9527,18 @@ expression <code>R x y</code>.</p>
         <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/data/pnat/basic.html">basic</a>
         </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/data/pnat/interval.html">interval</a>
+        </div>
         </details>
         <details class="nav_sect" data-path="data/prod" >
             <summary>prod</summary>
             
         <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/data/prod/basic.html">basic</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/data/prod/lex.html">lex</a>
         </div>
         <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/data/prod/pprod.html">pprod</a>
@@ -8682,12 +9589,27 @@ expression <code>R x y</code>.</p>
         <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/data/set/intervals/basic.html">basic</a>
         </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/data/set/intervals/image_preimage.html">image_preimage</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/data/set/intervals/ord_connected.html">ord_connected</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/data/set/intervals/unordered_interval.html">unordered_interval</a>
+        </div>
         </details>
         <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/data/set/basic.html">basic</a>
         </div>
         <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/data/set/finite.html">finite</a>
+        </div>
+        <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/data/set/function.html">function</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/data/set/functor.html">functor</a>
         </div>
         <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/data/set/lattice.html">lattice</a>
@@ -8696,10 +9618,20 @@ expression <code>R x y</code>.</p>
             <a href="https://oxarbitrage.github.io/salsa20-docs/data/set/pairwise.html">pairwise</a>
         </div>
         <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/data/set/pointwise.html">pointwise</a>
+        </div>
+        <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/data/set/prod.html">prod</a>
         </div>
         <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/data/set/sigma.html">sigma</a>
+        </div>
+        </details>
+        <details class="nav_sect" data-path="data/set_like" >
+            <summary>set_like</summary>
+            
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/data/set_like/basic.html">basic</a>
         </div>
         </details>
         <details class="nav_sect" data-path="data/setoid" >
@@ -8719,6 +9651,9 @@ expression <code>R x y</code>.</p>
         <details class="nav_sect" data-path="data/string" >
             <summary>string</summary>
             
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/data/string/basic.html">basic</a>
+        </div>
         <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/data/string/defs.html">defs</a>
         </div>
@@ -8748,16 +9683,25 @@ expression <code>R x y</code>.</p>
             <a href="https://oxarbitrage.github.io/salsa20-docs/data/bracket.html">bracket</a>
         </div>
         <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/data/char.html">char</a>
+        </div>
+        <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/data/mllist.html">mllist</a>
         </div>
         <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/data/opposite.html">opposite</a>
         </div>
         <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/data/part.html">part</a>
+        </div>
+        <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/data/quot.html">quot</a>
         </div>
         <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/data/subtype.html">subtype</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/data/tree.html">tree</a>
         </div>
         <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/data/ulift.html">ulift</a>
@@ -8770,7 +9714,28 @@ expression <code>R x y</code>.</p>
             <summary>group_action</summary>
             
         <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/group_theory/group_action/basic.html">basic</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/group_theory/group_action/big_operators.html">big_operators</a>
+        </div>
+        <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/group_theory/group_action/defs.html">defs</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/group_theory/group_action/group.html">group</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/group_theory/group_action/opposite.html">opposite</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/group_theory/group_action/pi.html">pi</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/group_theory/group_action/prod.html">prod</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/group_theory/group_action/sub_mul_action.html">sub_mul_action</a>
         </div>
         <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/group_theory/group_action/units.html">units</a>
@@ -8783,6 +9748,64 @@ expression <code>R x y</code>.</p>
             <a href="https://oxarbitrage.github.io/salsa20-docs/group_theory/perm/basic.html">basic</a>
         </div>
         </details>
+        <details class="nav_sect" data-path="group_theory/subgroup" >
+            <summary>subgroup</summary>
+            
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/group_theory/subgroup/basic.html">basic</a>
+        </div>
+        </details>
+        <details class="nav_sect" data-path="group_theory/submonoid" >
+            <summary>submonoid</summary>
+            
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/group_theory/submonoid/basic.html">basic</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/group_theory/submonoid/center.html">center</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/group_theory/submonoid/centralizer.html">centralizer</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/group_theory/submonoid/membership.html">membership</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/group_theory/submonoid/operations.html">operations</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/group_theory/submonoid/pointwise.html">pointwise</a>
+        </div>
+        </details>
+        <details class="nav_sect" data-path="group_theory/subsemigroup" >
+            <summary>subsemigroup</summary>
+            
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/group_theory/subsemigroup/basic.html">basic</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/group_theory/subsemigroup/center.html">center</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/group_theory/subsemigroup/centralizer.html">centralizer</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/group_theory/subsemigroup/operations.html">operations</a>
+        </div>
+        </details>
+        </details>
+        <details class="nav_sect" data-path="linear_algebra" >
+            <summary>linear_algebra</summary>
+            
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/linear_algebra/basic.html">basic</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/linear_algebra/prod.html">prod</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/linear_algebra/span.html">span</a>
+        </div>
         </details>
         <details class="nav_sect" data-path="logic" >
             <summary>logic</summary>
@@ -8799,6 +9822,9 @@ expression <code>R x y</code>.</p>
             
         <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/logic/equiv/basic.html">basic</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/logic/equiv/fin.html">fin</a>
         </div>
         <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/logic/equiv/nat.html">nat</a>
@@ -8825,6 +9851,9 @@ expression <code>R x y</code>.</p>
         </details>
         <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/logic/basic.html">basic</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/logic/denumerable.html">denumerable</a>
         </div>
         <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/logic/embedding.html">embedding</a>
@@ -8873,7 +9902,13 @@ expression <code>R x y</code>.</p>
         <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/order/hom/basic.html">basic</a>
         </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/order/hom/order.html">order</a>
+        </div>
         </details>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/order/atoms.html">atoms</a>
+        </div>
         <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/order/basic.html">basic</a>
         </div>
@@ -8887,6 +9922,12 @@ expression <code>R x y</code>.</p>
             <a href="https://oxarbitrage.github.io/salsa20-docs/order/bounds.html">bounds</a>
         </div>
         <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/order/chain.html">chain</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/order/compactly_generated.html">compactly_generated</a>
+        </div>
+        <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/order/compare.html">compare</a>
         </div>
         <div class="nav_link ">
@@ -8894,6 +9935,12 @@ expression <code>R x y</code>.</p>
         </div>
         <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/order/complete_lattice.html">complete_lattice</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/order/conditionally_complete_lattice.html">conditionally_complete_lattice</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/order/cover.html">cover</a>
         </div>
         <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/order/directed.html">directed</a>
@@ -8905,13 +9952,31 @@ expression <code>R x y</code>.</p>
             <a href="https://oxarbitrage.github.io/salsa20-docs/order/lattice.html">lattice</a>
         </div>
         <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/order/lattice_intervals.html">lattice_intervals</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/order/locally_finite.html">locally_finite</a>
+        </div>
+        <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/order/max.html">max</a>
         </div>
         <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/order/min_max.html">min_max</a>
         </div>
         <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/order/modular_lattice.html">modular_lattice</a>
+        </div>
+        <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/order/monotone.html">monotone</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/order/omega_complete_partial_order.html">omega_complete_partial_order</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/order/order_iso_nat.html">order_iso_nat</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/order/partial_sups.html">partial_sups</a>
         </div>
         <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/order/rel_classes.html">rel_classes</a>
@@ -8920,11 +9985,35 @@ expression <code>R x y</code>.</p>
             <a href="https://oxarbitrage.github.io/salsa20-docs/order/rel_iso.html">rel_iso</a>
         </div>
         <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/order/sup_indep.html">sup_indep</a>
+        </div>
+        <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/order/synonym.html">synonym</a>
         </div>
         <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/order/well_founded.html">well_founded</a>
         </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/order/zorn.html">zorn</a>
+        </div>
+        </details>
+        <details class="nav_sect" data-path="ring_theory" >
+            <summary>ring_theory</summary>
+            
+        <details class="nav_sect" data-path="ring_theory/subring" >
+            <summary>subring</summary>
+            
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/ring_theory/subring/basic.html">basic</a>
+        </div>
+        </details>
+        <details class="nav_sect" data-path="ring_theory/subsemiring" >
+            <summary>subsemiring</summary>
+            
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/ring_theory/subsemiring/basic.html">basic</a>
+        </div>
+        </details>
         </details>
         <details class="nav_sect" data-path="tactic" >
             <summary>tactic</summary>
@@ -8940,6 +10029,31 @@ expression <code>R x y</code>.</p>
         </div>
         <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/tactic/converter/old_conv.html">old_conv</a>
+        </div>
+        </details>
+        <details class="nav_sect" data-path="tactic/linarith" >
+            <summary>linarith</summary>
+            
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/tactic/linarith/datatypes.html">datatypes</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/tactic/linarith/elimination.html">elimination</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/tactic/linarith/frontend.html">frontend</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/tactic/linarith/lemmas.html">lemmas</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/tactic/linarith/parsing.html">parsing</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/tactic/linarith/preprocessing.html">preprocessing</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/tactic/linarith/verification.html">verification</a>
         </div>
         </details>
         <details class="nav_sect" data-path="tactic/lint" >
@@ -8991,6 +10105,9 @@ expression <code>R x y</code>.</p>
         </div>
         </details>
         <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/tactic/abel.html">abel</a>
+        </div>
+        <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/tactic/algebra.html">algebra</a>
         </div>
         <div class="nav_link ">
@@ -9015,6 +10132,9 @@ expression <code>R x y</code>.</p>
             <a href="https://oxarbitrage.github.io/salsa20-docs/tactic/cache.html">cache</a>
         </div>
         <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/tactic/cancel_denoms.html">cancel_denoms</a>
+        </div>
+        <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/tactic/chain.html">chain</a>
         </div>
         <div class="nav_link ">
@@ -9025,6 +10145,9 @@ expression <code>R x y</code>.</p>
         </div>
         <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/tactic/congr.html">congr</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/tactic/congrm.html">congrm</a>
         </div>
         <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/tactic/core.html">core</a>
@@ -9054,6 +10177,9 @@ expression <code>R x y</code>.</p>
             <a href="https://oxarbitrage.github.io/salsa20-docs/tactic/ext.html">ext</a>
         </div>
         <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/tactic/fin_cases.html">fin_cases</a>
+        </div>
+        <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/tactic/find.html">find</a>
         </div>
         <div class="nav_link ">
@@ -9073,6 +10199,9 @@ expression <code>R x y</code>.</p>
         </div>
         <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/tactic/interactive_expr.html">interactive_expr</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/tactic/interval_cases.html">interval_cases</a>
         </div>
         <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/tactic/itauto.html">itauto</a>
@@ -9135,6 +10264,12 @@ expression <code>R x y</code>.</p>
             <a href="https://oxarbitrage.github.io/salsa20-docs/tactic/rewrite.html">rewrite</a>
         </div>
         <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/tactic/ring.html">ring</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/tactic/scc.html">scc</a>
+        </div>
+        <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/tactic/show_term.html">show_term</a>
         </div>
         <div class="nav_link ">
@@ -9171,6 +10306,9 @@ expression <code>R x y</code>.</p>
             <a href="https://oxarbitrage.github.io/salsa20-docs/tactic/tauto.html">tauto</a>
         </div>
         <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/tactic/tfae.html">tfae</a>
+        </div>
+        <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/tactic/tidy.html">tidy</a>
         </div>
         <div class="nav_link ">
@@ -9188,31 +10326,12 @@ expression <code>R x y</code>.</p>
         <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/tactic/wlog.html">wlog</a>
         </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/tactic/zify.html">zify</a>
+        </div>
         </details>
         <h4>salsa20</h4>
         
-        <details class="nav_sect" data-path="examples" >
-            <summary>examples</summary>
-            
-        <div class="nav_link ">
-            <a href="https://oxarbitrage.github.io/salsa20-docs/examples/columnround.html">columnround</a>
-        </div>
-        <div class="nav_link ">
-            <a href="https://oxarbitrage.github.io/salsa20-docs/examples/core.html">core</a>
-        </div>
-        <div class="nav_link ">
-            <a href="https://oxarbitrage.github.io/salsa20-docs/examples/doubleround.html">doubleround</a>
-        </div>
-        <div class="nav_link ">
-            <a href="https://oxarbitrage.github.io/salsa20-docs/examples/operations.html">operations</a>
-        </div>
-        <div class="nav_link ">
-            <a href="https://oxarbitrage.github.io/salsa20-docs/examples/quarterround.html">quarterround</a>
-        </div>
-        <div class="nav_link ">
-            <a href="https://oxarbitrage.github.io/salsa20-docs/examples/rowround.html">rowround</a>
-        </div>
-        </details>
         <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/columnround.html">columnround</a>
         </div>
@@ -9236,9 +10355,6 @@ expression <code>R x y</code>.</p>
         </div>
         <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/rowround.html">rowround</a>
-        </div>
-        <div class="nav_link ">
-            <a href="https://oxarbitrage.github.io/salsa20-docs/utils.html">utils</a>
         </div>
 
 <div id="settings">
