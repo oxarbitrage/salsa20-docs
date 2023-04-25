@@ -8,11 +8,11 @@
     <title>salsa20 / rowround - salsa20 docs</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Row round: The `rowround` function takes a `matrixType` (tuple of 4 `vecType`s) and return a new `matrixType` after following the diagram. Rowround Diagram;" />
+    <meta name="description" content="Rowround: The `rowround` function takes a `matrixType` (4 by 4 matrix) and return a new `matrixType` after appliying the rowround diagram. Rowround Diagram;" />
     
     <meta property="og:title" content="salsa20 / rowround - salsa20 docs">
     <meta property="og:site_name" content="salsa20 for Lean - API documentation">
-    <meta property="og:description" content="Row round: The `rowround` function takes a `matrixType` (tuple of 4 `vecType`s) and return a new `matrixType` after following the diagram. Rowround Diagram;">
+    <meta property="og:description" content="Rowround: The `rowround` function takes a `matrixType` (4 by 4 matrix) and return a new `matrixType` after appliying the rowround diagram. Rowround Diagram;">
     <meta property="og:image" content="https://oxarbitrage.github.io/salsa20-docs/meta-og.png">
     <meta name="twitter:card" content="summary">
     <script src="https://oxarbitrage.github.io/salsa20-docs/color_scheme.js"></script>
@@ -65,6 +65,8 @@
 </div>
 
 
+    <div class="nav_link"><a class="break_within" href="#rowround.is_inverse"><span class="name">rowround</span>.<span class="name">is_inverse</span></a></div>
+
     <div class="nav_link"><a class="break_within" href="#rowround.order1"><span class="name">rowround</span>.<span class="name">order1</span></a></div>
 
     <div class="nav_link"><a class="break_within" href="#rowround.order2"><span class="name">rowround</span>.<span class="name">order2</span></a></div>
@@ -75,11 +77,19 @@
 
     <div class="nav_link"><a class="break_within" href="#rowround.row1"><span class="name">rowround</span>.<span class="name">row1</span></a></div>
 
+    <div class="nav_link"><a class="break_within" href="#rowround.row1_f"><span class="name">rowround</span>.<span class="name">row1_f</span></a></div>
+
     <div class="nav_link"><a class="break_within" href="#rowround.row2"><span class="name">rowround</span>.<span class="name">row2</span></a></div>
+
+    <div class="nav_link"><a class="break_within" href="#rowround.row2_f"><span class="name">rowround</span>.<span class="name">row2_f</span></a></div>
 
     <div class="nav_link"><a class="break_within" href="#rowround.row3"><span class="name">rowround</span>.<span class="name">row3</span></a></div>
 
+    <div class="nav_link"><a class="break_within" href="#rowround.row3_f"><span class="name">rowround</span>.<span class="name">row3_f</span></a></div>
+
     <div class="nav_link"><a class="break_within" href="#rowround.row4"><span class="name">rowround</span>.<span class="name">row4</span></a></div>
+
+    <div class="nav_link"><a class="break_within" href="#rowround.row4_f"><span class="name">rowround</span>.<span class="name">row4_f</span></a></div>
 
     <div class="nav_link"><a class="break_within" href="#rowround.rowround"><span class="name">rowround</span>.<span class="name">rowround</span></a></div>
 
@@ -93,14 +103,65 @@
 
     
         <div class="mod_doc">
-            <h1 id="row-round" class="markdown-heading">Row round <a class="hover-link" href="#row-round">#</a></h1>
-<p>The <code>rowround</code> function takes a <code>matrixType</code> (tuple of 4 <code>vecType</code>s) and return a new <code>matrixType</code>
-after following the diagram.</p>
+            <h1 id="rowround" class="markdown-heading">Rowround <a class="hover-link" href="#rowround">#</a></h1>
+<p>The <code>rowround</code> function takes a <code>matrixType</code> (4 by 4 matrix) and return a new <code>matrixType</code>
+after appliying the rowround diagram.</p>
 <ul>
 <li><a href="https://oxarbitrage.github.io/salsa20-docs/diagrams/rowround.html">Rowround Diagram</a></li>
 </ul>
 
         </div>
+    
+
+    
+        
+        
+<div class="decl" id="rowround.row1_f">
+<div class="def">
+
+<div class="gh_link"><a href="">source</a></div>
+
+
+
+<div class="decl_header">
+    
+
+
+<span class="decl_kind">def</span>
+<span class="decl_name"><a class="break_within" href="https://oxarbitrage.github.io/salsa20-docs/rowround.html#rowround.row1_f"><span class="name">rowround</span>.<span class="name">row1_f</span></a></span>
+
+    <span class="impl_arg"><span class="decl_args"><span class="fn">[<a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/category/basic.html#category_theory.category">category_theory.category</a> <a href="https://oxarbitrage.github.io/salsa20-docs/data/bitvec/core.html#bitvec" title="bitvec">wordType</a>]</span></span></span>
+    <span class="decl_args"><span class="fn">(input : <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod" title="prod">matrixType</a>)</span></span>&nbsp;<span class="decl_args">:</span>
+<div class="decl_type"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod" title="prod">matrixType</a></span></div>
+</div>
+
+
+
+
+
+<p>Get the first row of a <code>matrixType</code> and put it in on front of a new matrix, fill the rest of the matrix with ones and return it.</p>
+
+
+
+    <details>
+        <summary>Equations</summary>
+        <ul class="equations">
+            
+                <li class="equation"><span class="fn"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/rowround.html#rowround.row1_f">rowround.row1_f</a> input</span> <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#eq" title="eq">=</a> <span class="fn">(input.<a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod.fst" title="prod.fst">fst</a>, <span class="fn"><span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/data/bitvec/core.html#bitvec.one">bitvec.one</a> <a href="https://oxarbitrage.github.io/salsa20-docs/params.html#params.word_len">params.word_len</a></span>, <span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/data/bitvec/core.html#bitvec.one">bitvec.one</a> <a href="https://oxarbitrage.github.io/salsa20-docs/params.html#params.word_len">params.word_len</a></span>, <span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/data/bitvec/core.html#bitvec.one">bitvec.one</a> <a href="https://oxarbitrage.github.io/salsa20-docs/params.html#params.word_len">params.word_len</a></span>, <span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/data/bitvec/core.html#bitvec.one">bitvec.one</a> <a href="https://oxarbitrage.github.io/salsa20-docs/params.html#params.word_len">params.word_len</a>)</span></span>, <span class="fn"><span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/data/bitvec/core.html#bitvec.one">bitvec.one</a> <a href="https://oxarbitrage.github.io/salsa20-docs/params.html#params.word_len">params.word_len</a></span>, <span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/data/bitvec/core.html#bitvec.one">bitvec.one</a> <a href="https://oxarbitrage.github.io/salsa20-docs/params.html#params.word_len">params.word_len</a></span>, <span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/data/bitvec/core.html#bitvec.one">bitvec.one</a> <a href="https://oxarbitrage.github.io/salsa20-docs/params.html#params.word_len">params.word_len</a></span>, <span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/data/bitvec/core.html#bitvec.one">bitvec.one</a> <a href="https://oxarbitrage.github.io/salsa20-docs/params.html#params.word_len">params.word_len</a>)</span></span>, <span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/data/bitvec/core.html#bitvec.one">bitvec.one</a> <a href="https://oxarbitrage.github.io/salsa20-docs/params.html#params.word_len">params.word_len</a></span>, <span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/data/bitvec/core.html#bitvec.one">bitvec.one</a> <a href="https://oxarbitrage.github.io/salsa20-docs/params.html#params.word_len">params.word_len</a></span>, <span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/data/bitvec/core.html#bitvec.one">bitvec.one</a> <a href="https://oxarbitrage.github.io/salsa20-docs/params.html#params.word_len">params.word_len</a></span>, <span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/data/bitvec/core.html#bitvec.one">bitvec.one</a> <a href="https://oxarbitrage.github.io/salsa20-docs/params.html#params.word_len">params.word_len</a>)</span></span></span></li>
+            
+        </ul>
+    </details>
+
+
+
+
+
+
+
+
+
+</div>
+</div>
     
 
     
@@ -121,15 +182,15 @@ after following the diagram.</p>
 <span class="decl_name"><a class="break_within" href="https://oxarbitrage.github.io/salsa20-docs/rowround.html#rowround.row1"><span class="name">rowround</span>.<span class="name">row1</span></a></span>
 
     <span class="impl_arg"><span class="decl_args"><span class="fn">[<a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/category/basic.html#category_theory.category">category_theory.category</a> <a href="https://oxarbitrage.github.io/salsa20-docs/data/bitvec/core.html#bitvec" title="bitvec">wordType</a>]</span></span></span>
-    <span class="decl_args"><span class="fn">(input : <span class="fn"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/data/matrix/basic.html#matrix">matrix</a> <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/init/data/fin/basic.html#fin">fin</a> 4)</span></span> <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/init/data/fin/basic.html#fin">fin</a> 4)</span></span> <a href="https://oxarbitrage.github.io/salsa20-docs/data/bitvec/core.html#bitvec" title="bitvec">wordType</a>)</span></span>&nbsp;<span class="decl_args">:</span>
-<div class="decl_type"><span class="fn"><span class="fn"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/data/matrix/basic.html#matrix">matrix</a> <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/init/data/fin/basic.html#fin">fin</a> 1)</span></span> <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/init/data/fin/basic.html#fin">fin</a> 4)</span></span> <a href="https://oxarbitrage.github.io/salsa20-docs/data/bitvec/core.html#bitvec" title="bitvec">wordType</a></span></div>
+    <span class="decl_args"><span class="fn">(F2 : <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod" title="prod">matrixType</a> <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/functor/basic.html#category_theory.functor" title="category_theory.functor">⥤</a> <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod" title="prod">vecType</a>)</span></span>
+    <span class="decl_args"><span class="fn">(input : <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod" title="prod">matrixType</a>)</span></span>&nbsp;<span class="decl_args">:</span>
+<div class="decl_type"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod" title="prod">vecType</a></span></div>
 </div>
 
 
 
 
 
-<p>Return the first row of a <code>matrixType</code></p>
 
 
 
@@ -137,7 +198,58 @@ after following the diagram.</p>
         <summary>Equations</summary>
         <ul class="equations">
             
-                <li class="equation"><span class="fn"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/rowround.html#rowround.row1">rowround.row1</a> input</span> <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#eq" title="eq">=</a> <span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/init/coe.html#coe_fn" title="coe_fn">⇑</a><a href="https://oxarbitrage.github.io/salsa20-docs/data/matrix/basic.html#matrix.of">matrix.of</a> <span class="fn">![<span class="fn">![<span class="fn"><span class="fn">input 0</span> 0</span>, <span class="fn"><span class="fn">input 0</span> 1</span>, <span class="fn"><span class="fn">input 0</span> 2</span>, <span class="fn"><span class="fn">input 0</span> 3]]</span></span></span></span></span></li>
+                <li class="equation"><span class="fn"><span class="fn"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/rowround.html#rowround.row1">rowround.row1</a> F2</span> input</span> <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#eq" title="eq">=</a> <span class="fn">F2.<a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/functor/basic.html#category_theory.functor.obj" title="category_theory.functor.obj">obj</a> <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/rowround.html#rowround.row1_f">rowround.row1_f</a> input)</span></span></span></li>
+            
+        </ul>
+    </details>
+
+
+
+
+
+
+
+
+
+</div>
+</div>
+    
+
+    
+        
+        
+<div class="decl" id="rowround.row2_f">
+<div class="def">
+
+<div class="gh_link"><a href="">source</a></div>
+
+
+
+<div class="decl_header">
+    
+
+
+<span class="decl_kind">def</span>
+<span class="decl_name"><a class="break_within" href="https://oxarbitrage.github.io/salsa20-docs/rowround.html#rowround.row2_f"><span class="name">rowround</span>.<span class="name">row2_f</span></a></span>
+
+    <span class="impl_arg"><span class="decl_args"><span class="fn">[<a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/category/basic.html#category_theory.category">category_theory.category</a> <a href="https://oxarbitrage.github.io/salsa20-docs/data/bitvec/core.html#bitvec" title="bitvec">wordType</a>]</span></span></span>
+    <span class="decl_args"><span class="fn">(input : <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod" title="prod">matrixType</a>)</span></span>&nbsp;<span class="decl_args">:</span>
+<div class="decl_type"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod" title="prod">matrixType</a></span></div>
+</div>
+
+
+
+
+
+<p>Get the second row of a <code>matrixType</code> and put it in on front of a new matrix, fill the rest of the matrix with ones and return it.</p>
+
+
+
+    <details>
+        <summary>Equations</summary>
+        <ul class="equations">
+            
+                <li class="equation"><span class="fn"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/rowround.html#rowround.row2_f">rowround.row2_f</a> input</span> <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#eq" title="eq">=</a> <span class="fn">(input.<a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod.snd" title="prod.snd">snd</a>.<a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod.fst" title="prod.fst">fst</a>, <span class="fn"><span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/data/bitvec/core.html#bitvec.one">bitvec.one</a> <a href="https://oxarbitrage.github.io/salsa20-docs/params.html#params.word_len">params.word_len</a></span>, <span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/data/bitvec/core.html#bitvec.one">bitvec.one</a> <a href="https://oxarbitrage.github.io/salsa20-docs/params.html#params.word_len">params.word_len</a></span>, <span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/data/bitvec/core.html#bitvec.one">bitvec.one</a> <a href="https://oxarbitrage.github.io/salsa20-docs/params.html#params.word_len">params.word_len</a></span>, <span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/data/bitvec/core.html#bitvec.one">bitvec.one</a> <a href="https://oxarbitrage.github.io/salsa20-docs/params.html#params.word_len">params.word_len</a>)</span></span>, <span class="fn"><span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/data/bitvec/core.html#bitvec.one">bitvec.one</a> <a href="https://oxarbitrage.github.io/salsa20-docs/params.html#params.word_len">params.word_len</a></span>, <span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/data/bitvec/core.html#bitvec.one">bitvec.one</a> <a href="https://oxarbitrage.github.io/salsa20-docs/params.html#params.word_len">params.word_len</a></span>, <span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/data/bitvec/core.html#bitvec.one">bitvec.one</a> <a href="https://oxarbitrage.github.io/salsa20-docs/params.html#params.word_len">params.word_len</a></span>, <span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/data/bitvec/core.html#bitvec.one">bitvec.one</a> <a href="https://oxarbitrage.github.io/salsa20-docs/params.html#params.word_len">params.word_len</a>)</span></span>, <span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/data/bitvec/core.html#bitvec.one">bitvec.one</a> <a href="https://oxarbitrage.github.io/salsa20-docs/params.html#params.word_len">params.word_len</a></span>, <span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/data/bitvec/core.html#bitvec.one">bitvec.one</a> <a href="https://oxarbitrage.github.io/salsa20-docs/params.html#params.word_len">params.word_len</a></span>, <span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/data/bitvec/core.html#bitvec.one">bitvec.one</a> <a href="https://oxarbitrage.github.io/salsa20-docs/params.html#params.word_len">params.word_len</a></span>, <span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/data/bitvec/core.html#bitvec.one">bitvec.one</a> <a href="https://oxarbitrage.github.io/salsa20-docs/params.html#params.word_len">params.word_len</a>)</span></span></span></li>
             
         </ul>
     </details>
@@ -172,15 +284,15 @@ after following the diagram.</p>
 <span class="decl_name"><a class="break_within" href="https://oxarbitrage.github.io/salsa20-docs/rowround.html#rowround.row2"><span class="name">rowround</span>.<span class="name">row2</span></a></span>
 
     <span class="impl_arg"><span class="decl_args"><span class="fn">[<a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/category/basic.html#category_theory.category">category_theory.category</a> <a href="https://oxarbitrage.github.io/salsa20-docs/data/bitvec/core.html#bitvec" title="bitvec">wordType</a>]</span></span></span>
-    <span class="decl_args"><span class="fn">(input : <span class="fn"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/data/matrix/basic.html#matrix">matrix</a> <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/init/data/fin/basic.html#fin">fin</a> 4)</span></span> <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/init/data/fin/basic.html#fin">fin</a> 4)</span></span> <a href="https://oxarbitrage.github.io/salsa20-docs/data/bitvec/core.html#bitvec" title="bitvec">wordType</a>)</span></span>&nbsp;<span class="decl_args">:</span>
-<div class="decl_type"><span class="fn"><span class="fn"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/data/matrix/basic.html#matrix">matrix</a> <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/init/data/fin/basic.html#fin">fin</a> 1)</span></span> <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/init/data/fin/basic.html#fin">fin</a> 4)</span></span> <a href="https://oxarbitrage.github.io/salsa20-docs/data/bitvec/core.html#bitvec" title="bitvec">wordType</a></span></div>
+    <span class="decl_args"><span class="fn">(F2 : <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod" title="prod">matrixType</a> <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/functor/basic.html#category_theory.functor" title="category_theory.functor">⥤</a> <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod" title="prod">vecType</a>)</span></span>
+    <span class="decl_args"><span class="fn">(input : <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod" title="prod">matrixType</a>)</span></span>&nbsp;<span class="decl_args">:</span>
+<div class="decl_type"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod" title="prod">vecType</a></span></div>
 </div>
 
 
 
 
 
-<p>Return the second row of a <code>matrixType</code></p>
 
 
 
@@ -188,7 +300,58 @@ after following the diagram.</p>
         <summary>Equations</summary>
         <ul class="equations">
             
-                <li class="equation"><span class="fn"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/rowround.html#rowround.row2">rowround.row2</a> input</span> <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#eq" title="eq">=</a> <span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/init/coe.html#coe_fn" title="coe_fn">⇑</a><a href="https://oxarbitrage.github.io/salsa20-docs/data/matrix/basic.html#matrix.of">matrix.of</a> <span class="fn">![<span class="fn">![<span class="fn"><span class="fn">input 0</span> 4</span>, <span class="fn"><span class="fn">input 0</span> 5</span>, <span class="fn"><span class="fn">input 0</span> 6</span>, <span class="fn"><span class="fn">input 0</span> 7]]</span></span></span></span></span></li>
+                <li class="equation"><span class="fn"><span class="fn"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/rowround.html#rowround.row2">rowround.row2</a> F2</span> input</span> <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#eq" title="eq">=</a> <span class="fn">F2.<a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/functor/basic.html#category_theory.functor.obj" title="category_theory.functor.obj">obj</a> <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/rowround.html#rowround.row2_f">rowround.row2_f</a> input)</span></span></span></li>
+            
+        </ul>
+    </details>
+
+
+
+
+
+
+
+
+
+</div>
+</div>
+    
+
+    
+        
+        
+<div class="decl" id="rowround.row3_f">
+<div class="def">
+
+<div class="gh_link"><a href="">source</a></div>
+
+
+
+<div class="decl_header">
+    
+
+
+<span class="decl_kind">def</span>
+<span class="decl_name"><a class="break_within" href="https://oxarbitrage.github.io/salsa20-docs/rowround.html#rowround.row3_f"><span class="name">rowround</span>.<span class="name">row3_f</span></a></span>
+
+    <span class="impl_arg"><span class="decl_args"><span class="fn">[<a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/category/basic.html#category_theory.category">category_theory.category</a> <a href="https://oxarbitrage.github.io/salsa20-docs/data/bitvec/core.html#bitvec" title="bitvec">wordType</a>]</span></span></span>
+    <span class="decl_args"><span class="fn">(input : <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod" title="prod">matrixType</a>)</span></span>&nbsp;<span class="decl_args">:</span>
+<div class="decl_type"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod" title="prod">matrixType</a></span></div>
+</div>
+
+
+
+
+
+<p>Get the third row of a <code>matrixType</code> and put it in on front of a new matrix, fill the rest of the matrix with ones and return it.</p>
+
+
+
+    <details>
+        <summary>Equations</summary>
+        <ul class="equations">
+            
+                <li class="equation"><span class="fn"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/rowround.html#rowround.row3_f">rowround.row3_f</a> input</span> <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#eq" title="eq">=</a> <span class="fn">(input.<a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod.snd" title="prod.snd">snd</a>.<a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod.snd" title="prod.snd">snd</a>.<a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod.fst" title="prod.fst">fst</a>, <span class="fn"><span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/data/bitvec/core.html#bitvec.one">bitvec.one</a> <a href="https://oxarbitrage.github.io/salsa20-docs/params.html#params.word_len">params.word_len</a></span>, <span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/data/bitvec/core.html#bitvec.one">bitvec.one</a> <a href="https://oxarbitrage.github.io/salsa20-docs/params.html#params.word_len">params.word_len</a></span>, <span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/data/bitvec/core.html#bitvec.one">bitvec.one</a> <a href="https://oxarbitrage.github.io/salsa20-docs/params.html#params.word_len">params.word_len</a></span>, <span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/data/bitvec/core.html#bitvec.one">bitvec.one</a> <a href="https://oxarbitrage.github.io/salsa20-docs/params.html#params.word_len">params.word_len</a>)</span></span>, <span class="fn"><span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/data/bitvec/core.html#bitvec.one">bitvec.one</a> <a href="https://oxarbitrage.github.io/salsa20-docs/params.html#params.word_len">params.word_len</a></span>, <span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/data/bitvec/core.html#bitvec.one">bitvec.one</a> <a href="https://oxarbitrage.github.io/salsa20-docs/params.html#params.word_len">params.word_len</a></span>, <span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/data/bitvec/core.html#bitvec.one">bitvec.one</a> <a href="https://oxarbitrage.github.io/salsa20-docs/params.html#params.word_len">params.word_len</a></span>, <span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/data/bitvec/core.html#bitvec.one">bitvec.one</a> <a href="https://oxarbitrage.github.io/salsa20-docs/params.html#params.word_len">params.word_len</a>)</span></span>, <span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/data/bitvec/core.html#bitvec.one">bitvec.one</a> <a href="https://oxarbitrage.github.io/salsa20-docs/params.html#params.word_len">params.word_len</a></span>, <span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/data/bitvec/core.html#bitvec.one">bitvec.one</a> <a href="https://oxarbitrage.github.io/salsa20-docs/params.html#params.word_len">params.word_len</a></span>, <span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/data/bitvec/core.html#bitvec.one">bitvec.one</a> <a href="https://oxarbitrage.github.io/salsa20-docs/params.html#params.word_len">params.word_len</a></span>, <span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/data/bitvec/core.html#bitvec.one">bitvec.one</a> <a href="https://oxarbitrage.github.io/salsa20-docs/params.html#params.word_len">params.word_len</a>)</span></span></span></li>
             
         </ul>
     </details>
@@ -223,15 +386,15 @@ after following the diagram.</p>
 <span class="decl_name"><a class="break_within" href="https://oxarbitrage.github.io/salsa20-docs/rowround.html#rowround.row3"><span class="name">rowround</span>.<span class="name">row3</span></a></span>
 
     <span class="impl_arg"><span class="decl_args"><span class="fn">[<a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/category/basic.html#category_theory.category">category_theory.category</a> <a href="https://oxarbitrage.github.io/salsa20-docs/data/bitvec/core.html#bitvec" title="bitvec">wordType</a>]</span></span></span>
-    <span class="decl_args"><span class="fn">(input : <span class="fn"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/data/matrix/basic.html#matrix">matrix</a> <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/init/data/fin/basic.html#fin">fin</a> 4)</span></span> <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/init/data/fin/basic.html#fin">fin</a> 4)</span></span> <a href="https://oxarbitrage.github.io/salsa20-docs/data/bitvec/core.html#bitvec" title="bitvec">wordType</a>)</span></span>&nbsp;<span class="decl_args">:</span>
-<div class="decl_type"><span class="fn"><span class="fn"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/data/matrix/basic.html#matrix">matrix</a> <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/init/data/fin/basic.html#fin">fin</a> 1)</span></span> <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/init/data/fin/basic.html#fin">fin</a> 4)</span></span> <a href="https://oxarbitrage.github.io/salsa20-docs/data/bitvec/core.html#bitvec" title="bitvec">wordType</a></span></div>
+    <span class="decl_args"><span class="fn">(F2 : <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod" title="prod">matrixType</a> <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/functor/basic.html#category_theory.functor" title="category_theory.functor">⥤</a> <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod" title="prod">vecType</a>)</span></span>
+    <span class="decl_args"><span class="fn">(input : <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod" title="prod">matrixType</a>)</span></span>&nbsp;<span class="decl_args">:</span>
+<div class="decl_type"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod" title="prod">vecType</a></span></div>
 </div>
 
 
 
 
 
-<p>Return the third row of a <code>matrixType</code></p>
 
 
 
@@ -239,7 +402,58 @@ after following the diagram.</p>
         <summary>Equations</summary>
         <ul class="equations">
             
-                <li class="equation"><span class="fn"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/rowround.html#rowround.row3">rowround.row3</a> input</span> <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#eq" title="eq">=</a> <span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/init/coe.html#coe_fn" title="coe_fn">⇑</a><a href="https://oxarbitrage.github.io/salsa20-docs/data/matrix/basic.html#matrix.of">matrix.of</a> <span class="fn">![<span class="fn">![<span class="fn"><span class="fn">input 0</span> 8</span>, <span class="fn"><span class="fn">input 0</span> 9</span>, <span class="fn"><span class="fn">input 0</span> 10</span>, <span class="fn"><span class="fn">input 0</span> 11]]</span></span></span></span></span></li>
+                <li class="equation"><span class="fn"><span class="fn"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/rowround.html#rowround.row3">rowround.row3</a> F2</span> input</span> <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#eq" title="eq">=</a> <span class="fn">F2.<a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/functor/basic.html#category_theory.functor.obj" title="category_theory.functor.obj">obj</a> <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/rowround.html#rowround.row3_f">rowround.row3_f</a> input)</span></span></span></li>
+            
+        </ul>
+    </details>
+
+
+
+
+
+
+
+
+
+</div>
+</div>
+    
+
+    
+        
+        
+<div class="decl" id="rowround.row4_f">
+<div class="def">
+
+<div class="gh_link"><a href="">source</a></div>
+
+
+
+<div class="decl_header">
+    
+
+
+<span class="decl_kind">def</span>
+<span class="decl_name"><a class="break_within" href="https://oxarbitrage.github.io/salsa20-docs/rowround.html#rowround.row4_f"><span class="name">rowround</span>.<span class="name">row4_f</span></a></span>
+
+    <span class="impl_arg"><span class="decl_args"><span class="fn">[<a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/category/basic.html#category_theory.category">category_theory.category</a> <a href="https://oxarbitrage.github.io/salsa20-docs/data/bitvec/core.html#bitvec" title="bitvec">wordType</a>]</span></span></span>
+    <span class="decl_args"><span class="fn">(input : <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod" title="prod">matrixType</a>)</span></span>&nbsp;<span class="decl_args">:</span>
+<div class="decl_type"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod" title="prod">matrixType</a></span></div>
+</div>
+
+
+
+
+
+<p>Return the fourth row of a <code>matrixType</code></p>
+
+
+
+    <details>
+        <summary>Equations</summary>
+        <ul class="equations">
+            
+                <li class="equation"><span class="fn"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/rowround.html#rowround.row4_f">rowround.row4_f</a> input</span> <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#eq" title="eq">=</a> <span class="fn">(input.<a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod.snd" title="prod.snd">snd</a>.<a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod.snd" title="prod.snd">snd</a>.<a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod.snd" title="prod.snd">snd</a>, <span class="fn"><span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/data/bitvec/core.html#bitvec.one">bitvec.one</a> <a href="https://oxarbitrage.github.io/salsa20-docs/params.html#params.word_len">params.word_len</a></span>, <span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/data/bitvec/core.html#bitvec.one">bitvec.one</a> <a href="https://oxarbitrage.github.io/salsa20-docs/params.html#params.word_len">params.word_len</a></span>, <span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/data/bitvec/core.html#bitvec.one">bitvec.one</a> <a href="https://oxarbitrage.github.io/salsa20-docs/params.html#params.word_len">params.word_len</a></span>, <span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/data/bitvec/core.html#bitvec.one">bitvec.one</a> <a href="https://oxarbitrage.github.io/salsa20-docs/params.html#params.word_len">params.word_len</a>)</span></span>, <span class="fn"><span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/data/bitvec/core.html#bitvec.one">bitvec.one</a> <a href="https://oxarbitrage.github.io/salsa20-docs/params.html#params.word_len">params.word_len</a></span>, <span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/data/bitvec/core.html#bitvec.one">bitvec.one</a> <a href="https://oxarbitrage.github.io/salsa20-docs/params.html#params.word_len">params.word_len</a></span>, <span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/data/bitvec/core.html#bitvec.one">bitvec.one</a> <a href="https://oxarbitrage.github.io/salsa20-docs/params.html#params.word_len">params.word_len</a></span>, <span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/data/bitvec/core.html#bitvec.one">bitvec.one</a> <a href="https://oxarbitrage.github.io/salsa20-docs/params.html#params.word_len">params.word_len</a>)</span></span>, <span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/data/bitvec/core.html#bitvec.one">bitvec.one</a> <a href="https://oxarbitrage.github.io/salsa20-docs/params.html#params.word_len">params.word_len</a></span>, <span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/data/bitvec/core.html#bitvec.one">bitvec.one</a> <a href="https://oxarbitrage.github.io/salsa20-docs/params.html#params.word_len">params.word_len</a></span>, <span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/data/bitvec/core.html#bitvec.one">bitvec.one</a> <a href="https://oxarbitrage.github.io/salsa20-docs/params.html#params.word_len">params.word_len</a></span>, <span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/data/bitvec/core.html#bitvec.one">bitvec.one</a> <a href="https://oxarbitrage.github.io/salsa20-docs/params.html#params.word_len">params.word_len</a>)</span></span></span></li>
             
         </ul>
     </details>
@@ -274,15 +488,15 @@ after following the diagram.</p>
 <span class="decl_name"><a class="break_within" href="https://oxarbitrage.github.io/salsa20-docs/rowround.html#rowround.row4"><span class="name">rowround</span>.<span class="name">row4</span></a></span>
 
     <span class="impl_arg"><span class="decl_args"><span class="fn">[<a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/category/basic.html#category_theory.category">category_theory.category</a> <a href="https://oxarbitrage.github.io/salsa20-docs/data/bitvec/core.html#bitvec" title="bitvec">wordType</a>]</span></span></span>
-    <span class="decl_args"><span class="fn">(input : <span class="fn"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/data/matrix/basic.html#matrix">matrix</a> <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/init/data/fin/basic.html#fin">fin</a> 4)</span></span> <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/init/data/fin/basic.html#fin">fin</a> 4)</span></span> <a href="https://oxarbitrage.github.io/salsa20-docs/data/bitvec/core.html#bitvec" title="bitvec">wordType</a>)</span></span>&nbsp;<span class="decl_args">:</span>
-<div class="decl_type"><span class="fn"><span class="fn"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/data/matrix/basic.html#matrix">matrix</a> <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/init/data/fin/basic.html#fin">fin</a> 1)</span></span> <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/init/data/fin/basic.html#fin">fin</a> 4)</span></span> <a href="https://oxarbitrage.github.io/salsa20-docs/data/bitvec/core.html#bitvec" title="bitvec">wordType</a></span></div>
+    <span class="decl_args"><span class="fn">(F2 : <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod" title="prod">matrixType</a> <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/functor/basic.html#category_theory.functor" title="category_theory.functor">⥤</a> <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod" title="prod">vecType</a>)</span></span>
+    <span class="decl_args"><span class="fn">(input : <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod" title="prod">matrixType</a>)</span></span>&nbsp;<span class="decl_args">:</span>
+<div class="decl_type"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod" title="prod">vecType</a></span></div>
 </div>
 
 
 
 
 
-<p>Return the fourth row of a <code>matrixType</code></p>
 
 
 
@@ -290,7 +504,7 @@ after following the diagram.</p>
         <summary>Equations</summary>
         <ul class="equations">
             
-                <li class="equation"><span class="fn"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/rowround.html#rowround.row4">rowround.row4</a> input</span> <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#eq" title="eq">=</a> <span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/init/coe.html#coe_fn" title="coe_fn">⇑</a><a href="https://oxarbitrage.github.io/salsa20-docs/data/matrix/basic.html#matrix.of">matrix.of</a> <span class="fn">![<span class="fn">![<span class="fn"><span class="fn">input 0</span> 12</span>, <span class="fn"><span class="fn">input 0</span> 13</span>, <span class="fn"><span class="fn">input 0</span> 14</span>, <span class="fn"><span class="fn">input 0</span> 15]]</span></span></span></span></span></li>
+                <li class="equation"><span class="fn"><span class="fn"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/rowround.html#rowround.row4">rowround.row4</a> F2</span> input</span> <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#eq" title="eq">=</a> <span class="fn">F2.<a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/functor/basic.html#category_theory.functor.obj" title="category_theory.functor.obj">obj</a> <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/rowround.html#rowround.row4_f">rowround.row4_f</a> input)</span></span></span></li>
             
         </ul>
     </details>
@@ -325,7 +539,7 @@ after following the diagram.</p>
 <span class="decl_name"><a class="break_within" href="https://oxarbitrage.github.io/salsa20-docs/rowround.html#rowround.order1"><span class="name">rowround</span>.<span class="name">order1</span></a></span>
 
     <span class="impl_arg"><span class="decl_args"><span class="fn">[<a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/category/basic.html#category_theory.category">category_theory.category</a> <a href="https://oxarbitrage.github.io/salsa20-docs/data/bitvec/core.html#bitvec" title="bitvec">wordType</a>]</span></span></span>&nbsp;<span class="decl_args">:</span>
-<div class="decl_type"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/data/matrix/basic.html#matrix">matrix</a> <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/init/data/fin/basic.html#fin">fin</a> 1)</span></span> <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/init/data/fin/basic.html#fin">fin</a> 4)</span></span> <a href="https://oxarbitrage.github.io/salsa20-docs/data/bitvec/core.html#bitvec" title="bitvec">wordType</a></span> → <span class="fn"><span class="fn"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/data/matrix/basic.html#matrix">matrix</a> <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/init/data/fin/basic.html#fin">fin</a> 1)</span></span> <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/init/data/fin/basic.html#fin">fin</a> 4)</span></span> <a href="https://oxarbitrage.github.io/salsa20-docs/data/bitvec/core.html#bitvec" title="bitvec">wordType</a></span></span></div>
+<div class="decl_type"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod" title="prod">vecType</a> → <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod" title="prod">vecType</a></span></div>
 </div>
 
 
@@ -333,7 +547,7 @@ after following the diagram.</p>
 
 
 <p>Return <code>(y0, y1, y2, y3)</code> given <code>(y0, y1, y2, y3)</code>. This function is here
-for completness, there is no need to use it as the output of <code>first</code> is already in order.</p>
+for completness, there is no need to use it as the output of <code>row1</code> is already in order.</p>
 
 
 
@@ -341,7 +555,7 @@ for completness, there is no need to use it as the output of <code>first</code> 
         <summary>Equations</summary>
         <ul class="equations">
             
-                <li class="equation"><span class="fn"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/rowround.html#rowround.order1">rowround.order1</a> input</span> <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#eq" title="eq">=</a> <span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/init/coe.html#coe_fn" title="coe_fn">⇑</a><a href="https://oxarbitrage.github.io/salsa20-docs/data/matrix/basic.html#matrix.of">matrix.of</a> <span class="fn">![<span class="fn">![<span class="fn"><span class="fn">input 0</span> 0</span>, <span class="fn"><span class="fn">input 0</span> 1</span>, <span class="fn"><span class="fn">input 0</span> 2</span>, <span class="fn"><span class="fn">input 0</span> 3]]</span></span></span></span></span></li>
+                <li class="equation"><span class="fn"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/rowround.html#rowround.order1">rowround.order1</a> input</span> <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#eq" title="eq">=</a> input</span></li>
             
         </ul>
     </details>
@@ -376,7 +590,7 @@ for completness, there is no need to use it as the output of <code>first</code> 
 <span class="decl_name"><a class="break_within" href="https://oxarbitrage.github.io/salsa20-docs/rowround.html#rowround.order2"><span class="name">rowround</span>.<span class="name">order2</span></a></span>
 
     <span class="impl_arg"><span class="decl_args"><span class="fn">[<a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/category/basic.html#category_theory.category">category_theory.category</a> <a href="https://oxarbitrage.github.io/salsa20-docs/data/bitvec/core.html#bitvec" title="bitvec">wordType</a>]</span></span></span>&nbsp;<span class="decl_args">:</span>
-<div class="decl_type"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/data/matrix/basic.html#matrix">matrix</a> <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/init/data/fin/basic.html#fin">fin</a> 1)</span></span> <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/init/data/fin/basic.html#fin">fin</a> 4)</span></span> <a href="https://oxarbitrage.github.io/salsa20-docs/data/bitvec/core.html#bitvec" title="bitvec">wordType</a></span> → <span class="fn"><span class="fn"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/data/matrix/basic.html#matrix">matrix</a> <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/init/data/fin/basic.html#fin">fin</a> 1)</span></span> <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/init/data/fin/basic.html#fin">fin</a> 4)</span></span> <a href="https://oxarbitrage.github.io/salsa20-docs/data/bitvec/core.html#bitvec" title="bitvec">wordType</a></span></span></div>
+<div class="decl_type"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod" title="prod">vecType</a> → <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod" title="prod">vecType</a></span></div>
 </div>
 
 
@@ -391,7 +605,7 @@ for completness, there is no need to use it as the output of <code>first</code> 
         <summary>Equations</summary>
         <ul class="equations">
             
-                <li class="equation"><span class="fn"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/rowround.html#rowround.order2">rowround.order2</a> input</span> <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#eq" title="eq">=</a> <span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/init/coe.html#coe_fn" title="coe_fn">⇑</a><a href="https://oxarbitrage.github.io/salsa20-docs/data/matrix/basic.html#matrix.of">matrix.of</a> <span class="fn">![<span class="fn">![<span class="fn"><span class="fn">input 1</span> 1</span>, <span class="fn"><span class="fn">input 1</span> 2</span>, <span class="fn"><span class="fn">input 1</span> 3</span>, <span class="fn"><span class="fn">input 1</span> 0]]</span></span></span></span></span></li>
+                <li class="equation"><span class="fn"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/rowround.html#rowround.order2">rowround.order2</a> input</span> <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#eq" title="eq">=</a> <span class="fn">(input.<a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod.snd" title="prod.snd">snd</a>.<a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod.fst" title="prod.fst">fst</a>, input.<a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod.snd" title="prod.snd">snd</a>.<a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod.snd" title="prod.snd">snd</a>.<a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod.fst" title="prod.fst">fst</a>, input.<a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod.snd" title="prod.snd">snd</a>.<a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod.snd" title="prod.snd">snd</a>.<a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod.snd" title="prod.snd">snd</a>, input.<a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod.fst" title="prod.fst">fst</a>)</span></span></li>
             
         </ul>
     </details>
@@ -426,7 +640,7 @@ for completness, there is no need to use it as the output of <code>first</code> 
 <span class="decl_name"><a class="break_within" href="https://oxarbitrage.github.io/salsa20-docs/rowround.html#rowround.order3"><span class="name">rowround</span>.<span class="name">order3</span></a></span>
 
     <span class="impl_arg"><span class="decl_args"><span class="fn">[<a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/category/basic.html#category_theory.category">category_theory.category</a> <a href="https://oxarbitrage.github.io/salsa20-docs/data/bitvec/core.html#bitvec" title="bitvec">wordType</a>]</span></span></span>&nbsp;<span class="decl_args">:</span>
-<div class="decl_type"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/data/matrix/basic.html#matrix">matrix</a> <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/init/data/fin/basic.html#fin">fin</a> 1)</span></span> <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/init/data/fin/basic.html#fin">fin</a> 4)</span></span> <a href="https://oxarbitrage.github.io/salsa20-docs/data/bitvec/core.html#bitvec" title="bitvec">wordType</a></span> → <span class="fn"><span class="fn"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/data/matrix/basic.html#matrix">matrix</a> <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/init/data/fin/basic.html#fin">fin</a> 1)</span></span> <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/init/data/fin/basic.html#fin">fin</a> 4)</span></span> <a href="https://oxarbitrage.github.io/salsa20-docs/data/bitvec/core.html#bitvec" title="bitvec">wordType</a></span></span></div>
+<div class="decl_type"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod" title="prod">vecType</a> → <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod" title="prod">vecType</a></span></div>
 </div>
 
 
@@ -441,7 +655,7 @@ for completness, there is no need to use it as the output of <code>first</code> 
         <summary>Equations</summary>
         <ul class="equations">
             
-                <li class="equation"><span class="fn"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/rowround.html#rowround.order3">rowround.order3</a> input</span> <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#eq" title="eq">=</a> <span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/init/coe.html#coe_fn" title="coe_fn">⇑</a><a href="https://oxarbitrage.github.io/salsa20-docs/data/matrix/basic.html#matrix.of">matrix.of</a> <span class="fn">![<span class="fn">![<span class="fn"><span class="fn">input 2</span> 2</span>, <span class="fn"><span class="fn">input 2</span> 3</span>, <span class="fn"><span class="fn">input 2</span> 0</span>, <span class="fn"><span class="fn">input 2</span> 1]]</span></span></span></span></span></li>
+                <li class="equation"><span class="fn"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/rowround.html#rowround.order3">rowround.order3</a> input</span> <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#eq" title="eq">=</a> <span class="fn">(input.<a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod.snd" title="prod.snd">snd</a>.<a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod.snd" title="prod.snd">snd</a>.<a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod.fst" title="prod.fst">fst</a>, input.<a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod.snd" title="prod.snd">snd</a>.<a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod.snd" title="prod.snd">snd</a>.<a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod.snd" title="prod.snd">snd</a>, input.<a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod.fst" title="prod.fst">fst</a>, input.<a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod.snd" title="prod.snd">snd</a>.<a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod.fst" title="prod.fst">fst</a>)</span></span></li>
             
         </ul>
     </details>
@@ -476,7 +690,7 @@ for completness, there is no need to use it as the output of <code>first</code> 
 <span class="decl_name"><a class="break_within" href="https://oxarbitrage.github.io/salsa20-docs/rowround.html#rowround.order4"><span class="name">rowround</span>.<span class="name">order4</span></a></span>
 
     <span class="impl_arg"><span class="decl_args"><span class="fn">[<a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/category/basic.html#category_theory.category">category_theory.category</a> <a href="https://oxarbitrage.github.io/salsa20-docs/data/bitvec/core.html#bitvec" title="bitvec">wordType</a>]</span></span></span>&nbsp;<span class="decl_args">:</span>
-<div class="decl_type"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/data/matrix/basic.html#matrix">matrix</a> <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/init/data/fin/basic.html#fin">fin</a> 1)</span></span> <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/init/data/fin/basic.html#fin">fin</a> 4)</span></span> <a href="https://oxarbitrage.github.io/salsa20-docs/data/bitvec/core.html#bitvec" title="bitvec">wordType</a></span> → <span class="fn"><span class="fn"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/data/matrix/basic.html#matrix">matrix</a> <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/init/data/fin/basic.html#fin">fin</a> 1)</span></span> <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/init/data/fin/basic.html#fin">fin</a> 4)</span></span> <a href="https://oxarbitrage.github.io/salsa20-docs/data/bitvec/core.html#bitvec" title="bitvec">wordType</a></span></span></div>
+<div class="decl_type"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod" title="prod">vecType</a> → <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod" title="prod">vecType</a></span></div>
 </div>
 
 
@@ -491,7 +705,7 @@ for completness, there is no need to use it as the output of <code>first</code> 
         <summary>Equations</summary>
         <ul class="equations">
             
-                <li class="equation"><span class="fn"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/rowround.html#rowround.order4">rowround.order4</a> input</span> <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#eq" title="eq">=</a> <span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/init/coe.html#coe_fn" title="coe_fn">⇑</a><a href="https://oxarbitrage.github.io/salsa20-docs/data/matrix/basic.html#matrix.of">matrix.of</a> <span class="fn">![<span class="fn">![<span class="fn"><span class="fn">input 3</span> 3</span>, <span class="fn"><span class="fn">input 3</span> 0</span>, <span class="fn"><span class="fn">input 3</span> 1</span>, <span class="fn"><span class="fn">input 3</span> 2]]</span></span></span></span></span></li>
+                <li class="equation"><span class="fn"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/rowround.html#rowround.order4">rowround.order4</a> input</span> <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#eq" title="eq">=</a> <span class="fn">(input.<a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod.snd" title="prod.snd">snd</a>.<a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod.snd" title="prod.snd">snd</a>.<a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod.snd" title="prod.snd">snd</a>, input.<a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod.fst" title="prod.fst">fst</a>, input.<a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod.snd" title="prod.snd">snd</a>.<a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod.fst" title="prod.fst">fst</a>, input.<a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod.snd" title="prod.snd">snd</a>.<a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod.snd" title="prod.snd">snd</a>.<a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod.fst" title="prod.fst">fst</a>)</span></span></li>
             
         </ul>
     </details>
@@ -526,21 +740,21 @@ for completness, there is no need to use it as the output of <code>first</code> 
 <span class="decl_name"><a class="break_within" href="https://oxarbitrage.github.io/salsa20-docs/rowround.html#rowround.rowround"><span class="name">rowround</span>.<span class="name">rowround</span></a></span>
 
     <span class="impl_arg"><span class="decl_args"><span class="fn">[<a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/category/basic.html#category_theory.category">category_theory.category</a> <a href="https://oxarbitrage.github.io/salsa20-docs/data/bitvec/core.html#bitvec" title="bitvec">wordType</a>]</span></span></span>
+    <span class="decl_args"><span class="fn">(F1 : <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod" title="prod">vecType</a> <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/functor/basic.html#category_theory.functor" title="category_theory.functor">⥤</a> <a href="https://oxarbitrage.github.io/salsa20-docs/data/bitvec/core.html#bitvec" title="bitvec">wordType</a>)</span></span>
+    <span class="decl_args"><span class="fn">(F2 : <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod" title="prod">matrixType</a> <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/functor/basic.html#category_theory.functor" title="category_theory.functor">⥤</a> <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod" title="prod">vecType</a>)</span></span>
     <span class="impl_arg"><span class="decl_args"><span class="fn">[<a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/isomorphism.html#category_theory.is_iso">category_theory.is_iso</a> <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/types.html#category_theory.as_hom">category_theory.as_hom</a> <a href="https://oxarbitrage.github.io/salsa20-docs/rowround.html#rowround.order1">rowround.order1</a>)</span>]</span></span></span>
     <span class="impl_arg"><span class="decl_args"><span class="fn">[<a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/isomorphism.html#category_theory.is_iso">category_theory.is_iso</a> <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/types.html#category_theory.as_hom">category_theory.as_hom</a> <a href="https://oxarbitrage.github.io/salsa20-docs/rowround.html#rowround.order2">rowround.order2</a>)</span>]</span></span></span>
     <span class="impl_arg"><span class="decl_args"><span class="fn">[<a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/isomorphism.html#category_theory.is_iso">category_theory.is_iso</a> <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/types.html#category_theory.as_hom">category_theory.as_hom</a> <a href="https://oxarbitrage.github.io/salsa20-docs/rowround.html#rowround.order3">rowround.order3</a>)</span>]</span></span></span>
     <span class="impl_arg"><span class="decl_args"><span class="fn">[<a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/isomorphism.html#category_theory.is_iso">category_theory.is_iso</a> <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/types.html#category_theory.as_hom">category_theory.as_hom</a> <a href="https://oxarbitrage.github.io/salsa20-docs/rowround.html#rowround.order4">rowround.order4</a>)</span>]</span></span></span>
-    <span class="decl_args"><span class="fn">(input : <span class="fn"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/data/matrix/basic.html#matrix">matrix</a> <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/init/data/fin/basic.html#fin">fin</a> 4)</span></span> <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/init/data/fin/basic.html#fin">fin</a> 4)</span></span> <a href="https://oxarbitrage.github.io/salsa20-docs/data/bitvec/core.html#bitvec" title="bitvec">wordType</a>)</span></span>&nbsp;<span class="decl_args">:</span>
-<div class="decl_type"><span class="fn"><span class="fn"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/data/matrix/basic.html#matrix">matrix</a> <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/init/data/fin/basic.html#fin">fin</a> 4)</span></span> <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/init/data/fin/basic.html#fin">fin</a> 4)</span></span> <a href="https://oxarbitrage.github.io/salsa20-docs/data/bitvec/core.html#bitvec" title="bitvec">wordType</a></span></div>
+    <span class="decl_args"><span class="fn">(input : <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod" title="prod">matrixType</a>)</span></span>&nbsp;<span class="decl_args">:</span>
+<div class="decl_type"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod" title="prod">matrixType</a></span></div>
 </div>
 
 
 
 
 
-<p>Given an input <code>(y0, y1, y2, y3), (y4, y5, y6, y7), (y8, y9, y10, y11), (y12, y13, y14, y15)</code> return an
-output <code>(z0, z1, z2, z3), (z4, z5, z6, z7), (z8, z9, z10, z11), (z12, z13, z14, z15)</code> applying the rowround
-diagram.</p>
+<p>Given a <code>matrixType</code> input <code>Y</code> return an output <code>Z</code> of the same type applying the rowround diagram.</p>
 
 
 
@@ -548,7 +762,7 @@ diagram.</p>
         <summary>Equations</summary>
         <ul class="equations">
             
-                <li class="equation"><span class="fn"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/rowround.html#rowround.rowround">rowround.rowround</a> input</span> <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#eq" title="eq">=</a> <span class="fn">let q1 : <span class="fn"><span class="fn"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/data/matrix/basic.html#matrix">matrix</a> <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/init/data/fin/basic.html#fin">fin</a> 1)</span></span> <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/init/data/fin/basic.html#fin">fin</a> 4)</span></span> <a href="https://oxarbitrage.github.io/salsa20-docs/data/bitvec/core.html#bitvec" title="bitvec">wordType</a></span> := <span class="fn"><span class="fn"><span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/types.html#category_theory.as_hom">category_theory.as_hom</a> <a href="https://oxarbitrage.github.io/salsa20-docs/rowround.html#rowround.row1">rowround.row1</a></span> <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/category/basic.html#category_theory.category_struct.comp" title="category_theory.category_struct.comp">≫</a> <span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/rowround.html#rowround.order1">rowround.order1</a> <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/category/basic.html#category_theory.category_struct.comp" title="category_theory.category_struct.comp">≫</a> <span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.quarterround">quarterround.quarterround</a> <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/category/basic.html#category_theory.category_struct.comp" title="category_theory.category_struct.comp">≫</a> <span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/isomorphism.html#category_theory.inv">category_theory.inv</a> <a href="https://oxarbitrage.github.io/salsa20-docs/rowround.html#rowround.order1">rowround.order1</a>)</span></span></span></span> input</span>, q2 : <span class="fn"><span class="fn"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/data/matrix/basic.html#matrix">matrix</a> <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/init/data/fin/basic.html#fin">fin</a> 1)</span></span> <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/init/data/fin/basic.html#fin">fin</a> 4)</span></span> <a href="https://oxarbitrage.github.io/salsa20-docs/data/bitvec/core.html#bitvec" title="bitvec">wordType</a></span> := <span class="fn"><span class="fn"><span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/types.html#category_theory.as_hom">category_theory.as_hom</a> <a href="https://oxarbitrage.github.io/salsa20-docs/rowround.html#rowround.row2">rowround.row2</a></span> <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/category/basic.html#category_theory.category_struct.comp" title="category_theory.category_struct.comp">≫</a> <span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/rowround.html#rowround.order2">rowround.order2</a> <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/category/basic.html#category_theory.category_struct.comp" title="category_theory.category_struct.comp">≫</a> <span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.quarterround">quarterround.quarterround</a> <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/category/basic.html#category_theory.category_struct.comp" title="category_theory.category_struct.comp">≫</a> <span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/isomorphism.html#category_theory.inv">category_theory.inv</a> <a href="https://oxarbitrage.github.io/salsa20-docs/rowround.html#rowround.order2">rowround.order2</a>)</span></span></span></span> input</span>, q3 : <span class="fn"><span class="fn"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/data/matrix/basic.html#matrix">matrix</a> <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/init/data/fin/basic.html#fin">fin</a> 1)</span></span> <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/init/data/fin/basic.html#fin">fin</a> 4)</span></span> <a href="https://oxarbitrage.github.io/salsa20-docs/data/bitvec/core.html#bitvec" title="bitvec">wordType</a></span> := <span class="fn"><span class="fn"><span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/types.html#category_theory.as_hom">category_theory.as_hom</a> <a href="https://oxarbitrage.github.io/salsa20-docs/rowround.html#rowround.row3">rowround.row3</a></span> <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/category/basic.html#category_theory.category_struct.comp" title="category_theory.category_struct.comp">≫</a> <span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/rowround.html#rowround.order3">rowround.order3</a> <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/category/basic.html#category_theory.category_struct.comp" title="category_theory.category_struct.comp">≫</a> <span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.quarterround">quarterround.quarterround</a> <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/category/basic.html#category_theory.category_struct.comp" title="category_theory.category_struct.comp">≫</a> <span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/isomorphism.html#category_theory.inv">category_theory.inv</a> <a href="https://oxarbitrage.github.io/salsa20-docs/rowround.html#rowround.order3">rowround.order3</a>)</span></span></span></span> input</span>, q4 : <span class="fn"><span class="fn"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/data/matrix/basic.html#matrix">matrix</a> <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/init/data/fin/basic.html#fin">fin</a> 1)</span></span> <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/init/data/fin/basic.html#fin">fin</a> 4)</span></span> <a href="https://oxarbitrage.github.io/salsa20-docs/data/bitvec/core.html#bitvec" title="bitvec">wordType</a></span> := <span class="fn"><span class="fn"><span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/types.html#category_theory.as_hom">category_theory.as_hom</a> <a href="https://oxarbitrage.github.io/salsa20-docs/rowround.html#rowround.row4">rowround.row4</a></span> <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/category/basic.html#category_theory.category_struct.comp" title="category_theory.category_struct.comp">≫</a> <span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/rowround.html#rowround.order4">rowround.order4</a> <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/category/basic.html#category_theory.category_struct.comp" title="category_theory.category_struct.comp">≫</a> <span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.quarterround">quarterround.quarterround</a> <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/category/basic.html#category_theory.category_struct.comp" title="category_theory.category_struct.comp">≫</a> <span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/isomorphism.html#category_theory.inv">category_theory.inv</a> <a href="https://oxarbitrage.github.io/salsa20-docs/rowround.html#rowround.order4">rowround.order4</a>)</span></span></span></span> input</span> in <span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/init/coe.html#coe_fn" title="coe_fn">⇑</a><a href="https://oxarbitrage.github.io/salsa20-docs/data/matrix/basic.html#matrix.of">matrix.of</a> <span class="fn">![<span class="fn">![<span class="fn"><span class="fn">q1 0</span> 0</span>, <span class="fn"><span class="fn">q1 0</span> 1</span>, <span class="fn"><span class="fn">q1 0</span> 2</span>, <span class="fn"><span class="fn">q1 0</span> 3]</span></span>, <span class="fn">![<span class="fn"><span class="fn">q2 0</span> 0</span>, <span class="fn"><span class="fn">q2 0</span> 1</span>, <span class="fn"><span class="fn">q2 0</span> 2</span>, <span class="fn"><span class="fn">q2 0</span> 3]</span></span>, <span class="fn">![<span class="fn"><span class="fn">q3 0</span> 0</span>, <span class="fn"><span class="fn">q3 0</span> 1</span>, <span class="fn"><span class="fn">q3 0</span> 2</span>, <span class="fn"><span class="fn">q3 0</span> 3]</span></span>, <span class="fn">![<span class="fn"><span class="fn">q4 0</span> 0</span>, <span class="fn"><span class="fn">q4 0</span> 1</span>, <span class="fn"><span class="fn">q4 0</span> 2</span>, <span class="fn"><span class="fn">q4 0</span> 3]]</span></span></span></span></span></span></li>
+                <li class="equation"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/rowround.html#rowround.rowround">rowround.rowround</a> F1</span> F2</span> input</span> <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#eq" title="eq">=</a> <span class="fn"><span class="fn"><span class="fn"><span class="fn">((<a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/types.html#category_theory.as_hom">category_theory.as_hom</a> <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/rowround.html#rowround.row1">rowround.row1</a> F2)</span></span> <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/category/basic.html#category_theory.category_struct.comp" title="category_theory.category_struct.comp">≫</a> <span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/rowround.html#rowround.order1">rowround.order1</a> <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/category/basic.html#category_theory.category_struct.comp" title="category_theory.category_struct.comp">≫</a> <span class="fn"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.quarterround">quarterround.quarterround</a> F1</span> <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/category/basic.html#category_theory.category_struct.comp" title="category_theory.category_struct.comp">≫</a> <span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/isomorphism.html#category_theory.inv">category_theory.inv</a> <a href="https://oxarbitrage.github.io/salsa20-docs/rowround.html#rowround.order1">rowround.order1</a>)</span></span></span></span> input</span>, <span class="fn"><span class="fn"><span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/types.html#category_theory.as_hom">category_theory.as_hom</a> <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/rowround.html#rowround.row2">rowround.row2</a> F2)</span></span> <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/category/basic.html#category_theory.category_struct.comp" title="category_theory.category_struct.comp">≫</a> <span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/rowround.html#rowround.order2">rowround.order2</a> <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/category/basic.html#category_theory.category_struct.comp" title="category_theory.category_struct.comp">≫</a> <span class="fn"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.quarterround">quarterround.quarterround</a> F1</span> <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/category/basic.html#category_theory.category_struct.comp" title="category_theory.category_struct.comp">≫</a> <span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/isomorphism.html#category_theory.inv">category_theory.inv</a> <a href="https://oxarbitrage.github.io/salsa20-docs/rowround.html#rowround.order2">rowround.order2</a>)</span></span></span></span> input</span>, <span class="fn"><span class="fn"><span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/types.html#category_theory.as_hom">category_theory.as_hom</a> <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/rowround.html#rowround.row3">rowround.row3</a> F2)</span></span> <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/category/basic.html#category_theory.category_struct.comp" title="category_theory.category_struct.comp">≫</a> <span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/rowround.html#rowround.order3">rowround.order3</a> <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/category/basic.html#category_theory.category_struct.comp" title="category_theory.category_struct.comp">≫</a> <span class="fn"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.quarterround">quarterround.quarterround</a> F1</span> <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/category/basic.html#category_theory.category_struct.comp" title="category_theory.category_struct.comp">≫</a> <span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/isomorphism.html#category_theory.inv">category_theory.inv</a> <a href="https://oxarbitrage.github.io/salsa20-docs/rowround.html#rowround.order3">rowround.order3</a>)</span></span></span></span> input</span>, <span class="fn"><span class="fn"><span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/types.html#category_theory.as_hom">category_theory.as_hom</a> <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/rowround.html#rowround.row4">rowround.row4</a> F2)</span></span> <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/category/basic.html#category_theory.category_struct.comp" title="category_theory.category_struct.comp">≫</a> <span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/rowround.html#rowround.order4">rowround.order4</a> <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/category/basic.html#category_theory.category_struct.comp" title="category_theory.category_struct.comp">≫</a> <span class="fn"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.quarterround">quarterround.quarterround</a> F1</span> <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/category/basic.html#category_theory.category_struct.comp" title="category_theory.category_struct.comp">≫</a> <span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/isomorphism.html#category_theory.inv">category_theory.inv</a> <a href="https://oxarbitrage.github.io/salsa20-docs/rowround.html#rowround.order4">rowround.order4</a>)</span></span></span></span> input)</span></span></span></li>
             
         </ul>
     </details>
@@ -583,13 +797,14 @@ diagram.</p>
 <span class="decl_name"><a class="break_within" href="https://oxarbitrage.github.io/salsa20-docs/rowround.html#rowround.rowround_inv"><span class="name">rowround</span>.<span class="name">rowround_inv</span></a></span>
 
     <span class="impl_arg"><span class="decl_args"><span class="fn">[<a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/category/basic.html#category_theory.category">category_theory.category</a> <a href="https://oxarbitrage.github.io/salsa20-docs/data/bitvec/core.html#bitvec" title="bitvec">wordType</a>]</span></span></span>
+    <span class="decl_args"><span class="fn">(F1 : <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod" title="prod">vecType</a> <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/functor/basic.html#category_theory.functor" title="category_theory.functor">⥤</a> <a href="https://oxarbitrage.github.io/salsa20-docs/data/bitvec/core.html#bitvec" title="bitvec">wordType</a>)</span></span>
+    <span class="decl_args"><span class="fn">(F2 : <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod" title="prod">matrixType</a> <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/functor/basic.html#category_theory.functor" title="category_theory.functor">⥤</a> <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod" title="prod">vecType</a>)</span></span>
     <span class="impl_arg"><span class="decl_args"><span class="fn">[<a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/isomorphism.html#category_theory.is_iso">category_theory.is_iso</a> <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/types.html#category_theory.as_hom">category_theory.as_hom</a> <a href="https://oxarbitrage.github.io/salsa20-docs/rowround.html#rowround.order1">rowround.order1</a>)</span>]</span></span></span>
     <span class="impl_arg"><span class="decl_args"><span class="fn">[<a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/isomorphism.html#category_theory.is_iso">category_theory.is_iso</a> <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/types.html#category_theory.as_hom">category_theory.as_hom</a> <a href="https://oxarbitrage.github.io/salsa20-docs/rowround.html#rowround.order2">rowround.order2</a>)</span>]</span></span></span>
     <span class="impl_arg"><span class="decl_args"><span class="fn">[<a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/isomorphism.html#category_theory.is_iso">category_theory.is_iso</a> <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/types.html#category_theory.as_hom">category_theory.as_hom</a> <a href="https://oxarbitrage.github.io/salsa20-docs/rowround.html#rowround.order3">rowround.order3</a>)</span>]</span></span></span>
     <span class="impl_arg"><span class="decl_args"><span class="fn">[<a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/isomorphism.html#category_theory.is_iso">category_theory.is_iso</a> <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/types.html#category_theory.as_hom">category_theory.as_hom</a> <a href="https://oxarbitrage.github.io/salsa20-docs/rowround.html#rowround.order4">rowround.order4</a>)</span>]</span></span></span>
-    <span class="decl_args"><span class="fn">(input : <span class="fn"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/data/matrix/basic.html#matrix">matrix</a> <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/init/data/fin/basic.html#fin">fin</a> 4)</span></span> <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/init/data/fin/basic.html#fin">fin</a> 4)</span></span> <a href="https://oxarbitrage.github.io/salsa20-docs/data/bitvec/core.html#bitvec" title="bitvec">wordType</a>)</span></span>
-    <span class="impl_arg"><span class="decl_args"><span class="fn">[<a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/isomorphism.html#category_theory.is_iso">category_theory.is_iso</a> <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/types.html#category_theory.as_hom">category_theory.as_hom</a> <a href="https://oxarbitrage.github.io/salsa20-docs/rowround.html#rowround.rowround">rowround.rowround</a>)</span>]</span></span></span>&nbsp;<span class="decl_args">:</span>
-<div class="decl_type"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/data/matrix/basic.html#matrix">matrix</a> <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/init/data/fin/basic.html#fin">fin</a> 4)</span></span> <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/init/data/fin/basic.html#fin">fin</a> 4)</span></span> <a href="https://oxarbitrage.github.io/salsa20-docs/data/bitvec/core.html#bitvec" title="bitvec">wordType</a></span> <a href="https://oxarbitrage.github.io/salsa20-docs/combinatorics/quiver/basic.html#quiver.hom" title="quiver.hom">⟶</a> <span class="fn"><span class="fn"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/data/matrix/basic.html#matrix">matrix</a> <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/init/data/fin/basic.html#fin">fin</a> 4)</span></span> <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/init/data/fin/basic.html#fin">fin</a> 4)</span></span> <a href="https://oxarbitrage.github.io/salsa20-docs/data/bitvec/core.html#bitvec" title="bitvec">wordType</a></span></span></div>
+    <span class="impl_arg"><span class="decl_args"><span class="fn">[<a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/isomorphism.html#category_theory.is_iso">category_theory.is_iso</a> <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/types.html#category_theory.as_hom">category_theory.as_hom</a> <span class="fn"><span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/rowround.html#rowround.rowround">rowround.rowround</a> F1</span> F2))</span></span>]</span></span></span>&nbsp;<span class="decl_args">:</span>
+<div class="decl_type"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod" title="prod">matrixType</a> <a href="https://oxarbitrage.github.io/salsa20-docs/combinatorics/quiver/basic.html#quiver.hom" title="quiver.hom">⟶</a> <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod" title="prod">matrixType</a></span></div>
 </div>
 
 
@@ -603,10 +818,59 @@ diagram.</p>
         <summary>Equations</summary>
         <ul class="equations">
             
-                <li class="equation"><span class="fn"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/rowround.html#rowround.rowround_inv">rowround.rowround_inv</a> input</span> <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#eq" title="eq">=</a> <span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/isomorphism.html#category_theory.inv">category_theory.inv</a> <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/types.html#category_theory.as_hom">category_theory.as_hom</a> <a href="https://oxarbitrage.github.io/salsa20-docs/rowround.html#rowround.rowround">rowround.rowround</a>)</span></span></span></li>
+                <li class="equation"><span class="fn"><span class="fn"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/rowround.html#rowround.rowround_inv">rowround.rowround_inv</a> F1</span> F2</span> <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#eq" title="eq">=</a> <span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/isomorphism.html#category_theory.inv">category_theory.inv</a> <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/types.html#category_theory.as_hom">category_theory.as_hom</a> <span class="fn"><span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/rowround.html#rowround.rowround">rowround.rowround</a> F1</span> F2))</span></span></span></span></li>
             
         </ul>
     </details>
+
+
+
+
+
+
+
+
+
+</div>
+</div>
+    
+
+    
+        
+        
+<div class="decl" id="rowround.is_inverse">
+<div class="theorem">
+
+<div class="gh_link"><a href="">source</a></div>
+
+
+
+<div class="decl_header">
+    
+
+
+<span class="decl_kind">theorem</span>
+<span class="decl_name"><a class="break_within" href="https://oxarbitrage.github.io/salsa20-docs/rowround.html#rowround.is_inverse"><span class="name">rowround</span>.<span class="name">is_inverse</span></a></span>
+
+    <span class="impl_arg"><span class="decl_args"><span class="fn">[<a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/category/basic.html#category_theory.category">category_theory.category</a> <a href="https://oxarbitrage.github.io/salsa20-docs/data/bitvec/core.html#bitvec" title="bitvec">wordType</a>]</span></span></span>
+    <span class="decl_args"><span class="fn">(F1 : <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod" title="prod">vecType</a> <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/functor/basic.html#category_theory.functor" title="category_theory.functor">⥤</a> <a href="https://oxarbitrage.github.io/salsa20-docs/data/bitvec/core.html#bitvec" title="bitvec">wordType</a>)</span></span>
+    <span class="decl_args"><span class="fn">(F2 : <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod" title="prod">matrixType</a> <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/functor/basic.html#category_theory.functor" title="category_theory.functor">⥤</a> <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod" title="prod">vecType</a>)</span></span>
+    <span class="impl_arg"><span class="decl_args"><span class="fn">[<a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/isomorphism.html#category_theory.is_iso">category_theory.is_iso</a> <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/types.html#category_theory.as_hom">category_theory.as_hom</a> <a href="https://oxarbitrage.github.io/salsa20-docs/rowround.html#rowround.order1">rowround.order1</a>)</span>]</span></span></span>
+    <span class="impl_arg"><span class="decl_args"><span class="fn">[<a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/isomorphism.html#category_theory.is_iso">category_theory.is_iso</a> <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/types.html#category_theory.as_hom">category_theory.as_hom</a> <a href="https://oxarbitrage.github.io/salsa20-docs/rowround.html#rowround.order2">rowround.order2</a>)</span>]</span></span></span>
+    <span class="impl_arg"><span class="decl_args"><span class="fn">[<a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/isomorphism.html#category_theory.is_iso">category_theory.is_iso</a> <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/types.html#category_theory.as_hom">category_theory.as_hom</a> <a href="https://oxarbitrage.github.io/salsa20-docs/rowround.html#rowround.order3">rowround.order3</a>)</span>]</span></span></span>
+    <span class="impl_arg"><span class="decl_args"><span class="fn">[<a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/isomorphism.html#category_theory.is_iso">category_theory.is_iso</a> <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/types.html#category_theory.as_hom">category_theory.as_hom</a> <a href="https://oxarbitrage.github.io/salsa20-docs/rowround.html#rowround.order4">rowround.order4</a>)</span>]</span></span></span>
+    <span class="impl_arg"><span class="decl_args"><span class="fn">[<a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/isomorphism.html#category_theory.is_iso">category_theory.is_iso</a> <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/types.html#category_theory.as_hom">category_theory.as_hom</a> <span class="fn"><span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/rowround.html#rowround.rowround">rowround.rowround</a> F1</span> F2))</span></span>]</span></span></span>
+    <span class="decl_args"><span class="fn">(I : <span class="fn"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/rowround.html#rowround.rowround">rowround.rowround</a> F1</span> F2</span> <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/isomorphism.html#category_theory.iso" title="category_theory.iso">≅</a> <span class="fn"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/rowround.html#rowround.rowround_inv">rowround.rowround_inv</a> F1</span> F2</span>)</span></span>&nbsp;<span class="decl_args">:</span>
+<div class="decl_type"><span class="fn"><span class="fn">I.<a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/isomorphism.html#category_theory.iso.hom" title="category_theory.iso.hom">hom</a> <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/category/basic.html#category_theory.category_struct.comp" title="category_theory.category_struct.comp">≫</a> I.<a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/isomorphism.html#category_theory.iso.inv" title="category_theory.iso.inv">inv</a></span> <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#eq" title="eq">=</a> <span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/category/basic.html#category_theory.category_struct.id" title="category_theory.category_struct.id">𝟙</a> <span class="fn"><span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/rowround.html#rowround.rowround">rowround.rowround</a> F1</span> F2)</span></span></span></div>
+</div>
+
+
+
+
+
+<p><code>rowround</code> followed by <code>rowround⁻¹</code> is the identity, so <code>rowround⁻¹</code> is the inverse.</p>
+
+
 
 
 
@@ -1505,7 +1769,20 @@ diagram.</p>
             <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/functor/category.html">category</a>
         </div>
         <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/functor/epi_mono.html">epi_mono</a>
+        </div>
+        <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/functor/fully_faithful.html">fully_faithful</a>
+        </div>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/functor/reflects_isomorphisms.html">reflects_isomorphisms</a>
+        </div>
+        </details>
+        <details class="nav_sect" data-path="category_theory/monad" >
+            <summary>monad</summary>
+            
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/monad/basic.html">basic</a>
         </div>
         </details>
         <details class="nav_sect" data-path="category_theory/pi" >
@@ -1522,6 +1799,9 @@ diagram.</p>
             <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/products/basic.html">basic</a>
         </div>
         </details>
+        <div class="nav_link ">
+            <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/balanced.html">balanced</a>
+        </div>
         <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/core.html">core</a>
         </div>

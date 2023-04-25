@@ -48,6 +48,7 @@ https://oxarbitrage.github.io/salsa20-docs/linear_algebra/span.html
 https://oxarbitrage.github.io/salsa20-docs/group_theory/group_action/defs.html
 https://oxarbitrage.github.io/salsa20-docs/algebra/module/basic.html
 https://oxarbitrage.github.io/salsa20-docs/data/finset/lattice.html
+https://oxarbitrage.github.io/salsa20-docs/category_theory/functor/epi_mono.html
 https://oxarbitrage.github.io/salsa20-docs/init/meta/environment.html
 https://oxarbitrage.github.io/salsa20-docs/init/algebra/classes.html
 https://oxarbitrage.github.io/salsa20-docs/data/sum/basic.html
@@ -61,7 +62,6 @@ https://oxarbitrage.github.io/salsa20-docs/data/fin/basic.html
 https://oxarbitrage.github.io/salsa20-docs/data/set/basic.html
 https://oxarbitrage.github.io/salsa20-docs/init/meta/tactic.html
 https://oxarbitrage.github.io/salsa20-docs/algebra/group/with_one.html
-https://oxarbitrage.github.io/salsa20-docs/quarterround.html
 https://oxarbitrage.github.io/salsa20-docs/group_theory/group_action/group.html
 https://oxarbitrage.github.io/salsa20-docs/algebra/order/sub.html
 https://oxarbitrage.github.io/salsa20-docs/logic/equiv/fin.html
@@ -211,6 +211,7 @@ https://oxarbitrage.github.io/salsa20-docs/data/list/defs.html
 https://oxarbitrage.github.io/salsa20-docs/init/data/set.html
 https://oxarbitrage.github.io/salsa20-docs/group_theory/submonoid/basic.html
 https://oxarbitrage.github.io/salsa20-docs/group_theory/subsemigroup/centralizer.html
+https://oxarbitrage.github.io/salsa20-docs/category_theory/monad/basic.html
 https://oxarbitrage.github.io/salsa20-docs/algebra/group/opposite.html
 https://oxarbitrage.github.io/salsa20-docs/tactic/suggest.html
 https://oxarbitrage.github.io/salsa20-docs/tactic/ring.html
@@ -298,6 +299,7 @@ https://oxarbitrage.github.io/salsa20-docs/data/list/permutation.html
 https://oxarbitrage.github.io/salsa20-docs/data/ulift.html
 https://oxarbitrage.github.io/salsa20-docs/order/order_iso_nat.html
 https://oxarbitrage.github.io/salsa20-docs/order/omega_complete_partial_order.html
+https://oxarbitrage.github.io/salsa20-docs/operations.html
 https://oxarbitrage.github.io/salsa20-docs/data/finset/prod.html
 https://oxarbitrage.github.io/salsa20-docs/tactic/localized.html
 https://oxarbitrage.github.io/salsa20-docs/init/data/punit.html
@@ -391,6 +393,7 @@ https://oxarbitrage.github.io/salsa20-docs/tactic/ext.html
 https://oxarbitrage.github.io/salsa20-docs/data/bitvec/basic.html
 https://oxarbitrage.github.io/salsa20-docs/init/meta/rewrite_tactic.html
 https://oxarbitrage.github.io/salsa20-docs/combinatorics/quiver/basic.html
+https://oxarbitrage.github.io/salsa20-docs/quarterround.html
 https://oxarbitrage.github.io/salsa20-docs/algebra/group/ulift.html
 https://oxarbitrage.github.io/salsa20-docs/init/meta/rec_util.html
 https://oxarbitrage.github.io/salsa20-docs/category_theory/epi_mono.html
@@ -508,9 +511,9 @@ https://oxarbitrage.github.io/salsa20-docs/tactic/apply_fun.html
 https://oxarbitrage.github.io/salsa20-docs/data/int/char_zero.html
 https://oxarbitrage.github.io/salsa20-docs/init/meta/task.html
 https://oxarbitrage.github.io/salsa20-docs/data/string/defs.html
+https://oxarbitrage.github.io/salsa20-docs/category_theory/balanced.html
 https://oxarbitrage.github.io/salsa20-docs/data/int/interval.html
 https://oxarbitrage.github.io/salsa20-docs/data/int/cast_field.html
-https://oxarbitrage.github.io/salsa20-docs/operations.html
 https://oxarbitrage.github.io/salsa20-docs/data/set/functor.html
 https://oxarbitrage.github.io/salsa20-docs/tactic/scc.html
 https://oxarbitrage.github.io/salsa20-docs/init/meta/exceptional.html
@@ -541,6 +544,7 @@ https://oxarbitrage.github.io/salsa20-docs/logic/relator.html
 https://oxarbitrage.github.io/salsa20-docs/columnround.html
 https://oxarbitrage.github.io/salsa20-docs/data/list/prime.html
 https://oxarbitrage.github.io/salsa20-docs/tactic/delta_instance.html
+https://oxarbitrage.github.io/salsa20-docs/category_theory/functor/reflects_isomorphisms.html
 https://oxarbitrage.github.io/salsa20-docs/init/meta/match_tactic.html
 https://oxarbitrage.github.io/salsa20-docs/init/funext.html
 https://oxarbitrage.github.io/salsa20-docs/init/meta/mk_dec_eq_instance.html
@@ -572,6 +576,7 @@ https://oxarbitrage.github.io/salsa20-docs/tactic/lint/simp.html
 https://oxarbitrage.github.io/salsa20-docs/init/meta/relation_tactics.html
 https://oxarbitrage.github.io/salsa20-docs/algebra/module/hom.html
 https://oxarbitrage.github.io/salsa20-docs/data/fun_like/embedding.html
+https://oxarbitrage.github.io/salsa20-docs/doubleround.html
 https://oxarbitrage.github.io/salsa20-docs/tactic/fin_cases.html
 https://oxarbitrage.github.io/salsa20-docs/init/control/id.html
 https://oxarbitrage.github.io/salsa20-docs/init/data/subtype/basic.html
@@ -596,7 +601,6 @@ https://oxarbitrage.github.io/salsa20-docs/data/bracket.html
 https://oxarbitrage.github.io/salsa20-docs/init/meta/async_tactic.html
 https://oxarbitrage.github.io/salsa20-docs/init/default.html
 https://oxarbitrage.github.io/salsa20-docs/tactic/simpa.html
-https://oxarbitrage.github.io/salsa20-docs/doubleround.html
 https://oxarbitrage.github.io/salsa20-docs/algebra/field/opposite.html
 https://oxarbitrage.github.io/salsa20-docs/tactic/reserved_notation.html
 https://oxarbitrage.github.io/salsa20-docs/index.html
