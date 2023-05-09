@@ -8,11 +8,11 @@
     <title>salsa20 / columnround - salsa20 docs</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Column round: The `columnround` function takes a `matrixType` (tuple of 4 `vecType`s) and return a new `matrixType` after following the diagram. Columnround Diagram;" />
+    <meta name="description" content="Columnround: The `columnround` system using the equivalent formula. Columnround Diagram;" />
     
     <meta property="og:title" content="salsa20 / columnround - salsa20 docs">
     <meta property="og:site_name" content="salsa20 for Lean - API documentation">
-    <meta property="og:description" content="Column round: The `columnround` function takes a `matrixType` (tuple of 4 `vecType`s) and return a new `matrixType` after following the diagram. Columnround Diagram;">
+    <meta property="og:description" content="Columnround: The `columnround` system using the equivalent formula. Columnround Diagram;">
     <meta property="og:image" content="https://oxarbitrage.github.io/salsa20-docs/meta-og.png">
     <meta name="twitter:card" content="summary">
     <script src="https://oxarbitrage.github.io/salsa20-docs/color_scheme.js"></script>
@@ -61,9 +61,7 @@
 
     <div class="nav_link"><a class="break_within" href="#columnround.columnround"><span class="name">columnround</span>.<span class="name">columnround</span></a></div>
 
-    <div class="nav_link"><a class="break_within" href="#columnround.columnround_inv"><span class="name">columnround</span>.<span class="name">columnround_inv</span></a></div>
-
-    <div class="nav_link"><a class="break_within" href="#columnround.transpose"><span class="name">columnround</span>.<span class="name">transpose</span></a></div>
+    <div class="nav_link"><a class="break_within" href="#columnround.columnround_unsorted"><span class="name">columnround</span>.<span class="name">columnround_unsorted</span></a></div>
 
 </nav>
 
@@ -73,9 +71,8 @@
 
     
         <div class="mod_doc">
-            <h1 id="column-round" class="markdown-heading">Column round <a class="hover-link" href="#column-round">#</a></h1>
-<p>The <code>columnround</code> function takes a <code>matrixType</code> (tuple of 4 <code>vecType</code>s) and return a new <code>matrixType</code>
-after following the diagram.</p>
+            <h1 id="columnround" class="markdown-heading">Columnround <a class="hover-link" href="#columnround">#</a></h1>
+<p>The <code>columnround</code> system using the equivalent formula.</p>
 <ul>
 <li><a href="https://oxarbitrage.github.io/salsa20-docs/diagrams/columnround.html">Columnround Diagram</a></li>
 </ul>
@@ -86,8 +83,8 @@ after following the diagram.</p>
     
         
         
-<div class="decl" id="columnround.transpose">
-<div class="def sorried">
+<div class="decl" id="columnround.columnround_unsorted">
+<div class="def">
 
 <div class="gh_link"><a href="">source</a></div>
 
@@ -98,18 +95,19 @@ after following the diagram.</p>
 
 
 <span class="decl_kind">def</span>
-<span class="decl_name"><a class="break_within" href="https://oxarbitrage.github.io/salsa20-docs/columnround.html#columnround.transpose"><span class="name">columnround</span>.<span class="name">transpose</span></a></span>
+<span class="decl_name"><a class="break_within" href="https://oxarbitrage.github.io/salsa20-docs/columnround.html#columnround.columnround_unsorted"><span class="name">columnround</span>.<span class="name">columnround_unsorted</span></a></span>
 
-    <span class="impl_arg"><span class="decl_args"><span class="fn">[<a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/category/basic.html#category_theory.category">category_theory.category</a> ⁇]</span></span></span>
-    <span class="decl_args"><span class="fn">(input : ⁇)</span></span>&nbsp;<span class="decl_args">:</span>
-<div class="decl_type"><span class="fn">⁇</span></div>
+    <span class="decl_args"><span class="fn">(x₀x₄x₈x₁₂x₁x₅x₉x₁₃x₂x₆x₁₀x₁₄x₃x₇x₁₁x₁₅ y₀y₄y₈y₁₂y₁y₅y₉y₁₃y₂y₆y₁₀y₁₄y₃y₇y₁₁y₁₅ : Type u)</span></span>
+    <span class="decl_args"><span class="fn">(Ir : x₀x₄x₈x₁₂x₁x₅x₉x₁₃x₂x₆x₁₀x₁₄x₃x₇x₁₁x₁₅ <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/isomorphism.html#category_theory.iso" title="category_theory.iso">≅</a> y₀y₄y₈y₁₂y₁y₅y₉y₁₃y₂y₆y₁₀y₁₄y₃y₇y₁₁y₁₅)</span></span>&nbsp;<span class="decl_args">:</span>
+<div class="decl_type"><span class="fn">x₀x₄x₈x₁₂x₁x₅x₉x₁₃x₂x₆x₁₀x₁₄x₃x₇x₁₁x₁₅ <a href="https://oxarbitrage.github.io/salsa20-docs/combinatorics/quiver/basic.html#quiver.hom" title="quiver.hom">⟶</a> y₀y₄y₈y₁₂y₁y₅y₉y₁₃y₂y₆y₁₀y₁₄y₃y₇y₁₁y₁₅</span></div>
 </div>
 
 
 
 
 
-<p>Transpose of the input matrix. TODO: implement.</p>
+<p>We use the equivalent formula from the spec and run <code>rowround</code> with a transposed input.
+This will return the output unsorted.</p>
 
 
 
@@ -117,7 +115,7 @@ after following the diagram.</p>
         <summary>Equations</summary>
         <ul class="equations">
             
-                <li class="equation"><span class="fn"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/columnround.html#columnround.transpose">columnround.transpose</a> input</span> <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#eq" title="eq">=</a> input</span></li>
+                <li class="equation"><span class="fn"><span class="fn"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/columnround.html#columnround.columnround_unsorted">columnround.columnround_unsorted</a> x₀x₄x₈x₁₂x₁x₅x₉x₁₃x₂x₆x₁₀x₁₄x₃x₇x₁₁x₁₅</span> y₀y₄y₈y₁₂y₁y₅y₉y₁₃y₂y₆y₁₀y₁₄y₃y₇y₁₁y₁₅</span> <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#eq" title="eq">=</a> <span class="fn"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/rowround.html#rowround.rowround">rowround.rowround</a> x₀x₄x₈x₁₂x₁x₅x₉x₁₃x₂x₆x₁₀x₁₄x₃x₇x₁₁x₁₅</span> y₀y₄y₈y₁₂y₁y₅y₉y₁₃y₂y₆y₁₀y₁₄y₃y₇y₁₁y₁₅</span></span></li>
             
         </ul>
     </details>
@@ -130,8 +128,6 @@ after following the diagram.</p>
 
 
 
-    <p class="sorry_msg"><strong>Note:</strong> this declaration is incomplete and uses <code>sorry</code>.</p>
-
 </div>
 </div>
     
@@ -140,7 +136,7 @@ after following the diagram.</p>
         
         
 <div class="decl" id="columnround.columnround">
-<div class="def sorried">
+<div class="def">
 
 <div class="gh_link"><a href="">source</a></div>
 
@@ -153,22 +149,19 @@ after following the diagram.</p>
 <span class="decl_kind">def</span>
 <span class="decl_name"><a class="break_within" href="https://oxarbitrage.github.io/salsa20-docs/columnround.html#columnround.columnround"><span class="name">columnround</span>.<span class="name">columnround</span></a></span>
 
-    <span class="impl_arg"><span class="decl_args"><span class="fn">[<a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/category/basic.html#category_theory.category">category_theory.category</a> ⁇]</span></span></span>
-    <span class="impl_arg"><span class="decl_args"><span class="fn">[<a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/isomorphism.html#category_theory.is_iso">category_theory.is_iso</a> <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/types.html#category_theory.as_hom">category_theory.as_hom</a> ⁇)</span>]</span></span></span>
-    <span class="impl_arg"><span class="decl_args"><span class="fn">[<a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/isomorphism.html#category_theory.is_iso">category_theory.is_iso</a> <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/types.html#category_theory.as_hom">category_theory.as_hom</a> ⁇)</span>]</span></span></span>
-    <span class="impl_arg"><span class="decl_args"><span class="fn">[<a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/isomorphism.html#category_theory.is_iso">category_theory.is_iso</a> <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/types.html#category_theory.as_hom">category_theory.as_hom</a> ⁇)</span>]</span></span></span>
-    <span class="impl_arg"><span class="decl_args"><span class="fn">[<a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/isomorphism.html#category_theory.is_iso">category_theory.is_iso</a> <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/types.html#category_theory.as_hom">category_theory.as_hom</a> ⁇)</span>]</span></span></span>
-    <span class="decl_args"><span class="fn">(F1 : ⁇ <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/functor/basic.html#category_theory.functor" title="category_theory.functor">⥤</a> ⁇)</span></span>
-    <span class="decl_args"><span class="fn">(F2 : ⁇ <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/functor/basic.html#category_theory.functor" title="category_theory.functor">⥤</a> ⁇)</span></span>
-    <span class="decl_args"><span class="fn">(input : ⁇)</span></span>&nbsp;<span class="decl_args">:</span>
-<div class="decl_type"><span class="fn">⁇</span></div>
+    <span class="decl_args"><span class="fn">(x₀x₄x₈x₁₂x₁x₅x₉x₁₃x₂x₆x₁₀x₁₄x₃x₇x₁₁x₁₅ y₀y₄y₈y₁₂y₁y₅y₉y₁₃y₂y₆y₁₀y₁₄y₃y₇y₁₁y₁₅ : Type u)</span></span>
+    <span class="decl_args"><span class="fn">(I2 : x₀x₄x₈x₁₂x₁x₅x₉x₁₃x₂x₆x₁₀x₁₄x₃x₇x₁₁x₁₅ <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/isomorphism.html#category_theory.iso" title="category_theory.iso">≅</a> y₀y₄y₈y₁₂y₁y₅y₉y₁₃y₂y₆y₁₀y₁₄y₃y₇y₁₁y₁₅)</span></span>
+    <span class="decl_args"><span class="fn">(y₀y₁y₂y₃y₄y₅y₆y₇y₈y₉y₁₀y₁₁y₁₂y₁₃y₁₄y₁₅ : Type u)</span></span>
+    <span class="decl_args"><span class="fn">(I3 : y₀y₄y₈y₁₂y₁y₅y₉y₁₃y₂y₆y₁₀y₁₄y₃y₇y₁₁y₁₅ <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/isomorphism.html#category_theory.iso" title="category_theory.iso">≅</a> y₀y₁y₂y₃y₄y₅y₆y₇y₈y₉y₁₀y₁₁y₁₂y₁₃y₁₄y₁₅)</span></span>&nbsp;<span class="decl_args">:</span>
+<div class="decl_type"><span class="fn">x₀x₄x₈x₁₂x₁x₅x₉x₁₃x₂x₆x₁₀x₁₄x₃x₇x₁₁x₁₅ <a href="https://oxarbitrage.github.io/salsa20-docs/combinatorics/quiver/basic.html#quiver.hom" title="quiver.hom">⟶</a> y₀y₁y₂y₃y₄y₅y₆y₇y₈y₉y₁₀y₁₁y₁₂y₁₃y₁₄y₁₅</span></div>
 </div>
 
 
 
 
 
-<p><code>columnround</code> defined as a <code>rowround</code> of the transpose of the input.</p>
+<p>There is an isomoprhism between the unsorted and the sorted output. We use it to return the final
+columnround output.</p>
 
 
 
@@ -176,7 +169,7 @@ after following the diagram.</p>
         <summary>Equations</summary>
         <ul class="equations">
             
-                <li class="equation"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/columnround.html#columnround.columnround">columnround.columnround</a> F1</span> F2</span> input</span> <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#eq" title="eq">=</a> ⁇</span></li>
+                <li class="equation"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/columnround.html#columnround.columnround">columnround.columnround</a> x₀x₄x₈x₁₂x₁x₅x₉x₁₃x₂x₆x₁₀x₁₄x₃x₇x₁₁x₁₅</span> y₀y₄y₈y₁₂y₁y₅y₉y₁₃y₂y₆y₁₀y₁₄y₃y₇y₁₁y₁₅</span> I2</span> y₀y₁y₂y₃y₄y₅y₆y₇y₈y₉y₁₀y₁₁y₁₂y₁₃y₁₄y₁₅</span> I3</span> <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#eq" title="eq">=</a> <span class="fn"><span class="fn"><span class="fn"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/columnround.html#columnround.columnround_unsorted">columnround.columnround_unsorted</a> x₀x₄x₈x₁₂x₁x₅x₉x₁₃x₂x₆x₁₀x₁₄x₃x₇x₁₁x₁₅</span> y₀y₄y₈y₁₂y₁y₅y₉y₁₃y₂y₆y₁₀y₁₄y₃y₇y₁₁y₁₅</span> I2</span> <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/category/basic.html#category_theory.category_struct.comp" title="category_theory.category_struct.comp">≫</a> I3.<a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/isomorphism.html#category_theory.iso.hom" title="category_theory.iso.hom">hom</a></span></span></li>
             
         </ul>
     </details>
@@ -188,67 +181,6 @@ after following the diagram.</p>
 
 
 
-
-    <p class="sorry_msg"><strong>Note:</strong> this declaration is incomplete and uses <code>sorry</code>.</p>
-
-</div>
-</div>
-    
-
-    
-        
-        
-<div class="decl" id="columnround.columnround_inv">
-<div class="def sorried">
-
-<div class="gh_link"><a href="">source</a></div>
-
-
-
-<div class="decl_header">
-    
-
-
-<span class="decl_kind">def</span>
-<span class="decl_name"><a class="break_within" href="https://oxarbitrage.github.io/salsa20-docs/columnround.html#columnround.columnround_inv"><span class="name">columnround</span>.<span class="name">columnround_inv</span></a></span>
-
-    <span class="impl_arg"><span class="decl_args"><span class="fn">[<a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/category/basic.html#category_theory.category">category_theory.category</a> ⁇]</span></span></span>
-    <span class="impl_arg"><span class="decl_args"><span class="fn">[<a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/isomorphism.html#category_theory.is_iso">category_theory.is_iso</a> <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/types.html#category_theory.as_hom">category_theory.as_hom</a> ⁇)</span>]</span></span></span>
-    <span class="impl_arg"><span class="decl_args"><span class="fn">[<a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/isomorphism.html#category_theory.is_iso">category_theory.is_iso</a> <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/types.html#category_theory.as_hom">category_theory.as_hom</a> ⁇)</span>]</span></span></span>
-    <span class="impl_arg"><span class="decl_args"><span class="fn">[<a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/isomorphism.html#category_theory.is_iso">category_theory.is_iso</a> <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/types.html#category_theory.as_hom">category_theory.as_hom</a> ⁇)</span>]</span></span></span>
-    <span class="impl_arg"><span class="decl_args"><span class="fn">[<a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/isomorphism.html#category_theory.is_iso">category_theory.is_iso</a> <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/types.html#category_theory.as_hom">category_theory.as_hom</a> ⁇)</span>]</span></span></span>
-    <span class="decl_args"><span class="fn">(F1 : ⁇ <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/functor/basic.html#category_theory.functor" title="category_theory.functor">⥤</a> ⁇)</span></span>
-    <span class="decl_args"><span class="fn">(F2 : ⁇ <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/functor/basic.html#category_theory.functor" title="category_theory.functor">⥤</a> ⁇)</span></span>
-    <span class="impl_arg"><span class="decl_args"><span class="fn">[<a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/isomorphism.html#category_theory.is_iso">category_theory.is_iso</a> <span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/types.html#category_theory.as_hom">category_theory.as_hom</a> ⁇)</span>]</span></span></span>&nbsp;<span class="decl_args">:</span>
-<div class="decl_type"><span class="fn">⁇ <a href="https://oxarbitrage.github.io/salsa20-docs/combinatorics/quiver/basic.html#quiver.hom" title="quiver.hom">⟶</a> ⁇</span></div>
-</div>
-
-
-
-
-
-<p><code>columnround⁻¹</code> is just the inverse given <code>columnround</code> is isomorphic.</p>
-
-
-
-    <details>
-        <summary>Equations</summary>
-        <ul class="equations">
-            
-                <li class="equation"><span class="fn"><span class="fn"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/columnround.html#columnround.columnround_inv">columnround.columnround_inv</a> F1</span> F2</span> <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#eq" title="eq">=</a> ⁇</span></li>
-            
-        </ul>
-    </details>
-
-
-
-
-
-
-
-
-
-    <p class="sorry_msg"><strong>Note:</strong> this declaration is incomplete and uses <code>sorry</code>.</p>
 
 </div>
 </div>
@@ -1139,20 +1071,7 @@ after following the diagram.</p>
             <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/functor/category.html">category</a>
         </div>
         <div class="nav_link ">
-            <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/functor/epi_mono.html">epi_mono</a>
-        </div>
-        <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/functor/fully_faithful.html">fully_faithful</a>
-        </div>
-        <div class="nav_link ">
-            <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/functor/reflects_isomorphisms.html">reflects_isomorphisms</a>
-        </div>
-        </details>
-        <details class="nav_sect" data-path="category_theory/monad" >
-            <summary>monad</summary>
-            
-        <div class="nav_link ">
-            <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/monad/basic.html">basic</a>
         </div>
         </details>
         <details class="nav_sect" data-path="category_theory/pi" >
@@ -1169,9 +1088,6 @@ after following the diagram.</p>
             <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/products/basic.html">basic</a>
         </div>
         </details>
-        <div class="nav_link ">
-            <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/balanced.html">balanced</a>
-        </div>
         <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/core.html">core</a>
         </div>

@@ -8,11 +8,11 @@
     <title>salsa20 / quarterround - salsa20 docs</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Quarterround: We follow the flow of the quarterround graph to define objects and relations. We don't care what the functions do but just the objects and relations between them. Quarterround Diagram;" />
+    <meta name="description" content="Quarterround: We follow the flow of the quarterround graph to define objects and relations. Quarterround Diagram;" />
     
     <meta property="og:title" content="salsa20 / quarterround - salsa20 docs">
     <meta property="og:site_name" content="salsa20 for Lean - API documentation">
-    <meta property="og:description" content="Quarterround: We follow the flow of the quarterround graph to define objects and relations. We don't care what the functions do but just the objects and relations between them. Quarterround Diagram;">
+    <meta property="og:description" content="Quarterround: We follow the flow of the quarterround graph to define objects and relations. Quarterround Diagram;">
     <meta property="og:image" content="https://oxarbitrage.github.io/salsa20-docs/meta-og.png">
     <meta name="twitter:card" content="summary">
     <script src="https://oxarbitrage.github.io/salsa20-docs/color_scheme.js"></script>
@@ -56,23 +56,49 @@
 </div>
 
 
-    <div class="nav_link"><a class="break_within" href="#quarterround.m₀"><span class="name">quarterround</span>.<span class="name">m₀</span></a></div>
+    <div class="nav_link"><a class="break_within" href="#quarterround.mod0_input"><span class="name">quarterround</span>.<span class="name">mod0_input</span></a></div>
 
-    <div class="nav_link"><a class="break_within" href="#quarterround.m₁"><span class="name">quarterround</span>.<span class="name">m₁</span></a></div>
+    <div class="nav_link"><a class="break_within" href="#quarterround.mod0_output"><span class="name">quarterround</span>.<span class="name">mod0_output</span></a></div>
 
-    <div class="nav_link"><a class="break_within" href="#quarterround.m₂"><span class="name">quarterround</span>.<span class="name">m₂</span></a></div>
+    <div class="nav_link"><a class="break_within" href="#quarterround.mod1_input"><span class="name">quarterround</span>.<span class="name">mod1_input</span></a></div>
 
-    <div class="nav_link"><a class="break_within" href="#quarterround.m₃"><span class="name">quarterround</span>.<span class="name">m₃</span></a></div>
+    <div class="nav_link"><a class="break_within" href="#quarterround.mod1_output"><span class="name">quarterround</span>.<span class="name">mod1_output</span></a></div>
+
+    <div class="nav_link"><a class="break_within" href="#quarterround.mod2_input"><span class="name">quarterround</span>.<span class="name">mod2_input</span></a></div>
+
+    <div class="nav_link"><a class="break_within" href="#quarterround.mod2_output"><span class="name">quarterround</span>.<span class="name">mod2_output</span></a></div>
+
+    <div class="nav_link"><a class="break_within" href="#quarterround.mod3_input"><span class="name">quarterround</span>.<span class="name">mod3_input</span></a></div>
+
+    <div class="nav_link"><a class="break_within" href="#quarterround.mod3_output"><span class="name">quarterround</span>.<span class="name">mod3_output</span></a></div>
 
     <div class="nav_link"><a class="break_within" href="#quarterround.quarterround"><span class="name">quarterround</span>.<span class="name">quarterround</span></a></div>
 
-    <div class="nav_link"><a class="break_within" href="#quarterround.quarterround_iso"><span class="name">quarterround</span>.<span class="name">quarterround_iso</span></a></div>
+    <div class="nav_link"><a class="break_within" href="#quarterround.quarterround_inv"><span class="name">quarterround</span>.<span class="name">quarterround_inv</span></a></div>
 
-    <div class="nav_link"><a class="break_within" href="#quarterround.xor2"><span class="name">quarterround</span>.<span class="name">xor2</span></a></div>
+    <div class="nav_link"><a class="break_within" href="#quarterround.rotl13"><span class="name">quarterround</span>.<span class="name">rotl13</span></a></div>
 
-    <div class="nav_link"><a class="break_within" href="#quarterround.z₁"><span class="name">quarterround</span>.<span class="name">z₁</span></a></div>
+    <div class="nav_link"><a class="break_within" href="#quarterround.rotl18"><span class="name">quarterround</span>.<span class="name">rotl18</span></a></div>
 
-    <div class="nav_link"><a class="break_within" href="#quarterround.z₂"><span class="name">quarterround</span>.<span class="name">z₂</span></a></div>
+    <div class="nav_link"><a class="break_within" href="#quarterround.rotl7"><span class="name">quarterround</span>.<span class="name">rotl7</span></a></div>
+
+    <div class="nav_link"><a class="break_within" href="#quarterround.rotl9"><span class="name">quarterround</span>.<span class="name">rotl9</span></a></div>
+
+    <div class="nav_link"><a class="break_within" href="#quarterround.xor0_input"><span class="name">quarterround</span>.<span class="name">xor0_input</span></a></div>
+
+    <div class="nav_link"><a class="break_within" href="#quarterround.xor0_output"><span class="name">quarterround</span>.<span class="name">xor0_output</span></a></div>
+
+    <div class="nav_link"><a class="break_within" href="#quarterround.xor1_input"><span class="name">quarterround</span>.<span class="name">xor1_input</span></a></div>
+
+    <div class="nav_link"><a class="break_within" href="#quarterround.xor1_output"><span class="name">quarterround</span>.<span class="name">xor1_output</span></a></div>
+
+    <div class="nav_link"><a class="break_within" href="#quarterround.xor2_input"><span class="name">quarterround</span>.<span class="name">xor2_input</span></a></div>
+
+    <div class="nav_link"><a class="break_within" href="#quarterround.xor2_output"><span class="name">quarterround</span>.<span class="name">xor2_output</span></a></div>
+
+    <div class="nav_link"><a class="break_within" href="#quarterround.xor3_input"><span class="name">quarterround</span>.<span class="name">xor3_input</span></a></div>
+
+    <div class="nav_link"><a class="break_within" href="#quarterround.xor3_output"><span class="name">quarterround</span>.<span class="name">xor3_output</span></a></div>
 
 </nav>
 
@@ -84,7 +110,6 @@
         <div class="mod_doc">
             <h1 id="quarterround" class="markdown-heading">Quarterround <a class="hover-link" href="#quarterround">#</a></h1>
 <p>We follow the flow of the quarterround graph to define objects and relations.</p>
-<p>We don't care what the functions do but just the objects and relations between them.</p>
 <ul>
 <li><a href="https://oxarbitrage.github.io/salsa20-docs/diagrams/quarterround.html">Quarterround Diagram</a></li>
 </ul>
@@ -95,8 +120,8 @@
     
         
         
-<div class="decl" id="quarterround.m₁">
-<div class="constant">
+<div class="decl" id="quarterround.mod1_input">
+<div class="def">
 
 <div class="gh_link"><a href="">source</a></div>
 
@@ -106,19 +131,32 @@
     
 
 
-<span class="decl_kind">constant</span>
-<span class="decl_name"><a class="break_within" href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.m₁"><span class="name">quarterround</span>.<span class="name">m₁</span></a></span>
-&nbsp;<span class="decl_args">:</span>
-<div class="decl_type"><span class="fn">Type u</span></div>
+<span class="decl_kind">def</span>
+<span class="decl_name"><a class="break_within" href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.mod1_input"><span class="name">quarterround</span>.<span class="name">mod1_input</span></a></span>
+
+    <span class="decl_args"><span class="fn">(y₀ y₃ y₀y₁y₂y₃ : Type u)</span></span>
+    <span class="decl_args"><span class="fn">(I₀ : y₀y₁y₂y₃ <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/isomorphism.html#category_theory.iso" title="category_theory.iso">≅</a> y₀)</span></span>
+    <span class="decl_args"><span class="fn">(I₃ : y₀y₁y₂y₃ <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/isomorphism.html#category_theory.iso" title="category_theory.iso">≅</a> y₃)</span></span>
+    <span class="decl_args"><span class="fn">(Y : y₀y₁y₂y₃)</span></span>&nbsp;<span class="decl_args">:</span>
+<div class="decl_type"><span class="fn">y₀ <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod" title="prod">×</a> y₃</span></div>
 </div>
 
 
 
 
 
-<p>The response of the <code>mod1</code> operation as an object of the <code>Type u</code> category.</p>
+<p>The <code>mod1</code> input is a pair formed from morphisms of <code>I₀</code> and <code>I₃</code> isomorphisms.</p>
 
 
+
+    <details>
+        <summary>Equations</summary>
+        <ul class="equations">
+            
+                <li class="equation"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.mod1_input">quarterround.mod1_input</a> y₀</span> y₃</span> y₀y₁y₂y₃</span> I₀</span> I₃</span> Y</span> <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#eq" title="eq">=</a> <span class="fn"><span class="fn">(I₀.<a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/isomorphism.html#category_theory.iso.hom" title="category_theory.iso.hom">hom</a> Y</span>, <span class="fn">I₃.<a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/isomorphism.html#category_theory.iso.hom" title="category_theory.iso.hom">hom</a> Y)</span></span></span></li>
+            
+        </ul>
+    </details>
 
 
 
@@ -135,8 +173,8 @@
     
         
         
-<div class="decl" id="quarterround.z₁">
-<div class="constant">
+<div class="decl" id="quarterround.mod1_output">
+<div class="def">
 
 <div class="gh_link"><a href="">source</a></div>
 
@@ -146,19 +184,33 @@
     
 
 
-<span class="decl_kind">constant</span>
-<span class="decl_name"><a class="break_within" href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.z₁"><span class="name">quarterround</span>.<span class="name">z₁</span></a></span>
-&nbsp;<span class="decl_args">:</span>
-<div class="decl_type"><span class="fn">Type u</span></div>
+<span class="decl_kind">def</span>
+<span class="decl_name"><a class="break_within" href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.mod1_output"><span class="name">quarterround</span>.<span class="name">mod1_output</span></a></span>
+
+    <span class="decl_args"><span class="fn">(y₀ y₃ y₀y₁y₂y₃ m₁ : Type u)</span></span>
+    <span class="decl_args"><span class="fn">(I₀ : y₀y₁y₂y₃ <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/isomorphism.html#category_theory.iso" title="category_theory.iso">≅</a> y₀)</span></span>
+    <span class="decl_args"><span class="fn">(I₃ : y₀y₁y₂y₃ <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/isomorphism.html#category_theory.iso" title="category_theory.iso">≅</a> y₃)</span></span>
+    <span class="decl_args"><span class="fn">(Y : y₀y₁y₂y₃)</span></span>
+    <span class="decl_args"><span class="fn">(mod1 : <span class="fn">y₀ <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod" title="prod">×</a> y₃</span> <a href="https://oxarbitrage.github.io/salsa20-docs/combinatorics/quiver/basic.html#quiver.hom" title="quiver.hom">⟶</a> m₁)</span></span>&nbsp;<span class="decl_args">:</span>
+<div class="decl_type"><span class="fn">m₁</span></div>
 </div>
 
 
 
 
 
-<p>The result of <code>xor1</code> operation betwen <code>y₁</code> and <code>r₁</code> is an object of the <code>Type u</code> category.</p>
+<p>The output of the <code>mod1</code> operation is with the proper arguments a <code>m₁</code> object.</p>
 
 
+
+    <details>
+        <summary>Equations</summary>
+        <ul class="equations">
+            
+                <li class="equation"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.mod1_output">quarterround.mod1_output</a> y₀</span> y₃</span> y₀y₁y₂y₃</span> m₁</span> I₀</span> I₃</span> Y</span> mod1</span> <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#eq" title="eq">=</a> <span class="fn">mod1 <span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.mod1_input">quarterround.mod1_input</a> y₀</span> y₃</span> y₀y₁y₂y₃</span> I₀</span> I₃</span> Y)</span></span></span></li>
+            
+        </ul>
+    </details>
 
 
 
@@ -175,8 +227,8 @@
     
         
         
-<div class="decl" id="quarterround.m₂">
-<div class="constant">
+<div class="decl" id="quarterround.rotl7">
+<div class="def">
 
 <div class="gh_link"><a href="">source</a></div>
 
@@ -186,19 +238,30 @@
     
 
 
-<span class="decl_kind">constant</span>
-<span class="decl_name"><a class="break_within" href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.m₂"><span class="name">quarterround</span>.<span class="name">m₂</span></a></span>
-&nbsp;<span class="decl_args">:</span>
-<div class="decl_type"><span class="fn">Type u</span></div>
+<span class="decl_kind">def</span>
+<span class="decl_name"><a class="break_within" href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.rotl7"><span class="name">quarterround</span>.<span class="name">rotl7</span></a></span>
+
+    <span class="decl_args"><span class="fn">(m₁ r₁ : Type u)</span></span>
+    <span class="decl_args"><span class="fn">(I'₁ : m₁ <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/isomorphism.html#category_theory.iso" title="category_theory.iso">≅</a> r₁)</span></span>&nbsp;<span class="decl_args">:</span>
+<div class="decl_type"><span class="fn">m₁ <a href="https://oxarbitrage.github.io/salsa20-docs/combinatorics/quiver/basic.html#quiver.hom" title="quiver.hom">⟶</a> r₁</span></div>
 </div>
 
 
 
 
 
-<p>The response of the <code>mod2</code> operation as an object of the <code>Type u</code> category.</p>
+<p>The <code>rotl7</code> operation.</p>
 
 
+
+    <details>
+        <summary>Equations</summary>
+        <ul class="equations">
+            
+                <li class="equation"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.rotl7">quarterround.rotl7</a> m₁</span> r₁</span> I'₁</span> <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#eq" title="eq">=</a> I'₁.<a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/isomorphism.html#category_theory.iso.hom" title="category_theory.iso.hom">hom</a></span></li>
+            
+        </ul>
+    </details>
 
 
 
@@ -215,8 +278,8 @@
     
         
         
-<div class="decl" id="quarterround.z₂">
-<div class="constant">
+<div class="decl" id="quarterround.xor1_input">
+<div class="def">
 
 <div class="gh_link"><a href="">source</a></div>
 
@@ -226,19 +289,30 @@
     
 
 
-<span class="decl_kind">constant</span>
-<span class="decl_name"><a class="break_within" href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.z₂"><span class="name">quarterround</span>.<span class="name">z₂</span></a></span>
-&nbsp;<span class="decl_args">:</span>
-<div class="decl_type"><span class="fn">Type u</span></div>
+<span class="decl_kind">def</span>
+<span class="decl_name"><a class="break_within" href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.xor1_input"><span class="name">quarterround</span>.<span class="name">xor1_input</span></a></span>
+
+    <span class="decl_args"><span class="fn">(y₁ y₀y₁y₂y₃ r₁ : Type u)</span></span>
+    <span class="decl_args"><span class="fn">(I₁ : y₀y₁y₂y₃ <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/isomorphism.html#category_theory.iso" title="category_theory.iso">≅</a> y₁)</span></span>&nbsp;<span class="decl_args">:</span>
+<div class="decl_type"><span class="fn"><span class="fn">(y₀y₁y₂y₃ <a href="https://oxarbitrage.github.io/salsa20-docs/combinatorics/quiver/basic.html#quiver.hom" title="quiver.hom">⟶</a> y₁)</span> <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod" title="prod">×</a> <span class="fn">Type u</span></span></div>
 </div>
 
 
 
 
 
-<p>The result of <code>xor2</code> operation betwen <code>y₁</code> and <code>r₂</code> is an object of the <code>Type u</code> category.</p>
+<p>The input of the <code>xor1</code> operation.</p>
 
 
+
+    <details>
+        <summary>Equations</summary>
+        <ul class="equations">
+            
+                <li class="equation"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.xor1_input">quarterround.xor1_input</a> y₁</span> y₀y₁y₂y₃</span> r₁</span> I₁</span> <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#eq" title="eq">=</a> <span class="fn">(I₁.<a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/isomorphism.html#category_theory.iso.hom" title="category_theory.iso.hom">hom</a>, r₁)</span></span></li>
+            
+        </ul>
+    </details>
 
 
 
@@ -255,8 +329,8 @@
     
         
         
-<div class="decl" id="quarterround.xor2">
-<div class="constant">
+<div class="decl" id="quarterround.xor1_output">
+<div class="def">
 
 <div class="gh_link"><a href="">source</a></div>
 
@@ -266,20 +340,33 @@
     
 
 
-<span class="decl_kind">constant</span>
-<span class="decl_name"><a class="break_within" href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.xor2"><span class="name">quarterround</span>.<span class="name">xor2</span></a></span>
+<span class="decl_kind">def</span>
+<span class="decl_name"><a class="break_within" href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.xor1_output"><span class="name">quarterround</span>.<span class="name">xor1_output</span></a></span>
 
-    <span class="decl_args"><span class="fn">(y₂ y₀y₁y₂y₃ r₂ : Type u)</span></span>&nbsp;<span class="decl_args">:</span>
-<div class="decl_type"><span class="fn"><span class="fn"><span class="fn">(y₀y₁y₂y₃ <a href="https://oxarbitrage.github.io/salsa20-docs/combinatorics/quiver/basic.html#quiver.hom" title="quiver.hom">⟶</a> y₂)</span> <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod" title="prod">×</a> r₂</span> <a href="https://oxarbitrage.github.io/salsa20-docs/combinatorics/quiver/basic.html#quiver.hom" title="quiver.hom">⟶</a> <a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.z₂">quarterround.z₂</a></span></div>
+    <span class="decl_args"><span class="fn">(y₁ y₀y₁y₂y₃ r₁ z₁ : Type u)</span></span>
+    <span class="decl_args"><span class="fn">(I₁ : y₀y₁y₂y₃ <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/isomorphism.html#category_theory.iso" title="category_theory.iso">≅</a> y₁)</span></span>
+    <span class="decl_args"><span class="fn">(Y : y₀y₁y₂y₃)</span></span>
+    <span class="decl_args"><span class="fn">(R₁ : r₁)</span></span>
+    <span class="decl_args"><span class="fn">(xor1 : <span class="fn">y₁ <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod" title="prod">×</a> r₁</span> <a href="https://oxarbitrage.github.io/salsa20-docs/combinatorics/quiver/basic.html#quiver.hom" title="quiver.hom">⟶</a> z₁)</span></span>&nbsp;<span class="decl_args">:</span>
+<div class="decl_type"><span class="fn">z₁</span></div>
 </div>
 
 
 
 
 
-<p>The <code>xor2</code> operation return <code>z₂</code>.</p>
+<p>The output of the <code>xor1</code> operation is with the proper arguments a <code>z₁</code> object.</p>
 
 
+
+    <details>
+        <summary>Equations</summary>
+        <ul class="equations">
+            
+                <li class="equation"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.xor1_output">quarterround.xor1_output</a> y₁</span> y₀y₁y₂y₃</span> r₁</span> z₁</span> I₁</span> Y</span> R₁</span> xor1</span> <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#eq" title="eq">=</a> <span class="fn">xor1 <span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn">((<a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.xor1_input">quarterround.xor1_input</a> y₁</span> y₀y₁y₂y₃</span> r₁</span> I₁)</span>.<a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod.fst" title="prod.fst">fst</a></span> Y</span>, R₁)</span></span></span></li>
+            
+        </ul>
+    </details>
 
 
 
@@ -296,8 +383,8 @@
     
         
         
-<div class="decl" id="quarterround.m₃">
-<div class="constant">
+<div class="decl" id="quarterround.mod2_input">
+<div class="def">
 
 <div class="gh_link"><a href="">source</a></div>
 
@@ -307,19 +394,32 @@
     
 
 
-<span class="decl_kind">constant</span>
-<span class="decl_name"><a class="break_within" href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.m₃"><span class="name">quarterround</span>.<span class="name">m₃</span></a></span>
-&nbsp;<span class="decl_args">:</span>
-<div class="decl_type"><span class="fn">Type u</span></div>
+<span class="decl_kind">def</span>
+<span class="decl_name"><a class="break_within" href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.mod2_input"><span class="name">quarterround</span>.<span class="name">mod2_input</span></a></span>
+
+    <span class="decl_args"><span class="fn">(y₀ y₀y₁y₂y₃ z₁ : Type u)</span></span>
+    <span class="decl_args"><span class="fn">(I₀ : y₀y₁y₂y₃ <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/isomorphism.html#category_theory.iso" title="category_theory.iso">≅</a> y₀)</span></span>
+    <span class="decl_args"><span class="fn">(Y : y₀y₁y₂y₃)</span></span>
+    <span class="decl_args"><span class="fn">(Z₁ : z₁)</span></span>&nbsp;<span class="decl_args">:</span>
+<div class="decl_type"><span class="fn">z₁ <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod" title="prod">×</a> y₀</span></div>
 </div>
 
 
 
 
 
-<p>The response of the <code>mod3</code> operation as an object of the <code>Type u</code> category.</p>
+<p>The <code>mod2</code> input is a pair formed with <code>z₁</code> and the <code>I₀</code> isomorphism.</p>
 
 
+
+    <details>
+        <summary>Equations</summary>
+        <ul class="equations">
+            
+                <li class="equation"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.mod2_input">quarterround.mod2_input</a> y₀</span> y₀y₁y₂y₃</span> z₁</span> I₀</span> Y</span> Z₁</span> <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#eq" title="eq">=</a> <span class="fn">(Z₁, <span class="fn">I₀.<a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/isomorphism.html#category_theory.iso.hom" title="category_theory.iso.hom">hom</a> Y)</span></span></span></li>
+            
+        </ul>
+    </details>
 
 
 
@@ -336,8 +436,8 @@
     
         
         
-<div class="decl" id="quarterround.m₀">
-<div class="constant">
+<div class="decl" id="quarterround.mod2_output">
+<div class="def">
 
 <div class="gh_link"><a href="">source</a></div>
 
@@ -347,19 +447,711 @@
     
 
 
-<span class="decl_kind">constant</span>
-<span class="decl_name"><a class="break_within" href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.m₀"><span class="name">quarterround</span>.<span class="name">m₀</span></a></span>
-&nbsp;<span class="decl_args">:</span>
-<div class="decl_type"><span class="fn">Type u</span></div>
+<span class="decl_kind">def</span>
+<span class="decl_name"><a class="break_within" href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.mod2_output"><span class="name">quarterround</span>.<span class="name">mod2_output</span></a></span>
+
+    <span class="decl_args"><span class="fn">(y₀ y₀y₁y₂y₃ m₂ z₁ : Type u)</span></span>
+    <span class="decl_args"><span class="fn">(I₀ : y₀y₁y₂y₃ <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/isomorphism.html#category_theory.iso" title="category_theory.iso">≅</a> y₀)</span></span>
+    <span class="decl_args"><span class="fn">(Y : y₀y₁y₂y₃)</span></span>
+    <span class="decl_args"><span class="fn">(Z₁ : z₁)</span></span>
+    <span class="decl_args"><span class="fn">(mod2 : <span class="fn">z₁ <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod" title="prod">×</a> y₀</span> <a href="https://oxarbitrage.github.io/salsa20-docs/combinatorics/quiver/basic.html#quiver.hom" title="quiver.hom">⟶</a> m₂)</span></span>&nbsp;<span class="decl_args">:</span>
+<div class="decl_type"><span class="fn">m₂</span></div>
 </div>
 
 
 
 
 
-<p>The response of the <code>mod0</code> operation as an object of the <code>Type u</code> category.</p>
+<p>The output of the <code>mod2</code> operation is with the proper arguments a <code>m₂</code> object.</p>
 
 
+
+    <details>
+        <summary>Equations</summary>
+        <ul class="equations">
+            
+                <li class="equation"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.mod2_output">quarterround.mod2_output</a> y₀</span> y₀y₁y₂y₃</span> m₂</span> z₁</span> I₀</span> Y</span> Z₁</span> mod2</span> <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#eq" title="eq">=</a> <span class="fn">mod2 <span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.mod2_input">quarterround.mod2_input</a> y₀</span> y₀y₁y₂y₃</span> z₁</span> I₀</span> Y</span> Z₁)</span></span></span></li>
+            
+        </ul>
+    </details>
+
+
+
+
+
+
+
+
+
+</div>
+</div>
+    
+
+    
+        
+        
+<div class="decl" id="quarterround.rotl9">
+<div class="def">
+
+<div class="gh_link"><a href="">source</a></div>
+
+
+
+<div class="decl_header">
+    
+
+
+<span class="decl_kind">def</span>
+<span class="decl_name"><a class="break_within" href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.rotl9"><span class="name">quarterround</span>.<span class="name">rotl9</span></a></span>
+
+    <span class="decl_args"><span class="fn">(m₂ r₂ : Type u)</span></span>
+    <span class="decl_args"><span class="fn">(I'₂ : m₂ <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/isomorphism.html#category_theory.iso" title="category_theory.iso">≅</a> r₂)</span></span>&nbsp;<span class="decl_args">:</span>
+<div class="decl_type"><span class="fn">m₂ <a href="https://oxarbitrage.github.io/salsa20-docs/combinatorics/quiver/basic.html#quiver.hom" title="quiver.hom">⟶</a> r₂</span></div>
+</div>
+
+
+
+
+
+<p>The <code>rotl9</code> operation.</p>
+
+
+
+    <details>
+        <summary>Equations</summary>
+        <ul class="equations">
+            
+                <li class="equation"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.rotl9">quarterround.rotl9</a> m₂</span> r₂</span> I'₂</span> <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#eq" title="eq">=</a> I'₂.<a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/isomorphism.html#category_theory.iso.hom" title="category_theory.iso.hom">hom</a></span></li>
+            
+        </ul>
+    </details>
+
+
+
+
+
+
+
+
+
+</div>
+</div>
+    
+
+    
+        
+        
+<div class="decl" id="quarterround.xor2_input">
+<div class="def">
+
+<div class="gh_link"><a href="">source</a></div>
+
+
+
+<div class="decl_header">
+    
+
+
+<span class="decl_kind">def</span>
+<span class="decl_name"><a class="break_within" href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.xor2_input"><span class="name">quarterround</span>.<span class="name">xor2_input</span></a></span>
+
+    <span class="decl_args"><span class="fn">(y₂ y₀y₁y₂y₃ r₂ : Type u)</span></span>
+    <span class="decl_args"><span class="fn">(I₂ : y₀y₁y₂y₃ <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/isomorphism.html#category_theory.iso" title="category_theory.iso">≅</a> y₂)</span></span>&nbsp;<span class="decl_args">:</span>
+<div class="decl_type"><span class="fn"><span class="fn">(y₀y₁y₂y₃ <a href="https://oxarbitrage.github.io/salsa20-docs/combinatorics/quiver/basic.html#quiver.hom" title="quiver.hom">⟶</a> y₂)</span> <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod" title="prod">×</a> <span class="fn">Type u</span></span></div>
+</div>
+
+
+
+
+
+<p>The input of the <code>xor2</code> operation.</p>
+
+
+
+    <details>
+        <summary>Equations</summary>
+        <ul class="equations">
+            
+                <li class="equation"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.xor2_input">quarterround.xor2_input</a> y₂</span> y₀y₁y₂y₃</span> r₂</span> I₂</span> <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#eq" title="eq">=</a> <span class="fn">(I₂.<a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/isomorphism.html#category_theory.iso.hom" title="category_theory.iso.hom">hom</a>, r₂)</span></span></li>
+            
+        </ul>
+    </details>
+
+
+
+
+
+
+
+
+
+</div>
+</div>
+    
+
+    
+        
+        
+<div class="decl" id="quarterround.xor2_output">
+<div class="def">
+
+<div class="gh_link"><a href="">source</a></div>
+
+
+
+<div class="decl_header">
+    
+
+
+<span class="decl_kind">def</span>
+<span class="decl_name"><a class="break_within" href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.xor2_output"><span class="name">quarterround</span>.<span class="name">xor2_output</span></a></span>
+
+    <span class="decl_args"><span class="fn">(y₂ y₀y₁y₂y₃ r₂ z₂ : Type u)</span></span>
+    <span class="decl_args"><span class="fn">(I₂ : y₀y₁y₂y₃ <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/isomorphism.html#category_theory.iso" title="category_theory.iso">≅</a> y₂)</span></span>
+    <span class="decl_args"><span class="fn">(Y : y₀y₁y₂y₃)</span></span>
+    <span class="decl_args"><span class="fn">(R₂ : r₂)</span></span>
+    <span class="decl_args"><span class="fn">(xor2 : <span class="fn">y₂ <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod" title="prod">×</a> r₂</span> <a href="https://oxarbitrage.github.io/salsa20-docs/combinatorics/quiver/basic.html#quiver.hom" title="quiver.hom">⟶</a> z₂)</span></span>&nbsp;<span class="decl_args">:</span>
+<div class="decl_type"><span class="fn">z₂</span></div>
+</div>
+
+
+
+
+
+<p>The output of the <code>xor2</code> operation is with the proper arguments a <code>z₂</code> object.</p>
+
+
+
+    <details>
+        <summary>Equations</summary>
+        <ul class="equations">
+            
+                <li class="equation"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.xor2_output">quarterround.xor2_output</a> y₂</span> y₀y₁y₂y₃</span> r₂</span> z₂</span> I₂</span> Y</span> R₂</span> xor2</span> <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#eq" title="eq">=</a> <span class="fn">xor2 <span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn">((<a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.xor2_input">quarterround.xor2_input</a> y₂</span> y₀y₁y₂y₃</span> r₂</span> I₂)</span>.<a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod.fst" title="prod.fst">fst</a></span> Y</span>, R₂)</span></span></span></li>
+            
+        </ul>
+    </details>
+
+
+
+
+
+
+
+
+
+</div>
+</div>
+    
+
+    
+        
+        
+<div class="decl" id="quarterround.mod3_input">
+<div class="def">
+
+<div class="gh_link"><a href="">source</a></div>
+
+
+
+<div class="decl_header">
+    
+
+
+<span class="decl_kind">def</span>
+<span class="decl_name"><a class="break_within" href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.mod3_input"><span class="name">quarterround</span>.<span class="name">mod3_input</span></a></span>
+
+    <span class="decl_args"><span class="fn">(z₁ z₂ : Type u)</span></span>
+    <span class="decl_args"><span class="fn">(Z₁ : z₁)</span></span>
+    <span class="decl_args"><span class="fn">(Z₂ : z₂)</span></span>&nbsp;<span class="decl_args">:</span>
+<div class="decl_type"><span class="fn">z₂ <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod" title="prod">×</a> z₁</span></div>
+</div>
+
+
+
+
+
+<p>The <code>mod3</code> input is a pair formed of <code>z₂</code> and <code>z₁</code> objects.</p>
+
+
+
+    <details>
+        <summary>Equations</summary>
+        <ul class="equations">
+            
+                <li class="equation"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.mod3_input">quarterround.mod3_input</a> z₁</span> z₂</span> Z₁</span> Z₂</span> <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#eq" title="eq">=</a> <span class="fn">(Z₂, Z₁)</span></span></li>
+            
+        </ul>
+    </details>
+
+
+
+
+
+
+
+
+
+</div>
+</div>
+    
+
+    
+        
+        
+<div class="decl" id="quarterround.mod3_output">
+<div class="def">
+
+<div class="gh_link"><a href="">source</a></div>
+
+
+
+<div class="decl_header">
+    
+
+
+<span class="decl_kind">def</span>
+<span class="decl_name"><a class="break_within" href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.mod3_output"><span class="name">quarterround</span>.<span class="name">mod3_output</span></a></span>
+
+    <span class="decl_args"><span class="fn">(m₃ z₁ z₂ : Type u)</span></span>
+    <span class="decl_args"><span class="fn">(Z₁ : z₁)</span></span>
+    <span class="decl_args"><span class="fn">(Z₂ : z₂)</span></span>
+    <span class="decl_args"><span class="fn">(mod3 : <span class="fn">z₂ <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod" title="prod">×</a> z₁</span> <a href="https://oxarbitrage.github.io/salsa20-docs/combinatorics/quiver/basic.html#quiver.hom" title="quiver.hom">⟶</a> m₃)</span></span>&nbsp;<span class="decl_args">:</span>
+<div class="decl_type"><span class="fn">m₃</span></div>
+</div>
+
+
+
+
+
+<p>The output of the <code>mod3</code> operation is with the proper arguments a <code>m₃</code> object.</p>
+
+
+
+    <details>
+        <summary>Equations</summary>
+        <ul class="equations">
+            
+                <li class="equation"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.mod3_output">quarterround.mod3_output</a> m₃</span> z₁</span> z₂</span> Z₁</span> Z₂</span> mod3</span> <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#eq" title="eq">=</a> <span class="fn">mod3 <span class="fn"><span class="fn"><span class="fn"><span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.mod3_input">quarterround.mod3_input</a> z₁</span> z₂</span> Z₁</span> Z₂)</span></span></span></li>
+            
+        </ul>
+    </details>
+
+
+
+
+
+
+
+
+
+</div>
+</div>
+    
+
+    
+        
+        
+<div class="decl" id="quarterround.rotl13">
+<div class="def">
+
+<div class="gh_link"><a href="">source</a></div>
+
+
+
+<div class="decl_header">
+    
+
+
+<span class="decl_kind">def</span>
+<span class="decl_name"><a class="break_within" href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.rotl13"><span class="name">quarterround</span>.<span class="name">rotl13</span></a></span>
+
+    <span class="decl_args"><span class="fn">(m₃ r₃ : Type u)</span></span>
+    <span class="decl_args"><span class="fn">(I'₃ : m₃ <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/isomorphism.html#category_theory.iso" title="category_theory.iso">≅</a> r₃)</span></span>&nbsp;<span class="decl_args">:</span>
+<div class="decl_type"><span class="fn">m₃ <a href="https://oxarbitrage.github.io/salsa20-docs/combinatorics/quiver/basic.html#quiver.hom" title="quiver.hom">⟶</a> r₃</span></div>
+</div>
+
+
+
+
+
+<p>The <code>rotl13</code> operation.</p>
+
+
+
+    <details>
+        <summary>Equations</summary>
+        <ul class="equations">
+            
+                <li class="equation"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.rotl13">quarterround.rotl13</a> m₃</span> r₃</span> I'₃</span> <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#eq" title="eq">=</a> I'₃.<a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/isomorphism.html#category_theory.iso.hom" title="category_theory.iso.hom">hom</a></span></li>
+            
+        </ul>
+    </details>
+
+
+
+
+
+
+
+
+
+</div>
+</div>
+    
+
+    
+        
+        
+<div class="decl" id="quarterround.xor3_input">
+<div class="def">
+
+<div class="gh_link"><a href="">source</a></div>
+
+
+
+<div class="decl_header">
+    
+
+
+<span class="decl_kind">def</span>
+<span class="decl_name"><a class="break_within" href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.xor3_input"><span class="name">quarterround</span>.<span class="name">xor3_input</span></a></span>
+
+    <span class="decl_args"><span class="fn">(y₃ y₀y₁y₂y₃ r₃ : Type u)</span></span>
+    <span class="decl_args"><span class="fn">(I₃ : y₀y₁y₂y₃ <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/isomorphism.html#category_theory.iso" title="category_theory.iso">≅</a> y₃)</span></span>&nbsp;<span class="decl_args">:</span>
+<div class="decl_type"><span class="fn"><span class="fn">(y₀y₁y₂y₃ <a href="https://oxarbitrage.github.io/salsa20-docs/combinatorics/quiver/basic.html#quiver.hom" title="quiver.hom">⟶</a> y₃)</span> <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod" title="prod">×</a> <span class="fn">Type u</span></span></div>
+</div>
+
+
+
+
+
+<p>The input of the <code>xor3</code> operation.</p>
+
+
+
+    <details>
+        <summary>Equations</summary>
+        <ul class="equations">
+            
+                <li class="equation"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.xor3_input">quarterround.xor3_input</a> y₃</span> y₀y₁y₂y₃</span> r₃</span> I₃</span> <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#eq" title="eq">=</a> <span class="fn">(I₃.<a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/isomorphism.html#category_theory.iso.hom" title="category_theory.iso.hom">hom</a>, r₃)</span></span></li>
+            
+        </ul>
+    </details>
+
+
+
+
+
+
+
+
+
+</div>
+</div>
+    
+
+    
+        
+        
+<div class="decl" id="quarterround.xor3_output">
+<div class="def">
+
+<div class="gh_link"><a href="">source</a></div>
+
+
+
+<div class="decl_header">
+    
+
+
+<span class="decl_kind">def</span>
+<span class="decl_name"><a class="break_within" href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.xor3_output"><span class="name">quarterround</span>.<span class="name">xor3_output</span></a></span>
+
+    <span class="decl_args"><span class="fn">(y₃ y₀y₁y₂y₃ r₃ z₃ : Type u)</span></span>
+    <span class="decl_args"><span class="fn">(I₃ : y₀y₁y₂y₃ <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/isomorphism.html#category_theory.iso" title="category_theory.iso">≅</a> y₃)</span></span>
+    <span class="decl_args"><span class="fn">(Y : y₀y₁y₂y₃)</span></span>
+    <span class="decl_args"><span class="fn">(R₃ : r₃)</span></span>
+    <span class="decl_args"><span class="fn">(xor3 : <span class="fn">y₃ <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod" title="prod">×</a> r₃</span> <a href="https://oxarbitrage.github.io/salsa20-docs/combinatorics/quiver/basic.html#quiver.hom" title="quiver.hom">⟶</a> z₃)</span></span>&nbsp;<span class="decl_args">:</span>
+<div class="decl_type"><span class="fn">z₃</span></div>
+</div>
+
+
+
+
+
+<p>The output of the <code>xor3</code> operation is with the proper arguments a <code>z₃</code> object.</p>
+
+
+
+    <details>
+        <summary>Equations</summary>
+        <ul class="equations">
+            
+                <li class="equation"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.xor3_output">quarterround.xor3_output</a> y₃</span> y₀y₁y₂y₃</span> r₃</span> z₃</span> I₃</span> Y</span> R₃</span> xor3</span> <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#eq" title="eq">=</a> <span class="fn">xor3 <span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn">((<a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.xor3_input">quarterround.xor3_input</a> y₃</span> y₀y₁y₂y₃</span> r₃</span> I₃)</span>.<a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod.fst" title="prod.fst">fst</a></span> Y</span>, R₃)</span></span></span></li>
+            
+        </ul>
+    </details>
+
+
+
+
+
+
+
+
+
+</div>
+</div>
+    
+
+    
+        
+        
+<div class="decl" id="quarterround.mod0_input">
+<div class="def">
+
+<div class="gh_link"><a href="">source</a></div>
+
+
+
+<div class="decl_header">
+    
+
+
+<span class="decl_kind">def</span>
+<span class="decl_name"><a class="break_within" href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.mod0_input"><span class="name">quarterround</span>.<span class="name">mod0_input</span></a></span>
+
+    <span class="decl_args"><span class="fn">(z₂ z₃ : Type u)</span></span>
+    <span class="decl_args"><span class="fn">(Z₂ : z₂)</span></span>
+    <span class="decl_args"><span class="fn">(Z₃ : z₃)</span></span>&nbsp;<span class="decl_args">:</span>
+<div class="decl_type"><span class="fn">z₃ <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod" title="prod">×</a> z₂</span></div>
+</div>
+
+
+
+
+
+<p>The <code>mod0</code> input is a pair formed of <code>z₃</code> and <code>z₂</code> objects.</p>
+
+
+
+    <details>
+        <summary>Equations</summary>
+        <ul class="equations">
+            
+                <li class="equation"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.mod0_input">quarterround.mod0_input</a> z₂</span> z₃</span> Z₂</span> Z₃</span> <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#eq" title="eq">=</a> <span class="fn">(Z₃, Z₂)</span></span></li>
+            
+        </ul>
+    </details>
+
+
+
+
+
+
+
+
+
+</div>
+</div>
+    
+
+    
+        
+        
+<div class="decl" id="quarterround.mod0_output">
+<div class="def">
+
+<div class="gh_link"><a href="">source</a></div>
+
+
+
+<div class="decl_header">
+    
+
+
+<span class="decl_kind">def</span>
+<span class="decl_name"><a class="break_within" href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.mod0_output"><span class="name">quarterround</span>.<span class="name">mod0_output</span></a></span>
+
+    <span class="decl_args"><span class="fn">(m₀ z₂ z₃ : Type u)</span></span>
+    <span class="decl_args"><span class="fn">(Z₂ : z₂)</span></span>
+    <span class="decl_args"><span class="fn">(Z₃ : z₃)</span></span>
+    <span class="decl_args"><span class="fn">(mod0 : <span class="fn">z₃ <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod" title="prod">×</a> z₂</span> <a href="https://oxarbitrage.github.io/salsa20-docs/combinatorics/quiver/basic.html#quiver.hom" title="quiver.hom">⟶</a> m₀)</span></span>&nbsp;<span class="decl_args">:</span>
+<div class="decl_type"><span class="fn">m₀</span></div>
+</div>
+
+
+
+
+
+<p>The output of the <code>mod0</code> operation is with the proper arguments a <code>m₀</code> object.</p>
+
+
+
+    <details>
+        <summary>Equations</summary>
+        <ul class="equations">
+            
+                <li class="equation"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.mod0_output">quarterround.mod0_output</a> m₀</span> z₂</span> z₃</span> Z₂</span> Z₃</span> mod0</span> <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#eq" title="eq">=</a> <span class="fn">mod0 <span class="fn"><span class="fn"><span class="fn"><span class="fn">(<a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.mod0_input">quarterround.mod0_input</a> z₂</span> z₃</span> Z₂</span> Z₃)</span></span></span></li>
+            
+        </ul>
+    </details>
+
+
+
+
+
+
+
+
+
+</div>
+</div>
+    
+
+    
+        
+        
+<div class="decl" id="quarterround.rotl18">
+<div class="def">
+
+<div class="gh_link"><a href="">source</a></div>
+
+
+
+<div class="decl_header">
+    
+
+
+<span class="decl_kind">def</span>
+<span class="decl_name"><a class="break_within" href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.rotl18"><span class="name">quarterround</span>.<span class="name">rotl18</span></a></span>
+
+    <span class="decl_args"><span class="fn">(m₀ r₀ : Type u)</span></span>
+    <span class="decl_args"><span class="fn">(I : m₀ <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/isomorphism.html#category_theory.iso" title="category_theory.iso">≅</a> r₀)</span></span>&nbsp;<span class="decl_args">:</span>
+<div class="decl_type"><span class="fn">m₀ <a href="https://oxarbitrage.github.io/salsa20-docs/combinatorics/quiver/basic.html#quiver.hom" title="quiver.hom">⟶</a> r₀</span></div>
+</div>
+
+
+
+
+
+<p>The <code>rotl13</code> operation.</p>
+
+
+
+    <details>
+        <summary>Equations</summary>
+        <ul class="equations">
+            
+                <li class="equation"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.rotl18">quarterround.rotl18</a> m₀</span> r₀</span> I</span> <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#eq" title="eq">=</a> I.<a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/isomorphism.html#category_theory.iso.hom" title="category_theory.iso.hom">hom</a></span></li>
+            
+        </ul>
+    </details>
+
+
+
+
+
+
+
+
+
+</div>
+</div>
+    
+
+    
+        
+        
+<div class="decl" id="quarterround.xor0_input">
+<div class="def">
+
+<div class="gh_link"><a href="">source</a></div>
+
+
+
+<div class="decl_header">
+    
+
+
+<span class="decl_kind">def</span>
+<span class="decl_name"><a class="break_within" href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.xor0_input"><span class="name">quarterround</span>.<span class="name">xor0_input</span></a></span>
+
+    <span class="decl_args"><span class="fn">(y₀ y₀y₁y₂y₃ r₀ : Type u)</span></span>
+    <span class="decl_args"><span class="fn">(I₀ : y₀y₁y₂y₃ <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/isomorphism.html#category_theory.iso" title="category_theory.iso">≅</a> y₀)</span></span>&nbsp;<span class="decl_args">:</span>
+<div class="decl_type"><span class="fn"><span class="fn">(y₀y₁y₂y₃ <a href="https://oxarbitrage.github.io/salsa20-docs/combinatorics/quiver/basic.html#quiver.hom" title="quiver.hom">⟶</a> y₀)</span> <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod" title="prod">×</a> <span class="fn">Type u</span></span></div>
+</div>
+
+
+
+
+
+<p>The input of the <code>xor0</code> operation.</p>
+
+
+
+    <details>
+        <summary>Equations</summary>
+        <ul class="equations">
+            
+                <li class="equation"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.xor0_input">quarterround.xor0_input</a> y₀</span> y₀y₁y₂y₃</span> r₀</span> I₀</span> <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#eq" title="eq">=</a> <span class="fn">(I₀.<a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/isomorphism.html#category_theory.iso.hom" title="category_theory.iso.hom">hom</a>, r₀)</span></span></li>
+            
+        </ul>
+    </details>
+
+
+
+
+
+
+
+
+
+</div>
+</div>
+    
+
+    
+        
+        
+<div class="decl" id="quarterround.xor0_output">
+<div class="def">
+
+<div class="gh_link"><a href="">source</a></div>
+
+
+
+<div class="decl_header">
+    
+
+
+<span class="decl_kind">def</span>
+<span class="decl_name"><a class="break_within" href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.xor0_output"><span class="name">quarterround</span>.<span class="name">xor0_output</span></a></span>
+
+    <span class="decl_args"><span class="fn">(y₀ y₀y₁y₂y₃ r₀ z₀ : Type u)</span></span>
+    <span class="decl_args"><span class="fn">(I₀ : y₀y₁y₂y₃ <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/isomorphism.html#category_theory.iso" title="category_theory.iso">≅</a> y₀)</span></span>
+    <span class="decl_args"><span class="fn">(Y : y₀y₁y₂y₃)</span></span>
+    <span class="decl_args"><span class="fn">(R₀ : r₀)</span></span>
+    <span class="decl_args"><span class="fn">(xor0 : <span class="fn">y₀ <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod" title="prod">×</a> r₀</span> <a href="https://oxarbitrage.github.io/salsa20-docs/combinatorics/quiver/basic.html#quiver.hom" title="quiver.hom">⟶</a> z₀)</span></span>&nbsp;<span class="decl_args">:</span>
+<div class="decl_type"><span class="fn">z₀</span></div>
+</div>
+
+
+
+
+
+<p>The output of the <code>xor0</code> operation is with the proper arguments a <code>z₀</code> object.</p>
+
+
+
+    <details>
+        <summary>Equations</summary>
+        <ul class="equations">
+            
+                <li class="equation"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.xor0_output">quarterround.xor0_output</a> y₀</span> y₀y₁y₂y₃</span> r₀</span> z₀</span> I₀</span> Y</span> R₀</span> xor0</span> <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#eq" title="eq">=</a> <span class="fn">xor0 <span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn">((<a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.xor0_input">quarterround.xor0_input</a> y₀</span> y₀y₁y₂y₃</span> r₀</span> I₀)</span>.<a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod.fst" title="prod.fst">fst</a></span> Y</span>, R₀)</span></span></span></li>
+            
+        </ul>
+    </details>
 
 
 
@@ -377,7 +1169,7 @@
         
         
 <div class="decl" id="quarterround.quarterround">
-<div class="constant">
+<div class="def">
 
 <div class="gh_link"><a href="">source</a></div>
 
@@ -387,10 +1179,11 @@
     
 
 
-<span class="decl_kind">constant</span>
+<span class="decl_kind">def</span>
 <span class="decl_name"><a class="break_within" href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.quarterround"><span class="name">quarterround</span>.<span class="name">quarterround</span></a></span>
 
-    <span class="decl_args"><span class="fn">(y₀y₁y₂y₃ z₀z₁z₂z₃ : Type u)</span></span>&nbsp;<span class="decl_args">:</span>
+    <span class="decl_args"><span class="fn">(y₀y₁y₂y₃ z₀z₁z₂z₃ : Type u)</span></span>
+    <span class="decl_args"><span class="fn">(I'' : y₀y₁y₂y₃ <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/isomorphism.html#category_theory.iso" title="category_theory.iso">≅</a> z₀z₁z₂z₃)</span></span>&nbsp;<span class="decl_args">:</span>
 <div class="decl_type"><span class="fn">y₀y₁y₂y₃ <a href="https://oxarbitrage.github.io/salsa20-docs/combinatorics/quiver/basic.html#quiver.hom" title="quiver.hom">⟶</a> z₀z₁z₂z₃</span></div>
 </div>
 
@@ -398,9 +1191,18 @@
 
 
 
-<p>Convert an object of <code>Type u</code> into another object of <code>Type u</code>.</p>
+<p>The quarterround function as the morphism of the existing isomorphism between input and output.</p>
 
 
+
+    <details>
+        <summary>Equations</summary>
+        <ul class="equations">
+            
+                <li class="equation"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.quarterround">quarterround.quarterround</a> y₀y₁y₂y₃</span> z₀z₁z₂z₃</span> I''</span> <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#eq" title="eq">=</a> I''.<a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/isomorphism.html#category_theory.iso.hom" title="category_theory.iso.hom">hom</a></span></li>
+            
+        </ul>
+    </details>
 
 
 
@@ -417,8 +1219,8 @@
     
         
         
-<div class="decl" id="quarterround.quarterround_iso">
-<div class="constant">
+<div class="decl" id="quarterround.quarterround_inv">
+<div class="def">
 
 <div class="gh_link"><a href="">source</a></div>
 
@@ -428,20 +1230,30 @@
     
 
 
-<span class="decl_kind">constant</span>
-<span class="decl_name"><a class="break_within" href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.quarterround_iso"><span class="name">quarterround</span>.<span class="name">quarterround_iso</span></a></span>
+<span class="decl_kind">def</span>
+<span class="decl_name"><a class="break_within" href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.quarterround_inv"><span class="name">quarterround</span>.<span class="name">quarterround_inv</span></a></span>
 
-    <span class="decl_args"><span class="fn">(y₀y₁y₂y₃ z₀z₁z₂z₃ : Type u)</span></span>&nbsp;<span class="decl_args">:</span>
-<div class="decl_type"><span class="fn">y₀y₁y₂y₃ <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/isomorphism.html#category_theory.iso" title="category_theory.iso">≅</a> z₀z₁z₂z₃</span></div>
+    <span class="decl_args"><span class="fn">(y₀y₁y₂y₃ z₀z₁z₂z₃ : Type u)</span></span>
+    <span class="decl_args"><span class="fn">(I'' : y₀y₁y₂y₃ <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/isomorphism.html#category_theory.iso" title="category_theory.iso">≅</a> z₀z₁z₂z₃)</span></span>&nbsp;<span class="decl_args">:</span>
+<div class="decl_type"><span class="fn">z₀z₁z₂z₃ <a href="https://oxarbitrage.github.io/salsa20-docs/combinatorics/quiver/basic.html#quiver.hom" title="quiver.hom">⟶</a> y₀y₁y₂y₃</span></div>
 </div>
 
 
 
 
 
-<p>Quarterround is isomorphic.</p>
+<p>The quarterround inverse function as the inverse morphism of the existing isomorphism between input and output.</p>
 
 
+
+    <details>
+        <summary>Equations</summary>
+        <ul class="equations">
+            
+                <li class="equation"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/quarterround.html#quarterround.quarterround_inv">quarterround.quarterround_inv</a> y₀y₁y₂y₃</span> z₀z₁z₂z₃</span> I''</span> <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#eq" title="eq">=</a> I''.<a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/isomorphism.html#category_theory.iso.inv" title="category_theory.iso.inv">inv</a></span></li>
+            
+        </ul>
+    </details>
 
 
 
@@ -1340,20 +2152,7 @@
             <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/functor/category.html">category</a>
         </div>
         <div class="nav_link ">
-            <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/functor/epi_mono.html">epi_mono</a>
-        </div>
-        <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/functor/fully_faithful.html">fully_faithful</a>
-        </div>
-        <div class="nav_link ">
-            <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/functor/reflects_isomorphisms.html">reflects_isomorphisms</a>
-        </div>
-        </details>
-        <details class="nav_sect" data-path="category_theory/monad" >
-            <summary>monad</summary>
-            
-        <div class="nav_link ">
-            <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/monad/basic.html">basic</a>
         </div>
         </details>
         <details class="nav_sect" data-path="category_theory/pi" >
@@ -1370,9 +2169,6 @@
             <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/products/basic.html">basic</a>
         </div>
         </details>
-        <div class="nav_link ">
-            <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/balanced.html">balanced</a>
-        </div>
         <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/core.html">core</a>
         </div>

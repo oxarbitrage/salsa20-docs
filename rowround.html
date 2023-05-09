@@ -59,13 +59,47 @@
 </div>
 
 
+    <div class="nav_link"><a class="break_within" href="#rowround.first"><span class="name">rowround</span>.<span class="name">first</span></a></div>
+
+    <div class="nav_link"><a class="break_within" href="#rowround.first_is_invertible"><span class="name">rowround</span>.<span class="name">first_is_invertible</span></a></div>
+
+    <div class="nav_link"><a class="break_within" href="#rowround.fourth"><span class="name">rowround</span>.<span class="name">fourth</span></a></div>
+
+    <div class="nav_link"><a class="break_within" href="#rowround.join"><span class="name">rowround</span>.<span class="name">join</span></a></div>
+
+    <div class="nav_link"><a class="break_within" href="#rowround.order1"><span class="name">rowround</span>.<span class="name">order1</span></a></div>
+
     <div class="nav_link"><a class="break_within" href="#rowround.order1_inv"><span class="name">rowround</span>.<span class="name">order1_inv</span></a></div>
+
+    <div class="nav_link"><a class="break_within" href="#rowround.order2"><span class="name">rowround</span>.<span class="name">order2</span></a></div>
 
     <div class="nav_link"><a class="break_within" href="#rowround.order2_inv"><span class="name">rowround</span>.<span class="name">order2_inv</span></a></div>
 
+    <div class="nav_link"><a class="break_within" href="#rowround.order3"><span class="name">rowround</span>.<span class="name">order3</span></a></div>
+
     <div class="nav_link"><a class="break_within" href="#rowround.order3_inv"><span class="name">rowround</span>.<span class="name">order3_inv</span></a></div>
 
+    <div class="nav_link"><a class="break_within" href="#rowround.order4"><span class="name">rowround</span>.<span class="name">order4</span></a></div>
+
     <div class="nav_link"><a class="break_within" href="#rowround.order4_inv"><span class="name">rowround</span>.<span class="name">order4_inv</span></a></div>
+
+    <div class="nav_link"><a class="break_within" href="#rowround.quarterround1"><span class="name">rowround</span>.<span class="name">quarterround1</span></a></div>
+
+    <div class="nav_link"><a class="break_within" href="#rowround.quarterround2"><span class="name">rowround</span>.<span class="name">quarterround2</span></a></div>
+
+    <div class="nav_link"><a class="break_within" href="#rowround.quarterround3"><span class="name">rowround</span>.<span class="name">quarterround3</span></a></div>
+
+    <div class="nav_link"><a class="break_within" href="#rowround.quarterround4"><span class="name">rowround</span>.<span class="name">quarterround4</span></a></div>
+
+    <div class="nav_link"><a class="break_within" href="#rowround.rowround"><span class="name">rowround</span>.<span class="name">rowround</span></a></div>
+
+    <div class="nav_link"><a class="break_within" href="#rowround.rowround_inv"><span class="name">rowround</span>.<span class="name">rowround_inv</span></a></div>
+
+    <div class="nav_link"><a class="break_within" href="#rowround.rowround_is_invertible"><span class="name">rowround</span>.<span class="name">rowround_is_invertible</span></a></div>
+
+    <div class="nav_link"><a class="break_within" href="#rowround.second"><span class="name">rowround</span>.<span class="name">second</span></a></div>
+
+    <div class="nav_link"><a class="break_within" href="#rowround.third"><span class="name">rowround</span>.<span class="name">third</span></a></div>
 
 </nav>
 
@@ -85,32 +119,680 @@
     
 
     
-        <div class="mod_doc">
-            <p>Rowround can be done in paralell.</p>
-<p>First we define objects and morphisms that will split the input of 16 objects
-into 4 sub products of 4 objects each.</p>
+        
+        
+<div class="decl" id="rowround.first">
+<div class="def">
 
-        </div>
+<div class="gh_link"><a href="">source</a></div>
+
+
+
+<div class="decl_header">
+    
+
+
+<span class="decl_kind">def</span>
+<span class="decl_name"><a class="break_within" href="https://oxarbitrage.github.io/salsa20-docs/rowround.html#rowround.first"><span class="name">rowround</span>.<span class="name">first</span></a></span>
+
+    <span class="decl_args"><span class="fn">(y₀y₁y₂y₃y₄y₅y₆y₇y₈y₉y₁₀y₁₁y₁₂y₁₃y₁₄y₁₅ y₀y₁y₂y₃ : Type u)</span></span>
+    <span class="decl_args"><span class="fn">(I₁ : y₀y₁y₂y₃y₄y₅y₆y₇y₈y₉y₁₀y₁₁y₁₂y₁₃y₁₄y₁₅ <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/isomorphism.html#category_theory.iso" title="category_theory.iso">≅</a> y₀y₁y₂y₃)</span></span>&nbsp;<span class="decl_args">:</span>
+<div class="decl_type"><span class="fn">y₀y₁y₂y₃y₄y₅y₆y₇y₈y₉y₁₀y₁₁y₁₂y₁₃y₁₄y₁₅ <a href="https://oxarbitrage.github.io/salsa20-docs/combinatorics/quiver/basic.html#quiver.hom" title="quiver.hom">⟶</a> y₀y₁y₂y₃</span></div>
+</div>
+
+
+
+
+
+<p>Given the rowround input as a product of 16, get the first 4 objects from it.</p>
+
+
+
+    <details>
+        <summary>Equations</summary>
+        <ul class="equations">
+            
+                <li class="equation"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/rowround.html#rowround.first">rowround.first</a> y₀y₁y₂y₃y₄y₅y₆y₇y₈y₉y₁₀y₁₁y₁₂y₁₃y₁₄y₁₅</span> y₀y₁y₂y₃</span> I₁</span> <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#eq" title="eq">=</a> I₁.<a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/isomorphism.html#category_theory.iso.hom" title="category_theory.iso.hom">hom</a></span></li>
+            
+        </ul>
+    </details>
+
+
+
+
+
+
+
+
+
+</div>
+</div>
+    
+
+    
+        
+        
+<div class="decl" id="rowround.first_is_invertible">
+<div class="theorem">
+
+<div class="gh_link"><a href="">source</a></div>
+
+
+
+<div class="decl_header">
+    
+
+
+<span class="decl_kind">theorem</span>
+<span class="decl_name"><a class="break_within" href="https://oxarbitrage.github.io/salsa20-docs/rowround.html#rowround.first_is_invertible"><span class="name">rowround</span>.<span class="name">first_is_invertible</span></a></span>
+
+    <span class="decl_args"><span class="fn">(y₀y₁y₂y₃y₄y₅y₆y₇y₈y₉y₁₀y₁₁y₁₂y₁₃y₁₄y₁₅ y₀y₁y₂y₃ : Type u)</span></span>
+    <span class="decl_args"><span class="fn">(I₁ : y₀y₁y₂y₃y₄y₅y₆y₇y₈y₉y₁₀y₁₁y₁₂y₁₃y₁₄y₁₅ <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/isomorphism.html#category_theory.iso" title="category_theory.iso">≅</a> y₀y₁y₂y₃)</span></span>&nbsp;<span class="decl_args">:</span>
+<div class="decl_type"><span class="fn"><span class="fn">I₁.<a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/isomorphism.html#category_theory.iso.hom" title="category_theory.iso.hom">hom</a> <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/category/basic.html#category_theory.category_struct.comp" title="category_theory.category_struct.comp">≫</a> I₁.<a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/isomorphism.html#category_theory.iso.inv" title="category_theory.iso.inv">inv</a></span> <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#eq" title="eq">=</a> <span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/category/basic.html#category_theory.category_struct.id" title="category_theory.category_struct.id">𝟙</a> y₀y₁y₂y₃y₄y₅y₆y₇y₈y₉y₁₀y₁₁y₁₂y₁₃y₁₄y₁₅</span></span></div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+</div>
+    
+
+    
+        
+        
+<div class="decl" id="rowround.second">
+<div class="def">
+
+<div class="gh_link"><a href="">source</a></div>
+
+
+
+<div class="decl_header">
+    
+
+
+<span class="decl_kind">def</span>
+<span class="decl_name"><a class="break_within" href="https://oxarbitrage.github.io/salsa20-docs/rowround.html#rowround.second"><span class="name">rowround</span>.<span class="name">second</span></a></span>
+
+    <span class="decl_args"><span class="fn">(y₀y₁y₂y₃y₄y₅y₆y₇y₈y₉y₁₀y₁₁y₁₂y₁₃y₁₄y₁₅ y₄y₅y₆y₇ : Type u)</span></span>
+    <span class="decl_args"><span class="fn">(I₂ : y₀y₁y₂y₃y₄y₅y₆y₇y₈y₉y₁₀y₁₁y₁₂y₁₃y₁₄y₁₅ <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/isomorphism.html#category_theory.iso" title="category_theory.iso">≅</a> y₄y₅y₆y₇)</span></span>&nbsp;<span class="decl_args">:</span>
+<div class="decl_type"><span class="fn">y₀y₁y₂y₃y₄y₅y₆y₇y₈y₉y₁₀y₁₁y₁₂y₁₃y₁₄y₁₅ <a href="https://oxarbitrage.github.io/salsa20-docs/combinatorics/quiver/basic.html#quiver.hom" title="quiver.hom">⟶</a> y₄y₅y₆y₇</span></div>
+</div>
+
+
+
+
+
+<p>Given the rowround input as a product of 16, get the second 4 objects from it.</p>
+
+
+
+    <details>
+        <summary>Equations</summary>
+        <ul class="equations">
+            
+                <li class="equation"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/rowround.html#rowround.second">rowround.second</a> y₀y₁y₂y₃y₄y₅y₆y₇y₈y₉y₁₀y₁₁y₁₂y₁₃y₁₄y₁₅</span> y₄y₅y₆y₇</span> I₂</span> <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#eq" title="eq">=</a> I₂.<a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/isomorphism.html#category_theory.iso.hom" title="category_theory.iso.hom">hom</a></span></li>
+            
+        </ul>
+    </details>
+
+
+
+
+
+
+
+
+
+</div>
+</div>
+    
+
+    
+        
+        
+<div class="decl" id="rowround.third">
+<div class="def">
+
+<div class="gh_link"><a href="">source</a></div>
+
+
+
+<div class="decl_header">
+    
+
+
+<span class="decl_kind">def</span>
+<span class="decl_name"><a class="break_within" href="https://oxarbitrage.github.io/salsa20-docs/rowround.html#rowround.third"><span class="name">rowround</span>.<span class="name">third</span></a></span>
+
+    <span class="decl_args"><span class="fn">(y₀y₁y₂y₃y₄y₅y₆y₇y₈y₉y₁₀y₁₁y₁₂y₁₃y₁₄y₁₅ y₈y₉y₁₀y₁₁ : Type u)</span></span>
+    <span class="decl_args"><span class="fn">(I₃ : y₀y₁y₂y₃y₄y₅y₆y₇y₈y₉y₁₀y₁₁y₁₂y₁₃y₁₄y₁₅ <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/isomorphism.html#category_theory.iso" title="category_theory.iso">≅</a> y₈y₉y₁₀y₁₁)</span></span>&nbsp;<span class="decl_args">:</span>
+<div class="decl_type"><span class="fn">y₀y₁y₂y₃y₄y₅y₆y₇y₈y₉y₁₀y₁₁y₁₂y₁₃y₁₄y₁₅ <a href="https://oxarbitrage.github.io/salsa20-docs/combinatorics/quiver/basic.html#quiver.hom" title="quiver.hom">⟶</a> y₈y₉y₁₀y₁₁</span></div>
+</div>
+
+
+
+
+
+<p>Given the rowround input as a product of 16, get the third 4 objects from it.</p>
+
+
+
+    <details>
+        <summary>Equations</summary>
+        <ul class="equations">
+            
+                <li class="equation"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/rowround.html#rowround.third">rowround.third</a> y₀y₁y₂y₃y₄y₅y₆y₇y₈y₉y₁₀y₁₁y₁₂y₁₃y₁₄y₁₅</span> y₈y₉y₁₀y₁₁</span> I₃</span> <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#eq" title="eq">=</a> I₃.<a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/isomorphism.html#category_theory.iso.hom" title="category_theory.iso.hom">hom</a></span></li>
+            
+        </ul>
+    </details>
+
+
+
+
+
+
+
+
+
+</div>
+</div>
+    
+
+    
+        
+        
+<div class="decl" id="rowround.fourth">
+<div class="def">
+
+<div class="gh_link"><a href="">source</a></div>
+
+
+
+<div class="decl_header">
+    
+
+
+<span class="decl_kind">def</span>
+<span class="decl_name"><a class="break_within" href="https://oxarbitrage.github.io/salsa20-docs/rowround.html#rowround.fourth"><span class="name">rowround</span>.<span class="name">fourth</span></a></span>
+
+    <span class="decl_args"><span class="fn">(y₀y₁y₂y₃y₄y₅y₆y₇y₈y₉y₁₀y₁₁y₁₂y₁₃y₁₄y₁₅ y₁₂y₁₃y₁₄y₁₅ : Type u)</span></span>
+    <span class="decl_args"><span class="fn">(I₄ : y₀y₁y₂y₃y₄y₅y₆y₇y₈y₉y₁₀y₁₁y₁₂y₁₃y₁₄y₁₅ <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/isomorphism.html#category_theory.iso" title="category_theory.iso">≅</a> y₁₂y₁₃y₁₄y₁₅)</span></span>&nbsp;<span class="decl_args">:</span>
+<div class="decl_type"><span class="fn">y₀y₁y₂y₃y₄y₅y₆y₇y₈y₉y₁₀y₁₁y₁₂y₁₃y₁₄y₁₅ <a href="https://oxarbitrage.github.io/salsa20-docs/combinatorics/quiver/basic.html#quiver.hom" title="quiver.hom">⟶</a> y₁₂y₁₃y₁₄y₁₅</span></div>
+</div>
+
+
+
+
+
+<p>Given the rowround input as a product of 16, get the fourth 4 objects from it.</p>
+
+
+
+    <details>
+        <summary>Equations</summary>
+        <ul class="equations">
+            
+                <li class="equation"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/rowround.html#rowround.fourth">rowround.fourth</a> y₀y₁y₂y₃y₄y₅y₆y₇y₈y₉y₁₀y₁₁y₁₂y₁₃y₁₄y₁₅</span> y₁₂y₁₃y₁₄y₁₅</span> I₄</span> <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#eq" title="eq">=</a> I₄.<a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/isomorphism.html#category_theory.iso.hom" title="category_theory.iso.hom">hom</a></span></li>
+            
+        </ul>
+    </details>
+
+
+
+
+
+
+
+
+
+</div>
+</div>
     
 
     
         <div class="mod_doc">
             <p>Before we send the objects to <code>quarterround</code> we need to put them in specific orders.</p>
+<p>Again here we define the order morphisms from the isomorphisms between the input 4 objects product and
+ordered output.</p>
 
         </div>
+    
+
+    
+        
+        
+<div class="decl" id="rowround.order1">
+<div class="def">
+
+<div class="gh_link"><a href="">source</a></div>
+
+
+
+<div class="decl_header">
+    
+
+
+<span class="decl_kind">def</span>
+<span class="decl_name"><a class="break_within" href="https://oxarbitrage.github.io/salsa20-docs/rowround.html#rowround.order1"><span class="name">rowround</span>.<span class="name">order1</span></a></span>
+
+    <span class="decl_args"><span class="fn">(y₀y₁y₂y₃ : Type u)</span></span>
+    <span class="decl_args"><span class="fn">(I'₁ : y₀y₁y₂y₃ <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/isomorphism.html#category_theory.iso" title="category_theory.iso">≅</a> y₀y₁y₂y₃)</span></span>&nbsp;<span class="decl_args">:</span>
+<div class="decl_type"><span class="fn">y₀y₁y₂y₃ <a href="https://oxarbitrage.github.io/salsa20-docs/combinatorics/quiver/basic.html#quiver.hom" title="quiver.hom">⟶</a> y₀y₁y₂y₃</span></div>
+</div>
+
+
+
+
+
+<p>Order the first product of objects in the needed position.
+This is here for completness as the first product is already in the right order.</p>
+
+
+
+    <details>
+        <summary>Equations</summary>
+        <ul class="equations">
+            
+                <li class="equation"><span class="fn"><span class="fn"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/rowround.html#rowround.order1">rowround.order1</a> y₀y₁y₂y₃</span> I'₁</span> <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#eq" title="eq">=</a> I'₁.<a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/isomorphism.html#category_theory.iso.hom" title="category_theory.iso.hom">hom</a></span></li>
+            
+        </ul>
+    </details>
+
+
+
+
+
+
+
+
+
+</div>
+</div>
+    
+
+    
+        
+        
+<div class="decl" id="rowround.order2">
+<div class="def">
+
+<div class="gh_link"><a href="">source</a></div>
+
+
+
+<div class="decl_header">
+    
+
+
+<span class="decl_kind">def</span>
+<span class="decl_name"><a class="break_within" href="https://oxarbitrage.github.io/salsa20-docs/rowround.html#rowround.order2"><span class="name">rowround</span>.<span class="name">order2</span></a></span>
+
+    <span class="decl_args"><span class="fn">(y₄y₅y₆y₇ y₅y₆y₇y₄ : Type u)</span></span>
+    <span class="decl_args"><span class="fn">(I'₂ : y₄y₅y₆y₇ <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/isomorphism.html#category_theory.iso" title="category_theory.iso">≅</a> y₅y₆y₇y₄)</span></span>&nbsp;<span class="decl_args">:</span>
+<div class="decl_type"><span class="fn">y₄y₅y₆y₇ <a href="https://oxarbitrage.github.io/salsa20-docs/combinatorics/quiver/basic.html#quiver.hom" title="quiver.hom">⟶</a> y₅y₆y₇y₄</span></div>
+</div>
+
+
+
+
+
+<p>Order the second product of objects in the needed position.</p>
+
+
+
+    <details>
+        <summary>Equations</summary>
+        <ul class="equations">
+            
+                <li class="equation"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/rowround.html#rowround.order2">rowround.order2</a> y₄y₅y₆y₇</span> y₅y₆y₇y₄</span> I'₂</span> <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#eq" title="eq">=</a> I'₂.<a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/isomorphism.html#category_theory.iso.hom" title="category_theory.iso.hom">hom</a></span></li>
+            
+        </ul>
+    </details>
+
+
+
+
+
+
+
+
+
+</div>
+</div>
+    
+
+    
+        
+        
+<div class="decl" id="rowround.order3">
+<div class="def">
+
+<div class="gh_link"><a href="">source</a></div>
+
+
+
+<div class="decl_header">
+    
+
+
+<span class="decl_kind">def</span>
+<span class="decl_name"><a class="break_within" href="https://oxarbitrage.github.io/salsa20-docs/rowround.html#rowround.order3"><span class="name">rowround</span>.<span class="name">order3</span></a></span>
+
+    <span class="decl_args"><span class="fn">(y₈y₉y₁₀y₁₁ y₁₀y₁₁y₈y₉ : Type u)</span></span>
+    <span class="decl_args"><span class="fn">(I'₃ : y₈y₉y₁₀y₁₁ <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/isomorphism.html#category_theory.iso" title="category_theory.iso">≅</a> y₁₀y₁₁y₈y₉)</span></span>&nbsp;<span class="decl_args">:</span>
+<div class="decl_type"><span class="fn">y₈y₉y₁₀y₁₁ <a href="https://oxarbitrage.github.io/salsa20-docs/combinatorics/quiver/basic.html#quiver.hom" title="quiver.hom">⟶</a> y₁₀y₁₁y₈y₉</span></div>
+</div>
+
+
+
+
+
+<p>Order the third product of objects in the needed position.</p>
+
+
+
+    <details>
+        <summary>Equations</summary>
+        <ul class="equations">
+            
+                <li class="equation"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/rowround.html#rowround.order3">rowround.order3</a> y₈y₉y₁₀y₁₁</span> y₁₀y₁₁y₈y₉</span> I'₃</span> <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#eq" title="eq">=</a> I'₃.<a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/isomorphism.html#category_theory.iso.hom" title="category_theory.iso.hom">hom</a></span></li>
+            
+        </ul>
+    </details>
+
+
+
+
+
+
+
+
+
+</div>
+</div>
+    
+
+    
+        
+        
+<div class="decl" id="rowround.order4">
+<div class="def">
+
+<div class="gh_link"><a href="">source</a></div>
+
+
+
+<div class="decl_header">
+    
+
+
+<span class="decl_kind">def</span>
+<span class="decl_name"><a class="break_within" href="https://oxarbitrage.github.io/salsa20-docs/rowround.html#rowround.order4"><span class="name">rowround</span>.<span class="name">order4</span></a></span>
+
+    <span class="decl_args"><span class="fn">(y₁₂y₁₃y₁₄y₁₅ y₁₅y₁₂y₁₃y₁₄ : Type u)</span></span>
+    <span class="decl_args"><span class="fn">(I'₄ : y₁₂y₁₃y₁₄y₁₅ <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/isomorphism.html#category_theory.iso" title="category_theory.iso">≅</a> y₁₅y₁₂y₁₃y₁₄)</span></span>&nbsp;<span class="decl_args">:</span>
+<div class="decl_type"><span class="fn">y₁₂y₁₃y₁₄y₁₅ <a href="https://oxarbitrage.github.io/salsa20-docs/combinatorics/quiver/basic.html#quiver.hom" title="quiver.hom">⟶</a> y₁₅y₁₂y₁₃y₁₄</span></div>
+</div>
+
+
+
+
+
+<p>Order the fourth product objects in the needed position.</p>
+
+
+
+    <details>
+        <summary>Equations</summary>
+        <ul class="equations">
+            
+                <li class="equation"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/rowround.html#rowround.order4">rowround.order4</a> y₁₂y₁₃y₁₄y₁₅</span> y₁₅y₁₂y₁₃y₁₄</span> I'₄</span> <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#eq" title="eq">=</a> I'₄.<a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/isomorphism.html#category_theory.iso.hom" title="category_theory.iso.hom">hom</a></span></li>
+            
+        </ul>
+    </details>
+
+
+
+
+
+
+
+
+
+</div>
+</div>
     
 
     
         <div class="mod_doc">
             <p>We now send ordered objects into <code>quarterround</code> operations and get the outputs.</p>
+<p>Here we use the isomrphism property of the <code>quarterround</code> operation assumed in <code>quarterround.lean</code>.</p>
 
         </div>
     
 
     
+        
+        
+<div class="decl" id="rowround.quarterround1">
+<div class="def">
+
+<div class="gh_link"><a href="">source</a></div>
+
+
+
+<div class="decl_header">
+    
+
+
+<span class="decl_kind">def</span>
+<span class="decl_name"><a class="break_within" href="https://oxarbitrage.github.io/salsa20-docs/rowround.html#rowround.quarterround1"><span class="name">rowround</span>.<span class="name">quarterround1</span></a></span>
+
+    <span class="decl_args"><span class="fn">(y₀y₁y₂y₃ z₀z₁z₂z₃ : Type u)</span></span>
+    <span class="decl_args"><span class="fn">(I''₁ : y₀y₁y₂y₃ <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/isomorphism.html#category_theory.iso" title="category_theory.iso">≅</a> z₀z₁z₂z₃)</span></span>&nbsp;<span class="decl_args">:</span>
+<div class="decl_type"><span class="fn">y₀y₁y₂y₃ <a href="https://oxarbitrage.github.io/salsa20-docs/combinatorics/quiver/basic.html#quiver.hom" title="quiver.hom">⟶</a> z₀z₁z₂z₃</span></div>
+</div>
+
+
+
+
+
+<p>Apply <code>quarterround</code> to the first collection of object.</p>
+
+
+
+    <details>
+        <summary>Equations</summary>
+        <ul class="equations">
+            
+                <li class="equation"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/rowround.html#rowround.quarterround1">rowround.quarterround1</a> y₀y₁y₂y₃</span> z₀z₁z₂z₃</span> I''₁</span> <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#eq" title="eq">=</a> I''₁.<a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/isomorphism.html#category_theory.iso.hom" title="category_theory.iso.hom">hom</a></span></li>
+            
+        </ul>
+    </details>
+
+
+
+
+
+
+
+
+
+</div>
+</div>
+    
+
+    
+        
+        
+<div class="decl" id="rowround.quarterround2">
+<div class="def">
+
+<div class="gh_link"><a href="">source</a></div>
+
+
+
+<div class="decl_header">
+    
+
+
+<span class="decl_kind">def</span>
+<span class="decl_name"><a class="break_within" href="https://oxarbitrage.github.io/salsa20-docs/rowround.html#rowround.quarterround2"><span class="name">rowround</span>.<span class="name">quarterround2</span></a></span>
+
+    <span class="decl_args"><span class="fn">(y₅y₆y₇y₄ z₅z₆z₇z₄ : Type u)</span></span>
+    <span class="decl_args"><span class="fn">(I''₂ : y₅y₆y₇y₄ <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/isomorphism.html#category_theory.iso" title="category_theory.iso">≅</a> z₅z₆z₇z₄)</span></span>&nbsp;<span class="decl_args">:</span>
+<div class="decl_type"><span class="fn">y₅y₆y₇y₄ <a href="https://oxarbitrage.github.io/salsa20-docs/combinatorics/quiver/basic.html#quiver.hom" title="quiver.hom">⟶</a> z₅z₆z₇z₄</span></div>
+</div>
+
+
+
+
+
+<p>Apply <code>quarterround</code> to the second collection of object.</p>
+
+
+
+    <details>
+        <summary>Equations</summary>
+        <ul class="equations">
+            
+                <li class="equation"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/rowround.html#rowround.quarterround2">rowround.quarterround2</a> y₅y₆y₇y₄</span> z₅z₆z₇z₄</span> I''₂</span> <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#eq" title="eq">=</a> I''₂.<a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/isomorphism.html#category_theory.iso.hom" title="category_theory.iso.hom">hom</a></span></li>
+            
+        </ul>
+    </details>
+
+
+
+
+
+
+
+
+
+</div>
+</div>
+    
+
+    
+        
+        
+<div class="decl" id="rowround.quarterround3">
+<div class="def">
+
+<div class="gh_link"><a href="">source</a></div>
+
+
+
+<div class="decl_header">
+    
+
+
+<span class="decl_kind">def</span>
+<span class="decl_name"><a class="break_within" href="https://oxarbitrage.github.io/salsa20-docs/rowround.html#rowround.quarterround3"><span class="name">rowround</span>.<span class="name">quarterround3</span></a></span>
+
+    <span class="decl_args"><span class="fn">(y₁₀y₁₁y₈y₉ z₁₀z₁₁z₈z₉ : Type u)</span></span>
+    <span class="decl_args"><span class="fn">(I''₃ : y₁₀y₁₁y₈y₉ <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/isomorphism.html#category_theory.iso" title="category_theory.iso">≅</a> z₁₀z₁₁z₈z₉)</span></span>&nbsp;<span class="decl_args">:</span>
+<div class="decl_type"><span class="fn">y₁₀y₁₁y₈y₉ <a href="https://oxarbitrage.github.io/salsa20-docs/combinatorics/quiver/basic.html#quiver.hom" title="quiver.hom">⟶</a> z₁₀z₁₁z₈z₉</span></div>
+</div>
+
+
+
+
+
+<p>Apply <code>quarterround</code> to the third collection of object.</p>
+
+
+
+    <details>
+        <summary>Equations</summary>
+        <ul class="equations">
+            
+                <li class="equation"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/rowround.html#rowround.quarterround3">rowround.quarterround3</a> y₁₀y₁₁y₈y₉</span> z₁₀z₁₁z₈z₉</span> I''₃</span> <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#eq" title="eq">=</a> I''₃.<a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/isomorphism.html#category_theory.iso.hom" title="category_theory.iso.hom">hom</a></span></li>
+            
+        </ul>
+    </details>
+
+
+
+
+
+
+
+
+
+</div>
+</div>
+    
+
+    
+        
+        
+<div class="decl" id="rowround.quarterround4">
+<div class="def">
+
+<div class="gh_link"><a href="">source</a></div>
+
+
+
+<div class="decl_header">
+    
+
+
+<span class="decl_kind">def</span>
+<span class="decl_name"><a class="break_within" href="https://oxarbitrage.github.io/salsa20-docs/rowround.html#rowround.quarterround4"><span class="name">rowround</span>.<span class="name">quarterround4</span></a></span>
+
+    <span class="decl_args"><span class="fn">(y₁₅y₁₂y₁₃y₁₄ z₁₅z₁₂z₁₃z₁₄ : Type u)</span></span>
+    <span class="decl_args"><span class="fn">(I''₄ : y₁₅y₁₂y₁₃y₁₄ <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/isomorphism.html#category_theory.iso" title="category_theory.iso">≅</a> z₁₅z₁₂z₁₃z₁₄)</span></span>&nbsp;<span class="decl_args">:</span>
+<div class="decl_type"><span class="fn">y₁₅y₁₂y₁₃y₁₄ <a href="https://oxarbitrage.github.io/salsa20-docs/combinatorics/quiver/basic.html#quiver.hom" title="quiver.hom">⟶</a> z₁₅z₁₂z₁₃z₁₄</span></div>
+</div>
+
+
+
+
+
+<p>Apply <code>quarterround</code> to the fourth collection of object.</p>
+
+
+
+    <details>
+        <summary>Equations</summary>
+        <ul class="equations">
+            
+                <li class="equation"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/rowround.html#rowround.quarterround4">rowround.quarterround4</a> y₁₅y₁₂y₁₃y₁₄</span> z₁₅z₁₂z₁₃z₁₄</span> I''₄</span> <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#eq" title="eq">=</a> I''₄.<a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/isomorphism.html#category_theory.iso.hom" title="category_theory.iso.hom">hom</a></span></li>
+            
+        </ul>
+    </details>
+
+
+
+
+
+
+
+
+
+</div>
+</div>
+    
+
+    
         <div class="mod_doc">
             <p>Inverses of the order operations.</p>
-<p>After quarterround is applied we need to revert the positions modifictions we created in order functions.</p>
+<p>After quarterround is applied we need to revert the positions modifictions we did in order functions.</p>
 
         </div>
     
@@ -132,16 +814,16 @@ into 4 sub products of 4 objects each.</p>
 <span class="decl_kind">def</span>
 <span class="decl_name"><a class="break_within" href="https://oxarbitrage.github.io/salsa20-docs/rowround.html#rowround.order1_inv"><span class="name">rowround</span>.<span class="name">order1_inv</span></a></span>
 
-    <span class="decl_args"><span class="fn">(y₀y₁y₂y₃ z₀z₁z₂z₃ : Type u)</span></span>
-    <span class="decl_args"><span class="fn">(order1_iso : z₀z₁z₂z₃ <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/isomorphism.html#category_theory.iso" title="category_theory.iso">≅</a> y₀y₁y₂y₃)</span></span>&nbsp;<span class="decl_args">:</span>
-<div class="decl_type"><span class="fn">y₀y₁y₂y₃ <a href="https://oxarbitrage.github.io/salsa20-docs/combinatorics/quiver/basic.html#quiver.hom" title="quiver.hom">⟶</a> z₀z₁z₂z₃</span></div>
+    <span class="decl_args"><span class="fn">(z₀z₁z₂z₃ : Type u)</span></span>
+    <span class="decl_args"><span class="fn">(I'''₁ : z₀z₁z₂z₃ <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/isomorphism.html#category_theory.iso" title="category_theory.iso">≅</a> z₀z₁z₂z₃)</span></span>&nbsp;<span class="decl_args">:</span>
+<div class="decl_type"><span class="fn">z₀z₁z₂z₃ <a href="https://oxarbitrage.github.io/salsa20-docs/combinatorics/quiver/basic.html#quiver.hom" title="quiver.hom">⟶</a> z₀z₁z₂z₃</span></div>
 </div>
 
 
 
 
 
-<p>The inverse of the <code>order1</code> operation given by the isomorphism.</p>
+<p>The inverse of the <code>order1</code> operation.</p>
 
 
 
@@ -149,7 +831,7 @@ into 4 sub products of 4 objects each.</p>
         <summary>Equations</summary>
         <ul class="equations">
             
-                <li class="equation"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/rowround.html#rowround.order1_inv">rowround.order1_inv</a> y₀y₁y₂y₃</span> z₀z₁z₂z₃</span> order1_iso</span> <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#eq" title="eq">=</a> order1_iso.<a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/isomorphism.html#category_theory.iso.inv" title="category_theory.iso.inv">inv</a></span></li>
+                <li class="equation"><span class="fn"><span class="fn"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/rowround.html#rowround.order1_inv">rowround.order1_inv</a> z₀z₁z₂z₃</span> I'''₁</span> <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#eq" title="eq">=</a> I'''₁.<a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/isomorphism.html#category_theory.iso.hom" title="category_theory.iso.hom">hom</a></span></li>
             
         </ul>
     </details>
@@ -183,16 +865,16 @@ into 4 sub products of 4 objects each.</p>
 <span class="decl_kind">def</span>
 <span class="decl_name"><a class="break_within" href="https://oxarbitrage.github.io/salsa20-docs/rowround.html#rowround.order2_inv"><span class="name">rowround</span>.<span class="name">order2_inv</span></a></span>
 
-    <span class="decl_args"><span class="fn">(y₄y₅y₆y₇ z₄z₅z₆z₇ : Type u)</span></span>
-    <span class="decl_args"><span class="fn">(order2_iso : z₄z₅z₆z₇ <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/isomorphism.html#category_theory.iso" title="category_theory.iso">≅</a> y₄y₅y₆y₇)</span></span>&nbsp;<span class="decl_args">:</span>
-<div class="decl_type"><span class="fn">y₄y₅y₆y₇ <a href="https://oxarbitrage.github.io/salsa20-docs/combinatorics/quiver/basic.html#quiver.hom" title="quiver.hom">⟶</a> z₄z₅z₆z₇</span></div>
+    <span class="decl_args"><span class="fn">(z₅z₆z₇z₄ z₄z₅z₆z₇ : Type u)</span></span>
+    <span class="decl_args"><span class="fn">(I'''₂ : z₅z₆z₇z₄ <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/isomorphism.html#category_theory.iso" title="category_theory.iso">≅</a> z₄z₅z₆z₇)</span></span>&nbsp;<span class="decl_args">:</span>
+<div class="decl_type"><span class="fn">z₅z₆z₇z₄ <a href="https://oxarbitrage.github.io/salsa20-docs/combinatorics/quiver/basic.html#quiver.hom" title="quiver.hom">⟶</a> z₄z₅z₆z₇</span></div>
 </div>
 
 
 
 
 
-<p>The inverse of the <code>order2</code> operation given by the isomorphism.</p>
+<p>The inverse of the <code>order2</code> operation.</p>
 
 
 
@@ -200,7 +882,7 @@ into 4 sub products of 4 objects each.</p>
         <summary>Equations</summary>
         <ul class="equations">
             
-                <li class="equation"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/rowround.html#rowround.order2_inv">rowround.order2_inv</a> y₄y₅y₆y₇</span> z₄z₅z₆z₇</span> order2_iso</span> <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#eq" title="eq">=</a> order2_iso.<a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/isomorphism.html#category_theory.iso.inv" title="category_theory.iso.inv">inv</a></span></li>
+                <li class="equation"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/rowround.html#rowround.order2_inv">rowround.order2_inv</a> z₅z₆z₇z₄</span> z₄z₅z₆z₇</span> I'''₂</span> <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#eq" title="eq">=</a> I'''₂.<a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/isomorphism.html#category_theory.iso.hom" title="category_theory.iso.hom">hom</a></span></li>
             
         </ul>
     </details>
@@ -234,16 +916,16 @@ into 4 sub products of 4 objects each.</p>
 <span class="decl_kind">def</span>
 <span class="decl_name"><a class="break_within" href="https://oxarbitrage.github.io/salsa20-docs/rowround.html#rowround.order3_inv"><span class="name">rowround</span>.<span class="name">order3_inv</span></a></span>
 
-    <span class="decl_args"><span class="fn">(y₈y₉y₁₀y₁₁ z₈z₉z₁₀z₁₁ : Type u)</span></span>
-    <span class="decl_args"><span class="fn">(order3_iso : z₈z₉z₁₀z₁₁ <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/isomorphism.html#category_theory.iso" title="category_theory.iso">≅</a> y₈y₉y₁₀y₁₁)</span></span>&nbsp;<span class="decl_args">:</span>
-<div class="decl_type"><span class="fn">y₈y₉y₁₀y₁₁ <a href="https://oxarbitrage.github.io/salsa20-docs/combinatorics/quiver/basic.html#quiver.hom" title="quiver.hom">⟶</a> z₈z₉z₁₀z₁₁</span></div>
+    <span class="decl_args"><span class="fn">(z₁₀z₁₁z₈z₉ z₈z₉z₁₀z₁₁ : Type u)</span></span>
+    <span class="decl_args"><span class="fn">(I'''₃ : z₁₀z₁₁z₈z₉ <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/isomorphism.html#category_theory.iso" title="category_theory.iso">≅</a> z₈z₉z₁₀z₁₁)</span></span>&nbsp;<span class="decl_args">:</span>
+<div class="decl_type"><span class="fn">z₁₀z₁₁z₈z₉ <a href="https://oxarbitrage.github.io/salsa20-docs/combinatorics/quiver/basic.html#quiver.hom" title="quiver.hom">⟶</a> z₈z₉z₁₀z₁₁</span></div>
 </div>
 
 
 
 
 
-<p>The inverse of the <code>order3</code> operation given by the isomorphism.</p>
+<p>The inverse of the <code>order3</code> operation.</p>
 
 
 
@@ -251,7 +933,7 @@ into 4 sub products of 4 objects each.</p>
         <summary>Equations</summary>
         <ul class="equations">
             
-                <li class="equation"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/rowround.html#rowround.order3_inv">rowround.order3_inv</a> y₈y₉y₁₀y₁₁</span> z₈z₉z₁₀z₁₁</span> order3_iso</span> <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#eq" title="eq">=</a> order3_iso.<a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/isomorphism.html#category_theory.iso.inv" title="category_theory.iso.inv">inv</a></span></li>
+                <li class="equation"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/rowround.html#rowround.order3_inv">rowround.order3_inv</a> z₁₀z₁₁z₈z₉</span> z₈z₉z₁₀z₁₁</span> I'''₃</span> <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#eq" title="eq">=</a> I'''₃.<a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/isomorphism.html#category_theory.iso.hom" title="category_theory.iso.hom">hom</a></span></li>
             
         </ul>
     </details>
@@ -285,16 +967,16 @@ into 4 sub products of 4 objects each.</p>
 <span class="decl_kind">def</span>
 <span class="decl_name"><a class="break_within" href="https://oxarbitrage.github.io/salsa20-docs/rowround.html#rowround.order4_inv"><span class="name">rowround</span>.<span class="name">order4_inv</span></a></span>
 
-    <span class="decl_args"><span class="fn">(y₁₂y₁₃y₁₄y₁₅ z₁₂z₁₃z₁₄z₁₅ : Type u)</span></span>
-    <span class="decl_args"><span class="fn">(order4_iso : z₁₂z₁₃z₁₄z₁₅ <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/isomorphism.html#category_theory.iso" title="category_theory.iso">≅</a> y₁₂y₁₃y₁₄y₁₅)</span></span>&nbsp;<span class="decl_args">:</span>
-<div class="decl_type"><span class="fn">y₁₂y₁₃y₁₄y₁₅ <a href="https://oxarbitrage.github.io/salsa20-docs/combinatorics/quiver/basic.html#quiver.hom" title="quiver.hom">⟶</a> z₁₂z₁₃z₁₄z₁₅</span></div>
+    <span class="decl_args"><span class="fn">(z₁₅z₁₂z₁₃z₁₄ z₁₂z₁₃z₁₄z₁₅ : Type u)</span></span>
+    <span class="decl_args"><span class="fn">(I'''₄ : z₁₅z₁₂z₁₃z₁₄ <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/isomorphism.html#category_theory.iso" title="category_theory.iso">≅</a> z₁₂z₁₃z₁₄z₁₅)</span></span>&nbsp;<span class="decl_args">:</span>
+<div class="decl_type"><span class="fn">z₁₅z₁₂z₁₃z₁₄ <a href="https://oxarbitrage.github.io/salsa20-docs/combinatorics/quiver/basic.html#quiver.hom" title="quiver.hom">⟶</a> z₁₂z₁₃z₁₄z₁₅</span></div>
 </div>
 
 
 
 
 
-<p>The inverse of the <code>order4</code> operation given by the isomorphism.</p>
+<p>The inverse of the <code>order4</code> operation.</p>
 
 
 
@@ -302,7 +984,7 @@ into 4 sub products of 4 objects each.</p>
         <summary>Equations</summary>
         <ul class="equations">
             
-                <li class="equation"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/rowround.html#rowround.order4_inv">rowround.order4_inv</a> y₁₂y₁₃y₁₄y₁₅</span> z₁₂z₁₃z₁₄z₁₅</span> order4_iso</span> <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#eq" title="eq">=</a> order4_iso.<a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/isomorphism.html#category_theory.iso.inv" title="category_theory.iso.inv">inv</a></span></li>
+                <li class="equation"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/rowround.html#rowround.order4_inv">rowround.order4_inv</a> z₁₅z₁₂z₁₃z₁₄</span> z₁₂z₁₃z₁₄z₁₅</span> I'''₄</span> <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#eq" title="eq">=</a> I'''₄.<a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/isomorphism.html#category_theory.iso.hom" title="category_theory.iso.hom">hom</a></span></li>
             
         </ul>
     </details>
@@ -325,6 +1007,198 @@ into 4 sub products of 4 objects each.</p>
 the rowround system.</p>
 
         </div>
+    
+
+    
+        
+        
+<div class="decl" id="rowround.join">
+<div class="def">
+
+<div class="gh_link"><a href="">source</a></div>
+
+
+
+<div class="decl_header">
+    
+
+
+<span class="decl_kind">def</span>
+<span class="decl_name"><a class="break_within" href="https://oxarbitrage.github.io/salsa20-docs/rowround.html#rowround.join"><span class="name">rowround</span>.<span class="name">join</span></a></span>
+
+    <span class="decl_args"><span class="fn">(z₀z₁z₂z₃ z₄z₅z₆z₇ z₈z₉z₁₀z₁₁ z₁₂z₁₃z₁₄z₁₅ z₀z₁z₂z₃z₄z₅z₆z₇z₈z₉z₁₀z₁₁z₁₂z₁₃z₁₄z₁₅ : Type u)</span></span>
+    <span class="decl_args"><span class="fn">(Ij : <span class="fn">z₀z₁z₂z₃ <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod" title="prod">×</a> <span class="fn">z₄z₅z₆z₇ <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod" title="prod">×</a> <span class="fn">z₈z₉z₁₀z₁₁ <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod" title="prod">×</a> z₁₂z₁₃z₁₄z₁₅</span></span></span> <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/isomorphism.html#category_theory.iso" title="category_theory.iso">≅</a> z₀z₁z₂z₃z₄z₅z₆z₇z₈z₉z₁₀z₁₁z₁₂z₁₃z₁₄z₁₅)</span></span>&nbsp;<span class="decl_args">:</span>
+<div class="decl_type"><span class="fn"><span class="fn">z₀z₁z₂z₃ <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod" title="prod">×</a> <span class="fn">z₄z₅z₆z₇ <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod" title="prod">×</a> <span class="fn">z₈z₉z₁₀z₁₁ <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#prod" title="prod">×</a> z₁₂z₁₃z₁₄z₁₅</span></span></span> <a href="https://oxarbitrage.github.io/salsa20-docs/combinatorics/quiver/basic.html#quiver.hom" title="quiver.hom">⟶</a> z₀z₁z₂z₃z₄z₅z₆z₇z₈z₉z₁₀z₁₁z₁₂z₁₃z₁₄z₁₅</span></div>
+</div>
+
+
+
+
+
+<p>Join the four paralell pieces together to form the rowround output.</p>
+
+
+
+    <details>
+        <summary>Equations</summary>
+        <ul class="equations">
+            
+                <li class="equation"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/rowround.html#rowround.join">rowround.join</a> z₀z₁z₂z₃</span> z₄z₅z₆z₇</span> z₈z₉z₁₀z₁₁</span> z₁₂z₁₃z₁₄z₁₅</span> z₀z₁z₂z₃z₄z₅z₆z₇z₈z₉z₁₀z₁₁z₁₂z₁₃z₁₄z₁₅</span> Ij</span> <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#eq" title="eq">=</a> Ij.<a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/isomorphism.html#category_theory.iso.hom" title="category_theory.iso.hom">hom</a></span></li>
+            
+        </ul>
+    </details>
+
+
+
+
+
+
+
+
+
+</div>
+</div>
+    
+
+    
+        
+        
+<div class="decl" id="rowround.rowround">
+<div class="def">
+
+<div class="gh_link"><a href="">source</a></div>
+
+
+
+<div class="decl_header">
+    
+
+
+<span class="decl_kind">def</span>
+<span class="decl_name"><a class="break_within" href="https://oxarbitrage.github.io/salsa20-docs/rowround.html#rowround.rowround"><span class="name">rowround</span>.<span class="name">rowround</span></a></span>
+
+    <span class="decl_args"><span class="fn">(y₀y₁y₂y₃y₄y₅y₆y₇y₈y₉y₁₀y₁₁y₁₂y₁₃y₁₄y₁₅ z₀z₁z₂z₃z₄z₅z₆z₇z₈z₉z₁₀z₁₁z₁₂z₁₃z₁₄z₁₅ : Type u)</span></span>
+    <span class="decl_args"><span class="fn">(Ir : y₀y₁y₂y₃y₄y₅y₆y₇y₈y₉y₁₀y₁₁y₁₂y₁₃y₁₄y₁₅ <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/isomorphism.html#category_theory.iso" title="category_theory.iso">≅</a> z₀z₁z₂z₃z₄z₅z₆z₇z₈z₉z₁₀z₁₁z₁₂z₁₃z₁₄z₁₅)</span></span>&nbsp;<span class="decl_args">:</span>
+<div class="decl_type"><span class="fn">y₀y₁y₂y₃y₄y₅y₆y₇y₈y₉y₁₀y₁₁y₁₂y₁₃y₁₄y₁₅ <a href="https://oxarbitrage.github.io/salsa20-docs/combinatorics/quiver/basic.html#quiver.hom" title="quiver.hom">⟶</a> z₀z₁z₂z₃z₄z₅z₆z₇z₈z₉z₁₀z₁₁z₁₂z₁₃z₁₄z₁₅</span></div>
+</div>
+
+
+
+
+
+
+
+
+    <details>
+        <summary>Equations</summary>
+        <ul class="equations">
+            
+                <li class="equation"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/rowround.html#rowround.rowround">rowround.rowround</a> y₀y₁y₂y₃y₄y₅y₆y₇y₈y₉y₁₀y₁₁y₁₂y₁₃y₁₄y₁₅</span> z₀z₁z₂z₃z₄z₅z₆z₇z₈z₉z₁₀z₁₁z₁₂z₁₃z₁₄z₁₅</span> Ir</span> <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#eq" title="eq">=</a> Ir.<a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/isomorphism.html#category_theory.iso.hom" title="category_theory.iso.hom">hom</a></span></li>
+            
+        </ul>
+    </details>
+
+
+
+
+
+
+
+
+
+</div>
+</div>
+    
+
+    
+        
+        
+<div class="decl" id="rowround.rowround_inv">
+<div class="def">
+
+<div class="gh_link"><a href="">source</a></div>
+
+
+
+<div class="decl_header">
+    
+
+
+<span class="decl_kind">def</span>
+<span class="decl_name"><a class="break_within" href="https://oxarbitrage.github.io/salsa20-docs/rowround.html#rowround.rowround_inv"><span class="name">rowround</span>.<span class="name">rowround_inv</span></a></span>
+
+    <span class="decl_args"><span class="fn">(y₀y₁y₂y₃y₄y₅y₆y₇y₈y₉y₁₀y₁₁y₁₂y₁₃y₁₄y₁₅ z₀z₁z₂z₃z₄z₅z₆z₇z₈z₉z₁₀z₁₁z₁₂z₁₃z₁₄z₁₅ : Type u)</span></span>
+    <span class="decl_args"><span class="fn">(Ir : y₀y₁y₂y₃y₄y₅y₆y₇y₈y₉y₁₀y₁₁y₁₂y₁₃y₁₄y₁₅ <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/isomorphism.html#category_theory.iso" title="category_theory.iso">≅</a> z₀z₁z₂z₃z₄z₅z₆z₇z₈z₉z₁₀z₁₁z₁₂z₁₃z₁₄z₁₅)</span></span>&nbsp;<span class="decl_args">:</span>
+<div class="decl_type"><span class="fn">z₀z₁z₂z₃z₄z₅z₆z₇z₈z₉z₁₀z₁₁z₁₂z₁₃z₁₄z₁₅ <a href="https://oxarbitrage.github.io/salsa20-docs/combinatorics/quiver/basic.html#quiver.hom" title="quiver.hom">⟶</a> y₀y₁y₂y₃y₄y₅y₆y₇y₈y₉y₁₀y₁₁y₁₂y₁₃y₁₄y₁₅</span></div>
+</div>
+
+
+
+
+
+
+
+
+    <details>
+        <summary>Equations</summary>
+        <ul class="equations">
+            
+                <li class="equation"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/rowround.html#rowround.rowround_inv">rowround.rowround_inv</a> y₀y₁y₂y₃y₄y₅y₆y₇y₈y₉y₁₀y₁₁y₁₂y₁₃y₁₄y₁₅</span> z₀z₁z₂z₃z₄z₅z₆z₇z₈z₉z₁₀z₁₁z₁₂z₁₃z₁₄z₁₅</span> Ir</span> <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#eq" title="eq">=</a> Ir.<a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/isomorphism.html#category_theory.iso.inv" title="category_theory.iso.inv">inv</a></span></li>
+            
+        </ul>
+    </details>
+
+
+
+
+
+
+
+
+
+</div>
+</div>
+    
+
+    
+        
+        
+<div class="decl" id="rowround.rowround_is_invertible">
+<div class="theorem">
+
+<div class="gh_link"><a href="">source</a></div>
+
+
+
+<div class="decl_header">
+    
+
+
+<span class="decl_kind">theorem</span>
+<span class="decl_name"><a class="break_within" href="https://oxarbitrage.github.io/salsa20-docs/rowround.html#rowround.rowround_is_invertible"><span class="name">rowround</span>.<span class="name">rowround_is_invertible</span></a></span>
+
+    <span class="decl_args"><span class="fn">(y₀y₁y₂y₃y₄y₅y₆y₇y₈y₉y₁₀y₁₁y₁₂y₁₃y₁₄y₁₅ z₀z₁z₂z₃z₄z₅z₆z₇z₈z₉z₁₀z₁₁z₁₂z₁₃z₁₄z₁₅ : Type u)</span></span>
+    <span class="decl_args"><span class="fn">(Ir : y₀y₁y₂y₃y₄y₅y₆y₇y₈y₉y₁₀y₁₁y₁₂y₁₃y₁₄y₁₅ <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/isomorphism.html#category_theory.iso" title="category_theory.iso">≅</a> z₀z₁z₂z₃z₄z₅z₆z₇z₈z₉z₁₀z₁₁z₁₂z₁₃z₁₄z₁₅)</span></span>&nbsp;<span class="decl_args">:</span>
+<div class="decl_type"><span class="fn"><span class="fn">Ir.<a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/isomorphism.html#category_theory.iso.hom" title="category_theory.iso.hom">hom</a> <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/category/basic.html#category_theory.category_struct.comp" title="category_theory.category_struct.comp">≫</a> Ir.<a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/isomorphism.html#category_theory.iso.inv" title="category_theory.iso.inv">inv</a></span> <a href="https://oxarbitrage.github.io/salsa20-docs/init/core.html#eq" title="eq">=</a> <span class="fn"><a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/category/basic.html#category_theory.category_struct.id" title="category_theory.category_struct.id">𝟙</a> y₀y₁y₂y₃y₄y₅y₆y₇y₈y₉y₁₀y₁₁y₁₂y₁₃y₁₄y₁₅</span></span></div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+</div>
     
 
 
@@ -1212,20 +2086,7 @@ the rowround system.</p>
             <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/functor/category.html">category</a>
         </div>
         <div class="nav_link ">
-            <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/functor/epi_mono.html">epi_mono</a>
-        </div>
-        <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/functor/fully_faithful.html">fully_faithful</a>
-        </div>
-        <div class="nav_link ">
-            <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/functor/reflects_isomorphisms.html">reflects_isomorphisms</a>
-        </div>
-        </details>
-        <details class="nav_sect" data-path="category_theory/monad" >
-            <summary>monad</summary>
-            
-        <div class="nav_link ">
-            <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/monad/basic.html">basic</a>
         </div>
         </details>
         <details class="nav_sect" data-path="category_theory/pi" >
@@ -1242,9 +2103,6 @@ the rowround system.</p>
             <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/products/basic.html">basic</a>
         </div>
         </details>
-        <div class="nav_link ">
-            <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/balanced.html">balanced</a>
-        </div>
         <div class="nav_link ">
             <a href="https://oxarbitrage.github.io/salsa20-docs/category_theory/core.html">core</a>
         </div>
