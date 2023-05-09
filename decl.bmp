@@ -20,7 +20,6 @@ prod.semilattice_inf
 ordering.ite_eq_gt_distrib
 set.inj_on_empty
 forall_apply_eq_imp_iff'
-matrix.diagonal_zero
 list.modify_nth_tail_modify_nth_tail
 equiv.psigma_equiv_sigma_plift
 eq_compl_iff_is_compl
@@ -77,13 +76,11 @@ fin.le_cast_succ_iff
 set.inter_inter_inter_comm
 prod.has_to_tactic_format
 list.alternating_prod_cons_cons'
-matrix.dot_product_mul_vec
 with_one.coe_mul_hom_apply
 nat.bit_lt_bit_iff
 eq_inv_smul_iff
 tsub_self_add
 list.foldl_join
-fin_rotate
 set.indicator_add
 tactic.by_proof_irrel
 with_bot.Ioc_coe_coe
@@ -116,7 +113,6 @@ alist.has_mem
 vector.nth_update_nth_eq_if
 has_lt.lt.of_dual
 add_submonoid.to_ordered_cancel_add_comm_monoid
-matrix.diagonal_linear_map
 part.mem_to_option
 function.right_id
 div_le_div_iff_left
@@ -148,7 +144,6 @@ subgroup.normal_closure_eq_self
 tactic.norm_num.factors_helper_same_sn
 vector.of_fn
 lt_add_of_sub_right_lt
-matrix.sum_elim_dot_product_sum_elim
 set.sigma.univ
 order_iso.bdd_below_preimage
 set.Ioc_inter_Ioo_of_left_lt
@@ -161,12 +156,10 @@ set.ord_connected_bInter
 is_unit.inv_smul
 alg_equiv.smul_def
 supr_unpair
-matrix.transpose_minor
 dfinsupp.coe_smul
 nat.le_total
 nat.succ_le_succ_iff
 add_submonoid.smul_mem_pointwise_smul
-matrix.col_apply
 int.add_one_le_of_lt
 submonoid.closure_closure_coe_preimage
 int.decidable_lt
@@ -229,7 +222,6 @@ add_subgroup.zmultiples_subset
 category_theory.is_equivalence.cancel_comp_right
 sym_option_succ_equiv_apply
 function.injective.sigma_map
-bitvec.has_add
 submodule.span_int_eq
 with_bot.le_coe_get_or_else
 tactic.get_tagged_ancestors
@@ -270,7 +262,6 @@ subsemiring.mul_action_with_zero
 set.mul_indicator_preimage
 finset.prod_const_one
 function.extend_injective
-matrix.minor_diagonal_equiv
 tactic.interactive.ac_refine
 sum.elim_comp_inl_inr
 tactic.find_if_cond_at
@@ -290,7 +281,6 @@ linear_ordered_comm_monoid_with_zero.to_comm_monoid_with_zero
 option.mem_pmem
 decidable.not_imp_symm
 has_sizeof_derive_handler
-matrix.dot_product_assoc
 tactic.copy_attribute'
 tactic.tidy.ext1_wrapper
 category_theory.functor.map_surjective
@@ -310,7 +300,6 @@ widget.mouse_event_kind.on_mouse_enter
 widget.mouse_event_kind.on_mouse_leave
 set.sInter_eq_compl_sUnion_compl
 norm_num.le_one_bit0
-linear_map.coe_inl
 int.neg_le_sub_left_of_le_add
 neg_lt_sub_iff_lt_add
 alist.perm_replace
@@ -346,7 +335,6 @@ distrib_mul_action_hom.to_add_monoid_hom_injective
 with_top.Icc_coe_coe
 not_exists
 linear_map.range_to_add_submonoid
-bitvec.add
 tactic.get_subsingleton_info
 list.cyclic_permutations_eq_singleton_iff
 nat.eq_zero_of_add_eq_zero
@@ -433,7 +421,6 @@ subsemigroup.comap_equiv_eq_map_symm
 list.map₂_nil
 category_theory.core.inclusion
 tactic_doc.tactic.refl / reflexivity
-bitvec.cong
 equiv.perm.subtype_congr.apply
 tactic.abel.term_smul
 set.sInter_insert
@@ -458,7 +445,6 @@ option.pmap_map
 list.permutations_aux2
 or.rotate
 sigma.encodable
-matrix.transpose
 expr.match_local_const
 subsingleton.strict_mono
 set.univ
@@ -504,7 +490,6 @@ bool.band_bor_distrib_right
 add_monoid_hom.coe_mul_right
 occurrences_repr
 equiv.finite_iff
-self_adjoint.coe_zpow
 units.coe_prod
 function.sometimes_spec
 monoid_hom.inr_apply
@@ -551,7 +536,6 @@ finset.sup'_const
 linear_ordered_ring.to_nontrivial
 set.bij_on.mk
 Prop.fintype
-function.update_star
 tactic_doc.tactic.cases_type
 subsemigroup.set_like
 add_monoid_hom.to_add_equiv
@@ -600,7 +584,6 @@ supr_infi_le_infi_supr
 submodule.restrict_scalars_embedding
 finset.inter_left_idem
 with_top.with_bot.complete_lattice
-matrix.vec_alt1_append
 function.mul_support_prod_mk'
 mul_mem_class.subtype
 Prop.linear_order
@@ -637,7 +620,6 @@ subring.mem_to_add_subgroup
 subrel.is_well_order
 category_theory.types_comp
 nat.of_digits_one
-matrix.is_scalar_tower
 nat.prime.dvd_mul_of_dvd_ne
 linear_map.eval_add_monoid_hom
 dfinsupp_prod_mem
@@ -648,7 +630,6 @@ set.maps_to.mono
 finset.eq_singleton_iff_nonempty_unique_mem
 tactic.interactive.functor_derive_handler'
 sum.elim_single_zero
-fin.prod_univ_add
 antitone.map_sup
 conv.execute
 subgroup.has_bot
@@ -659,7 +640,6 @@ nat.gcd_eq_zero_iff
 linear_map.map_zero
 subsemigroup.eq_top_iff'
 int.neg_div_of_dvd
-matrix.transpose_alg_equiv_symm_apply
 mul_inv_le_one_iff_le
 list.sublist_of_cons_sublist
 user_attribute.set_untyped
@@ -680,7 +660,6 @@ supr_mono'
 add_submonoid_class.to_linear_ordered_add_comm_monoid
 list.nodup.nth_le_equiv_apply_coe
 fintype.decidable_mem_range_fintype
-fin.prod_univ_four
 eq.cmp_eq_eq'
 forall_imp
 abs_cases
@@ -719,7 +698,6 @@ declaration.is_theorem
 semiconj_by.reflexive
 tactic.mk_const
 le_trans'
-matrix.dot_product_empty
 subring_class.to_ordered_comm_ring
 list.ball_nil
 array.reverse
@@ -742,7 +720,6 @@ finset.card_singleton_inter
 ne_of_ssuperset
 neg_lt_of_abs_lt
 multiset.range_disjoint_map_add
-matrix.smul_dot_product
 linear_ordered_semiring.to_ordered_semiring
 quot.lift_on.decidable
 coe_base_aux
@@ -753,7 +730,6 @@ option.map_map
 set.union_inter_cancel_right
 one_add_one_eq_two
 list.sorted.nth_le_mono
-linear_map.ker_prod_ker_le_ker_coprod
 dfinsupp.extend_with_single_zero
 linear_map.iterate_ker_coe
 list.zip_with_distrib_drop
@@ -766,9 +742,7 @@ function.injective.non_unital_non_assoc_semiring
 add_submonoid.map_le_iff_le_comap
 is_scalar_tower.op_right
 environment.add_ginductive
-fin.preimage_apply_01_prod'
 tactic.first
-linear_map.graph
 supr₂_comm
 csupr_mem_Inter_Icc_of_antitone_Icc
 classical.inhabited_of_exists
@@ -806,7 +780,6 @@ name.append_namespace
 prod.non_unital_ring
 nat.coprime_self_add_right
 list.map_diff
-order_iso.pi_fin_succ_above_iso
 tactic.exfalso
 equiv.div_left_eq_inv_trans_mul_left
 nat.sub_succ
@@ -842,7 +815,6 @@ subsemiring.inhabited
 linarith.nat_lt_subst
 list.insert_nth_remove_nth_of_le
 option.is_none_some
-matrix.algebra_map_eq_diagonal
 mul_lt_mul_of_lt_of_lt
 add_subsemigroup.not_mem_bot
 is_coatom.dual
@@ -874,7 +846,6 @@ set.pairwise.mono
 subgroup.comap_le_comap_of_le_range
 subsemiring.map_map
 add_monoid_hom_lequiv_nat_apply
-matrix.semiring.smul_comm_class
 max_add_add_left
 add_monoid_hom.map_dfinsupp_sum_add_hom
 tactic.interactive.format_names
@@ -891,7 +862,6 @@ pi.mul_single_mul
 tactic.instance_cache.get
 comm_group_with_zero_of_is_unit_or_eq_zero
 finset.product_union
-pi_fin_two_equiv_symm_apply
 dfinsupp.subtype_domain_smul
 equiv.psigma_equiv_sigma
 galois_insertion.l_binfi_u
@@ -923,7 +893,6 @@ one_half_lt_one
 int.add_comm
 int.cast
 finset.has_union.union.is_commutative
-matrix.mul_minor_one
 multiset.sup_dedup
 finset.inf_singleton
 le_infi₂
@@ -940,7 +909,6 @@ vector.to_list_cons
 linear_map.applyₗ_apply_apply
 multiset.mem_add
 equiv.sub_left
-fin.sum_cons
 list.perm.prod_eq
 finset.prod_attach
 order_dual.no_min_order
@@ -949,7 +917,6 @@ set.to_finset_strict_mono
 set.pi_diff_pi_subset
 commutative
 dfinsupp.mk_add_group_hom
-matrix.update_column_eq_self
 set.mul_indicator_self_mul_compl
 dlist.to_list_empty
 one_hom
@@ -978,7 +945,6 @@ well_founded_lt_dual_iff
 multiset.filter_zero
 list.foldr_ext
 int.mod_add_cancel_left
-matrix.of_add_of
 tactic.delta
 finsupp.map_range.add_equiv_symm
 equiv.sum_congr_refl
@@ -1026,7 +992,6 @@ monoid_hom.mclosure_preimage_le
 distrib_mul_action.to_module_End
 tactic.tidy_hole_cmd
 add_opposite.has_add
-submodule.snd_map_snd
 multiset.Ioo
 category_theory.iso.op_hom
 function.surjective.forall
@@ -1059,7 +1024,6 @@ algebra_map_int_eq
 tactic.local_def_value_has_local_in_name_set
 d_array.iterate_aux
 set.union_diff_cancel_left
-matrix.add_semigroup
 nat.odd_mod_four_iff
 subsemiring.center_to_submonoid
 mul_inv_mul_self
@@ -1078,7 +1042,6 @@ expr.to_list
 tactic.interactive.guard_proof_term
 tactic.interactive.rw_mod_cast
 set.nonempty.preimage
-matrix.sub_cons
 Inf_image2_eq_Sup_Sup
 finsupp.comap_domain_smul
 set.ord_connected_Ioc
@@ -1206,7 +1169,6 @@ units.mul_left_dvd
 mul_mem_class.mul_right_mem_add_closure
 submodule.finset_inf_coe
 set.preimage_mul_const_Ioo
-matrix.conj_transpose_smul
 add_subgroup_class
 add_subgroup_class.to_add_submonoid_class
 add_subgroup_class.neg_mem
@@ -1244,7 +1206,6 @@ monoid_hom.eq_on_mclosure
 set.left_mem_Ioo
 set.nonempty.zero_mul
 local_context.is_subset
-matrix.transpose_add
 or_or_distrib_right
 commute.multiset_sum_right
 monoid_with_zero_hom.congr_fun
@@ -1300,7 +1261,6 @@ set.inter_inter_distrib_left
 multiset.sum_le_sum_of_rel_le
 where.build_str_includes
 nat.le_digits_len_le
-linear_map.coprod_equiv_apply
 list.sum_nonneg
 lt_self_iff_false
 tactic.interactive.with_cases
@@ -1337,7 +1297,6 @@ perms_of_finset
 prod.swap_lt_swap
 set.range_inclusion
 linear_equiv.coe_zero
-pi_fin_two_equiv
 local_context.has_mem
 int.cast_ring_hom
 finsupp.sum_smul_index
@@ -1425,12 +1384,10 @@ finset.noncomm_sum_congr
 int.le_of_add_le_add_right
 mem_lower_bounds_image2_of_mem_upper_bounds
 category_theory.adjunction.core_unit_counit.left_triangle
-linear_map.sup_range_inl_inr
 submonoid.multiset_noncomm_prod_mem
 submonoid.pi
 function.support_zero'
 finset.piecewise_le_piecewise
-linear_map.fst_eq_coprod
 tactic.unify_equations.unify_cyclic
 set.maps_to_image
 nat.one_ne_zero
@@ -1472,7 +1429,6 @@ zero_hom.single_apply
 left.self_le_neg
 add_subsemigroup.to_subsemigroup_symm_apply_coe
 sym.map_cons
-matrix.vec_mul_zero
 ite.decidable
 set.surj_on.bij_on_subset
 mul_action.maps_to_smul_orbit
@@ -1521,7 +1477,6 @@ nat.bit_zero
 list.nth_le_of_fn
 add_monoid_with_one.to_has_nat_cast
 with_top.order_bot
-matrix.minor_mul_transpose_minor
 map_add
 add_mem_class.subtype
 equiv.perm.sum_comp'
@@ -1569,7 +1524,6 @@ category_theory.full_subcategory.lift
 finset.insert_sdiff_of_not_mem
 subsingleton.antitone
 set.image_subset_image2_left
-matrix.sub_dot_product
 pnat.to_pnat'_coe
 linter.incorrect_type_class_argument
 inv_nat_cast_smul_eq
@@ -1591,7 +1545,6 @@ int.sub_right_le_of_le_add
 nat.lt_of_add_lt_add_right
 finset.decidable_forall_of_decidable_subsets
 add_monoid_hom.of_left_inverse_symm_apply
-matrix.minor_one_equiv
 tactic.interactive.mono_function.decidable_eq
 div_add_one
 tactic_doc.attribute.to_additive
@@ -1604,10 +1557,8 @@ galois_insertion.l_inf_u
 widget_override.tactic_render
 function.surjective.of_comp
 euclidean_domain.xgcd_val
-matrix.star_add_monoid
 subtype.restrict_def
 mul_equiv.mk_coe
-bitvec.to_fin_val
 with_bot.bot_mul
 norm_num.prove_succ'
 category_theory.equivalence.faithful_of_equivalence
@@ -1630,15 +1581,12 @@ category_theory.pi.iso_app_symm
 list.zip_right_cons_cons
 int.nat_abs_of_nat
 set.monotone_image
-matrix.add_comm_group
 order_iso.mul_left_to_equiv
 finset.sup_indep.independent_of_univ
 list.mem_cyclic_permutations_self
 bool.band_le_right
 is_lub.Sup_eq
-fin.partial_prod
 is_top.fst
-matrix.transpose_linear_equiv_apply
 add_right_eq_self
 prefunctor.id
 Sup_le_Sup_of_subset_insert_bot
@@ -1653,7 +1601,6 @@ even.neg_one_pow
 monoid_hom.range_restrict_mker
 add_monoid.End.mul_left_apply_apply
 finsupp.single_eq_update
-fin.sum_univ_six
 subring.map_bot
 group.to_division_monoid
 list.subset_cons_of_subset
@@ -1696,7 +1643,6 @@ part.assert_neg
 quiver.opposite
 add_hom.eq_mlocus
 nat.modeq.modeq_cancel_right_div_gcd'
-matrix.nontrivial
 linarith.preprocessor.globalize
 tactic.mk_constructor_arg_names
 nat.factors_unique
@@ -1773,7 +1719,6 @@ mul_boole
 category_theory.adjunction.mk_of_unit_counit
 is_atomistic_dual_iff_is_coatomistic
 bit1_eq_one
-matrix.head_cons
 nat.clog_pow
 nat.test_bit
 tactic.succeeds_or_fails_with_msg
@@ -1811,7 +1756,6 @@ contravariant_swap_add_lt_of_contravariant_add_lt
 vector.to_array
 set.diff_union_of_subset
 znum.has_reflect
-fin.sum_const
 add_subgroup.bot_add_subgroup_of
 tactic.explode.core
 subtype.subsingleton
@@ -1828,7 +1772,6 @@ finset.singleton_iff_unique_mem
 neg_one_smul
 fin.succ_above
 int.add_comm_monoid
-matrix.transpose_add_equiv_apply
 subsemigroup.mem_closure
 ulift.add_left_cancel_semigroup
 set.eq_on_mul_indicator
@@ -1866,7 +1809,6 @@ int.nat_abs_inj_of_nonneg_of_nonpos
 fin.cons_update
 setoid.Sup_def
 equiv.set.sum_diff_subset_symm_apply_of_mem
-matrix.vec3_eq
 nat.pow_le_pow_of_le_left
 prod.has_sup
 with_top.rec_top_coe_coe
@@ -1919,7 +1861,6 @@ is_unit
 flag.order_bot
 list.length_erasep_of_mem
 lean.parser.many
-bitvec.of_fin
 linear_equiv.congr_arg
 forall₄_congr
 submonoid.closure_eq
@@ -1943,7 +1884,6 @@ zpowers_mul_hom_apply
 io_rand_nat
 sub_right_lt_of_lt_add
 nat.lt.step
-partial_sups_eq_sup'_range
 rel_embedding.well_founded
 equiv.forall_congr_left'
 nat.cast_with_bot
@@ -2020,7 +1960,6 @@ decidable_of_decidable_of_iff
 monotone.neg
 prod.has_exists_add_of_le
 reflexive.comap
-matrix.diag_add_monoid_hom
 category_theory.functor.op_unop_equiv_functor
 submonoid.closure
 set.Union_mono'
@@ -2174,7 +2113,6 @@ list.nodup.erase
 linarith.mk_single_comp_zero_pf
 mul_pos_iff
 eqv_lt_iff_eq
-matrix.of_zero
 submodule.gi_map_comap
 tactic.interactive.fold_assoc
 level.lt
@@ -2190,11 +2128,9 @@ list.mem_of_mem_inter_right
 norm_num.inv_neg
 int.neg_add_lt_right_of_lt_add
 category_theory.evaluation_uncurried_map
-matrix.has_zero
 int.lt.intro
 disjoint_bot_right
 half_pos
-matrix.update_row
 commute.right_comm
 supr_le_iff
 category_theory.full_subcategory.map.faithful
@@ -2227,15 +2163,12 @@ interactive.types.opt_pexpr_list
 neg_sq
 finsupp.equiv_congr_left
 function.injective.ordered_add_comm_monoid
-self_adjoint.has_qsmul
-matrix.non_assoc_ring
 fintype.card_finset_len
 multiset.pi
 multiset.union_comm
 fintype.prod_eq_prod_compl_mul
 pi.has_int_cast
 pnat.sub_coe
-matrix.vec_mul_conj_transpose
 nat.bit1_eq_bit1
 generalized_boolean_algebra.to_has_bot
 submonoid.closure_eq_mrange
@@ -2261,7 +2194,6 @@ tactic.rcases_hint.process_constructors
 tactic.using_new_ref
 int.lt_of_to_nat_lt
 finsupp.equiv_map_domain_single
-linear_map.snd_prod
 option.cases_on'
 int.neg_of_nat_ne_zero
 add_subsemigroup.closure_eq
@@ -2305,7 +2237,6 @@ add_submonoid.neg_order_iso
 linear_equiv.of_linear_symm_apply
 dfinsupp.sum_add_hom_comp_single
 d_array.read
-matrix.algebra_map_eq_smul
 ulift.mul_distrib_mul_action
 ge.is_total
 list.reverse_cons
@@ -2379,7 +2310,6 @@ nat.one_lt_bit0
 int.mod_neg
 is_add_unit.add_unit_spec
 tactic.suggest.unpack_iff_both
-matrix.neg_vec_mul
 list.lookmap_nil
 div_pos_of_neg_of_neg
 nat.succ_lt_succ
@@ -2392,7 +2322,6 @@ lt_tsub_comm
 expr.mk_binding
 set.comp_mul_indicator
 submodule.coe_smul
-matrix.mul_vec_transpose
 pi.const_pow
 multiset.nodup.filter_map
 set.image_injective
@@ -2443,7 +2372,6 @@ part.mod_get_eq
 add_action.mem_stabilizer_add_submonoid_iff
 equiv.perm.prod_extend_right
 category_theory.iso.app_inv
-matrix.map_sub
 equiv.subtype_equiv_symm
 expr_set.local_set_to_name_set
 nat.one_le_div_iff
@@ -2457,7 +2385,6 @@ set.mk_mem_prod
 monoid_hom.coprod_unique
 galois_coinsertion.u_bsupr_l
 mul_nonpos_of_nonpos_of_nonneg
-fin.sum_Ioi_zero
 set.Inter_union_of_antitone
 nat.test_bit_ldiff
 nat.modeq_iff_dvd
@@ -2481,7 +2408,6 @@ set.mul_indicator_mul_support
 add_subgroup.coe_pi
 dite_eq_ite
 scope_trace
-star_linear_equiv_symm_apply
 non_unital_ring_hom
 non_unital_ring_hom.to_fun
 non_unital_ring_hom.map_mul'
@@ -2496,7 +2422,6 @@ category_theory.groupoid.inv_comp
 nonempty_sum
 nat.cast_coe
 sub_lt
-fin.prod_univ_two
 int.nat_abs_eq_iff
 with_one
 tactic.target
@@ -2506,7 +2431,6 @@ int.nonneg_or_nonneg_neg
 list.range'_eq_map_range
 add_assoc
 fin.mk_zero
-self_adjoint.nat.has_pow
 add_hom.mul_unop
 supr_subtype'
 right_eq_sup
@@ -2536,7 +2460,6 @@ mul_semiring_action.to_alg_equiv
 decidable.mul_lt_one_of_nonneg_of_lt_one_right
 rat.mul_one
 int.modeq.decidable
-matrix.row_vec_mul
 two_mul
 mul_opposite.add_comm_semigroup
 set.to_finset_eq_empty_iff
@@ -2583,7 +2506,6 @@ option_t.ext
 refl
 environment.mfold
 conj_classes.carrier.fintype
-matrix.one_fin_two
 tactic.itauto.and_kind.cmp
 prod.swap_wcovby_swap
 add_nonpos
@@ -2648,7 +2570,6 @@ subgroup.multiset_noncomm_prod_mem
 zpow_eq_zero_iff
 is_well_order.linear_order
 alg_equiv.to_fun_eq_coe
-matrix.transpose_linear_equiv_symm
 dfinsupp.mem_support_iff
 add_zero_eq_id
 non_unital_ring_hom.comp
@@ -2850,14 +2771,12 @@ bool.bor_band_distrib_right
 order_embedding.monotone
 environment.is_projection
 function.embedding.cod_restrict_apply
-matrix.empty_add_empty
 has_andthen
 has_andthen.andthen
 has_andthen.mk
 finset.prod_filter_of_ne
 pi.sdiff_def
 nat.lt_asymm
-self_adjoint.conjugate'
 list.pairwise_reverse
 finset.disjoint_filter_filter_neg
 smul_ne_zero_iff_ne
@@ -2891,7 +2810,6 @@ option.pbind_map
 function.injective.ordered_add_comm_group
 add_submonoid.smul_mem_pointwise_smul_iff
 pi_subtype.can_lift'
-linear_map.tailing
 pi.comp_zero
 fn_min_mul_fn_max
 lean.parser.get_included_variables
@@ -2916,7 +2834,6 @@ equiv.finset_congr_refl
 fin.succ_above_below
 alg_equiv.arrow_congr_trans
 associates.has_top
-matrix.head_add
 add_subgroup.add_normal
 set.indicator_const_smul
 associates.out_mul
@@ -2991,7 +2908,6 @@ strict_mono.is_max_of_apply
 add_hom.snd_comp_prod
 inv_lt_one'
 mul_opposite.mul_distrib_mul_action
-matrix.sub_mul_vec
 name_map
 tactic.interactive.trivial
 nat.multichoose_one
@@ -3031,7 +2947,6 @@ quiver.hom.unop
 fintype.decidable_exists_fintype
 antitone.imp
 list.foldr_fixed'
-linear_equiv.coe_prod
 quotient.ind'
 linear_equiv.smul_def
 tactic.find_assumption
@@ -3044,7 +2959,6 @@ list.mem_rotate
 inv_pow_lt_inv_pow_of_lt
 nat.choose_eq_zero_of_lt
 zsmul_one
-matrix.minor_id_id
 order_dual.covariant_class_swap_mul_lt
 mul_opposite.op_equiv
 tactic.mk_assoc_pattern'
@@ -3104,7 +3018,6 @@ congr_fun_congr_arg
 finset.sum_apply_ite_of_true
 set.apply_piecewise₂
 set.mem_insert_of_mem
-ring_equiv.map_matrix_trans
 category_theory.functor.right_adjoint_of_equivalence
 list.nthd_append
 pi.non_unital_comm_semiring
@@ -3189,7 +3102,6 @@ commute.units_inv_left
 lean.parser.reflectable.optional
 set.diff_diff
 set.image_neg_Iic
-bitvec.and
 norm_num.lt_one_bit0
 tactic.cases
 finset.product_val
@@ -3201,7 +3113,6 @@ rat.num_denom_cases_on
 multiset.card_zero
 equiv.forall_congr'
 list.bidirectional_rec_on
-matrix.vec_mul_vec_mul
 tactic.interactive.lawful_functor_derive_handler'
 with_top.no_zero_divisors
 eq.symm
@@ -3212,7 +3123,6 @@ finset.filter_true
 guard
 finset.fintype
 int.abs_le_self_pow_two
-fin_rotate_of_lt
 sdiff_idem
 tactic.rcases_patt_parse_hi
 nat.sqrt_eq
@@ -3258,7 +3168,6 @@ units.mul_one_class
 monoid_with_zero_hom.inhabited
 add_aut.smul_def
 nat.linear_ordered_semiring
-matrix.star_mul
 strict_anti.mul_antitone'
 order_bot.ext
 fintype.sum_sum_type
@@ -3314,7 +3223,6 @@ function.uncurry_curry
 add_monoid_hom.mul_op
 has_ssubset.ssubset.false
 set_fintype_card_le_univ
-matrix.dot_product_punit
 add_semigroup.opposite_vadd_comm_class
 tactic_doc.hole_command.instance_stub
 format.when
@@ -3337,7 +3245,6 @@ fin.reverse_induction_last
 pairwise
 add_subgroup.mem_prod
 prod.vadd_comm_class_both
-matrix.has_involutive_star
 list.length_pos_of_one_lt_prod
 list.prod_drop_succ
 congr_arg_kind.has_to_format
@@ -3414,7 +3321,6 @@ set.is_scalar_tower
 add_zero_class.to_has_add
 equiv.subset_image
 omega_complete_partial_order.continuous_hom.of_mono
-matrix.cons_add_cons
 set.subsingleton_empty
 div_left_inj
 norm_cast.label.has_to_string
@@ -3436,7 +3342,6 @@ subsingleton.monotone'
 set.zero_mul_subset
 not_exists_of_forall_not
 galois_insertion.l_bsupr_u
-linear_map.prod_map_apply
 finset.prod_update_of_not_mem
 tactic.local_context
 zorn_nonempty_partial_order
@@ -3492,7 +3397,6 @@ nonempty_empty
 set.image_eq_image
 equiv.subtype_subtype_equiv_subtype_symm_apply_coe_coe
 list.foldr_strict_mono
-matrix.sub_mul
 tactic_doc.tactic.match_target
 io.fs.read_file
 nat.desc_factorial_zero
@@ -3573,7 +3477,6 @@ multiset.disjoint_finset_sum_left
 smt_tactic.get_config
 ulift.left_cancel_semigroup
 is_smul_regular.smul_iff
-fin.prod_univ_succ
 nat.factors_prime
 encodable.decode_sum
 binder
@@ -3616,7 +3519,6 @@ sum.elim_update_right
 vm_obj.fn_idx
 submodule.comap_le_comap_iff_of_surjective
 option.coe_get
-matrix.vec_cons_const
 id_delta
 functor.add_const.is_lawful_applicative
 fintype.sum_equiv
@@ -3669,7 +3571,6 @@ set.image_add_left
 alist.has_mem.mem.decidable
 set.inv_mem_Ioo_iff
 category_theory.is_iso_of_comp_hom_eq_id
-matrix.of_sub_of
 add_commute.neg_neg
 category_theory.adjunction.mk_of_unit_counit_unit
 forall₂_swap
@@ -3683,7 +3584,6 @@ add_subsemigroup.map_inf_comap_of_surjective
 list.ne_and_not_mem_of_not_mem_cons
 finset.sum_multiset_count
 nat.max_sq_add_min_le_mkpair
-matrix.transpose_mul
 mul_dvd_mul
 set.subset_Inter₂
 rat.nonneg_antisymm
@@ -3819,13 +3719,10 @@ hinst_lemma.mk
 nat.log_antitone_left
 has_lt.lt.is_antisymm
 compl_bijective
-matrix.tail_val'
-self_adjoint_part
 omega_complete_partial_order.continuous_hom.ωSup
 option.cases_on'_coe
 linear_equiv.of_left_inverse_symm_apply
 ring.to_monoid
-matrix.head_sub
 nat.add_succ_lt_add
 units.linear_order
 set.nonempty_Icc
@@ -3839,7 +3736,6 @@ unification_constraint.α
 unification_constraint.lhs
 unification_constraint.rhs
 unification_constraint.mk
-matrix.notation
 norm_num.sle_bit0_bit1
 dvd_pow
 fin.vne_of_ne
@@ -3865,7 +3761,6 @@ with_bot.Ioo_coe_coe
 set.image_univ
 ring_hom.prod_map_def
 multiset.foldr_induction
-matrix.vec2_eq
 list.perm.union_right
 unsigned.decidable_eq
 list.of_fn_mul'
@@ -3950,7 +3845,6 @@ and_rotate
 set.nonempty.zero_mem_sub
 prod.add_comm_group
 int.cast_sub_nat_nat
-matrix.sub_up_right
 to_dual_sup
 zpow_add_one₀
 bdd_below.dual
@@ -4001,7 +3895,6 @@ is_coatomic
 is_coatomic.eq_top_or_exists_le_coatom
 is_coatomic.mk
 multiset.card_eq_two
-fin.sum_of_fn
 finset.finite_to_set_to_finset
 commute.zero_right
 finset.union_distrib_right
@@ -4030,7 +3923,6 @@ fintype.decidable_eq_one_hom_fintype
 list.length_sublists_len
 nat.Sup_mem
 bool.ff_le
-bitvec.one
 units_equiv_ne_zero_apply_coe
 finset.choose_spec
 supr_of_empty
@@ -4111,7 +4003,6 @@ equiv.sum_prod_distrib_apply_right
 finsupp.emb_domain_apply
 except_t.ext
 traversable.pure_traverse
-matrix.diag_zero
 monotone.dual_left
 category_theory.prod.braiding_functor_map
 finset.inter_subset_inter_left
@@ -4210,7 +4101,6 @@ int.neg_mul_eq_neg_mul_symm
 strict_mono.with_top_map
 one_pow
 is_compl.left_unique
-matrix.dot_product_neg
 ordering.compares.cmp_eq
 set.mem_sInter
 function.surjective
@@ -4257,8 +4147,6 @@ mul_inv_rev
 fin.le_cons
 semiconj_by.conj_mk
 nat.pow_left_injective
-matrix.range_cons
-matrix.minor
 int.gcd_div
 string_to_format
 sigma.curry
@@ -4307,7 +4195,6 @@ dfinsupp.neg_apply
 tsub_lt_iff_right
 order_hom.ext
 eq_divp_iff_mul_eq
-matrix.update_column_subsingleton
 submodule.to_add_subgroup_to_int_submodule
 non_unital_ring_hom.to_opposite
 list.unzip_enum_from_eq_prod
@@ -4316,7 +4203,6 @@ category_theory.whisker_left_id'
 linear_equiv.eq_comp_symm
 finset.mem_Icc
 pnat.comm_monoid
-matrix.sum_mul
 pi.vadd_comm_class'
 multiset.count_inter
 tactic.mk_brec_on_rec_value
@@ -4343,7 +4229,6 @@ finset.map_eq_of_subset
 norm_num.div_eq
 add_subgroup.prod
 rat.semigroup
-ring_hom.map_matrix
 list.mem_repeat
 multiset.disjoint_union_right
 finset.sum_div
@@ -4400,7 +4285,6 @@ interaction_monad.run_with_state
 zero_lt_four
 set.Icc_subset_Icc_left
 expr.coord.repr
-bitvec.add_lsb
 add_comm_group
 add_comm_group.add
 add_comm_group.add_assoc
@@ -4533,7 +4417,6 @@ function.inv_fun_eq
 finset.sum_cons
 category_theory.full_subcategory.lift_obj_obj
 semiconj_by.units_zpow_right
-matrix.is_central_scalar
 inv_lt_one_iff_one_lt
 multiset.map_erase
 fintype.univ_empty
@@ -4541,7 +4424,6 @@ units.mul_right_apply
 quotient.lift_on'_mk'
 tactic.rcases_hint
 int.mod_self
-matrix.inhabited
 set.Ioc_subset_Iic_self
 add_subgroup_class.coe_zsmul
 division_ring_of_is_unit_or_eq_zero
@@ -4578,23 +4460,19 @@ list.single_le_sum
 list.perm_induction_on
 smt_tactic.add_ematch_lemma_from_decl
 min_eq_left_of_lt
-linear_map.fst
 subtype.image_preimage_val
 category_theory.induced_category.groupoid
 gt.is_trans
 right_inverse_neg
 add_monoid_with_one.unary
-equiv.pi_fin_succ
 set.Inter₂_eq_empty_iff
 finset.induction_on'
 monotone_on.mem_lower_bounds_image
 has_lt.lt.trans_eq'
 finset.subset_iff
-matrix.col_mul_vec
 simp_attr.pre_smt
 lower_bounds_mono
 list.range_map_coe
-fin.cast_le_order_iso_apply
 monoid.to_mul_one_class
 set.fintype_bUnion'
 inf_sdiff_distrib_left
@@ -4623,7 +4501,6 @@ list.nodup.of_sublists
 of_add_eq_one
 set.Icc_eq_empty_iff
 mul_opposite.op_bijective
-matrix.sum_apply
 nat.mod_core
 hole_command
 hole_command.name
@@ -4634,14 +4511,12 @@ simp_lemmas.rewrite
 is_min_iff_eq_bot
 set.inter_subset_left
 expr.has_decidable_eq
-matrix.diagonal_linear_map_apply
 list.init_cons_of_ne_nil
 nat.mul_div_cancel_left'
 finset.has_ssubset.ssubset.is_irrefl
 nat.div_def
 is_well_order.is_asymm
 option.join_ne_none
-matrix.scalar_apply_ne
 ne.le_iff_lt
 subgroup.center_le_normalizer
 trunc.rec
@@ -4808,7 +4683,6 @@ list.perm.eq_nil
 category_theory.equivalence.congr_right_counit_iso
 flag.unique
 finset.sup_attach
-matrix.minor_diagonal
 eq_zero_of_mul_eq_self_right
 well_founded.fix
 locally_finite_order_top.of_Ici
@@ -4843,7 +4717,6 @@ set.eq_univ_of_univ_subset
 library_note.decidable arguments
 nat.sub_mod_eq_zero_of_mod_eq
 set.nonempty_Ico_subtype
-linear_map.ker_snd
 submodule.top_coe
 list.chain_lt_range'
 multiset.disjoint_cons_right
@@ -4852,7 +4725,6 @@ add_opposite.comm_semiring
 equiv.of_left_inverse_eq_of_injective
 sub_mul_action.smul_mem
 native.float.sub
-fin.prod_of_fn
 subtype.map_coe
 punit.zero_eq
 sum_has_to_format
@@ -4885,7 +4757,6 @@ additive.add_zero_class
 eq_of_sub_eq_zero
 tactic_doc.attribute.norm_num
 vector.ext
-matrix.mul_diagonal
 set.exists_mem_of_nonempty
 pi.one_def
 add_subgroup.add_subgroup_of
@@ -4909,7 +4780,6 @@ int.lt_add_of_neg_add_lt
 nat.factorial_mul_pow_sub_le_factorial
 monotonic_sequence_limit
 tactic.interactive.guard_target_strict
-submodule.fst_map_fst
 nat.choose_symm_add
 psigma.elim_val
 add_lt_of_neg_of_lt'
@@ -4951,7 +4821,6 @@ ring_hom_inv_pair.triples
 finset.forall_coe
 alist.insert_entries_of_neg
 tactic.parse_config
-self_adjoint.has_nat_cast
 list.length_merge_sort
 function.support_sup
 set.image2_image_left
@@ -5040,9 +4909,7 @@ subgroup.mem_normalizer_iff'
 tactic.enable_tags
 set.subsingleton.inj_on
 set.Union_empty
-equiv.map_matrix_trans
 prod.swap_injective
-matrix.has_neg
 mul_hom.cancel_left
 multiset.fold_eq_foldl
 mul_opposite.distrib_mul_action
@@ -5324,7 +5191,6 @@ even.mul_right
 is_unit.exists_left_inv
 div_le_one_of_le
 even.neg_one_zpow
-linear_map.prod
 add_subgroup_class.to_ordered_add_comm_group
 tactic.mk_higher_order_type
 list.nil_subset
@@ -5361,8 +5227,6 @@ nat.bodd_add_div2
 fin.add_comm_group
 list.nil.is_right_id
 add_monoid_hom.zero_apply
-fin.sum_univ_four
-matrix.cons_vec_alt1
 string_imp
 string_imp.data
 string_imp.mk
@@ -5388,7 +5252,6 @@ set.Icc_subset_Ioi_iff
 int.succ
 order_dual.is_weak_upper_modular_lattice
 finsupp.map_domain_embedding
-matrix.mul_fin_two
 function.involutive.to_perm_involutive
 multiset.noncomm_foldr_cons
 encodable.choose_spec
@@ -5396,8 +5259,6 @@ equiv.simps.symm_apply
 equiv.set.insert_apply_right
 quotient.rec_on_subsingleton₂
 set.image2_Inter₂_subset_left
-prod_equiv_pi_fin_two
-bitvec.carry
 tactic.interactive.symmetry
 monad_io_is_alternative
 set.subset_diff_union
@@ -5495,7 +5356,6 @@ add_subgroup.mem_center_iff
 bit1_nsmul'
 io.proc.sleep
 linear_map.ext_on_range
-matrix.of_symm_apply
 mul_monoid_hom_apply
 monotone.map_is_greatest
 ordering.compares.of_swap
@@ -5524,7 +5384,6 @@ linear_equiv.eq_bot_of_equiv
 string.ltb
 coe_to_lift
 function.surjective.add_action
-fin.cast_le_order_iso
 is_left_regular_zero_iff_subsingleton
 nat.add_mul_div_right
 alg_equiv.apply_has_faithful_smul
@@ -5535,7 +5394,6 @@ add_subgroup.mem_top
 prod.rprod_wf
 list.erasep_append_right
 add_submonoid.closure_closure_coe_preimage
-matrix.conj_transpose_neg
 is_unit.mul_inv_eq_iff_eq_mul
 set.mem_Union
 finset.mem_range_iff_mem_finset_range_of_mod_eq'
@@ -5561,9 +5419,7 @@ dfinsupp.filter_neg
 tactic.get_pi_binders
 add_aut.one_def
 zorn_nonempty_preorder
-supr_le_supr_of_partial_sups_le_partial_sups
 auto.eelims
-matrix.minor_neg
 alist.mem_union
 mul_eq_one_iff_inv_eq
 list.forall_mem_of_fn_iff
@@ -5646,7 +5502,6 @@ int.cast_div
 conv.monad_fail
 finset.sum_dite_irrel
 sub_eq_neg_self
-bitvec.xor
 pi.single
 add_monoid_hom.has_coe_to_fun
 order_dual.boolean_algebra
@@ -5711,7 +5566,6 @@ equiv.arrow_congr'_refl
 ring_equiv.map_sub
 dfinsupp.map_range
 equiv.prop_equiv_pempty
-matrix.scalar_inj
 part.mul_get_eq
 list.has_subset
 le_sub
@@ -5733,7 +5587,6 @@ multiset.noncomm_prod_eq_pow_card
 list.alternating_prod_append
 set.forall_prod_set
 rat.cast_list_sum
-star_nat_cast_smul
 equiv.set.insert
 conv.interactive.skip
 bind_pure
@@ -5776,7 +5629,6 @@ set.indicator_zero
 multiset.Ico
 finset.sigma_nonempty
 associates.nontrivial
-comm_monoid.is_star_normal
 nat.prime.coprime_pow_of_not_dvd
 tactic.impl_graph.dfs_at
 subsemigroup.mem_supr
@@ -5797,7 +5649,6 @@ unique_has_zero
 ring_equiv.to_non_unital_ring_hom_trans
 subgroup.supr_eq_closure
 part.ret_eq_some
-matrix.mul
 set.indicator_le
 set.add_centralizer_univ
 local_context.has_to_format
@@ -5924,7 +5775,6 @@ antitone.comp_antitone_on
 fin.cast_pred_one
 mul_inv_cancel_comm_assoc
 finset.sum_list_map_count
-bitvec.has_mul
 non_unital_non_assoc_semiring.to_distrib
 pnat
 conv.slice
@@ -5945,7 +5795,6 @@ ring_equiv.inhabited
 abs_pos
 set.inv_range
 finset.sum_mul_boole
-matrix.star_apply
 set.snd_image_prod
 nat.coprime.mul_dvd_of_dvd_of_dvd
 smul_smul_smul_comm
@@ -6073,12 +5922,9 @@ mul_le_of_le_of_le_one
 tactic.norm_num.min_fac_bit0
 list.lookup_all_cons_ne
 finset.map_map
-submodule.le_prod_iff
-matrix.conj_transpose_mul
 with_bot.le_of_add_le_add_left
 equiv.equiv_of_is_empty
 set.smul_comm_class
-matrix.single_dot_product
 set.finite.of_finite_image
 multiset.coe_pmap
 int.sub_nat_nat_add_left
@@ -6141,7 +5987,6 @@ algebra.coe_linear_map
 finset.eq_empty_or_nonempty
 ulower.up
 equiv.refl_to_embedding
-matrix.sub_up_left
 lean.parser.repeat_at_least
 list.reduce_option_nil
 int.cast_two
@@ -6180,7 +6025,6 @@ category_theory.adjunction.id
 auto.add_conjuncts
 list.all
 nat.zero_lt_one
-matrix.non_unital_non_assoc_semiring
 function.surjective_of_right_cancellable_Prop
 tsub_lt_of_lt
 fintype.is_simple_order.univ
@@ -6206,7 +6050,6 @@ dfinsupp.add_monoid₂
 set.finite_univ_iff
 tactic_doc.command.reassoc_axiom
 sizeof
-fin.sum_congr'
 disjoint.subset_right_of_subset_union
 abs_eq_zero
 exists_between
@@ -6221,7 +6064,6 @@ nat.can_lift_pnat
 set.vsub_union
 is_add_unit.neg_add_cancel_left
 int.neg_of_nat_zero
-fin_two_equiv
 add_subgroup.closure_eq
 int.nat_abs_sign
 submodule.comap_strict_mono_of_surjective
@@ -6306,14 +6148,12 @@ pi.eval_non_unital_ring_hom
 iff.rfl
 mul_div_cancel_of_imp'
 mul_one_class.to_is_left_id
-matrix.transpose_empty_rows
 mul_right_cancel
 fin.Iic_eq_finset_subtype
 is_empty.subsingleton
 fin.sub
 multiset.rel.trans
 io.net.send
-matrix.diagonal_eq_diagonal_iff
 galois_connection.u_infi₂
 add_monoid_hom.coe_finsupp_sum
 finset.sdiff_erase
@@ -6333,12 +6173,10 @@ multiset.prod_erase
 set.range_const
 set.Ioi_inter_Iio
 set.preimage_sub_const_Ioi
-matrix.transpose_ring_equiv
 state_t.bind
 set.Ici_subset_Ioi
 list.not_lt_of_mem_argmax
 covariant.monotone_of_const
-matrix.diagonal_add
 alg_hom.ext_iff
 finset.inf_inf
 library_note.function coercion
@@ -6403,7 +6241,6 @@ set.mem_inv_smul_set_iff
 directed.sequence_mono
 add_units.has_faithful_vadd
 id
-star_linear_equiv_apply
 pos_num.divmod
 io.handle
 rel_embedding.of_is_empty
@@ -6438,7 +6275,6 @@ pi.pow_apply
 list.count_eq_zero_of_not_mem
 div_mul
 int.div_self
-fin.prod_const
 tactic.ring.eval_pow
 set.union_Union_nat_succ
 subsingleton.strict_anti
@@ -6496,7 +6332,6 @@ category_theory.iso.inv_comp_eq
 vector.to_list_append
 associates.inhabited
 or.assoc
-fin.sum_pow_mul_eq_add_pow
 finset.subset.rfl
 fintype.equiv_fin_of_card_eq
 list.foldr_eta
@@ -6597,7 +6432,6 @@ units.mk0_coe
 bit0_mul
 equiv.set.union'
 tsub_right_inj
-submodule.prod_comap_inr
 tactic_doc.tactic.scc
 fintype.card_pi_finset
 ne.ssubset_of_subset
@@ -6700,10 +6534,8 @@ list.duplicate_cons_iff_of_ne
 linear_map.ker_eq_bot
 sigma.uncurry
 set.image
-matrix.ring
 tactic.abel.normal_expr.to_list
 ring_hom.to_monoid_hom
-self_adjoint.rat_cast_mem
 zpow_bit1_nonneg_iff
 nat.prime_dvd_prime_iff_eq
 galois_coinsertion.u_sup_l
@@ -6716,7 +6548,6 @@ pi.mul_action_with_zero
 dvd_of_mul_left_dvd
 list.lookup_kerase_ne
 list.repeat_succ
-matrix.minor_add
 tactic.read_ref
 equiv.add_left
 nat.bit0_val
@@ -6742,7 +6573,6 @@ distrib_mul_action_hom.has_zero
 setoid.comm'
 with_top.semilattice_sup
 list.suffix_iff_eq_append
-matrix.minor_apply
 category_theory.evaluation_map_app
 list.erase_eq_erasep
 vector.tail
@@ -6797,7 +6627,6 @@ sym.attach
 set.prod_eq
 list.duplicate.of_duplicate_cons
 multiset.le_union_right
-matrix.dot_product_sub
 left_commutative
 units.embed_product
 equiv.arrow_prod_equiv_prod_arrow
@@ -6830,7 +6659,6 @@ euclidean_domain.mod_zero
 lean.parser_state.options
 equiv.of_left_inverse_of_card_le
 submonoid.comap_infi_map_of_injective
-fin_add_flip_apply_mk_right
 finset.disjoint_image
 multiset.map_injective
 submodule.mem_supr_of_mem
@@ -6874,7 +6702,6 @@ free_monoid.rec_on
 galois_connection.lt_iff_lt
 fintype.card_equiv
 complete_lattice.supr_continuous
-ring_equiv.map_matrix
 set.preimage_inl_range_inr
 ulift.add_semigroup
 int.div_neg
@@ -6931,7 +6758,6 @@ monotone.le_map_sup
 function.semiconj
 tactic.interactive.apply_opt_param
 subring.coe_one
-bitvec.of_nat_succ
 pi.list_sum_apply
 set.vsub_empty
 semiconj_by.cast_nat_mul_right
@@ -6950,7 +6776,6 @@ and_or_imp
 zpow_add_one
 with_bot.get_or_else_bot_lt_iff
 set.bUnion_eq_Union
-matrix.zero_vec_mul
 le_iff_compact_le_imp
 rat.cast_coe_nat
 linarith.pcomp.scale
@@ -7033,7 +6858,6 @@ complete_lattice.independent.set_independent_range
 add_monoid_hom.prod
 format.highlight
 div_le_div_iff
-linear_map.prod_map_alg_hom_apply
 tactic.interactive.nested_map
 tactic_doc.tactic.classical
 of_dual_compl
@@ -7089,7 +6913,6 @@ set.image_subset_iff
 fin.cases_zero
 finsupp.map_domain_injective
 quotient.map_mk
-matrix.cons_vec_bit0_eq_alt0
 is_glb_lt_is_lub_of_ne
 add_subgroup.map_normalizer_eq_of_bijective
 gcd_dvd_gcd_mul_right_right
@@ -7128,7 +6951,6 @@ add_equiv.arrow_congr_apply
 omega_complete_partial_order.chain.map
 half_sub
 linear_map.congr_arg
-submodule.snd_equiv_apply
 int.lt.elim
 linear_ordered_comm_monoid
 linear_ordered_comm_monoid.le
@@ -7186,7 +7008,6 @@ linear_equiv.coe_of_top_symm_apply
 antitone.covariant_of_const
 is_bot_bot
 linear_ordered_field.to_densely_ordered
-matrix.reindex_refl_refl
 set.pairwise_disjoint
 is_min_of_dual_iff
 codisjoint.sup_left
@@ -7223,7 +7044,6 @@ interactive.executor.inhabited
 interactive.executor.execute_with
 interactive.executor.mk
 ite_zero_add
-linear_map.coe_prod
 subgroup.le_normal_closure
 tactic.get_trace_msg_pos
 alg_equiv.to_alg_hom
@@ -7268,7 +7088,6 @@ set.Ioi_union_left
 associates.out_dvd_iff
 sym
 set.preimage_mul_const_interval
-matrix.smul_eq_mul_diagonal
 mul_hom.to_opposite_apply
 finsupp.subtype_domain_sum
 add_monoid_hom.range_restrict_ker
@@ -7306,7 +7125,6 @@ localized_attr
 submodule.supr_to_add_submonoid
 le_of_neg_of_one_div_le_one_div
 set.Inter_eq_if
-fin.prod_univ_one
 set.union_univ
 exists_one_lt'
 neg_zero'
@@ -7347,7 +7165,6 @@ max_div_div_right'
 native.rb_map.has_to_tactic_format
 irreducible.not_dvd_one
 fintype.card_order_dual
-fin.prod_univ_succ_above
 order_hom.bind_coe
 part.bind_of_mem
 finsupp.emb_domain_eq_map_domain
@@ -7413,10 +7230,8 @@ function.injective
 category_theory.cancel_mono_id
 strict_anti.comp
 le_or_lt
-bitvec
 bot_order_or_no_bot_order
 pprod.exists'
-pi.has_involutive_star
 subsemigroup.to_add_subsemigroup'_closure
 submonoid.map_le_map_iff_of_injective
 free_add_monoid.closure_range_of
@@ -7438,7 +7253,6 @@ subset_Icc_cInf_cSup
 set.empty_ne_univ
 finset.filter_eq_self
 equiv.sum_compl_apply_inl
-bitvec.uborrow
 add_right_cancel_semigroup.contravariant_swap_add_le_of_contravariant_swap_add_lt
 lt_add_neg_iff_add_lt
 set.add_mem_Ioc_iff_left
@@ -7618,7 +7432,6 @@ category_theory.adjunction.equiv_homset_right_of_nat_iso_symm_apply
 int.le_induction_down
 equiv.add_right_symm
 non_unital_ring_hom.op
-matrix.conj_transpose_one
 add_equiv.add_equiv_of_unique
 monotone.prod_map
 set.Icc_diff_Ioo_same
@@ -7639,7 +7452,6 @@ rat.mk_div_mk_cancel_right
 string.iterator.curr
 add_submonoid.mem_carrier
 expr.to_int
-matrix.transpose_list_prod
 list.all_iff_forall
 expr.list_local_consts
 one_hom.has_one
@@ -7672,7 +7484,6 @@ multiset.prod_cons
 star_inv'
 environment.add_inductive
 tactic_doc.tactic.unfold
-matrix.map_update_column
 list.update_nth
 gt.is_well_order
 set.restrict_ite_compl
@@ -7752,7 +7563,6 @@ pos_num.decidable_lt
 fin.cast_lt
 is_empty_sum
 json.decidable_eq
-matrix.cons_mul_vec
 list.map_eq_foldr
 is_unit.mul_div_cancel
 tactic.elide.replace
@@ -7772,7 +7582,6 @@ tactic_doc.tactic.case
 multiset.count_finset_sup
 name.is_suffix_of
 associates.has_one
-matrix.diagonal_ring_hom
 with_bot.not_coe_le_bot
 inf_lt_right
 dfinsupp.support_add
@@ -7794,16 +7603,13 @@ of_heq_true
 set.image2_mul
 list.any_iff_exists_prop
 list.nth_le_rotate
-matrix.diagonal_dot_product
 order_dual.exists
 int.prime.dvd_nat_abs_of_coe_dvd_sq
 finset.union_subset
 bit0_add
 tactic.rcases_patt.merge
 add_opposite.unop_inj
-matrix.minor_smul
 list.nth_le_range
-matrix.has_repr
 set.has_ssubset.ssubset.is_nonstrict_strict_order
 is_simple_group.to_nontrivial
 associates.mk_eq_mk_iff_associated
@@ -7995,10 +7801,7 @@ sigma.map
 dfinsupp.single_neg
 part.get_some
 list.decidable_nthd_nil_ne
-matrix.diag_sub
 alg_equiv.map_finsupp_prod
-self_adjoint.is_star_normal
-fin_add_flip_apply_mk_left
 list.is_rotated_iff_mem_map_range
 finset.eq_zero_of_sum_eq_zero
 set.image2_congr
@@ -8037,7 +7840,6 @@ list.nodup.sublist_ext
 submodule.map_subtype.rel_iso
 set.decidable_mem_Ioc
 function.injective.mul_action
-matrix.zero_mul_vec
 category_theory.nat_iso.op_inv
 order_hom.fst_comp_prod
 submodule.eq_bot_iff
@@ -8164,7 +7966,6 @@ mul_action.orbit_nonempty
 set.restrict
 finset.prod_pow_eq_pow_sum
 int.cast_add
-matrix.dot_product_zero'
 symmetric.pairwise_on
 is_max.not_lt
 nat.mul_lt_mul'
@@ -8174,7 +7975,6 @@ one_hom.map_one
 submonoid.coe_map
 buffer.iterate
 alist.perm_lookup
-matrix.vec_alt0_append
 finset.Icc_eq_cons_Ioc
 subgroup.mem_Sup_of_mem
 category_theory.induced_functor
@@ -8203,7 +8003,6 @@ interaction_monad.fail
 set.mem_singleton
 nonneg_of_mul_nonpos_right
 subtype.has_to_format
-alg_hom.map_matrix
 part.left_dom_of_sdiff_dom
 mul_action.to_perm
 finset.noncomm_sum_single
@@ -8223,7 +8022,6 @@ list.count_concat
 equiv.apply_eq_iff_eq_symm_apply
 disjoint.subset_compl_right
 even_iff_exists_two_mul
-matrix.conj_transpose_rat_cast_smul
 with_one.one_ne_coe
 nat.even_or_odd
 quotient.hrec_on
@@ -8247,7 +8045,6 @@ option.map_none
 int.nneg_mul_add_sq_of_abs_le_one
 congr_arg_heq
 set.has_emptyc.emptyc.is_empty
-linear_map.coprod_inl
 tactic_doc.command.def_replacer
 nsmul_add_monoid_hom_apply
 fintype.card_Prop
@@ -8433,8 +8230,6 @@ set.mem_range
 monotone.const_add
 finset.singleton_product_singleton
 equiv.subtype_univ_equiv_symm_apply
-alg_equiv.map_matrix_refl
-skew_adjoint_part
 div_le_div_of_mul_sub_mul_div_nonpos
 distrib_mul_action_hom.comp_apply
 one_div_mul_one_div
@@ -8470,7 +8265,6 @@ tactic.assoc_refl
 add_submonoid.mem_closure
 rbmap
 prod.map_snd'
-fin_sum_fin_equiv_symm_apply_cast_add
 linear_equiv.of_linear
 finset.erase_subset
 nat.factors_subset_of_dvd
@@ -8491,7 +8285,6 @@ set.decidable_mem_add
 tactic.interactive.have_field
 tactic.interactive.delta_instance
 eq_div_of_mul_eq''
-fin_succ_equiv_last
 and.comm
 char.val_of_nat_eq_of_not_is_valid
 commute.list_prod_right
@@ -8503,7 +8296,6 @@ tactic.open_n_pis
 set.Inter_or
 lt_of_le_of_ne
 disjoint_supr_iff
-star_module.self_adjoint_part_add_skew_adjoint_part
 tactic.interactive.slice_lhs
 num.decidable_lt
 fin.snoc_update
@@ -8539,15 +8331,12 @@ options.set_bool
 function.injective.division_monoid
 linarith.nat_le_subst
 list.zip_with
-self_adjoint.coe_rat_smul
 lt_or_lt_iff_ne
 add_opposite.unique
 set.maps_to.union
 complete_lattice.is_Sup_finite_compact_iff_all_elements_compact
 finset.eq_univ_of_forall
 ring_hom.eq_of_eq_on_stop
-matrix.has_smul
-matrix.empty_vec_alt0
 multiset.product
 lt_of_lt_of_eq'
 tactic.dependency_name_sets_of_hyps_inclusive
@@ -8568,7 +8357,6 @@ category_theory.nat_trans.app_naturality
 add_right_cancel_semigroup.ext
 subring.mem_mk'
 max_assoc
-prod_equiv_pi_fin_two_apply
 vm_decl_kind.inhabited
 tactic.abel.subst_into_smul_upcast
 environment.is_namespace
@@ -8581,7 +8369,6 @@ equiv.eq_comp_symm
 prod.omega_complete_partial_order_ωSup_fst
 left_cancel_semigroup.contravariant_mul_le_of_contravariant_mul_lt
 set.is_add_unit_iff
-matrix.cons_head_tail
 dvd_add_left
 function.mul_support_inv'
 environment.is_inductive
@@ -8687,7 +8474,6 @@ set.Iio_subset_Iic
 ulift.has_smul_left
 list.sublist.subset
 function.injective.is_domain
-is_left_regular.matrix
 vm_decl
 list.dedup_cons_of_not_mem
 or_of_or_of_imp_of_imp
@@ -8741,7 +8527,6 @@ list.range_core
 is_glb_lt_iff
 native.float.log2
 min_div_div_right'
-has_trivial_star.is_star_normal
 category_theory.functor.precomp_map_heq
 multiset.nodup_of_le
 add_monoid_hom.decidable_mem_mker
@@ -8760,14 +8545,12 @@ equiv_like.apply_eq_iff_eq
 option.filter
 sub_mul_action.coe_mk
 multiset.map_comp_cons
-bitvec.to_fin
 mk_name_map
 fin.init_def
 finset.inf_attach
 nat.not_dvd_iff_between_consec_multiples
 submonoid.center.smul_comm_class_right
 strict_mono.monotone
-pi.has_star
 subgroup.mul_single_mem_pi
 tactic.impl_graph.mk_scc
 category_theory.functor.to_ess_image
@@ -8816,7 +8599,6 @@ smt_tactic.interactive.have
 max_div_div_left'
 list.reduce_option_length_eq_iff
 list.sorted.rel_nth_le_of_lt
-matrix.transpose_empty_cols
 set.empty_subset
 tactic.interactive.subst_vars
 int.cast_zero
@@ -8875,13 +8657,11 @@ finset.sum_zsmul
 nat.add_pos_right
 expr.address.is_below
 pi.unique_of_is_empty
-linear_map.tunnel'
 equiv.subtype_equiv_codomain_symm_apply_eq
 set.inter_left_comm
 category_theory.iso.refl
 fin.strict_mono_iff_lt_succ
 one_div_lt_neg_one
-matrix.mul_vec.add_monoid_hom_left
 category_theory.adjunction.of_right_adjoint
 native.float.of_nat
 inf_sdiff_sup_left
@@ -8936,7 +8716,6 @@ fintype.induction_empty_option'
 submodule.coe_of_le
 native.float.has_add
 nat.eq_zero_of_le_div
-matrix.zero_dot_product'
 subtype.mk_lt_mk
 ring_hom.eq_int_cast
 list.map_permutations'
@@ -8948,7 +8727,6 @@ finset.nonempty.cSup_mem
 subgroup.not_mem_of_not_mem_closure
 forall_eq_or_imp
 coe_ff
-star_int_cast_smul
 fin.cast_pred
 add_equiv.add_monoid_hom_congr
 has_exists_mul_of_le
@@ -9090,7 +8868,6 @@ dfinsupp.sum_add_hom_comm
 canonically_linear_ordered_monoid.to_linear_order
 and_self_right
 set.univ_pi_eq_empty_iff
-matrix.row_mul_vec
 finset.coe_le_max_of_mem
 monoid_with_zero_hom.mk_coe
 add_subgroup.center
@@ -9215,9 +8992,7 @@ distrib_mul_action.to_module_aut
 list.range_add
 fintype.card_eq_zero
 right_comm
-matrix.star_ring
 auto_param.out
-matrix.row_cons
 dif_pos
 tactic.or_refl_conv
 list.minimum_singleton
@@ -9281,7 +9056,6 @@ fin.countable
 vector.fintype
 add_neg_eq_iff_eq_add
 nat.digits_lt_base'
-linear_equiv.map_matrix
 is_greatest.order_top
 tactic.mk_instance
 submodule.add_subgroup_class
@@ -9310,7 +9084,6 @@ mul_action.fixed_eq_Inter_fixed_by
 sub_ne_zero_of_ne
 prod.add_action
 to_additive.parser
-matrix.module
 tactic.ring.horner_mul_horner
 equiv.punit_prod
 lt_tsub_iff_right_of_le
@@ -9352,7 +9125,6 @@ category_theory.adjunction.adjunction_of_equiv_left_counit_app
 list.alternative
 finset.prod_mk
 int.bodd_coe
-matrix.diag_linear_map_apply
 int.of_nat_zero
 set.infinite.nonempty
 parsed_projection_data
@@ -9412,12 +9184,10 @@ tactic_doc.hole_command.tidy
 tactic.assoc_rewrite_intl
 tactic.intron'
 Inf_le_Sup
-matrix.vec_mul_transpose
 binder_info.inhabited
 finset.mem_insert_of_mem
 order.coframe.to_complete_lattice
 implies.decidable
-matrix.vec3_dot_product
 add_subgroup.map_map
 array.traversable
 compl_eq_bot
@@ -9504,7 +9274,6 @@ finset.preimage
 function.inv_fun_eq_of_injective_of_right_inverse
 multiset.fold_cons_right
 rbtree.depth
-fin.Ioi_succ
 auto.not_forall_eq
 function.surjective.group
 finset.eq_empty_of_is_empty
@@ -9525,7 +9294,6 @@ finsupp.sum_elim
 nat.eq_of_dvd_of_div_eq_one
 set.ne_univ_iff_exists_not_mem
 finset.preimage_subset
-skew_adjoint.inhabited
 functor.const.is_lawful_functor
 compl_involutive
 with_bot.densely_ordered
@@ -9535,13 +9303,11 @@ multiset.powerset_len_aux_cons
 int.add_neg_of_nonpos_of_neg
 ordered_ring.mk_of_positive_cone
 mem_perms_of_list_iff
-self_adjoint.coe_mul
 is_unit.neg
 tactic.hyp_directly_depends_on_locals
 finsupp.equiv_fun_on_fintype_symm_single
 prod.has_faithful_vadd_right
 set.Ioi_diff_Ioi
-matrix.has_mul
 rel_iso.group
 int.decidable_dvd
 sdiff_eq_sdiff_iff_inf_eq_inf
@@ -9583,7 +9349,6 @@ num.succ
 prod.lex.lt_iff
 additive.fintype
 submodule.order_bot
-bitvec.has_repr
 self_eq_mul_left
 is_lub_lt_iff
 additive.inhabited
@@ -9605,13 +9370,11 @@ submonoid.map_le_iff_le_comap
 list.of_fn_rec_of_fn
 is_well_order.conditionally_complete_linear_order_bot
 codisjoint.mono
-skew_adjoint.distrib_mul_action
 add_action.orbit_rel.quotient
 list.prod_eq_pow_single
 multiset.card_pos
 lt_of_not_ge
 tactic.interactive.reassoc
-matrix.coe_scalar
 is_lub.bdd_above
 monad_lift_refl
 list.erase_subset
@@ -9662,7 +9425,6 @@ set.bex_image_iff
 ring_hom.ext_rat
 list.sorted.nth_le_iso
 add_monoid_hom.map_multiset_sum
-fin.sum_univ_eight
 linarith.preprocessor_to_gb_preprocessor
 tactic.terminal_goal
 nat.modeq.refl
@@ -9720,7 +9482,6 @@ finset.map_subtype_embedding_Ioi
 category_theory.evaluation
 list.forall₂_cons_right_iff
 rbnode.max
-matrix.add_vec_mul
 associates.prime.le_or_le
 lower_bounds_mono_mem
 monotone.monotone_on
@@ -9730,8 +9491,6 @@ add_submonoid.set_like
 list.sum_concat
 order_dual.is_total_le
 mul_aut.apply_mul_distrib_mul_action
-self_adjoint.comm_ring
-fin.prod_congr'
 int.mul_self_lt_mul_self
 monotone_or
 finset.inf_congr
@@ -9797,7 +9556,6 @@ add_subgroup.normal_add
 array.mem.def
 list.nth_le_of_eq
 set.maps_to_empty
-fin.sum_Ioi_succ
 pow_two
 list.erase_cons_head
 is_add_unit.sub
@@ -9928,13 +9686,10 @@ add_equiv.coe_prod_comm_symm
 set.ord_connected_pi
 multiset.inter_zero
 add_subsemigroup.comap_equiv_eq_map_symm
-matrix.mul_vec_smul
-submodule.fst_equiv_symm_apply_coe
 mul_opposite.mul_one_class
 div_inv_monoid.to_monoid
 simps_add_projection
 equiv.prod_shear_symm_apply
-linear_map.map_matrix_id
 list.find
 array.read
 set.Iic_inter_Ici
@@ -10063,7 +9818,6 @@ multiset.exists_mem_of_rel_of_mem
 true_iff
 neg_mem_iff
 nat.le_trans
-matrix.smul_mul_vec_assoc
 quotient.decidable_eq
 function.surjective.mul_zero_class
 div_neg_of_pos_of_neg
@@ -10078,7 +9832,6 @@ of_add_nsmul
 int.div_eq_iff_eq_mul_left
 function.Pi_congr_left'_update
 sup_ind
-linear_map.tailing_linear_equiv
 tactic.abel.subst_into_smulg
 subring.comap_comap
 tactic.interactive.delete_expr
@@ -10310,7 +10063,6 @@ tactic.interactive.unify_with_instance
 finset.prod_product
 smt_goal
 set.mem_inv
-matrix.mul_empty
 set.univ_eq_empty_iff
 submonoid.dense_induction
 submonoid_class.coe_pow
@@ -10391,7 +10143,6 @@ expr.coord.has_lt
 galois_insertion.l_Inf_u_image
 mul_hom.ext
 finset.disjoint_empty_right
-partial_sups_eq_sup_range
 set.le_mul_indicator
 linear_map.iterate_range_coe
 multiset.erase_add_left_neg
@@ -10419,7 +10170,6 @@ with_top.coe_lt_iff
 set.bInter_subset_of_mem
 localized_cmd
 widget.interactive_expression.view
-linear_map.prod_map_ring_hom_apply
 set.powerset_mono
 finsupp.single_of_emb_domain_single
 tactic.norm_num.prove_coprime_nat
@@ -10499,7 +10249,6 @@ add_hom.le_map_tsub
 rel_embedding.sum_lex_inl_apply
 set.left_inv_on.comp
 pnat.card_fintype_Ioo
-linear_map.inr_injective
 nat.modeq_nine_digits_sum
 function.update_same
 commute.one_left
@@ -10541,12 +10290,10 @@ arrow_action
 int.exists_strict_mono
 equiv.traversable
 pi.default_def
-fin.prod_univ_seven
 list.length_drop
 int.add
 nat.add_mul_div_left
 native.rb_set.of_list
-bitvec.of_fin_val
 add_opposite.has_vadd
 finset.sum_filter_of_ne
 function.injective.non_unital_comm_ring
@@ -10574,7 +10321,6 @@ tactic.assertv_core
 div_le_one_of_neg
 tactic_doc.command.mk_simp_attribute
 int.nat_abs_add_nonneg
-matrix.vec2_dot_product
 set.card_le_of_subset
 set.preimage_mul_const_Ico_of_neg
 set.univ_inter
@@ -10645,7 +10391,6 @@ submodule.comap_mono
 and.swap
 fin.le_coe_last
 tactic.clear_value
-fin.prod_univ_eight
 inv_lt_of_inv_lt
 prod.smul_def
 quarterround.xor0_output
@@ -10679,7 +10424,6 @@ mul_aut_arrow_apply_symm_apply
 subtype.preorder
 finset.map_inj
 set.mem_sep_iff
-matrix.row_smul
 set.mem_Ici_of_Ioi
 linarith.comp
 linarith.comp.str
@@ -10704,7 +10448,6 @@ add_semiconj_by.conj_mk
 order_dual.comm_monoid_with_zero
 lt_mul_of_one_lt_left
 subgroup.to_comm_group
-fin.sum_univ_zero
 rat.cast_div
 add_subsemigroup.closure_Union
 finset.compl_ne_univ_iff_nonempty
@@ -10775,7 +10518,6 @@ linter.impossible_instance
 is_conj_iff_eq
 linear_equiv.symm_trans_self
 add_action.orbit_rel.quotient.orbit_mk
-bitvec.ult.decidable
 mul_opposite.subsingleton
 inf_Sup_eq_of_directed_on
 rel_iso.coe_fn_injective
@@ -10803,7 +10545,6 @@ fintype.card_of_finset'
 set.singleton_union
 has_le.le.of_dual
 linear_map.applyₗ
-matrix.vec_mul_smul
 linear_map.one_apply
 vadd_neg_vadd
 int.bitwise_and
@@ -10812,14 +10553,12 @@ subsemigroup.center
 mul_opposite.monoid
 set.sUnion_empty
 finset.filter_empty
-bitvec.slt
 add_monoid_hom.cancel_right
 submonoid.comap
 inf_sdiff_assoc
 le_tsub_of_add_le_left
 set.nontrivial_mono
 add_subsemigroup.coe_center
-bitvec.to_nat_eq_foldr_reverse
 add_submonoid.to_linear_ordered_cancel_add_comm_monoid
 finsupp.filter
 with_top.map_zero
@@ -10955,13 +10694,11 @@ is_glb_Ioc
 nat.of_digits_mod
 pi.inv_comp
 char.to_lower
-matrix.col_add
 conv.interactive.guard_lhs
 max_default
 set.inter_is_assoc
 add_subgroup.map_zero_eq_bot
 list.pw_filter_map
-matrix.tail_sub
 disjoint_compl_left_iff
 int.lt_sub_left_of_add_lt
 fintype.card_eq
@@ -11014,7 +10751,6 @@ ring_hom.map_bit0
 set.ord_connected.apply_wcovby_apply_iff
 expr.occurs
 monoid_hom.has_coe_t
-fin_succ_equiv'_symm_some
 subgroup.top_prod_top
 set.add_mem_center
 tactic.norm_num
@@ -11085,7 +10821,6 @@ equiv.swap_mul_self
 and.imp_left
 list.filter_append
 list.nodup.inter
-fin.prod_trunc
 set.inter_indicator_mul
 list.map_id''
 list.pairwise.pw_filter
@@ -11190,7 +10925,6 @@ int.sub_nat_nat_add_neg_succ_of_nat
 dfinsupp.single_add_erase
 subtype.refl
 add_equiv.apply_eq_iff_eq
-matrix.tail_cons
 int.cast_lt
 submodule.mem_map
 zorn_partial_order
@@ -11212,7 +10946,6 @@ has_sdiff
 has_sdiff.sdiff
 has_sdiff.mk
 set.mem_def
-matrix.conj_transpose_linear_equiv_apply
 equiv.nonempty
 false_of_nontrivial_of_subsingleton
 set.image_eq_Union
@@ -11235,7 +10968,6 @@ le_mul_of_one_le_right
 tactic.hyps_depend_on_local_name_set
 list.minimum_le_of_mem
 list.monotone_sum_take
-matrix.add_zero_class
 set.indicator_compl_add_self_apply
 module_info.has_to_tactic_format
 with_top.coe_neg
@@ -11294,7 +11026,6 @@ commute
 linear_map.id_comp
 is_glb.exists_between'
 linear_map.apply_smul_comm_class
-matrix.dot_product
 set.mem_image
 submonoid.to_ordered_cancel_comm_monoid
 gt_of_gt_of_ge
@@ -11305,7 +11036,6 @@ equiv.subtype_quotient_equiv_quotient_subtype_mk
 subgroup.coe_comap
 exists_unique.intro
 monoid_hom.ker_prod_map
-matrix.dot_product_star
 is_lub.mono
 order_iso.trans_refl
 with_zero.unzero_coe
@@ -11337,7 +11067,6 @@ one_le_zpow
 linear_equiv.of_bijective_apply
 subgroup.closure_comm_group_of_comm
 int.inhabited
-matrix.matrix.reflect
 linear_ordered_add_comm_group.to_linear_ordered_cancel_add_comm_monoid
 alg_equiv.aut
 add_subgroup.subtype_range
@@ -11405,7 +11134,6 @@ finset.card_erase_eq_ite
 set.finite.subset
 multiset.prod_le_pow_card
 subring.mem_to_submonoid
-matrix.row_mul_col_apply
 state_t.run_adapt
 submonoid.pointwise_central_scalar
 set.fintype_insert
@@ -11455,11 +11183,9 @@ nat.succ_add_eq_succ_add
 list.pw_filter_cons_of_neg
 zpow_lt_zpow_iff'
 option.join_eq_some
-self_adjoint.mem_iff
 multiset.nodup_dedup
 set.eq_singleton_iff_nonempty_unique_mem
 to_bool_false_eq_ff
-bitvec.ult
 cancel_factors.cancel_factors_eq
 nat.base_pow_length_digits_le'
 set.left_inv_on.eq
@@ -11502,7 +11228,6 @@ sdiff_eq
 bool.boolean_algebra
 tactic.interactive.as_goal
 int.coe_nat_pos
-matrix.mul_vec_neg
 add_submonoid.comap
 int.pow_dvd_pow_iff
 finset.coe_erase
@@ -11571,7 +11296,6 @@ multiset.inf_zero
 rel_iso.cast_apply
 neg_lt_neg
 list.insert_nth_zero
-submodule.map_inr
 set.left_mem_Icc
 strict_mono.comp_strict_anti_on
 add_monoid_hom.to_add_hom
@@ -11587,7 +11311,6 @@ add_monoid_hom.of_injective_apply
 subring.center
 prod.fst_div
 int.sub_lt_sub_left
-matrix.scalar_apply_eq
 dfinsupp.erase_single
 with_zero.coe_add
 mk_iff.compact_relation
@@ -11603,7 +11326,6 @@ tactic.ext
 odd_iff_exists_bit1
 tactic_doc.tactic.mapply
 finset.powerset_nonempty
-prod_equiv_pi_fin_two_symm_apply
 subtype.prop
 submonoid.to_add_submonoid_symm_apply_coe
 ulift.semigroup
@@ -11652,7 +11374,6 @@ add_subgroup.to_add_submonoid_le
 rat.neg
 nat.not_even_iff
 galois_insertion.l_infi_u
-matrix.diagonal_transpose
 tactic.norm_num.nat_coprime_helper_1
 with_bot.coe_bit1
 list.equiv_sigma_tuple
@@ -11673,7 +11394,6 @@ category_theory.functor.map_is_iso
 tactic_doc.command.import_private
 mul_left_comm
 bsupr_prod
-matrix.transpose_apply
 finset.ne_empty_of_mem
 ring_equiv.coe_to_mul_equiv
 mul_semiring_action.to_alg_equiv_symm_apply
@@ -11792,7 +11512,6 @@ pi.single_inj
 widget.tactic_render
 with_bot.order_top
 nat.bitwise
-linear_equiv.prod
 commute.cast_int_mul_left
 semifield.to_is_field
 and_congr_left'
@@ -11934,7 +11653,6 @@ tactic.new_goals.non_dep_only
 tactic.new_goals.all
 multiset.pow_count
 lt_add_of_pos_of_lt'
-add_monoid_hom.map_matrix_comp
 monoid_hom.range_restrict
 with_zero.map_id
 is_lub.supr_eq
@@ -11947,7 +11665,6 @@ finset.Ioi_disj_union_Iio
 nat.find_eq_zero
 false_iff
 set.fintype_Union
-matrix.bit1_apply_ne
 list.chain_cons
 Inf_le_Inf
 sym.mem_cons_of_mem
@@ -11972,8 +11689,6 @@ tactic.ring.ring_m.alternative
 tactic.interactive.generalize'
 has_le.le.is_partial_order
 mul_equiv.inv'_apply
-bitvec.to_nat_lt
-linear_map.inl_injective
 tactic.unify_equations.get_sizeof
 finsupp.some_single_some
 ring.to_semiring
@@ -11983,7 +11698,6 @@ tactic.tauto_state
 finset.sup_indep.pairwise_disjoint
 list.has_sdiff
 mul_opposite.unop_rat_cast
-fin_prod_fin_equiv_apply_coe
 pi.has_Inf
 int.cast_mono
 native.float
@@ -12093,7 +11807,6 @@ order_hom.order_hom_eq_id
 list.modify_nth
 finsupp.prod_ite_eq
 rbtree.fold
-matrix.cons_dot_product
 equiv.subtype_subtype_equiv_subtype_inter
 with_top.mul_zero_one_class
 associates.mk_dvd_mk
@@ -12109,7 +11822,6 @@ expr.lambdas
 with_zero.lift_unique
 alg_equiv.Pi_congr_right_apply
 submodule.bot_to_add_submonoid
-matrix.diag_add_monoid_hom_apply
 strict_mono_on.strict_mono
 is_greatest.union
 tactic.dsimplify_core
@@ -12134,7 +11846,6 @@ category_theory.iso.refl_symm
 has_dvd.dvd.trans
 rel_embedding.is_symm
 list.nth_le_append_right
-subsingleton_fin_one
 widget.cn
 eq_mpr_bijective
 category_theory.prod.fst
@@ -12206,7 +11917,6 @@ has_to_pexpr.to_pexpr
 has_to_pexpr.mk
 add_subsemigroup.map_surjective_of_surjective
 finset.fold_image_idem
-matrix.map_algebra_map
 set.subset_insert
 list.choose_x
 list.argmin_mem
@@ -12216,7 +11926,6 @@ equiv.swap_self
 set.subsingleton.eq_empty_or_singleton
 quotient.out_rel_embedding_apply
 multiset.count_add
-fin.sum_univ_three
 submodule.map_sup
 order_dual.mul_zero_class
 nat.le_add_one_iff
@@ -12257,7 +11966,6 @@ subtype.equiv_iff
 tactic.dependency_sets_of_hyps
 quotient.congr_mk
 equiv.of_preimage_equiv_apply
-matrix.map_smul
 order_embedding.mul_left
 set.ssubset_of_ssubset_of_subset
 add_submonoid.closure_induction'
@@ -12311,7 +12019,6 @@ function.surjective.comm_group
 with_one.map_coe
 one_lt_inv
 list.enum_cons
-matrix.transpose_neg
 list.subset_append_of_subset_left
 finset.subset_image_iff
 with_bot.decidable_lt
@@ -12333,7 +12040,6 @@ with_top.add_lt_add_iff_right
 set.list_sum_singleton
 multiset.mem_dedup
 tactic.interval_cases.combine_upper_bounds
-matrix.mul_assoc
 to_additive.value_type.has_reflect
 strict_mono.imp
 add_subsemigroup.mem_map_equiv
@@ -12478,7 +12184,6 @@ frame.to_distrib_lattice
 finset.sum_range_add
 punit.unique
 neg_injective
-matrix.conj_transpose_nat_cast_smul
 subgroup.coe_equiv_map_of_injective_apply
 sum.is_right
 submonoid.mem_smul_pointwise_iff_exists
@@ -12497,7 +12202,6 @@ set.indicator_apply_eq_self
 mul_distrib_mul_action.to_monoid_End_apply
 linear_equiv.coe_injective
 add_equiv.of_bijective
-matrix.empty_append
 set.mem_singleton_of_eq
 nat.le_mul_of_pos_left
 congr_arg_kind.to_string
@@ -12632,7 +12336,6 @@ list.nodup_permutations'_aux_iff
 list.nthd_nil
 set.prod_eq_seq
 list.last_cons_cons
-equiv.map_matrix_refl
 subsemiring.module
 covariant_le_of_covariant_lt
 nat.has_to_string
@@ -12642,12 +12345,10 @@ monad_io_terminal.put_str
 monad_io_terminal.get_line
 monad_io_terminal.cmdline_args
 monad_io_terminal.mk
-matrix.cons_fin_one
 has_bind.seq
 encodable.decode_unit_succ
 fintype.card_units
 finset.bUnion_congr
-matrix.map_smul'
 add_monoid_hom.coprod_unique
 set.empty_vadd
 subring_class.to_linear_ordered_ring
@@ -12688,12 +12389,9 @@ monotone.mul_strict_mono'
 submodule.map_neg
 finset.exists_le
 subsemiring.coe_copy
-matrix.update_column_conj_transpose
 linear_map.iterate_bijective
-fin.sum_univ_five
 euclidean_domain.lcm
 tactic.auto_cases
-fin_rotate_last'
 antitone.strict_anti_of_injective
 alg_equiv.to_linear_map_injective
 bit1_nsmul
@@ -12763,7 +12461,6 @@ relator.bi_total.rel_exists
 tsub_add_tsub_comm
 alg_hom.of_linear_map_apply
 mul_opposite.mul_zero_one_class
-matrix.transpose_linear_equiv
 monad_io_impl
 finset.choose_mem
 nat.lt_of_sub_eq_succ
@@ -12865,7 +12562,6 @@ list.head_eq_head'
 dfinsupp.map_range_add
 add_submonoid.has_neg
 int.le_self_sq
-self_adjoint.coe_inv
 add_monoid_hom.to_add_hom_injective
 setoid.lift_equiv
 set.piecewise_div
@@ -12877,7 +12573,6 @@ galois_connection.is_lub_u
 pow_lt_pow_iff'
 subsingleton.pi_mul_single_eq
 set.mem_inter_eq
-bitvec.or
 list.disjoint_cons_right
 mul_opposite.commute_op
 set.fintype_insert'
@@ -12893,8 +12588,6 @@ div_le_iff_of_neg
 smul_mul_hom_apply
 add_neg_of_nonpos_of_neg
 category_theory.unop_inv
-matrix.row_apply
-matrix.diag_add
 expr.mreplace
 add_monoid_hom.coe_mul_left
 cSup_eq_of_is_forall_le_of_forall_le_imp_ge
@@ -12951,7 +12644,6 @@ punit.densely_ordered
 inv_pow_sub_of_lt
 traversable.traverse_map'
 int.mul_lt_mul_of_pos_right
-self_adjoint.has_mul
 set.pairwise_disjoint.elim
 add_opposite.right_cancel_semigroup
 sdiff_eq_bot_iff
@@ -12979,7 +12671,6 @@ nat.le_mod_add_mod_of_dvd_add_of_not_dvd
 smt_tactic.close
 add_group.covconv_swap
 mul_mem_class.coe_subtype
-matrix.reindex_apply
 subgroup.normal_inf_normal
 monoid_with_zero_hom.to_zero_hom
 string.popn
@@ -13011,7 +12702,6 @@ is_unit.unit_of_coe_units
 nonempty_psigma
 environment.decl_filter_map
 prod.preorder
-fin.preimage_apply_01_prod
 smul_with_zero
 smul_with_zero.to_has_smul
 smul_with_zero.smul_zero
@@ -13066,7 +12756,6 @@ add_zero_class.to_has_zero
 submodule.span_closure
 add_subgroup.zmultiples_eq_bot
 list.drop_eq_nth_le_cons
-matrix.conj_transpose_inv_nat_cast_smul
 set.union_self
 function.embedding_like
 equiv.comp_traverse
@@ -13079,7 +12768,6 @@ dfinsupp.ext_iff
 list.nil_sublist
 string.map_tokens
 int.cast_bit1
-fin.partial_sum
 le_max_of_le_left
 alg_equiv.inhabited
 vm_obj
@@ -13153,7 +12841,6 @@ subring.mul_mem
 is_least.order_bot
 finset.Ico_subset_Ico_right
 finset.coe_coe_emb
-linear_equiv.prod_apply
 finset.subset_inter_iff
 name.components
 smul_zero'
@@ -13165,13 +12852,11 @@ multiset.fold_dedup_idem
 classical.dec_rel
 antitone.inf
 lint
-matrix.smul_mat_empty
 native.float.fmod
 equiv.set.congr
 widget.interactive_expression.sf.flatten
 exists_eq
 nat.coprime.dvd_of_dvd_mul_right
-linear_map.tailings
 vector.prod_update_nth
 finsupp.linear_equiv_fun_on_fintype_apply
 rbtree.rev_fold
@@ -13193,8 +12878,6 @@ set.preimage_sub_const_Ico
 category_theory.pi.comap
 commute.mul_self_sub_mul_self_eq'
 category_theory.functor.map.split_mono
-matrix.vec_mul_neg
-matrix.conj_transpose_list_prod
 galois_coinsertion.lift_semilattice_inf
 nat.coprime.coprime_dvd_left
 add_submonoid.neg_order_iso_symm_apply_coe
@@ -13209,7 +12892,6 @@ monoid_hom.to_additive
 expr.const_name
 finset.piecewise_insert
 list.to_finset.ext_iff
-linear_map.prod_equiv_apply
 set.has_involutive_neg
 distrib_mul_action.ext_iff
 finset.bUnion
@@ -13244,7 +12926,6 @@ submodule.to_sub_mul_action_injective
 list.reverse_cons'
 zsmul_rec
 set.singleton_zero_hom
-fin.prod_univ_three
 not_is_max
 nat.mod_mul_left_div_self
 div_le_iff_le_mul'
@@ -13303,7 +12984,6 @@ supr_eq_of_forall_le_of_forall_lt_exists_gt
 part.bind_some_eq_map
 tactic.returnopt
 and_self_left
-linear_map.fst_apply
 finset.has_subset
 pos_num.nat_size
 tactic.assoc_root
@@ -13357,7 +13037,6 @@ setoid.ker_def
 add_subgroup.copy_eq
 quotient.mk_out
 add_add_add_comm
-matrix.vec_mul_sub
 buffer.drop
 function.mul_support_one'
 tactic.unsafe.type_context.monad_fail
@@ -13445,7 +13124,6 @@ int.coe_nat_lt_coe_nat_iff
 encodable.decidable_eq_of_encodable
 tactic.ring.horner_const_mul
 category_theory.equivalence.ess_surj_induced_functor
-matrix.update_column_apply
 pi.to_lex_apply
 le_of_eq_of_le'
 inv_le_iff_one_le_mul
@@ -13460,7 +13138,6 @@ set.Union_eq_univ_iff
 neg_add
 quotient.sound'
 subring_class.to_ring
-add_equiv.map_matrix_trans
 vm_core.map
 add_monoid_hom.add_submonoid_map
 tactic.mk_congr_lemma_simp
@@ -13527,7 +13204,6 @@ category_theory.functor.unop_op_iso
 lt_add_of_lt_add_right
 infi_image
 left.one_le_mul
-bitvec.of_nat_to_nat
 to_mul_add
 set.maps_to_Union₂_Union₂
 tactic.match_assoc_pattern'
@@ -13550,7 +13226,6 @@ set.smul_set_inter_subset
 set.Icc_diff_Ioc_same
 is_min.eq_bot
 subring.mk'_to_add_subgroup
-fin_zero_equiv'
 alg_equiv.simps.symm_apply
 multiset.pmap_eq_map
 is_comm_applicative.commutative_map
@@ -13589,7 +13264,6 @@ order_dual.contravariant_class_swap_mul_lt
 cast_cast
 list.sum_lt_sum_of_ne_nil
 option_t.orelse
-fin.card_filter_univ_succ'
 set.sigma_union
 match_failed
 tactic.instance_stub
@@ -13597,7 +13271,6 @@ subsemiring.center_eq_top
 add_opposite.subtraction_monoid
 set.Inter₂_div_subset
 decidable.mul_le_of_le_one_right
-self_adjoint.has_one
 part.eq_none_iff'
 equiv.sum_assoc_apply_inr
 semiconj_by.units_inv_right
@@ -13636,7 +13309,6 @@ environment.relation_info
 finset.inf_le_iff
 tactic.interactive.ac_mono_ctx'.traverse
 monoid_hom.flip_apply
-matrix.neg_cons
 with_top.no_min_order
 linear_map.compatible_smul
 linear_map.compatible_smul.map_smul
@@ -13684,7 +13356,6 @@ order_iso.preimage_image
 finsupp.equiv_fun_on_fintype_symm_coe
 max_div_div_right
 linarith.mul_eq
-equiv.map_matrix
 tactic.rename_unstable
 order_dual.complete_linear_order
 option.get_some
@@ -13695,7 +13366,6 @@ fin.locally_finite_order_top
 with_bot.mul_zero_one_class
 dfinsupp.mk_apply
 set.left_inv_on.surj_on
-fin.prod_Ioi_zero
 order_hom.pi
 list.nodup.sublists'
 submodule.map_bot
@@ -13706,7 +13376,6 @@ mul_eq_zero_of_right
 finsupp.add_comm_group
 add_units.embed_product
 multiset.le_cons_of_not_mem
-matrix.minor_cons_row
 fin.coe_clamp
 encodable.encode_of_equiv
 pi.omega_complete_partial_order.flip₁_continuous'
@@ -13721,7 +13390,6 @@ set.surj_on_Union₂_Union₂
 tsub_eq_of_eq_add_rev
 set.union_Inter₂
 zorn_subset_nonempty
-matrix.head_transpose
 function.argmin_on
 finset.induction
 set.univ_pi_eq_Inter
@@ -13858,7 +13526,6 @@ order_dual.ordered_cancel_comm_monoid.to_contravariant_class
 list.slice_eq
 function.bijective.comp_left
 list.forall₂_map_right_iff
-ring_hom.map_matrix_mul
 tactic.find_if_cond
 set.maps_to.union_union
 alg_equiv.coe_refl
@@ -13875,7 +13542,6 @@ punit.inhabited
 submodule.has_add
 mul_pos
 list.take_while_take_while
-fin_sum_fin_equiv
 finsupp.can_lift
 set.monoid
 vector.scanl_val
@@ -13891,7 +13557,6 @@ ring_equiv.coe_prod_comm_symm
 mul_opposite.unop_bijective
 finset.empty_union
 neg_lt_sub_iff_lt_add'
-fin_succ_equiv'_symm_none
 tactic.trace_result
 list.is_rotated_iff_mod
 tactic.iff_mp_core
@@ -13997,7 +13662,6 @@ nat.lt_succ_sqrt
 mul_opposite.semigroup_with_zero
 multiset.union_le_add
 rat.denom_zero
-linear_map.tailings_zero
 add_subgroup.mk_le_mk
 list.palindrome.decidable
 Inf_sup_Inf
@@ -14162,7 +13826,6 @@ list.pairwise_of_reflexive_of_forall_ne
 fintype.card_option
 alg_hom.ext
 widget.key
-matrix.subsingleton
 int.add_mod_eq_add_mod_right
 exists_eq_mul_left_of_dvd
 tactic.interactive.case_tag.has_repr
@@ -14183,7 +13846,6 @@ tactic.instance_cache.mk
 simp_lemmas.append_with_symm
 fintype.sum_eq_sum_compl_add
 finset.coe_preimage
-matrix.mul_vec_single
 equivalence.comap
 linarith.elim_var
 format.indent
@@ -14290,7 +13952,6 @@ tactic.get_packaged_goal
 add_opposite.ring
 star_ring_aut
 multiset.le_prod_of_submultiplicative_on_pred
-matrix.smul_mul
 nat.prime_def_le_sqrt
 order_hom.apply
 set.Icc_diff_right
@@ -14417,7 +14078,6 @@ traversable.map_traverse
 plift.decidable_eq
 plift.ext
 eq_mul_of_div_eq
-matrix.subsingleton_of_empty_right
 quotient.out_eq'
 int.gcd_dvd_gcd_mul_right_right
 strict_weak_order.etrans
@@ -14498,12 +14158,9 @@ int.of_nat_sub
 function.surjective_to_subsingleton
 function.involutive.coe_to_perm
 int.coe_nat_div
-bitvec.to_fin_le_to_fin_of_le
 submodule.span_le
 int.coe_nat_zero
 order_dual.ordered_add_comm_group
-equiv.pi_fin_succ_above_equiv_symm_apply
-matrix.sub_down
 list.sum_hom₂
 finset.image_add_right_Ioo
 sum.has_to_string
@@ -14543,7 +14200,6 @@ additive.of_mul_vadd
 fin.map_subtype_embedding_Ioi
 non_unital_ring_hom.one_def
 list.map_map_permutations'_aux
-self_adjoint.field
 prod.ωSup_zip
 mk_fin_val_ne_proof
 nat.prime_iff
@@ -14638,7 +14294,6 @@ fin.tail_def
 alist.lookup_is_some
 pos_num.cmp
 flag.bounded_order
-matrix.update_row_self
 add_monoid_hom.coe_finset_sum
 non_unital_ring_hom.comp_left
 rat.inv_coe_nat_denom
@@ -14778,7 +14433,6 @@ list.head_mem_head'
 submodule.mem_map_equiv
 with_bot.add_eq_coe
 set.mul_subset_mul_right
-matrix.cons_sub_cons
 punit.canonically_ordered_add_monoid
 fin.eq_zero
 is_lub_csupr_set
@@ -14792,7 +14446,6 @@ subsemiring.has_top
 normalized_gcd_monoid_of_gcd
 alg_equiv.trans_to_linear_map
 mul_sub_mul_div_mul_neg
-matrix.transpose_add_equiv
 sup_sdiff_self_right
 add_right_cancel_semigroup.ext_iff
 or.neg_resolve_left
@@ -14932,14 +14585,11 @@ mul_hom.comp
 rat.coe_int_div_self
 lt_add_iff_pos_right
 environment.trans_for
-fin_add_flip_apply_cast_add
 set.empty_div
 is_coatom.Ici_eq
 set.sum_indicator_subset_of_eq_zero
 tactic.mllist.filter
-is_star_normal_star_self
 set.disjoint_union_left
-bitvec.preorder
 category_theory.epi_of_epi_fac
 tactic.has_attribute'
 set.neg_singleton
@@ -14956,7 +14606,6 @@ prod.ordered_cancel_comm_monoid
 mul_action.orbit
 iff.not_right
 setoid.rel
-matrix.diagonal_mul_diagonal
 finset.eq_one_of_prod_eq_one
 dvd_prime_pow
 set.Union_subset_iff
@@ -14966,7 +14615,6 @@ plift.nonempty
 set.Iic_union_Ioc'
 int.to_nat_eq_max
 equiv.of_fiber_equiv_map
-linear_map.map_matrix
 order_hom.has_top_top
 multiset.is_lawful_singleton
 is_empty_pprod
@@ -15023,7 +14671,6 @@ function.mul_support_one_sub
 add_submonoid.subsingleton_iff
 fin.exists_fin_one
 tactic.interactive.guard_hyp_strict
-matrix.smul_cons
 omega_complete_partial_order.continuous_hom.to_mono
 left.mul_eq_mul_iff_eq_and_eq
 function.right_inverse_surj_inv
@@ -15076,7 +14723,6 @@ finset.attach_image_val
 set.fst_image_prod_subset
 string.ends_with
 zero_hom_class.to_fun_like
-bitvec.bits_to_nat
 finsupp.map_domain_apply
 set.vadd_union
 finset.insert_def
@@ -15088,7 +14734,6 @@ odd.pow_neg
 traversable.comp_sequence
 ring_equiv.to_ring_hom_refl
 is_add_unit_iff_exists_neg'
-matrix.star_dot_product_star
 quarterround.xor3_input
 multiset.add_sigma
 tactic.open_pis_whnf
@@ -15121,7 +14766,6 @@ multiset.subset
 category_theory.faithful.div_faithful
 monoid_with_zero_hom.monoid_with_zero_hom_class
 multiset.prod_eq_one
-matrix.smul_empty
 right.one_lt_mul_of_lt_of_le
 neg_le_self
 format.inhabited
@@ -15209,7 +14853,6 @@ finset.has_ssubset.ssubset.is_asymm
 nat.of_add_mul
 list.mem_append_right
 prod.semiring
-matrix.vec_mul
 sup_sdiff_eq_sup
 set.maps_to.image_subset
 monoid_hom.ext_mnat
@@ -15269,7 +14912,6 @@ subgroup.eq_bot_of_card_le
 bounded_order.to_order_top
 tactic.interactive.norm_cast
 category_theory.op_op_equivalence
-matrix.has_star
 add_subsemigroup.closure_mono
 finset.Iic
 add_monoid_hom.coe_mk
@@ -15280,7 +14922,6 @@ tactic.fin_cases_at
 multiset.sum_induction_nonempty
 equiv.symm_symm_apply
 disjoint_top
-is_star_normal_zero
 subgroup.sup_subgroup_of_eq
 set_like.forall
 option.pmap_eq_none_iff
@@ -15328,9 +14969,7 @@ equiv.sigma_equiv_option_of_inhabited
 multiset.filter_sub
 rat.comm_ring
 quot.ind_beta
-matrix.diag
 sq_lt_sq'
-matrix.transpose_sum
 linear_map.range_neg
 true.inhabited
 equiv.of_preimage_equiv_symm_apply
@@ -15424,7 +15063,6 @@ denumerable.of_nat_nat
 set.Ico_diff_Iio
 finset.powerset_len_eq_filter
 environment.import_dependencies
-fin_succ_equiv'_above
 add_equiv
 add_equiv.to_fun
 add_equiv.inv_fun
@@ -15445,7 +15083,6 @@ rat.cast_hom
 set.mul_indicator_div'
 with_bot.get_or_else_bot
 subgroup.disjoint_def'
-alg_equiv.map_matrix_apply
 add_submonoid_with_one_class.to_add_monoid_with_one
 function.uncurry_bicompr
 alg_hom.to_ring_hom_to_rat_alg_hom
@@ -15530,7 +15167,6 @@ add_monoid_hom.to_zero_hom
 disjoint.sdiff_eq_left
 prod.add_group
 set.indicator_compl_add_self
-matrix.cons_val_zero'
 omega_complete_partial_order.continuous_const
 multiset.le_prod_of_submultiplicative
 category_theory.equivalence.op_inverse
@@ -15540,7 +15176,6 @@ irreducible.is_unit_or_is_unit'
 irreducible.mk
 equiv.coe_fn_symm_mk
 equiv.map
-linear_map.tailings_disjoint_tunnel
 nat.pow_pred_clog_lt_self
 list.length_split_le
 int.coe_nat_eq_zero
@@ -15576,7 +15211,6 @@ set.mem_image_eq
 prod.swap_swap
 equiv.sigma_preimage_equiv
 submodule.span_eq_span
-skew_adjoint
 non_unital_ring_hom.prod_comp_prod_map
 tactic.interactive.try_for
 le_iff_forall_one_lt_lt_mul
@@ -15596,7 +15230,6 @@ decidable.one_lt_mul_of_lt_of_le
 conv.dsimp
 cmp_le_eq_cmp
 finset.filter_nonempty_iff
-equiv.pi_fin_succ_symm_apply
 finset.prod_univ_pi
 has_add.to_covariant_class_right
 complete_distrib_lattice.to_coframe
@@ -15605,7 +15238,6 @@ subgroup.distrib_mul_action
 tactic.ring.horner_mul_const
 set.subset_diff_singleton
 order_hom.prod_mono
-matrix.semiring
 nat.desc_factorial_succ
 level.has_to_format
 norm_num.one_succ
@@ -15619,7 +15251,6 @@ set.indicator_eq_zero'
 multiset.coe_eq_zero
 int.add_lt_add_left
 not_iff
-fin.prod_univ_zero
 string.iterator.extract_core
 function.injective_pi_map
 semilattice_inf.to_has_inf
@@ -15639,7 +15270,6 @@ comm_semiring.to_non_unital_comm_semiring
 mul_eq_one_iff_eq_inv
 mul_action.orbit_smul
 nat.div_mul_div_comm
-coe_fin_rotate
 int.lt_add_of_le_of_pos
 lt_top_iff_ne_top
 option.mget_or_else
@@ -15667,12 +15297,10 @@ set.neg_mem_Icc_iff
 nat.mul_self_lt_mul_self_iff
 tactic.assert_core
 dfinsupp.single_add
-matrix.update_row_conj_transpose
 pi.mul_single_op₂
 subgroup.coe_zpow
 set.union_empty
 finite.exists_equiv_fin
-matrix.conj_transpose_list_sum
 linear_equiv.of_left_inverse
 subtype.ext_iff
 tactic.expr_list_to_list_expr
@@ -15688,7 +15316,6 @@ max_top_left
 list.to_finset_coe
 distrib.right_distrib_class
 neg_add_eq_iff_eq_add
-matrix.conj_transpose_apply
 infi₂_comm
 add_opposite.unop_pow
 multiset.Ioi
@@ -15717,7 +15344,6 @@ linear_equiv.simps.symm_apply
 set.Inter_eq_univ
 list.is_suffix.is_infix
 equiv.image_subset
-fin_sum_fin_equiv_apply_right
 set.has_vsub
 tactic_doc.attribute.nolint
 list.sum_erase
@@ -15745,8 +15371,6 @@ list.is_infix.filter
 list.sublists
 set.Icc.order_top
 tactic.right
-matrix.cons_val_succ'
-fin.prod_univ_five
 set.inter_singleton_eq_empty
 subgroup.coe_eq_singleton
 linter.unused_haves_suffices
@@ -15771,7 +15395,6 @@ order_iso.map_cSup
 list.mem_dedup
 rat.comm_group_with_zero
 add_commute.list_sum_left
-matrix.row_empty
 div_mul_eq_div_div
 dfinsupp.coe_nsmul
 alg_equiv.to_ring_equiv
@@ -15802,7 +15425,6 @@ finset.inf_eq_Inf_image
 ulift.down_bijective
 list.eq_of_perm_of_sorted
 fin.succ_one_eq_two
-linear_map.ker_coprod_of_disjoint_range
 neg_add_cancel_right
 fin.cons_induction
 linear_map.has_add
@@ -15812,7 +15434,6 @@ alg_equiv.map_mul
 semiring.to_opposite_module
 add_equiv.of_left_inverse_symm_apply
 dfinsupp.subtype_domain_sum
-matrix.algebra_map_matrix_apply
 nat.mul_mod
 rat.cast_bit0
 multiset.inf_ndunion
@@ -15907,7 +15528,6 @@ prod.map_fst
 list.map_pmap
 directed_on_univ
 list.map_reverse_core
-linear_map.prod_ext_iff
 id.map_eq
 pnat.pos_of_div_pos
 submonoid.closure_induction_left
@@ -15965,7 +15585,6 @@ tactic.trace_error
 ring_hom.apply_distrib_mul_action
 set.mem_univ
 equiv.set.range_splitting_image_equiv_symm_apply_coe
-matrix.add_dot_product
 num.nat_size
 equiv.is_lawful_functor'
 finsupp.equiv_map_domain_symm_apply
@@ -15973,7 +15592,6 @@ prod.division_monoid
 classical.exists_cases
 tsub_le_iff_tsub_le
 linear_ordered_semiring.to_no_max_order
-linear_map.tailing_disjoint_tunnel_succ
 is_glb.Inf_eq
 eq.mp
 set.to_finset_ne_eq_erase
@@ -16072,7 +15690,6 @@ divp_eq_div
 cc_state.eqc_of
 multiset.card_join
 set.Ioc_subset_Ioc_union_Ioc
-self_adjoint.mul_mem
 submonoid.closure_union
 tactic.zify
 nat.Ico_succ_singleton
@@ -16108,7 +15725,6 @@ equiv.perm.subtype_congr.refl
 has_ssubset.ssubset.ne'
 set.diff_inter_self_eq_diff
 set.mem_diff
-matrix.empty_val'
 ring_equiv.to_non_unital_ring_hom_comp_symm_to_non_unital_ring_hom
 submodule.restrict_scalars_injective
 set.mul_mem_mul
@@ -16162,7 +15778,6 @@ nat.pos_of_dvd_of_pos
 additive.subtraction_comm_monoid
 set.Iic_union_Ici_of_le
 nat.coprime.lcm_eq_mul
-matrix.add_monoid_hom_mul_right_apply
 tactic.istep
 list.mmap_accuml
 category_theory.nat_trans.left_op
@@ -16178,7 +15793,6 @@ tactic.mk_replacer₂
 part.bind_assoc
 add_le_cancellable.le_tsub_iff_left
 is_right_regular.subsingleton
-linear_map.tunnel_aux_injective
 int.lt_neg_of_lt_neg
 galois_connection.is_glb_u_image
 int.eq_one_of_mul_eq_one_right
@@ -16292,7 +15906,6 @@ finsupp.sum_add_index_of_disjoint
 submonoid.mem_powers
 smt_tactic.mk_ematch_eqn_lemmas_for_core
 Sup_inf_Sup
-list.sum_take_of_fn
 multiset.disjoint_of_le_left
 add_monoid_hom.sub_apply
 equiv.sum_arrow_equiv_prod_arrow
@@ -16390,7 +16003,6 @@ finset.sdiff_eq_filter
 associated.prime
 add_subgroup.coe_list_sum
 linear_map.map_smul_of_tower
-matrix.conj_transpose_pow
 set.union_diff_self
 set.ord_connected_pi'
 commute.inv_right₀
@@ -16418,7 +16030,6 @@ function.semiconj₂.is_associative_left
 function.embedding.inl
 add_units.unique
 set.mem_Union₂_of_mem
-linear_map.coprod_map_prod
 function.embedding.swap_apply
 add_subgroup.closure_singleton_zero
 imp_congr_eq
@@ -16482,12 +16093,10 @@ order_iso.add_left_symm
 subring.coe_int_cast
 submonoid.map_inr
 category_theory.iso.inv_hom_id_assoc
-matrix.add_monoid_hom_mul_left
 finsupp.filter_eq_indicator
 list.mem_sublists
 int.card_Icc
 add_submonoid.coe_list_sum
-matrix.subsingleton_of_empty_left
 subsemigroup.coe_equiv_map_of_injective_apply
 equiv.subtype_equiv_codomain
 set.finite_range_const
@@ -16539,7 +16148,6 @@ int.commute_cast
 not_nonempty_iff
 add_equiv.refl_symm
 cInf_Ici
-partial_sups_zero
 category_theory.is_iso_unop
 finsupp.map_range
 normalize_zero
@@ -16561,7 +16169,6 @@ set.ord_connected_iff
 subgroup.closure_induction'
 monoid_hom.compl₂
 tactic.assert
-fin_succ_equiv_symm_some
 apply_covby_apply_iff
 list.zip_left_nil_right
 monoid_hom.mk_coe
@@ -16750,7 +16357,6 @@ subtraction_comm_monoid.to_add_comm_monoid
 list.insert_nth_comm
 alg_equiv.algebra_map_eq_apply
 local_context.to_list
-matrix.add_monoid
 fin.cast_le_succ
 option.bind_some
 set.le_indicator_apply
@@ -16834,7 +16440,6 @@ norm_num.prove_int_uncast_nat
 nat.prime.dvd_iff_not_coprime
 function.surjective.preimage_injective
 pow_le_pow'
-matrix.add_group
 monoid_hom_class.to_mul_hom_class
 widget.interactive_expression.sf.has_to_format
 finset.sum_list_count
@@ -16860,7 +16465,6 @@ string.to_list
 add_submonoid.add_submonoid_class
 set.union_diff_right
 tactic.contradiction_with
-matrix.vec_mul_add
 category_theory.iso_whisker_left
 equiv.Prop_equiv_bool
 complete_lattice.independent_pempty
@@ -16995,7 +16599,6 @@ add_action.mem_fixed_points
 tactic.interactive.mk_traverse
 is_lub.csupr_set_eq
 set.mul_indicator_le_self
-star_rat_cast_smul
 rel_hom_class.is_irrefl
 nat.has_lt
 set.union_empty_iff
@@ -17153,7 +16756,6 @@ part.left_dom_of_div_dom
 units.mul_distrib_mul_action
 fin.ne_of_vne
 multiples_hom_symm_apply
-matrix.conj_transpose_ring_equiv
 order_dual.linear_ordered_add_comm_group
 set.image_const_add_Iio
 name.replace_prefix
@@ -17213,14 +16815,11 @@ set.diff_inter_self
 function.surjective.semigroup
 int.card_Ioc
 zero_ne_one_or_forall_eq_0
-matrix.minor_one_embedding
 pnat.nat_pred
 zpow_strict_mono
-partial_sups_eq_bsupr
 int.to_nat'
 alg_equiv.to_linear_equiv_trans
 linarith.sum.scale_by_monom
-coe_fin_rotate_of_ne_last
 multiset.map_add_monoid_hom
 commute.inv_inv
 set.image_inter
@@ -17233,7 +16832,6 @@ add_subsemigroup.comap_top
 order_iso.image_Iic
 to_additive.map_namespace
 eq_add_of_add_neg_eq
-bitvec.not
 disjoint_sdiff_sdiff
 add_submonoid.closure_union
 finset.erase_image_subset_image_erase
@@ -17313,7 +16911,6 @@ or_iff_left_of_imp
 list.disjoint_of_disjoint_append_right_right
 invertible.subsingleton
 expr.is_mvar
-matrix.mul_vec_mul_vec
 nat.add_left_cancel
 right_inverse
 smt_tactic.interactive.eblast
@@ -17392,7 +16989,6 @@ finset.to_dual_max'
 interaction_monad_seq
 list.map_filter_map
 subsemiring.center.smul_comm_class_right
-matrix.empty_eq
 finsupp.equiv_map_domain_eq_map_domain
 set.has_one
 finset.union_union_union_comm
@@ -17413,7 +17009,6 @@ finite.prod_right
 submodule.disjoint_def'
 set.preimage_const_sub_Ici
 fin.coe_bit1
-matrix.vec_alt0
 min_le_add_of_nonneg_right
 function.support_const
 tactic.rcases_parse_depth
@@ -17442,7 +17037,6 @@ infi_exists
 inv_unique
 list.reverse_sublist_iff
 mul_hom.has_coe_to_fun
-matrix.non_unital_semiring
 function.surjective.forall₃
 multiplicative.has_mul
 mk_rbmap
@@ -17472,10 +17066,8 @@ set.singleton_sigma_singleton
 equiv.pprod_equiv_prod_plift
 auto.not_and_eq
 set.indicator
-matrix.ext_iff
 list.merge_sort_eq_self
 max_rec
-matrix.transpose_alg_equiv_apply
 set.subset_to_finset_iff
 multiset.mem_erase_of_ne
 add_aut.group
@@ -17508,7 +17100,6 @@ nat.find_le_iff
 to_add_inv
 set.exists_range_iff
 std_gen.random_gen
-self_adjoint.star_coe_eq
 inv_mem_class
 inv_mem_class.inv_mem
 inv_mem_class.mk
@@ -17524,7 +17115,6 @@ order_hom.compₘ
 linear_map.restrict_scalars_apply
 finsupp.map_domain.add_monoid_hom_comp_map_range
 fin.coe_fin_le
-fin_succ_equiv_last_symm_none
 function.surjective.nonempty_preimage
 tactic.case_bash
 add_monoid_hom.coe_snd
@@ -17548,7 +17138,6 @@ finset.left_not_mem_Ioc
 category_theory.nat_iso.cancel_nat_iso_hom_right_assoc
 set.bij_on_Union
 gt.is_antisymm
-fin.partial_sum_succ
 submonoid.to_monoid
 declaration.in_current_file
 set.vsub_subset_iff
@@ -17578,7 +17167,6 @@ denumerable.sigma
 finset.prod_filter_mul_prod_filter_not
 linarith.linexp.scale
 nat.succ_dvd_or_succ_dvd_of_succ_sum_dvd_mul
-matrix.add_cons
 subgroup.normal_core_mono
 tactic.rewrite_cfg
 tactic.rewrite_cfg.to_apply_cfg
@@ -17669,7 +17257,6 @@ smt_tactic.to_expr
 list.enum_map_snd
 fintype.decidable_eq_add_hom_fintype
 add_monoid_hom.mrange_top_of_surjective
-equiv.pi_fin_succ_above_equiv
 nat.left_le_mkpair
 tactic.unsafe.type_context.level.mk_tmp_mvar
 ulift.monoid_with_zero
@@ -17725,7 +17312,6 @@ set.finite.dinduction_on
 nat.succ_pos
 equiv.empty_sum
 show_goal_cmd
-bitvec.has_one
 add_subgroup.gi
 finsupp.sum_map_range_index
 rat.add_zero
@@ -17860,7 +17446,6 @@ dvd_neg
 list.take_eq_nil_iff
 auto.add_simps
 submodule.has_inf
-matrix.mul_vec_empty
 is_simple_order.equiv_bool_symm_apply
 function.End.apply_has_faithful_smul
 tactic.interactive.by_contradiction
@@ -17883,7 +17468,6 @@ ring_hom.map_list_prod
 dfinsupp.map_range_def
 set.ord_connected_Ico
 category_theory.left_adjoint
-matrix.map_apply
 tactic.intro
 units.invertible
 int.bit1_nonneg
@@ -17893,7 +17477,6 @@ tactic.explode
 tactic.simp_bottom_up
 euclidean_domain.gcd_a_zero_left
 std.prec.max
-matrix.diag_minor
 list.injective_permutations'_aux
 finsupp.sum_elim_inl
 set.mem_singleton_iff
@@ -17902,7 +17485,6 @@ div_sub'
 covby_iff_wcovby_and_lt
 quotient.eq_mk_iff_out
 list.tfae_cons_of_mem
-fin.prod_Ioi_succ
 multiset.to_finset_cons
 nat.cast_add_monoid_hom
 prod.inhabited
@@ -17910,7 +17492,6 @@ tactic.subobject_names
 subtype.mk_inf_mk
 equiv.prod_comp
 multiset.sum_map_zero
-matrix.vec_alt1
 finset.sup_empty
 mul_eq_mul_left_iff
 bool.band_bxor_distrib_left
@@ -18039,7 +17620,6 @@ set.image_mul_left
 bool.ff_lt_tt
 tactic.itauto.context
 feature_search.feature.decidable_eq
-ring_equiv.map_matrix_apply
 function.injective.comm_group
 subrel_val
 set.mk_preimage_prod_right_fn_eq_if
@@ -18062,7 +17642,6 @@ set.union_compl_self
 or
 or.inl
 or.inr
-submodule.prod_le_iff
 tactic.rcases_patt_parse'
 int.lt_add_of_neg_lt_sub_left
 native.float.ceil
@@ -18126,12 +17705,10 @@ chain_closure.is_chain
 tsub_tsub_assoc
 rat.mk_zero_one
 is_min.eq_of_le
-matrix.mul_vec
 with_zero.ordered_add_comm_monoid
 fintype.induction_empty_option
 pi.eval_non_unital_ring_hom_to_fun
 multiset.card_sub
-fin_prod_fin_equiv_symm_apply
 sym.cons_inj_right
 multiset.disjoint_sum_right
 to_bool_true
@@ -18158,7 +17735,6 @@ tactic.get_unused_decl_name_aux
 feature_search.feature_vec.to_list
 antitone_on.mem_upper_bounds_image
 subring.mem_inf
-linear_map.mem_graph_iff
 units.mk0_mul
 ulift.up_injective
 set.zero_mem_sub_iff
@@ -18198,7 +17774,6 @@ with_top.is_lub_Sup'
 is_left_inv
 is_left_inv.left_inv
 is_left_inv.mk
-matrix.head_val'
 finsupp.unique_single
 dfinsupp.mk_of_not_mem
 list.take_cons
@@ -18206,7 +17781,6 @@ add_submonoid.map_inf_comap_of_surjective
 order_embedding.of_strict_mono
 tactic.has_opt_auto_param_for_apply
 set.subtraction_comm_monoid
-submodule.snd_equiv_symm_apply_coe
 list.forall₂_drop_append
 classical.skolem
 nat.dvd_prime
@@ -18317,17 +17891,14 @@ sq_lt_one_iff_abs_lt_one
 norm_num.bit0_succ
 equiv.sub_right_eq_add_right_neg
 relation.refl_trans_gen.cases_tail
-list.alternating_sum_eq_finset_sum
 set.finite_union
 function.injective.division_comm_monoid
 function.surjective.distrib
 norm_num.derive.step
-matrix.mul_val_succ
 set.ssubset_def
 tactic.interactive.assumption_mod_cast
 bdd_below.inter_of_left
 nat.coprime.gcd_mul
-ring_equiv.map_matrix_refl
 ulift.add_action
 add_opposite.unop_zero
 set.Ioo_subset_Ioo_union_Ico
@@ -18400,7 +17971,6 @@ finsupp.equiv_map_domain_trans'
 int.neg_le_sub_right_of_le_add
 ring_equiv.subsemiring_congr
 add_submonoid.comap_infi
-matrix.transpose_alg_equiv
 submonoid.pow_right_injective_iff_pow_injective
 list.equiv_sigma_tuple_apply_snd
 strict_weak_order.equiv
@@ -18437,7 +18007,6 @@ prime.dvd_of_dvd_pow
 sym.mem_mk
 order_dual.covariant_class_swap_add_lt
 ring_equiv.to_opposite
-star_rat_smul
 punit.min_eq
 conj_classes.inhabited
 finset.mk_zero
@@ -18497,7 +18066,6 @@ smt_tactic.interactive.try
 nat.bit_decomp
 set.no_zero_divisors
 tactic.calculated_Prop
-linear_map.prod_equiv
 encodable.decode_option_zero
 mul_div
 buffer.reverse
@@ -18584,7 +18152,6 @@ set.mul_indicator_congr
 set.is_add_unit_iff_singleton
 well_founded_tactics.cancel_nat_add_lt
 decidable_rel
-matrix.conj_transpose_smul_non_comm
 list.erase_cons_tail
 simp_lemmas.mk_default
 add_hom.prod_comp_prod_map
@@ -18613,7 +18180,6 @@ expr.erase_annotations
 cancel_factors.cancel_factors_lt
 omega_complete_partial_order.order_hom.omega_complete_partial_order_ωSup_coe
 add_submonoid.mul_induction_on
-submodule.fst_equiv
 is_add_unit_zero
 rel_embedding.sum_lift_rel_inl
 has_ordered_sub
@@ -18646,7 +18212,6 @@ subgroup.closure
 is_square.mul
 finset.Ioc_diff_Ioo_self
 sub_lt_sub_iff
-self_adjoint.bit0_mem
 rel_iso.rel_iso_of_unique_of_refl
 semiconj_by.transitive
 order_dual.preorder
@@ -18677,7 +18242,6 @@ category_theory.functor.map_iso
 tactic.interval_cases_using
 list.init_take
 dfinsupp.has_add
-bitvec.to_nat
 list.eq_of_sum_take_eq
 add_monoid_hom.map_mrange
 submonoid_class.coe_multiset_prod
@@ -18748,7 +18312,6 @@ gt
 category_theory.congr_app
 set.mem_Ico_of_Ioo
 ssuperset
-matrix.minor_diagonal_embedding
 linter_attr
 pow_bit1_nonneg_iff
 set.mem_of_indicator_ne_zero
@@ -18771,7 +18334,6 @@ tactic.target_lhs_rhs
 free_add_monoid.lift_restrict
 finset.range_add
 set.support_indicator_subset
-matrix.mul_one
 dfinsupp.lift_add_hom_comp_single
 equiv.symm_apply_apply
 zero_hom.with_top_map_apply
@@ -18801,11 +18363,9 @@ tactic.norm_num.min_fac_helper_5
 set.to_finset_disjoint_iff
 tactic.mk_theorem
 sym.coe_attach
-matrix.mul_sum
 category_theory.ulift_functor_trivial
 nat.gcd_one_left
 omega_complete_partial_order.ωSup_total
-ring_hom.map_dot_product
 set.Icc_subset_interval'
 comp_assoc_left
 mul_zero_eq_const
@@ -18842,9 +18402,7 @@ nat.xgcd
 library_note.simp-normal form
 add_monoid_hom.ext_nat
 smul_assoc
-linear_map.prod_map_zero
 tactic.interactive.fin_cases
-matrix.transpose_sub
 set.sub_mem_Ioc_iff_left
 distrib_mul_action_hom.to_linear_map
 tactic.eqn_stub
@@ -18903,7 +18461,6 @@ monoid_hom.subgroup_comap
 add_subsemigroup.coe_inf
 is_simple_order_iff_is_simple_order_order_dual
 normalizer_condition
-matrix.cons_mul
 set.finite.sUnion
 add_monoid_hom.fst_comp_inl
 equiv.symm_trans_swap_trans
@@ -19007,7 +18564,6 @@ right_cancel_monoid.npow
 right_cancel_monoid.npow_zero'
 right_cancel_monoid.npow_succ'
 right_cancel_monoid.mk
-matrix.mul_vec_add
 pnat.has_le.le.covariant_class
 int.shiftr_neg
 list.drop_take
@@ -19036,9 +18592,7 @@ lt_mul_of_lt_mul_right
 set.image_const_sub_Ioo
 list.append_eq_has_append
 linear_map.restrict_scalars_inj
-matrix.head_fin_const
 is_right_regular.is_smul_regular
-matrix.cons_nonzero_iff
 list.subperm.of_cons
 category_theory.nat_iso_of_comp_fully_faithful_hom_app
 nat.bit_eq_zero_iff
@@ -19047,7 +18601,6 @@ monoid_hom.eq_on_inv
 nat.log_pow
 subgroup.mem_sup
 subgroup.opposite
-bitvec.of_fin_le_of_fin_of_le
 psigma.mk_skip_left
 list.perm.erasep
 nat.clog_zero_right
@@ -19116,10 +18669,8 @@ cmp_self_eq_eq
 nat.prime_two
 with_bot.has_le
 finset.union_congr_right
-skew_adjoint.smul_mem
 tactic.to_expr_strict
 with_top.map_coe
-order_iso.fin_two_arrow_iso
 rat.has_sup
 div_le_div_of_nonpos_of_le
 is_regular_one
@@ -19163,7 +18714,6 @@ comm_ring.right_distrib
 comm_ring.mul_comm
 comm_ring.mk
 mul_equiv.coe_refl
-fin_rotate_one
 linear_map.range_comp_of_range_eq_top
 nat.one_eq_bit1
 add_submonoid.closure
@@ -19187,7 +18737,6 @@ cSup_image2_eq_cSup_cSup
 set.Ioc_union_Ioo_eq_Ioo
 add_le_cancellable.le_tsub_of_add_le_right
 add_submonoid.gi_map_comap
-ring_hom.map_matrix_id
 list.last_congr
 is_add_unit.add_neg_eq_iff_eq_add
 int.to_nat_lt_to_nat
@@ -19243,7 +18792,6 @@ finsupp.subtype_domain_sub
 strict_mono.apply_eq_bot_iff
 tactic.mk_constructors_arg_names
 antitone_on.image_lower_bounds_subset_upper_bounds_image
-matrix.vec_empty
 tactic.unfold_proj_config
 tactic.unfold_proj_config.to_dsimp_config
 tactic.unfold_proj_config.mk
@@ -19255,7 +18803,6 @@ finset.can_lift
 exists_eq_right_right
 list.lookmap_none
 list.sum_eq_zero
-matrix.conj_transpose_zero
 equiv.arrow_congr_trans
 decidable.mul_lt_mul''
 option.map_congr
@@ -19279,10 +18826,8 @@ set.pairwise_disjoint_insert
 group.mul_right_bijective
 or.resolve_right
 nat.mul_pos
-self_adjoint.inhabited
 add_monoid_hom.lift_of_right_inverse_aux
 list.foldl_with_index_aux_spec
-submodule.fst_sup_snd
 finset.set_bUnion_option_to_finset
 complete_lattice.independent_iff_sup_indep
 fintype.prod_subtype_mul_prod_subtype
@@ -19315,8 +18860,6 @@ monoid_hom.coe_prod_map
 fin.coe_cast_succ
 complete_lattice.well_founded.finite_of_set_independent
 nat.le_of_succ_le
-matrix.mul_vec_smul_assoc
-matrix.conj_transpose_add_equiv_symm
 tactic.merge_list
 multiset.strong_downward_induction_on
 equiv.image
@@ -19370,7 +18913,6 @@ covby.ne
 wcovby.wcovby_iff_le
 category_theory.equivalence.trans_counit_iso
 antitone.map_sup_le
-self_adjoint.int.has_pow
 nat.pow_dvd_pow_iff_pow_le_pow
 equiv.prod_shear_apply
 int.one_mul
@@ -19388,7 +18930,6 @@ io.fs.read
 nontrivial.to_nonempty
 abs_eq_sup_inv
 list.filter_map_join
-linear_map.coprod_equiv_symm_apply
 finset.nonempty.snd
 function.semiconj.surj_on_image
 monotone.cInf_image_le
@@ -19414,7 +18955,6 @@ set.Ioo_add_bij
 tactic.interactive.unfreezingI
 fin.coe_pred
 add_subgroup.coe_equiv_map_of_injective_apply
-bitvec.fill_shr
 nat.less_than_or_equal
 nat.less_than_or_equal.refl
 nat.less_than_or_equal.step
@@ -19498,7 +19038,6 @@ set.preimage_inv_fun_of_mem
 prod.locally_finite_order
 fin.cast_add
 has_lt.lt.not_is_max
-matrix.map_one
 set.vadd_set_union
 tactic.interactive.reflexivity'
 tactic.unsafe.type_context.is_stuck
@@ -19542,7 +19081,6 @@ min_le_mul_of_one_le_right
 associates.mk_one
 int.coe_nat_eq
 add_equiv_class.add_monoid_hom_class
-matrix.cons_zero_zero
 finsupp.linear_equiv_fun_on_fintype_symm_single
 multiset.noncomm_prod
 set.range_comp
@@ -19565,18 +19103,14 @@ subgroup.map
 rel_iso.ext
 part.map
 nat.unpair_right_le
-bitvec.ule
 equiv.arrow_congr'_apply
 set.image_subset_image2_right
 tactic.match_not
 submonoid.prod_bot_sup_bot_prod
-matrix.tail_transpose
-matrix.conj_transpose_ring_equiv_apply
 set.union_smul
 finsupp.erase_add_single
 smt_state
 tactic.repeat_count
-matrix.diagonal
 subsemiring.coe_centralizer
 tree.get
 dec_em
@@ -19589,7 +19123,6 @@ smt_tactic.interactive.add_lemma
 pi.apply_single₂
 set.finite.diff
 multiset.singleton_eq_cons
-linear_map.prod_eq_sup_map
 ne_bot_of_gt
 free_add_monoid.inhabited
 buffer.append_list
@@ -19601,7 +19134,6 @@ add_group.card_nsmul_eq_card_nsmul_card_univ
 list.take_list
 multiset.count_repeat
 add_subgroup.subset_closure
-matrix.update_row_transpose
 le_not_le_of_lt
 finset.noncomm_sum_insert_of_not_mem'
 subring.coe_comap
@@ -19682,7 +19214,6 @@ option.nontrivial
 set.prod_subset_iff
 set.preimage_const_add_interval
 order_dual.linear_ordered_cancel_comm_monoid
-matrix.mul_fin_three
 has_trivial_star
 has_trivial_star.star_trivial
 has_trivial_star.mk
@@ -19833,7 +19364,6 @@ has_monad_lift.monad_lift
 has_monad_lift.mk
 fin.map_subtype_embedding_Ioo
 ring.inverse_eq_inv'
-matrix.diagonal_apply_ne
 pos_num.is_one
 tactic.unsafe.type_context.is_declared
 tactic.interactive.exactI
@@ -19842,7 +19372,6 @@ submodule.map_subtype_le
 is_bot.of_dual
 list.nodup.mem_diff_iff
 finset.map_disj_union_aux
-submodule.fst_inf_snd
 mul_action.smul_orbit
 tactic.assumption_mod_cast
 set.inter_diff_assoc
@@ -19877,7 +19406,6 @@ omega_complete_partial_order.continuous_hom.apply_mono
 tactic.enum_assoc_subexpr
 int.cast_def
 set.not_mem_interval_of_gt
-matrix.one_mul
 znum.bit1
 reflected.has_to_pexpr
 set.inj_on.left_inv_on_inv_fun_on
@@ -19984,7 +19512,6 @@ mul_le_cancellable.inj_left
 eq_iff_eq_cancel_left
 environment.recursor_of
 is_lub.nonempty
-matrix.smul_mat_cons
 equiv.prod_comm_image
 set.range_comp_subset_range
 linear_equiv.restrict_scalars_injective
@@ -20025,15 +19552,12 @@ strict_mono.const_mul
 set.exists_upper_bound_image
 add_le_of_nonpos_of_le
 is_right_regular.mul
-matrix.star_vec_mul
 finset.prod_preimage
 add_units.add_left_apply
 subgroup.closure_le_normal_closure
 category_theory.is_equivalence.of_equivalence_inverse
 list.nth_len_le
-bitvec.append
 int.add_right_neg
-matrix.sub_down_left
 associated.of_pow_associated_of_prime'
 feature_search.feature
 feature_search.feature.const
@@ -20051,7 +19575,6 @@ add_equiv.subsemigroup_map_symm_apply_coe
 fin.tuple0_le
 bdd_above_Ico
 codisjoint_inf_right
-self_adjoint.coe_rat_cast
 category_theory.iso.inv_hom_id
 and_and_distrib_right
 tactic.var_names
@@ -20187,7 +19710,6 @@ list.map_bind
 dvd_and_not_dvd_iff
 sym.sym'.fintype
 smt_tactic.slift_aux
-matrix.transpose_map
 finset.card_le_card_of_inj_on
 add_group.int_smul_comm_class
 add_tsub_assoc_of_le
@@ -20226,7 +19748,6 @@ set.pairwise_sUnion
 list.choose
 antitone.comp_monotone
 add_monoid_hom.to_multiplicative''_apply_apply
-partial_sups_mono
 std.prec.max_plus
 list.cons_bag_inter_of_pos
 list.le_of_mem_argmin
@@ -20254,7 +19775,6 @@ non_contradictory_em
 native.rb_lmap.mk
 nat.primes.coe_nat_inj
 forall_2_true_iff
-alg_equiv.map_matrix
 nat.mul
 punit.sup_eq
 card_vector
@@ -20285,12 +19805,9 @@ right_lt_sup
 expr.mk_var
 multiset.induction
 set.has_mem
-matrix.mul_action
 dfinsupp.sigma_curry_apply
 binder.has_to_string
-matrix.mul_vec.add_monoid_hom_left_apply
 commute.cast_int_left
-submodule.snd
 category_theory.full
 category_theory.full.preimage
 category_theory.full.witness'
@@ -20318,7 +19835,6 @@ pnat.bit1_le_bit1
 fin.coe_of_nat_eq_mod
 list.lookup_kerase
 multiset.disjoint_singleton
-fin_sum_fin_equiv_symm_apply_nat_add
 tactic.norm_num.nat_lcm_helper
 rat.cast_nonpos
 multiplicative.has_le
@@ -20326,7 +19842,6 @@ set.piecewise_insert
 finset.map_embedding_apply
 neg_of_neg_pos
 finset.card_erase_add_one
-linear_map.coprod_apply
 strict_anti_on_univ
 units.map
 mul_right_inj'
@@ -20335,8 +19850,6 @@ add_opposite.has_distrib_neg
 pi.apply_mul_single
 list.mmap_with_index
 function.comp_apply
-bitvec.to_int
-matrix.transpose_row
 category_theory.pi.iso_app
 int.eq_one_or_neg_one_of_mul_eq_one
 set.diff_subset_diff_left
@@ -20450,7 +19963,6 @@ ring_equiv.of_hom_inv'
 norm_cast.count_head_coes
 div_lt_div
 has_le.le.lt_of_not_le
-linear_map.pair_fst_snd
 antitone_lam
 linear_map.restrict
 mul_semiring_action_hom_class.to_distrib_mul_action_hom_class
@@ -20545,7 +20057,6 @@ add_le_of_add_le_right
 list.alternating_prod
 add_monoid_hom.to_nat_linear_map_injective
 mul_equiv.to_monoid_hom
-bitvec.add_lsb_div_two
 set.comp_indicator
 subring.copy_eq
 order_dual.to_dual_le
@@ -20567,7 +20078,6 @@ set.Union_eq_if
 function.update_comm
 tactic.retrieve'
 reflect_univ
-linear_map.inl_apply
 smul_one_smul
 submonoid.nontrivial
 relation.comp_iff
@@ -20599,7 +20109,6 @@ function.injective.boolean_algebra
 set.preimage_mul_const_Iio_of_neg
 rbnode.find
 set.sigma_subset_iff
-fin_succ_equiv_symm_coe
 mul_action.mem_fixed_points'
 coe_not_mem_range_equiv
 finset.Iio
@@ -20672,7 +20181,6 @@ pi.distrib_mul_action
 list.not_perm_nil_cons
 multiset.sum_cons
 int.nat_abs_ne_zero_of_ne_zero
-matrix.vec2_add
 sym.map_injective
 euclidean_domain.gcd_b_zero_left
 category_theory.functor.as_equivalence_counit
@@ -20713,7 +20221,6 @@ multiset.prod_to_list
 not_prime_zero
 monotone_lam
 lt_of_lt_add_of_nonpos_left
-submodule.comap_fst
 vector.m_of_fn
 widget_override.show_local_collection_component
 list.count_append
@@ -20748,7 +20255,6 @@ add_subgroup.sub_mem_comm_iff
 tactic_doc.tactic.unify_equations
 set.inj_on.preimage_image_inter
 with_one.mul_one_class
-bitvec.sle
 list.is_suffix.subset
 fintype.exists_univ_list
 one_mem_class
@@ -20785,7 +20291,6 @@ set.inv_on.mono
 finset.le_sup'
 even_two_nsmul
 encodable.decode₂
-skew_adjoint.submodule
 subsemigroup.closure_union
 set.inter_empty_of_inter_sUnion_empty
 pexpr.decidable_eq
@@ -20846,7 +20351,6 @@ tactic.mk_local_pis
 relation.refl_trans_gen_of_transitive_reflexive
 eq_zero_iff_eq_zero_of_add_eq_zero
 is_atomic_of_order_bot_well_founded_lt
-bitvec.sgt
 ring_hom_inv_pair.star_ring_end.ring_hom_inv_pair
 int.add_div_of_dvd_left
 covby.inf_of_sup_left
@@ -20869,7 +20373,6 @@ linear_order.min_def
 linear_order.mk
 finset.prod_nat_cast
 tactic.write
-matrix.diag_sum
 equiv.bool_prod_nat_equiv_nat_apply
 finset.inf'_apply
 add_le_mul_of_right_le_left
@@ -20904,7 +20407,6 @@ well_founded.fix_F
 tactic.op_induction.find_opposite_hyp
 smul_zpow
 expr.rename_var
-matrix.scalar.commute
 finsupp.coe_eq_zero
 smt_tactic.save_info
 submonoid.le_pointwise_smul_iff₀
@@ -20913,7 +20415,6 @@ tactic.closure.assign_preorder
 set.zero_smul_set_subset
 tactic.decode_simp_arg_list_with_symm
 galois_connection.l_u_le
-star_comm_self'
 setoid.ker
 or_not_of_imp
 tactic.rcases_many
@@ -20939,7 +20440,6 @@ subgroup.comap_map_eq
 category_theory.iso.comp_inv_eq_id
 bdd_below_iff_subset_Ici
 tactic.mllist.concat
-linear_map.fst_prod
 linear_map.range_coe
 list.sublists_aux_eq_foldr.aux
 category_theory.functor.associator_hom_app
@@ -21088,7 +20588,6 @@ tactic.dunfold_target
 inf_le_right
 set.nonempty.left
 image_smul_set
-params.byte_len
 finset.prod_product'
 div_lt_div_of_lt_left
 mul_hom.coprod
@@ -21100,7 +20599,6 @@ semiconj_by.div_right
 finsupp.sum_map_domain_index_inj
 finset.right_mem_Ioc
 nat.sqrt
-fin_sum_fin_equiv_symm_last
 mul_one_class
 mul_one_class.one
 mul_one_class.mul
@@ -21227,7 +20725,6 @@ tactic_doc.tactic.exacts
 int.coe_nat_mod
 set.eq_of_mem_singleton
 tactic.interactive.slice_rhs
-matrix.diagonal_alg_hom
 format.color.inhabited
 pi.complete_distrib_lattice
 fin.succ_above_pred
@@ -21280,7 +20777,6 @@ linear_equiv.range_comp
 order_iso.compl
 or_eq_of_eq_true_right
 rat.encodable
-fin.sum_univ_cast_succ
 submonoid.sup_eq_closure
 list.infix_refl
 finset.prod_subtype_eq_prod_filter
@@ -21315,7 +20811,6 @@ linear_map.apply_module
 finset.image_singleton
 option.map_some
 pow_sub_of_lt
-pi_fin.reflect
 add_tactic_doc_command
 infi₂_mono'
 nat.div_lt_div_of_lt_of_dvd
@@ -21333,7 +20828,6 @@ tactic.mk_mvar
 add_subsemigroup.add_mem_class
 zsmul_eq_zsmul_iff'
 simp_attr.norm
-matrix.diag_col_mul_row
 nat.case_strong_induction_on
 list.sum_lt_sum
 int.coe_nat_one
@@ -21343,7 +20837,6 @@ equiv.coe_add_left
 expr.is_or
 multiset.inf_coe
 gcd_comm'
-matrix.tail_zero
 old_conv.alternative
 finsupp.equiv_fun_on_fintype_apply
 finset.subset_range_sup_succ
@@ -21432,7 +20925,6 @@ finset.mem_diag
 bool.band_bnot_self
 zpow_mem
 finset.filter_le_lt_eq_Ico
-bitvec.ugt
 category_theory.eq_to_hom_unop
 set.inter_eq_compl_compl_union_compl
 multiset.to_finset_map
@@ -21448,7 +20940,6 @@ linear_map.coe_injective
 name.to_string
 multiset.filter_add_not
 fin.of_nat
-submodule.range_snd
 array.take_right
 add_opposite.comm_ring
 tactic.revert_and_transform
@@ -21519,7 +21010,6 @@ units.coe_mk0
 function.injective.smul_with_zero
 mul_opposite.op_neg
 quotient.lift_on
-matrix.tail_neg
 pi.nontrivial_at
 dfinsupp.eval_add_monoid_hom
 tactic.suggest_core
@@ -21565,7 +21055,6 @@ set.smul_Inter_subset
 mul_zero_one_class.to_mul_zero_class
 extensional_of_trichotomous_of_irrefl
 neg_dvd_of_dvd
-fin_add_flip_apply_nat_add
 category_theory.nat_iso.remove_op_hom
 submodule.mem_sup
 equiv.pprod_equiv_prod_symm_apply
@@ -21591,7 +21080,6 @@ nat.le.intro
 pow_bit1_neg
 trunc.monad
 tactic.exact_mod_cast
-matrix.one_apply_ne
 decidable.not_or_of_imp
 subsemigroup.ext
 inv_lt_inv'
@@ -21616,7 +21104,6 @@ add_semiconj_by.add_units_neg_symm_left
 tactic.unify_equation_once
 semiconj_by.units_inv_right_iff
 set.image_const_mul_interval
-matrix.transpose_pow
 equiv.psigma_equiv_sigma_apply
 tactic.ring.horner_add_const
 order_dual.covariant_class_add_le
@@ -21690,7 +21177,6 @@ tactic.use
 sym.has_lift
 zero_pow_le_one
 nat.xgcd_aux_P
-matrix.vec_mul_empty
 set.preimage_inr_image_inl
 set.finite.preimage
 set.sub_inter_subset
@@ -21771,18 +21257,15 @@ lint_cmd_aux
 order_iso.bdd_below_image
 set.mul_indicator_apply_eq_one
 submodule.neg_mem_iff
-fin.prod_univ_def
 rbtree.mem_exact
 fintype.of_equiv_card
 strict_mono
 cSup_image2_eq_cSup_cInf
 prod.smul_comm_class
-matrix.has_sub
 set.Ioo_inter_Ioc_of_right_lt
 commute.bit0_left
 right.add_nonneg
 true_or
-matrix.minor_map
 equiv.refl_trans
 submodule.map_le_iff_le_comap
 function.injective.distrib_lattice
@@ -21800,7 +21283,6 @@ zsmul_le_zsmul'
 relator.rel_iff
 set.image_op_add
 finite_iff_nonempty_fintype
-matrix.neg_mul_vec
 well_founded_of_empty
 nat.even_sub_one_of_prime_ne_two
 list.sublists_len_succ_cons
@@ -21944,7 +21426,6 @@ bool.cond_ff
 right_cancel_semigroup.contravariant_swap_mul_le_of_contravariant_swap_mul_lt
 pnat.case_strong_induction_on
 ring_hom.id_apply
-bitvec.sge
 set.Ioc_inter_Ioc
 list.of_fn_nth_val
 decidable.ne_or_eq
@@ -21959,7 +21440,6 @@ equiv.Pi_congr'_apply
 set.sub_mem_Ico_iff_left
 set.infinite.exists_ne_map_eq_of_maps_to
 tactic.norm_num.int_gcd_helper'
-bitvec.mul
 subsingleton_pempty
 int.to_pexpr
 set.fintype_subset
@@ -21983,7 +21463,6 @@ has_involutive_neg.neg
 has_involutive_neg.neg_neg
 has_involutive_neg.mk
 nat.mkpair_unpair
-fin.sum_univ_def
 is_atom.lt_iff
 category_theory.nat_trans.right_op_comp
 list.of_fn_zero
@@ -22020,14 +21499,12 @@ is_unit.mul_left_dvd
 level.instantiate
 neg_abs_le_neg
 univ_sum_type
-matrix.scalar
 le_antisymm
 nat.eq_zero_of_dvd_of_div_eq_zero
 set.range_extend
 function.support_mul
 set.preimage_neg_Iic
 subrel.rel_embedding_apply
-fin_succ_equiv'_at
 div_div_div_cancel_left
 finset.val_to_finset
 widget.local_collection
@@ -22080,7 +21557,6 @@ multiset.card_attach
 mul_lt_mul_of_le_of_lt
 nat.bit_lt_bit
 nat.land
-matrix.update_row_subsingleton
 reader_t.run_monad_lift
 equiv.perm.coe_one
 eq_top_iff
@@ -22093,9 +21569,7 @@ linear_map.apply_has_faithful_smul
 set.add_monoid
 equiv.prod_shear
 antitone.infi_nat_add
-submodule.range_fst
 covby.Ico_eq
-submodule.prod_map_snd
 semilinear_map_class.map_smul_inv
 linear_map.comp_cod_restrict
 abs_neg
@@ -22171,7 +21645,6 @@ finset.erase_none_union
 part.mem_bind_iff
 equiv.swap_apply_of_ne_of_ne
 is_upper_modular_lattice.to_is_weak_upper_modular_lattice
-linear_map.range_prod_le
 forall_eq_apply_imp_iff'
 alist.inhabited
 supr_disjoint_iff
@@ -22193,7 +21666,6 @@ list.prod_le_pow_card
 has_distrib_neg.to_has_involutive_neg
 rat.substr_num_denom'
 disjoint.dual
-skew_adjoint.coe_smul
 submodule.order_top
 finset.val_lt_iff
 ne_self_iff_false
@@ -22230,9 +21702,7 @@ associated_normalize
 add_subsemigroup.comap_surjective_of_injective
 cInf_insert
 odd_neg
-matrix.tail_add
 set.inv_mem_inv
-linear_map.tailing_sup_tunnel_succ_le_tunnel
 omega_complete_partial_order.continuous_hom.of_fun_apply
 category_theory.nat_trans.id_hcomp_app
 finset.sup_def
@@ -22240,7 +21710,6 @@ associates.mul_mono
 add_subgroup_class.has_sub
 int.sign_mul_abs
 equiv.sigma_plift_equiv_subtype
-matrix.vec_single_eq_const
 list.lookmap_id'
 set.subsingleton_of_subsingleton
 infi_Union
@@ -22305,7 +21774,6 @@ category_theory.iso_equiv_of_fully_faithful_apply
 finsupp.smul_single'
 units.mul_right
 add_action.regular.is_pretransitive
-self_adjoint.has_int_cast
 order_dual.forall
 even_zero
 linear_equiv.to_linear_map_inj
@@ -22345,8 +21813,6 @@ format.soft_break
 nonempty_of_inhabited
 dfinsupp.filter_pos_add_filter_neg
 nat.test_bit_lxor
-matrix.empty_mul_vec
-matrix.transpose_zero
 category_theory.equivalence.congr_right_functor
 nat.eq_zero_of_double_le
 category_theory.functor.left_op_right_op_iso
@@ -22454,10 +21920,7 @@ subtype.val_inj
 list.find_indexes
 non_assoc_semiring.to_non_unital_non_assoc_semiring
 ring_hom.inhabited
-linear_map.disjoint_inl_inr
-fin.prod_univ_cast_succ
 star_sum
-fin.Ioi_zero_eq_map
 non_unital_comm_ring.to_comm_semigroup
 array.ext'
 monad_fail_lift
@@ -22515,14 +21978,12 @@ linear_map.coe_mk
 list.sublists_aux
 set.set_of_eq_eq_singleton
 is_add_unit.add
-matrix.has_add
 category_theory.functor.postcomp_map_heq'
 set.image_image2
 nat.bit0_le
 list.range
 semigroup_with_zero.to_mul_zero_class
 list.drop_nil
-matrix.dot_product_diagonal'
 int.neg_add_cancel_left
 interactive.decl_modifiers
 interactive.decl_modifiers.is_private
@@ -22581,7 +22042,6 @@ multiset.mem_Iic
 part.mem_map
 monoid_hom.coe_snd
 category_theory.functor.congr_obj
-pi_fin.has_repr
 set.nonempty.cSup_mem
 num.cmp
 nat.choose_eq_zero_iff
@@ -22648,7 +22108,6 @@ list.eq_nil_of_suffix_nil
 list.pairwise.imp₂
 equiv.prod_assoc
 list.perm_cons_append_cons
-matrix.update_row_ne
 pi.is_empty
 with_zero.mul_zero_one_class
 fin.decidable_lt
@@ -22722,21 +22181,16 @@ applicative.mk
 and_congr_right
 finset.prod_range_one
 max_chain_spec
-matrix.neg_dot_product
 int.add_left_cancel
-bitvec.ushr
 prod.smul_swap
 finset.sup'_induction
-add_monoid_hom.map_matrix
 list.chain.induction_head
 multiset.union_le
 units.copy_eq
 set.image_restrict
-matrix.cons_val_fin_one
 add_units.min_coe
 finset.sum_eq_single_of_mem
 list.take_all_of_le
-matrix.update_column_self
 sym.mk_coe
 is_modular_lattice
 is_modular_lattice.sup_inf_le_assoc_of_le
@@ -22747,7 +22201,6 @@ set.preimage_mul_const_Icc_of_neg
 function.inv_fun_neg
 finset.subtype_Ioi_eq
 relation.church_rosser
-matrix.diagonal_update_column_single
 nat.find_greatest_zero
 tactic.pformat
 rowround.quarterround3
@@ -22812,13 +22265,11 @@ set.Union_prod
 csupr_false
 tactic_doc.tactic.refine_struct
 set.ord_connected_Iio
-ring_hom.map_matrix_apply
 functor.comp.seq
 one_hom.comp_id
 nat.add_lt_add_right
 list.mem_of_mem_init
 submodule.equiv_subtype_map
-skew_adjoint.module
 category_theory.equivalence.inv_fun_id_assoc_inv_app
 set.inter_div_subset
 order_hom.on_diag
@@ -22887,7 +22338,6 @@ finset.Ioc_subset_Ici_self
 set.indicator_range_comp
 list.nil_eq_rotate_iff
 map_seq
-fin_one_equiv
 nat.distrib
 set.inj_on.bij_on_image
 finsupp.sum_apply
@@ -22916,7 +22366,6 @@ linear_ordered_ring.to_ordered_ring
 inv_of_mul_self_assoc
 category_theory.nat_iso_of_comp_fully_faithful_inv
 set.Union_sub_left_image
-fin_succ_equiv_last_last
 sub_lt_of_abs_sub_lt_left
 set.Union₂_div
 set.ne_insert_of_not_mem
@@ -22978,7 +22427,6 @@ finset.order_emb_of_fin_apply
 set.singleton_sub_singleton
 tactic.get_main_tag
 set.restrict_comp_cod_restrict
-linear_equiv.map_matrix_trans
 int.mem_to_nat'
 set.pairwise.mono'
 submodule.module
@@ -23102,7 +22550,6 @@ finsupp.prod_add_index
 tactic.target_or_hyp_type
 subtype.coe_inf
 equiv.pi_equiv_pi_subtype_prod_apply
-linear_map.prod_eq_inf_comap
 forall_congr
 nat.card_Ico
 ulift.semiring
@@ -23119,7 +22566,6 @@ list.nth_le_insert_nth_self
 expr.reflect
 tactic.context_upto_hyp_has_local_def
 int.dvd_lcm_right
-matrix.semiring.is_scalar_tower
 finset.sup'_bUnion
 add_monoid_hom.with_top_map_apply
 lt_div_iff_mul_lt'
@@ -23159,14 +22605,12 @@ set.inter_compl_self
 finset.prod_finset_coe
 finset.order_emb_of_fin_unique
 list.erase_cons_subperm_cons_erase
-fin_two_arrow_equiv_apply
 Inf_image2_eq_Sup_Inf
 set.inj_on.cancel_left
 add_csupr_le
 set.add_centralizer_subset
 list.cons_head'_tail
 monad.sequence
-bitvec.sshr
 strict_mono_on.le_iff_le
 order_dual.cancel_comm_monoid_with_zero
 commute.add_right
@@ -23329,7 +22773,6 @@ finite.of_finite_univ
 subring.gi
 opposite.op_injective
 forall_apply_eq_imp_iff
-matrix.row
 eq_inv_mul_iff_mul_eq₀
 list.range'_append
 state_t.monad_state_adapter
@@ -23388,7 +22831,6 @@ equiv.bool_equiv_punit_sum_punit
 norm_num.prove_ne_rat
 tactic.set_env_core
 ring_equiv.symm_to_ring_hom_apply_to_ring_hom_apply
-self_adjoint.module
 equiv.set_value_eq
 div_lt_div_right_of_neg
 equiv.swap_eq_refl_iff
@@ -23404,7 +22846,6 @@ cInf_Ico
 list.nthd_repeat_default_eq
 has_lt.lt.is_nonstrict_strict_order
 min_mul_mul_right
-matrix.dot_product_diagonal
 set.preimage_sUnion
 set.smul_subset_smul
 nat.Ico_zero_eq_range
@@ -23424,7 +22865,6 @@ set.singleton_sigma
 equiv.exists_unique_congr_left
 finset.order_iso_of_fin_symm_apply
 list.length_concat
-self_adjoint.coe_smul
 quotient.surjective_quotient_mk'
 is_smul_regular.subsingleton
 option.join
@@ -23455,7 +22895,6 @@ format.compose
 mul_eq_of_eq_mul_inv
 finset.noncomm_prod_map
 mul_nsmul
-matrix.zero_mul
 module.module_End_self_op
 max_mul_mul_right
 int.ldiff
@@ -23488,7 +22927,6 @@ set.vadd_singleton
 push_neg.not_implies_eq
 rat.has_mul
 set.Ici.semilattice_inf
-self_adjoint.submodule
 mul_equiv.subsemigroup_map_symm_apply_coe
 int.card_Ico
 set.nonempty.image
@@ -23508,12 +22946,10 @@ finset.nonempty.cSup_eq_max'
 rel_iso.has_coe_to_fun
 is_add_unit_add_self_iff
 monotone.covariant_of_const'
-submodule.prod_eq_bot_iff
 pi.has_mul
 function.injective.distrib_mul_action
 nat.succ_ne_zero
 set.infinite.nat.Sup_eq_zero
-matrix.diag_multiset_sum
 nat.decidable_forall_fin
 zpowers_hom_symm_apply
 codisjoint.sup_right
@@ -23546,7 +22982,6 @@ equiv.preimage_symm_preimage
 set.mem_image_iff_bex
 imp_eq_of_eq_true_left
 semiconj_by.map
-submodule.snd_equiv
 set.set_of_bijective
 tsub_nonpos_of_le
 equiv.perm.subtype_congr.trans
@@ -23577,7 +23012,6 @@ tactic.ring.horner_expr.const
 tactic.ring.horner_expr.xadd
 finset.erase_inj
 codisjoint.dual
-bitvec.to_fin_of_fin
 mul_right_cancel_iff
 one_hom.single_apply
 function.const_def
@@ -23585,9 +23019,7 @@ list.index_of_nth
 name.repr
 list.subset_append_right
 list.maximum
-matrix.neg_mul
 sup_sdiff
-params.word_len
 le_cinfi_add_cinfi
 subsingleton_info.inhabited
 and_forall_ne
@@ -23623,7 +23055,6 @@ dfinsupp.finite_support
 tactic.rcases_patt.as_alts
 add_subgroup.set_like
 well_founded.quotient_lift₂
-order_iso.pi_fin_two_iso
 list.qsort
 function.involutive
 nat.le_rec_on_succ'
@@ -23651,7 +23082,6 @@ nat.div_eq_zero
 eq.wcovby
 list.not_lt_maximum_of_mem'
 is_lub_Iic
-linear_map.prod_map_comp
 list.duplicate.duplicate_cons
 abs_eq
 multiset.to_finset_inter
@@ -23684,7 +23114,6 @@ unsigned.has_one
 le_of_is_lub_le_is_glb
 set.is_lawful_singleton
 tactic.find_local
-fin.snoc_eq_cons_rotate
 list.rotate'_rotate'
 nat.chinese_remainder'
 multiset.count
@@ -23831,7 +23260,6 @@ function.iterate_zero_apply
 tactic.interactive.transitivity
 state_t.ext
 Sup_image2_eq_Sup_Sup
-bitvec.sub
 finset.prod_dvd_prod_of_dvd
 has_well_founded.is_well_founded
 linarith.mul_neg
@@ -23847,7 +23275,6 @@ is_unit.mul_eq_one_iff_eq_inv
 tactic.interactive.success_if_fail_with_msg
 dfinsupp.erase_neg
 finset.decidable_forall_of_decidable_ssubsets'
-params.max_bitvec
 additive.has_zero
 linear_equiv.has_coe_to_fun
 nat.not_bdd_above_set_of_prime
@@ -23913,7 +23340,6 @@ imp_iff_not_or
 multiset.card_eq_three
 with_top.can_lift
 subgroup.map_comap_eq
-bitvec.adc
 set.center_eq_univ
 native.float.qNaN
 of_dual_max
@@ -23961,7 +23387,6 @@ multiset.to_finset_nsmul
 nat.add_div_right
 linear_map.ker_eq_bot_of_cancel
 is_smul_regular.of_smul_eq_one
-linear_map.coprod_inr
 set.mul_indicator_finset_prod
 tactic.clear_goals
 char_zero.infinite
@@ -23997,7 +23422,6 @@ finset.nontrivial
 ulift.down_algebra_map
 tactic.set_nat_option
 nat.image_sub_const_Ico
-matrix.conj_transpose_conj_transpose
 infi_mono'
 tactic.simp_intros
 with_top.is_lub_Sup
@@ -24040,7 +23464,6 @@ nat.bit1_div_bit0
 is_max
 nat.dvd_gcd_iff
 list.length_singleton
-fin_congr
 tactic.match_and
 fin.heq_ext_iff
 rat.cast_bit1
@@ -24056,7 +23479,6 @@ mul_action.regular.is_pretransitive
 lt_of_lt_of_eq
 inf_covby_of_covby_sup_of_covby_sup_right
 add_hom.coe_fn
-alg_hom.map_matrix_comp
 finset.sum_ite_eq'
 prod.non_unital_semiring
 mul_opposite.has_zero
@@ -24103,7 +23525,6 @@ smul_ne_zero_iff_ne'
 ring_equiv.of_bijective
 function.partial_inv_left
 tactic.unsafe.type_context.infer
-matrix.vec_head
 list.nth_le_reverse_aux2
 nat.mul_lt_mul_of_pos_right
 finsupp.erase_single_ne
@@ -24194,16 +23615,12 @@ neg_lt_self
 tt_bor
 sub_lt_sub_left
 name.lt.decidable_rel
-fin_rotate_succ_apply
 pow_lt_one'
 submonoid.mul_mem
 fin.succ_above_eq_zero_iff
 mul_self_lt_mul_self
 monoid_hom.coprod
 set.mul_indicator_le_one
-is_star_normal
-is_star_normal.star_comm_self
-is_star_normal.mk
 functor.comp.map_pure
 monoid_with_zero_hom.ext_nat
 ematch_state.mk
@@ -24277,13 +23694,11 @@ monoid_hom.cod_restrict
 alg_equiv.map_sub
 prod.sub_neg_monoid
 subtype.is_empty_of_false
-linear_map.snd_surjective
 set.Union_smul_left_image
 add_subgroup.saturated_iff_zsmul
 is_simple_group.is_simple_group_of_surjective
 finset.disjoint_diag_off_diag
 prod.swap_left_inverse
-matrix.one_apply_eq
 list.mmap_with_index'
 nat.div_lt_self
 category_theory.functor_to_types.map_hom_map_inv_apply
@@ -24333,7 +23748,6 @@ div_mul_right
 is_preorder.swap
 algebra.algebra_ext
 add_monoid_hom.mker
-matrix.mul_apply'
 submonoid.mem_inv
 tsub_le_tsub_add_tsub
 multiset.nodup.sigma
@@ -24349,7 +23763,6 @@ tactic.interactive.compare
 int.to_nat_coe_nat
 set.preimage_const_mul_Icc
 linear_map.comp
-matrix.diagonal_apply_eq
 exceptional
 exceptional.success
 exceptional.exception
@@ -24391,7 +23804,6 @@ pi.int_apply
 finset.sup_bot
 sum.update_inl_comp_inr
 smul_left_cancel
-matrix.map_injective
 exists_eq_right
 add_monoid_hom.coe_of_mdense
 function.mul_support_along_fiber_finite_of_finite
@@ -24405,7 +23817,6 @@ set.univ_pi_update_univ
 map_one
 tactic.dsimp_config.inhabited
 list.kerase_nil
-matrix.one_apply_ne'
 algebra.of_id
 exists_unique.elim
 monoid_hom.compr₂
@@ -24472,7 +23883,6 @@ multiset.disjoint_of_subset_left
 finsupp.equiv_map_domain
 list.zip_map_left
 not_forall_of_exists_not
-matrix.col_smul
 list.subperm
 declaration.is_auto_or_internal
 set.inter_eq_right_iff_subset
@@ -24491,7 +23901,6 @@ multiset.mem_coe
 order_dual
 subgroup.bot_or_nontrivial
 is_smul_regular_of_group
-params.two_31
 fintype.card_pos
 int.nat_abs_ne_zero
 set.preimage_id'
@@ -24542,11 +23951,8 @@ set.image2_nonempty_iff
 eq_true_of_and_eq_true_left
 pi.lex.ordered_add_comm_group
 rel_iso.swap
-matrix.conj_transpose_add_equiv_apply
 string.iterator.insert
-matrix.sigma_sigma_fin_matrix_has_reflect
 mul_nsmul'
-linear_map.prod_map_alg_hom
 well_founded_lt.fix
 subsemigroup.closure_empty
 list.split_on_p_eq_single
@@ -24586,7 +23992,6 @@ nat.modeq.rfl
 multiset.mem_Ico
 bool.to_bool_coe
 int.ne_of_nat_abs_ne_nat_abs_of_nonneg
-linear_map.coprod_comp_prod
 complete_lattice.independent
 set.sUnion_subset_iff
 buffer.rev_iterate
@@ -24594,7 +23999,6 @@ category_theory.functor.sections
 mul_hom.mem_srange
 part.assert
 encodable.encode_nat
-matrix
 finset.sum_insert
 trunc.rec_on
 tactic_doc.tactic.erewrite / erw
@@ -24662,7 +24066,6 @@ nat.pow_le_iff_le_log
 conv.interactive.whnf
 tactic.interactive.ext
 nat.add_modeq_left
-equiv.map_matrix_apply
 tactic.alias.alias_direct
 pi.eval_order_hom
 multiset.filter_inter
@@ -24741,7 +24144,6 @@ tactic.interactive.unelide
 nat.mod_zero
 add_commute.add_units_neg_right_iff
 list.perm_cons
-list.sum_of_fn
 set.mul_indicator_eq_one'
 list.disjoint_append_left
 list.transpose
@@ -24751,7 +24153,6 @@ add_monoid_hom.eq_mlocus
 subtype.map_id
 one_sub_inv_of_two
 finsupp.mem_split_support_iff_nonzero
-linear_equiv.prod_comm_apply
 nat.one_add
 native.float.max
 finset.product_eq_empty
@@ -24796,7 +24197,6 @@ tactic.norm_num.nat_gcd_helper_dvd_left
 add_submonoid.mem_map_iff_mem
 add_self_div_two
 list.foldl_ext
-matrix.non_assoc_semiring
 quotient.rep
 monoid_hom.coe_finset_prod
 ulift.non_assoc_ring
@@ -24868,9 +24268,7 @@ nat.coe_cast_add_monoid_hom
 set.Sup_eq_sUnion
 conv
 multiset.filter_le
-fin_two_arrow_equiv
 string.iterator.has_prev
-matrix.vec_mul_vec_eq
 category_theory.equivalence.op_unit_iso
 is_antisymm.swap
 smul_comm_class.rat'
@@ -24933,7 +24331,6 @@ subgroup.ker_le_comap
 finset.subtype_map_of_mem
 rat.cast_inv_int
 set.smul_set_union
-matrix.conj_transpose_sub
 add_commute.left_comm
 set.image_add_const_Ioi
 list.prod_eq_one_iff
@@ -25061,7 +24458,6 @@ lean.is_release
 ring_hom.eq_of_eq_on_sdense
 le_Inf_iff
 set.Iic_subset_Iic
-fin_zero_equiv
 classical.by_contradiction'
 multiset.mem_repeat
 rel_hom_class
@@ -25128,7 +24524,6 @@ finset.Ico_union_Ico
 subring_class.add_subgroup_class
 list.zip_with_append
 multiset.powerset_aux_perm_powerset_aux'
-self_adjoint.coe_pow
 is_unit.inv_mul_cancel_right
 set.ball_insert_iff
 to_additive.reorder_attr
@@ -25147,7 +24542,6 @@ string.iterator.prev_to_string
 linear_map.range_id
 one_hom.comp_one
 equiv.psum_congr
-self_adjoint_part_apply_coe
 rsimp.collect_implied_eqs
 multiset.mem_join
 list.tfae
@@ -25181,8 +24575,6 @@ set.finite.fin_embedding
 galois_connection.u_l_u_eq_u'
 list.rotate_cons_succ
 set.smul_comm_class_set''
-linear_map.snd_apply
-matrix.diagonal_smul
 set.image2_inter_subset_right
 mul_distrib_mul_action.to_mul_aut_apply
 semilattice_sup.dual_dual
@@ -25278,9 +24670,7 @@ with_top.coe_one
 function.injective_of_subsingleton
 prod.snd_one
 list.split_on_p
-equiv.pi_fin_succ_apply
 gt_of_mul_lt_mul_neg_left
-matrix.cons_dot_product_cons
 list.zip_cons_cons
 set.diff_subset_comm
 sum.lex
@@ -25338,11 +24728,9 @@ disjoint.sup_right
 attribute.fingerprint
 galois_connection.upper_bounds_l_image
 part.some_div_some
-fin_succ_equiv'_symm_some_below
 set.Ici_top
 subsemigroup.coe_map
 submonoid.mem_carrier
-matrix.neg_of
 nat.coprime.eq_one_of_dvd
 rbtree_of
 mul_tsub
@@ -25394,7 +24782,6 @@ nat.exists_coprime
 tactic.apply_congr_core
 ulift.has_neg
 nat.dvd_mul_right
-pi_fin.to_pexpr
 subtype.fintype
 monoid_hom.comp_hom_apply_apply
 multiset.add_bind
@@ -25506,9 +24893,7 @@ subgroup.center.smul_comm_class_left
 finset.disjoint_sup_left
 add_hom.coprod_apply
 sym.inhabited_sym
-matrix.cons_sub
 format_macro
-submodule.fst
 order_dual.comm_ring
 int.shiftr_eq_div_pow
 semilinear_map_class.add_monoid_hom_class
@@ -25530,13 +24915,11 @@ multiset.disjoint_finset_sum_right
 tactic.interactive.mono_law.to_tactic_format
 fintype.of_finite
 to_lex
-linear_map.tailings_disjoint_tailing
 finset.map
 strict_mono_to_dual_comp_iff
 add_zsmul_self
 ulift.right_cancel_semigroup
 additive.canonically_ordered_add_monoid
-params.mod
 equiv.option_equiv_sum_punit_symm_inr
 order_iso.preimage_Ioo
 function.extend_one
@@ -25552,7 +24935,6 @@ int.mul_assoc
 list.reduce_option
 pow_two_nonneg
 xor
-matrix.algebra_map_eq_diagonal_ring_hom
 equiv.preimage_image
 vm.curr_fn
 category_theory.iso.comp_hom_eq_id
@@ -25575,14 +24957,12 @@ pi.nat_apply
 tactic.trace_state_if_enabled
 set.finite.smul_set
 tactic.interactive.rintro
-pi.star_semigroup
 category_theory.adjunction.equiv_homset_left_of_nat_iso_apply
 prod.swap_inj
 add_submonoid.supr_eq_mrange_dfinsupp_sum_add_hom
 except_t.monad_run
 finset.generalized_boolean_algebra
 finset.sum_eq_fold
-matrix.cons_val'
 subsemiring.add_mem
 ring_hom.to_semilinear_map
 tactic.iterate_at_most_on_subgoals
@@ -25594,7 +24974,6 @@ submodule.sub_mem_iff_left
 set.image_add_const_Ico
 monoid_hom.comap_mker
 list.length_map_accumr
-pi_fin_two_equiv_apply
 list.to_finset_reverse
 finset.subset_insert
 non_unital_ring_hom.has_coe_t
@@ -25608,7 +24987,6 @@ cSup_inter_le
 finset.bUnion_singleton_eq_self
 set.prod_subset_preimage_snd
 subring_class.to_linear_ordered_comm_ring
-matrix.sub_right
 nat.pow_lt_asc_factorial'
 neg_sub
 multiset.range_zero
@@ -25632,7 +25010,6 @@ antitone_on.mem_upper_bounds_image_self
 tactic_doc.tactic.success_if_fail
 part.sdiff_get_eq
 empty.elim
-self_adjoint.one_mem
 has_bot
 has_bot.bot
 has_bot.mk
@@ -25667,7 +25044,6 @@ zmultiples_add_hom_apply
 list.prod_ne_zero
 pos_of_mul_pos_left
 prod.algebra
-matrix.minor_mul_equiv
 add_group.to_add_monoid
 list.foldl_nil
 list.setoid.r.decidable
@@ -25729,7 +25105,6 @@ finset.singleton_inter_of_not_mem
 with_top.cInf_empty
 tactic_doc.tactic.dsimp
 nat.div_core
-matrix.diagonal_update_row_single
 infi_infi_eq_right
 fin.fintype
 wcovby.covby_of_lt
@@ -25758,7 +25133,6 @@ comm_semiring.to_comm_monoid_with_zero
 linarith.int.coe_nat_mul_bit1
 equiv.subtype_equiv_right_apply_coe
 order_hom.symm_dual_comp
-matrix.update_column
 normalize_eq_normalize_iff
 add_action.orbit_nonempty
 linter.simp_comm
@@ -25773,7 +25147,6 @@ euclidean_domain.mod_add_div'
 mul_equiv.op
 order_iso.le_symm_apply
 mul_action.orbit.coe_smul
-subsingleton_fin_zero
 list.reverse_involutive
 finsupp.prod_ite_eq'
 tactic.tidy.tidy_attribute
@@ -25973,7 +25346,6 @@ tactic.dsimp_config.iota
 tactic.dsimp_config.unfold_reducible
 tactic.dsimp_config.memoize
 tactic.dsimp_config.mk
-linear_equiv.skew_prod
 swap_eq_iff
 eq_div_iff_mul_eq'
 multiset.count_erase_self
@@ -26014,7 +25386,6 @@ finset.has_subset.subset.is_refl
 prod.map_snd
 set.preimage_mul_right_singleton
 disjoint_right_comm
-matrix.empty_mul
 interactive.parse_binders
 mul_equiv.subgroup_map
 option.is_some_some
@@ -26034,8 +25405,6 @@ smt_config.inhabited
 norm_num.zero_adc
 covariant_swap_mul_lt_of_covariant_mul_lt
 tactic.closure.merge_intl
-le_partial_sups_of_le
-matrix.add_mul_vec
 gcd_zero_left'
 list.rotate_nil
 add_sub_cancel
@@ -26130,7 +25499,6 @@ cancel_factors.add_subst
 mul_rotate'
 finset.equiv_fin_of_card_eq
 tactic_doc.tactic.choose
-self_adjoint.distrib_mul_action
 bool.bor_band_distrib_left
 list.unzip_right
 nat.div_dvd_of_dvd
@@ -26224,7 +25592,6 @@ finite.plift.finite
 set.diff_union_inter
 int.le_add_of_neg_add_le_left
 finset.compl_singleton
-star_inv_nat_cast_smul
 list.nth_le_singleton
 pow_sub
 function.injective.comp_inj_on
@@ -26269,7 +25636,6 @@ decidable.not_and_distrib'
 is_unit.mul_left_inj
 inv_involutive
 list.chain'.append
-matrix.minor_minor
 is_lub_pair
 set.sInter_subset_sInter
 set.sum_indicator_subset
@@ -26314,7 +25680,6 @@ nat.gcd
 set.Ici.no_max_order
 lt_sub_iff_add_lt
 exists_exists_eq_and
-alg_equiv.map_matrix_trans
 finset.diag_union
 linarith.int.coe_nat_mul_one
 multiset.disjoint
@@ -26351,7 +25716,6 @@ strict_mono_on.cmp_map_eq
 units.divp_sub_divp
 finset.subset_union_elim
 quarterround.mod1_input
-add_equiv.map_matrix
 div_eq_iff_mul_eq
 order_hom.inhabited
 set.smul_set_univ₀
@@ -26378,7 +25742,6 @@ option.bind_assoc
 conj_classes.quot_mk_eq_mk
 add_subsemigroup.map_le_map_iff_of_injective
 rat.num_denom
-bitvec.bits_to_nat_to_list
 multiset.single_le_prod
 sub_left_lt_of_lt_add
 function.embedding.coe_injective
@@ -26392,17 +25755,14 @@ finsupp.filter_single_of_pos
 add_submonoid.mem_sup_right
 neg_vadd_vadd
 tactic.get_arity
-matrix.one_fin_three
 subgroup.is_commutative.comm_group
 mul_left_embedding_eq_mul_right_embedding
 submonoid.exists_multiset_of_mem_closure
-matrix.mul_add
 to_mul_neg
 fin.find_eq_some_iff
 tactic.intros
 environment.get
 rbnode.balance1
-linear_map.ker_prod_map
 fin.coe_cast_le
 eq_neg_add_of_add_eq
 category_theory.equivalence.refl
@@ -26553,7 +25913,6 @@ subsemiring.distrib_mul_action
 add_right_comm
 canonically_linear_ordered_add_monoid.to_linear_order
 finset.piecewise_empty
-submodule.snd_map_fst
 abs_inv
 rel_embedding.is_preorder
 int.add_nonpos
@@ -26636,7 +25995,6 @@ list.argmin_nil
 rat.coe_int_inj
 category_theory.adjunction.inhabited
 list.repeat_add
-matrix.add_monoid_hom_mul_right
 pos_num.of_znum
 units.copy
 right.inv_lt_one_iff
@@ -26779,7 +26137,6 @@ category_theory.functor_to_types.naturality
 set.set_of_app_iff
 fin.succ_rec_on
 reader_t.monad_functor
-matrix.bit1_apply
 bit1_zero
 finset.empty_val
 tactic.destruct
@@ -26816,7 +26173,6 @@ add_cancel_monoid.nsmul_zero'
 add_cancel_monoid.nsmul_succ'
 add_cancel_monoid.add_right_cancel
 add_cancel_monoid.mk
-bitvec.ugt.decidable
 complete_lattice_of_Inf
 dfinsupp.coe_finset_sum
 add_submonoid.mem_supr_iff_exists_dfinsupp'
@@ -26841,7 +26197,6 @@ tactic.nth_rewrite.cfg.try_simp
 tactic.nth_rewrite.cfg.discharger
 tactic.nth_rewrite.cfg.simplifier
 tactic.nth_rewrite.cfg.mk
-matrix.diagonal_ring_hom_apply
 set.image2_distrib_subset_left
 nat.modeq.add_right_cancel'
 add_submonoid.to_add_subsemigroup
@@ -26911,14 +26266,12 @@ is_unit.neg_iff
 well_founded_tactics.id_tag.wf
 subsemiring.mk'_to_add_submonoid
 int.mul_lt_mul_of_neg_right
-linear_map.prod_map_comap_prod
 category_theory.functor.adjunction
 nat.decidable_lo_hi_le
 nat.add_choose_mul_factorial_mul_factorial
 finset.union_empty
 pi.neg_def
 int.mul_lt_mul_of_neg_left
-matrix.diagonal_neg
 simp_lemmas.erase
 nat.dvd_sub'
 list.dedup_sublist
@@ -26952,7 +26305,6 @@ set.image_image2_antidistrib
 old_conv.monad
 mul_equiv.has_coe_to_fun
 nat.dvd_lcm_left
-list.prod_take_of_fn
 fintype.sum_pow_mul_eq_add_pow
 norm_num.subst_into_add
 two_dvd_bit1
@@ -27037,13 +26389,11 @@ nat.log_of_one_lt_of_le
 add_aut.apply_has_faithful_smul
 norm_cast.get_label
 tactic.abel.mk_context
-fin_succ_equiv'_succ_above
 commute.inv_right
 associates.exists_rep
 finset.inter_bUnion
 list.unzip_swap
 neg_vadd_eq_iff
-matrix.empty_mul_empty
 function.injective.iterate
 function.injective_iff_has_left_inverse
 equiv.perm.extend_domain_hom
@@ -27254,7 +26604,6 @@ function.injective.cancel_monoid
 function.iterate_id
 tactic.suggest.process_declaration
 is_conj.setoid
-matrix.smul_vec2
 supr_sum
 list.subperm.cons
 ulift.fintype
@@ -27331,7 +26680,6 @@ rat.zero_add
 finset.piecewise_mem_Icc
 char.of_nat_ne_of_ne
 bool.univ_eq
-matrix.minor_one
 distrib.left_distrib_class
 tactic.revert_reverse_dependencies_of_hyp_set
 prod.swap_one
@@ -27348,7 +26696,6 @@ neg_one_zsmul
 alg_hom.mk'
 nat.pow_dvd_pow_iff
 set.mul_indicator_one'
-is_smul_regular.matrix
 nat.even.decidable_pred
 quot.eqv_gen_sound
 finset.right_not_mem_Ico
@@ -27369,7 +26716,6 @@ abs_pos_of_neg
 finsupp.zero_apply
 inv_inj
 pow_four_le_pow_two_of_pow_two_le
-matrix.diagonal_injective
 add_hom.to_opposite_apply
 function.injective.has_distrib_neg
 one_le_bit1
@@ -27388,7 +26734,6 @@ mul_le_mul_right'
 set.maps_to_union
 int.add_lt_add_of_le_of_lt
 equiv.coe_to_order_iso
-fin_add_flip
 multiplicative.of_add_smul
 list.chain'.append_overlap
 cSup_image2_eq_cInf_cInf
@@ -27410,7 +26755,6 @@ set.Iic_bot
 set.interval_oc_swap
 list.prefix_take_le_iff
 submonoid.coe_bot
-linear_map.prod_map
 tactic.interactive.nth_rewrite_rhs
 set.preimage_mul_const_Icc
 exists_prop_of_true
@@ -27569,7 +26913,6 @@ category_theory.nat_iso.app_inv
 one_hom.has_coe_to_fun
 coe_subtype
 set.sub_subset_iff
-linear_map.prod_map_add
 list.zip_right'_nil_right
 list.zip_left'_cons_cons
 nat.one_lt_bit0_iff
@@ -27587,7 +26930,6 @@ part.not_mem_none
 set.Iic_inter_Ioi
 array.mmap
 finsupp.add_sum_erase
-star_inv_int_cast_smul
 subring.to_ordered_comm_ring
 nat.dvd_iff_dvd_dvd
 decidable.eq_or_ne
@@ -27627,7 +26969,6 @@ dfinsupp.mk_zero
 finset.subtype_Iio_eq
 sdiff_inf
 category_theory.nat_iso.inv_app_is_iso
-matrix.conj_transpose_ring_equiv_symm_apply
 subgroup.center_to_submonoid
 is_unit.mem_submonoid_iff
 subgroup.of_div
@@ -27672,7 +27013,6 @@ tactic.interactive.constructor_matching
 ring_hom_inv_pair.ids
 mul_opposite.unop_ne_zero_iff
 finset.prod_range_succ'
-matrix.transpose_ring_equiv_apply
 classical.some_spec
 is_lub_empty
 auto.classical_normalize_lemma_names
@@ -27697,7 +27037,6 @@ rbnode.mk_insert_result
 function.embedding.quotient_out
 rat.cast_nonneg
 infi_const_mono
-self_adjoint.has_smul
 order_hom.comp_coe
 add_monoid_hom.mul
 tactic_doc.tactic.clear_aux_decl
@@ -27797,7 +27136,6 @@ finset.nonempty.bUnion
 category_theory.is_iso_of_epi_of_split_mono
 inf_sdiff_distrib_right
 dfinsupp.sigma_curry_zero
-linear_map.tailings_succ
 functor.comp.is_lawful_functor
 nat.le_succ_of_le
 quotient.mk_out'
@@ -27812,9 +27150,7 @@ open_locale_cmd
 local_context.empty
 tactic.assoc_rewrite_hyp
 fun_like.ext'
-fin.partial_prod_succ'
 associates.mk_monoid_hom
-linear_map.span_inl_union_inr
 le_of_forall_le'
 subsemiring.range_fst
 rsimp.choose
@@ -27828,7 +27164,6 @@ strict_mono.const_mul'
 list.foldr_eq_of_comm'
 inv_lt_one
 tactic.itauto.prop.has_lt
-submodule.comap_snd
 mul_equiv.self_comp_symm
 int.coe_nat_le_coe_nat_of_le
 equiv.to_embedding
@@ -27855,7 +27190,6 @@ finsupp.unique_of_left
 submodule.to_sub_mul_action_eq
 add_subsemigroup.mem_Inf
 subgroup.multiset_prod_mem
-pi.star_module
 set.diff_eq_empty
 list.prefix_nil_iff
 set.Union_univ_pi
@@ -27903,7 +27237,6 @@ codisjoint_inf_left
 submodule.coe_smul_of_tower
 rbtree.has_mem
 tactic.transform_decl_with_prefix_fun
-linear_map.prod_map_linear
 add_subgroup.disjoint_def
 function.surjective.prod_map
 equiv.refl_apply
@@ -27957,7 +27290,6 @@ antitone_le
 list.head'
 option.not_is_some_iff_eq_none
 nat.exists_dvd_of_not_prime2
-matrix.conj_transpose_nsmul
 list.suffix_union_right
 with_top.has_to_format
 not_is_bot
@@ -27970,7 +27302,6 @@ has_well_founded_of_has_sizeof
 with_bot.ordered_add_comm_monoid
 lift_base
 rat.sub_def
-add_equiv.map_matrix_refl
 set.smul_mem_smul
 level.has_param
 add_comm_monoid
@@ -28000,7 +27331,6 @@ codisjoint.eq_top
 buffer.read
 function.injective.sub_neg_monoid
 tactic.interactive.guard_expr_strict
-fin.sum_trunc
 pi.const_add_hom
 one_lt_pow_iff_of_nonneg
 add_monoid_hom_lequiv_int_apply
@@ -28011,7 +27341,6 @@ tactic_doc.tactic.with_cases
 set.ord_connected_empty
 multiplicative.division_monoid
 nat.not_prime_mul'
-matrix.cons_val_succ
 simps_parser
 smt_tactic.has_monad_lift
 ring_equiv.coe_ring_hom_inj_iff
@@ -28079,7 +27408,6 @@ finset.mem_erase_none
 le_supr₂_of_le
 subtype.has_repr
 add_opposite.op_sub
-linear_map.range_coprod
 subgroup.normal_mul
 finset.sum_sum_Ioi_add_eq_sum_sum_off_diag
 submonoid.is_scalar_tower
@@ -28101,7 +27429,6 @@ is_atomic_of_is_complemented
 finset.card_Ico_eq_card_Icc_sub_one
 set.decidable_sdiff
 string.has_lt'
-pi.star_add_monoid
 int.to_nat_le
 finset.sup'
 list.singleton_perm
@@ -28143,12 +27470,10 @@ preorder.le_refl
 preorder.le_trans
 preorder.lt_iff_le_not_le
 preorder.mk
-matrix.diagonal_mul_diagonal'
 add_subgroup.coe_bot
 category_theory.functor.category
 finset.mem_Ici
 finset.prod_finset_product'
-matrix.zero_empty
 nat.div_lt_self'
 int.modeq.of_modeq_mul_right
 exists_or_eq_right
@@ -28162,7 +27487,6 @@ non_unital_ring_hom.from_opposite_to_fun
 tactic.iterate
 tactic.repeat_with_results
 ite_mul_zero_right
-matrix.zero_dot_product
 classical.indefinite_description
 fin.not_lt_zero
 function.surjective.div_inv_monoid
@@ -28175,7 +27499,6 @@ std_gen.mk
 finsupp.comp_lift_add_hom
 linear_map.coe_comp
 submodule.bot_coe
-matrix.vec_cons
 submodule.span_coe_eq_restrict_scalars
 multiset.erase_add_right_neg
 sup_sup_distrib_right
@@ -28226,7 +27549,6 @@ subrelation
 function.bijective.exists_unique_iff
 set.indicator_smul_apply
 quarterround.rotl7
-matrix.add_comm_monoid
 equiv.prod_congr_apply
 with_one.map_comp
 int.neg_neg_of_pos
@@ -28281,7 +27603,6 @@ set.univ_mul
 submonoid.disjoint_def'
 set.prod_range_range_eq
 order_hom.with_bot_map_coe
-fin_succ_equiv'_symm_coe_below
 bdd_below.mono
 set.pairwise_pair_of_symmetric
 submonoid.top_equiv
@@ -28370,7 +27691,6 @@ associates.irreducible_mk
 finsupp.map_domain.add_monoid_hom_comp
 submonoid.map_inl
 ring_equiv.zero_ring_prod_apply
-fin.card_filter_univ_eq_vector_nth_eq_count
 dfinsupp.support_filter
 nat.even_add'
 pi.preorder
@@ -28431,7 +27751,6 @@ function.embedding.refl_apply
 set.add_mem_Ico_iff_left
 multiset.card_erase_add_one
 tactic.interactive.intro
-self_adjoint.mul_action
 tactic.trace_widget
 map_ext_congr
 norm_num.int_to_nat_neg
@@ -28694,7 +28013,6 @@ set.not_mem_Ioc_of_le
 submodule.is_scalar_tower
 nat.add_eq_min_iff
 get_attribute_cache_dyn
-bitvec.sbb
 subgroup.coe_pow
 finset.order_emb_of_fin
 linear_ordered_add_comm_group.to_ordered_add_comm_group
@@ -28719,7 +28037,6 @@ pow_le_pow
 function.uncurry
 unification_hint.inhabited
 tactic.impl_graph.collapse
-linear_map.prod_map_one
 le_of_le_of_eq'
 mul_opposite.group_with_zero
 nat.gcd_a
@@ -28741,7 +28058,6 @@ finset.min_of_mem
 list.chain_pmap_of_chain
 finset.disjoint_bUnion_left
 reflected.subst₂
-self_adjoint
 finset.exists_maximal
 finset.bUnion_subset_iff_forall_subset
 where.build_msg
@@ -28761,7 +28077,6 @@ set.Iio_union_Ioi
 tactic.open_n_lambdas
 tactic.list_binary_operands
 set.Ici_Sup
-fin_congr_apply_mk
 semigroup.to_is_associative
 pi.multiset_prod_apply
 norm_cast.add_move
@@ -28840,7 +28155,6 @@ tactic_doc.tactic.by_contra / by_contradiction
 add_opposite.has_mul
 hinst_lemmas.pp
 tactic.guard_mem_fin
-matrix.minor_sub
 covariant.flip
 fin_zero_elim
 finset.card_le_of_interleaved
@@ -28878,7 +28192,6 @@ option.mem_some_iff
 category_theory.dcongr_arg
 int.smul_one_eq_coe
 feature_search.feature_vec.has_repr
-linear_map.inr_apply
 int.to_add_zpow
 not
 equiv.sigma_nat_succ
@@ -28971,7 +28284,6 @@ subgroup.mem_centralizer_iff
 name.last_string
 ordering.or_else_eq_lt
 is_max_of_dual_iff
-fin.card_filter_univ_succ
 set.image2_vsub
 vector.take
 rat.add_comm_group
@@ -28991,7 +28303,6 @@ expr.app_arg
 let_eq
 list.tail_repeat
 iff_def
-fin_two_arrow_equiv_symm_apply
 native.float.mantissa
 list.perm.diff_right
 list.bag_inter_nil_iff_inter_nil
@@ -29004,7 +28315,6 @@ multiset.disjoint_list_sum_right
 add_subgroup.zmultiples_is_commutative
 fintype.of_surjective
 add_subsemigroup.comap_strict_mono_of_surjective
-linear_map.range_prod_eq
 tactic.generalizes'
 add_subsemigroup.top_equiv
 fin.card_fintype_Ioc
@@ -29023,7 +28333,6 @@ mul_dvd_mul_right
 pow_right_comm
 subgroup.mem_subgroup_of
 multiset.filter_map_zero
-matrix.of_apply
 finset.noncomm_sum_union_of_disjoint
 linear_map.coe_smul_right
 associates.associated_map_mk
@@ -29040,7 +28349,6 @@ antitone.map_min
 is_modular_lattice.is_complemented_Ici
 add_monoid_hom.to_multiplicative'
 non_unital_ring_hom.inhabited
-matrix.map
 function.semiconj₂.id_left
 with_bot.lt_iff_exists_coe
 distrib_mul_action.comp_hom
@@ -29092,8 +28400,6 @@ add_commute.neg_left_iff
 list.lookmap
 seq_bind_eq
 pnat.mod_div
-bitvec.has_sub
-skew_adjoint.mem_iff
 mul_nonneg_of_three
 finset.mem_image
 equiv.perm.inv_eq_iff_eq
@@ -29102,7 +28408,6 @@ category_theory.functor.map_iso_symm
 equiv.forall₂_congr
 set.preimage_inv_fun_of_not_mem
 multiset.filter_map_some
-matrix.mul_apply
 set.Ici.order_top
 bdd_above.union
 category_theory.split_mono_of_mono
@@ -29178,9 +28483,7 @@ linarith.linarith_structure.mk
 rel_act_of_act_rel_act_of_rel_act
 function.injective.non_unital_semiring
 odd.neg_zpow
-linear_map.fst_surjective
 one_zsmul
-linear_map.inr_map_mul
 neg_add_lt_iff_lt_add'
 multiset.count_eq_card_filter_eq
 add_submonoid.bsupr_eq_mrange_dfinsupp_sum_add_hom
@@ -29288,7 +28591,6 @@ multiset.cons_union_distrib
 cmp_swap
 fact.bit0.pos
 subspace
-matrix.vec2_dot_product'
 option.lift_or_get_none_left
 pairwise.set_pairwise
 nat.prio
@@ -29308,7 +28610,6 @@ set.Ico_subset_Icc_union_Ioo
 guard_true
 norm_num.prove_pow
 if_false
-pi.star_def
 max_eq_iff
 is_lub.insert
 sum.lex.mono_right
@@ -29330,13 +28631,11 @@ nat.not_succ_le_self
 mul_lt_mul_right_of_neg
 function.injective.ring
 unique_subtype_iff_exists_unique
-linear_map.tunnel_aux
 alist.lookup_insert_ne
 order_dual.le_to_dual
 pos_num.has_add
 nat.bit1_div_two
 add_submonoid.coe_add_self_eq
-linear_map.map_matrix_apply
 add_submonoid_class.mk_nsmul
 int.cast_one_le_of_pos
 finsupp.single_finset_sum
@@ -29359,7 +28658,6 @@ option.map_pbind
 non_unital_semiring.to_semigroup_with_zero
 nat.modeq_eleven_digits_sum
 ring.inverse_zero
-linear_map.graph_eq_range_prod
 subsemiring.closure_submonoid_closure
 tactic.instance_cache.of_rat
 antitone_on.dual_left
@@ -29385,7 +28683,6 @@ finset.prod_eq_mul_prod_diff_singleton
 is_empty_subtype
 mul_lt_mul_right'
 vm.stack_size
-matrix.conj_transpose_linear_equiv
 smul_left_injective
 prod.has_well_founded
 monotone_on_iff_forall_lt
@@ -29433,7 +28730,6 @@ pnat.le_of_dvd
 dvd_add
 add_submonoid.center
 add_monoid_hom.ext_iff
-partial_sups
 set.interval_swap
 multiset.pi.empty
 module.End.algebra
@@ -29484,7 +28780,6 @@ incomp_trans_of
 eq_mul_inv_of_mul_eq
 function.comp_const
 set.has_subset.subset.is_antisymm
-matrix.diag_list_sum
 is_partial_order.swap
 set.dual_Ioc
 nat.sub_zero
@@ -29544,7 +28839,6 @@ equiv.mul_swap_eq_iff
 submonoid.map_supr
 list.index_of_argmin
 list.map_map_permutations_aux2
-linear_map.prod_map_smul
 quot.rec_on_subsingleton₂
 znum
 znum.zero
@@ -29579,7 +28873,6 @@ of_iff_true
 distrib_mul_action_hom.to_linear_map_eq_coe
 monoid_hom.from_opposite_apply
 set.sUnion_pair
-fin.partial_sum_zero
 where.get_open_namespaces
 functor.comp.run_map
 list.foldl_monotone
@@ -29615,7 +28908,6 @@ get_hinst_lemmas_for_attr
 compl_sup
 order_dual.has_mul
 declaration.is_auto_generated
-matrix.reindex_symm
 add_lt_add_of_le_of_lt
 multiset.choose_spec
 setoid.comap
@@ -29647,7 +28939,6 @@ mul_equiv.map_div
 order_iso.to_galois_coinsertion
 int.card_Ioc_of_le
 with_bot.bot_ne_coe
-bitvec.of_int
 image2_lower_bounds_lower_bounds_subset_lower_bounds_image2
 is_coatomistic
 is_coatomistic.eq_Inf_coatoms
@@ -29665,7 +28956,6 @@ category_theory.whiskering_left_map_app_app
 set_like.coe_ssubset_coe
 or_eq_of_eq
 infi_comm
-matrix.add_comm_semigroup
 one_div_div
 list.prefix_iff_eq_append
 nat.coprime_add_mul_left_left
@@ -29706,7 +28996,6 @@ fin.succ_rec
 set_coe.forall
 to_lex_inj
 tactic.get_decl
-alg_equiv.map_matrix_symm
 sum_mem
 pow_dvd_of_mul_eq_pow
 supr_inf_le_Sup_inf
@@ -29717,7 +29006,6 @@ alg_equiv.has_coe_to_ring_equiv
 with_top.add_coe_eq_top_iff
 finset.sum_add_distrib
 mul_semiring_action_hom.to_distrib_mul_action_hom
-matrix.map_zero
 int.one_le_abs
 wcovby.le_and_le_iff
 submodule.map_top
@@ -29803,7 +29091,6 @@ declaration.univ_levels
 nat.cast_add
 pnat.ne_zero
 add_opposite.comm_semigroup
-matrix.conj_transpose_add_equiv
 preorder.ext
 category_theory.functor.op_map
 set.image_add_left'
@@ -29876,7 +29163,6 @@ set.image_div_const_interval
 mul_opposite.op_zero
 ulower.up_eq_up
 is_scalar_tower.to_smul_comm_class
-matrix.mul_mul_left
 complete_lattice.to_lattice
 finset.lt_iff_ssubset
 lt_mul_right
@@ -30063,7 +29349,6 @@ list.nth_of_mem
 list.mem_attach
 tactic.injection
 function.mul_support_add_one'
-submodule.prod_eq_top_iff
 multiset.sup_ndinsert
 prod.mk_eq_one
 add_neg_nonpos_iff
@@ -30095,7 +29380,6 @@ part.union_mem_union
 mul_nonpos_iff
 nat.lt_succ_of_le
 fin.succ_succ_above_zero
-matrix.diagonal_add_monoid_hom
 zsmul_strict_mono_left
 infinite.exists_subset_card_eq
 subring.mul_semiring_action
@@ -30132,7 +29416,6 @@ antisymm'
 one_le_inv'
 set.preimage_add_const_Ici
 add_top
-matrix.col_vec_mul
 add_group_with_one.to_has_int_cast
 tactic.interactive.case_tag
 tactic.interactive.case_tag.pi
@@ -30163,7 +29446,6 @@ tactic.interactive.done
 array.push_back_to_list
 subgroup.to_submonoid
 finset.set_bUnion_preimage_singleton
-linear_map.inl_map_mul
 set.image_mul_right_Ioo
 neg_lt_zero
 equiv.sum_assoc
@@ -30273,7 +29555,6 @@ tactic.with_local_goals'
 part.of_option
 subring.mem_closure_iff
 int.modeq
-bitvec.of_nat
 div_lt_div_of_neg_of_lt
 list.lex.cons_iff
 widget_override.interactive_expression.sf.has_repr
@@ -30292,7 +29573,6 @@ finset.pi.cons
 tactic_doc.tactic.apply_assumption
 list.append_inj_right'
 group.covariant_swap_iff_contravariant_swap
-linear_map.tunnel
 is_well_order.is_trans
 equiv.Pi_congr_left'_apply
 with_bot.coe_le_coe
@@ -30451,7 +29731,6 @@ finsupp.subtype_domain_eq_zero_iff'
 sym.map_id'
 binder.has_to_tactic_format
 add_hom.eq_of_eq_on_mdense
-add_monoid_hom.map_matrix_apply
 free_monoid.map_of
 multiset.coe_fold_l
 fin.cast_succ_mk
@@ -30505,7 +29784,6 @@ add_monoid_hom.coe_dfinsupp_sum_add_hom
 function.mul_support_subset_iff'
 div_monoid_hom
 normalize_coe_units
-linear_map.coe_inr
 function.surjective_pi_map
 linear_map.to_add_monoid_hom_coe
 tactic.whnf_ginductive
@@ -30549,7 +29827,6 @@ is_atom.inf_eq_bot_of_ne
 supr
 punit.norm_unit_eq
 add_cancel_monoid.to_add_left_cancel_monoid
-matrix.map_map
 finset.sum_apply_dite
 pnat.div_coe
 array.pop_back
@@ -30558,7 +29835,6 @@ has_emptyc
 has_emptyc.emptyc
 has_emptyc.mk
 decidable.lt_mul_of_one_lt_left
-bitvec.of_fin_to_fin
 equiv.inhabited
 set.finset_sum_subset_finset_sum
 Iio_of_dual
@@ -30581,7 +29857,6 @@ add_subgroup.bot_or_exists_ne_zero
 set.Union_subtype
 bdd_below.bdd_below_image2_of_bdd_above
 monotone_on.min
-skew_adjoint.is_star_normal_of_mem
 int.lcm_dvd
 function.commute.iterate_iterate_self
 subsemigroup.map_equiv_top
@@ -30611,14 +29886,12 @@ even_two
 set.Icc_union_Ico_eq_Ico
 submodule.span_le_restrict_scalars
 part.get_eq_of_mem
-matrix.range_empty
 comm_semigroup.to_semigroup
 expr.has_lt
 set.univ_sigma_univ
 nat.zero_ne_bit0
 list.forall₂_drop
 category_theory.is_equivalence.mk
-partial_sups_disjoint_of_disjoint
 dfinsupp.coe_sub
 tactic.interactive.async
 sub_mul_action.has_bot
@@ -30866,7 +30139,6 @@ num_nat_coe
 units.inv_mul'
 set.finite_option
 mul_equiv.Pi_congr_right_apply
-add_monoid_hom.map_matrix_id
 list.length_foldr_permutations_aux2'
 option.join_map_eq_map_join
 finset.to_dual_sup
@@ -30909,7 +30181,6 @@ set.indicator_preimage_of_not_mem
 star_star
 derive_handler_attr
 zpow_ne_zero
-supr_partial_sups_eq
 monoid_hom.prod_unique
 subring.closure_eq_of_le
 of_mul_inv
@@ -30956,7 +30227,6 @@ has_seq.mk
 sub_le_neg_add_iff
 add_submonoid_class.coe_multiset_sum
 unsigned.has_to_format
-linear_map.is_compl_range_inl_inr
 add_opposite.semiconj_by_unop
 list.lookup_all_eq_lookup
 linter.doc_blame
@@ -30991,7 +30261,6 @@ tactic_doc.tactic.trace_simp_set
 is_add_unit.vadd_left_cancel
 tactic.get_options
 order_bot.to_has_bot
-fin_prod_fin_equiv
 finsupp.prod_mul
 zpowers_mul_hom_symm_apply
 disjoint.one_not_mem_div_set
@@ -31060,7 +30329,6 @@ function.involutive.ite_not
 nat.modeq.of_modeq_mul_right
 list.perm_lookup
 add_hom.id_comp
-matrix.update_row_apply
 star_mul_aut
 trace_val
 denumerable.of_equiv_of_nat
@@ -31138,12 +30406,10 @@ finset.sum_range_induction
 set.indicator_self_add_compl
 units.inv_mk
 option.elim_none_some
-linear_map.range_inl
 to_ring_hom_injective
 mul_action.orbit_rel
 list.nth_le_reverse_aux1
 subtype.coind_surjective
-matrix.diagonal_pow
 nat.zero_union_range_succ
 bool_eq_false
 subgroup.map_eq_bot_iff
@@ -31186,7 +30452,6 @@ list.rel_perm_imp
 bsupr_inf_bsupr
 pi.single_neg
 multiset.le_cons_self
-matrix.empty_vec_mul_vec
 infi_le_iff
 multiset.countp_pos
 set.range_factorization_coe
@@ -31207,7 +30472,6 @@ submonoid.log_pow_int_eq_self
 list.mem_diff_of_mem
 fin.pi_lex_lt_cons_cons
 tactic.unsafe.type_context.orelse
-matrix.vec_tail
 smt_tactic.monad
 conj_classes.carrier
 fintype.card_le_of_injective
@@ -31222,7 +30486,6 @@ nat.max_eq_zero_iff
 list.chain'_cons'
 add_monoid_hom.range_top_of_surjective
 finset.inter_eq_inter_iff_left
-fin_congr_apply_coe
 fintype.one_lt_card_iff_nontrivial
 list.suffix_insert
 nat.cast_ring_hom
@@ -31245,7 +30508,6 @@ ring_equiv.subring_map_apply_coe
 min_default
 reader_t.alternative
 finset.exists_max_image
-matrix.conj_transpose_smul_self
 multiset.count_pos
 euclidean_domain.gcd_self
 std_split
@@ -31297,7 +30559,6 @@ list.duplicate.elim_singleton
 Prop.encodable
 set.mul_indicator_union_mul_inter
 comm_group_with_zero.to_comm_monoid_with_zero
-linear_map.graph_eq_ker_coprod
 set.sInter_pair
 le_cInf
 ring_hom.snd
@@ -31424,7 +30685,6 @@ prod.is_refl_right
 function.comp.left_id
 set.image_surjective
 finset.eq_univ_iff_forall
-matrix.non_unital_ring
 list.has_mem
 pi.add_def
 linear_order.to_lattice
@@ -31438,7 +30698,6 @@ finset.Iio_insert
 is_weak_upper_modular_lattice
 is_weak_upper_modular_lattice.covby_sup_of_inf_covby_covby
 is_weak_upper_modular_lattice.mk
-bitvec.has_neg
 list.map_eq_nil
 loc.to_string
 category_theory.functor.ess_image.of_iso
@@ -31447,7 +30706,6 @@ int.modeq.trans
 array.read_eq_read'
 fin.val_mul
 ring_equiv.subring_map
-matrix.head_neg
 exists_eq_right'
 multiset.rec_on_cons
 proof_irrel
@@ -31537,9 +30795,7 @@ list.mfoldl
 rbnode.ins
 monotone.const_mul
 not_is_max_iff_ne_top
-fin.partial_prod_zero
 finite.set.finite_Inter
-matrix.mul_eq_mul
 list.rotate_eq_singleton_iff
 antitone.ball
 seq_map_assoc
@@ -31582,7 +30838,6 @@ encodable.equiv_range_encode
 has_abs
 has_abs.abs
 has_abs.mk
-partial_sups.gi
 order_dual.of_dual_lt_of_dual
 rat.monoid
 submodule.span_neg
@@ -31590,7 +30845,6 @@ subsemiring.to_submonoid_mono
 coe_fn_b
 subring.mem_map_equiv
 multiset.erase_subset
-matrix.diag_diagonal
 pairwise.decidable
 finset.inter_subset_inter_right
 has_lt.lt.cmp_eq_gt
@@ -31619,20 +30873,17 @@ rel_iso.bijective
 tactic.back_chaining_core
 rat.cast_coe
 mul_semiring_action_hom.id_comp
-matrix.transpose_multiset_sum
 fintype.sum_bijective
 set.image2_union_left
 mk_iff_attr
 monoid_hom.comp_apply
 tactic.simp_result
-skew_adjoint_part_apply_coe
 galois_coinsertion.u_Sup_l_image
 finset.disjoint_insert_right
 subsemiring.inclusion
 add_units.eq_iff
 int.locally_finite_order
 option.join_eq_none
-fin_succ_equiv'_below
 tactic.with_enable_tags
 list.foldr_map'
 tactic.interactive.match_ac
@@ -31648,7 +30899,6 @@ part.to_of_option
 galois_connection.u_infi
 finsupp.map_range.zero_hom_id
 int.le_add_of_sub_right_le
-bitvec.to_nat_append
 no_zero_smul_divisors.trans
 multiset.noncomm_prod_cons'
 finset.set_bInter_finset_image
@@ -31765,7 +31015,6 @@ inv_eq_one_divp
 ite_ne_left_iff
 nat.pos_of_mem_factors
 equiv.perm.subtype_equiv_subtype_perm_symm_apply
-linear_map.ker_prod
 category_theory.equivalence.congr_right_unit_iso
 list.revzip_map_fst
 monoid_hom.range_restrict_ker
@@ -31796,7 +31045,6 @@ list.slice
 reflected.subst₃
 set.neg_subset
 infi_option_elim
-matrix.update_column_ne
 tactic.mk_local_def
 mul_action_hom.congr_fun
 add_equiv.apply_symm_apply
@@ -31814,7 +31062,6 @@ native.rb_map.size
 submodule.sum_smul_mem
 set.finite_lt_nat
 nat.size_bit
-monotone.partial_sups_eq
 add_le_cancellable.inj
 add_monoid_hom.copy
 except_t.monad_functor
@@ -31845,7 +31092,6 @@ list.decidable_eq
 set.compl_Union₂
 rel_iso.apply_symm_apply
 non_unital_ring_hom_class.to_add_monoid_hom_class
-matrix.add_monoid_hom_mul_left_apply
 part.right_dom_of_inter_dom
 omega_complete_partial_order.continuous_hom.to_mono_coe
 list.split_on_nil
@@ -31886,8 +31132,6 @@ list.has_to_tactic_format
 monotone_on.map_min
 subgroup.inv_mem_iff
 add_monoid_hom.of_left_inverse_apply
-matrix.diag_smul
-self_adjoint.smul_mem
 one_div_one_div
 submonoid.mem_sup
 set.mem_image_equiv
@@ -31900,7 +31144,6 @@ max_one_div_max_inv_one_eq_self
 star_semigroup.to_star_module
 finset.prod_attach_univ
 lemmas_only
-bitvec.uge
 category_theory.unop_epi_of_mono
 monoid_hom.copy
 subring.coe_inf
@@ -31939,7 +31182,6 @@ finset.fold_max_lt
 prod.ext_iff
 tactic.interactive.mapply'
 finset.nonempty_Ico
-self_adjoint.has_inv
 equiv.option_congr_symm
 set.not_mem_of_mem_compl
 tactic.interactive.specialize
@@ -32080,7 +31322,6 @@ tactic.explode.entry.thm
 tactic.explode.entry.deps
 tactic.explode.entry.mk
 min_top_left
-fin_succ_equiv'_symm_coe_above
 normalized_gcd_monoid_of_lcm
 int.lt_sub_right_of_add_lt
 list.chain'.rel_head'
@@ -32109,7 +31350,6 @@ monotone.supr_nat_add
 with_bot.map_zero
 decidable.not_and_iff_or_not
 fin.snoc_comp_cast_succ
-linear_map.prod_map_linear_apply
 with_zero.inv_zero
 set.vadd_eq_empty
 set.mul_indicator_eq_one
@@ -32121,7 +31361,6 @@ expr.instantiate_vars_core
 set.Union₂_mul
 vector.head_of_fn
 set.not_mem_interval_of_lt
-matrix.vec_mul_diagonal
 set.supr_eq_Union
 linarith.prove_false_by_linarith
 alg_hom.id_to_ring_hom
@@ -32167,7 +31406,6 @@ tactic.interactive.swap
 add_hom.unop
 part.get_or_else_of_dom
 wcovby
-linear_map.inl
 is_empty.elim'
 submonoid.coe_copy
 norm_num.ge_intro
@@ -32193,7 +31431,6 @@ monotone.strict_mono_iff_injective
 with_top.semigroup_with_zero
 lean.parser.alternative
 native.rb_map.find
-fin.prod_cons
 codisjoint_self
 ball_and_distrib
 list.append_sublist_append_right
@@ -32286,7 +31523,6 @@ nat.le_find_greatest
 linear_map.iterate_range
 finsupp.prod_add_index'
 nat.modeq.modeq_cancel_right_div_gcd
-matrix.diag_one
 ring_hom.mk'
 multiset.ndinter_subset_right
 quotient.lift₂_mk
@@ -32294,7 +31530,6 @@ min_max_distrib_left
 disjoint.left_le_of_le_sup_left
 set.mem_union
 with_top.has_top
-fin_congr_symm_apply_coe
 tactic.interactive.apply_with
 tactic.interactive.left
 linear_map.eq_on_span'
@@ -32302,7 +31537,6 @@ where.binder_less_important
 set.eq_of_subset_of_card_le
 le_neg
 set.Union_eq_range_psigma
-matrix.entry_parser
 le_div''
 list.right_unique_forall₂'
 encodable.of_equiv
@@ -32358,7 +31592,6 @@ multiset.singleton_coe
 finset.mem_insert
 set.mul_indicator_rel_mul_indicator
 covby.ne'
-fin.sum_univ_one
 part.bind_to_option
 mul_equiv.of_bijective_apply
 finset.prod_insert_one
@@ -32611,7 +31844,6 @@ dfinsupp.comap_domain'_smul
 set.add_univ
 subsemiring.closure_Union
 set.subsingleton_is_top
-fin_rotate_zero
 format.line
 finset.filter_congr
 supr_Union
@@ -32625,7 +31857,6 @@ finset.set_of_mem
 subgroup_class.subtype
 nonpos_of_neg_nonneg
 non_unital_ring_hom.coe_mul_hom_injective
-matrix.reindex_trans
 tactic.interactive.fapply
 list.perm.cons_inv
 int.add_le_of_le_sub_left
@@ -32644,7 +31875,6 @@ set.range_prod_map
 with_bot.some_lt_some
 ring_hom.to_rat_alg_hom
 subring.zero_mem
-matrix.mul_vec_conj_transpose
 norm_cast.prove_eq_using
 is_modular_lattice_iff_inf_sup_inf_assoc
 dvd_of_mul_left_eq
@@ -32722,7 +31952,6 @@ multiset.sum_hom'
 add_submonoid.mem_closure_singleton
 function.support_smul_subset_left
 finset.Ioo_insert_left
-ring_hom.map_vec_mul
 finset.noncomm_prod_union_of_disjoint
 category_theory.functor.op_unop_iso
 tactic.unsafe.type_context.level.assign
@@ -32812,7 +32041,6 @@ finsupp.sum_sub
 string.iterator.to_string
 inv_smul_smul₀
 category_theory.pi.comap_comp_inv_app
-fin.partial_prod_succ
 le_infi
 multiplicative.to_add_symm_eq
 set.mul_indicator_inv'
@@ -32896,9 +32124,7 @@ linear_equiv.of_submodule'_apply
 omega_complete_partial_order.continuous_id
 div_right_inj
 zpow_of_nat
-matrix.mul_sub
 finsupp.map_range.zero_hom_apply
-fin_rotate_last
 int.cast_ne_zero
 set.smul_set_Union
 pi.mul_single_commute
@@ -32930,7 +32156,6 @@ add_subgroup.add_subgroup_of_sup
 Inf_image2_eq_Inf_Inf
 linarith.mk_neg_one_lt_zero_pf
 lean.parser_state
-linear_map.prod_map_ring_hom
 nat.dvd_of_mul_dvd_mul_left
 tactic.dsimp_target
 mul_hom.comp_left_apply
@@ -32957,7 +32182,6 @@ tactic.interactive.casesm
 set.preimage_injective
 eq_inv_of_mul_eq_one_right
 cc_state.next
-equiv.pi_fin_succ_above_equiv_apply
 set.inter_inv
 submonoid.map_inf_comap_of_surjective
 finsupp.to_alist_keys_to_finset
@@ -32965,7 +32189,6 @@ list.subset_def
 lower_bounds_Ioo
 add_opposite.unop_bijective
 nat.two_mul_odd_div_two
-matrix.conj_transpose_int_cast_smul
 semilinear_map_class.to_add_hom_class
 list.sublist_forall₂_iff
 linear_map.coe_pow
@@ -33107,13 +32330,11 @@ category_theory.equivalence.cancel_counit_inv_right
 as_fn
 list.length_bind
 tactic.mk_meta_var
-matrix.diagonal_conj_transpose
 int.nat_abs_one
 inv_le_div_iff_le_mul
 prop.inhabited
 set.indicator_diff'
 antitone.comp_monotone_on
-star_module.decompose_prod_adjoint
 pnat.linear_order
 strict_mono.mul_monotone'
 add_hom.cancel_left
@@ -33168,7 +32389,6 @@ is_glb.cinfi_set_eq
 finsupp.sigma_sum
 int.cast_finsupp_sum
 set.div_Union₂
-submodule.sup_eq_range
 fin.mod_nat
 nat.odd_add'
 with_zero.coe_zpow
@@ -33252,15 +32472,12 @@ dfinsupp.equiv_fun_on_fintype_apply
 sum.infinite_of_right
 equiv.sigma_fiber_equiv_symm_apply_fst
 category_theory.prod.swap_map
-matrix.cons_eq_zero_iff
 canonically_ordered_add_monoid.to_order_bot
 mul_action.self_equiv_sigma_orbits'
-matrix.diagonal_map
 finset.disjoint_singleton_left
 finset.not_mem_sigma_lift_of_ne_right
 finset.erase
 lt_one_div
-fin.sum_univ_succ
 add_left_cancel_monoid.to_add_left_cancel_semigroup
 mul_rotate
 bool.decidable_exists_bool
@@ -33307,7 +32524,6 @@ tactic.abel.context.mk_term
 finset.infi_singleton
 set.sInter_union
 vector.last_def
-matrix.empty_vec_alt1
 eq_one_div_of_mul_eq_one_right
 tagged_format.is_functor
 strict_mono.order_iso_of_right_inverse_apply
@@ -33332,7 +32548,6 @@ disjoint.inf_left
 of_dual_wcovby_of_dual_iff
 set.Icc.lattice
 units.mul_right_bijective
-matrix.smul_eq_diagonal_mul
 int.gcd_dvd_gcd_mul_right
 inf_comm
 native.float.has_float_pow
@@ -33431,11 +32646,9 @@ mul_lt_one_of_nonneg_of_lt_one_left
 finset.supr_insert_update
 set.insert_idem
 min_div_div_right
-matrix.conj_transpose_col
 io.net.accept
 rel_embedding.well_founded_iff_no_descending_seq
 order_iso.pnat_iso_nat_symm_apply
-matrix.minor_zero
 finsupp.mk_mem_graph_iff
 exists_square_le
 equiv.of_right_inverse_of_card_le_symm_apply
@@ -33469,7 +32682,6 @@ sup_le_of_le_sdiff_left
 ring_equiv.coe_prod_comm
 lean.parser.parser_orelse
 omega_complete_partial_order.continuous_hom.of_mono_apply
-fin_succ_equiv_succ
 nat.log_of_left_le_one
 tactic.generalizes.step3
 nat.bodd_eq_bits_head
@@ -33598,7 +32810,6 @@ antitone_on.inf
 set.ord_connected_of_Ioo
 quot.lift₂
 add_aut.inv_apply_self
-linear_map.prod_apply
 sym.coe_erase
 finset.mem_singleton
 equiv.vector_equiv_fin
@@ -33668,7 +32879,6 @@ subgroup.characteristic.mk
 complete_lattice.is_Sup_finite_compact.well_founded
 list.is_prefix.trans
 disjoint.comm
-pi.star_ring
 units.map_comp
 list.kunion_nil
 widget.filter_local
@@ -33680,7 +32890,6 @@ nat.choose_symm
 category_theory.epi_of_epi
 submonoid.mem_map
 add_subgroup.normal.eq_bot_or_eq_top
-matrix.dot_product_single
 tactic.auto_cases.tac_induction
 equiv.perm.subtype_congr.left_apply_subtype
 list.sum_update_nth'
@@ -33688,7 +32897,6 @@ set.eq_on_of_left_inv_on_of_right_inv_on
 set.bUnion_empty
 to_bool_congr
 int.strict_mono_on_nat_abs
-matrix.vec_mul_cons
 has_mul.to_has_smul
 int.lcm_self
 subsingleton_prod_self_equiv
@@ -33707,7 +32915,6 @@ has_pure.pure
 has_pure.mk
 bit0_injective
 list.chain'_nil
-bitvec.neg
 imp_eq_of_eq_true_right
 set.add_centralizer
 list.mem_map_of_involutive
@@ -33736,7 +32943,6 @@ ordered_cancel_comm_monoid.mul_le_mul_left
 ordered_cancel_comm_monoid.le_of_mul_le_mul_left
 ordered_cancel_comm_monoid.mk
 set.bInter_lt_succ'
-matrix.diagonal_mul_vec_single
 category_theory.nat_trans.remove_op_id
 one_le_of_inv_le_one
 array.to_list_nth_le
@@ -33762,7 +32968,6 @@ pos.mk
 mul_equiv.symm_comp_eq
 order_hom.id_comp
 fin.decidable_eq
-supr_eq_supr_of_partial_sups_eq_partial_sups
 finsupp.ext_iff
 prod.mul_action_with_zero
 add_submonoid.has_distrib_neg
@@ -33832,7 +33037,6 @@ set.range_inr_union_range_inl
 one_hom.id_apply
 decidable.mul_le_mul_of_nonpos_left
 subgroup.div_mem_comm_iff
-matrix.vec_mul_vec_empty
 add_right_cancel_semigroup.to_add_semigroup
 module.to_module_End
 coe_base
@@ -33864,7 +33068,6 @@ fin.sigma_eq_iff_eq_comp_cast
 tactic.add_decl
 norm_num.match_sign
 submonoid.bot_prod_bot
-matrix.transpose_one
 category_theory.split_mono.mono
 set.mem_image_of_mem
 d_array.rev_iterate_aux
@@ -33883,7 +33086,6 @@ add_halves
 set.Inter_div_subset
 list.range_zero
 nat.factorial_eq_one
-fin_rotate_apply_zero
 units.mk0
 pprod.is_empty_left
 int.cast_neg
@@ -33900,8 +33102,6 @@ nat.gcd_div
 char.lt
 alg_equiv.arrow_congr_symm
 finsupp.emb_domain_zero
-linear_equiv.skew_prod_apply
-submodule.fst_map_snd
 add_monoid_hom.eq_of_eq_on_mtop
 linear_equiv.fun_congr_left_comp
 order_iso.add_right
@@ -33913,7 +33113,6 @@ mul_action_hom.comp
 smt_tactic.to_cc_state
 finset.sum_eq_zero
 list.sum_append
-linear_equiv.map_matrix_symm
 nat.strict_mono_cast
 antitone.antitone_on
 set.preimage_empty
@@ -33927,7 +33126,6 @@ non_unital_ring_hom.prod_unique
 set.mem_of_mem_inter_right
 smt_tactic.step
 Prop.complete_lattice
-matrix.mul_smul
 monad_except_adapter
 monad_except_adapter.adapt_except
 monad_except_adapter.mk
@@ -33940,7 +33138,6 @@ is_lub_Ioc
 set.mem_Iio
 one_hom.cancel_right
 tactic.interactive.guard_expr_eq'
-fin_succ_equiv'_symm_some_above
 abs_le_iff_mul_self_le
 nat.add_div_eq_of_add_mod_lt
 finset.min_of_nonempty
@@ -34029,7 +33226,6 @@ equiv.surjective_comp
 equiv.sum_comm
 list.mmap_with_index_aux_spec_cons
 interactive.single_inductive_decl.name
-matrix.col_cons
 set.singleton_zero
 int.modeq_sub
 distrib_three_right
@@ -34084,7 +33280,6 @@ set.inj_on_preimage
 pnat.bit1_le_bit0
 finset.off_diag_insert
 list.span
-matrix.vec_mul_vec_cons
 gcd_monoid.prime_of_irreducible
 add_submonoid.pow_subset_pow
 equiv.neg_symm
@@ -34104,7 +33299,6 @@ alist.singleton_entries
 multiset.sum_bind
 function.commute.finset_image
 finset.Iic_eq_cons_Iio
-matrix.one_mul_vec
 order_dual.right_cancel_monoid
 monotone.mul
 supr_le
@@ -34163,7 +33357,6 @@ multiset.subset_zero
 set.right_inv_on.comp
 with_zero.coe_add_hom_apply
 sub_nonpos_of_le
-matrix.diagonal_apply_ne'
 set.mul_indicator_compl
 list.zip_with_rotate_distrib
 finset.insert_none_erase_none
@@ -34171,7 +33364,6 @@ lean.parser.reflect
 set.sigma_univ_range_eq
 equiv.d_array_equiv_fin
 finset.union_eq_sdiff_union_sdiff_union_inter
-matrix.one_apply
 equiv_functor.map_equiv
 rel_embedding
 rel_embedding.to_embedding
@@ -34179,7 +33371,6 @@ rel_embedding.map_rel_iff'
 rel_embedding.mk
 category_theory.equivalence.unop
 disjoint.sdiff_unique
-fin.sum_univ_add
 has_subset.subset.ssubset_or_eq
 int.of_nat_add_neg_succ_of_nat
 linear_equiv.to_equiv_inj
@@ -34205,7 +33396,6 @@ set.image_sigma_mk_subset_sigma_left
 lt_add_of_pos_right
 set.surj_on_empty
 with_zero.zero_le
-linear_equiv.prod_comm
 vector.nth_cons_nil
 set.has_inter
 pi.add_right_cancel_monoid
@@ -34259,7 +33449,6 @@ rowround.order2
 multiset.decidable_forall_multiset
 prod.mk_covby_mk_iff
 submonoid.top_equiv_apply
-submodule.prod_comap_inl
 order_dual.has_involutive_inv
 order_top.to_is_directed_le
 tactic.mllist.mfilter
@@ -34281,7 +33470,6 @@ mul_nonpos_of_nonneg_of_nonpos
 cond_a_a
 add_subsemigroup.closure_singleton_le_iff_mem
 add_submonoid.closure_singleton_le_iff_mem
-bitvec.zero
 submodule.exists_mem_ne_zero_of_ne_bot
 strict_mono.ite'
 expr.coord.has_to_format
@@ -34362,7 +33550,6 @@ order_hom.fst_coe
 pow_le_pow_of_le_left'
 set.image_preimage
 finset.Ico_inter_Ico_consecutive
-matrix.empty_sub_empty
 has_lt.lt.ne'
 ring_hom_surjective.inv_pair
 subgroup.normalizer_eq_top
@@ -34498,7 +33685,6 @@ inv_mul_cancel_right₀
 with_one.lift
 lt_add_of_lt_of_pos
 mul_hom.coe_comp
-matrix.conj_transpose_add
 tactic.interactive.apply_instance
 multiset.powerset
 dfinsupp.comap_domain'
@@ -34529,11 +33715,9 @@ add_subgroup.coe_infi
 or_assoc
 rat.denom_neg_eq_denom
 cinfi_eq_of_forall_ge_of_forall_gt_exists_lt
-matrix.cons_val_one
 set.pairwise_disjoint.sup_indep
 set.smul_eq_empty
 function.injective.nontrivial
-matrix.mul_zero
 is_min.Iio_eq
 io_core_is_monad
 add_subgroup.map_equiv_eq_comap_symm
@@ -34730,7 +33914,6 @@ with_bot.to_dual_top_coe
 multiset.canonically_ordered_add_monoid
 to_pexpr
 pi.non_unital_non_assoc_semiring
-linear_map.inr
 pi.semilattice_inf
 subgroup.comap_normalizer_eq_of_surjective
 smt_tactic.interactive.by_contra
@@ -34748,7 +33931,6 @@ pow_le_one_iff
 finsupp.support_sub
 fintype.subtype
 nat.modeq.mul_left_cancel'
-fin_succ_equiv'
 equiv.perm.sum_congr_refl_swap
 is_asymm
 is_asymm.asymm
@@ -34881,7 +34063,6 @@ function.support_supr
 pnat.dvd_iff
 category_theory.as_iso
 list.modify_nth_length
-matrix.conj_transpose
 reflect
 one_le_pow_of_one_le
 nat.div_mul_le_self
@@ -34891,7 +34072,6 @@ int.semiring
 category_theory.nat_trans_of_comp_fully_faithful
 linarith.filter_hyps_to_type
 nat.log_one_left
-linear_map.prod_ext
 finsupp.map_domain
 list.enum_from_cons
 arrow_add_action
@@ -34982,7 +34162,6 @@ finsupp.single_eq_indicator
 nat.gcd_mul_left_add_right
 decidable.mul_lt_one_of_nonneg_of_lt_one_left
 equiv.perm.sum_comp
-finset.sum_range
 set.union_insert
 list.nth_le_map_rev
 distrib_mul_action.to_add_equiv_apply
@@ -35078,7 +34257,6 @@ lt_or_eq_of_le
 nat.pow_le_iff_le_right
 int.add_pos_of_nonneg_of_pos
 add_monoid_hom.single_apply
-fin.cast_le_order_iso_symm_apply
 multiset.product_singleton
 subtype.mk_bot
 monotone.iterate
@@ -35113,7 +34291,6 @@ pi_congr
 comm_ring.to_non_unital_comm_ring
 prod.mk_lt_mk_iff_left
 expr.ith_arg_aux
-ring_equiv.map_matrix_symm
 multiset.abs_sum_le_sum_abs
 subgroup_class.inclusion_self
 option.pmap_eq_some_iff
@@ -35133,11 +34310,9 @@ list.pw_filter_eq_self
 finset.subset_def
 finite.of_bijective
 linear_map.map_sum
-matrix.mul_vec_vec_mul
 associated.irreducible_iff
 fin.tail_cons
 set.union_mul
-matrix.diag_linear_map
 set.Iio
 finsupp.map_range_apply
 tactic.replacer_core
@@ -35168,7 +34343,6 @@ finset.univ_eq_empty_iff
 fin.decidable_le
 finite.set.finite_prod
 add_equiv.to_nat_linear_equiv_symm
-matrix.transpose_transpose
 not_is_top
 submonoid.comap_sup_map_of_injective
 category_theory.functor.ess_image.witness
@@ -35195,7 +34369,6 @@ ordered_semiring.to_char_zero
 nat.Inf_add'
 lt_mul_of_one_lt_right'
 sub_sub_sub_comm
-linear_map.prod_equiv_symm_apply
 bit0_eq_two_mul
 finset.disjoint_filter_filter
 set.subset_inter
@@ -35274,7 +34447,6 @@ subgroup.has_top
 fin.cast_pred_last
 decidable_of_decidable_of_eq
 obviously
-matrix.conj_transpose_inv_int_cast_smul
 order_iso.fun_unique_to_equiv
 category_theory.iso.trans_hom
 set.inter_comm
@@ -35304,7 +34476,6 @@ int.le.intro_sub
 pi.const_sub
 monoid_hom.submonoid_map_surjective
 add_zero_class.to_is_right_id
-matrix.one_eq_pi_single
 int.coe_nat_modeq_iff
 eq_neg_self_iff
 trunc.eq
@@ -35356,7 +34527,6 @@ quiver.hom
 quiver.mk
 list.nodup_map_iff
 function.app
-linear_equiv.map_matrix_refl
 int.is_unit_iff_nat_abs_eq
 relation.trans_gen.lift'
 finset.preimage_empty
@@ -35370,7 +34540,6 @@ symmetric
 nat.choose_mul_succ_eq
 tactic.generalize'
 tactic.mk_back_lemmas
-matrix.diag_conj_transpose
 add_submonoid.has_bot
 is_partial_order
 is_partial_order.to_is_preorder
@@ -35452,10 +34621,8 @@ fin.of_nat'
 subgroup.exists_mem_zpowers
 add_comm_monoid_with_one.to_add_comm_monoid
 multiplicative.ordered_comm_group
-partial_sups_le
 tactic.interactive.match_hyp
 not_ssubset_of_subset
-fin.prod_univ_six
 int.add_div_of_dvd_right
 norm_num.int_cast_bit0
 max_cases
@@ -35553,7 +34720,6 @@ native.rb_map.mk_core
 pi.smul_apply
 tactic.rintro_patt_parse'
 bool.coe_to_bool
-bitvec.to_bool_add_lsb_mod_two
 group_of_is_unit
 associated.is_trans
 set.Iic.order_bot
@@ -35617,7 +34783,6 @@ list.map_permutations
 galois_connection.monotone_l
 mul_le_cancellable_one
 tactic_doc.tactic.left / right
-linear_map.tailing_le_tunnel
 nat.xgcd_aux_val
 function.injective.add_comm_group
 sub_lt_sub_right
@@ -35754,7 +34919,6 @@ fin.cast_le_cast_le
 bool.range_eq
 set.bij_on.inj_on
 subsemiring.smul_comm_class_right
-matrix.distrib_mul_action
 set_like.not_le_iff_exists
 add_submonoid.centralizer
 min_self
@@ -35847,7 +35011,6 @@ native.rb_map.min
 add_equiv.to_equiv_symm
 monotone.with_bot_map
 tactic.interactive.extract_goal
-skew_adjoint.bit0_mem
 odd_one
 tactic.setup_tactic_parser_cmd
 is_square_iff_exists_sq
@@ -36133,7 +35296,6 @@ cancel_monoid.mul_right_cancel
 cancel_monoid.mk
 function.semiconj₂.iterate
 rel_embedding.sum_lift_rel_map_apply
-matrix.conj_transpose_reindex
 multiset.disjoint_iff_ne
 units.sq_eq_sq_iff_eq_or_eq_neg
 alg_equiv.of_alg_hom_symm
@@ -36148,7 +35310,6 @@ lt_mul_of_one_lt_of_lt'
 ulift.module_equiv
 native.float.of_int
 num.has_repr
-star_module.decompose_prod_adjoint_apply
 list.pairwise.chain'
 nat.prime.not_dvd_one
 mul_hom.cod_restrict_apply_coe
@@ -36216,7 +35377,6 @@ ring_hom_inv_pair.comp_apply_eq₂
 subtype.coe_mk
 add_monoid_hom.mclosure_preimage_le
 functor.const.run
-matrix.of
 mul_distrib_mul_action.to_mul_equiv
 string.has_le
 psigma.subtype_ext
@@ -36224,7 +35384,6 @@ list.drop_left
 fin.coe_mk
 old_conv.pure
 subgroup.saturated_iff_zpow
-alg_hom.map_matrix_apply
 decidable.mul_self_lt_mul_self
 znum.has_mul
 is_unit.mul_div_cancel'
@@ -36346,7 +35505,6 @@ add_left_cancel''
 tactic.explode.status.inhabited
 nat.gcd_rec
 codisjoint
-matrix.star_eq_conj_transpose
 finset.image_empty
 commute.neg_right
 nat.find_greatest_le
@@ -36417,7 +35575,6 @@ add_tsub_add_le_tsub_left
 strict_mono_on.add
 monotone_mul_left_of_nonneg
 tactic_to_smt_tactic
-submodule.fst_equiv_apply
 subgroup.map_le_iff_le_comap
 add_submonoid.closure_mul_closure
 rel_embedding.to_order_hom_injective
@@ -36449,7 +35606,6 @@ tactic_doc.tactic.rw / rewrite
 subtype.range_val_subtype
 set.list_prod_subset_list_prod
 set.nonempty_Iic
-linear_map.range_inr
 category_theory.epi_comp
 equiv.subtype_equiv_apply
 mk_std_gen
@@ -36482,12 +35638,10 @@ subsingleton.is_top
 lt_mul_of_le_of_one_lt
 add_commute.neg_right_iff
 equiv.mul_swap_mul_self
-list.alternating_prod_eq_finset_prod
 multiset.coe_to_list
 nat.three_dvd_iff
 fin.div_def
 submodule.span_singleton_smul_eq
-matrix.head_zero
 non_unital_semiring
 non_unital_semiring.add
 non_unital_semiring.add_assoc
@@ -36530,7 +35684,6 @@ int.monoid
 tactic.is_prop_decl
 nat.sub_lt
 multiset.foldl_induction
-linear_map.inl_eq_prod
 level.eqv
 set.prod_mono
 nat.zmodeq_of_digits_digits
@@ -36549,7 +35702,6 @@ set.maps_to_Inter_Inter
 equiv.perm.sum_congr_one
 finset.inf'_map
 category_theory.induced_category.full
-matrix.cons_transpose
 star_zpow
 tactic.add_defn_equations
 subgroup.map_comap_le
@@ -36593,7 +35745,6 @@ add_submonoid.supr_induction
 finset.image_subset_image
 with_top.is_glb_Inf'
 finset.sum_subset
-matrix.vec_mul_vec
 tactic.delta_instance
 ite_eq_ff_distrib
 norm_num.bit1_succ
@@ -36611,7 +35762,6 @@ nat.succ_inj'
 disjoint.sup_sdiff_cancel_left
 finset.noncomm_sum_eq_sum
 tactic.hyp_directly_depends_on_local_name_set_inclusive
-matrix.map_op_smul'
 multiset.powerset_zero
 tactic_doc.attribute.higher_order
 list.inhabited
@@ -36654,7 +35804,6 @@ order_iso_class.to_equiv_like
 order_iso_class.map_le_map_iff
 order_iso_class.mk
 max_le_add_of_nonneg
-matrix.vec3_add
 prime.not_dvd_one
 map_neg
 inf_le_sup
@@ -36737,7 +35886,6 @@ list.eq_of_prod_take_eq
 equiv_functor.map_equiv_symm_apply
 push_neg.not_or_eq
 order_hom.prod_iso_symm_apply
-matrix.mul_mul_right
 multiset.map_add
 nonempty.exists
 finset.sum_bij'
@@ -36797,7 +35945,6 @@ quotient.hrec_on₂
 int.decidable_eq
 list.bind_append_perm
 has_le.le.is_preorder
-matrix.transpose_smul
 part.eq_get_iff_mem
 finset.powerset_card_bUnion
 mul_left_cancel''
@@ -36815,7 +35962,6 @@ classical.some
 pi.const_add_hom_apply
 multiset.add_union_distrib
 lean.parser.synthesize_tactic_state_with_variables_as_hyps
-linear_map.prod_map_id
 equiv.sum_arrow_equiv_prod_arrow_symm_apply_inr
 list.perm.refl
 finsupp.sum_of_support_subset
@@ -36911,7 +36057,6 @@ nat.div2_two
 category_theory.prod_hom
 rat.coe_int_div
 quarterround.mod1_output
-fin.partial_sum_succ'
 set.image2_vadd
 add_equiv.coe_to_add_hom
 lex.rec
@@ -36947,11 +36092,9 @@ monad_io_net_system.send
 monad_io_net_system.close
 monad_io_net_system.mk
 finset.noncomm_prod_to_finset
-matrix.single_vec_mul
 set.fintype_union
 finset.union_sdiff_of_subset
 int.gcd_eq_zero_iff
-linear_map.map_matrix_comp
 add_pos_iff
 right.add_lt_add
 multiset.card_pos_iff_exists_mem
@@ -36985,7 +36128,6 @@ mul_nonneg
 le_tsub_iff_le_tsub
 functor.comp.mk
 le_Sup
-matrix.cons_vec_alt0
 feature_search.feature_vec.has_union
 category_theory.functor.op_obj
 is_central_scalar
@@ -37034,7 +36176,6 @@ multiset.nodup_attach
 nsmul_eq_smul_cast
 associates.ordered_comm_monoid
 set.mem_smul
-matrix.diag_map
 list.dedupkeys_cons
 add_submonoid_class.coe_zero
 tactic.abel.const_add_term
@@ -37057,21 +36198,17 @@ interactive.loc.apply
 int.div_eq_iff_eq_mul_right
 list.map_foldl_erase
 set.preimage_add_const_Iio
-fin_succ_equiv_zero
 mcond
 cc_state.internalize
 smt_tactic.interactive.apply_instance
 commute.cast_int_mul_right
 list.foldl_hom
-matrix.smul_of
 ne.lt_top
 function.injective.linear_ordered_semifield
 add_subgroup.to_int_submodule_to_add_subgroup
-matrix.minor_mul
 complete_lattice.is_sup_closed_compact
 ring_equiv.symm
 subtype.has_equiv
-matrix.algebra
 category_theory.functor.conj_eq_to_hom_iff_heq
 order_dual.subtraction_comm_monoid
 function.mul_support_disjoint_iff
@@ -37081,7 +36218,6 @@ sub_mul_action.carrier
 sub_mul_action.smul_mem'
 sub_mul_action.mk
 list.drop
-pi.single_star
 subgroup
 subgroup.carrier
 subgroup.mul_mem'
@@ -37114,7 +36250,6 @@ multiset.countp_le_of_le
 quiver.hom.unop_inj
 if_eq_of_eq
 expr.pi_codomain
-list.prod_of_fn
 fintype.card_fun
 order_embedding.with_bot_map_apply
 with_top.nontrivial
@@ -37167,7 +36302,6 @@ nat.one_lt_factorial
 antitone.const_add
 units.decidable_eq
 subsemiring.list_prod_mem
-matrix.eta_fin_two
 linear_map.comap_le_comap_iff
 relation.trans_gen_eq_self
 finset.card_map
@@ -37180,7 +36314,6 @@ alg_hom.map_zero'
 alg_hom.map_add'
 alg_hom.commutes'
 alg_hom.mk
-matrix.mul_vec_cons
 order_hom.coe_eq
 finset.exists_mem_eq_inf'
 tactic.itauto.prop.xor
@@ -37209,7 +36342,6 @@ fin.update_snoc_last
 subtraction_monoid.to_sub_neg_monoid
 finset.prod_mem_multiset
 smt_tactic.interactive.change
-linear_map.prod_map_mul
 pi.right_cancel_monoid
 list.pmap_congr
 list.length_permutations'_aux
@@ -37465,7 +36597,6 @@ le_sup_of_le_right
 complete_lattice.set_independent_pair
 tactic.interactive.apply_rules
 add_monoid_hom.comp_apply
-bitvec.shl
 denumerable.of_nat
 subsemiring.ext
 set.piecewise_univ
@@ -37478,7 +36609,6 @@ prod.map_mk
 tactic.interactive.destruct
 finset.image_bUnion_filter_eq
 multiset.inf_eq_inter
-ring_hom.map_mul_vec
 equiv.perm.extend_domain_mul
 set.compl_inter
 infi_dite
@@ -37510,7 +36640,6 @@ subgroup.map_bot
 int.to_nat_zero
 lt_neg_iff_add_neg
 univ_eq_singleton_of_card_one
-linear_equiv.map_matrix_apply
 int.sign_eq_one_of_pos
 list.chain_iff_nth_le
 category_theory.nat_trans.id_app
@@ -37534,8 +36663,6 @@ nat.to_pnat'_coe
 lt_neg_self_iff
 commute.left_comm
 dfinsupp.support_subset_iff
-linear_map.snd_eq_coprod
-matrix.diag_transpose
 category_theory.equivalence.fun_inv_map
 set.right_mem_interval
 set.disjoint_of_subset_left
@@ -37596,7 +36723,6 @@ multiset.countp_le_card
 quotient.lift_on'
 function.embedding.inv_of_mem_range_surjective
 strict_anti.maximal_of_minimal_image
-matrix.mul_vec_zero
 linear_map.ext_ring_op
 list.get_rest
 finsupp.sum
@@ -37662,7 +36788,6 @@ multiset.coe_sigma
 nat.eq_prime_pow_of_unique_prime_dvd
 finset.sum_product_right'
 empty
-bitvec.add_lsb_eq_twice_add_one
 linear_map.pi_apply_eq_sum_univ
 ring_equiv.inv_fun_eq_symm
 zorn_partial_order₀
@@ -37773,7 +36898,6 @@ list.decidable_suffix
 mem_perms_of_finset_iff
 neg_le_iff_add_nonneg'
 quotient.out_rel_embedding
-matrix.vec_mul_mul_vec
 where.format_variable
 tactic.ring.horner_horner
 array.ext
@@ -37790,7 +36914,6 @@ mul_equiv.to_additive''
 associated.mul_left
 mul_action.mem_stabilizer_iff
 function.surjective.exists₃
-skew_adjoint.star_coe_eq
 add_opposite.op_injective
 finset.erase_none_map_some
 equiv.symm_swap
@@ -37839,7 +36962,6 @@ option.choice
 is_glb_empty
 equiv.Pi_congr'
 not_ne_iff
-submodule.ker_inr
 mul_monoid_hom
 linear_ordered_cancel_comm_monoid
 linear_ordered_cancel_comm_monoid.mul
@@ -37889,7 +37011,6 @@ add_submonoid.mem_inv_pointwise_smul_iff₀
 list.diff_nil
 nat.bits
 znum.has_zero
-matrix.cons_vec_mul_vec
 rat.num_denom'
 nat.mul_div_le
 category_theory.adjunction.to_equivalence
@@ -38063,10 +37184,8 @@ tactic.interactive.ac_change
 inv_le_of_neg
 equiv_functor.map_equiv_trans
 mul_le_iff_le_one_right'
-skew_adjoint.is_star_normal
 dfinsupp.filter_apply_neg
 monoid_hom.prod_map_comap_prod
-skew_adjoint.conjugate
 unique_of_surjective_one
 fin.ne_iff_vne
 submodule.zero_mem
@@ -38099,11 +37218,9 @@ well_founded_tactics.mk
 set.bInter_subset_bInter_left
 function.update_injective
 list.kunion_cons
-bitvec.to_nat_of_nat
 nat.two_not_dvd_two_mul_sub_one
 monoid_hom.map_finsupp_prod
 set.pi_set_coe.can_lift
-fin_sum_fin_equiv_apply_left
 equiv.set.sep
 set.multiset_prod_mem_multiset_prod
 finset.preimage_union
@@ -38229,7 +37346,6 @@ pi.bot_def
 set.image_add_const_Iio
 multiset.mem_Iio
 nat.gcd_pos_of_pos_right
-partial_sups_succ
 has_le.le.trans_lt
 is_lub.csupr_eq
 list.insert_nth_succ_nil
@@ -38324,7 +37440,6 @@ prod.mul_def
 tactic.dunfold_config
 tactic.dunfold_config.to_dsimp_config
 tactic.dunfold_config.mk
-matrix.conj_transpose_zsmul
 inf_eq_min_default
 environment.mk_std
 subgroup.has_bot.bot.unique
@@ -38382,10 +37497,8 @@ mk_name_set_attr
 category_theory.nat_iso.inv_map_inv_app
 int.lt_iff_add_one_le
 cancel_factors.cancel_factors_le
-fin_succ_equiv'_zero
 decidable_eq_of_subsingleton
 tactic.interactive.mono_selection.inhabited
-self_adjoint.has_div
 commute.self_zpow
 of_add_image_multiples_eq_powers_of_add
 finsupp.add_monoid
@@ -38446,7 +37559,6 @@ locally_finite_order_top.subsingleton
 mul_eq_zero_comm
 monoid_hom.comp_one
 tactic.interactive.traverse_field
-matrix.ext
 iff_of_false
 set.sigma_to_Union_bijective
 is_unit.mul_right_dvd
@@ -38512,7 +37624,6 @@ finsupp.sum_single_index
 is_chain.exists_max_chain
 subset_trans
 prod.map_comp_map
-fin_succ_equiv_last_symm_coe
 tactic.interactive.ac_mono_aux
 exists₂_comm
 unique.exists_iff
@@ -38522,9 +37633,7 @@ subring.multiset_prod_mem
 set.Ioo_eq_empty
 add_monoid_hom.inverse_apply
 tactic.unfold_config.inhabited
-matrix.mul_neg
 set.ord_connected_Ici
-matrix.vec_head_vec_alt0
 native.float.dec_eq
 equiv.perm.one_symm
 has_Sup
@@ -38539,7 +37648,6 @@ category_theory.map_inv_hom_app
 nat.cast_ite
 forall_eq_apply_imp_iff
 linear_map.map_smul
-linear_map.coprod
 list.prod_lt_prod_of_ne_nil
 set.nsmul_subset_nsmul_of_zero_mem
 monoid_hom.unop_map_list_prod
@@ -38589,12 +37697,10 @@ int.sub_nat_self
 is_smul_regular.mul_and_mul_iff
 list.prod_eq_foldr
 sym.attach_cons
-matrix.conj_transpose_minor
 finset.infi_union
 submonoid.closure_inv
 tactic.funext_core
 add_hom.srange_top_iff_surjective
-matrix.non_unital_non_assoc_ring
 add_units.coe_mk
 pi.sub_def
 add_monoid_hom.mrange
@@ -38674,7 +37780,6 @@ expr.get_free_var_range
 complete_lattice.to_complete_semilattice_Inf
 category_theory.iso.unop
 algebra.bit0_smul_bit0
-matrix.conj_transpose_linear_equiv_symm
 finset.sort
 tactic.assumption_with
 submodule.span_union
@@ -38725,7 +37830,6 @@ mul_hom.to_opposite
 ulift.up_bijective
 fin.one_mul
 eq_false
-linear_map.comp_coprod
 equiv.subtype_preimage_symm_apply_coe_pos
 galois_connection.compose
 linear_map.zero_apply
@@ -38795,7 +37899,6 @@ multiset.prod_hom'
 equiv.ulift_apply
 fin.snoc_cast_add
 list.is_rotated
-matrix.transpose_reindex
 set.mul_indicator_univ
 list.rotate_eq_drop_append_take
 subsemigroup.coe_inf
@@ -38838,7 +37941,6 @@ with_top.coe_add
 pow_not_prime
 submonoid_class.coe_list_prod
 tactic.interactive.source_fields
-matrix.cons_append
 pi.add_zero_class
 is_unit.mul_left_eq_zero
 gcd_zero_left
@@ -38921,7 +38023,6 @@ abs_zpow_bit0
 set.preimage_neg_Icc
 mul_equiv.unique
 finset.filter_disj_union
-matrix.conj_transpose_row
 nat.mod_def
 subrel.is_refl
 tactic.ring.ring_m.monad
@@ -38944,7 +38045,6 @@ interactive.types.using_ident
 set.subset_mul_right
 tactic.to_pfmt
 multiset.cons_le_cons
-fin_succ_equiv
 is_unit.unit'
 set.mem_image3
 nat.bit_le
@@ -38984,7 +38084,6 @@ smul_mul_hom
 function.surjective.add_comm_semigroup
 right_cancelative
 fin.one_pos
-star_linear_equiv
 nat.bit0_ne_zero
 equiv.prod_assoc_preimage
 one_hom.id
@@ -39156,7 +38255,6 @@ one_div_pow_le_one_div_pow_of_le
 omega_complete_partial_order.continuous_hom.comp_id
 function.surjective.nontrivial
 inf_bsupr_eq
-matrix.conj_transpose_sum
 exists_glb_Ioi
 semiconj_by.cast_int_mul_right
 nat.lt_of_lt_of_le
@@ -39181,7 +38279,6 @@ multiset.has_le.le.contravariant_class
 set.eq_empty_of_subset_empty
 normalize_dvd_iff
 finset.card_powerset
-bitvec.xor3
 set.preimage_neg_Ioc
 linear_equiv.surjective
 tactic.interactive.fconstructor
@@ -39266,7 +38363,6 @@ alg_equiv.to_linear_map
 equiv.sum_arrow_equiv_prod_arrow_apply_fst
 canonically_ordered_comm_semiring.to_canonically_ordered_add_monoid
 add_opposite.add_comm_group
-self_adjoint.is_star_normal_of_mem
 prod.comm_semigroup
 add_subsemigroup.to_subsemigroup'_closure
 subring.mem_top
@@ -39298,10 +38394,8 @@ ulift.add_right_cancel_monoid
 zpow_mul'
 rowround.order4
 quotient.rec_on_subsingleton
-self_adjoint.conjugate
 alg_hom.coe_ring_hom_injective
 subgroup.supr_comap_le
-is_star_normal_one
 is_unit_of_dvd_unit
 punit.boolean_algebra
 one_le_inv_iff
@@ -39317,7 +38411,6 @@ subring_class.is_domain
 finset.sigma_image_fst_preimage_mk
 semilinear_equiv_class.to_add_equiv_class
 fin.univ_succ_above
-ring_hom.map_matrix_comp
 add_monoid_hom.sum_map_comap_sum'
 unique.ext
 vector.traverse_eq_map_id
@@ -39396,7 +38489,6 @@ functor.map_map
 submodule.comap_map_eq_of_injective
 submodule.coe_eq_zero
 equiv.subtype_subtype_equiv_subtype_inter_symm_apply_coe_coe
-matrix.transpose_add_equiv_symm
 linear_map.to_fun_eq_coe
 set.ord_connected.preimage_mono
 preimage_smul_setₛₗ
@@ -39422,7 +38514,6 @@ tactic.explode_cmd
 declaration.update_type
 left_inverse_mul_left_div
 add_submonoid.neg_le
-matrix.has_one
 notation_class_attr
 eq_of_le_of_forall_le_of_dense
 mul_opposite.unop_inj
@@ -39458,7 +38549,6 @@ locally_finite_order_top.of_Iic
 fintype.card_range_le
 list.nth_le_rotate_one
 set.empty_pi
-add_equiv.map_matrix_symm
 subsemigroup.comap_sup_map_of_injective
 is_add_unit.add_sub_add_left
 function.support_neg
@@ -39490,7 +38580,6 @@ with_top.add_lt_top
 finset.fold_hom
 set.Union_inter_of_monotone
 add_opposite.op
-matrix.dot_product_comm
 abs_zsmul
 div_monoid_with_zero_hom_apply
 inv_of_units
@@ -39615,7 +38704,6 @@ category_theory.unop_comp
 native.float.has_sub
 fintype.eq_of_subsingleton_of_sum_eq
 finset.sum_of_empty
-matrix.bit0_apply
 ring_hom.is_unit_map
 punit.one_eq
 strict_mono.mul
@@ -39722,7 +38810,6 @@ norm_cast.label.inhabited
 encodable.of_countable
 pi.single_eq_same
 subsemigroup.top_equiv_apply
-matrix.diagonal_mul
 linear_equiv.of_eq_rfl
 option.pbind_eq_some
 linarith.add_exprs
@@ -39779,8 +38866,6 @@ tactic_doc.tactic.revert_after
 set.Union_smul
 is_simple_group.subgroup.is_simple_order
 rat.cast_sum
-matrix.transpose_list_sum
-core.mod_matrix
 finsupp.support_subset_singleton
 zero_hom.zero_apply
 finset.sum_induction
@@ -39903,7 +38988,6 @@ category_theory.is_iso.of_iso_inv
 set.range_factorization_eq
 finset.filter_product_card
 equiv.set_congr_apply
-matrix.single_vec_mul_diagonal
 finset.to_list_cons
 fintype.decidable_surjective_fintype
 one_div_pow_anti
@@ -39926,7 +39010,6 @@ linear_map.lto_fun
 finset.prod_piecewise
 alg_hom.mk_coe
 nat.lcm_ne_zero
-matrix.star_mul_vec
 ring_hom.coe_one
 disjoint.sup_sdiff_cancel_right
 one_lt_inv'
@@ -40069,7 +39152,6 @@ int.modeq.mul_right'
 rel_embedding.of_monotone
 add_subgroup.closure_mono
 multiset.cons_inj_right
-bitvec.sborrow
 category_theory.split_mono.id_assoc
 set.mul_indicator_mul
 ring_equiv.ring_equiv_class
@@ -40096,7 +39178,6 @@ set.coe_inclusion
 prod.omega_complete_partial_order_ωSup_snd
 list.mem_insert_iff
 list.find_defeq
-skew_adjoint.conjugate'
 finset.forall_mem_empty_iff
 equiv.Pi_congr_apply_apply
 strict_mono.cod_restrict
@@ -40131,11 +39212,9 @@ linear_equiv.coord
 add_equiv.coe_mk
 function.disjoint_mul_support_iff
 finset.mem_inter
-matrix.smul_vec3
 add_equiv.add_submonoid_map
 tactic.resolve_name'
 nat.sqrt_eq'
-matrix.row_add
 pexpr.get_frozen_name
 list.countp_false
 is_lub_le_iff
@@ -40221,7 +39300,6 @@ list.chain_iff
 trunc_of_card_pos
 state_t.eval
 monoid_hom.ext_mint
-fin_succ_equiv_symm_none
 acc.trans_gen
 right_cancel_monoid.to_right_cancel_semigroup
 finset.sdiff_eq_self_iff_disjoint
@@ -40305,7 +39383,6 @@ nat.mul_lt_mul_pow_succ
 of_dual_min
 tactic.mk_replacer₁
 finset.union_subset_right
-linear_equiv.skew_prod_symm_apply
 tactic_doc.tactic.generalize_proofs
 traversable.map_traverse'
 mul_neg_one
@@ -40316,7 +39393,6 @@ tactic.interactive.mk_rel
 tactic_doc.tactic.type_check
 set.div_empty
 multiset.mem_of_le
-matrix.map_id
 order_dual.subtraction_monoid
 subring.to_linear_ordered_comm_ring
 list.prod_reverse
@@ -40357,7 +39433,6 @@ list.prod_erase
 buffer.foldl
 conditionally_complete_linear_order_bot.to_order_bot
 set.subsingleton_zero_smul_set
-bitvec.bits_to_nat_to_bool
 num.sub'
 decidable.not_exists_not
 add_lt_of_lt_of_neg'
@@ -40413,20 +39488,17 @@ prod.group
 set.finite.finite_subsets
 int.lor_bit
 submonoid.comap_map_comap
-linear_map.inr_eq_prod
 dite_eq_left_iff
 mul_lt_mul'
 list.perm.union
 category_theory.nat_iso.inv_inv_app
 galois_coinsertion.lift_complete_lattice
-bitvec.has_zero
 equiv.perm.subtype_equiv_subtype_perm
 trunc.is_lawful_monad
 set.set_vadd_subset_iff
 nat.min_fac_eq_two_iff
 finset.mem_coe
 inv_mul_lt_iff'
-fin.sum_univ_succ_above
 is_invariant_subring.subtype_hom
 is_lub_prod
 setoid_has_equiv
@@ -40496,7 +39568,6 @@ dfinsupp.add_comm_group
 add_monoid_hom.map_list_sum
 io.net.recv
 alg_hom.id_comp
-matrix.sub_left
 tactic.interactive.suggest
 set.Iio_subset_Iic_self
 set.preimage_const_add_Ico
@@ -40639,7 +39710,6 @@ canonically_ordered_add_monoid.le_self_add
 canonically_ordered_add_monoid.mk
 list.prefix_refl
 set.inter_union_distrib_right
-matrix.cons_val_zero
 rat.denom_mk
 state_t.is_lawful_monad
 Sup_image
@@ -40663,7 +39733,6 @@ is_glb.mul_left
 category_theory.pi.eval
 category_theory.is_iso.hom_inv_id_assoc
 galois_connection.u_cinfi
-matrix.mul_vec_diagonal
 self_eq_neg
 function.curry
 equiv.cast_trans
@@ -40760,7 +39829,6 @@ function.right_inverse_of_injective_of_left_inverse
 equiv_iso_iso_inv
 tactic.get_unused_name
 category_theory.adjunction.right_adjoint_of_equiv_map
-matrix.col
 ring_equiv.to_equiv
 dfinsupp.prod_eq_prod_fintype
 pi.mul_zero_one_class
@@ -40827,7 +39895,6 @@ tactic.interactive.contrapose
 linter.instance_priority
 fails_quickly
 abs_eq_abs
-matrix.vec_mul_one
 part.some_mul_some
 quotient.eq
 left_neg_eq_right_neg
@@ -40886,7 +39953,6 @@ subsemigroup.subset_closure
 one_hom_class.to_fun_like
 tactic.iterate_exactly'
 ulift.distrib
-matrix.dot_product_smul
 add_hom.coe_fst
 division_semiring.to_group_with_zero
 expr_lens.congr
@@ -40949,7 +40015,6 @@ tactic.rcases_patt.has_to_tactic_format
 multiset.le_add_left
 finset.prod_image
 upper_bounds_Iio
-matrix.vec3_dot_product'
 finset.prod_coe_sort
 array.nil
 finsupp.range_single_subset
@@ -41057,7 +40122,6 @@ list.duplicate.mem
 list.any
 set.singleton_div_singleton
 list.traverse
-matrix.add_mul
 le_of_max_le_right
 list.sorted.nodup
 group.to_div_inv_monoid
@@ -41141,7 +40205,6 @@ one_div_lt_of_neg
 sum.lift_rel.decidable
 expr.pi_binders_aux
 set.exists_max_image
-matrix.bit1_apply_eq
 function.surjective.non_assoc_ring
 mul_distrib_mul_action.to_monoid_hom_apply
 set.subset_set_smul_iff₀
@@ -41219,7 +40282,6 @@ ring.inverse_star
 mul_hom.snd
 order_dual.has_bot
 list.not_duplicate_singleton
-linear_map.coprod_inl_inr
 category_theory.prod.snd
 conj_classes.mem_carrier_iff_mk_eq
 monoid_hom.prod_comp_prod_map
@@ -41397,14 +40459,12 @@ mk_expr_map
 set.subset.antisymm_iff
 finset.filter_ge_eq_Iic
 not_imp_comm
-self_adjoint.coe_div
 add_sub_add_comm
 set.preimage_singleton_nonempty
 format.dcbrace
 set.mul_action_set
 expr.address.to_string
 add_monoid_hom.with_top_map
-fin_succ_equiv_last_cast_succ
 perms_of_list
 set.eq_on.piecewise_ite
 tactic.revert_after
@@ -41412,7 +40472,6 @@ equiv.prod_sum_distrib_apply_left
 compl_le_iff_compl_le
 set.prod_eq_prod_iff
 strict_weak_order.not_lt_of_equiv
-self_adjoint.has_rat_cast
 add_is_add_right_regular_iff
 subgroup.normal_core_idempotent
 le_sup_left'
@@ -41428,7 +40487,6 @@ monotone.range_factorization
 is_greatest.Sup_mem
 functor.ext
 list.to_finset_eq
-matrix.map_add
 category_theory.functor.op_unop_iso_hom_app
 set.Ioo_union_left
 tactic.interactive.refl'
@@ -41447,7 +40505,6 @@ category_theory.adjunction.core_unit_counit.mk
 dfinsupp.has_neg
 tactic.itauto.and_kind.decidable_eq
 zpow_bit1_pos_iff
-matrix.diagonal_add_monoid_hom_apply
 units.coe_pow
 pi.has_sup
 finsupp.add_comm_monoid
@@ -41542,7 +40599,6 @@ bnot_bnot
 finset.mem_powerset_len
 set.Union₂_vadd
 set.Union_eq_Union_finset
-matrix.col_empty
 nat.sqrt_le
 add_monoid_hom.coprod_comp_inr
 int.coe_nat_mul
@@ -41568,7 +40624,6 @@ pempty
 algebra.bit0_smul_one
 finset.union_subset_union
 dvd_zero
-submodule.map_inl
 category_theory.equivalence.op
 is_bot.snd
 div_div_self'
@@ -41661,7 +40716,6 @@ linear_equiv.trans
 tactic.decorate_error
 ball.imp_left
 finset.prod_list_count
-matrix.unique
 finset.strong_downward_induction
 star_add_monoid
 star_add_monoid.to_has_involutive_star
@@ -41759,7 +40813,6 @@ int.zero_ne_one
 Inf_le_of_le
 div_eq_div_iff
 rat.num_mk
-matrix.star_dot_product
 tactic.ring.subst_into_pow
 list.nth_le_drop
 finset.range_image_pred_top_sub
@@ -41767,7 +40820,6 @@ alg_equiv.to_linear_equiv_symm
 psum.inhabited_left
 multiset.sum_map_zsmul
 set.decidable_mem_Ioo
-matrix.conj_transpose_rat_smul
 function.range_subset_insert_image_mul_support
 submonoid.smul_comm_class_left
 alist.lookup_finsupp_support
@@ -41974,7 +41026,6 @@ set.Union_set_of
 finset.range_add_one'
 galois_insertion.lift_semilattice_inf
 associated_unit_mul_left
-matrix.map_update_row
 set.Iio_add_bij
 multiset.sub_le_iff_le_add
 linear_ordered_add_comm_monoid_with_top.to_has_top
@@ -41995,7 +41046,6 @@ submodule.comap_subtype_eq_top
 subgroup.normal_core_eq_supr
 function.eq_update_iff
 gcd_mul_right'
-fin.sum_univ_two
 finset.eventually_constant_prod
 multiset.mem_bind
 nat.mul_sub_div
@@ -42028,7 +41078,6 @@ interactive.decl_meta_info.mk
 nonempty.forall
 has_dvd.dvd.mul_right
 set.interval_oc
-matrix.diag_neg
 add_submonoid.pointwise_smul_le_iff₀
 false_and
 pi.monoid
@@ -42068,7 +41117,6 @@ pow_mul_pow_sub
 tactic.contradiction_symm
 nat.asc_factorial_eq_div
 linarith.mk_coe_nat_nonneg_prf
-submodule.prod_map_fst
 abs_mul_self
 nat.unpair_mkpair
 set.nonempty_coe_sort
@@ -42105,7 +41153,6 @@ alg_equiv.apply_mul_semiring_action
 finset.min_eq_inf_with_top
 contravariant_swap_mul_le_of_contravariant_mul_le
 commute.symm_iff
-self_adjoint.nontrivial
 is_empty.to_locally_finite_order_bot
 function.injective.add_left_cancel_semigroup
 with_zero.partial_order
@@ -42164,17 +41211,14 @@ exists_lt_of_lt_csupr'
 nat.succ_pnat_injective
 abs_le
 ring_equiv.to_add_monoid_hom_commutes
-skew_adjoint.has_smul
 fin.nat_add_cast_succ
 le_iff_forall_one_lt_le_mul
 int.mod_one
 units.mul_inv_cancel_right
 pi.add_monoid_with_one
-matrix.sub_down_right
 finsupp.curry_apply
 pempty.decidable_eq
 ring_equiv.congr_arg
-matrix.vec_head_vec_alt1
 ge.is_refl
 char.has_repr
 prod.is_scalar_tower_both
@@ -42254,7 +41298,6 @@ add_submonoid.mrange_inr'
 subsemigroup.apply_coe_mem_map
 le_cSup_of_le
 tactic.interactive.delta
-star_module.decompose_prod_adjoint_symm_apply
 finset.bUnion_subset_bUnion_of_subset_left
 nat.infinite
 tactic.metavariables
@@ -42278,12 +41321,10 @@ category_theory.split_mono_category.mk
 set.sep_mem_eq
 super_chain
 finset.noncomm_sum_to_finset
-linear_map.coprod_equiv
 add_opposite.subsingleton
 simp_lemmas.drewrite
 mul_self_le_mul_self
 mk_string_val_ne_proof
-matrix.map_mul
 rowround.order1_inv
 sub_neg_eq_add
 subgroup.comap_le_comap_of_surjective
@@ -42370,12 +41411,10 @@ add_right_cancel_semigroup.covariant_swap_add_lt_of_covariant_swap_add_le
 nat.find_x
 list.map_coe_fin_range
 nat.of_le_succ
-submodule.ker_inl
 div_mul_cancel'
 add_hom.op_symm_apply_apply
 quot.hrec_on₂
 function.injective.unique
-linear_map.ker_fst
 set.Iic_diff_Iio_same
 set.prod_Union
 tactic.triv'
@@ -42487,7 +41526,6 @@ add_hom.coe_comp
 add_subgroup.coe_prod
 fin.fin_to_nat
 add_commute.op
-matrix.update_column_transpose
 is_glb.lower_bounds_eq
 finset.dedup_eq_self
 non_unital_ring_hom_class
@@ -42522,7 +41560,6 @@ is_equiv.to_is_preorder
 is_equiv.to_is_symm
 is_equiv.mk
 finset.insert_erase_subset
-fin.sum_univ_seven
 set.left_inverse_range_splitting
 nat.of_digits_zmodeq
 covby.sup_of_inf_left
@@ -42731,7 +41768,6 @@ traversable.traverse_eq_map_id'
 with_one.coe_mul_hom
 nat.digits_len
 set.union_inv
-linear_equiv.prod_symm
 is_lub.exists_between'
 prod.vadd_snd
 pow_monoid_hom_apply
@@ -42756,7 +41792,6 @@ category_theory.op_op_map
 vm_obj.to_expr
 int.mod_def
 dfinsupp.smul_sum
-equiv.map_matrix_symm
 prod.mk_wcovby_mk_iff
 category_theory.functor.triangle
 nat.rel_of_forall_rel_succ_of_le_of_lt
@@ -42817,7 +41852,6 @@ list.chain'_map_of_chain'
 tactic.abel.normal_expr.e
 add_units.add_right_symm
 set.Union_eq_Union_finset'
-matrix.cons_vec_bit1_eq_alt1
 prod.mk_mul_mk
 nat.coprime.coprime_mul_left
 cancel_factors.cancel_factors_eq_div
@@ -42842,7 +41876,6 @@ add_hom.comp_coprod
 submodule.to_ordered_cancel_add_comm_monoid
 vm.obj_to_string
 add_action.self_equiv_sigma_orbits'
-matrix.eta_fin_three
 list.disjoint_take_drop
 with_zero.has_div
 finset.has_subset.subset.is_trans
@@ -42862,7 +41895,6 @@ inf_inf_inf_comm
 submonoid.coe_prod
 finsupp.sum_update_add
 set.Union_sub
-pi.star_apply
 finset.set_bInter_bUnion
 tsub_inj_left
 smt_tactic.add_ematch_lemma_from_decl_core
@@ -42913,7 +41945,6 @@ subgroup_class.to_linear_ordered_comm_group
 add_monoid_hom.cancel_left
 le_inv_iff_mul_le_one_right
 finset.Icc_subset_Ioo_iff
-alg_hom.map_matrix_id
 part.inv_mem_inv
 right.mul_lt_one'
 dfinsupp.lift_add_hom_single_add_hom
@@ -42935,7 +41966,6 @@ rat.cast_zero
 strict_anti_on.antitone_on
 tactic_doc.tactic.intro / intros
 add_subgroup.fintype_bot
-matrix.minor_empty
 is_lawful_applicative
 is_lawful_applicative.to_is_lawful_functor
 is_lawful_applicative.seq_left_eq
@@ -43078,9 +42108,7 @@ has_sub.mk
 finset.inter_inter_distrib_left
 max_eq_left_of_lt
 category_theory.equivalence.functor_unit_comp
-matrix.dot_product_add
 neg_neg_of_pos
-self_adjoint.bit1_mem
 list.length_insert_nth_le_succ
 add_semiconj_by.add_units_coe
 set.image_affine_Icc'
@@ -43092,7 +42120,6 @@ set.Inter₂_congr
 subtype.simps.coe
 set.bUnion_lt_succ'
 nat.eq_mul_of_div_eq_left
-matrix.neg_empty
 units.smul_is_unit
 linear_order_of_STO'
 fun_like.has_coe_to_fun
@@ -43181,7 +42208,6 @@ pi.algebra
 tactic.interactive.mono_selection.has_reflect
 nat.factors_chain
 order_hom.infi_apply
-add_equiv.map_matrix_apply
 with_bot.add_lt_add_iff_right
 fin.coe_add_nat
 strict_anti_on.compares
@@ -43250,7 +42276,6 @@ inv_lt
 subring.equiv_map_of_injective
 order_iso.neg
 fin.mk_val
-linear_map.map_coprod_prod
 div_le_div_right'
 bool.has_sizeof
 to_add_mul
@@ -43293,7 +42318,6 @@ expr.nth_binding_body
 cinfi_const
 pi.has_smul'
 linear_ordered_semiring.to_nontrivial
-matrix.sub_up
 tactic.pexpr_to_pattern
 finset.ne_of_mem_erase
 expr.lex_lt
@@ -43347,12 +42371,10 @@ set.Inter_Union_of_antitone
 star_mul_self_nonneg'
 int.sub_eq_add_neg
 not_is_left_regular_zero_iff
-matrix.diagonal_one
 add_opposite.div_inv_monoid
 finset.card_sigma
 tactic.unsafe.type_context.push_local
 set.ord_connected.inter'
-matrix.diagonal_alg_hom_apply
 well_founded.lt_sup
 environment.mk_protected
 reflected_value
@@ -43379,7 +42401,6 @@ submonoid.unique
 sym.repeat_succ
 smt_state.classical
 multiset.mem_Icc
-linear_map.comap_prod_prod
 prime.dvd_of_pow_dvd_pow_mul_pow_of_square_not_dvd
 submodule.to_sub_mul_action_strict_mono
 linear_map.mem_range
@@ -43414,14 +42435,12 @@ euclidean_domain.gcd_dvd_right
 tactic.mk_simp_set
 finset.sup_indep.subset
 tactic.norm_num.factors_helper_same
-matrix.reindex
 relation.comp_assoc
 submonoid.coe_set_mk
 galois_coinsertion.u_bsupr_of_lu_eq_self
 set.smul_comm_class_set
 trans_trichotomous_right
 norm_num.dvd_eq_int
-fin_congr_symm
 multiset.cons_inter_of_neg
 finset.filter_card_eq
 list.chain'.iff_mem
@@ -43523,7 +42542,6 @@ mul_smul_comm
 covariant_swap_mul_le_of_covariant_mul_le
 finset.nonempty_coe_sort
 finset.coe_injective
-matrix.update_row_eq_self
 module.ker_algebra_map_End
 int.mul_lt_mul_of_pos_left
 nsmul_pos_iff
@@ -43561,7 +42579,6 @@ submodule.ker_of_le
 list.unzip_zip_right
 nat.modeq.decidable
 linear_map.copy
-matrix.conj_transpose_map
 nat.xgcd_val
 ite_not
 add_submonoid.mem_comap
@@ -43592,7 +42609,6 @@ sigma.has_repr
 semilattice_sup.mk'
 max_top_right
 category_theory.prod_comp_snd
-matrix.transpose_ring_equiv_symm_apply
 fin.insert_nth_zero_right
 add_subsemigroup.to_subsemigroup
 monoid.coe_mul
@@ -43616,7 +42632,6 @@ mul_sub_mul_div_mul_neg_iff
 list.not_of_mem_foldl_arg_aux
 is_simple_order.bot_ne_top
 set.ite_mono
-matrix.smul_comm_class
 int.induction_on
 function.surjective.non_unital_comm_semiring
 add_neg_eq_zero
@@ -43634,9 +42649,7 @@ add_submonoid.coe_add
 multiset.mem_of_mem_erase
 add_subgroup.vadd_comm_class_left
 add_equiv.to_linear_equiv
-matrix.one_minor_mul
 well_founded_tactics.check_target_is_value_lt
-matrix.dot_product_zero
 add_hom.subsemigroup_map_surjective
 list.count_singleton
 tactic.tags_enabled
@@ -43687,7 +42700,6 @@ fintype.coe_pi_finset
 equiv.Pi_congr_left'_symm_apply
 prefunctor.comp_map
 list.duplicate.ne_nil
-matrix.cons_add
 finset.Icc_subset_Icc_iff
 nat.Inf_add
 monoid_hom.coe_of_mdense
@@ -43726,7 +42738,6 @@ sq_nonneg
 non_unital_ring_hom.ext_iff
 lint_core
 nat.ne_of_odd_add
-matrix.transpose_col
 string.mk_iterator
 set.inclusion_mk
 tactic.eapply
@@ -43770,7 +42781,6 @@ tactic.apply_at
 multiset.dedup_map_dedup_eq
 linarith.find_squares
 subgroup.smul_opposite_mul
-le_partial_sups
 linear_map.comp_ker_subtype
 multiset.countp_cons_of_pos
 finset.inf_insert
@@ -43780,7 +42790,6 @@ relation.refl_trans_gen_swap
 list.eq_of_mem_repeat
 antitone_const
 nat.add_sub_add_left
-matrix.cons_vec_mul
 finsupp.single_sub
 finset.card_erase_lt_of_mem
 add_subgroup.has_add
@@ -43861,7 +42870,6 @@ finset.mem_Ioo
 multiset.map_le_map
 Sup_univ
 category_theory.equivalence.symm_counit_iso
-finset.prod_range
 list.nodup_range'
 exists_or_eq_left
 is_simple_order.order_iso_bool
@@ -43956,7 +42964,6 @@ tactic.itauto.proof.or_elim'
 tactic.itauto.proof.decidable_elim
 tactic.itauto.proof.em
 tactic.itauto.proof.imp_imp_simp
-matrix.conj_transpose_multiset_sum
 one_le_pow_iff_of_nonneg
 int.ldiff_bit
 finsupp.coe_mk
@@ -43976,14 +42983,12 @@ one_add_mul_le_pow'
 finset.filter_filter
 rat.comm_monoid
 set.preimage_sub_const_Icc
-matrix.empty_vec_mul
 linear_map.map_finsupp_sum
 zpow_coe_nat
 subring.add_mem
 ulift.sub_neg_add_monoid
 nat.coprime_add_self_left
 associated.of_mul_right
-matrix.dot_product_cons
 add_semigroup
 add_semigroup.add
 add_semigroup.add_assoc
@@ -44046,7 +43051,6 @@ finsupp.unique_ext_iff
 set.Union_pi_of_monotone
 alist.to_alist_cons
 nat.le_antisymm
-linear_map.snd
 pi.semigroup
 auto.case_some_hyp_aux
 category_theory.full_subcategory.ext_iff
@@ -44073,7 +43077,6 @@ int.card_fintype_Ioo_of_lt
 star_eq_zero
 div_le_of_nonneg_of_le_mul
 finset.insert_nonempty
-self_adjoint.coe_one
 le_cInf_iff''
 ring_equiv.coe_of_bijective
 equiv.perm.sigma_congr_right_symm
@@ -44148,7 +43151,6 @@ finset.attach_val
 rat.coe_nat_div_self
 finsupp.decidable_eq
 lt_of_add_lt_of_nonneg_left
-matrix.cons_vec_mul_cons
 finset.choose
 alg_equiv.one_apply
 equiv.as_embedding
@@ -44158,7 +43160,6 @@ multiset.cons_le_cons_iff
 map_int_cast_smul
 is_coatom.of_is_coatom_coe_Ici
 cInf_le_iff
-fin_succ_equiv_last_symm_some
 tactic.unify_equations
 mul_opposite.monoid_with_zero
 multiset.exists_cons_of_mem
